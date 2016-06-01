@@ -1,0 +1,58 @@
+#~/.screenrc
+shell zsh
+autodetach on
+defkanji utf-8
+defencoding utf-8
+encoding utf-8 utf-8
+defscrollback 10000
+escape ^Jj
+startup_message off
+vbell off
+altscreen on
+
+
+sorendition "= wb"
+hardstatus alwayslastline "%{= kw} %-w%40L>%{bd bw} %n %t %{-}%+w%-037=%{d kd} %-16=%{= .d}[%l]"
+
+
+bind c screen zsh
+bind n next
+bind p prev
+bind j next
+bind l windowlist
+#oでウインドウ切り替え
+bind o focus
+
+
+#文字コードの変更
+## ^J U で UTF-8 / ^J E で EUC-JP を切り替え
+bind U eval "encoding utf-8" "!!!echo 'export LANG=ja_JP.UTF-8'"
+bind E eval "encoding euc" "!!!echo 'export LANG=ja_JP.EUC-JP'"
+
+#log設定
+hardcopydir /home/masa/screen
+
+#idle 3600
+#blankerprg /usr/games/fortune
+
+#screen256色
+term screen-256color
+
+
+
+#screenでコピーしたものがクリップボードにはいる
+#sudo apt-get install xclip
+bindkey -m ' ' eval 'msgwait 0' 'stuff \040' writebuf 'exec !!! xclip /tmp/screen-exchange' 'msgwait 2'
+bindkey -m Y eval 'msgwait 0' 'stuff Y' writebuf 'exec !!! xclip /tmp/screen-exchange' 'msgwait 2'
+#bindkey -m y eval 'msgwait 0' 'stuff y' writebuf 'exec !!! xclip /tmp/screen-exchange' 'msgwait 2'
+bindkey -m W eval 'msgwait 0' 'stuff W' writebuf 'exec !!! xclip /tmp/screen-exchange' 'msgwait 2'
+
+
+
+bind r eval 'echo "Resize window"' 'command -c resize'
+bind -c resize ^] command
+bind -c resize j eval 'resize +1' 'command -c resize'
+bind -c resize k eval 'resize -1' 'command -c resize'
+
+
+bind | eval "split -v" focus screen

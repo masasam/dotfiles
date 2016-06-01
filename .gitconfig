@@ -1,0 +1,34 @@
+[user]
+	name = masa
+	email = latestmasa@gmail.com
+[color]
+	ui = auto
+	status = auto
+	diff = auto
+	branch = auto
+	interactive = auto
+	grep = auto
+[alias]
+	branches = branch -a
+	tags = tag
+	stashes = stash list
+	unstage = reset -q HEAD --
+	discard = checkout --
+	uncommit = reset --mixed HEAD~
+	amend = commit --amend
+	nevermind = !git reset --hard HEAD && git clean -d -f
+	fixup = commit --amend -C HEAD
+	who = shortlog -s --
+	graph = log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %cr) %Cred%d' --date-order
+	precommit = diff --cached --diff-algorithm=minimal -w
+	unmerged = diff --name-only --diff-filter=U
+	remotes = remote -v
+[gui]
+	fontui = -family helvetica -size 9 -weight bold -slant roman -underline 0 -overstrike 0
+	fontdiff = -family Courier -size 12 -weight bold -slant roman -underline 0 -overstrike 0
+[core]
+	editor = emacsclient
+	pager = lv -c
+
+[push]
+	default = upstream
