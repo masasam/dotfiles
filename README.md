@@ -16,7 +16,8 @@ GnomeSoftwareで
 dropboxをインストール  
 
 フォルダ名英語化  
->LANG=C xdg-user-dirs-gtk-update  
+
+    LANG=C xdg-user-dirs-gtk-update  
 
 
 
@@ -42,7 +43,7 @@ bash はほぼデフォルトにしておく
 screenstart と tmuxstart は shellscript で書かないようにする  
 心配なら  
 
->alias tmuxAI2aGn42Ij7UcmxV='tmux new-session -A -s main'" >> .bashrc  
+    alias tmuxAI2aGn42Ij7UcmxV='tmux new-session -A -s main'" >> .bashrc  
 
 みたいなファンキーな名前にするとよい  
 ctrl-r tmux とかで起動すればいい  
@@ -98,6 +99,7 @@ ubuntu Modificationsを無効化する
 >TopIcons Plus  
 
 #### stylish
+以下のテーマを利用
 <https://userstyles.org/styles/23516/midnight-surfing-global-dark-style>  
 
 defaultfullzoomlevel を 125％に  
@@ -105,15 +107,18 @@ defaultfullzoomlevel を 125％に
 
 
 # Chrome
+
     wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
     sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
     sudo apt-get update
     sudo apt-get install google-chrome-stable
+	
 デフォルトのサイズを125％に  
 
 
 
 # Apt-get
+
     sudo apt-get install build-essential ubuntu-restricted-extras exuberant-ctags git traceroute \
     tig nmap vim nkf xsel htop keychain zsh apache2-utils colordiff \
     cifs-utils php7.0-cli screen xclip iotop parcellite vlc \
@@ -128,7 +133,8 @@ defaultfullzoomlevel を 125％に
 # Theme
 gnome3テーマインストール  
 gnome-look.org から好きなテーマを持ってきてDropboxにいれとく  
->sudo cp -R ~/Dropbox/ubuntu/OSX-Arc-Shadow/ /usr/share/themes/  
+
+    sudo cp -R ~/Dropbox/ubuntu/OSX-Arc-Shadow/ /usr/share/themes/  
 
 
 
@@ -175,7 +181,9 @@ Zipcode_J_Mzc
 Mozc辞書ツールを起動しメニューの［管理］＞［新規辞書にインポート］を選択。  
 
 mozcの設定が完成したら  
->ln -sfn ~/Dropbox/mozc/.mozc ~/.mozc  
+
+    ln -sfn ~/Dropbox/mozc/.mozc ~/.mozc  
+	
 でmozcの設定はDropboxに投げておく  
 
 
@@ -183,7 +191,8 @@ mozcの設定が完成したら
 # Daemon
 不要なデーモンを止める  
 サービスの起動設定の一覧を表示  
->sudo systemctl list-unit-files -t service  
+
+    sudo systemctl list-unit-files -t service  
 
 #### 止めるデーモン
 
@@ -249,14 +258,13 @@ sudo sysctl -p
 >net.ipv6.conf.all.disable_ipv6 = 1  
 >net.ipv6.conf.default.disable_ipv6 = 1  
 
-cat /proc/net/if_inet6   
 sysctl -pを実行すると変更した内容が表示され、  
 またcat /proc/net/if_inet6で何も表示されなければ無効になっている。  
 
 
 #### firefox ipv6無効化
-about:config  
-network.dns.disableIPv6の値をtrue  
+>about:config  
+>network.dns.disableIPv6の値をtrue  
 
 
 
@@ -301,15 +309,14 @@ sudo vim /etc/systemd/system/powertop.service
 >[Install]
 >WantedBy=multi-user.target
 
-sudo systemctl enable powertop  
-reboot  
+    sudo systemctl enable powertop
+    reboot
 
 アイドル時の消費電力が  
 18W → 10W になった  
 これで一日１６時間アイドルで  
 月間の電気代が140円くらいだからよい  
 アイドル時以外の消費電力を考慮しても200円代ですむ  
-emacs chrome terminal しか使わないからこんなもん  
 キチンと不要なものを省けば  
 core2duoのThinkPadでもアイドル時CPU使用率が3~10％ですむ  
 
@@ -368,11 +375,15 @@ Psd には起動と停止を行うための systemd ユーザーサービスが�
 さらに、1時間毎に tmpfs からディスクに再同期させる resync-timer も含まれています。  
 resync-timer は psd.service によって自動的に起動するため、あなたがタイマーを起動させる必要はありません。  
 systemd のユーザーモードの使い方がよくわからない場合、以下のコマンドで psd サービスを有効化できます  
->systemctl --user enable psd.service  
->reboot  
+
+    systemctl --user enable psd.service  
+    reboot  
+
 
 #### 動いているか確認する
-systemctl --user status psd  
+
+    systemctl --user status psd  
+	
 >● psd.service - Profile-sync-daemon  
 >   Loaded: loaded (/usr/lib/systemd/user/psd.service; enabled; vendor preset: enabled)  
 >   Active: active (exited) since 水 2016-05-04 16:41:44 JST; 6min ago  
@@ -394,16 +405,18 @@ systemctl --user status psd
 # SSD
 TRIMを設定する  
 cat /etc/cron.weekly/fstrim  
->#!/bin/sh
-># trim all mounted file systems which support it
->/sbin/fstrim --all || true
+
+    #!/bin/sh
+    # trim all mounted file systems which support it
+    /sbin/fstrim --all || true
 
 ubuntu gnomeは週一回 TRIM がデフォルトで走るようになっているので  
 そのままにしておく。  
 
 #### I/O スケジューラー
 cat /sys/block/sda/queue/scheduler  
->noop [deadline] cfq  
+
+    noop [deadline] cfq  
 
 デフォルトでdeadlineになっているはず  
 最速はnoopだが、大きいファイルはdeadlineがいいので  
@@ -420,6 +433,7 @@ sudo apt-get install fontforge
 <https://github.com/google/fonts/tree/master/ofl/inconsolata>  
 Inconsolata-Bold.ttf  
 Inconsolata-Regular.ttf  
+をとってくる
 
 <http://mix-mplus-ipa.osdn.jp/migu/>  
 migu-1m〜.zipを解凍して  
@@ -428,13 +442,15 @@ migu-1m-regular.ttf
 
 <https://github.com/yascentur/Ricty>  
 ricty_generator.shをダウンロード  
-chmod u+x ricty_generator.sh  
-./ricty_generator.sh migu-1m-regular.ttf migu-1m-bold.ttf Inconsolata-Regular.ttf Inconsolata-Bold.ttf  
+
+    chmod u+x ricty_generator.sh  
+    ./ricty_generator.sh migu-1m-regular.ttf migu-1m-bold.ttf Inconsolata-Regular.ttf Inconsolata-Bold.ttf  
 
 #### terminalでも使えるように以下も設定  
->sudo mv Ricty-Bold.ttf /usr/local/share/fonts/  
->sudo mv Ricty-Regular.ttf /usr/local/share/fonts/  
->sudo fc-cache -fv  
+
+    sudo mv Ricty-Bold.ttf /usr/local/share/fonts/  
+    sudo mv Ricty-Regular.ttf /usr/local/share/fonts/  
+    sudo fc-cache -fv  
 
 
 
@@ -465,24 +481,34 @@ emacsは好きなバージョンをいつでも使えるように git からイ�
 いつでもクリーンインストールできるように  
 paco で emacs を管理する  
 emacs25.2 がでたり head を使いたくなったら  
-sudo paco -r emacs-25.1  
+
+    sudo paco -r emacs-25.1  
+	
 すると綺麗に消えるのでクリーンになる  
 
 
 
 # Cask
-curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python  
-cask upgrade  
-cd ~/.emacs.d  
-;Caskファイルの初期化  
-cask init  
-;Caskに追加した場合  
-~/.emacs.d  
-cask install   
-;cask自体をアップデートする場合  
-cask upgrade-cask  
-;caskライブラリをアップデート  
-cask update  
+
+    curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python  
+    cask upgrade  
+    cd ~/.emacs.d  
+	
+Caskファイルの初期化  
+
+    cask init  
+	
+Caskに追加した場合  
+
+    ~/.emacs.d  
+    cask install   
+cask自体をアップデートする場合  
+
+    cask upgrade-cask  
+	
+caskライブラリをアップデート  
+
+    cask update  
 
 
 
@@ -503,21 +529,29 @@ xinput
 ポインタ速度を変更して、ちょうどいい速度になる値を確認する。  
 ポインタ速度は、1 が無変更、数字が小さくなると速くなり、数字が大きくなると遅くなる。 (小数指定も可能)  
 デバイス指定は、デバイス名でもデバイス ID でも、どちらでも可能。  
-xinput --set-prop "マウスのデバイス名" "Device Accel Constant Deceleration" ポインタ速度  
 
-xinput --set-prop マウスのデバイス ID "Device Accel Constant Deceleration" ポインタ速度  
+    xinput --set-prop "マウスのデバイス名" "Device Accel Constant Deceleration" ポインタ速度  
+
+    xinput --set-prop マウスのデバイス ID "Device Accel Constant Deceleration" ポインタ速度  
 
 「自動起動するアプリケーション」に設定する  
 
 Dash またはターミナルから、次のコマンドを実行して、「自動起動するアプリケーション」を開く。  
-gnome-session-properties  
+
+    gnome-session-properties  
 
 「コマンド」ボックスに、上で確認した「xinput --set-prop "マウスのデバイス名" "Device Accel Constant Deceleration" ポインタ速度」を記入し保存する。  
 以上いちいちめんどくさいから  
 .zshrcに  
-alias trackpointspeed='xinput --set-prop 10 "Device Accel Constant Deceleration"'  
+
+    alias trackpointspeed='xinput --set-prop 10 "Device Accel Constant Deceleration"'  
+	
 と書いた。  
-trackpointspeed 0.7 ←おすすめの速度  
+
+    trackpointspeed 0.7
+
+  ↑
+おすすめの速度
 ThinkPadユーザーは必須と思われる  
 
 
@@ -551,9 +585,12 @@ mekeするものはpacoで管理する
 
 #### paco
 pacoで管理しておくとアンインストールが楽  
-sudo paco -r gloval-6.5.4  
+
+    sudo paco -r gloval-6.5.4  
 
 globalの新バージョンがでたら  
-sudo paco -r gloval-6.5.4  
+
+    sudo paco -r gloval-6.5.4  
 してから新バージョンを  
-sudo paco -lD "make install"  
+
+    sudo paco -lD "make install"  
