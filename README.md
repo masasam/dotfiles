@@ -1,13 +1,17 @@
 # Arch linux or Ubuntu gnome?
+
 Arch Linuxで自分最小構成を作るか？  
 Ubuntu Gnomeでいらないものを削ぎ落とすか？  
+
 何かあった時すぐ仕事に取り掛かれないといけないので  
 割と安定していて( LTSなんで安定すると期待して )  
-環境構築は最速で用意できる  
-Ubuntu Gnome 16.04を削ぎ落とす方針  
+環境構築は最速で用意できる Ubuntu Gnome 16.04を削ぎ落とす方針とした  
+
 emacsのための環境なのですべてemacsキーバインドにする  
 
+
 #### ubuntu gnomeをusbメモリでインストール
+
 SSDなんで10分くらいで終わる  
 SSD なので暗号化するとTRIMが効かなくなるので  
 ディスクの暗号化は無しで普通にインストール  
@@ -148,19 +152,23 @@ Mozc の「プロパティ」の「一般」タブにある「キーの設定」
 例えば、shift+Space で ON/OFF を切り替えるには、次のエントリーを追加するか、  
 または最初から登録されている「Hankaku/Zenkaku」キーへの割り当てを書き換えます。  
 
-キー設定はことえりをベースに ← emacsキーバインドに一番近いから  
-「変換前入力中」「shift+Space」「IME を無効化」  
-「変換中」「shift+Space」「IME を無効化」  
-「直接入力」「shift+Space」「IME を有効化」  
-「入力文字なし」「shift+Space」「IME を無効化」  
-他のshift-space絡みのショートカットは削除しておく。  
+キー設定はことえりをベースに ← emacsキーバインドに一番近い  
 
-ターミナルでibus-setup  
+>「変換前入力中」「shift+Space」「IME を無効化」  
+>「変換中」「shift+Space」「IME を無効化」  
+>「直接入力」「shift+Space」「IME を有効化」  
+>「入力文字なし」「shift+Space」「IME を無効化」  
+>他のshift-space絡みのショートカットは削除しておく。  
+
+ターミナルで
+
+    ibus-setup
+	
 でフォントなど設定する。  
 全般タブで  
-カスタムフォントを選んで fontsize 14  
-次のインプットメソッド super-space  
-インプットメソッドタブを mozcだけにする  
+>カスタムフォントを選んで fontsize 14  
+>次のインプットメソッド super-space  
+>インプットメソッドタブを mozcだけにする  
 これでreboot  
 
 
@@ -332,7 +340,7 @@ SSDに同期する頻度を減らすので、SSDの長寿命化対策になる
     sudo apt-get update
     sudo apt-get install profile-sync-daemon
 
-overlayfsを使う  
+#### overlayfsを使う  
 sudo su -  
 visudo (以下を最終行に追加)   
 >masa ALL=(ALL) NOPASSWD: /usr/bin/psd-overlay-helper
@@ -340,8 +348,8 @@ visudo (以下を最終行に追加)
 ※masaは使用するユーザー名
 
 vim ~/.config/psd/psd.conf  
->USE_OVERLAYFS="yes"
->BROWSERS="google-chrome firefox"
+>USE_OVERLAYFS="yes"  
+>BROWSERS="google-chrome firefox"  
 
 
 #### psd 起動する
@@ -500,8 +508,9 @@ Caskファイルの初期化
 	
 Caskに追加した場合  
 
-    ~/.emacs.d  
+    cd ~/.emacs.d  
     cask install   
+	
 cask自体をアップデートする場合  
 
     cask upgrade-cask  
@@ -512,7 +521,7 @@ caskライブラリをアップデート
 
 
 
-# トラックポイント
+# TrackPoint
 xinput  
 ⎡ Virtual core pointer                    	id=2	[master pointer  (3)]  
 ⎜   ↳ Virtual core XTEST pointer              	id=4	[slave  pointer  (2)]  
@@ -572,7 +581,7 @@ ThinkPadユーザーは必須と思われる
 
 
 
-# GNU global
+# GNU GLOBAL
 debian の global は古すぎるのでmakeする  
 mekeするものはpacoで管理する  
 
@@ -591,6 +600,7 @@ pacoで管理しておくとアンインストールが楽
 globalの新バージョンがでたら  
 
     sudo paco -r gloval-6.5.4  
+	
 してから新バージョンを  
 
     sudo paco -lD "make install"  
