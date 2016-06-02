@@ -126,6 +126,20 @@ defaultfullzoomlevel を 125 ％に
 	
 デフォルトのサイズを 125 ％に  
 
+<https://chrome.google.com/webstore/detail/change-colors/jbmkekhehjedonbhoikhhkmlapalklgn>  
+change-colors で黒画面をベースにする。  
+黒画面が都合の悪いドメインは指定すれば普通の画面になる  
+chrome の google 検索のデフォルトは vi キーバインドだが気にしない(vim も使うし)  
+
+>jk で移動して  
+>enter で新規 tab に開き
+>Ctrl+W tab を消す  
+>Ctrl+R 再読み込み  
+>Ctrl+tab タブ移動  
+>Ctrl+K 検索  
+
+許容範囲なのでデフォルトで使う  
+
 
 
 # Apt
@@ -222,8 +236,10 @@ mozc の設定が完成したら
 
 
 #### evolution のプロセスを止める
+![sekai](https://raw.githubusercontent.com/latestmasa/dotfiles/image/image/sekai.png)
+
 evolution を apt-get remove すると gnome ごと消えるから注意  
-使わないが消すと世界が滅びてしまうため  
+evolution を消すと世界が滅びてしまうため  
 evolution のプロセスが起動しないように /dev/null へ  
 
     cd /usr/share/dbus-1/services
@@ -231,6 +247,8 @@ evolution のプロセスが起動しないように /dev/null へ
     sudo ln -snf /dev/null  org.gnome.evolution.dataserver.Calendar.service 
     sudo ln -snf /dev/null  org.gnome.evolution.dataserver.Sources.service 
     sudo ln -snf /dev/null  org.gnome.evolution.dataserver.UserPrompter.service 
+
+/dev/null はロトの剣だったのか？
 
 
 
@@ -628,3 +646,9 @@ global の新バージョンがでたら
 してから新バージョンを  
 
     sudo paco -lD "make install"  
+
+
+
+# Sylpheed
+
+ln -sfn ~/Dropbox/sylpheed/.sylpheed-2.0 ~/.sylpheed-2.0
