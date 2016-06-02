@@ -162,8 +162,8 @@
    '(helm-truncate-lines t)
    '(helm-delete-minibuffer-contents-from-point t)
    '(helm-mini-default-sources '(helm-source-buffers-list
-                                 helm-source-recentf
                                  helm-source-files-in-current-dir
+                                 helm-source-recentf
 				 helm-source-projectile-files-list
                                  ))))
 (define-key global-map (kbd "C-;") 'helm-mini)
@@ -233,6 +233,42 @@
 
 
 
+;; helm-projectile
+(require 'helm-projectile)
+;; cacheをクリアするには　M-x projectile-invalidate-cache
+(custom-set-variables
+ '(projectile-enable-caching t))
+(projectile-global-mode t)
+
+;; プロジェクトに関連するファイルをhelm-for-filesに追加
+(defadvice helm-for-files (around update-helm-list activate)
+  (let ((helm-for-files-preferred-list
+         (helm-for-files-update-list)))
+    ad-do-it))
+
+(defun helm-for-files-update-list ()
+  `(helm-source-buffers-list
+    helm-source-files-in-current-dir
+    helm-source-recentf
+    helm-source-file-cache
+    ,(if (projectile-project-p)
+     helm-source-projectile-files-list)))
+
+;; helm-agをプロジェクトルートから
+(defun projectile-helm-ag ()
+  (interactive)
+  (helm-ag (projectile-project-root)))
+
+
+
+;; helm-swoop
+(global-set-key (kbd "M-i") 'helm-swoop)
+(global-set-key (kbd "M-I") 'helm-swoop-back-to-last-point)
+(global-set-key (kbd "C-c M-i") 'helm-multi-swoop)
+(global-set-key (kbd "C-x M-i") 'helm-multi-swoop-all)
+
+
+
 ;; helm-multi-files  recentf
 (setq recentf-max-saved-items 1000)
 
@@ -298,42 +334,6 @@
 
 ;; flycheck
 (add-hook 'after-init-hook #'global-flycheck-mode)
-
-
-
-(require 'helm-projectile)
-;; cacheをクリアするには　M-x projectile-invalidate-cache
-(custom-set-variables
- '(projectile-enable-caching t))
-(projectile-global-mode t)
-
-;; プロジェクトに関連するファイルをhelm-for-filesに追加
-(defadvice helm-for-files (around update-helm-list activate)
-  (let ((helm-for-files-preferred-list
-         (helm-for-files-update-list)))
-    ad-do-it))
-
-(defun helm-for-files-update-list ()
-  `(helm-source-buffers-list
-;    helm-source-ghq
-    helm-source-files-in-current-dir
-    helm-source-recentf
-    helm-source-file-cache
-    ,(if (projectile-project-p)
-     helm-source-projectile-files-list)))
-
-;; helm-agをプロジェクトルートから
-(defun projectile-helm-ag ()
-  (interactive)
-  (helm-ag (projectile-project-root)))
-
-
-
-;; helm-swoop
-(global-set-key (kbd "M-i") 'helm-swoop)
-(global-set-key (kbd "M-I") 'helm-swoop-back-to-last-point)
-(global-set-key (kbd "C-c M-i") 'helm-multi-swoop)
-(global-set-key (kbd "C-x M-i") 'helm-multi-swoop-all)
 
 
 
