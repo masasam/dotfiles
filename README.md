@@ -239,8 +239,10 @@ mozc の設定が完成したら
 ![sekai](https://raw.githubusercontent.com/latestmasa/dotfiles/image/image/sekai.jpg)
 
 evolution を apt-get remove すると gnome ごと消えるから注意  
-evolution を消すと世界が滅びてしまうため  
+evolution を消すと世界が滅びて闇の世界になってしまうため  
 evolution のプロセスが起動しないように /dev/null へ  
+Linux は闇の世界で生きる選択も与えてくれる  
+自由っていいね。  
 
     cd /usr/share/dbus-1/services
     sudo ln -snf /dev/null  org.gnome.evolution.dataserver.AddressBook.service
