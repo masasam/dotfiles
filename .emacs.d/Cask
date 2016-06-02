@@ -36,7 +36,6 @@
 (depends-on "anzu")
 (depends-on "markdown-mode")
 (depends-on "helm")
-(depends-on "helm-git-grep")
 (depends-on "helm-c-yasnippet")
 (depends-on "helm-gtags")
 (depends-on "helm-ag")

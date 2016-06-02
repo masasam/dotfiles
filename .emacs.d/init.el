@@ -47,11 +47,11 @@
 
 
 
-
 ;; *.~ とかのバックアップファイルを作らない
 (setq make-backup-files nil)
 ;; .#* とかのバックアップファイルを作らない
 (setq auto-save-default nil)
+
 
 
 ;; Ctrl-hをbackspace
@@ -106,6 +106,7 @@
 
 ;; C-u C-SPC C-SPC …でどんどん過去のマークを遡る
 (setq set-mark-command-repeat-pop t)
+
 
 
 ;; X11のクリップボードを使う
@@ -169,9 +170,9 @@
 
 
 
-;; C-hで前の文字削除
+;; helm C-hで前の文字削除
 (define-key helm-map (kbd "C-h") 'delete-backward-char)
-;; C-wで分節削除
+;; helm C-wで分節削除
 (define-key helm-map (kbd "C-w") 'backward-kill-word)
 
 
@@ -253,8 +254,8 @@
 (require 'auto-complete-config)
 (ac-config-default)
 (add-to-list 'ac-modes 'html-mode)
-(add-to-list 'ac-modes 'text-mode)         ;; text-modeでも自動的に有効にする
-(add-to-list 'ac-modes 'fundamental-mode)  ;; fundamental-mode
+(add-to-list 'ac-modes 'text-mode)
+(add-to-list 'ac-modes 'fundamental-mode)
 (add-to-list 'ac-modes 'org-mode)
 (add-to-list 'ac-modes 'yatex-mode)
 (add-to-list 'ac-modes 'markdown-mode)
@@ -328,6 +329,14 @@
 
 
 
+;; helm-swoop
+(global-set-key (kbd "M-i") 'helm-swoop)
+(global-set-key (kbd "M-I") 'helm-swoop-back-to-last-point)
+(global-set-key (kbd "C-c M-i") 'helm-multi-swoop)
+(global-set-key (kbd "C-x M-i") 'helm-multi-swoop-all)
+
+
+
 ;; undo-tree
 (require 'undo-tree)
 (global-undo-tree-mode t)
@@ -340,6 +349,7 @@
 
 
 
+;; tramp
 (add-to-list 'tramp-default-proxies-alist
              '(nil "\\`root\\'" "/ssh:%h:"))
 (add-to-list 'tramp-default-proxies-alist
@@ -351,14 +361,6 @@
 
 ;; diredで消したファイルはゴミ箱へ
 (setq delete-by-moving-to-trash t)
-
-
-
-;; helm-swoop
-(global-set-key (kbd "M-i") 'helm-swoop)
-(global-set-key (kbd "M-I") 'helm-swoop-back-to-last-point)
-(global-set-key (kbd "C-c M-i") 'helm-multi-swoop)
-(global-set-key (kbd "C-x M-i") 'helm-multi-swoop-all)
 
 
 
