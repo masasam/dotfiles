@@ -53,6 +53,7 @@
 (depends-on "helm-swoop")
 (depends-on "company")
 (depends-on "google-this")
+(depends-on "pangu-spacing")
 
 ;; prog modes
 (depends-on "go-mode")
