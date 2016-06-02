@@ -412,6 +412,7 @@ systemd のユーザーモードの使い方がよくわからない場合、以
 
 
 # SSD
+<img src="https://raw.githubusercontent.com/latestmasa/dotfiles/image/image/baobao.png">
 TRIM を設定する  
 cat /etc/cron.weekly/fstrim  
 
