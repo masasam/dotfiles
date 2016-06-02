@@ -321,6 +321,10 @@ sudo vim /etc/systemd/system/powertop.service
     sudo systemctl enable powertop
     reboot
 
+![PowerTop](https://raw.githubusercontent.com/latestmasa/dotfiles/image/image/powertop.png)
+
+このタブが全部 Good になっていれば成功
+
 アイドル時の消費電力が  
 18W → 10W になった  
 これで一日 16 時間アイドルで  
