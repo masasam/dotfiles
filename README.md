@@ -77,7 +77,6 @@ Ctrl-u ← おすすめ
 
 
 # Tweak Tool
-
 キーテーマ  
 >Emacs  
 
@@ -122,7 +121,7 @@ defaultfullzoomlevel を 125％に
 
 
 
-# Apt-get
+# Apt
 
     sudo apt-get install build-essential ubuntu-restricted-extras exuberant-ctags git traceroute \
     tig nmap vim nkf xsel htop keychain zsh apache2-utils colordiff \
@@ -475,6 +474,7 @@ updateするときは以下で
 
 
 # Emacs
+![emacs](https://raw.githubusercontent.com/latestmasa/dotfiles/image/image/emacs.png)
 
     sudo apt-get install autoconf automake gcc make ncurses-dev texinfo libx11-dev libxpm-dev libjpeg-dev libpng-dev libgif-dev libtiff-dev libncurses-dev libgtk-3-dev
     cd git
