@@ -427,7 +427,7 @@ var lib は
 
 これ以外は NAS にでも置いとけ  
 
-TRIM を設定する  
+#### TRIM を設定する  
 cat /etc/cron.weekly/fstrim  
 
     #!/bin/sh
