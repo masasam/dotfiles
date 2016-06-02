@@ -1,23 +1,23 @@
 # Arch linux or Ubuntu gnome?
 
-Arch Linuxで自分最小構成を作るか？  
-Ubuntu Gnomeでいらないものを削ぎ落とすか？  
+Arch Linux で自分最小構成を作るか？  
+Ubuntu Gnome でいらないものを削ぎ落とすか？  
 
 何かあった時すぐ仕事に取り掛かれないといけないので  
-割と安定していて( LTSなんで安定すると期待して )  
-環境構築は最速で用意できる Ubuntu Gnome 16.04を削ぎ落とす方針とした  
+割と安定していて( LTS なんで安定すると期待して )  
+環境構築は最速で用意できる Ubuntu Gnome 16.04 を削ぎ落とす方針とした  
 
-emacsのための環境なのですべてemacsキーバインドにする  
+emacs のための環境なのですべて emacs キーバインドにする  
 
 
-#### ubuntu gnomeをusbメモリでインストール
+#### ubuntu gnome を usb メモリでインストール
 
-SSDなんで10分くらいで終わる  
-SSD なので暗号化するとTRIMが効かなくなるので  
-ディスクの暗号化は無しで普通にインストール  
+SSD だからインストールは 10 分くらいで終わる  
+SSD は暗号化すると TRIM が効かなくなるので  
+ディスクを暗号化せず、普通にインストール  
 
-GnomeSoftwareで  
-dropboxをインストール  
+GnomeSoftware から  
+dropbox をインストール  
 
 フォルダ名英語化  
 
@@ -28,22 +28,31 @@ dropboxをインストール
 # Terminal
 ![terminal](https://raw.githubusercontent.com/latestmasa/dotfiles/image/image/terminal.png)
 ターミナルサイズ  
-134列72行 (Think Padのサイズ お好みで)  
+134 列 72 行
+(Think Pad のサイズ terminal を全画面にするサイズを指定)  
 
 #### ターミナルのプロファイル  
-solarizedのパレット５を暗くする  
+solarized のパレット５を暗く  
 組み込みのスキーム 黒字に緑文字  
 
 #### .bashrc
-この２つのエイリアス以外はいじらない  
-それはどんな時でも bash が起動しないと困るから  
-バッチ系の処理はデフォルトに近い bash のほうが楽だから  
-bash はディストリデフォルトで使う  
+どんな時でも bash が起動しないと困るから  
+.bashrc は以下の２つのエイリアスを追記する以外はしない  
+zsh をデフォルトシェルにして zsh をカスタマイズしまくると  
+環境に影響を与えすぎて大変なことになることがある。  
+この繰り返しで腰が重くなって新しいものを受け付けなくなるのは本末転倒であるから  
+zsh をデフォルトシェルにはしない  
+バッチ系の処理でも、
+デフォルトに近い bash のほうが書きやすい。  
 tmux を起動したら zsh が起動するようにしておいて  
-bash はほぼデフォルトにしておく  
+.bashrc はほぼディストリデフォルトにしておく  
 
     echo "alias screenstart='screen -D -RR'" >> .bashrc
     echo "alias tmuxstart='tmux new-session -A -s main'" >> .bashrc
+
+terminal を開いて  
+screenstart あるいは tmuxstart で起動すると  
+セッションがあればそれを利用しなければ新規セッションで起動する  
 
 screenstart と tmuxstart は shellscript で書かないようにする  
 心配なら  
@@ -51,28 +60,24 @@ screenstart と tmuxstart は shellscript で書かないようにする
     alias tmuxAI2aGn42Ij7UcmxV='tmux new-session -A -s main'" >> .bashrc  
 
 みたいなファンキーな名前にするとよい  
-ctrl-r tmux とかで起動すればいい  
-シェルスクリプトで tmux 呼ぶプログラマがファンキーだと思うがね  
-
-gnome-terminalを開いて  
-screenstart あるいは tmuxstart で起動すると  
-セッションがあればそれを利用しなければ新規セッションで起動する  
+朝 Treminal を開いて ctrl-r tmux で起動すればいい  
+shellscript で tmux 呼ぶプログラマがファンキーだと思うがね  
 
 
 
 # Activity
 アクティビティ > 設定 > 検索  
-全部offにする  
+全部 off にする  
 アプリの起動にしか使わん  
 
 アクティビティ > 設定 > キーボード > ショートカット  
-システム→アクティビティ画面を表示する  
-を Alt+Space ← GnomeDoっぽく  
+>システム→アクティビティ画面を表示する  を Alt+Space  
+↑ GnomeDo っぽく  
 
 #### ショートカットキー  
-Ctrl-u ← おすすめ  
-文字を打ち間違えたらCtrl-uで全消し  
-なぜかCtrl-hでbackspaceできないのでつらいがこれで乗り切る  
+>Ctrl-u  
+文字を打ち間違えたら Ctrl-u で全消し  
+なぜか Activity 画面では Ctrl-h で backspace できないのでつらいがこれでいける  
 
 
 
@@ -80,23 +85,23 @@ Ctrl-u ← おすすめ
 キーテーマ  
 >Emacs  
 
-Ctrlキーの位置  
->Caps Lock をCtrlとして使う  
+Ctrl キーの位置  
+>Caps Lock を Ctrl として使う  
 
-Xサーバーを終了するためのキーシーケンス  
+X サーバーを終了するためのキーシーケンス  
 >Ctrl Alt Backspace  
 
 ワークスペースは１個に固定  
 
 電源  
->AC電源接続時 Blank  
+>AC 電源接続時 Blank  
 >Don't suspend on lid close  
 
 
 
 # Firefox
 firefox sync を有効化  
-ubuntu Modificationsを無効化する  
+ubuntu Modifications を無効化する  
 
 #### Gnome Shell Extention
 >Dash to Dock  
@@ -106,7 +111,7 @@ ubuntu Modificationsを無効化する
 以下のテーマを利用
 <https://userstyles.org/styles/23516/midnight-surfing-global-dark-style>  
 
-defaultfullzoomlevel を 125％に  
+defaultfullzoomlevel を 125 ％に  
 
 
 
@@ -117,7 +122,7 @@ defaultfullzoomlevel を 125％に
     sudo apt-get update
     sudo apt-get install google-chrome-stable
 	
-デフォルトのサイズを125％に  
+デフォルトのサイズを 125 ％に  
 
 
 
@@ -135,30 +140,25 @@ defaultfullzoomlevel を 125％に
 
 
 # Theme
-gnome3テーマインストール  
-gnome-look.org から好きなテーマを持ってきてDropboxにいれとく  
+gnome3 テーマインストール  
+<http://gnome-look.org> から好きなテーマを持ってきて Dropbox にいれとく  
 
     sudo cp -R ~/Dropbox/ubuntu/OSX-Arc-Shadow/ /usr/share/themes/  
 
 
 
 # Mozc
-ibus-mozc（gnomeのデフォルトはibus)  
-地域と言語で入力ソースをmozcだけにする。  
-emacsとかぶらないように shift+Space でmozcを利用する  
+ibus-mozc（gnome のデフォルトは ibus)  
+地域と言語で入力ソースを mozc だけにする。  
+emacs とかぶらないように shift+Space で mozc を利用する  
 
-ON/OFF のキーバインドは、今までの「IBus の設定」ではなく  
-Mozc の「プロパティ」の「一般」タブにある「キーの設定」で設定できます。  
-例えば、shift+Space で ON/OFF を切り替えるには、次のエントリーを追加するか、  
-または最初から登録されている「Hankaku/Zenkaku」キーへの割り当てを書き換えます。  
+キー設定はことえりをベースに ← emacs キーバインドに一番近い  
 
-キー設定はことえりをベースに ← emacsキーバインドに一番近い  
-
->「変換前入力中」「shift+Space」「IME を無効化」  
->「変換中」「shift+Space」「IME を無効化」  
->「直接入力」「shift+Space」「IME を有効化」  
->「入力文字なし」「shift+Space」「IME を無効化」  
->他のshift-space絡みのショートカットは削除しておく。  
+>「変換前入力中」「Shift+Space」「IME を無効化」  
+>「変換中」「Shift+Space」「IME を無効化」  
+>「直接入力」「Shift+Space」「IME を有効化」  
+>「入力文字なし」「Shift+Space」「IME を無効化」  
+>他の Shift-space 絡みのショートカットは削除しておく。  
 
 ターミナルで
 
@@ -168,37 +168,38 @@ Mozc の「プロパティ」の「一般」タブにある「キーの設定」
 全般タブで  
 >カスタムフォントを選んで fontsize 14  
 >次のインプットメソッド super-space  
->インプットメソッドタブを mozcだけにする  
-これでreboot  
+>インプットメソッドタブを mozc だけにする  
+これで reboot  
 
 
-#### mozc用辞書インストール
+#### mozc 用辞書インストール
 <http://mediadesign.jp/article-4218/>  
 住所とかキーボードで打ちたくないから  
 郵便番号を入れると住所がでるようにしておく  
-アーカイブには3つのファイルが入っています。  
-Zipcode_J_Mzc  
-　┣　Readme_J.txt  
-　┣　zipcode_j_3_4.txt  
-　┗　zipcode_j_7.txt  
-辞書ファイルはハイフン有無により２種類。  
-・zipcode_j_3_4.txt  
-　郵便番号がハイフンでつながれた１２３-４５６７の形式で入力し変換する辞書  
-・zipcode_j_7.txt  
-　郵便番号がハイフンなしの７桁の数字１２３４５６７の形式で入力し変換する辞書  
-Mozc辞書ツールを起動しメニューの［管理］＞［新規辞書にインポート］を選択。  
 
-mozcの設定が完成したら  
+Zipcode_J_Mzc  
+　┣　 Readme_J.txt  
+　┣　 zipcode_j_3_4.txt  
+　┗　 zipcode_j_7.txt  
+辞書ファイルはハイフン有無により２種類。  
+・ zipcode_j_3_4.txt  
+　郵便番号がハイフンでつながれた１２３-４５６７の形式で入力し変換する辞書  
+・ zipcode_j_7.txt  
+　郵便番号がハイフンなしの７桁の数字１２３４５６７の形式で入力し変換する辞書  
+Mozc 辞書ツールを起動しメニューの［管理］＞［新規辞書にインポート］を選択。  
+
+mozc の設定が完成したら  
 
     ln -sfn ~/Dropbox/mozc/.mozc ~/.mozc  
 	
-でmozcの設定はDropboxに投げておく  
+で mozc の設定は Dropbox に投げておく  
+これでもう二度と設定しなくてもよくなるだろう  
 
 
 
 # Daemon
 不要なデーモンを止める  
-サービスの起動設定の一覧を表示  
+まずサービスの起動設定の一覧を表示していらないものを選別する  
 
     sudo systemctl list-unit-files -t service  
 
@@ -213,16 +214,15 @@ mozcの設定が完成したら
     sudo systemctl disable whoopsie.service
 
 
-#### 不要なプロセスをデフォルトで出すアプリをpurge
+#### 不要なプロセスをデフォルトで出すアプリを purge
 
     sudo apt-get purge deja-dup
 
 
-#### evolutionのプロセスを止める
+#### evolution のプロセスを止める
 evolution を apt-get remove すると gnome ごと消えるから注意  
 使わないが消すと世界が滅びてしまうため  
-evolutionのプロセスが起動しないように /dev/null へ  
-(困った時の /dev/null 愚痴は /dev/null へ)  
+evolution のプロセスが起動しないように /dev/null へ  
 
     cd /usr/share/dbus-1/services
     sudo ln -snf /dev/null  org.gnome.evolution.dataserver.AddressBook.service
@@ -233,25 +233,24 @@ evolutionのプロセスが起動しないように /dev/null へ
 
 
 # Tracker-min-fs
-たまにCPUを10％くらい使ってうざいから切る  
+たまに CPU を 10 ％くらい使ってうざいから切る  
 検索は silversearcher-ag でやるからいらん  
 ファイル検索は helm か peco でやるからいらん  
 
-DConf Editorで  
+DConf Editor で  
 >org > freedesktop > Tracker > Miner > Files:  
 >crawling-interval -2  
 >enable-monitors false  
 
 
 
-# ipv6無効化
-必要になったらonにするからそれまでいらん  
+# ipv6 無効化
+必要になったら on にするからそれまでいらん  
 
 sudo vim /etc/sysctl.conf  
 
 >net.ipv6.conf.all.disable_ipv6 = 1  
 >net.ipv6.conf.default.disable_ipv6 = 1  
-
 
 sysctl -p  
 で変更を反映させる。  
@@ -266,13 +265,13 @@ sudo sysctl -p
 >net.ipv6.conf.all.disable_ipv6 = 1  
 >net.ipv6.conf.default.disable_ipv6 = 1  
 
-sysctl -pを実行すると変更した内容が表示され、  
-またcat /proc/net/if_inet6で何も表示されなければ無効になっている。  
+sysctl -p を実行すると変更した内容が表示され、  
+また cat /proc/net/if_inet6 で何も表示されなければ無効になっている。  
 
 
-#### firefox ipv6無効化
+#### firefox ipv6 無効化
 >about:config  
->network.dns.disableIPv6の値をtrue  
+>network.dns.disableIPv6 の値を true  
 
 
 
@@ -287,14 +286,14 @@ sysctl -pを実行すると変更した内容が表示され、
     service network-manager restart
 
 dnsmasq を正しく設定していれば、このコマンドを二回目に実行すると  
-キャッシュされた DNS の IP が使用され、ルックアップの時間が速くなっているはずです  
+キャッシュされた DNS の IP が使用され、ルックアップの時間が速くなっているはず  
 
     dig archlinux.org | grep "Query time"
     ;; Query time: 18 msec
     dig archlinux.org | grep "Query time"
     ;; Query time: 2 msec
 
-15 msec くらい早くなるからよい  
+15 msec くらい早くなったからよい  
 
 
 
@@ -302,7 +301,9 @@ dnsmasq を正しく設定していれば、このコマンドを二回目に実
 消費電力を抑えて省エネ化  
 使っていないシステムバスとか徹底的にスリープするようにしてくれる  
 再起動すると無効になるので  
-sudo powertop --calibrate  
+
+>sudo powertop --calibrate  
+
 で解析して  
 
 sudo vim /etc/systemd/system/powertop.service  
@@ -322,30 +323,30 @@ sudo vim /etc/systemd/system/powertop.service
 
 アイドル時の消費電力が  
 18W → 10W になった  
-これで一日１６時間アイドルで  
-月間の電気代が140円くらいだからよい  
-アイドル時以外の消費電力を考慮しても200円代ですむ  
+これで一日 16 時間アイドルで  
+月間の電気代が 140 円くらいだからよい  
+アイドル時以外の消費電力を考慮しても 200 円代ですむ  
 キチンと不要なものを省けば  
-core2duoのThinkPadでもアイドル時CPU使用率が3~10％ですむ  
+core2duo の ThinkPad でもアイドル時 CPU 使用率が 3~10 ％ですむ  
 
 
 
 # Profile-sync-daemon
 
-chrome firefox の大量のcacheやプロファイルをメモリにおいて高速化し  
-SSDに同期する頻度を減らすので、SSDの長寿命化対策になる  
+chrome firefox の大量の cache やプロファイルをメモリにおいて高速化し  
+SSD に同期する頻度を減らすので、SSD の長寿命化対策になる  
 体感速度がありえないほど上がるのでオススメ  
 
     sudo add-apt-repository ppa:graysky/utils
     sudo apt-get update
     sudo apt-get install profile-sync-daemon
 
-#### overlayfsを使う  
+#### overlayfs を使う  
 sudo su -  
 visudo (以下を最終行に追加)   
 >masa ALL=(ALL) NOPASSWD: /usr/bin/psd-overlay-helper
 	
-※masaは使用するユーザー名
+※ masa は使用するユーザー名
 
 vim ~/.config/psd/psd.conf  
 >USE_OVERLAYFS="yes"  
@@ -380,7 +381,7 @@ psd p
 psd のバージョン 6.x シリーズのリリースから、公式でサポートされる init システムは  
 systemd だけになりました。  
 Psd には起動と停止を行うための systemd ユーザーサービスが付属しています (psd.service)。  
-さらに、1時間毎に tmpfs からディスクに再同期させる resync-timer も含まれています。  
+さらに、1 時間毎に tmpfs からディスクに再同期させる resync-timer も含まれています。  
 resync-timer は psd.service によって自動的に起動するため、あなたがタイマーを起動させる必要はありません。  
 systemd のユーザーモードの使い方がよくわからない場合、以下のコマンドで psd サービスを有効化できます  
 
@@ -401,8 +402,8 @@ systemd のユーザーモードの使い方がよくわからない場合、以
 > Main PID: 1147 (code=exited, status=0/SUCCESS)  
 >   CGroup: /user.slice/user-1000.slice/user@1000.service/psd.service  
 
-> 5月 04 16:41:44 ThinkPad systemd[1142]: Starting Profile-sync-daemon...  
-> 5月 04 16:41:44 ThinkPad systemd[1142]: Started Profile-sync-daemon.  
+> 5 月 04 16:41:44 ThinkPad systemd[1142]: Starting Profile-sync-daemon...  
+> 5 月 04 16:41:44 ThinkPad systemd[1142]: Started Profile-sync-daemon.  
 
 
 ドキュメント  
@@ -411,14 +412,14 @@ systemd のユーザーモードの使い方がよくわからない場合、以
 
 
 # SSD
-TRIMを設定する  
+TRIM を設定する  
 cat /etc/cron.weekly/fstrim  
 
     #!/bin/sh
     # trim all mounted file systems which support it
     /sbin/fstrim --all || true
 
-ubuntu gnomeは週一回 TRIM がデフォルトで走るようになっているので  
+ubuntu gnome は週一回 TRIM がデフォルトで走るようになっているので  
 そのままにしておく。  
 
 #### I/O スケジューラー
@@ -426,9 +427,9 @@ cat /sys/block/sda/queue/scheduler
 
     noop [deadline] cfq  
 
-デフォルトでdeadlineになっているはず  
-最速はnoopだが、大きいファイルはdeadlineがいいので  
-総合的に勘案してdeadlineにした  
+デフォルトで deadline になっているはず  
+最速は noop だが、大きいファイルは deadline がいいので  
+総合的に勘案して deadline にした  
 SSD でブロックデバイス暗号化を使っている場合 TRIM はデフォルトでは有効になりません。  
 fstrim を定期的に実行している場合 discard フラグは必要ありません。  
 
@@ -444,17 +445,17 @@ Inconsolata-Regular.ttf
 をとってくる
 
 <http://mix-mplus-ipa.osdn.jp/migu/>  
-migu-1m〜.zipを解凍して  
+migu-1m 〜.zip を解凍して  
 migu-1m-bold.ttf  
 migu-1m-regular.ttf  
 
 <https://github.com/yascentur/Ricty>  
-ricty_generator.shをダウンロード  
+ricty_generator.sh をダウンロード  
 
     chmod u+x ricty_generator.sh  
     ./ricty_generator.sh migu-1m-regular.ttf migu-1m-bold.ttf Inconsolata-Regular.ttf Inconsolata-Bold.ttf  
 
-#### terminalでも使えるように以下も設定  
+#### terminal でも使えるように設定  
 
     sudo mv Ricty-Bold.ttf /usr/local/share/fonts/  
     sudo mv Ricty-Regular.ttf /usr/local/share/fonts/  
@@ -467,7 +468,7 @@ ricty_generator.shをダウンロード
     sudo apt install golang-go
     go get github.com/peco/peco/cmd/peco
 	
-updateするときは以下で
+update するときは以下で
 
     go get -u github.com/peco/peco/cmd/peco
 
@@ -486,14 +487,15 @@ updateするときは以下で
     sudo paco -lp emacs-25.1 "make install"
 
 #### paco
-emacsは好きなバージョンをいつでも使えるように git からインストール  
-いつでもクリーンインストールできるように  
+peco と paco は紛らわしいので注意
+emacs は好きなバージョンをいつでも使いたいから git でインストール  
+emacs をクリーンインストールするため  
 paco で emacs を管理する  
 emacs25.2 がでたり head を使いたくなったら  
 
     sudo paco -r emacs-25.1  
 	
-すると綺麗に消えるのでクリーンになる  
+すると emacs-25.1 でインストールしたファイルがきれいサッパリ消える  
 
 
 
@@ -503,20 +505,20 @@ emacs25.2 がでたり head を使いたくなったら
     cask upgrade  
     cd ~/.emacs.d  
 	
-Caskファイルの初期化  
+Cask ファイルの初期化  
 
     cask init  
 	
-Caskに追加した場合  
+Cask に追加した場合  
 
     cd ~/.emacs.d  
     cask install   
 	
-cask自体をアップデートする場合  
+cask 自体をアップデートする場合  
 
     cask upgrade-cask  
 	
-caskライブラリをアップデート  
+cask ライブラリをアップデート  
 
     cask update  
 
@@ -552,7 +554,7 @@ Dash またはターミナルから、次のコマンドを実行して、「自
 
 「コマンド」ボックスに、上で確認した「xinput --set-prop "マウスのデバイス名" "Device Accel Constant Deceleration" ポインタ速度」を記入し保存する。  
 以上いちいちめんどくさいから  
-.zshrcに  
+.zshrc に  
 
     alias trackpointspeed='xinput --set-prop 10 "Device Accel Constant Deceleration"'  
 	
@@ -562,12 +564,12 @@ Dash またはターミナルから、次のコマンドを実行して、「自
 
   ↑
 おすすめの速度
-ThinkPadユーザーは必須と思われる  
+ThinkPad ユーザーは必須と思われる  
 
 
 
 # f.lux
-ブルーライトカットで目をいたわる  
+ブルーライトカットで目にやさしく  
 
     sudo add-apt-repository ppa:nathan-renniewaldock/flux
     sudo apt-get update
@@ -583,8 +585,8 @@ ThinkPadユーザーは必須と思われる
 
 
 # GNU GLOBAL
-debian の global は古すぎるのでmakeする  
-mekeするものはpacoで管理する  
+debian の global は古すぎるので make する  
+例によって meke するものは paco で管理する  
 
     wget ftp://ftp.gnu.org/pub/gnu/global/global-6.5.4.tar.gz
     ./global-6.5.4.tar.gz
@@ -594,11 +596,11 @@ mekeするものはpacoで管理する
     sudo paco -lD "make install"
 
 #### paco
-pacoで管理しておくとアンインストールが楽  
+paco で管理しておくとアンインストールが楽  
 
     sudo paco -r gloval-6.5.4  
 
-globalの新バージョンがでたら  
+global の新バージョンがでたら  
 
     sudo paco -r gloval-6.5.4  
 	
