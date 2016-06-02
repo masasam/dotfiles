@@ -236,7 +236,7 @@ mozc の設定が完成したら
 
 
 #### evolution のプロセスを止める
-![sekai](https://raw.githubusercontent.com/latestmasa/dotfiles/image/image/sekai.png)
+![sekai](https://raw.githubusercontent.com/latestmasa/dotfiles/image/image/sekai.jpg)
 
 evolution を apt-get remove すると gnome ごと消えるから注意  
 evolution を消すと世界が滅びてしまうため  
