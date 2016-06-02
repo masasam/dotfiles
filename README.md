@@ -412,7 +412,21 @@ systemd のユーザーモードの使い方がよくわからない場合、以
 
 
 # SSD
-<img src="https://raw.githubusercontent.com/latestmasa/dotfiles/image/image/baobao.png">
+![SSD](https://raw.githubusercontent.com/latestmasa/dotfiles/image/image/baobao.png)
+
+SSD は 120G で十分  
+
+home の半分は git のファイル  
+残りは chrome firefox の cache  
+
+usr の半分はフォントやアイコン  
+残りは ライブラリ  
+
+var lib は  
+カーネルと apt のキャッシュなど  
+
+これ以外は NAS にでも置いとけ  
+
 TRIM を設定する  
 cat /etc/cron.weekly/fstrim  
 
