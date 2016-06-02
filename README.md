@@ -26,6 +26,7 @@ dropboxをインストール
 
 
 # Terminal
+![terminal](https://raw.githubusercontent.com/latestmasa/dotfiles/image/image/terminal.png)
 ターミナルサイズ  
 134列72行 (Think Padのサイズ お好みで)  
 
