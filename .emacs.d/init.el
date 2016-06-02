@@ -235,14 +235,17 @@
 ;; helm-multi-files  recentf
 (setq recentf-max-saved-items 1000)
 
-;; helm-git-grep
-(global-set-key (kbd "C-x g g") 'helm-git-grep)
-
 
 
 ;; helm-descbinds
 (require 'helm-descbinds)
 (helm-descbinds-mode)
+
+
+
+;; magit
+(autoload 'magit-status "magit" nil t)
+(global-set-key "\C-xg" 'magit-status)
 
 
 
