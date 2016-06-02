@@ -132,7 +132,7 @@ change-colors で黒画面をベースにする。
 chrome の google 検索のデフォルトは vi キーバインドだが気にしない(vim も使うし)  
 
 >jk で移動して  
->enter で新規 tab に開き
+>enter で新規 tab に開き  
 >Ctrl+W tab を消す  
 >Ctrl+R 再読み込み  
 >Ctrl+tab タブ移動  
@@ -652,5 +652,53 @@ global の新バージョンがでたら
 
 
 # Sylpheed
+sylpheed 初回起動時に  
+Mail フォルダを質問されるので  
 
-ln -sfn ~/Dropbox/sylpheed/.sylpheed-2.0 ~/.sylpheed-2.0
+> ~/Dropbox/sylpheed/Mail  
+
+に Mail フォルダを指定する。  
+1 メール 1 ファイルのファイル形式なので  
+Dropbox でメールをすぐ同期すれば  
+データロストの心配がない。  
+もしあっても最新のメールが一通だけだろう。  
+普通サーバーに７日くらいメールはとっておくから  
+ほぼデータロストは心配しなくてもよい。  
+
+#### sylpheed の設定ファイル
+
+ひとしきり設定が終了したら  
+dropbox に丸投げして二度とかかわらないようにしよう。  
+
+>ln -sfn ~/Dropbox/sylpheed/.sylpheed-2.0 ~/.sylpheed-2.0  
+
+### Sylph-Searcher
+何万枚のメールでも gmail ライクに検索したい  
+というジャンキーな欲望を満たすため  
+メールデータを全部 postgresql にほり込んで  
+Sylph-Searcher で検索できるようにする。  
+
+    sudo apt-get install sylph-searcher postgresql
+
+    sudo su - postgres
+    createuser masa
+    createdb -O masa -E UTF-8 sylph
+    exit
+
+    psql -f /usr/share/sylph-searcher/sql/create.sql sylph
+    syldbimport -d sylph -r ~/Dropbox/sylpheed/Mail
+	
+※ masa はユーザー名
+
+データベースの更新は  
+
+    syldbimport -d sylph -r ~/Dropbox/sylpheed/Mail
+
+検索は  
+
+    syldbquery -d sylph 検索語
+	
+GUI  
+sylph-searcher を起動して  
+[設定] でデータベース名だけ sylph を指定  
+![sylpheed](https://raw.githubusercontent.com/latestmasa/dotfiles/image/image/sylpheed.png)
