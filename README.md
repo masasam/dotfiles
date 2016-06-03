@@ -66,6 +66,7 @@ shellscript で tmux 呼ぶプログラマがファンキーだと思うがね
 
 
 # Activity
+![activity](https://raw.githubusercontent.com/latestmasa/dotfiles/image/image/activity.png)
 アクティビティ > 設定 > 検索  
 全部 off にする  
 アプリの起動にしか使わん  
@@ -75,8 +76,6 @@ shellscript で tmux 呼ぶプログラマがファンキーだと思うがね
 >システム→アクティビティ画面を表示する  を Alt+Space  
 
 Alt+space で alfred っぽく使う
-
-#### ショートカットキー  
 
 >Ctrl-u  
 
