@@ -81,12 +81,14 @@ Alt+space で alfred っぽく使う
 
 文字を打ち間違えたら Ctrl-u で全消し  
 
-なぜか Activity 画面では Ctrl-h で backspace できないのでつらいがこれでいける  
-Activity 画面で Ctrl-h できないのは  
-f とタイプして tab 押して補完候補をめぐる時  
-Ctrl-h を押すと補完候補のトップに戻るショートカットになってた。  
+Activity 画面では Ctrl-h で backspace できないのでつらいがこれでいける  
+Ctrl-h できないのは  
+g とタイプして tab 押して補完候補をめぐる時(上記の画像)  
+GIMP まで移動して Ctrl-h を押すと  
+補完候補のトップの Google Cheome に戻る  
 っていうか Ctrl-ホニャララで全部補完候補トップに戻りおる  
 誰得？  
+まぁ Ctrl-u で凌げるからよし。実際のところアプリ呼び出すだけやしね  
 
 
 
@@ -239,7 +241,8 @@ mozc の設定が完成したら
     sudo systemctl disable whoopsie.service
 
 
-#### 不要なプロセスをデフォルトで出すアプリを purge
+#### 不要なプロセスをデフォルトで出すアプリをパージ
+パルスのファルシのルシがパージでコクーン  
 
     sudo apt-get purge deja-dup
 
