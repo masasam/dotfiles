@@ -380,6 +380,7 @@ core2duo の ThinkPad でもアイドル時 CPU 使用率が 3~10 ％ですむ
 chrome firefox の大量の cache やプロファイルをメモリにおいて高速化し  
 SSD に同期する頻度を減らすので、SSD の長寿命化対策になる  
 体感速度がありえないほど上がるのでオススメ  
+メモリにキャッシュをおいたら起きる面倒なことを全部面倒見てくれる。  
 
     sudo add-apt-repository ppa:graysky/utils
     sudo apt-get update
@@ -421,19 +422,14 @@ psd p
 > profile size:    24M  
 > recovery dirs:   none  
 
-#### psd の起動と停止
-psd のバージョン 6.x シリーズのリリースから、公式でサポートされる init システムは  
-systemd だけになりました。  
-Psd には起動と停止を行うための systemd ユーザーサービスが付属しています (psd.service)。  
-さらに、1 時間毎に tmpfs からディスクに再同期させる resync-timer も含まれています。  
-resync-timer は psd.service によって自動的に起動するため、あなたがタイマーを起動させる必要はありません。  
-systemd のユーザーモードの使い方がよくわからない場合、以下のコマンドで psd サービスを有効化できます  
+#### psd を自動起動するように
 
     systemctl --user enable psd.service  
     reboot  
 
 
 #### 動いているか確認する
+再起動後  
 
     systemctl --user status psd  
 	
@@ -471,7 +467,7 @@ var lib は
 
 これ以外は NAS にでも置いとけ  
 
-5000 円もしないんだし、IO が 1~3 msec 早くなるから SSD にしない理由はない。  
+5000 円もしないんだし、小さいファイルの IO でも 1~3 msec 早くなるから SSD にしない理由はない。  
 
 #### TRIM を設定する  
 cat /etc/cron.weekly/fstrim  
@@ -749,3 +745,11 @@ sylph-searcher を起動して
 
 
 
+# ThinkPad の wifi
+
+intel wifi ドライバの出来が悪いので  
+WLI-UC-GNM2 が 1000 円以下で買えるから  
+wifi が調子悪いなら、つべこべ言わずに買っとけ  
+というか  
+intel の wifi チップを物理的に取り出した  
+これですっきり  
