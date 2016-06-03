@@ -313,15 +313,15 @@ sysctl -p を実行すると変更した内容が表示され、
     echo cache-size=1000 > /etc/NetworkManager/dnsmasq.d/cache
     service network-manager restart
 
-dnsmasq を正しく設定していれば、このコマンドを二回目に実行すると  
+dnsmasq を正しく設定していれば、  
 キャッシュされた DNS の IP が使用され、ルックアップの時間が速くなっているはず  
 
-    dig archlinux.org | grep "Query time"
-    ;; Query time: 18 msec
-    dig archlinux.org | grep "Query time"
-    ;; Query time: 2 msec
+    dig kernel.org | grep "Query time"                                                                    [~]
+    ;; Query time: 58 msec
+    dig kernel.org | grep "Query time"                                                                    [~]
+    ;; Query time: 0 msec
 
-15 msec くらい早くなったからよい  
+0 msec なったから満足  
 
 
 
@@ -536,13 +536,13 @@ update するときは以下で
 #### paco
 peco と paco は紛らわしいので注意
 emacs は好きなバージョンをいつでも使いたいから git でインストール  
-emacs をクリーンインストールするため  
 paco で emacs を管理する  
 emacs25.2 がでたり head を使いたくなったら  
 
     sudo paco -r emacs-25.1  
 	
 すると emacs-25.1 でインストールしたファイルがきれいサッパリ消える  
+漢は黙ってクリーンインストール  
 
 
 
@@ -622,6 +622,12 @@ ThinkPad ユーザーは必須と思われる
     sudo apt-get update
     sudo apt-get install fluxgui
 
+起動したら自宅か職場の緯度経度を入れれば良い  
+居場所と時間でブルーライトをカットしてくれる。夜中は赤っぽくなる。  
+
+自宅と職場が離れすぎている場合は仕事をやめればいいと思うよ。  
+赤っぽいのが嫌なら夜中にハックするのをやめればいいと思うよ。  
+
 
 
 # go-mode
@@ -658,6 +664,7 @@ global の新バージョンがでたら
 
 
 # Sylpheed
+
 sylpheed 初回起動時に  
 Mail フォルダを質問されるので  
 
@@ -667,16 +674,19 @@ Mail フォルダを質問されるので
 1 メール 1 ファイルのファイル形式なので  
 Dropbox でメールをすぐ同期すれば  
 データロストの心配がない。  
+
 もしあっても最新のメールが一通だけだろう。  
 普通サーバーに７日くらいメールはとっておくから  
-ほぼデータロストは心配しなくてもよい。  
+データロストは心配しなくてもよい。  
 
 #### sylpheed の設定ファイル
 
 ひとしきり設定が終了したら  
-dropbox に丸投げして二度とかかわらないようにしよう。  
+dropbox に丸投げして二度と設定作業とかかわらないようにしよう。  
 
 >ln -sfn ~/Dropbox/sylpheed/.sylpheed-2.0 ~/.sylpheed-2.0  
+
+![torei](https://raw.githubusercontent.com/latestmasa/dotfiles/image/image/torei.png)
 
 最小化した時にトレイアイコンに格納する  
 に設定しておくと  
@@ -686,6 +696,7 @@ Alt - Tab
 
 
 # Sylph-Searcher
+
 何万枚のメールでも gmail ライクに検索したい  
 というジャンキーな欲望を満たすため  
 メールデータを全部 postgresql にほり込んで  
@@ -709,9 +720,15 @@ Sylph-Searcher で検索できるようにする。
 
 検索は  
 
-    syldbquery -d sylph 検索語
-	
-GUI  
+    syldbquery -d sylph 'お世話になっております'
+
+賢明な御仁なら  
+上記は意味をなしていないので  
+お世話になっておりますは省略してもいいと気づくはずだ。  
+もっと賢明な御仁なら  
+検索ワードを変えればよいと気づくはずだ。  
+
+GUI で検索  
 sylph-searcher を起動して  
 [設定] でデータベース名だけ sylph を指定  
 ![sylpheed](https://raw.githubusercontent.com/latestmasa/dotfiles/image/image/sylpheed.png)
