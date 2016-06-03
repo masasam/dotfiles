@@ -1,6 +1,6 @@
 #!/bin/bash
-echo "alias screenstart='screen -D -RR'" >> .bashrc
-echo "alias tmuxstart='tmux new-session -A -s main'" >> .bashrc
+echo "alias screenstart='screen -D -RR'" >> ~/.bashrc
+echo "alias tmuxstart='tmux new-session -A -s main'" >> ~/.bashrc
 
 sudo apt-get install build-essential ubuntu-restricted-extras exuberant-ctags git traceroute \
 tig nmap vim nkf xsel htop keychain zsh apache2-utils colordiff \

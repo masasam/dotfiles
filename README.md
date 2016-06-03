@@ -47,8 +47,8 @@ zsh をデフォルトシェルにはしない
 tmux を起動したら zsh が起動するようにしておいて  
 .bashrc はほぼディストリデフォルトにしておく  
 
-    echo "alias screenstart='screen -D -RR'" >> .bashrc
-    echo "alias tmuxstart='tmux new-session -A -s main'" >> .bashrc
+    echo "alias screenstart='screen -D -RR'" >> ~/.bashrc
+    echo "alias tmuxstart='tmux new-session -A -s main'" >> ~/.bashrc
 
 terminal を開いて  
 screenstart あるいは tmuxstart で起動すると  
@@ -236,11 +236,17 @@ mozc の設定が完成したら
 
 
 #### evolution のプロセスを止める
+evolution のプロセスが勝手に起動して  
+結構 CPU リソースを食うので  
+evolution を殲滅する  
+
 ![sekai](https://raw.githubusercontent.com/latestmasa/dotfiles/image/image/sekai.jpg)
 
-evolution を apt-get remove すると gnome ごと消えるから注意  
+だがしかし  
+sudo apt-get remove evolution すると gnome ごと消えるという罠が  
 evolution を消すと世界が滅びて闇の世界になってしまうため  
 evolution のプロセスが起動しないように /dev/null へ  
+
 Linux は闇の世界で生きる選択も与えてくれる  
 自由っていいね。  
 
@@ -250,7 +256,7 @@ Linux は闇の世界で生きる選択も与えてくれる
     sudo ln -snf /dev/null  org.gnome.evolution.dataserver.Sources.service 
     sudo ln -snf /dev/null  org.gnome.evolution.dataserver.UserPrompter.service 
 
-/dev/null はロトの剣だったのか？
+/dev/null はロトの剣だったのか？  
 
 
 
@@ -672,7 +678,14 @@ dropbox に丸投げして二度とかかわらないようにしよう。
 
 >ln -sfn ~/Dropbox/sylpheed/.sylpheed-2.0 ~/.sylpheed-2.0  
 
-### Sylph-Searcher
+最小化した時にトレイアイコンに格納する  
+に設定しておくと  
+Alt - Tab  
+で sylpheed がでてこないのでよい  
+コード書いてる時はメールなど見たくないものだ。  
+
+
+# Sylph-Searcher
 何万枚のメールでも gmail ライクに検索したい  
 というジャンキーな欲望を満たすため  
 メールデータを全部 postgresql にほり込んで  
@@ -702,3 +715,6 @@ GUI
 sylph-searcher を起動して  
 [設定] でデータベース名だけ sylph を指定  
 ![sylpheed](https://raw.githubusercontent.com/latestmasa/dotfiles/image/image/sylpheed.png)
+
+
+
