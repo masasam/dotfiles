@@ -28,7 +28,7 @@
 	fontdiff = -family Courier -size 12 -weight bold -slant roman -underline 0 -overstrike 0
 [core]
 	editor = emacsclient
-	pager = lv -c
+	pager = less
 
 [push]
 	default = upstream
