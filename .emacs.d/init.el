@@ -11,7 +11,7 @@
 
 
 ;; cask
-(require 'cask "~/.cask/cask.el")
+(require 'cask "/usr/share/cask/cask.el")
 (cask-initialize)
 
 ;; theme
