@@ -222,7 +222,6 @@ alias trackpointspeed='xinput --set-prop 10 "Device Accel Constant Deceleration"
 # パスの追加
 export GOPATH=~/go
 export PATH="$PATH:$GOPATH/bin"
-export PATH="$HOME/.cask/bin:$PATH"
 setopt noautoremoveslash     #ディレクトリ名が引数のときに最後の / を削除しない
 
 
