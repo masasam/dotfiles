@@ -1,0 +1,225 @@
+gdisk /dev/sda
+
+1 sda1  biosパテーション
+2 sda2 /
+
+mkfs.ext4 /dev/sda2
+mount /dev/sda2 /mnt
+
+nano /etc/pacman.d/mirrorlist
+jaistを一番上に
+
+pacstrap /mnt base base-devel
+
+genfstab -U -p /mnt >> /mnt/etc/fstab
+
+arch-chroot /mnt /bin/bash
+
+echo thinkpad > /etc/hostname
+
+ln -s /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
+
+nano /etc/locale.gen
+en_US.UTF-8 UTF-8
+ja_JP.UTF-8 UTF-8
+
+locale-gen
+
+export LANG=ja_JP.UTF-8
+
+echo LANG=ja_JP.UTF-8 > /etc/locale.conf
+
+hwclock --systohc --utc
+
+mkinitcpio -p linux
+
+useradd -m -G wheel -s /bin/bash masa
+
+passwd masa
+
+visudo
+Defaults env_keep += “HOME”
+と
+%wheel ALL=(ALL) ALLのコメントアウトを外す
+
+pacman -S grub
+
+grub-install --recheck /dev/sda
+
+grub-mkconfig -o /boot/grub/grub.cfg
+
+exit
+reboot
+
+rootでlogin
+
+lspci|grep VGA
+sudo pacman -S xf86-video-intel
+pacman -S libva-intel-driver
+sudo pacman -S gnome
+pacman -S bash-completion
+pacman -S zsh git vim
+pacman -S gdm
+pacman -S xorg-server xorg-server-utils xorg-xinit xorg-xclock xterm
+
+sudo pacman -S network-manager
+systemctl list-unit-files
+sudo systemctl disable dhcpcd.service
+sudo systemctl enable NetworkManager.service
+systemctl enable gdm.service
+
+reboot
+
+masaでlogin
+
+ibus-setup
+
+sudo pacman -S xf86-input-evdev
+
+sudo pacman -S xdg-user-dirs
+LANG=C xdg-user-dirs-update --force
+
+sudo pacman -S dropbox
+sudo pacman -S firefox
+sudo pacman -S ibus-mozc mozc
+sudo pacman -S otf-ipafont
+sudo pacman -S openssh
+
+vim /etc/pacman.conf
+[archlinuxfr]
+SigLevel = Never
+Server = http://repo.archlinux.fr/$arch
+
+[pnsft-pur]
+SigLevel = Optional TrustAll
+Server = http://downloads.sourceforge.net/project/pnsft-aur/pur/$arch
+
+pacman -Syy
+pacman -S yaourt
+
+pacman --sync --refresh yaourt
+yaourt -Syua
+
+sudo pacman -S tmux
+sudo pacman -S keychain
+sudo pacman -S gnome-tweak-tool
+
+sudo pacman -S xsel
+
+yaourt -S google-chrome
+yaourt -S ricty
+
+pacman -S sylpheed
+pacman -S emacs
+pacman -S curl
+
+yaourt cask
+cd .emacs.d
+cask install
+cask update
+
+yaourt peco
+sudo pacman -S evince inkscape gimp unrar
+sudo pacman -S file-roller vlc
+sudo pacman -S xclip
+sudo pacman -S atool
+sudo pacman -S trash-cli
+sudo pacman -S the_silver_searcher
+sudo pacman -S powertop
+sudo pacman -S cifs-utils
+sudo pacman -S gvfs gvfs-smb 
+sudo pacman -S seahorse gnome-keyring
+yaourt noto-fonts-cjk 
+sudo pacman -S cups-pdf
+yaourt global
+
+gnomeの最近開いたファイルを無効に
+rm -rf ~/.local/share/recently-used.xbel
+ln -s /dev/null ~/.local/share/recently-used.xbel
+
+
+sudo su -
+echo cache-size=1000 > /etc/NetworkManager/dnsmasq.d/cache
+sudo systemctl restart NetworkManager.service 
+
+sudo pacman -S powertop
+
+sudo powertop --calibrate
+
+sudo vim /etc/systemd/system/powertop.service
+
+[Unit] Description=Powertop tunings
+
+[Service] Type=oneshot ExecStart=/usr/sbin/powertop --auto-tune
+
+[Install] WantedBy=multi-user.target
+
+systemctl enable powertop.service  
+reboot
+
+
+~/.xinitrc
+tpset() { xinput set-prop "TPPS/2 IBM TrackPoint" "$@"; }
+
+tpset "Evdev Wheel Emulation" 1
+tpset "Evdev Wheel Emulation Button" 2
+tpset "Evdev Wheel Emulation Timeout" 200
+tpset "Evdev Wheel Emulation Axes" 6 7 4 5
+tpset "Device Accel Constant Deceleration" 0.95
+
+
+/etc/udev/rules.d/10-trackpoint.rules
+ACTION=="add", SUBSYSTEM=="input", ATTR{name}=="TPPS/2 IBM TrackPoint", ATTR{device/sensitivity}="240"
+
+
+/etc/X11/xorg.conf.d/20-thinkpad.conf
+Section "InputClass"
+    Identifier	"Trackpoint Wheel Emulation"
+    MatchProduct	"TPPS/2 IBM TrackPoint"
+    MatchDevicePath	"/dev/input/event*"
+    Option		"EmulateWheel"		"true"
+    Option		"EmulateWheelButton"	"2"
+    Option		"Emulate3Buttons"	"false"
+    Option		"XAxisMapping"		"6 7"
+    Option		"YAxisMapping"		"4 5"
+EndSection
+
+
+yaourt profile-sync-daemon
+
+visudo
+masa ALL=(ALL) NOPASSWD: /usr/bin/psd-overlay-helper
+
+psd p
+
+vim ~/.config/psd/psd.conf
+
+USE_OVERLAYFS="yes"
+BROWSERS="google-chrome firefox"
+
+psd p
+
+psd を自動起動するように
+
+systemctl --user enable psd.service  
+reboot  
+動いているか確認する
+
+再起動後
+
+systemctl --user status psd  
+
+yaourt man-pages-ja
+
+sudo pacman -S redshift
+
+yaourt nautilus-dropbox
+sudo pacman -S eog
+sudo pacman -S mcomics
+
+sudo vim /etc/mkinitcpio.conf
+MODULES="i915"
+
+mkdir -p ~/go/{bin,src}
+go get -u github.com/nsf/gocode
+go get -u github.com/rogpeppe/godef
