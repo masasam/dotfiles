@@ -57,48 +57,56 @@ NetworkManager を入れるまで有線で接続しその後無線 Lan に
     %wheel ALL=(ALL) ALL
 のコメントアウトを外す
 
->pacman -S grub	 
+>pacman -S grub  
 
->grub-install --recheck /dev/sda
 
->grub-mkconfig -o /boot/grub/grub.cfg
+>grub-install --recheck /dev/sda  
 
->systemctl enable dhcpcd.service
 
->exit
->reboot
+>grub-mkconfig -o /boot/grub/grub.cfg  
+
+
+>systemctl enable dhcpcd.service  
+
+>exit  
+>reboot  
 
 root で login
 
->lspci|grep VGA
->pacman -S xf86-video-intel
->pacman -S libva-intel-driver
->pacman -S bash-completion
->pacman -S zsh git vim
->pacman -S xorg-server xorg-server-utils xorg-xinit xorg-xclock xterm
->pacman -S gnome
->pacman -S gdm
+>lspci|grep VGA  
+>pacman -S xf86-video-intel  
+>pacman -S libva-intel-driver  
+>pacman -S bash-completion  
+>pacman -S zsh git vim  
+>pacman -S xorg-server xorg-server-utils xorg-xinit xorg-xclock xterm  
+>pacman -S gnome  
+>pacman -S gdm  
 
->pacman -S network-manager
->systemctl list-unit-files
->systemctl disable dhcpcd.service
->systemctl enable NetworkManager.service
->systemctl enable gdm.service
 
->reboot
+>pacman -S network-manager  
+>systemctl list-unit-files  
+>systemctl disable dhcpcd.service  
+>systemctl enable NetworkManager.service  
+>systemctl enable gdm.service  
+
+
+>reboot  
 
 masa で login
 
->sudo pacman -S xf86-input-evdev
+>sudo pacman -S xf86-input-evdev  
 
->sudo pacman -S xdg-user-dirs
->LANG=C xdg-user-dirs-update --force
 
->sudo pacman -S firefox  firefox-i18n-ja
->sudo pacman -S otf-ipafont
->sudo pacman -S openssh
+>sudo pacman -S xdg-user-dirs  
+>LANG=C xdg-user-dirs-update --force  
 
->vim /etc/pacman.conf
+
+>sudo pacman -S firefox  firefox-i18n-ja  
+>sudo pacman -S otf-ipafont  
+>sudo pacman -S openssh  
+
+
+>vim /etc/pacman.conf  
 
     [archlinuxfr]
     SigLevel = Never
@@ -108,19 +116,22 @@ masa で login
     SigLevel = Optional TrustAll
     Server = http://downloads.sourceforge.net/project/pnsft-aur/pur/$arch
 
->sudo pacman -Syy
->sudo pacman -S yaourt
+>sudo pacman -Syy  
+>sudo pacman -S yaourt  
 
->sudo pacman --sync --refresh yaourt
->yaourt -Syua
 
->sudo pacman -S dropbox
->sudo pacman -S nautilus-dropbox
->sudo pacman -S ibus-mozc mozc
+>sudo pacman --sync --refresh yaourt  
+>yaourt -Syua  
 
->sudo pacman -S tmux
->sudo pacman -S keychain
->sudo pacman -S gnome-tweak-tool
+
+>sudo pacman -S dropbox  
+>sudo pacman -S nautilus-dropbox  
+>sudo pacman -S ibus-mozc mozc  
+
+
+>sudo pacman -S tmux  
+>sudo pacman -S keychain  
+>sudo pacman -S gnome-tweak-tool  
 
 
 # Tweak Tool
@@ -141,42 +152,48 @@ X サーバーを終了するためのキーシーケンス
 >Don't suspend on lid close  
 
 
->sudo pacman -S xsel
+>sudo pacman -S xsel  
 
->yaourt -S google-chrome
->yaourt -S ricty
 
->sudo pacman -S sylpheed
->sudo pacman -S emacs
->sudo pacman -S curl
+>yaourt -S google-chrome  
+>yaourt -S ricty  
 
->yaourt cask
->cd .emacs.d
->cask upgrade
->cask install
->cask update
 
->yaourt peco
->sudo pacman -S archlinux-wallpaper
->sudo pacman -S evince inkscape gimp unrar
->sudo pacman -S file-roller vlc
->sudo pacman -S xclip
->sudo pacman -S atool
->sudo pacman -S trash-cli
->sudo pacman -S the_silver_searcher
->sudo pacman -S powertop
->sudo pacman -S cifs-utils
->sudo pacman -S gvfs gvfs-smb 
->sudo pacman -S seahorse gnome-keyring
->yaourt noto-fonts-cjk 
->sudo pacman -S cups-pdf
+>sudo pacman -S sylpheed  
+>sudo pacman -S emacs  
+>sudo pacman -S curl  
+
+
+>yaourt cask  
+>cd .emacs.d  
+>cask upgrade  
+>cask install  
+>cask update  
+
+
+>yaourt peco  
+>sudo pacman -S archlinux-wallpaper  
+>sudo pacman -S evince inkscape gimp unrar  
+>sudo pacman -S file-roller vlc  
+>sudo pacman -S xclip  
+>sudo pacman -S atool  
+>sudo pacman -S trash-cli  
+>sudo pacman -S the_silver_searcher  
+>sudo pacman -S powertop  
+>sudo pacman -S cifs-utils  
+>sudo pacman -S gvfs gvfs-smb  
+>sudo pacman -S seahorse gnome-keyring  
+>yaourt noto-fonts-cjk  
+>sudo pacman -S cups-pdf  
+
 
 theme を適用
->sudo cp -R ~/Dropbox/arch/OSX-Arc-Shadow/ /usr/share/themes/
+
+>sudo cp -R ~/Dropbox/arch/OSX-Arc-Shadow/ /usr/share/themes/  
 
 
 
->~/.xinitrc
+>~/.xinitrc  
 
     tpset() { xinput set-prop "TPPS/2 IBM TrackPoint" "$@"; }
 
@@ -187,12 +204,12 @@ theme を適用
     tpset "Device Accel Constant Deceleration" 0.95
 
 
->sudo vim /etc/udev/rules.d/10-trackpoint.rules
+>sudo vim /etc/udev/rules.d/10-trackpoint.rules  
 
     ACTION=="add", SUBSYSTEM=="input", ATTR{name}=="TPPS/2 IBM TrackPoint", ATTR{device/sensitivity}="240"
 
 
->sudo vim /etc/X11/xorg.conf.d/20-thinkpad.conf
+>sudo vim /etc/X11/xorg.conf.d/20-thinkpad.conf  
 
     Section "InputClass"
         Identifier	"Trackpoint Wheel Emulation"
@@ -212,7 +229,7 @@ theme を適用
 134 列 72 行
 (Think Pad のサイズ terminal を全画面にするサイズを指定)  
 
-font ricty 15
+font ricty 15  
 
 #### ターミナルのプロファイル  
 solarized Dark  
@@ -238,15 +255,16 @@ screenstart あるいは tmuxstart で起動すると
 セッションがあればそれを利用しなければ新規セッションで起動する  
 
 
->sudo su -
->echo cache-size=1000 > /etc/NetworkManager/dnsmasq.d/cache
->sudo systemctl restart NetworkManager.service 
+>sudo su -  
+>echo cache-size=1000 > /etc/NetworkManager/dnsmasq.d/cache  
+>sudo systemctl restart NetworkManager.service  
 
->sudo pacman -S powertop
 
->sudo powertop --calibrate
+>sudo pacman -S powertop  
 
->sudo vim /etc/systemd/system/powertop.service
+>sudo powertop --calibrate  
+
+>sudo vim /etc/systemd/system/powertop.service  
 
     [Unit] Description=Powertop tunings
 
@@ -255,23 +273,23 @@ screenstart あるいは tmuxstart で起動すると
     [Install] WantedBy=multi-user.target
 
     systemctl enable powertop.service  
-reboot
+reboot  
 
 
->yaourt profile-sync-daemon
+>yaourt profile-sync-daemon  
 
->visudo
+>visudo  
 
     masa ALL=(ALL) NOPASSWD: /usr/bin/psd-overlay-helper
 
->psd p
+>psd p  
 
->vim ~/.config/psd/psd.conf
+>vim ~/.config/psd/psd.conf  
 
     USE_OVERLAYFS="yes"
     BROWSERS="google-chrome firefox"
 
->psd p
+>psd p  
 
 psd を自動起動するように
 >systemctl --user enable psd.service  
@@ -282,22 +300,26 @@ psd を自動起動するように
 
 >systemctl --user status psd  
 
->yaourt man-pages-ja
 
->sudo pacman -S redshift
->sudo pacman -S eog
->sudo pacman -S mcomix
->sudo pacman -S libreoffice-fresh-ja
+>yaourt man-pages-ja  
 
->sudo vim /etc/mkinitcpio.conf
+
+>sudo pacman -S redshift  
+>sudo pacman -S eog  
+>sudo pacman -S mcomix  
+>sudo pacman -S libreoffice-fresh-ja  
+
+
+>sudo vim /etc/mkinitcpio.conf  
 
     MODULES="i915"
 
->mkdir -p ~/go/{bin,src}
->go get -u github.com/nsf/gocode
->go get -u github.com/rogpeppe/godef
+>mkdir -p ~/go/{bin,src}  
+>go get -u github.com/nsf/gocode  
+>go get -u github.com/rogpeppe/godef  
 
->yaourt global
+
+>yaourt global  
 
 
 
