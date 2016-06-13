@@ -1,7 +1,7 @@
 # Arch linux
 
-この dotfiles は Archlinux 向け
-NetworkManager を入れるまで有線で接続しその後無線 Lan に
+この dotfiles は Archlinux 向け  
+NetworkManager を入れるまで有線で接続しその後無線 Lan に  
 
 #### install
 
@@ -373,8 +373,6 @@ defaultfullzoomlevel を 125 ％に
 
 
 # Chrome
-![Chrome](https://raw.githubusercontent.com/latestmasa/dotfiles/image/image/chrome.png)
-
 デフォルトのサイズを 125 ％に  
 
 <https://chrome.google.com/webstore/detail/change-colors/jbmkekhehjedonbhoikhhkmlapalklgn>  
@@ -561,7 +559,6 @@ dropbox に丸投げして二度と設定作業とかかわらないようにし
 
 >ln -sfn ~/Dropbox/sylpheed/.sylpheed-2.0 ~/.sylpheed-2.0  
 
-![torei](https://raw.githubusercontent.com/latestmasa/dotfiles/image/image/torei.png)
 
 最小化した時にトレイアイコンに格納する  
 に設定しておくと  
