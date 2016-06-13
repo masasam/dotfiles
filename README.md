@@ -5,15 +5,15 @@ NetworkManager を入れるまで有線で接続しその後無線 Lan に
 
 #### install
 
->dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx && sync  
+    dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx && sync  
 
 >gdisk /dev/sda  
 
     1 sda1  bios パテーション(ef02)  
     2 sda2 /  
 
->mkfs.ext4 /dev/sda2  
->mount /dev/sda2 /mnt  
+    mkfs.ext4 /dev/sda2  
+    mount /dev/sda2 /mnt  
 
 >nano /etc/pacman.d/mirrorlist  
 
