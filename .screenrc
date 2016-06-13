@@ -41,7 +41,7 @@ term screen-256color
 
 
 #screenでコピーしたものがクリップボードにはいる
-#sudo apt-get install xclip
+#sudo pacman -S xclip
 bindkey -m ' ' eval 'msgwait 0' 'stuff \040' writebuf 'exec !!! xclip /tmp/screen-exchange' 'msgwait 2'
 bindkey -m Y eval 'msgwait 0' 'stuff Y' writebuf 'exec !!! xclip /tmp/screen-exchange' 'msgwait 2'
 #bindkey -m y eval 'msgwait 0' 'stuff y' writebuf 'exec !!! xclip /tmp/screen-exchange' 'msgwait 2'

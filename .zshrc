@@ -202,7 +202,7 @@ fi
 alias ls='ls -v -F --color=auto'
 alias ll='ls -al'
 alias la='ls -A'
-# ./hogefuga.tar.gz で解凍できる apt-get install atool
+# ./hogefuga.tar.gz で解凍できる pacman -S atool
 alias -s {gz,tgz,zip,lzh,bz2,tbz,Z,tar,arj,xz}=aunpack
 alias cp="cp -ip"
 alias mv="mv -i"
