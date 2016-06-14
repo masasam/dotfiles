@@ -257,6 +257,14 @@ screenstart あるいは tmuxstart で起動すると
 
 >sudo su -  
 >echo cache-size=1000 > /etc/NetworkManager/dnsmasq.d/cache  
+
+
+>sudo vim /etc/NetworkManager/NetworkManager.conf 
+
+    [main]
+    ...
+    dns=dnsmasq
+	
 >sudo systemctl restart NetworkManager.service  
 
 
@@ -322,7 +330,26 @@ psd を自動起動するように
 >yaourt global  
 
 
+# 蓋を閉じてもサスペンドしないように
 
+>/etc/systemd/logind.conf  
+
+    #HandleLidSwitch=suspend
+    HandleLidSwitch=ignore
+	
+そして、logind サービスを再起動します:  
+
+    systemctl restart systemd-logind
+
+
+
+# ウィンドウを最大化したときに表示に乱れが発生する
+Intel HD Graphics のティアリング解消  
+>sudo vim /etc/environment
+
+    CLUTTER_PAINT=disable-clipped-redraws:disable-culling
+	
+追加して Xorg サーバーを再起動
 
 
 
@@ -492,12 +519,12 @@ sysctl -p を実行すると変更した内容が表示され、
 dnsmasq を正しく設定していれば、  
 キャッシュされた DNS の IP が使用され、ルックアップの時間が速くなっているはず  
 
-    dig kernel.org | grep "Query time"                                                                    [~]
+    drill kernel.org | grep "Query time"                                                                    [~]
     ;; Query time: 58 msec
-    dig kernel.org | grep "Query time"                                                                    [~]
-    ;; Query time: 0 msec
+    drill kernel.org | grep "Query time"                                                                    [~]
+    ;; Query time: 17 msec
 
-0 msec なったから満足  
+17 msec なったから満足  
 
 
 
