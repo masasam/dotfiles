@@ -15,7 +15,9 @@
 (cask-initialize)
 
 ;; theme
-(load-theme 'tangotango t)
+;;(load-theme 'tangotango t)
+(load-theme 'material t)
+;;(load-theme 'darkokai t)
 
 
 
@@ -34,9 +36,12 @@
 ;; font
 (add-to-list 'default-frame-alist '(font . "ricty-15.5"))
 (custom-set-faces
- '(variable-pitch ((t (:family "Ricty"))))
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(fixed-pitch ((t (:family "Ricty"))))
- )
+ '(variable-pitch ((t (:family "Ricty")))))
 
 
 
@@ -130,7 +135,75 @@
 (global-git-gutter-mode t)
 
 (custom-set-variables
- '(git-gutter:handled-backends '(git hg bzr)))
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ansi-color-faces-vector
+   [default bold shadow italic underline bold bold-italic bold])
+ '(ansi-color-names-vector
+   (vector "#eaeaea" "#d54e53" "DarkOliveGreen3" "#e7c547" "DeepSkyBlue1" "#c397d8" "#70c0b1" "#181a26"))
+ '(anzu-deactivate-region t)
+ '(anzu-mode-lighter "")
+ '(anzu-search-threshold 1000)
+ '(anzu-use-migemo nil)
+ '(compilation-message-face (quote default))
+ '(custom-enabled-themes (quote (sanityinc-solarized-dark)))
+ '(custom-safe-themes
+   (quote
+    ("01ce486c3a7c8b37cf13f8c95ca4bb3c11413228b35676025fdf239e77019ea1" "1a53efc62256480d5632c057d9e726b2e64714d871e23e43816735e1b85c144c" "4f0f2f5ec60a4c6881ba36ffbfef31b2eea1c63aad9fe3a4a0e89452346de278" "d79ece4768dfc4bab488475b85c2a8748dcdc3690e11a922f6be5e526a20b485" "590759adc4a5bf7a183df81654cce13b96089e026af67d92b5eec658fb3fe22f" "b0ab5c9172ea02fba36b974bbd93bc26e9d26f379c9a29b84903c666a5fde837" "40f6a7af0dfad67c0d4df2a1dd86175436d79fc69ea61614d668a635c2cd94ab" "28ec8ccf6190f6a73812df9bc91df54ce1d6132f18b4c8fcc85d45298569eb53" "e56ee322c8907feab796a1fb808ceadaab5caba5494a50ee83a13091d5b1a10c" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "5999e12c8070b9090a2a1bbcd02ec28906e150bb2cdce5ace4f965c76cf30476" "f9574c9ede3f64d57b3aa9b9cef621d54e2e503f4d75d8613cbcc4ca1c962c21" "5a0eee1070a4fc64268f008a4c7abfda32d912118e080e18c3c865ef864d1bea" default)))
+ '(fci-rule-color "#14151E")
+ '(git-gutter:handled-backends (quote (git hg bzr)))
+ '(google-translate-default-source-language "en")
+ '(google-translate-default-target-language "ja")
+ '(helm-delete-minibuffer-contents-from-point t)
+ '(helm-gtags-auto-update t)
+ '(helm-gtags-ignore-case t)
+ '(helm-gtags-path-style (quote relative))
+ '(helm-mini-default-sources
+   (quote
+    (helm-source-buffers-list helm-source-files-in-current-dir helm-source-recentf helm-source-projectile-files-list)))
+ '(helm-truncate-lines t t)
+ '(highlight-changes-colors (quote ("#ff8eff" "#ab7eff")))
+ '(highlight-tail-colors
+   (quote
+    (("#424748" . 0)
+     ("#63de5d" . 20)
+     ("#4BBEAE" . 30)
+     ("#1DB4D0" . 50)
+     ("#9A8F21" . 60)
+     ("#A75B00" . 70)
+     ("#F309DF" . 85)
+     ("#424748" . 100))))
+ '(hl-sexp-background-color "#1c1f26")
+ '(magit-diff-use-overlays nil)
+ '(pos-tip-background-color "#E6DB74")
+ '(pos-tip-foreground-color "#242728")
+ '(projectile-enable-caching t)
+ '(vc-annotate-background nil)
+ '(vc-annotate-color-map
+   (quote
+    ((20 . "#d54e53")
+     (40 . "goldenrod")
+     (60 . "#e7c547")
+     (80 . "DarkOliveGreen3")
+     (100 . "#70c0b1")
+     (120 . "DeepSkyBlue1")
+     (140 . "#c397d8")
+     (160 . "#d54e53")
+     (180 . "goldenrod")
+     (200 . "#e7c547")
+     (220 . "DarkOliveGreen3")
+     (240 . "#70c0b1")
+     (260 . "DeepSkyBlue1")
+     (280 . "#c397d8")
+     (300 . "#d54e53")
+     (320 . "goldenrod")
+     (340 . "#e7c547")
+     (360 . "DarkOliveGreen3"))))
+ '(vc-annotate-very-old-color nil)
+ '(weechat-color-list
+   (unspecified "#242728" "#424748" "#F70057" "#ff0066" "#86C30D" "#63de5d" "#BEB244" "#E6DB74" "#40CAE4" "#06d8ff" "#FF61FF" "#ff8eff" "#00b2ac" "#53f2dc" "#f8fbfc" "#ffffff")))
 
 (require 'smartrep)
 (smartrep-define-key
@@ -145,11 +218,7 @@
 (global-set-key [remap query-replace] 'anzu-query-replace)
 (global-set-key [remap query-replace-regexp] 'anzu-query-replace-regexp)
 
-(custom-set-variables
- '(anzu-mode-lighter "")
- '(anzu-deactivate-region t)
- '(anzu-use-migemo nil)
- '(anzu-search-threshold 1000))
+
 
 
 
@@ -215,10 +284,7 @@
 (add-hook 'asm-mode-hook 'helm-gtags-mode)
 
 ;; customize
-(custom-set-variables
- '(helm-gtags-path-style 'relative)
- '(helm-gtags-ignore-case t)
- '(helm-gtags-auto-update t))
+
 
 ;; key bindings
 (eval-after-load "helm-gtags"
@@ -236,8 +302,7 @@
 ;; helm-projectile
 (require 'helm-projectile)
 ;; cacheをクリアするには　M-x projectile-invalidate-cache
-(custom-set-variables
- '(projectile-enable-caching t))
+
 (projectile-global-mode t)
 
 ;; プロジェクトに関連するファイルをhelm-for-filesに追加
