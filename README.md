@@ -129,8 +129,7 @@ masa で login
 >yaourt -Syua  
 
 
------------ ここまで手で打ち込む ------------------
-※ここから make install できる。
+----------- ここまで手で打ち込む ------------------ ここから make install できる ---------------
 
 
 >sudo pacman -S dropbox  
