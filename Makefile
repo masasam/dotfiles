@@ -1,4 +1,4 @@
-init:
+init: ## deploy this dotfiles
 	ln -vsf ${PWD}/.zshrc   ${HOME}/.zshrc
 	ln -vsf ${PWD}/.gitconfig   ${HOME}/.gitconfig
 	ln -vsf ${PWD}/.screenrc   ${HOME}/.screenrc
@@ -12,12 +12,15 @@ init:
 	ln -vsfn ${HOME}/Dropbox/mozc/.mozc   ${HOME}/.mozc
 	chmod 600   ${HOME}/.ssh/id_rsa
 	cd ${HOME}/.emacs.d/;	  cask upgrade;	  cask install
-update:
+
+update: ## update cask depend on melpa
 	cd ${HOME}/.emacs.d/;	  cask upgrade;   cask update
-sync:
+
+sync: ## sync github
 	git pull
 	git push
-install:
+
+install: ## install development environment powerd by arch linux
 	${PWD}/bin/continue.sh && \
 	echo "alias screenstart='screen -D -RR'" >> ${HOME}/.bashrc
 	echo "alias tmuxstart='tmux new-session -A -s main'" >> ${HOME}/.bashrc
@@ -36,3 +39,10 @@ install:
 	yaourt profile-sync-daemon
 	yaourt man-pages-ja
 	yaourt global
+
+.PHONY: help
+
+help:
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
+
+.DEFAULT_GOAL := help
