@@ -297,21 +297,42 @@ screenstart あるいは tmuxstart で起動すると
 
 
 
+# Powertop
+消費電力を抑えて省エネ化  
+使っていないシステムバスとか徹底的にスリープするようにしてくれる  
+
 >sudo pacman -S powertop  
+
+再起動すると無効になるので  
 
 >sudo powertop --calibrate  
 
+で解析して  
+
 sudo vim /etc/systemd/system/powertop.service  
 
-    [Unit] Description=Powertop tunings
+>[Unit]
+>Description=Powertop tunings
 
-    [Service] Type=oneshot ExecStart=/usr/sbin/powertop --auto-tune
+>[Service]
+>Type=oneshot
+>ExecStart=/usr/sbin/powertop --auto-tune
 
-    [Install] WantedBy=multi-user.target
+>[Install]
+>WantedBy=multi-user.target
 
-    systemctl enable powertop.service  
-	
-reboot する  
+    sudo systemctl enable powertop
+    reboot
+
+![PowerTop](https://raw.githubusercontent.com/latestmasa/dotfiles/image/image/powertop.png)
+
+このタブが全部 Good になっていれば成功
+
+アイドル時の消費電力が  
+18W → 10W になった  
+これで一日 16 時間アイドルで  
+月間の電気代が 140 円くらいだからよい  
+アイドル時以外の消費電力を考慮しても 200 円代ですむ  
 
 
 
@@ -542,41 +563,6 @@ sysctl -p を実行すると変更した内容が表示され、
 >about:config  
 >network.dns.disableIPv6 の値を true  
 
-
-
-# Powertop
-消費電力を抑えて省エネ化  
-使っていないシステムバスとか徹底的にスリープするようにしてくれる  
-再起動すると無効になるので  
-
->sudo powertop --calibrate  
-
-で解析して  
-
-sudo vim /etc/systemd/system/powertop.service  
-
->[Unit]
->Description=Powertop tunings
-
->[Service]
->Type=oneshot
->ExecStart=/usr/sbin/powertop --auto-tune
-
->[Install]
->WantedBy=multi-user.target
-
-    sudo systemctl enable powertop
-    reboot
-
-![PowerTop](https://raw.githubusercontent.com/latestmasa/dotfiles/image/image/powertop.png)
-
-このタブが全部 Good になっていれば成功
-
-アイドル時の消費電力が  
-18W → 10W になった  
-これで一日 16 時間アイドルで  
-月間の電気代が 140 円くらいだからよい  
-アイドル時以外の消費電力を考慮しても 200 円代ですむ  
 
 
 # Sylpheed
