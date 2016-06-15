@@ -17,7 +17,7 @@
 
 ;; theme
 (load-theme 'material t)
-;(load-theme 'cyberpunk t)
+;(load-theme 'cyberpunk t) ;;#1c1f26
 ;;;; themeの一部分を自分好みに変更 M-x list-faces-display で調べて変更する
 (custom-set-faces
  '(fixed-pitch ((t (:family "Ricty"))))
