@@ -1,19 +1,19 @@
 init:
-	ln -vsf `pwd`/.zshrc   ~/.zshrc
-	ln -vsf `pwd`/.gitconfig   ~/.gitconfig
-	ln -vsf `pwd`/.screenrc   ~/.screenrc
-	ln -vsf `pwd`/.tmux.conf   ~/.tmux.conf
-	ln -vsf `pwd`/.xinitrc   ~/.xinitrc
-	ln -vsf `pwd`/redshift.conf   ~/.config/redshift.conf
-	ln -vsfn `pwd`/.peco   ~/.peco
-	ln -vsfn `pwd`/.emacs.d   ~/.emacs.d
-	ln -vsfn ~/Dropbox/ssh ~/.ssh
-	ln -vsfn ~/Dropbox/sylpheed/.sylpheed-2.0 ~/.sylpheed-2.0
-	ln -vsfn ~/Dropbox/mozc/.mozc ~/.mozc
-	chmod 600 ~/.ssh/id_rsa
-	cd ~/.emacs.d/;	cask upgrade;	cask install
+	ln -vsf ${PWD}/.zshrc   ${HOME}/.zshrc
+	ln -vsf ${PWD}/.gitconfig   ${HOME}/.gitconfig
+	ln -vsf ${PWD}/.screenrc   ${HOME}/.screenrc
+	ln -vsf ${PWD}/.tmux.conf   ${HOME}/.tmux.conf
+	ln -vsf ${PWD}/.xinitrc   ${HOME}/.xinitrc
+	ln -vsf ${PWD}/redshift.conf   ${HOME}/.config/redshift.conf
+	ln -vsfn ${PWD}/.peco   ${HOME}/.peco
+	ln -vsfn ${PWD}/.emacs.d   ${HOME}/.emacs.d
+	ln -vsfn ~/Dropbox/ssh   ${HOME}/.ssh
+	ln -vsfn ~/Dropbox/sylpheed/.sylpheed-2.0   ${HOME}/.sylpheed-2.0
+	ln -vsfn ~/Dropbox/mozc/.mozc   ${HOME}/.mozc
+	chmod 600   ${HOME}/.ssh/id_rsa
+	cd ${HOME}/.emacs.d/;	  cask upgrade;	  cask install
 update:
-	cd ~/.emacs.d/;	cask update
+	cd ${HOME}/.emacs.d/;	  cask upgrade;   cask update
 sync:
 	git pull
 	git push
