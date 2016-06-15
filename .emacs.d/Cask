@@ -63,5 +63,4 @@
 
 ;; theme
 (depends-on "material-theme")
-(depends-on "darkokai-theme")
-(depends-on "zenburn-theme")
+(depends-on "cyberpunk-theme")

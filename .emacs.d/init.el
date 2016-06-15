@@ -16,7 +16,7 @@
 
 ;; theme
 (load-theme 'material t)
-
+;(load-theme 'cyberpunk t)
 
 
 ;; 基本utf-8でファイルの指定コードがあればそれで保存
