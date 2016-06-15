@@ -2,11 +2,20 @@
 
 この dotfiles は Archlinux 用です  
 NetworkManager を入れるまで有線で接続しその後無線 Lan に  
-Makefile があるので make install できるが  
+Makefile があるので
+
+    make install
+	
+できるが  
 
 >yaourt -Syua  
 
 コマンドを打つまでは手動でインストールする  
+
+    make init
+
+で dotfiles をデプロイできる  
+
 
 #### install
 
