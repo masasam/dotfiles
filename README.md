@@ -18,13 +18,23 @@ Makefile があるので
 
 
 #### install
+BitTorrent で Arch linux をダウンロード  
+https://www.archlinux.org/releng/releases/2016.06.01/torrent/  
+
+
+USB インストールメディアを作成  
 
     dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx && sync  
 
+BIOS で usb ブートするように変更して boot  
+UEFI は使えない thinkpad なので BIOS  
+GPT なので boot パーティションは切らなくても動くので / のみ  
+SSD でメモリ 8G なのでスワップは無し  
+
 >gdisk /dev/sda  
 
-    1 sda1  bios パテーション(ef02)  
-    2 sda2 /  
+    1 sda1  BIOS boot partition(ef02) 1007KB  
+    2 sda2 / 残り全部  
 
     mkfs.ext4 /dev/sda2  
     mount /dev/sda2 /mnt  
@@ -32,6 +42,7 @@ Makefile があるので
 >nano /etc/pacman.d/mirrorlist  
 
     Server = http://ftp.jaist.ac.jp/pub/Linux/ArchLinux/$repo/os/$arch  
+	
 を一番上に  
 
 >pacstrap /mnt base base-devel  
