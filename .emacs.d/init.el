@@ -14,9 +14,15 @@
 (require 'cask "/usr/share/cask/cask.el")
 (cask-initialize)
 
+
 ;; theme
 (load-theme 'material t)
 ;(load-theme 'cyberpunk t)
+;;;; themeの一部分を自分好みに変更 M-x list-faces-display で調べて変更する
+(custom-set-faces
+ '(fixed-pitch ((t (:family "Ricty"))))
+ '(helm-candidate-number ((t (:background "cornflower blue" :foreground "#ffffff"))))
+ '(variable-pitch ((t (:family "Ricty")))))
 
 
 ;; 基本utf-8でファイルの指定コードがあればそれで保存
@@ -27,20 +33,13 @@
 ;; GCを減らして高速化(メモリは食う)
 (setq gc-cons-threshold (* 128 1024 1024))
 
+
 ;;; 右から左に読む言語に対応させないことで描画高速化
 (setq-default bidi-display-reordering nil)
 
 
 ;; font
 (add-to-list 'default-frame-alist '(font . "ricty-15.5"))
-
-
-;; themeをカスタマイズ
-;;;; M-x list-faces-display で調べて変更する
-(custom-set-faces
- '(fixed-pitch ((t (:family "Ricty"))))
- '(helm-candidate-number ((t (:background "cornflower blue" :foreground "#ffffff"))))
- '(variable-pitch ((t (:family "Ricty")))))
 
 
 ; server start for emacs-client
