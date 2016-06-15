@@ -18,21 +18,21 @@ sync:
 	git pull
 	git push
 install:
+	${PWD}/bin/continue.sh && \
 	echo "alias screenstart='screen -D -RR'" >> ${HOME}/.bashrc
 	echo "alias tmuxstart='tmux new-session -A -s main'" >> ${HOME}/.bashrc
 	sudo pacman -S zsh git vim dropbox nautilus-dropbox ibus-mozc mozc tmux keychain  \
 	gnome-tweak-tool xsel sylpheed emacs curl archlinux-wallpaper evince inkscape gimp unrar \
 	file-roller vlc xclip atool trash-cli the_silver_searcher powertop cifs-utils \
-	gvfs gvfs-smb seahorse gnome-keyring cups-pdf redshift eog mcomix libreoffice-fresh-ja \
-	--noconfirm
+	gvfs gvfs-smb seahorse gnome-keyring cups-pdf redshift eog mcomix libreoffice-fresh-ja
 	mkdir -p ${HOME}/go/{bin,src}
 	go get -u github.com/nsf/gocode
 	go get -u github.com/rogpeppe/godef
-	yaourt -S google-chrome
-	yaourt -S ricty
+	yaourt google-chrome
 	yaourt cask
 	yaourt peco
 	yaourt noto-fonts-cjk
+	yaourt ricty
 	yaourt profile-sync-daemon
 	yaourt man-pages-ja
 	yaourt global
