@@ -140,7 +140,7 @@ visudo
 >sudo pacman -S openssh  
 
 
->vim /etc/pacman.conf  
+vim /etc/pacman.conf  
 
     [archlinuxfr]
     SigLevel = Never
@@ -185,8 +185,9 @@ X サーバーを終了するためのキーシーケンス
 ワークスペースは１個に固定  
 
 電源  
->AC 電源接続時 Blank  
->Don't suspend on lid close  
+
+    AC 電源接続時 Blank  
+    Don't suspend on lid close  
 
 
 >sudo pacman -S xsel  
@@ -297,7 +298,7 @@ screenstart あるいは tmuxstart で起動すると
 
 >sudo powertop --calibrate  
 
->sudo vim /etc/systemd/system/powertop.service  
+sudo vim /etc/systemd/system/powertop.service  
 
     [Unit] Description=Powertop tunings
 
@@ -306,25 +307,32 @@ screenstart あるいは tmuxstart で起動すると
     [Install] WantedBy=multi-user.target
 
     systemctl enable powertop.service  
-reboot  
+	
+reboot する  
 
+
+
+# Profile-Sync-Daemon
+cheome firefox のキャッシュとプロファイルを  
+メモリ上に置くようにして超高速化  
+ディスクに同期する頻度は下がるので SSD の消耗を防ぐ効果もある  
 
 >yaourt profile-sync-daemon  
 
->visudo  
+visudo  
 
     masa ALL=(ALL) NOPASSWD: /usr/bin/psd-overlay-helper
 
 >psd p  
 
->vim ~/.config/psd/psd.conf  
+vim ~/.config/psd/psd.conf  
 
     USE_OVERLAYFS="yes"
     BROWSERS="google-chrome firefox"
 
 >psd p  
 
-psd を自動起動するように
+#### psd を自動起動するように
 >systemctl --user enable psd.service  
 >reboot  
 動いているか確認する
@@ -333,6 +341,8 @@ psd を自動起動するように
 
 >systemctl --user status psd  
 
+
+### 雑多なものをインストール
 
 >yaourt man-pages-ja  
 
@@ -355,7 +365,7 @@ psd を自動起動するように
 >yaourt global  
 
 
-# 蓋を閉じてもサスペンドしないように
+## 蓋を閉じてもサスペンドしないように
 
 >/etc/systemd/logind.conf  
 
@@ -368,7 +378,7 @@ psd を自動起動するように
 
 
 
-# ウィンドウを最大化したときに表示に乱れが発生する
+## ウィンドウを最大化したときに表示に乱れが発生する
 Intel HD Graphics のティアリング解消  
 >sudo vim /etc/environment
 
@@ -379,7 +389,7 @@ Intel HD Graphics のティアリング解消
 
 
 
-# Activity
+## Activity
 ![activity](https://raw.githubusercontent.com/latestmasa/dotfiles/image/image/activity.png)
 アクティビティ > 設定 > 検索  
 全部 off にする  
