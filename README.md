@@ -255,18 +255,6 @@ screenstart あるいは tmuxstart で起動すると
 セッションがあればそれを利用しなければ新規セッションで起動する  
 
 
->sudo su -  
->echo cache-size=1000 > /etc/NetworkManager/dnsmasq.d/cache  
-
-
->sudo vim /etc/NetworkManager/NetworkManager.conf 
-
-    [main]
-    ...
-    dns=dnsmasq
-	
->sudo systemctl restart NetworkManager.service  
-
 
 >sudo pacman -S powertop  
 
@@ -503,28 +491,6 @@ sysctl -p を実行すると変更した内容が表示され、
 #### firefox ipv6 無効化
 >about:config  
 >network.dns.disableIPv6 の値を true  
-
-
-
-# Dnsmasq
-<https://wiki.archlinux.org/index.php/dnsmasq#NetworkManager>  
-によると /etc/NetworkManager/dnsmasq.d に cache-size=1000  
-という内容のファイルを cache という名前で置けばいいらしい。  
-1000 個までドメイン名を覚えてくれるようになる。  
-
-    sudo su -
-    echo cache-size=1000 > /etc/NetworkManager/dnsmasq.d/cache
-    service network-manager restart
-
-dnsmasq を正しく設定していれば、  
-キャッシュされた DNS の IP が使用され、ルックアップの時間が速くなっているはず  
-
-    drill kernel.org | grep "Query time"                                                                    [~]
-    ;; Query time: 58 msec
-    drill kernel.org | grep "Query time"                                                                    [~]
-    ;; Query time: 17 msec
-
-17 msec なったから満足  
 
 
 
