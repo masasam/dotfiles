@@ -231,7 +231,7 @@ theme を適用
 
 
 
->~/.xinitrc  
+~/.xinitrc  
 
     tpset() { xinput set-prop "TPPS/2 IBM TrackPoint" "$@"; }
 
@@ -242,12 +242,12 @@ theme を適用
     tpset "Device Accel Constant Deceleration" 0.95
 
 
->sudo vim /etc/udev/rules.d/10-trackpoint.rules  
+sudo vim /etc/udev/rules.d/10-trackpoint.rules  
 
     ACTION=="add", SUBSYSTEM=="input", ATTR{name}=="TPPS/2 IBM TrackPoint", ATTR{device/sensitivity}="240"
 
 
->sudo vim /etc/X11/xorg.conf.d/20-thinkpad.conf  
+sudo vim /etc/X11/xorg.conf.d/20-thinkpad.conf  
 
     Section "InputClass"
         Identifier	"Trackpoint Wheel Emulation"
@@ -278,7 +278,12 @@ solarized Dark
 .bashrc は以下の２つのエイリアスを追記する以外はしない  
 zsh をデフォルトシェルにして zsh をカスタマイズしまくると  
 login できなくなって大変困ったことになるかもしれない。  
-この繰り返しで腰が重くなって新しいものを受け付けなくなるのは本末転倒であるから  
+まぁそれでも Arch linux なら USB メモリで boot して  
+
+    arch-chroot /mnt /bin/bash  
+
+すればいくらでも回復できるから気軽なものだが、  
+面倒くさくなって新しいものを受け付けなくなるのは本末転倒であるから  
 zsh をデフォルトシェルにはしない。  
 tmux を起動したら zsh が起動するようにしておいて  
 .bashrc はほぼディストリデフォルトにしておく  
@@ -311,7 +316,7 @@ reboot する
 
 
 # Profile-Sync-Daemon
-cheome firefox のキャッシュとプロファイルを  
+chrome firefox のキャッシュとプロファイルを  
 メモリ上に置くようにして超高速化  
 ディスクに同期する頻度は下がるので SSD の消耗を防ぐ効果もある  
 
