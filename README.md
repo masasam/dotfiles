@@ -77,7 +77,6 @@ root で login
 >pacman -S xf86-video-intel  
 >pacman -S libva-intel-driver  
 >pacman -S bash-completion  
->pacman -S zsh git vim  
 >pacman -S xorg-server xorg-server-utils xorg-xinit xorg-xclock xterm  
 >pacman -S gnome  
 >pacman -S gdm  
@@ -101,6 +100,7 @@ masa で login
 >LANG=C xdg-user-dirs-update --force  
 
 
+>pacman -S zsh git vim  
 >sudo pacman -S firefox  firefox-i18n-ja  
 >sudo pacman -S otf-ipafont  
 >sudo pacman -S openssh  
