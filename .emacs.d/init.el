@@ -15,7 +15,7 @@
 (cask-initialize)
 
 ;; theme
-(load-theme 'tangotango t)
+(load-theme 'material t)
 
 
 

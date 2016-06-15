@@ -62,4 +62,6 @@
 (depends-on "json-mode")
 
 ;; theme
-(depends-on "tangotango-theme")
+(depends-on "material-theme")
+(depends-on "darkokai-theme")
+(depends-on "zenburn-theme")
