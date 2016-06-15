@@ -63,5 +63,3 @@
 
 ;; theme
 (depends-on "tangotango-theme")
-(depends-on "material-theme")
-(depends-on "darkokai-theme")
