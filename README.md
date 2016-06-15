@@ -1,7 +1,12 @@
 # Arch linux
 
-この dotfiles は Archlinux 向け  
+この dotfiles は Archlinux 用です  
 NetworkManager を入れるまで有線で接続しその後無線 Lan に  
+Makefile があるので make install できるが  
+
+>yaourt -Syua  
+
+コマンドを打つまでは手動でインストールする  
 
 #### install
 
@@ -122,6 +127,10 @@ masa で login
 
 >sudo pacman --sync --refresh yaourt  
 >yaourt -Syua  
+
+
+----------- ここまで手で打ち込む ------------------
+※ここから make install できる。
 
 
 >sudo pacman -S dropbox  
