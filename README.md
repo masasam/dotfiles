@@ -1,5 +1,7 @@
 # Arch linux
 
+![emacs](https://raw.githubusercontent.com/latestmasa/dotfiles/image/image/emacs.png)
+
 この dotfiles は Archlinux 用です  
 NetworkManager を入れるまで有線で接続しその後無線 Lan に  
 Makefile があるので
@@ -31,6 +33,11 @@ UEFI は使えない thinkpad なので BIOS
 GPT なので boot パーティションは切らなくても動くので / のみ  
 SSD でメモリ 8G なのでスワップは無し  
 
+![baobao](https://raw.githubusercontent.com/latestmasa/dotfiles/image/image/baobao.png)
+
+SSD は 120G しかないが arch linux と emacs を使う環境としてはこれで十分足りる  
+以下の初期設定が終わった段階で 6.6G ですんでしまっている。  
+
 >gdisk /dev/sda  
 
     1 sda1  BIOS boot partition(ef02) 1007KB  
@@ -55,7 +62,7 @@ SSD でメモリ 8G なのでスワップは無し
 
 >ln -s /usr/share/zoneinfo/Asia/Tokyo /etc/localtime  
 
->nano /etc/locale.gen  
+nano /etc/locale.gen  
 
     en_US.UTF-8 UTF-8
     ja_JP.UTF-8 UTF-8
@@ -76,10 +83,11 @@ SSD でメモリ 8G なのでスワップは無し
 
 >export EDITOR=/usr/bin/nano  
 
->visudo  
+visudo  
 
     Defaults env_keep += “ HOME ”
     %wheel ALL=(ALL) ALL
+
 のコメントアウトを外す
 
 >pacman -S grub  
@@ -96,7 +104,8 @@ SSD でメモリ 8G なのでスワップは無し
 >exit  
 >reboot  
 
-root で login
+
+#### root で login
 
 >lspci|grep VGA  
 >pacman -S xf86-video-intel  
@@ -116,7 +125,7 @@ root で login
 
 >reboot  
 
-masa で login
+#### masa で login
 
 >sudo pacman -S xf86-input-evdev  
 
@@ -149,7 +158,7 @@ masa で login
 >yaourt -Syua  
 
 
------------ ここまで手で打ち込む ------------------ ここから make install できる ---------------
+## ここまで手で打ち込む   ここから make install できる
 
 
 >sudo pacman -S dropbox  
