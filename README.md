@@ -1,4 +1,4 @@
-# Arch linux
+# Synopsis
 
 ![emacs](https://raw.githubusercontent.com/latestmasa/dotfiles/image/image/emacs.png)
 
@@ -8,18 +8,23 @@ Makefile があるので
 
     make install
 	
-できるが  
+できるがかなりオレオレ make install なので  
+利用される御仁は make install せず  
+一度手を動かして入れるほうがよろしいかと思います。  
+もし make install される奇特な方は下記手順の  
 
 >yaourt -Syua  
 
-コマンドを打つまでは手動でインストールする  
+コマンドを打つまでの手順を終えてから make install してください  
+ゆえに、ドライバなどは make install に入れないで手動でやる。  
 
     make init
 
-で dotfiles をデプロイできる  
+で dotfiles をデプロイできるので便利  
 
 
-#### install
+# Arch linux install
+
 BitTorrent で Arch linux をダウンロード  
 https://www.archlinux.org/releng/releases/2016.06.01/torrent/  
 
@@ -28,15 +33,19 @@ USB インストールメディアを作成
 
     dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx && sync  
 
-BIOS で usb ブートするように変更して boot  
-UEFI は使えない thinkpad なので BIOS  
-GPT なので boot パーティションは切らなくても動くので / のみ  
-SSD でメモリ 8G なのでスワップは無し  
-
 ![baobao](https://raw.githubusercontent.com/latestmasa/dotfiles/image/image/baobao.png)
 
 SSD は 120G しかないが arch linux と emacs を使う環境としてはこれで十分足りる  
 以下の初期設定が終わった段階で 6.6G ですんでしまっている。  
+
+
+#### USB メモリでブートする
+
+パーティショニング  
+* BIOS で usb ブートするように変更して boot  
+* UEFI は使えない thinkpad なので BIOS  
+* GPT なので boot パーティションは切らなくても動くので / のみ  
+* SSD でメモリ 8G なのでスワップは無し  
 
 >gdisk /dev/sda  
 
@@ -105,40 +114,41 @@ visudo
 >reboot  
 
 
-#### root で login
+#### root で login してドライバや Xorg Gnome wifi などを整える
 
+bash で補完が効くように  
+>pacman -S bash-completion  
+
+自分の環境にあったドライバをインストール  
 >lspci|grep VGA  
 >pacman -S xf86-video-intel  
 >pacman -S libva-intel-driver  
->pacman -S bash-completion  
 >pacman -S xorg-server xorg-server-utils xorg-xinit xorg-xclock xterm  
+>pacman -S xf86-input-evdev  
+
+gnome は必要最小限だけいれる  
 >pacman -S gnome  
+
+gdm でグラフィカルログインできるようにする  
 >pacman -S gdm  
+>systemctl enable gdm.service  
 
-
+ネット環境を整える  
 >pacman -S network-manager  
 >systemctl list-unit-files  
 >systemctl disable dhcpcd.service  
 >systemctl enable NetworkManager.service  
->systemctl enable gdm.service  
-
-
 >reboot  
 
-#### masa で login
 
->sudo pacman -S xf86-input-evdev  
-
+#### masa で login してホームディレクトリを整える
 
 >sudo pacman -S xdg-user-dirs  
 >LANG=C xdg-user-dirs-update --force  
 
-
 >pacman -S zsh git vim  
->sudo pacman -S firefox  firefox-i18n-ja  
->sudo pacman -S otf-ipafont  
->sudo pacman -S openssh  
 
+### yaourt を導入する
 
 vim /etc/pacman.conf  
 
@@ -150,6 +160,7 @@ vim /etc/pacman.conf
     SigLevel = Optional TrustAll
     Server = http://downloads.sourceforge.net/project/pnsft-aur/pur/$arch
 
+yaourt を最新に同期する
 >sudo pacman -Syy  
 >sudo pacman -S yaourt  
 
@@ -157,59 +168,28 @@ vim /etc/pacman.conf
 >sudo pacman --sync --refresh yaourt  
 >yaourt -Syua  
 
+--------------------------------------
 
 ## ここまで手で打ち込む   ここから make install できる
 
+--------------------------------------
 
+## 開発環境 install
+
+pacman で入るものをインストール  
+>sudo pacman -S firefox  firefox-i18n-ja  
+>sudo pacman -S otf-ipafont  
+>sudo pacman -S openssh  
 >sudo pacman -S dropbox  
 >sudo pacman -S nautilus-dropbox  
 >sudo pacman -S ibus-mozc mozc  
-
-
->sudo pacman -S tmux  
->sudo pacman -S keychain  
->sudo pacman -S gnome-tweak-tool  
-
-
-# Tweak Tool
-![TweakTool](https://raw.githubusercontent.com/latestmasa/dotfiles/image/image/tweaktool.png)
-キーテーマ  
->Emacs  
-
-Ctrl キーの位置  
->Caps Lock を Ctrl として使う  
-
-X サーバーを終了するためのキーシーケンス  
->Ctrl Alt Backspace  
-
-ワークスペースは１個に固定  
-
-電源  
-
-    AC 電源接続時 Blank  
-    Don't suspend on lid close  
-
-
->sudo pacman -S xsel  
-
-
->yaourt -S google-chrome  
->yaourt -S ricty  
-
-
 >sudo pacman -S sylpheed  
 >sudo pacman -S emacs  
 >sudo pacman -S curl  
-
-
->yaourt cask  
->cd .emacs.d  
->cask upgrade  
->cask install  
->cask update  
-
-
->yaourt peco  
+>sudo pacman -S tmux  
+>sudo pacman -S keychain  
+>sudo pacman -S gnome-tweak-tool  
+>sudo pacman -S xsel  
 >sudo pacman -S archlinux-wallpaper  
 >sudo pacman -S evince inkscape gimp unrar  
 >sudo pacman -S file-roller vlc  
@@ -221,15 +201,44 @@ X サーバーを終了するためのキーシーケンス
 >sudo pacman -S cifs-utils  
 >sudo pacman -S gvfs gvfs-smb  
 >sudo pacman -S seahorse gnome-keyring  
->yaourt noto-fonts-cjk  
 >sudo pacman -S cups-pdf  
+>sudo pacman -S redshift  
+>sudo pacman -S eog  
+>sudo pacman -S mcomix  
+>sudo pacman -S libreoffice-fresh-ja  
+>sudo pacman -S go
+
+yaourt で入れるものをインストール  
+>yaourt -S google-chrome  
+>yaourt -S ricty  
+>yaourt peco  
+>yaourt noto-fonts-cjk  
+>yaourt man-pages-ja  
+>yaourt global  
 
 
-theme を適用
+#### golang
+
+>mkdir -p ~/go/{bin,src}  
+>go get -u github.com/nsf/gocode  
+>go get -u github.com/rogpeppe/godef  
+
+
+#### cask install
+>yaourt cask  
+>cd .emacs.d  
+>cask upgrade  
+>cask install  
+>cask update  
+
+
+#### theme を適用
 
 >sudo cp -R ~/Dropbox/arch/OSX-Arc-Shadow/ /usr/share/themes/  
 
 
+#### Trackpoint 
+Thinkpad 特有のものをインストール  
 
 ~/.xinitrc  
 
@@ -261,6 +270,33 @@ sudo vim /etc/X11/xorg.conf.d/20-thinkpad.conf
     EndSection
 
 
+thinkpad の i915 のみ
+>sudo vim /etc/mkinitcpio.conf  
+
+    MODULES="i915"
+
+
+# Tweak Tool
+gnome の細かい設定など
+
+![TweakTool](https://raw.githubusercontent.com/latestmasa/dotfiles/image/image/tweaktool.png)
+* キーテーマ  
+>Emacs  
+
+* Ctrl キーの位置  
+>Caps Lock を Ctrl として使う  
+
+* X サーバーを終了するためのキーシーケンス  
+>Ctrl Alt Backspace  
+
+* ワークスペースは１個に固定  
+
+* 電源  
+
+    AC 電源接続時 Blank  
+    Don't suspend on lid close  
+	
+	
 # Terminal
 ![terminal](https://raw.githubusercontent.com/latestmasa/dotfiles/image/image/terminal.png)
 ターミナルサイズ  
@@ -366,31 +402,10 @@ vim ~/.config/psd/psd.conf
 >systemctl --user status psd  
 
 
-### 雑多なものをインストール
-
->yaourt man-pages-ja  
-
-
->sudo pacman -S redshift  
->sudo pacman -S eog  
->sudo pacman -S mcomix  
->sudo pacman -S libreoffice-fresh-ja  
-
-
->sudo vim /etc/mkinitcpio.conf  
-
-    MODULES="i915"
-
->mkdir -p ~/go/{bin,src}  
->go get -u github.com/nsf/gocode  
->go get -u github.com/rogpeppe/godef  
-
-
->yaourt global  
-
 
 ## 蓋を閉じてもサスペンドしないように
 
+起動 10 秒で emacs までたどりつくのでサスペンドなどしない  
 >/etc/systemd/logind.conf  
 
     #HandleLidSwitch=suspend
