@@ -9,29 +9,65 @@ Makefile があるので
     make install
 	
 できるがかなりオレオレ make install なので  
-利用される御仁は make install せず  
+利用する場合は make install せず  
 一度手を動かして入れるほうがよろしいかと思います。  
 もし make install される奇特な方は下記手順の  
 
->yaourt -Syua  
+*ここまで手で打ち込む   ここから make install できる*  
 
-コマンドを打つまでの手順を終えてから make install してください  
+までの手順を終えてから make install してください  
 ゆえに、ドライバなどは make install に入れないで手動でやる。  
+マシンのデータが吹っ飛んでも 30 分でいつもの環境を用意できるようにした  
+
+
+make install 後に
 
     make init
 
 で dotfiles をデプロイできるので便利  
+make init する前に Dropbox の同期を終わらせておくこと  
+
+
+#### Dropbox で管理するものの基準  
+
+1. github に置けないもの  
+   .ssh に入っている公開鍵など  
+   
+2. すこぶる更新ファイルを吐き出すので github で同期するのが面倒くさいもの  
+   .zsh_histfile .mozc  
+   .emacs.d の中の更新ファイルは.gitignore を利用して問題なくデプロイできるから github で OK  
+   
+3. データの保護目的  
+   Sylpheed の設定ファイルとメール gmail ライクに使いたい  
+   メールが届いたらすぐ dropbox に同期されるからよい  
+
+２段階認証にしておく  
+２段階認証の recovery-code は Dropbox に置くと  
+金庫を開ける鍵が金庫の中にある問題が発生するから  
+recovery-code は自宅の NAS に置いておく  
 
 
 # Arch linux install
 
-なぜ arch linux か?
-* ローリング・リリースが再インストールしなくてもいいから楽(でも debian sid の面倒くさいのは嫌)  
-* サーバは CentOS でいいけど,開発環境の thinkpad は割と最新じゃないと面倒くさい  
-* go の最新バージョンをつかうためにコンパイルするのだったらパッケージごと作って共有したほうが賢い  
-* 軽い インストールが終わって emacs terminal chrome を起動して top した画像がこれ  
+Why arch linux ?  
+
+1. ローリング・リリースで壊れない限りは再インストールしなくてもいいから楽  
+  壊れても 30 分で復帰できるから怖くない。  
+  
+2. サーバは CentOS でいいけど,開発環境は割と最新じゃないとつらい  
+   OVERLAYFS とか Profile Sync Daemon 使いたい  
+   emacs は最新じゃないと嫌なので make install していたが arch なら pacman ですむ  
+
+3. go の最新バージョンをつかうためにコンパイルするのだったらパッケージ作って共有したほうが賢いと思う  
+   configure; make; sudo make install しまくるとオレオレ環境になり危険  
+   paco で管理していたが面倒くさくなった  
+
+4. 軽い!  インストールが終わって emacs terminal chrome を起動して top した画像  
 
 ![top](https://raw.githubusercontent.com/latestmasa/dotfiles/image/image/top.png)
+
+5. --以上--
+
 
 BitTorrent で Arch linux をダウンロード  
 https://www.archlinux.org/releng/releases/2016.06.01/torrent/  
@@ -40,6 +76,8 @@ https://www.archlinux.org/releng/releases/2016.06.01/torrent/
 USB インストールメディアを作成  
 
     dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx && sync  
+
+/dev/sdx は環境で異なるから df して調べる  
 
 ![baobao](https://raw.githubusercontent.com/latestmasa/dotfiles/image/image/baobao.png)
 
@@ -181,7 +219,7 @@ yaourt を最新に同期する
 
 --------------------------------------
 
-## ここまで手で打ち込む   ここから make install できる
+*ここまで手で打ち込む   ここから make install できる*
 
 --------------------------------------
 
