@@ -63,7 +63,7 @@ SSD は 120G しかないが arch linux と emacs を使う環境としてはこ
     mkfs.ext4 /dev/sda2  
     mount /dev/sda2 /mnt  
 
->nano /etc/pacman.d/mirrorlist  
+nano /etc/pacman.d/mirrorlist  
 
     Server = http://ftp.jaist.ac.jp/pub/Linux/ArchLinux/$repo/os/$arch  
 	
@@ -220,8 +220,8 @@ pacman で入るものをインストール
 >sudo pacman -S go
 
 yaourt で入れるものをインストール  
->yaourt -S google-chrome  
->yaourt -S ricty  
+>yaourt google-chrome  
+>yaourt ricty  
 >yaourt peco  
 >yaourt noto-fonts-cjk  
 >yaourt man-pages-ja  
