@@ -21,6 +21,8 @@ sync: ## sync github
 	git push
 
 install: ## install development environment powerd by arch linux
+	export GOPATH=${HOME}/go
+	export PATH="$PATH:$GOPATH/bin"
 	${PWD}/bin/continue.sh && \
 	echo "alias screenstart='screen -D -RR'" >> ${HOME}/.bashrc
 	echo "alias tmuxstart='tmux new-session -A -s main'" >> ${HOME}/.bashrc
@@ -40,7 +42,14 @@ install: ## install development environment powerd by arch linux
 	yaourt man-pages-ja
 	yaourt global
 
-.PHONY: help
+test: ## print environment value
+	export GOPATH=${HOME}/go
+	export PATH="${PATH}:${GOPATH}/bin"
+	printenv
+
+all : init update sync install test help
+
+.PHONY: all
 
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
