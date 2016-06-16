@@ -25,6 +25,14 @@ Makefile があるので
 
 # Arch linux install
 
+なぜ arch linux か?
+* ローリング・リリースが再インストールしなくてもいいから楽(でも debian sid の面倒くさいのは嫌)  
+* サーバは CentOS でいいけど,開発環境の thinkpad は割と最新じゃないと面倒くさい  
+* go の最新バージョンをつかうためにコンパイルするのだったらパッケージごと作って共有したほうが賢い  
+* 軽い インストールが終わって emacs terminal chrome を起動して top した画像がこれ  
+
+![top](https://raw.githubusercontent.com/latestmasa/dotfiles/image/image/top.png)
+
 BitTorrent で Arch linux をダウンロード  
 https://www.archlinux.org/releng/releases/2016.06.01/torrent/  
 
@@ -113,6 +121,9 @@ visudo
 >exit  
 >reboot  
 
+BIOS が起動する直前くらいに USB メモリを引っこ抜く  
+もっとスマートな方法がないものか？  
+
 
 #### root で login してドライバや Xorg Gnome wifi などを整える
 
@@ -146,7 +157,7 @@ gdm でグラフィカルログインできるようにする
 >sudo pacman -S xdg-user-dirs  
 >LANG=C xdg-user-dirs-update --force  
 
->pacman -S zsh git vim  
+>sudo pacman -S zsh git vim  
 
 ### yaourt を導入する
 
