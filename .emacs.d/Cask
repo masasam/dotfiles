@@ -53,6 +53,7 @@
 (depends-on "company")
 (depends-on "google-this")
 (depends-on "pangu-spacing")
+(depends-on "helm-gitignore")
 
 ;; prog modes
 (depends-on "go-mode")
