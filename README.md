@@ -185,11 +185,12 @@ nano /etc/locale.gen
 
 
 グループと権限を設定  
->export EDITOR=/usr/bin/nano  
-visudo  
 
-    Defaults env_keep += “ HOME ”
-    %wheel ALL=(ALL) ALL
+    export EDITOR=/usr/bin/nano  
+    visudo  
+
+>Defaults env_keep += “ HOME ”  
+>%wheel ALL=(ALL) ALL  
 
 のコメントアウトを外す  
 
@@ -257,13 +258,13 @@ gdm でグラフィカルログインできるようにする
 
 vim /etc/pacman.conf  
 
-    [archlinuxfr]
-    SigLevel = Never
-    Server = http://repo.archlinux.fr/$arch
-
-    [pnsft-pur]
-    SigLevel = Optional TrustAll
-    Server = http://downloads.sourceforge.net/project/pnsft-aur/pur/$arch
+>[archlinuxfr]  
+>SigLevel = Never  
+>Server = http://repo.archlinux.fr/$arch  
+  
+>[pnsft-pur]  
+>SigLevel = Optional TrustAll  
+>Server = http://downloads.sourceforge.net/project/pnsft-aur/pur/$arch  
 
 yaourt を最新に同期する  
 
