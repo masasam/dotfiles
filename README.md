@@ -56,7 +56,7 @@ Why Arch linux ?
    壊れても 30 分で復帰できるように Makefile を作ったから無敵  
   
 2. サーバは CentOS でいいけど,開発環境は割と最新じゃないとつらい  
-   OVERLAYFS とか Profile Sync Daemon 使いたい  
+   OverlayFS とか Profile Sync Daemon 使いたい  
    Emacs は最新じゃないと嫌なので make install していたが Arch なら pacman ですむ  
    go の最新バージョンをつかうためにコンパイルするとバイナリの管理が大変  
    バイナリの管理に paco を使っていたが Aur とかでパッケージ作って共有したほうが賢いと思う  
@@ -90,16 +90,21 @@ SSD は 120G しかないが arch linux と emacs を使う環境としてはこ
 
 #### USB メモリでブートする
 
+BIOS で usb ブートするように変更して boot  
+
 パーティショニング  
-* BIOS で usb ブートするように変更して boot  
 * UEFI は使えない thinkpad なので BIOS  
+  ハードに合わせて選ぶ  
 * GPT なので boot パーティションは切らなくても動くので / のみ  
+  面倒くさいことは徹底的に排除  
 * SSD でメモリ 8G なのでスワップは無し  
 
->gdisk /dev/sda  
+gdisk /dev/sda  
 
     1 sda1  BIOS boot partition(ef02) 1007KB  
     2 sda2 / 残り全部  
+
+ext4 でフォーマットしてマウント
 
     mkfs.ext4 /dev/sda2  
     mount /dev/sda2 /mnt  
@@ -110,37 +115,25 @@ nano /etc/pacman.d/mirrorlist
 	
 を一番上にして一番早いミラーに繋がるようにする  
 
-
-
 arch の bese bese-devel をインストール  
 
     pacstrap /mnt base base-devel  
-
-
 
 fstab を生成する  
 
     genfstab -U -p /mnt >> /mnt/etc/fstab  
 
-
-
 マウントして bash をログインシェルにしてログイン  
 
     arch-chroot /mnt /bin/bash  
-
-
 
 ホスト名を決める  
 
     echo thinkpad > /etc/hostname  
 
-
-
 時間を Tokyo に  
 
     ln -s /usr/share/zoneinfo/Asia/Tokyo /etc/localtime  
-
-
 
 ロケールを設定  
 nano /etc/locale.gen  
@@ -150,7 +143,6 @@ nano /etc/locale.gen
 
     locale-gen  
 
-
 シェルは英語環境で(error でググると english しか情報がないことがあるから)  
 
     export LANG=C  
@@ -159,30 +151,21 @@ nano /etc/locale.gen
 
     echo LANG=ja_JP.UTF-8 > /etc/locale.conf  
 
-
-
 時刻合わせ  
 
     hwclock --systohc --utc  
-
-
 
 カーネルイメージを生成  
 
     mkinitcpio -p linux  
 
-
-
 ユーザーを生成  
 
     useradd -m -G wheel -s /bin/bash masa  
 
-
-
 パスワードを設定  
 
     passwd masa  
-
 
 グループと権限を設定  
 
@@ -248,7 +231,7 @@ gdm でグラフィカルログインできるようにする
     reboot  
 
 
-# masa で login してホームディレクトリを整える
+#### masa で login してホームディレクトリを整える
 
     sudo pacman -S xdg-user-dirs  
     LANG=C xdg-user-dirs-update --force  
