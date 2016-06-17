@@ -9,17 +9,21 @@ Makefile があるので
     make install
 	
 できる。  
+
 しかし、かなりオレオレ make install なので  
 利用する場合は make install せず  
 一度手を動かして入れるほうがよろしいかと思います。  
 もし make install される奇特な方は下記手順の  
 
-*ここまで手で打ち込む   ここから make install できる*  
+--------------------------------------
+
+*ここまで手で打ち込む   ここから make install できる*
+
+--------------------------------------
 
 までの手順を終えてから make install してください  
 ゆえに、ドライバなどは make install に入れないで手動でやる。  
 マシンのデータが吹っ飛んでも 30 分でいつもの環境を用意できるようにした  
-
 
 make install 後に
 
@@ -28,8 +32,7 @@ make install 後に
 で dotfiles をデプロイできるので便利  
 make init する前に Dropbox の同期を終わらせておくこと  
 
-
-#### Dropbox で管理するものの基準  
+#### Dropbox で管理するものの基準
 
 1. github に置けないもの  
    .ssh に入っている公開鍵など  
@@ -46,7 +49,6 @@ make init する前に Dropbox の同期を終わらせておくこと
 ２段階認証の recovery-code は Dropbox に置くと  
 金庫を開ける鍵が金庫の中にある問題が発生するから  
 recovery-code は自宅の NAS に置いておく  
-
 
 # Arch linux install
 
@@ -71,14 +73,12 @@ Why Arch linux ?
 
 --以上--  
 
-
 BitTorrent で Arch linux をダウンロード  
 https://www.archlinux.org/releng/releases/2016.06.01/torrent/  
 
-
 USB インストールメディアを作成  
 
-    dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx && sync  
+    dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx && sync
 
 /dev/sdx は環境で異なるから df して調べる  
 
@@ -86,7 +86,6 @@ USB インストールメディアを作成
 
 SSD は 120G しかないが arch linux と emacs を使う環境としてはこれで十分足りる  
 以下の初期設定が終わった段階で 6.6G ですんでしまっている。  
-
 
 #### USB メモリでブートする
 
@@ -101,39 +100,39 @@ BIOS で usb ブートするように変更して boot
 
 gdisk /dev/sda  
 
-    1 sda1  BIOS boot partition(ef02) 1007KB  
-    2 sda2 / 残り全部  
+    1 sda1  BIOS boot partition(ef02) 1007KB
+    2 sda2 / 残り全部
 
 ext4 でフォーマットしてマウント
 
-    mkfs.ext4 /dev/sda2  
-    mount /dev/sda2 /mnt  
+    mkfs.ext4 /dev/sda2
+    mount /dev/sda2 /mnt
 
 nano /etc/pacman.d/mirrorlist  
 
-    Server = http://ftp.jaist.ac.jp/pub/Linux/ArchLinux/$repo/os/$arch  
+    Server = http://ftp.jaist.ac.jp/pub/Linux/ArchLinux/$repo/os/$arch
 	
 を一番上にして一番早いミラーに繋がるようにする  
 
 arch の bese bese-devel をインストール  
 
-    pacstrap /mnt base base-devel  
+    pacstrap /mnt base base-devel
 
 fstab を生成する  
 
-    genfstab -U -p /mnt >> /mnt/etc/fstab  
+    genfstab -U -p /mnt >> /mnt/etc/fstab
 
 マウントして bash をログインシェルにしてログイン  
 
-    arch-chroot /mnt /bin/bash  
+    arch-chroot /mnt /bin/bash
 
 ホスト名を決める  
 
-    echo thinkpad > /etc/hostname  
+    echo thinkpad > /etc/hostname
 
 時間を Tokyo に  
 
-    ln -s /usr/share/zoneinfo/Asia/Tokyo /etc/localtime  
+    ln -s /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
 ロケールを設定  
 nano /etc/locale.gen  
@@ -141,101 +140,93 @@ nano /etc/locale.gen
 >en_US.UTF-8 UTF-8  
 >ja_JP.UTF-8 UTF-8  
 
-    locale-gen  
+    locale-gen
 
 シェルは英語環境で(error でググると english しか情報がないことがあるから)  
 
-    export LANG=C  
+    export LANG=C
 
 この辺は UTF-8 にしとく  
 
-    echo LANG=ja_JP.UTF-8 > /etc/locale.conf  
+    echo LANG=ja_JP.UTF-8 > /etc/locale.conf
 
 時刻合わせ  
 
-    hwclock --systohc --utc  
+    hwclock --systohc --utc
 
 カーネルイメージを生成  
 
-    mkinitcpio -p linux  
+    mkinitcpio -p linux
 
 ユーザーを生成  
 
-    useradd -m -G wheel -s /bin/bash masa  
+    useradd -m -G wheel -s /bin/bash masa
 
 パスワードを設定  
 
-    passwd masa  
+    passwd masa
 
 グループと権限を設定  
 
-    export EDITOR=/usr/bin/nano  
-    visudo  
+    export EDITOR=/usr/bin/nano
+    visudo
 
 >Defaults env_keep += “ HOME ”  
 >%wheel ALL=(ALL) ALL  
 
 のコメントアウトを外す  
 
-
-
 ブートローダーを設定  
 
-    pacman -S grub  
-    grub-install --recheck /dev/sda  
-    grub-mkconfig -o /boot/grub/grub.cfg  
+    pacman -S grub
+    grub-install --recheck /dev/sda
+    grub-mkconfig -o /boot/grub/grub.cfg
 	
-
 リブート後 dhcp で繋がるように  
 
-    systemctl enable dhcpcd.service  
-    exit  
-    reboot  
+    systemctl enable dhcpcd.service
+    exit
+    reboot
 
 BIOS が起動する直前くらいに USB メモリを引っこ抜く  
 何かもっとクールな方法がないものか？  
-
 
 #### root で login してドライバや Xorg Gnome wifi などを整える
 
 bash で補完が効くように  
 
-    pacman -S bash-completion  
-	
+    pacman -S bash-completion
 
 自分の環境にあったドライバをインストール  
 
-    lspci|grep VGA  
-    pacman -S xf86-video-intel  
-    pacman -S libva-intel-driver  
-    pacman -S xorg-server xorg-server-utils xorg-xinit xorg-xclock xterm  
-    pacman -S xf86-input-evdev  
-
+    lspci|grep VGA
+    pacman -S xf86-video-intel
+    pacman -S libva-intel-driver
+    pacman -S xorg-server xorg-server-utils xorg-xinit xorg-xclock xterm
+    pacman -S xf86-input-evdev
 
 gnome は必要最小限だけいれる  
 
-    pacman -S gnome  
+    pacman -S gnome
 
 gdm でグラフィカルログインできるようにする  
 
-    pacman -S gdm  
-    systemctl enable gdm.service  
-
+    pacman -S gdm
+    systemctl enable gdm.service
 
 ネット環境を整える  
 
-    pacman -S network-manager  
-    systemctl list-unit-files  
-    systemctl disable dhcpcd.service  
-    systemctl enable NetworkManager.service  
-    reboot  
-
+    pacman -S network-manager
+    systemctl list-unit-files
+    systemctl disable dhcpcd.service
+    systemctl enable NetworkManager.service
+    reboot
 
 #### masa で login してホームディレクトリを整える
 
-    sudo pacman -S xdg-user-dirs  
-    LANG=C xdg-user-dirs-update --force  
-    sudo pacman -S zsh git vim  
+    sudo pacman -S xdg-user-dirs
+    LANG=C xdg-user-dirs-update --force
+    sudo pacman -S zsh git vim
 
 #### yaourt を導入する
 
@@ -251,11 +242,10 @@ vim /etc/pacman.conf
 
 yaourt を最新に同期する  
 
-    sudo pacman -Syy  
-    sudo pacman -S yaourt  
-    sudo pacman --sync --refresh yaourt  
-    yaourt -Syua  
-
+    sudo pacman -Syy
+    sudo pacman -S yaourt
+    sudo pacman --sync --refresh yaourt
+    yaourt -Syua
 
 dropbox を install して同期する  
 
@@ -267,82 +257,77 @@ git clone して dotfiles を用意
     mkdir git
     git clone git@github.com:latestmasa/dotfiles.git dotfiles
 
-
 --------------------------------------
 
 *ここまで手で打ち込む   ここから make install できる*
 
 --------------------------------------
 
-
 ## 開発環境 install
 
 pacman で入るものをインストール  
 
-    sudo pacman -S firefox  firefox-i18n-ja  
-    sudo pacman -S otf-ipafont  
-    sudo pacman -S openssh  
-    sudo pacman -S dropbox  
-    sudo pacman -S nautilus-dropbox  
-    sudo pacman -S ibus-mozc mozc  
-    sudo pacman -S sylpheed  
-    sudo pacman -S emacs  
-    sudo pacman -S curl  
-    sudo pacman -S tmux  
-    sudo pacman -S keychain  
-    sudo pacman -S gnome-tweak-tool  
-    sudo pacman -S xsel  
-    sudo pacman -S archlinux-wallpaper  
-    sudo pacman -S evince inkscape gimp unrar  
-    sudo pacman -S file-roller vlc  
-    sudo pacman -S xclip  
-    sudo pacman -S atool  
-    sudo pacman -S trash-cli  
-    sudo pacman -S the_silver_searcher  
-    sudo pacman -S powertop  
-    sudo pacman -S cifs-utils  
-    sudo pacman -S gvfs gvfs-smb  
-    sudo pacman -S seahorse gnome-keyring  
-    sudo pacman -S cups-pdf  
-    sudo pacman -S redshift  
-    sudo pacman -S eog  
-    sudo pacman -S mcomix  
-    sudo pacman -S libreoffice-fresh-ja  
+    sudo pacman -S firefox  firefox-i18n-ja
+    sudo pacman -S otf-ipafont
+    sudo pacman -S openssh
+    sudo pacman -S dropbox
+    sudo pacman -S nautilus-dropbox
+    sudo pacman -S ibus-mozc mozc
+    sudo pacman -S sylpheed
+    sudo pacman -S emacs
+    sudo pacman -S curl
+    sudo pacman -S tmux
+    sudo pacman -S keychain
+    sudo pacman -S gnome-tweak-tool
+    sudo pacman -S xsel
+    sudo pacman -S archlinux-wallpaper
+    sudo pacman -S evince inkscape gimp unrar
+    sudo pacman -S file-roller vlc
+    sudo pacman -S xclip
+    sudo pacman -S atool
+    sudo pacman -S trash-cli
+    sudo pacman -S the_silver_searcher
+    sudo pacman -S powertop
+    sudo pacman -S cifs-utils
+    sudo pacman -S gvfs gvfs-smb
+    sudo pacman -S seahorse gnome-keyring
+    sudo pacman -S cups-pdf
+    sudo pacman -S redshift
+    sudo pacman -S eog
+    sudo pacman -S mcomix
+    sudo pacman -S libreoffice-fresh-ja
     sudo pacman -S go
-
 
 yaourt で入れるものをインストール  
 
-    yaourt google-chrome  
-    yaourt ricty  
-    yaourt peco  
-    yaourt noto-fonts-cjk  
-    yaourt man-pages-ja  
-    yaourt global  
-
+    yaourt google-chrome 
+    yaourt ricty
+    yaourt peco
+    yaourt noto-fonts-cjk
+    yaourt man-pages-ja
+    yaourt global
 
 #### golang
 
-    mkdir -p ~/go/{bin,src}  
-    go get -u github.com/nsf/gocode  
-    go get -u github.com/rogpeppe/godef  
+    mkdir -p ~/go/{bin,src}
+    go get -u github.com/nsf/gocode
+    go get -u github.com/rogpeppe/godef
 
 
 #### cask install
 
-    yaourt cask  
-    cd .emacs.d  
-    cask upgrade  
-    cask install  
-    cask update  
-
+    yaourt cask
+    cd .emacs.d
+    cask upgrade
+    cask install
+    cask update
 
 #### theme を適用
 
-    sudo cp -R ~/Dropbox/arch/OSX-Arc-Shadow/ /usr/share/themes/  
-
+    sudo cp -R ~/Dropbox/arch/OSX-Arc-Shadow/ /usr/share/themes/
 
 #### Trackpoint 
+
 Thinkpad 特有のものをインストール  
 
 ~/.xinitrc  
@@ -355,11 +340,9 @@ Thinkpad 特有のものをインストール
     tpset "Evdev Wheel Emulation Axes" 6 7 4 5
     tpset "Device Accel Constant Deceleration" 0.95
 
-
 sudo vim /etc/udev/rules.d/10-trackpoint.rules  
 
     ACTION=="add", SUBSYSTEM=="input", ATTR{name}=="TPPS/2 IBM TrackPoint", ATTR{device/sensitivity}="240"
-
 
 sudo vim /etc/X11/xorg.conf.d/20-thinkpad.conf  
 
@@ -374,14 +357,13 @@ sudo vim /etc/X11/xorg.conf.d/20-thinkpad.conf
         Option		"YAxisMapping"		"4 5"
     EndSection
 
-
 thinkpad の i915 のみ
 >sudo vim /etc/mkinitcpio.conf  
 
     MODULES="i915"
 
-
 # Tweak Tool
+
 gnome の細かい設定など
 
 ![TweakTool](https://raw.githubusercontent.com/latestmasa/dotfiles/image/image/tweaktool.png)
@@ -401,8 +383,8 @@ gnome の細かい設定など
     AC 電源接続時 Blank  
     Don't suspend on lid close  
 	
-	
 # Terminal
+
 ![terminal](https://raw.githubusercontent.com/latestmasa/dotfiles/image/image/terminal.png)
 ターミナルサイズ  
 134 列 72 行
@@ -411,17 +393,19 @@ gnome の細かい設定など
 font ricty 15  
 
 #### ターミナルのプロファイル  
+
 solarized Dark  
 組み込みのスキーム solarized  
 
 #### .bashrc
+
 どんな時でも bash が起動しないと困るから  
 .bashrc は以下の２つのエイリアスを追記する以外はしない  
 zsh をデフォルトシェルにして zsh をカスタマイズしまくると  
 login できなくなって大変困ったことになるかもしれない。  
 まぁそれでも Arch linux なら USB メモリで boot して  
 
-    arch-chroot /mnt /bin/bash  
+    arch-chroot /mnt /bin/bash
 
 すればいくらでも回復できるから気軽なものだが、  
 面倒くさくなって新しいものを受け付けなくなるのは本末転倒であるから  
@@ -436,9 +420,8 @@ terminal を開いて
 screenstart あるいは tmuxstart で起動すると  
 セッションがあればそれを利用しなければ新規セッションで zsh が起動する  
 
-
-
 # Powertop
+
 消費電力を抑えて省エネ化  
 使っていないシステムバスとか徹底的にスリープするようにしてくれる  
 
@@ -475,9 +458,8 @@ sudo vim /etc/systemd/system/powertop.service
 月間の電気代が 140 円くらいだからよい  
 アイドル時以外の消費電力を考慮しても 200 円代ですむ  
 
-
-
 # Profile-Sync-Daemon
+
 chrome firefox のキャッシュとプロファイルを  
 メモリ上に置くようにして超高速化  
 ディスクに同期する頻度は下がるので SSD の消耗を防ぐ効果もある  
@@ -506,8 +488,6 @@ vim ~/.config/psd/psd.conf
 
 >systemctl --user status psd  
 
-
-
 ## 蓋を閉じてもサスペンドしないように
 
 起動 10 秒で emacs までたどりつくのでサスペンドなどしない  
@@ -520,8 +500,6 @@ vim ~/.config/psd/psd.conf
 
     systemctl restart systemd-logind
 
-
-
 ## ウィンドウを最大化したときに表示に乱れが発生する
 Intel HD Graphics のティアリング解消  
 >sudo vim /etc/environment
@@ -530,10 +508,8 @@ Intel HD Graphics のティアリング解消
 	
 追加して Xorg サーバーを再起動
 
-
-
-
 ## Activity
+
 ![activity](https://raw.githubusercontent.com/latestmasa/dotfiles/image/image/activity.png)
 アクティビティ > 設定 > 検索  
 全部 off にする  
@@ -558,25 +534,18 @@ GIMP まで移動して Ctrl-h を押すと
 誰得？  
 まぁ Ctrl-u で凌げるからよし。実際のところアプリ呼び出すだけやしね  
 
-
-
-
 # Firefox
 firefox sync を有効化  
-
 
 #### Gnome Shell Extention
 >Dash to Dock  
 >TopIcons Plus  
-
 
 #### stylish
 以下のテーマを利用
 <https://userstyles.org/styles/23516/midnight-surfing-global-dark-style>  
 
 defaultfullzoomlevel を 125 ％に  
-
-
 
 # Chrome
 デフォルトのサイズを 125 ％に  
@@ -595,15 +564,11 @@ chrome の google 検索のデフォルトは vi キーバインドだが気に�
 
 許容範囲なのでデフォルトで使う  
 
-
-
 # Theme
 gnome3 テーマインストール  
 <http://gnome-look.org> から好きなテーマを持ってきて Dropbox にいれとく  
 
-    sudo cp -R ~/Dropbox/arch/OSX-Arc-Shadow/ /usr/share/themes/  
-
-
+    sudo cp -R ~/Dropbox/arch/OSX-Arc-Shadow/ /usr/share/themes/
 
 # Mozc
 ibus-mozc（gnome のデフォルトは ibus)  
@@ -629,7 +594,6 @@ emacs とかぶらないように shift+Space で mozc を利用する
 >インプットメソッドタブを mozc だけにする  
 これで reboot  
 
-
 #### mozc 用辞書インストール
 <http://mediadesign.jp/article-4218/>  
 住所とかキーボードで打ちたくないから  
@@ -648,11 +612,10 @@ Mozc 辞書ツールを起動しメニューの［管理］＞［新規辞書に
 
 mozc の設定が完成したら  
 
-    ln -sfn ~/Dropbox/mozc/.mozc ~/.mozc  
+    ln -sfn ~/Dropbox/mozc/.mozc ~/.mozc
 	
 で mozc の設定は Dropbox に投げておく  
 これでもう二度と設定しなくてもよくなるだろう  
-
 
 # ipv6 無効化
 必要になったら on にするからそれまでいらん  
@@ -664,7 +627,6 @@ sudo vim /etc/sysctl.conf
 
 sysctl -p  
 で変更を反映させる。  
-
 
 #### 無効になったかを確認
 cat /proc/net/if_inet6   
@@ -678,12 +640,9 @@ sudo sysctl -p
 sysctl -p を実行すると変更した内容が表示され、  
 また cat /proc/net/if_inet6 で何も表示されなければ無効になっている。  
 
-
 #### firefox ipv6 無効化
 >about:config  
 >network.dns.disableIPv6 の値を true  
-
-
 
 # Sylpheed
 
@@ -706,13 +665,10 @@ Dropbox でメールをすぐ同期すれば
 ひとしきり設定が終了したら  
 dropbox に丸投げして二度と設定作業とかかわらないようにしよう。  
 
->ln -sfn ~/Dropbox/sylpheed/.sylpheed-2.0 ~/.sylpheed-2.0  
-
+    ln -sfn ~/Dropbox/sylpheed/.sylpheed-2.0 ~/.sylpheed-2.0
 
 最小化した時にトレイアイコンに格納する  
 に設定しておくと  
 Alt - Tab  
 で sylpheed がでてこないのでよい  
 コード書いてる時はメールなど見たくないものだ。  
-
-
