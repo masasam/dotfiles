@@ -42,7 +42,7 @@ install: ## install development environment powerd by arch linux
 	yaourt profile-sync-daemon
 	yaourt man-pages-ja
 	yaourt global
-	sudo cp -R ~/Dropbox/arch/OSX-Arc-Shadow/ /usr/share/themes/
+	sudo cp -R ${HOME}/Dropbox/arch/OSX-Arc-Shadow/ /usr/share/themes/
 
 test: ## print environment value
 	export GOPATH=${HOME}/go
