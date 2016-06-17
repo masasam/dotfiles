@@ -56,6 +56,7 @@
 (depends-on "helm-gitignore")
 (depends-on "easy-kill")
 (depends-on "init-loader")
+(depends-on "auto-async-byte-compile")
 
 ;; programming modes
 (depends-on "go-mode")
