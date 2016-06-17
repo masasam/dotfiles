@@ -145,10 +145,10 @@ fstab を生成する
 ロケールを設定  
 nano /etc/locale.gen  
 
-    en_US.UTF-8 UTF-8
-    ja_JP.UTF-8 UTF-8
+>en_US.UTF-8 UTF-8
+>ja_JP.UTF-8 UTF-8
 
->locale-gen  
+    locale-gen  
 
 
 シェルは英語環境で(error でググると english しか情報がないことがあるから)  
