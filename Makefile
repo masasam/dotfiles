@@ -42,13 +42,14 @@ install: ## install development environment powerd by arch linux
 	yaourt profile-sync-daemon
 	yaourt man-pages-ja
 	yaourt global
+	sudo cp -R ~/Dropbox/arch/OSX-Arc-Shadow/ /usr/share/themes/
 
 test: ## print environment value
 	export GOPATH=${HOME}/go
 	export PATH="${PATH}:${GOPATH}/bin"
 	printenv
 
-all : init update sync install test help
+all: init update sync install test help
 
 .PHONY: all
 

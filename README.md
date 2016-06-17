@@ -545,7 +545,7 @@ chrome の google 検索のデフォルトは vi キーバインドだが気に�
 gnome3 テーマインストール  
 <http://gnome-look.org> から好きなテーマを持ってきて Dropbox にいれとく  
 
-    sudo cp -R ~/Dropbox/ubuntu/OSX-Arc-Shadow/ /usr/share/themes/  
+    sudo cp -R ~/Dropbox/arch/OSX-Arc-Shadow/ /usr/share/themes/  
 
 
 
