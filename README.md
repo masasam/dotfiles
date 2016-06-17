@@ -8,7 +8,8 @@ Makefile があるので
 
     make install
 	
-できるがかなりオレオレ make install なので  
+できる。  
+しかし、かなりオレオレ make install なので  
 利用する場合は make install せず  
 一度手を動かして入れるほうがよろしいかと思います。  
 もし make install される奇特な方は下記手順の  
@@ -66,7 +67,7 @@ Why arch linux ?
 
 ![top](https://raw.githubusercontent.com/latestmasa/dotfiles/image/image/top.png)
 
-5. --以上--
+--以上--  
 
 
 BitTorrent で Arch linux をダウンロード  
@@ -216,6 +217,16 @@ yaourt を最新に同期する
 
 >sudo pacman --sync --refresh yaourt  
 >yaourt -Syua  
+
+dropbox を install して同期する  
+
+    sudo pacman -S dropbox
+	dropbox
+
+git clone して dotfiles を用意
+
+    mkdir git
+    git clone git@github.com:latestmasa/dotfiles.git dotfiles
 
 --------------------------------------
 
