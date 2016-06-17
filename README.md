@@ -22,15 +22,16 @@ Makefile があるので
 --------------------------------------
 
 までの手順を終えてから make install してください  
-ゆえに、ドライバなどは make install に入れないで手動でやる。  
-マシンのデータが吹っ飛んでも 30 分でいつもの環境を用意できるようにした  
+あるいは勝手に fork して Makefile を作ってね。  
+よって、ドライバなどは make install に入れないで手動でやることにする。  
 
 make install 後に
 
     make init
 
-で dotfiles をデプロイできるので便利  
+で dotfiles をデプロイできる。  
 make init する前に Dropbox の同期を終わらせておくこと  
+これでマシンのデータが吹っ飛んでも 30 分でいつもの環境に戻れる  
 
 #### Dropbox で管理するものの基準
 
@@ -41,9 +42,10 @@ make init する前に Dropbox の同期を終わらせておくこと
    .zsh_histfile .mozc  
    .emacs.d の中の更新ファイルは.gitignore を利用して問題なくデプロイできるから github で OK  
    
-3. データの保護目的  
+3. データの保護が目的のもの  
    Sylpheed の設定ファイルとメール gmail ライクに使いたい  
    メールが届いたらすぐ dropbox に同期されるからよい  
+   メールが届くたびに git push なんて面倒くさい  
 
 ２段階認証にしておく  
 ２段階認証の recovery-code は Dropbox に置くと  
@@ -103,7 +105,7 @@ gdisk /dev/sda
     1 sda1  BIOS boot partition(ef02) 1007KB
     2 sda2 / 残り全部
 
-ext4 でフォーマットしてマウント
+ext4 でフォーマットしてマウント  
 
     mkfs.ext4 /dev/sda2
     mount /dev/sda2 /mnt
