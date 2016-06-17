@@ -1,10 +1,3 @@
-(set-frame-parameter nil 'fullscreen 'maximized)
-(menu-bar-mode 0)
-(tool-bar-mode 0)
-(scroll-bar-mode 0)
-(setq inhibit-splash-screen t)
-(setq inhibit-startup-message t)
-
 ;; 基本utf-8でファイルの指定コードがあればそれで保存
 (set-language-environment "Japanese")
 (prefer-coding-system 'utf-8)
