@@ -6,8 +6,3 @@
  '(fixed-pitch ((t (:family "Ricty"))))
  '(helm-candidate-number ((t (:background "cornflower blue" :foreground "#ffffff"))))
  '(variable-pitch ((t (:family "Ricty")))))
-
-
-(setq custom-file "~/.emacs.d/custom-file.el")
-(if (file-exists-p (expand-file-name "~/.emacs.d/custom-file.el"))
-    (load (expand-file-name custom-file) t nil nil))
