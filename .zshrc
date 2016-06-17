@@ -75,9 +75,8 @@ setopt list_packed
 setopt complete_aliases
 
 # sudoの補完
-zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
-                             /usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin \
-                             /usr/local/bin/git
+zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin
+
 # 一部のコマンドライン定義は、展開時に時間のかかる処理を行う -- apt-get, dpkg (Debian), rpm (Redhat), urpmi (Mandrake), perlの-Mオプション, bogofilter (zsh 4.2.1以降), fink, mac_apps (MacOS X)(zsh 4.2.2以降)
 zstyle ':completion:*' use-cache true
 # 補完候補を ←↓↑→ で選択 (補完候補が色分け表示される)
@@ -163,9 +162,9 @@ esac
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 
 
-# Ubuntuでコマンドが存在しなければ誘導してくれる
-if [ -f /etc/zsh_command_not_found ]; then
-  . /etc/zsh_command_not_found
+# Arch linux でコマンドがないとき誘導 sudo pacman -S pkgfile
+if [ -f /usr/share/doc/pkgfile/command-not-found.zsh ]; then
+  source /usr/share/doc/pkgfile/command-not-found.zsh
 fi
 
 
