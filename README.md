@@ -50,20 +50,22 @@ recovery-code は自宅の NAS に置いておく
 
 # Arch linux install
 
-Why arch linux ?  
+Why Arch linux ?  
 
 1. ローリング・リリースで壊れない限りは再インストールしなくてもいいから楽  
-  壊れても 30 分で復帰できるから怖くない。  
+   壊れても 30 分で復帰できるように Makefile を作ったから無敵  
   
 2. サーバは CentOS でいいけど,開発環境は割と最新じゃないとつらい  
    OVERLAYFS とか Profile Sync Daemon 使いたい  
-   emacs は最新じゃないと嫌なので make install していたが arch なら pacman ですむ  
+   Emacs は最新じゃないと嫌なので make install していたが Arch なら pacman ですむ  
+   go の最新バージョンをつかうためにコンパイルするとバイナリの管理が大変  
+   バイナリの管理に paco を使っていたが Aur とかでパッケージ作って共有したほうが賢いと思う  
 
-3. go の最新バージョンをつかうためにコンパイルするのだったらパッケージ作って共有したほうが賢いと思う  
-   configure; make; sudo make install しまくるとオレオレ環境になり危険  
-   paco で管理していたが面倒くさくなった  
+3. カスタマイズは好きだがエコシステムから外れない塩梅でやるのがいいと思う  
+   Arch のパッケージは原則としてパッチをあてないバニラのソースからビルドする方針になっていて  
+   Arch 固有の問題が起きにくいからよい  
 
-4. 軽い!  インストールが終わって emacs terminal chrome を起動して top した画像  
+4. 軽い!!  インストールが終わって Emacs Terminal Chrome を起動して top した画像  
 
 ![top](https://raw.githubusercontent.com/latestmasa/dotfiles/image/image/top.png)
 
@@ -106,18 +108,24 @@ nano /etc/pacman.d/mirrorlist
 
     Server = http://ftp.jaist.ac.jp/pub/Linux/ArchLinux/$repo/os/$arch  
 	
-を一番上に  
+を一番上にして一番早いミラーに繋がるようにする  
 
+arch の bese bese-devel をインストール  
 >pacstrap /mnt base base-devel  
 
+fstab を生成する  
 >genfstab -U -p /mnt >> /mnt/etc/fstab  
 
+マウントして bash をログインシェルにしてログイン  
 >arch-chroot /mnt /bin/bash  
 
+ホスト名を決める  
 >echo thinkpad > /etc/hostname  
 
+時間を Tokyo に  
 >ln -s /usr/share/zoneinfo/Asia/Tokyo /etc/localtime  
 
+ロケールを設定  
 nano /etc/locale.gen  
 
     en_US.UTF-8 UTF-8
@@ -125,43 +133,48 @@ nano /etc/locale.gen
 
 >locale-gen  
 
+シェルは英語環境で(error でググると english しか情報がないことがあるから)  
 >export LANG=C  
 
+この辺は UTF-8 にしとく  
 >echo LANG=ja_JP.UTF-8 > /etc/locale.conf  
 
+時刻合わせ  
 >hwclock --systohc --utc  
 
+カーネルイメージを生成  
 >mkinitcpio -p linux  
 
+ユーザーを生成  
 >useradd -m -G wheel -s /bin/bash masa  
 
+パスワードを設定  
 >passwd masa  
 
+グループと権限を設定  
 >export EDITOR=/usr/bin/nano  
-
 visudo  
 
     Defaults env_keep += “ HOME ”
     %wheel ALL=(ALL) ALL
 
-のコメントアウトを外す
+のコメントアウトを外す  
 
+
+ブートローダーを設定  
 >pacman -S grub  
-
 
 >grub-install --recheck /dev/sda  
 
-
 >grub-mkconfig -o /boot/grub/grub.cfg  
 
-
+リブート後 dhcp で繋がるように  
 >systemctl enable dhcpcd.service  
-
 >exit  
 >reboot  
 
 BIOS が起動する直前くらいに USB メモリを引っこ抜く  
-もっとスマートな方法がないものか？  
+何かもっとクールな方法がないものか？  
 
 
 #### root で login してドライバや Xorg Gnome wifi などを整える
@@ -191,14 +204,14 @@ gdm でグラフィカルログインできるようにする
 >reboot  
 
 
-#### masa で login してホームディレクトリを整える
+# masa で login してホームディレクトリを整える
 
 >sudo pacman -S xdg-user-dirs  
 >LANG=C xdg-user-dirs-update --force  
 
 >sudo pacman -S zsh git vim  
 
-### yaourt を導入する
+#### yaourt を導入する
 
 vim /etc/pacman.conf  
 
@@ -210,7 +223,7 @@ vim /etc/pacman.conf
     SigLevel = Optional TrustAll
     Server = http://downloads.sourceforge.net/project/pnsft-aur/pur/$arch
 
-yaourt を最新に同期する
+yaourt を最新に同期する  
 >sudo pacman -Syy  
 >sudo pacman -S yaourt  
 
@@ -228,11 +241,13 @@ git clone して dotfiles を用意
     mkdir git
     git clone git@github.com:latestmasa/dotfiles.git dotfiles
 
+
 --------------------------------------
 
 *ここまで手で打ち込む   ここから make install できる*
 
 --------------------------------------
+
 
 ## 開発環境 install
 
