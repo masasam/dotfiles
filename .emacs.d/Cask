@@ -2,7 +2,7 @@
 (source melpa)
 (source marmalade)
 
-;; caskおすすめ
+;; cask recommend
 (depends-on "bind-key")
 (depends-on "cask")
 (depends-on "dash")
@@ -28,7 +28,7 @@
 (depends-on "web-mode")
 (depends-on "yasnippet")
 
-;; 追加
+;; mybase
 (depends-on "ag")
 (depends-on "smartrep")
 (depends-on "git-gutter")
@@ -55,8 +55,9 @@
 (depends-on "pangu-spacing")
 (depends-on "helm-gitignore")
 (depends-on "easy-kill")
+(depends-on "init-loader")
 
-;; prog modes
+;; programming modes
 (depends-on "go-mode")
 (depends-on "go-autocomplete")
 (depends-on "go-eldoc")
