@@ -54,6 +54,7 @@
 (depends-on "google-this")
 (depends-on "pangu-spacing")
 (depends-on "helm-gitignore")
+(depends-on "easy-kill")
 
 ;; prog modes
 (depends-on "go-mode")
