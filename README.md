@@ -110,20 +110,37 @@ nano /etc/pacman.d/mirrorlist
 	
 を一番上にして一番早いミラーに繋がるようにする  
 
+
+
 arch の bese bese-devel をインストール  
->pacstrap /mnt base base-devel  
+
+    pacstrap /mnt base base-devel  
+
+
 
 fstab を生成する  
->genfstab -U -p /mnt >> /mnt/etc/fstab  
+
+    genfstab -U -p /mnt >> /mnt/etc/fstab  
+
+
 
 マウントして bash をログインシェルにしてログイン  
->arch-chroot /mnt /bin/bash  
+
+    arch-chroot /mnt /bin/bash  
+
+
 
 ホスト名を決める  
->echo thinkpad > /etc/hostname  
+
+    echo thinkpad > /etc/hostname  
+
+
 
 時間を Tokyo に  
->ln -s /usr/share/zoneinfo/Asia/Tokyo /etc/localtime  
+
+    ln -s /usr/share/zoneinfo/Asia/Tokyo /etc/localtime  
+
+
 
 ロケールを設定  
 nano /etc/locale.gen  
@@ -133,23 +150,39 @@ nano /etc/locale.gen
 
 >locale-gen  
 
+
 シェルは英語環境で(error でググると english しか情報がないことがあるから)  
->export LANG=C  
+
+    export LANG=C  
 
 この辺は UTF-8 にしとく  
->echo LANG=ja_JP.UTF-8 > /etc/locale.conf  
+
+    echo LANG=ja_JP.UTF-8 > /etc/locale.conf  
+
+
 
 時刻合わせ  
->hwclock --systohc --utc  
+
+    hwclock --systohc --utc  
+
+
 
 カーネルイメージを生成  
->mkinitcpio -p linux  
+
+    mkinitcpio -p linux  
+
+
 
 ユーザーを生成  
->useradd -m -G wheel -s /bin/bash masa  
+
+    useradd -m -G wheel -s /bin/bash masa  
+
+
 
 パスワードを設定  
->passwd masa  
+
+    passwd masa  
+
 
 グループと権限を設定  
 >export EDITOR=/usr/bin/nano  
@@ -161,17 +194,19 @@ visudo
 のコメントアウトを外す  
 
 
+
 ブートローダーを設定  
->pacman -S grub  
 
->grub-install --recheck /dev/sda  
-
->grub-mkconfig -o /boot/grub/grub.cfg  
+    pacman -S grub  
+    grub-install --recheck /dev/sda  
+    grub-mkconfig -o /boot/grub/grub.cfg  
+	
 
 リブート後 dhcp で繋がるように  
->systemctl enable dhcpcd.service  
->exit  
->reboot  
+
+    systemctl enable dhcpcd.service  
+    exit  
+    reboot  
 
 BIOS が起動する直前くらいに USB メモリを引っこ抜く  
 何かもっとクールな方法がないものか？  
@@ -180,36 +215,43 @@ BIOS が起動する直前くらいに USB メモリを引っこ抜く
 #### root で login してドライバや Xorg Gnome wifi などを整える
 
 bash で補完が効くように  
->pacman -S bash-completion  
+
+    pacman -S bash-completion  
+	
 
 自分の環境にあったドライバをインストール  
->lspci|grep VGA  
->pacman -S xf86-video-intel  
->pacman -S libva-intel-driver  
->pacman -S xorg-server xorg-server-utils xorg-xinit xorg-xclock xterm  
->pacman -S xf86-input-evdev  
+
+    lspci|grep VGA  
+    pacman -S xf86-video-intel  
+    pacman -S libva-intel-driver  
+    pacman -S xorg-server xorg-server-utils xorg-xinit xorg-xclock xterm  
+    pacman -S xf86-input-evdev  
+
 
 gnome は必要最小限だけいれる  
->pacman -S gnome  
+
+    pacman -S gnome  
 
 gdm でグラフィカルログインできるようにする  
->pacman -S gdm  
->systemctl enable gdm.service  
+
+    pacman -S gdm  
+    systemctl enable gdm.service  
+
 
 ネット環境を整える  
->pacman -S network-manager  
->systemctl list-unit-files  
->systemctl disable dhcpcd.service  
->systemctl enable NetworkManager.service  
->reboot  
+
+    pacman -S network-manager  
+    systemctl list-unit-files  
+    systemctl disable dhcpcd.service  
+    systemctl enable NetworkManager.service  
+    reboot  
 
 
 # masa で login してホームディレクトリを整える
 
->sudo pacman -S xdg-user-dirs  
->LANG=C xdg-user-dirs-update --force  
-
->sudo pacman -S zsh git vim  
+    sudo pacman -S xdg-user-dirs  
+    LANG=C xdg-user-dirs-update --force  
+    sudo pacman -S zsh git vim  
 
 #### yaourt を導入する
 
@@ -224,12 +266,12 @@ vim /etc/pacman.conf
     Server = http://downloads.sourceforge.net/project/pnsft-aur/pur/$arch
 
 yaourt を最新に同期する  
->sudo pacman -Syy  
->sudo pacman -S yaourt  
 
+    sudo pacman -Syy  
+    sudo pacman -S yaourt  
+    sudo pacman --sync --refresh yaourt  
+    yaourt -Syua  
 
->sudo pacman --sync --refresh yaourt  
->yaourt -Syua  
 
 dropbox を install して同期する  
 
@@ -252,64 +294,68 @@ git clone して dotfiles を用意
 ## 開発環境 install
 
 pacman で入るものをインストール  
->sudo pacman -S firefox  firefox-i18n-ja  
->sudo pacman -S otf-ipafont  
->sudo pacman -S openssh  
->sudo pacman -S dropbox  
->sudo pacman -S nautilus-dropbox  
->sudo pacman -S ibus-mozc mozc  
->sudo pacman -S sylpheed  
->sudo pacman -S emacs  
->sudo pacman -S curl  
->sudo pacman -S tmux  
->sudo pacman -S keychain  
->sudo pacman -S gnome-tweak-tool  
->sudo pacman -S xsel  
->sudo pacman -S archlinux-wallpaper  
->sudo pacman -S evince inkscape gimp unrar  
->sudo pacman -S file-roller vlc  
->sudo pacman -S xclip  
->sudo pacman -S atool  
->sudo pacman -S trash-cli  
->sudo pacman -S the_silver_searcher  
->sudo pacman -S powertop  
->sudo pacman -S cifs-utils  
->sudo pacman -S gvfs gvfs-smb  
->sudo pacman -S seahorse gnome-keyring  
->sudo pacman -S cups-pdf  
->sudo pacman -S redshift  
->sudo pacman -S eog  
->sudo pacman -S mcomix  
->sudo pacman -S libreoffice-fresh-ja  
->sudo pacman -S go
+
+    sudo pacman -S firefox  firefox-i18n-ja  
+    sudo pacman -S otf-ipafont  
+    sudo pacman -S openssh  
+    sudo pacman -S dropbox  
+    sudo pacman -S nautilus-dropbox  
+    sudo pacman -S ibus-mozc mozc  
+    sudo pacman -S sylpheed  
+    sudo pacman -S emacs  
+    sudo pacman -S curl  
+    sudo pacman -S tmux  
+    sudo pacman -S keychain  
+    sudo pacman -S gnome-tweak-tool  
+    sudo pacman -S xsel  
+    sudo pacman -S archlinux-wallpaper  
+    sudo pacman -S evince inkscape gimp unrar  
+    sudo pacman -S file-roller vlc  
+    sudo pacman -S xclip  
+    sudo pacman -S atool  
+    sudo pacman -S trash-cli  
+    sudo pacman -S the_silver_searcher  
+    sudo pacman -S powertop  
+    sudo pacman -S cifs-utils  
+    sudo pacman -S gvfs gvfs-smb  
+    sudo pacman -S seahorse gnome-keyring  
+    sudo pacman -S cups-pdf  
+    sudo pacman -S redshift  
+    sudo pacman -S eog  
+    sudo pacman -S mcomix  
+    sudo pacman -S libreoffice-fresh-ja  
+    sudo pacman -S go
+
 
 yaourt で入れるものをインストール  
->yaourt google-chrome  
->yaourt ricty  
->yaourt peco  
->yaourt noto-fonts-cjk  
->yaourt man-pages-ja  
->yaourt global  
+
+    yaourt google-chrome  
+    yaourt ricty  
+    yaourt peco  
+    yaourt noto-fonts-cjk  
+    yaourt man-pages-ja  
+    yaourt global  
 
 
 #### golang
 
->mkdir -p ~/go/{bin,src}  
->go get -u github.com/nsf/gocode  
->go get -u github.com/rogpeppe/godef  
+    mkdir -p ~/go/{bin,src}  
+    go get -u github.com/nsf/gocode  
+    go get -u github.com/rogpeppe/godef  
 
 
 #### cask install
->yaourt cask  
->cd .emacs.d  
->cask upgrade  
->cask install  
->cask update  
+
+    yaourt cask  
+    cd .emacs.d  
+    cask upgrade  
+    cask install  
+    cask update  
 
 
 #### theme を適用
 
->sudo cp -R ~/Dropbox/arch/OSX-Arc-Shadow/ /usr/share/themes/  
+    sudo cp -R ~/Dropbox/arch/OSX-Arc-Shadow/ /usr/share/themes/  
 
 
 #### Trackpoint 
