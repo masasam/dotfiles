@@ -16,10 +16,6 @@ init: ## deploy this dotfiles
 update: ## update cask depend on melpa
 	cd ${HOME}/.emacs.d/;	  cask upgrade;   cask update
 
-sync: ## sync github
-	git pull
-	git push
-
 install: ## install development environment powerd by arch linux
 	export GOPATH=${HOME}/go
 	export PATH="$PATH:$GOPATH/bin"
@@ -44,6 +40,20 @@ install: ## install development environment powerd by arch linux
 	yaourt global
 	sudo cp -R ${HOME}/Dropbox/arch/OSX-Arc-Shadow/ /usr/share/themes/
 	sudo pkgfile --update
+
+backup: ## backup arch linux package at dropbox
+	pacman -Qqen > ${HOME}/Dropbox/arch/pkglist.txt
+	pacman -Qqem > ${HOME}/Dropbox/arch/yaourtlist.txt
+	comm -23 <(pacman -Qeq | sort) <(pacman -Qgq base base-devel | sort) > \
+	${HOME}/Dropbox/arch/mypkglist.txt
+
+recover: ## recovery from backup arch linux package at dropbox
+	sudo pacman -S $(< ${HOME}/Dropbox/arch/pkglist.txt)
+	sudo yaourt -S --needed $(comm -13 <(pacman -Slq|sort) <(sort ${HOME}/Dropbox/arch/yaourtlist.txt) )
+
+sync: ## sync github
+	git pull
+	git push
 
 test: ## print environment value
 	export GOPATH=${HOME}/go
