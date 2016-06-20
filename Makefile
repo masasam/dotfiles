@@ -5,20 +5,26 @@ init: ## deploy this dotfiles
 	ln -vsf ${PWD}/.tmux.conf   ${HOME}/.tmux.conf
 	ln -vsf ${PWD}/.xinitrc   ${HOME}/.xinitrc
 	ln -vsf ${PWD}/redshift.conf   ${HOME}/.config/redshift.conf
+	test -L ${HOME}/.peco || rm -rf ${HOME}/.peco
 	ln -vsfn ${PWD}/.peco   ${HOME}/.peco
+	test -L ${HOME}/.emacs.d || rm -rf ${HOME}/.emacs.d
 	ln -vsfn ${PWD}/.emacs.d   ${HOME}/.emacs.d
+	test -L ${HOME}/.ssh || rm -rf ${HOME}/.ssh
 	ln -vsfn ${HOME}/Dropbox/ssh   ${HOME}/.ssh
+	test -L ${HOME}/.sylpheed-2.0 || rm -rf ${HOME}/.sylpheed-2.0
 	ln -vsfn ${HOME}/Dropbox/sylpheed/.sylpheed-2.0   ${HOME}/.sylpheed-2.0
+	test -L ${HOME}/.mozc || rm -rf ${HOME}/.mozc
 	ln -vsfn ${HOME}/Dropbox/mozc/.mozc   ${HOME}/.mozc
 	chmod 600   ${HOME}/.ssh/id_rsa
-	cd ${HOME}/.emacs.d/;	  cask upgrade;	  cask install
+	cd ${HOME}/.emacs.d/;   cask upgrade;   cask install
 
 update: ## update cask depend on melpa
-	cd ${HOME}/.emacs.d/;	  cask upgrade;   cask update
+	cd ${HOME}/.emacs.d/;   cask upgrade;   cask update
 
 install: ## install development environment powerd by arch linux
 	export GOPATH=${HOME}/go
 	export PATH="$PATH:$GOPATH/bin"
+	chmod u+x ${PWD}/bin/continue.sh
 	${PWD}/bin/continue.sh && \
 	echo "alias screenstart='screen -D -RR'" >> ${HOME}/.bashrc
 	echo "alias tmuxstart='tmux new-session -A -s main'" >> ${HOME}/.bashrc
