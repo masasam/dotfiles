@@ -209,7 +209,16 @@ bash で補完が効くように
 
 gnome は必要最小限だけいれる  
 
-    pacman -S gnome
+    pacman -S gnome-backgrounds
+	pacman -S gnome-calculator
+	pacman -S gnome-control-center
+	pacman -S gnome-keyring
+	pacman -S gnome-shell-extensions
+	pacman -S gnome-terminal
+	pacman -S gnome-tweak-tool
+	pacman -S nautilus
+	pacman -S gedit
+	
 
 gdm でグラフィカルログインできるようにする  
 
