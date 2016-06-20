@@ -26,8 +26,8 @@ install: ## install development environment powerd by arch linux
 	export PATH="$PATH:$GOPATH/bin"
 	chmod u+x ${PWD}/bin/continue.sh
 	${PWD}/bin/continue.sh && \
-	echo "alias screenstart='screen -D -RR'" >> ${HOME}/.bashrc
-	echo "alias tmuxstart='tmux new-session -A -s main'" >> ${HOME}/.bashrc
+	cat ${HOME}/.bashrc | grep screenstart || echo "alias screenstart='screen -D -RR'" >> ${HOME}/.bashrc
+	cat ${HOME}/.bashrc | grep tmuxstart || echo "alias tmuxstart='tmux new-session -A -s main'" >> ${HOME}/.bashrc
 	sudo pacman -S go zsh git vim dropbox nautilus-dropbox ibus-mozc mozc tmux keychain  \
 	gnome-tweak-tool xsel sylpheed emacs curl archlinux-wallpaper evince inkscape gimp unrar \
 	file-roller vlc xclip atool trash-cli the_silver_searcher powertop cifs-utils \
@@ -44,27 +44,38 @@ install: ## install development environment powerd by arch linux
 	yaourt profile-sync-daemon
 	yaourt man-pages-ja
 	yaourt global
-	sudo cp -R ${HOME}/Dropbox/arch/OSX-Arc-Shadow/ /usr/share/themes/
 	sudo pkgfile --update
 
 backup: ## backup arch linux package at dropbox
+	mkdir -p ${HOME}/Dropbox/arch
 	pacman -Qqen > ${HOME}/Dropbox/arch/pkglist.txt
 	pacman -Qqem > ${HOME}/Dropbox/arch/yaourtlist.txt
 
 recover: ## recovery from backup arch linux package at dropbox
 	sudo pacman -S $(< ${HOME}/Dropbox/arch/pkglist.txt)
 	sudo yaourt -S --needed $(comm -13 <(pacman -Slq|sort) <(sort ${HOME}/Dropbox/arch/yaourtlist.txt) )
+	cat ${HOME}/.bashrc | grep screenstart || echo "alias screenstart='screen -D -RR'" >> ${HOME}/.bashrc
+	cat ${HOME}/.bashrc | grep tmuxstart || echo "alias tmuxstart='tmux new-session -A -s main'" >> ${HOME}/.bashrc
+	export GOPATH=${HOME}/go
+	export PATH="$PATH:$GOPATH/bin"
+	mkdir -p ${HOME}/go/{bin,src}
+	go get -u github.com/nsf/gocode
+	go get -u github.com/rogpeppe/godef
+	sudo pkgfile --update
 
 sync: ## sync github
 	git pull
 	git push
+
+theme: ## install theme
+	sudo cp -R ${HOME}/Dropbox/arch/OSX-Arc-Shadow/ /usr/share/themes/
 
 test: ## print environment value
 	export GOPATH=${HOME}/go
 	export PATH="${PATH}:${GOPATH}/bin"
 	printenv
 
-all: init update sync install test help
+all: init update sync install test help backup recover theme
 
 .PHONY: all
 

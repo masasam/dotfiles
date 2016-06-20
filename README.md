@@ -31,7 +31,25 @@ make install 後に
 
 で dotfiles をデプロイできる。  
 make init する前に Dropbox の同期を終わらせておくこと  
-これでマシンのデータが吹っ飛んでも 30 分でいつもの環境に戻れる  
+
+#### 30 分でいつもの環境をリカバリー
+
+一度環境を作ったあとは  
+
+    make backup
+
+でインストールした arch linux パッケージ list が Dropbox にバックアップされるので  
+そのあとの２回めのインストールは make install ではなく  
+
+    make recover
+
+で arch linux 環境が回復する。  
+Dropbox 同期後  
+
+    make init
+
+すれば元通りになる。  
+これで 30 分でリカバリできる。  
 
 #### Dropbox で管理するものの基準
 
