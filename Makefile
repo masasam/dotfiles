@@ -50,8 +50,6 @@ install: ## install development environment powerd by arch linux
 backup: ## backup arch linux package at dropbox
 	pacman -Qqen > ${HOME}/Dropbox/arch/pkglist.txt
 	pacman -Qqem > ${HOME}/Dropbox/arch/yaourtlist.txt
-	comm -23 <(pacman -Qeq | sort) <(pacman -Qgq base base-devel | sort) > \
-	${HOME}/Dropbox/arch/mypkglist.txt
 
 recover: ## recovery from backup arch linux package at dropbox
 	sudo pacman -S $(< ${HOME}/Dropbox/arch/pkglist.txt)
