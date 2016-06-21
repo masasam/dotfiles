@@ -40,11 +40,11 @@ make init する前に Dropbox の同期を終わらせておくこと
     make backup
 
 でインストールした arch linux パッケージ list が Dropbox にバックアップされるので  
-そのあとの２回めのインストールは make install ではなく  
+そのあとの２回目のインストールは make install 以外にも  
 
     make recover
 
-で arch linux 環境が回復する。  
+で arch linux 環境が回復させることができる。  
 make recover すると途中でフリーズしたみたいになるが、  
 数分たってから(install が終わる頃合いを見計らって)  
 ctrl - alt - backspace で x 再起動して reboot すれば  
@@ -58,6 +58,10 @@ Dropbox 同期後
 
 すれば dotfiles がデプロイされ元通りになる。  
 これで 30 分でリカバリできる。  
+なんかフリーズした感じが嫌な場合は  
+2 回目以降も make install で環境をつくればよいと思います。  
+オレオレ Makefile が完成しているならどちらでも 30 分で元通りにできるはず。  
+この機会に是非 Makefile を作っておこう。  
 
 #### Dropbox で管理するものの基準
 
