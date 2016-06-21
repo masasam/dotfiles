@@ -56,7 +56,7 @@ backup: ## backup arch linux package at dropbox
 
 recover: ## recovery from backup arch linux package at dropbox
 	sudo pacman -S $(DOP)
-	sudo yaourt -S --needed $(DOY)
+	yaourt -S --needed $(DOY)
 	cat ${HOME}/.bashrc | grep screenstart || echo "alias screenstart='screen -D -RR'" >> ${HOME}/.bashrc
 	cat ${HOME}/.bashrc | grep tmuxstart || echo "alias tmuxstart='tmux new-session -A -s main'" >> ${HOME}/.bashrc
 	mkdir -p ${HOME}/go/{bin,src}
