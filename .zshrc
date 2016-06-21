@@ -177,11 +177,11 @@ source $HOME/.keychain/$HOST-sh
 function chpwd() { ls -v -F --color=auto }
 
 
-# ある程度ランダムなパスワードを生成
-function genpass() {
+# generate password
+function genpasswd() {
 if [ $# -eq 1 ]; then local GENPASSLINE=$1;
 elif [ $# -eq 0 ]; then local GENPASSLINE=8;
-else echo "第一引数に生成したいパスワードの桁数を与えてください。引数なしで8桁のパスワードを生成します。"
+else echo "Please give the number of digits in the password you want to generate in the first argument. With no arguments to generate the 8-digit password"
 fi;
   tr -dc a-z0-9 < /dev/urandom | head -c ${GENPASSLINE} | xargs
 }
