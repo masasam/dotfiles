@@ -1,3 +1,6 @@
+DOP= `cat ${HOME}/Dropbox/arch/pkglist.txt`
+DOY= `cat ${HOME}/Dropbox/arch/yaourtlist.txt`
+
 init: ## deploy this dotfiles
 	ln -vsf ${PWD}/.zshrc   ${HOME}/.zshrc
 	ln -vsf ${PWD}/.gitconfig   ${HOME}/.gitconfig
@@ -52,13 +55,13 @@ backup: ## backup arch linux package at dropbox
 	pacman -Qqem > ${HOME}/Dropbox/arch/yaourtlist.txt
 
 recover: ## recovery from backup arch linux package at dropbox
-	sudo pacman -S $(< ${HOME}/Dropbox/arch/pkglist.txt)
-	sudo yaourt -S --needed $(comm -13 <(pacman -Slq|sort) <(sort ${HOME}/Dropbox/arch/yaourtlist.txt) )
+	sudo pacman -S $(DOP)
+	sudo yaourt -S --needed $(DOY)
 	cat ${HOME}/.bashrc | grep screenstart || echo "alias screenstart='screen -D -RR'" >> ${HOME}/.bashrc
 	cat ${HOME}/.bashrc | grep tmuxstart || echo "alias tmuxstart='tmux new-session -A -s main'" >> ${HOME}/.bashrc
+	mkdir -p ${HOME}/go/{bin,src}
 	export GOPATH=${HOME}/go
 	export PATH="$PATH:$GOPATH/bin"
-	mkdir -p ${HOME}/go/{bin,src}
 	go get -u github.com/nsf/gocode
 	go get -u github.com/rogpeppe/godef
 	sudo pkgfile --update

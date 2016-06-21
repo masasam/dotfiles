@@ -45,6 +45,12 @@ make init する前に Dropbox の同期を終わらせておくこと
     make recover
 
 で arch linux 環境が回復する。  
+make recover は systemctl disable gdm.service  
+して cui 環境でやったらがうまくいった  
+gui でやってみたらフリーズした。たぶん gnome-terminal だけ手で入れてから  
+それ以外を make recover したほうがいいのかもしれない。  
+ターミナルが再インストールでフリーズしたっぽいが、めったにやらないから調査する気にならない  
+次回はターミナル以外でやってみることにしよう  
 Dropbox 同期後  
 
     make init
