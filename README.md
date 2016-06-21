@@ -3,8 +3,9 @@
 ![emacs](https://raw.githubusercontent.com/latestmasa/dotfiles/image/image/emacs.png)
 
 この dotfiles は Archlinux 用です  
-NetworkManager を入れるまで有線で接続しその後無線 Lan に  
-Makefile があるので
+NetworkManager を入れるまで有線で接続しその後無線 Lan で使用する。  
+
+Makefile があるので  
 
     make install
 	
@@ -48,7 +49,7 @@ Dropbox 同期後
 
     make init
 
-すれば元通りになる。  
+すれば dotfiles がデプロイされ元通りになる。  
 これで 30 分でリカバリできる。  
 
 #### Dropbox で管理するものの基準
@@ -130,9 +131,10 @@ ext4 でフォーマットしてマウント
 
 nano /etc/pacman.d/mirrorlist  
 
+	Server = http://ftp.nara.wide.ad.jp/pub/Linux/archlinux/$repo/os/$arch
     Server = http://ftp.jaist.ac.jp/pub/Linux/ArchLinux/$repo/os/$arch
-	
-を一番上にして一番早いミラーに繋がるようにする  
+
+一番早いミラーかつ負荷分散になるようにする  
 
 arch の bese bese-devel をインストール  
 
