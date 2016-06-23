@@ -64,6 +64,10 @@
 (depends-on "go-eldoc")
 (depends-on "js2-mode")
 (depends-on "json-mode")
+(depends-on "elixir-mode")
+(depends-on "alchemist")
+(depends-on "ac-alchemist")
+(depends-on "flycheck-elixir")
 
 ;; theme
 (depends-on "material-theme")
