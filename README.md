@@ -44,7 +44,7 @@ make init する前に Dropbox の同期を終わらせておくこと
 
     make recover
 
-で arch linux 環境が回復させることができる。  
+で arch linux 環境を回復させることができる。  
 make recover すると途中でフリーズしたみたいになるが、  
 数分たってから(install が終わる頃合いを見計らって)  
 ctrl - alt - backspace で x 再起動して reboot すれば  
@@ -334,7 +334,7 @@ pacman で入るものをインストール
     sudo pacman -S eog
     sudo pacman -S mcomix
     sudo pacman -S libreoffice-fresh-ja
-    sudo pacman -S go pkgfile
+    sudo pacman -S go pkgfile rsync
 
 yaourt で入れるものをインストール  
 
