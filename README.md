@@ -334,7 +334,7 @@ pacman で入るものをインストール
     sudo pacman -S eog
     sudo pacman -S mcomix
     sudo pacman -S libreoffice-fresh-ja
-    sudo pacman -S go pkgfile rsync
+    sudo pacman -S go pkgfile rsync elixir
 
 yaourt で入れるものをインストール  
 
