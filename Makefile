@@ -8,6 +8,7 @@ init: ## deploy this dotfiles
 	ln -vsf ${PWD}/.tmux.conf   ${HOME}/.tmux.conf
 	ln -vsf ${PWD}/.xinitrc   ${HOME}/.xinitrc
 	ln -vsf ${PWD}/redshift.conf   ${HOME}/.config/redshift.conf
+	ln -vsf ${PWD}/psd.conf   ${HOME}/.config/psd/psd.conf
 	test -L ${HOME}/.peco || rm -rf ${HOME}/.peco
 	ln -vsfn ${PWD}/.peco   ${HOME}/.peco
 	test -L ${HOME}/.emacs.d || rm -rf ${HOME}/.emacs.d
