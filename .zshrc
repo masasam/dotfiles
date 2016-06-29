@@ -73,6 +73,8 @@ setopt short_loops           # FOR, REPEAT, SELECT, IF, FUNCTION などで簡略
 setopt list_packed
 # aliasを補完候補に含める。
 setopt complete_aliases
+#ディレクトリ名が引数のときに最後の / を削除しない
+setopt noautoremoveslash
 
 # sudoの補完
 zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin
@@ -216,12 +218,13 @@ alias -g C='| xsel --input --clipboard'
 alias sudotramp='emacsclient -n /sudo:$(grep -iE "^[[:space:]]host[[:space:]]+[^*]" ~/.ssh/config|peco|awk "{print \$2}"):/'
 alias tramp='emacsclient -n /ssh:$(grep -iE "^[[:space:]]host[[:space:]]+[^*]" ~/.ssh/config|peco|awk "{print \$2}"):/'
 alias trackpointspeed='xinput --set-prop 10 "Device Accel Constant Deceleration"'
+alias caskupdate='cd ${HOME}/.emacs.d/;   cask upgrade;   cask update'
+alias caskinstall='cd ${HOME}/.emacs.d/;   cask upgrade;   cask install'
 
 
-# パスの追加
+# PATH
 export GOPATH=~/go
 export PATH="$PATH:$GOPATH/bin"
-setopt noautoremoveslash     #ディレクトリ名が引数のときに最後の / を削除しない
 
 
 
