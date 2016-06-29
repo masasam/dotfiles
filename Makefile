@@ -41,7 +41,7 @@ install: ## install development environment powerd by arch linux
 	go get -u github.com/rogpeppe/godef
 	yaourt google-chrome
 	yaourt cask
-	yaourt peco
+	yaourt peco-git
 	yaourt noto-fonts-cjk
 	yaourt ricty
 	yaourt profile-sync-daemon

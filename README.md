@@ -341,7 +341,7 @@ yaourt で入れるものをインストール
 
     yaourt google-chrome 
     yaourt ricty
-    yaourt peco
+    yaourt peco-git
     yaourt noto-fonts-cjk
     yaourt man-pages-ja
     yaourt global
