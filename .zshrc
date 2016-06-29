@@ -218,8 +218,8 @@ alias -g C='| xsel --input --clipboard'
 alias sudotramp='emacsclient -n /sudo:$(grep -iE "^[[:space:]]host[[:space:]]+[^*]" ~/.ssh/config|peco|awk "{print \$2}"):/'
 alias tramp='emacsclient -n /ssh:$(grep -iE "^[[:space:]]host[[:space:]]+[^*]" ~/.ssh/config|peco|awk "{print \$2}"):/'
 alias trackpointspeed='xinput --set-prop 10 "Device Accel Constant Deceleration"'
-alias caskupdate='cd ${HOME}/.emacs.d/;   cask upgrade;   cask update'
-alias caskinstall='cd ${HOME}/.emacs.d/;   cask upgrade;   cask install'
+alias caskupdate='cd ${HOME}/.emacs.d/;   cask upgrade;   cask update;   cd -'
+alias caskinstall='cd ${HOME}/.emacs.d/;   cask upgrade;   cask install   cd -'
 
 
 # PATH
