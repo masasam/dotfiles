@@ -45,16 +45,9 @@ make init する前に Dropbox の同期を終わらせておくこと
     make recover
 
 で arch linux 環境を回復させることができる。  
-make recover すると途中でフリーズしたみたいになるが、  
-数分たってから(install が終わる頃合いを見計らって)  
-ctrl - alt - backspace で x 再起動して reboot すれば  
-問題なく arch linux のパッケージがすべてインストールされているのでよし。  
-
-![komakee](https://raw.githubusercontent.com/latestmasa/dotfiles/image/image/komakee.jpg)
-
-なんかフリーズした感じが嫌な場合は  
-2 回目以降も make install で環境をつくればよいと思います。  
-オレオレ Makefile が完成しているならどちらでも 30 分で元通りにできるはず。  
+めんどくさがりは make recover で
+真面目な人は 2 回目以降も make install で  
+Makefile が完成しているならどちらでも 30 分で元通りにできるはず。  
 この機会に是非 Makefile を作っておこう。  
 
 Dropbox 同期後  

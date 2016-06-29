@@ -55,7 +55,7 @@ backup: ## backup arch linux package at dropbox
 	pacman -Qqem > ${HOME}/Dropbox/arch/yaourtlist.txt
 
 recover: ## recovery from backup arch linux package at dropbox
-	sudo pacman -S $(DOP)
+	sudo pacman -S --needed $(DOP)
 	yaourt -S --needed $(DOY)
 	cat ${HOME}/.bashrc | grep screenstart || echo "alias screenstart='screen -D -RR'" >> ${HOME}/.bashrc
 	cat ${HOME}/.bashrc | grep tmuxstart || echo "alias tmuxstart='tmux new-session -A -s main'" >> ${HOME}/.bashrc
