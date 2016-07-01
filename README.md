@@ -45,7 +45,7 @@ make init する前に Dropbox の同期を終わらせておくこと
     make recover
 
 で arch linux 環境を回復させることができる。  
-めんどくさがりは make recover で
+めんどくさがりは make recover で  
 真面目な人は 2 回目以降も make install で  
 Makefile が完成しているならどちらでも 30 分で元通りにできるはず。  
 この機会に是非 Makefile を作っておこう。  
@@ -63,12 +63,14 @@ Dropbox 同期後
    .ssh に入っている公開鍵など  
    
 2. すこぶる更新ファイルを吐き出すので github で同期するのが面倒くさいもの  
-   .zsh_histfile .mozc  
+   .zsh_histfile  
+   .mozc  
    .emacs.d の中の更新ファイルは.gitignore を利用して問題なくデプロイできるから github で OK  
    
 3. データの保護が目的のもの  
-   Sylpheed の設定ファイルとメール gmail ライクに使いたい  
-   メールが届いたらすぐ dropbox に同期されるからよい  
+   Sylpheed の設定ファイル  
+   メールのデータは dropbox において gmail ライクに使う  
+   メールが届いたらすぐ dropbox に同期されるから backup とか考えなくてもいい  
    メールが届くたびに git push なんて面倒くさい  
 
 ２段階認証にしておく  
@@ -287,6 +289,7 @@ dropbox を install して同期する
 git clone して dotfiles を用意
 
     mkdir git
+	cd git
     git clone git@github.com:latestmasa/dotfiles.git dotfiles
 
 --------------------------------------
