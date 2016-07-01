@@ -338,6 +338,7 @@ yaourt で入れるものをインストール
     yaourt noto-fonts-cjk
     yaourt man-pages-ja
     yaourt global
+	yaourt hugo
 
 #### golang
 
