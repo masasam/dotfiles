@@ -334,3 +334,10 @@ function emacsag () {
 function _getgitignore() { curl -s https://www.gitignore.io/api/$1 ;}
 alias getgitignore='_getgitignore $(_getgitignore list | sed "s/,/\n/g" | peco )'
 
+
+
+function blogpost () { cd ~/git/blog; hugo new post/$1.md --editor=emacsclient; cd - }
+
+
+
+function publish () { cd ~/git/blog; hugo; rsync -auv --delete ~/git/blog/public/ blogdomain:/home/blog/public/; cd - }
