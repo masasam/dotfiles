@@ -346,7 +346,6 @@ yaourt で入れるものをインストール
 
 #### golang
 
-    mkdir -p ~/go/{bin,src}
     go get -u github.com/nsf/gocode
     go get -u github.com/rogpeppe/godef
 

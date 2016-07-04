@@ -26,7 +26,7 @@ update: ## update cask depend on melpa
 	cd ${HOME}/.emacs.d/;   cask upgrade;   cask update
 
 install: ## install development environment powerd by arch linux
-	export GOPATH=${HOME}/go
+	export GOPATH=${HOME}
 	export PATH="$PATH:$GOPATH/bin"
 	chmod u+x ${PWD}/bin/continue.sh
 	${PWD}/bin/continue.sh && \
@@ -37,7 +37,7 @@ install: ## install development environment powerd by arch linux
 	file-roller vlc xclip atool trash-cli the_silver_searcher powertop cifs-utils \
 	gvfs gvfs-smb seahorse gnome-keyring cups-pdf redshift eog mcomix libreoffice-fresh-ja \
 	firefox firefox-i18n-ja otf-ipafont openssh pkgfile baobab dconf-editor rsync elixir
-	mkdir -p ${HOME}/go/{bin,src}
+	mkdir -p ${HOME}/{bin,src}
 	go get -u github.com/nsf/gocode
 	go get -u github.com/rogpeppe/godef
 	yaourt google-chrome
@@ -62,8 +62,8 @@ recover: ## recovery from backup arch linux package at dropbox
 	yaourt -S --needed $(DOY)
 	cat ${HOME}/.bashrc | grep screenstart || echo "alias screenstart='screen -D -RR'" >> ${HOME}/.bashrc
 	cat ${HOME}/.bashrc | grep tmuxstart || echo "alias tmuxstart='tmux new-session -A -s main'" >> ${HOME}/.bashrc
-	mkdir -p ${HOME}/go/{bin,src}
-	export GOPATH=${HOME}/go
+	mkdir -p ${HOME}/{bin,src}
+	export GOPATH=${HOME}
 	export PATH="$PATH:$GOPATH/bin"
 	go get -u github.com/nsf/gocode
 	go get -u github.com/rogpeppe/godef
@@ -77,7 +77,7 @@ theme: ## install theme
 	sudo cp -R ${HOME}/Dropbox/arch/OSX-Arc-Shadow/ /usr/share/themes/
 
 test: ## print environment value
-	export GOPATH=${HOME}/go
+	export GOPATH=${HOME}
 	export PATH="${PATH}:${GOPATH}/bin"
 	printenv
 
