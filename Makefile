@@ -44,7 +44,7 @@ install: ## install development environment powerd by arch linux
 	yaourt cask
 	yaourt peco-git
 	yaourt noto-fonts-cjk
-	yaourt ricty
+	yaourt ttf-ricty
 	yaourt profile-sync-daemon
 	yaourt man-pages-ja
 	yaourt global

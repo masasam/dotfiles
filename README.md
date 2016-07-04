@@ -336,7 +336,7 @@ pacman で入るものをインストール
 yaourt で入れるものをインストール  
 
     yaourt google-chrome 
-    yaourt ricty
+    yaourt ttf-ricty
     yaourt peco-git
     yaourt noto-fonts-cjk
     yaourt man-pages-ja
