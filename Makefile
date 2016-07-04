@@ -49,6 +49,7 @@ install: ## install development environment powerd by arch linux
 	yaourt man-pages-ja
 	yaourt global
 	yaourt hugo
+	yaourt ghq
 	sudo pkgfile --update
 
 backup: ## backup arch linux package at dropbox

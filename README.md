@@ -342,6 +342,7 @@ yaourt で入れるものをインストール
     yaourt man-pages-ja
     yaourt global
 	yaourt hugo
+	yaourt ghq
 
 #### golang
 
