@@ -175,30 +175,6 @@ fi
 source $HOME/.keychain/$HOST-sh
 
 
-# cdしたらls
-function chpwd() { ls -v -F --color=auto }
-
-
-# generate password
-function genpasswd() {
-if [ $# -eq 1 ]; then local GENPASSLINE=$1;
-elif [ $# -eq 0 ]; then local GENPASSLINE=8;
-else echo "Please give the number of digits in the password you want to generate in the first argument. With no arguments to generate the 8-digit password"
-fi;
-  tr -dc a-z0-9 < /dev/urandom | head -c ${GENPASSLINE} | xargs
-}
-
-
-# Gitのリポジトリのトップレベルにcd
-function gitroot()
-{
-cd ./$(git rev-parse --show-cdup)
-if [ $# = 1 ]; then
-cd $1
-fi
-}
-
-
 # aliases
 alias ls='ls -v -F --color=auto'
 alias ll='ls -al'
@@ -227,7 +203,6 @@ export GOPATH=$HOME
 export PATH="$PATH:$GOPATH/bin"
 
 
-
 # Invoke the ``dired'' of current working directory in Emacs buffer.
 function dired () {
   emacsclient -e "(dired \"$PWD\")"
@@ -247,7 +222,6 @@ function cde () {
     echo "chdir to $EMACS_CWD"
     cd "$EMACS_CWD"
 }
-
 
 
 # pecoでC-rのヒストリ検索を置き換え
@@ -307,8 +281,6 @@ function peco-find() {
   zle clear-screen
 }
 zle -N peco-find
-
-# bind keys
 bindkey '^x^f' peco-find
 
 
@@ -324,20 +296,40 @@ zle -N peco-src
 bindkey '^]' peco-src
 
 
-
 function emacsag () {
   emacsclient -n $(ag $@ | peco --query "$LBUFFER" | awk -F : '{print "+" $2 " " $1}')
 }
-
 
 
 function _getgitignore() { curl -s https://www.gitignore.io/api/$1 ;}
 alias getgitignore='_getgitignore $(_getgitignore list | sed "s/,/\n/g" | peco )'
 
 
-
 function blogpost () { cd ~/git/blog; hugo new post/$1.md --editor=emacsclient; cd - }
 
 
-
 function publish () { cd ~/git/blog; hugo; rsync -auv --delete ~/git/blog/public/ blogdomain:/home/blog/public/; cd - }
+
+
+# cdしたらls
+function chpwd() { ls -v -F --color=auto }
+
+
+# generate password
+function genpasswd() {
+if [ $# -eq 1 ]; then local GENPASSLINE=$1;
+elif [ $# -eq 0 ]; then local GENPASSLINE=8;
+else echo "Please give the number of digits in the password you want to generate in the first argument. With no arguments to generate the 8-digit password"
+fi;
+  tr -dc a-z0-9 < /dev/urandom | head -c ${GENPASSLINE} | xargs
+}
+
+
+# Gitのリポジトリのトップレベルにcd
+function gitroot()
+{
+cd ./$(git rev-parse --show-cdup)
+if [ $# = 1 ]; then
+cd $1
+fi
+}
