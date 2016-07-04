@@ -223,7 +223,7 @@ alias caskinstall='cd ${HOME}/.emacs.d/;   cask upgrade;   cask install;   cd -'
 
 
 # PATH
-export GOPATH=~/go
+export GOPATH=$HOME
 export PATH="$PATH:$GOPATH/bin"
 
 
@@ -287,7 +287,7 @@ function peco-cdr () {
 	zle clear-screen
 }
 zle -N peco-cdr
-bindkey '^x^f' peco-cdr # emacsっぽく
+bindkey '^xr' peco-cdr
 
 
 # peco find directory
@@ -309,7 +309,19 @@ function peco-find() {
 zle -N peco-find
 
 # bind keys
-bindkey '^[f' peco-find
+bindkey '^x^f' peco-find
+
+
+function peco-src () {
+    local selected_dir=$(ghq list --full-path | peco --query "$LBUFFER")
+    if [ -n "$selected_dir" ]; then
+        BUFFER="cd ${selected_dir}"
+        zle accept-line
+    fi
+    zle clear-screen
+}
+zle -N peco-src
+bindkey '^]' peco-src
 
 
 
