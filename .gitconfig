@@ -38,3 +38,5 @@
 	diff = /usr/share/git/diff-highlight/diff-highlight | less -R
 [diff]
 	compactionHeuristic = true
+[ghq]
+    root = ~/src
