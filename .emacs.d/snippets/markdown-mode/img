@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: img
+# key: img
+# --
+![$1](https://raw.githubusercontent.com/latestmasa/dotfiles/image/image/$2)
