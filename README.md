@@ -291,6 +291,8 @@ git clone して dotfiles を用意
     mkdir git
 	cd git
     git clone git@github.com:latestmasa/dotfiles.git dotfiles
+	# 以下は github の画像投稿用なので自分用
+	git clone -b image git@github.com:latestmasa/dotfiles.git image
 
 --------------------------------------
 
