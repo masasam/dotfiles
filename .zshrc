@@ -333,3 +333,15 @@ if [ $# = 1 ]; then
 cd $1
 fi
 }
+
+
+function imgpost()
+{
+    cp $1 ~/git/image/image
+    cd ~/git/image/image
+    git add .
+    git commit -m 'add pic'
+    git push
+    cd -
+}
+
