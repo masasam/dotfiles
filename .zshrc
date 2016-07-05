@@ -337,7 +337,6 @@ fi
 
 function imgpost()
 {
-    cp $1 ~/git/image/image
     cd ~/git/image/image
     git add .
     git commit -m 'add pic'
