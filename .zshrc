@@ -307,6 +307,7 @@ alias getgitignore='_getgitignore $(_getgitignore list | sed "s/,/\n/g" | peco )
 
 function blogpost () { cd ~/git/blog; hugo new post/$1.md --editor=emacsclient; cd - }
 
+function imgpost () { cd ~/git/image/image; git add .; git commit -m 'add pic'; git push; cd - }
 
 function publish () { cd ~/git/blog; hugo; rsync -auv --delete ~/git/blog/public/ blogdomain:/home/blog/public/; cd - }
 
@@ -332,15 +333,5 @@ cd ./$(git rev-parse --show-cdup)
 if [ $# = 1 ]; then
 cd $1
 fi
-}
-
-
-function imgpost()
-{
-    cd ~/git/image/image
-    git add .
-    git commit -m 'add pic'
-    git push
-    cd -
 }
 
