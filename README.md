@@ -334,6 +334,7 @@ pacman で入るものをインストール
     sudo pacman -S mcomix
     sudo pacman -S libreoffice-fresh-ja
     sudo pacman -S go pkgfile rsync elixir
+	sudo pacman -S phantomjs 
 
 yaourt で入れるものをインストール  
 

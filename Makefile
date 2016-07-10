@@ -36,7 +36,8 @@ install: ## install development environment powerd by arch linux
 	gnome-tweak-tool xsel sylpheed emacs curl archlinux-wallpaper evince inkscape gimp unrar \
 	file-roller vlc xclip atool trash-cli the_silver_searcher powertop cifs-utils \
 	gvfs gvfs-smb seahorse gnome-keyring cups-pdf redshift eog mcomix libreoffice-fresh-ja \
-	firefox firefox-i18n-ja otf-ipafont openssh pkgfile baobab dconf-editor rsync elixir
+	firefox firefox-i18n-ja otf-ipafont openssh pkgfile baobab dconf-editor rsync elixir \
+	phantomjs 
 	mkdir -p ${HOME}/{bin,src}
 	go get -u github.com/nsf/gocode
 	go get -u github.com/rogpeppe/godef
