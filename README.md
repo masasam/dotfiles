@@ -475,10 +475,11 @@ screenstart あるいは tmuxstart で起動すると
 sudo vim /etc/systemd/system/powertop.service  
 
 >[Unit]
->Description=Powertop tunings
+>Description=PowerTOP auto tune
 
 >[Service]
->Type=oneshot
+>Type=idle
+>Environment="TERM=dumb"
 >ExecStart=/usr/sbin/powertop --auto-tune
 
 >[Install]
