@@ -51,6 +51,7 @@ install: ## install development environment powerd by arch linux
 	yaourt global
 	yaourt hugo
 	yaourt ghq
+	yaourt casperjs-git
 	sudo pkgfile --update
 
 backup: ## backup arch linux package at dropbox
