@@ -20,7 +20,7 @@
 (depends-on "pallet")
 (depends-on "popwin")
 (depends-on "prodigy")
-(depends-on "projectile" :git "https://github.com/bbatsov/projectile")
+(depends-on "projectile")
 (depends-on "s")
 (depends-on "smartparens")
 (depends-on "smex")
