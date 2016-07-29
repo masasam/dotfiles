@@ -15,8 +15,6 @@ init: ## deploy this dotfiles
 	ln -vsfn ${PWD}/.emacs.d   ${HOME}/.emacs.d
 	test -L ${HOME}/.ssh || rm -rf ${HOME}/.ssh
 	ln -vsfn ${HOME}/Dropbox/ssh   ${HOME}/.ssh
-	test -L ${HOME}/.gnupg || rm -rf ${HOME}/.gnupg
-	ln -vsfn ${HOME}/Dropbox/gnupg/.gnupg   ${HOME}/.gnupg
 	test -L ${HOME}/.sylpheed-2.0 || rm -rf ${HOME}/.sylpheed-2.0
 	ln -vsfn ${HOME}/Dropbox/sylpheed/.sylpheed-2.0   ${HOME}/.sylpheed-2.0
 	test -L ${HOME}/.mozc || rm -rf ${HOME}/.mozc
