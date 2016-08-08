@@ -347,6 +347,7 @@ yaourt で入れるものをインストール
 	yaourt hugo
 	yaourt ghq
 	yaourt casperjs-git
+	yaourt nkf
 
 #### golang
 
