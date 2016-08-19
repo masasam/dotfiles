@@ -273,6 +273,10 @@ vim /etc/pacman.conf
 >[archlinuxfr]  
 >SigLevel = Never  
 >Server = http://repo.archlinux.fr/$arch  
+>
+>[pnsft-pur]
+>SigLevel = Optional TrustAll
+>Server = http://downloads.sourceforge.net/project/pnsft-aur/pur/$arch
 
 yaourt を最新に同期する  
 
@@ -309,7 +313,6 @@ pacman で入るものをインストール
     sudo pacman -S openssh
     sudo pacman -S dropbox
     sudo pacman -S nautilus-dropbox
-    sudo pacman -S ibus-mozc mozc
     sudo pacman -S sylpheed
     sudo pacman -S emacs
     sudo pacman -S curl
@@ -348,6 +351,10 @@ yaourt で入れるものをインストール
 	yaourt ghq
 	yaourt casperjs-git
 	yaourt nkf
+	yaourt glide
+	yaourt ibus-mozc
+	yaourt mozc
+	yaourt the_platinum_searcher
 
 #### golang
 
