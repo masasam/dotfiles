@@ -76,8 +76,10 @@
 ;; "yes or no"を"y or n"にする
 (fset 'yes-or-no-p 'y-or-n-p)
 
-;; 警告音を消す
+;; 警告音の画面フラッシュをoff
 (setq visible-bell nil)
+;; 警告音もフラッシュも全て無効(警告音が完全に鳴らなくなるので注意)
+(setq ring-bell-function 'ignore)
 
 ;; C-u C-SPC C-SPC …でどんどん過去のマークを遡る
 (setq set-mark-command-repeat-pop t)
