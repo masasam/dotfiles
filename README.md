@@ -299,6 +299,8 @@ git clone して dotfiles を用意
 	# 以下は github の画像投稿用なので自分用
 	git clone -b image git@github.com:archmasa/dotfiles.git image
 
+ ※ ssh で git clone する場合は.ssh に公開鍵を先に入れておく必要がある
+
 --------------------------------------
 
 *ここまで手で打ち込む   ここから make install できる*
