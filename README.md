@@ -288,6 +288,7 @@ yaourt を最新に同期する
 dropbox を install して同期する  
 
     sudo pacman -S dropbox
+    sudo pacman -S nautilus-dropbox
 	dropbox
 
 git clone して dotfiles を用意
@@ -311,8 +312,6 @@ pacman で入るものをインストール
     sudo pacman -S firefox  firefox-i18n-ja
     sudo pacman -S otf-ipafont
     sudo pacman -S openssh
-    sudo pacman -S dropbox
-    sudo pacman -S nautilus-dropbox
     sudo pacman -S sylpheed
     sudo pacman -S emacs
     sudo pacman -S curl
