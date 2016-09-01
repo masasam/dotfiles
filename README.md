@@ -704,14 +704,19 @@ Mail フォルダを質問されるので
 
 > ~/Dropbox/sylpheed/Mail  
 
-に Mail フォルダを指定する。  
+初回起動時以外 Mail フォルダを変更する場合は
+vim ~/.sylpheed-2.0/folderlist.xml
+
+> <folder type="mh" name="メール箱" path="/home/masa/Dropbox/sylpheed/Mail">
+
+で Mail フォルダを指定する。  
 1 メール 1 ファイルのファイル形式なので  
 Dropbox でメールをすぐ同期すれば  
 データロストの心配がない。  
 
 もしあっても最新のメールが一通だけだろう。  
 普通サーバーに７日くらいメールはとっておくから  
-データロストは心配しなくてもよい。  
+メールデータロストは心配しなくてもよいことになる。  
 
 #### sylpheed の設定ファイル
 
