@@ -58,6 +58,7 @@ install: ## install development environment powerd by arch linux
 	yaourt mozc
 	yaourt the_platinum_searcher
 	sudo pkgfile --update
+	curl -L http://get.oh-my.fish | fish
 
 backup: ## backup arch linux package at dropbox
 	mkdir -p ${HOME}/Dropbox/arch

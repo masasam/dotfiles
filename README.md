@@ -723,3 +723,8 @@ dropbox に丸投げして二度と設定作業とかかわらないようにし
 Alt - Tab  
 で sylpheed がでてこないのでよい  
 コード書いてる時はメールなど見たくないものだ。  
+
+### oh-my-fish ###
+
+	curl -L http://get.oh-my.fish | fish
+	
