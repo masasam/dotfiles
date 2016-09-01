@@ -54,7 +54,6 @@ install: ## install development environment powerd by arch linux
 	yaourt ghq
 	yaourt casperjs-git
 	yaourt nkf
-	yaourt glide
 	yaourt ibus-mozc
 	yaourt mozc
 	yaourt the_platinum_searcher
