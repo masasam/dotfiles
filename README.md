@@ -705,9 +705,9 @@ Mail フォルダを質問されるので
 > ~/Dropbox/sylpheed/Mail  
 
 初回起動時以外 Mail フォルダを変更する場合は
-vim ~/.sylpheed-2.0/folderlist.xml
+> vim ~/.sylpheed-2.0/folderlist.xml  
 
-> <folder type="mh" name="メール箱" path="/home/masa/Dropbox/sylpheed/Mail">
+    <folder type="mh" name="メール箱" path="/home/masa/Dropbox/sylpheed/Mail">
 
 で Mail フォルダを指定する。  
 1 メール 1 ファイルのファイル形式なので  
