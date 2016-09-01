@@ -2,8 +2,7 @@
 
 ![emacs](https://raw.githubusercontent.com/archmasa/dotfiles/image/image/emacs.png)
 
-この dotfiles は Archlinux 用です  
-NetworkManager を入れるまで有線で接続しその後無線 Lan で使用する。  
+※この dotfiles は Archlinux 用です  
 
 Makefile があるので  
 
@@ -13,7 +12,7 @@ Makefile があるので
 
 しかし、かなりオレオレ make install なので  
 利用する場合は make install せず  
-一度手を動かして入れるほうがよろしいかと思います。  
+一度手を動かして入れるほうがよろしいかと  
 もし make install される奇特な方は下記手順の  
 
 --------------------------------------
@@ -138,10 +137,9 @@ ext4 でフォーマットしてマウント
 
 nano /etc/pacman.d/mirrorlist  
 
-	Server = http://ftp.nara.wide.ad.jp/pub/Linux/archlinux/$repo/os/$arch
     Server = http://ftp.jaist.ac.jp/pub/Linux/ArchLinux/$repo/os/$arch
 
-一番早いミラーかつ負荷分散になるようにする  
+一番早いミラーになるようにする  
 
 arch の bese bese-devel をインストール  
 
@@ -212,6 +210,7 @@ nano /etc/locale.gen
     grub-mkconfig -o /boot/grub/grub.cfg
 	
 リブート後 dhcp で繋がるように  
+NetworkManager を入れるまでは有線で我慢する (wifi はあとで設定)  
 
     systemctl enable dhcpcd.service
     exit
@@ -253,6 +252,9 @@ gdm でグラフィカルログインできるようにする
     systemctl enable gdm.service
 
 ネット環境を整える  
+NetworkManager をいれたあとは wifi で利用する  
+dhcpcd をオフにしておかないと wifi できない  
+NetworkManager をいれれば有線もつながる  
 
     pacman -S network-manager
     systemctl list-unit-files
@@ -725,6 +727,8 @@ Alt - Tab
 コード書いてる時はメールなど見たくないものだ。  
 
 ### oh-my-fish ###
+
+oh-my-fish をインストールする
 
 	curl -L http://get.oh-my.fish | fish
 	
