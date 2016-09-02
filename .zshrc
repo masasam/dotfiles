@@ -1,4 +1,5 @@
 # zshrc
+plugins=(… zsh-completions)
 autoload -U compinit promptinit
 compinit
 promptinit

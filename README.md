@@ -317,6 +317,7 @@ pacman で入るものをインストール
     sudo pacman -S otf-ipafont
     sudo pacman -S openssh
     sudo pacman -S sylpheed
+    sudo pacman -S zsh-completions
     sudo pacman -S emacs
     sudo pacman -S curl
     sudo pacman -S tmux
