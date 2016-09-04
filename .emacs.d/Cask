@@ -58,6 +58,7 @@
 (depends-on "init-loader")
 (depends-on "auto-async-byte-compile")
 (depends-on "open-junk-file")
+(depends-on "slime")
 
 ;; programming modes
 (depends-on "go-mode")
