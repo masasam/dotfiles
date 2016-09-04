@@ -2,7 +2,8 @@
 (require 'org)
 
 (setq org-directory "~/Dropbox/emacs")
-(setq org-agenda-files (list org-directory))
+(setq org-default-notes-file "~/Dropbox/emacs/todo.org")
+(setq org-agenda-files (list org-default-notes-file ))
 
 (setq org-src-fontify-natively t)
 
