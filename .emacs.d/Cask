@@ -60,6 +60,7 @@
 (depends-on "open-junk-file")
 (depends-on "slime")
 (depends-on "zlc")
+(depends-on "which-key")
 
 ;; programming modes
 (depends-on "go-mode")
