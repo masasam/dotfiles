@@ -59,6 +59,7 @@
 (depends-on "auto-async-byte-compile")
 (depends-on "open-junk-file")
 (depends-on "slime")
+(depends-on "zlc")
 
 ;; programming modes
 (depends-on "go-mode")
