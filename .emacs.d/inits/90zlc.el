@@ -1,2 +1,2 @@
-(require 'zlc)
-(zlc-mode t)
+;(require 'zlc)
+;(zlc-mode t)
