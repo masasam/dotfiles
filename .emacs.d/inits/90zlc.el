@@ -1,2 +1,2 @@
 (require 'zlc)
-(setq zlc-select-completion-immediately t)
+(zlc-mode t)
