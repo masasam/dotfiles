@@ -359,6 +359,7 @@ yaourt で入れるものをインストール
 	yaourt ibus-mozc
 	yaourt mozc
 	yaourt the_platinum_searcher
+	yaourt osx-arc-shadow
 
 #### golang
 
@@ -373,10 +374,6 @@ yaourt で入れるものをインストール
     cask upgrade
     cask install
     cask update
-
-#### theme を適用
-
-    sudo cp -R ~/Dropbox/arch/OSX-Arc-Shadow/ /usr/share/themes/
 
 #### Trackpoint 
 
@@ -616,12 +613,6 @@ chrome の google 検索のデフォルトは vi キーバインドだが気に�
 >Ctrl+K 検索  
 
 許容範囲なのでデフォルトで使う  
-
-# Theme
-gnome3 テーマインストール  
-<http://gnome-look.org> から好きなテーマを持ってきて Dropbox にいれとく  
-
-    sudo cp -R ~/Dropbox/arch/OSX-Arc-Shadow/ /usr/share/themes/
 
 # Mozc
 ibus-mozc（gnome のデフォルトは ibus)  

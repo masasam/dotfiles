@@ -57,6 +57,7 @@ install: ## install development environment powerd by arch linux
 	yaourt ibus-mozc
 	yaourt mozc
 	yaourt the_platinum_searcher
+	yaourt osx-arc-shadow
 	sudo pkgfile --update
 	curl -L http://get.oh-my.fish | fish
 
@@ -76,10 +77,6 @@ recover: ## recovery from backup arch linux package at dropbox
 	go get -u github.com/nsf/gocode
 	go get -u github.com/rogpeppe/godef
 	sudo pkgfile --update
-
-sync: ## sync github
-	git pull
-	git push
 
 theme: ## install theme
 	sudo cp -R ${HOME}/Dropbox/arch/OSX-Arc-Shadow/ /usr/share/themes/
