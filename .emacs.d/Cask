@@ -72,6 +72,7 @@
 (depends-on "alchemist")
 (depends-on "ac-alchemist")
 (depends-on "flycheck-elixir")
+(depends-on "pkgbuild-mode")
 
 ;; theme
 (depends-on "material-theme")
