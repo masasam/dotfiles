@@ -661,32 +661,6 @@ mozc の設定が完成したら
 で mozc の設定は Dropbox に投げておく  
 これでもう二度と設定しなくてもよくなるだろう  
 
-# ipv6 無効化
-必要になったら on にするからそれまでいらん  
-
-sudo vim /etc/sysctl.conf  
-
->net.ipv6.conf.all.disable_ipv6 = 1  
->net.ipv6.conf.default.disable_ipv6 = 1  
-
-sysctl -p  
-で変更を反映させる。  
-
-#### 無効になったかを確認
-cat /proc/net/if_inet6   
->00000000000000000000000000000001 01 80 10 80       lo  
->xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 02 40 20 80  enp0s10  
-
-sudo sysctl -p  
->net.ipv6.conf.all.disable_ipv6 = 1  
->net.ipv6.conf.default.disable_ipv6 = 1  
-
-sysctl -p を実行すると変更した内容が表示され、  
-また cat /proc/net/if_inet6 で何も表示されなければ無効になっている。  
-
-#### firefox ipv6 無効化
->about:config  
->network.dns.disableIPv6 の値を true  
 
 # Sylpheed
 
