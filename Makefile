@@ -7,10 +7,10 @@ init: ## deploy this dotfiles
 	ln -vsf ${PWD}/.screenrc   ${HOME}/.screenrc
 	ln -vsf ${PWD}/.tmux.conf   ${HOME}/.tmux.conf
 	ln -vsf ${PWD}/.xinitrc   ${HOME}/.xinitrc
-	ln -vsf ${PWD}/redshift.conf   ${HOME}/.config/redshift.conf
-	ln -vsf ${PWD}/psd.conf   ${HOME}/.config/psd/psd.conf
-	ln -vsf ${PWD}/omf.fish   ${HOME}/.config/fish/conf.d/omf.fish
-	ln -vsf ${PWD}/parcelliterc   ${HOME}/.config/parcellite/parcelliterc
+	ln -vsf ${PWD}/.config/redshift.conf   ${HOME}/.config/redshift.conf
+	ln -vsf ${PWD}/.config/psd/psd.conf   ${HOME}/.config/psd/psd.conf
+	ln -vsf ${PWD}/.config/fish/conf.d/omf.fish   ${HOME}/.config/fish/conf.d/omf.fish
+	ln -vsf ${PWD}/.config/parcellite/parcelliterc   ${HOME}/.config/parcellite/parcelliterc
 	test -L ${HOME}/.peco || rm -rf ${HOME}/.peco
 	ln -vsfn ${PWD}/.peco   ${HOME}/.peco
 	test -L ${HOME}/.emacs.d || rm -rf ${HOME}/.emacs.d
