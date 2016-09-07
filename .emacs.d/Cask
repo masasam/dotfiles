@@ -61,6 +61,7 @@
 (depends-on "slime")
 (depends-on "zlc")
 (depends-on "which-key")
+(depends-on "dumb-jump")
 
 ;; programming modes
 (depends-on "go-mode")
