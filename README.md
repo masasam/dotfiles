@@ -2,13 +2,18 @@
 
 ![emacs](https://raw.githubusercontent.com/archmasa/dotfiles/image/image/emacs.png)
 
-※この dotfiles は Archlinux 用です  
 
-Makefile があるので  
+## Makefile で環境構築しよう
+
+この dotfiles は Archlinux 用です  
+マイ Makefile を作ればどのディストリビューションにも対応できるので  
+Makefile を作ろう  
+
+### Makefile があるとこんないいこと  
 
     make install
 	
-できる。  
+できるから楽  
 
 make install する場合下記手順の  
 
@@ -19,16 +24,16 @@ make install する場合下記手順の
 --------------------------------------
 
 までの手順を終えてから make install してください  
-よって、ドライバなどは make install に入れないで手でインストールすることにする。  
+ドライバなどは make install に入れないで手でインストールすることにする。  
 
 make install 後に
 
     make init
 
-で dotfiles をデプロイできる。  
+で dotfiles をデプロイできる。楽  
 make init する前に Dropbox の同期を終わらせておくこと  
 
-#### 30 分でいつもの環境をリカバリー
+#### Makefile があると 30 分でいつもの環境をリカバリーできるようになる
 
 一度環境を作ったあとは  
 
@@ -613,7 +618,9 @@ chrome の google 検索のデフォルトは vi キーバインドだが気に�
 # Mozc
 ibus-mozc（gnome のデフォルトは ibus)  
 地域と言語で入力ソースを mozc だけにする。  
-emacs とかぶらないように shift+Space で mozc を利用する  
+
+US キーボードなので日本語変換は control+space は  
+emacs とかぶるので shift+Space で mozc を利用する  
 
 キー設定はことえりをベースに ← emacs キーバインドに一番近い  
 
