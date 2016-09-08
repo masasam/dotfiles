@@ -6,8 +6,9 @@
 ## Makefile で環境構築しよう
 
 この dotfiles は Archlinux 用です  
-マイ Makefile を作ればどのディストリビューションにも対応できるので  
-Makefile を作ろう  
+make の入っていないディストリなど存在しないので  
+マイ Makefile を作ればどのディストリビューションにも対応できる  
+早速 Makefile を作ろう  
 
 ### Makefile があるとこんないいこと  
 
@@ -26,14 +27,16 @@ make install する場合下記手順の
 までの手順を終えてから make install してください  
 ドライバなどは make install に入れないで手でインストールすることにする。  
 
+### dotfiles のデプロイが一瞬でできる  
+
 make install 後に
 
     make init
 
-で dotfiles をデプロイできる。楽  
+で dotfiles をデプロイできる。  
 make init する前に Dropbox の同期を終わらせておくこと  
 
-#### Makefile があると 30 分でいつもの環境をリカバリーできるようになる
+### Makefile があると 30 分でいつもの環境をリカバリーできるようになる
 
 一度環境を作ったあとは  
 
