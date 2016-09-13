@@ -1,6 +1,7 @@
 (source gnu)
 (source melpa)
 (source marmalade)
+(source org)
 
 ;; cask recommend
 (depends-on "bind-key")
@@ -62,6 +63,7 @@
 (depends-on "zlc")
 (depends-on "which-key")
 (depends-on "dumb-jump")
+(depends-on "org-plus-contrib")
 
 ;; programming modes
 (depends-on "go-mode")
