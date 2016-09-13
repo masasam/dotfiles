@@ -106,7 +106,7 @@ Why Arch linux ?
 --以上--  
 
 BitTorrent で Arch linux をダウンロード  
-https://www.archlinux.org/releng/releases/2016.06.01/torrent/  
+https://www.archlinux.org/releng/releases/  
 
 USB インストールメディアを作成  
 
