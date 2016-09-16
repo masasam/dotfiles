@@ -365,6 +365,7 @@ yaourt で入れるものをインストール
 	yaourt mozc
 	yaourt the_platinum_searcher
 	yaourt osx-arc-shadow
+	yaourt slack-desktop
 
 #### golang
 
