@@ -1,4 +1,3 @@
-(source gnu)
 (source melpa)
 (source org)
 
