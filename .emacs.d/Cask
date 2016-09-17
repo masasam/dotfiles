@@ -1,6 +1,5 @@
 (source gnu)
 (source melpa)
-(source marmalade)
 (source org)
 
 ;; cask recommend
