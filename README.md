@@ -144,7 +144,8 @@ nano /etc/pacman.d/mirrorlist
 
     Server = http://ftp.jaist.ac.jp/pub/Linux/ArchLinux/$repo/os/$arch
 
-一番早いミラーになるようにする  
+jaist を一番上にコピペして  
+一番早いミラーが選択されるようにしておく  
 
 arch の bese bese-devel をインストール  
 
@@ -582,12 +583,7 @@ Alt+space で alfred っぽく使う
 文字を打ち間違えたら Ctrl-u で全消し  
 
 Activity 画面では Ctrl-h で backspace できないのでつらいがこれでいける  
-Ctrl-h できないのは  
-g とタイプして tab 押して補完候補をめぐる時(上記の画像)  
-GIMP まで移動して Ctrl-h を押すと  
-補完候補のトップの Google Cheome に戻る  
-っていうか Ctrl-ホニャララで全部補完候補トップに戻りおる  
-誰得？  
+Ctrl-h できないのは誰得？  
 まぁ Ctrl-u で凌げるからよし。実際のところアプリ呼び出すだけやしね  
 
 # Firefox
