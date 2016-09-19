@@ -7,6 +7,7 @@ init: ## deploy this dotfiles
 	ln -vsf ${PWD}/.screenrc   ${HOME}/.screenrc
 	ln -vsf ${PWD}/.tmux.conf   ${HOME}/.tmux.conf
 	ln -vsf ${PWD}/.xinitrc   ${HOME}/.xinitrc
+	ln -vsf ${PWD}/.aspell.conf   ${HOME}/.aspell.conf
 	ln -vsf ${PWD}/.config/redshift.conf   ${HOME}/.config/redshift.conf
 	ln -vsf ${PWD}/.config/psd/psd.conf   ${HOME}/.config/psd/psd.conf
 	ln -vsf ${PWD}/.config/fish/conf.d/omf.fish   ${HOME}/.config/fish/conf.d/omf.fish
