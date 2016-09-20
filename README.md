@@ -368,6 +368,7 @@ yaourt で入れるものをインストール
 	yaourt the_platinum_searcher
 	yaourt osx-arc-shadow
 	yaourt slack-desktop
+	yaourt cmigemo-git
 
 #### golang
 

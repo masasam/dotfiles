@@ -62,6 +62,7 @@ install: ## install development environment powerd by arch linux
 	yaourt the_platinum_searcher
 	yaourt osx-arc-shadow
 	yaourt slack-desktop
+	yaourt cmigemo-git
 	sudo pkgfile --update
 	curl -L http://get.oh-my.fish | fish
 
