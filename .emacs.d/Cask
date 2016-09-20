@@ -62,6 +62,7 @@
 (depends-on "which-key")
 (depends-on "dumb-jump")
 (depends-on "org-plus-contrib")
+(depends-on "migemo")
 
 ;; programming modes
 (depends-on "go-mode")
