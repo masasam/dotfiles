@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: src
+# key: src
+# --
+<img src="https://raw.githubusercontent.com/archmasa/dotfiles/image/image/$1" width="100%">
