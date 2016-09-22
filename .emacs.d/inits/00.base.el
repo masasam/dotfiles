@@ -87,7 +87,7 @@
 
 
 ;; X11のクリップボードを使う
-(setq x-select-enable-clipboard t)
+(setq select-enable-clipboard t)
 (global-set-key "\M-w" 'clipboard-kill-ring-save)
 (global-set-key "\C-w" 'clipboard-kill-region)
 
@@ -96,10 +96,7 @@
 ;; 対応する括弧を光らせる
 (show-paren-mode 1)
 (setq show-paren-delay 0)
-(setq show-paren-style 'expression)
-(set-face-attribute 'show-paren-match-face nil
-                    :background nil :foreground nil
-                    :underline "#ffff00" :weight 'extra-bold)
+(setq show-paren-style 'mixed)
 
 
 ;; diredで消したファイルはゴミ箱へ
