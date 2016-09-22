@@ -1,6 +1,6 @@
 # Synopsis
 
-![emacs](https://raw.githubusercontent.com/archmasa/dotfiles/image/image/emacs.png)
+![emacs](https://raw.githubusercontent.com/masasam/dotfiles/image/image/emacs.png)
 
 
 ## Makefile で環境構築しよう
@@ -101,7 +101,7 @@ Why Arch linux ?
 
 4. 軽い!!  インストールが終わって Emacs Terminal Chrome を起動して top した画像  
 
-![top](https://raw.githubusercontent.com/archmasa/dotfiles/image/image/top.png)
+![top](https://raw.githubusercontent.com/masasam/dotfiles/image/image/top.png)
 
 --以上--  
 
@@ -114,7 +114,7 @@ USB インストールメディアを作成
 
 /dev/sdx は環境で異なるから df して調べる  
 
-![baobao](https://raw.githubusercontent.com/archmasa/dotfiles/image/image/baobao.png)
+![baobao](https://raw.githubusercontent.com/masasam/dotfiles/image/image/baobao.png)
 
 SSD は 120G しかないが arch linux と emacs を使う環境としてはこれで十分足りる  
 以下の初期設定が終わった段階で 6.6G ですんでしまっている。  
@@ -303,9 +303,9 @@ git clone して dotfiles を用意
 
     mkdir git
 	cd git
-    git clone git@github.com:archmasa/dotfiles.git dotfiles
+    git clone git@github.com:masasam/dotfiles.git dotfiles
 	# 以下は github の画像投稿用なので自分用
-	git clone -b image git@github.com:archmasa/dotfiles.git image
+	git clone -b image git@github.com:masasam/dotfiles.git image
 
  ※ ssh で git clone する場合は.ssh に公開鍵を先に入れておく必要がある
 
@@ -424,7 +424,7 @@ thinkpad の i915 のみ
 
 gnome の細かい設定など
 
-![TweakTool](https://raw.githubusercontent.com/archmasa/dotfiles/image/image/tweaktool.png)
+![TweakTool](https://raw.githubusercontent.com/masasam/dotfiles/image/image/tweaktool.png)
 * キーテーマ  
 >Emacs  
 
@@ -443,7 +443,7 @@ gnome の細かい設定など
 	
 # Terminal
 
-![terminal](https://raw.githubusercontent.com/archmasa/dotfiles/image/image/terminal.png)
+![terminal](https://raw.githubusercontent.com/masasam/dotfiles/image/image/terminal.png)
 ターミナルサイズ  
 134 列 72 行
 (Think Pad のサイズ terminal を全画面にするサイズを指定)  
@@ -507,7 +507,7 @@ sudo vim /etc/systemd/system/powertop.service
     sudo systemctl enable powertop
     reboot
 
-![PowerTop](https://raw.githubusercontent.com/archmasa/dotfiles/image/image/powertop.png)
+![PowerTop](https://raw.githubusercontent.com/masasam/dotfiles/image/image/powertop.png)
 
 このタブが全部 Good になっていれば成功
 
@@ -569,7 +569,7 @@ Intel HD Graphics のティアリング解消
 
 ## Activity
 
-![activity](https://raw.githubusercontent.com/archmasa/dotfiles/image/image/activity.png)
+![activity](https://raw.githubusercontent.com/masasam/dotfiles/image/image/activity.png)
 アクティビティ > 設定 > 検索  
 全部 off にする  
 アプリの起動にしか使わん  
