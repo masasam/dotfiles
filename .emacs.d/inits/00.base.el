@@ -101,3 +101,7 @@
 
 ;; diredで消したファイルはゴミ箱へ
 (setq delete-by-moving-to-trash t)
+
+
+;; C-u C-SPC C-SPC...とC-SPCを連打して過去のマークを遡る
+(setq set-mark-command-repeat-pop t)
