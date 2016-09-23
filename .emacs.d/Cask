@@ -55,7 +55,6 @@
 (depends-on "easy-kill")
 (depends-on "init-loader")
 (depends-on "auto-async-byte-compile")
-(depends-on "open-junk-file")
 (depends-on "slime")
 (depends-on "zlc")
 (depends-on "which-key")
