@@ -1,0 +1,1 @@
+(smartparens-global-mode t)
