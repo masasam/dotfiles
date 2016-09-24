@@ -61,6 +61,7 @@ install: ## install development environment powerd by arch linux
 	yaourt mozc
 	yaourt the_platinum_searcher
 	yaourt osx-arc-shadow
+	yaourt gtk-theme-arc
 	yaourt slack-desktop
 	yaourt cmigemo-git
 	sudo pkgfile --update
@@ -82,9 +83,6 @@ recover: ## recovery from backup arch linux package at dropbox
 	go get -u github.com/nsf/gocode
 	go get -u github.com/rogpeppe/godef
 	sudo pkgfile --update
-
-theme: ## install theme
-	sudo cp -R ${HOME}/Dropbox/arch/OSX-Arc-Shadow/ /usr/share/themes/
 
 test: ## print environment value
 	export GOPATH=${HOME}

@@ -367,6 +367,7 @@ yaourt で入れるものをインストール
 	yaourt mozc
 	yaourt the_platinum_searcher
 	yaourt osx-arc-shadow
+	yaourt gtk-theme-arc
 	yaourt slack-desktop
 	yaourt cmigemo-git
 
