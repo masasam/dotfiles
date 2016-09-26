@@ -349,7 +349,7 @@ pacman で入るものをインストール
     sudo pacman -S go pkgfile rsync elixir
 	sudo pacman -S phantomjs parcellite whois nmap poppler-data
 	sudo pacman -S rtmpdump ffmpeg swftools fish sbcl
-	sudo pacman -S aspell aspell-en
+	sudo pacman -S aspell aspell-en httperf
 
 yaourt で入れるものをインストール  
 
