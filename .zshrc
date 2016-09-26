@@ -311,7 +311,7 @@ function blogpost () { cd ~/git/blog; hugo new post/$1.md --editor=emacsclient; 
 
 function imgpost () { cd ~/git/image/image; git add .; git commit -m 'add pic'; git push; cd - }
 
-function publish () { cd ~/git/blog; hugo; rsync -auv --delete ~/git/blog/public/ blogdomain:/home/blog/public/; cd - }
+function publish () { cd ~/git/blog; hugo; rsync -av --delete ~/git/blog/public/ blogdomain:/home/blog/; cd - }
 
 
 # cdしたらls
