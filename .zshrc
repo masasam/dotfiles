@@ -203,6 +203,7 @@ alias caskinstall='cd ${HOME}/.emacs.d/;   cask upgrade;   cask install;   cd -'
 # PATH
 export GOPATH=$HOME
 export PATH="$PATH:$GOPATH/bin"
+export PATH="$PATH:$HOME/.cask/bin"
 
 
 # Invoke the ``dired'' of current working directory in Emacs buffer.

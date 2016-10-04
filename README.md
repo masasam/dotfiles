@@ -379,7 +379,7 @@ yaourt で入れるものをインストール
 
 #### cask install
 
-    yaourt cask
+    curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
     cd .emacs.d
     cask upgrade
     cask install

@@ -46,7 +46,6 @@ install: ## install development environment powerd by arch linux
 	go get -u github.com/nsf/gocode
 	go get -u github.com/rogpeppe/godef
 	yaourt google-chrome
-	yaourt cask
 	yaourt peco-git
 	yaourt noto-fonts-cjk
 	yaourt ttf-ricty
@@ -66,6 +65,7 @@ install: ## install development environment powerd by arch linux
 	yaourt cmigemo-git
 	sudo pkgfile --update
 	curl -L http://get.oh-my.fish | fish
+	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
 
 backup: ## backup arch linux package at dropbox
 	mkdir -p ${HOME}/Dropbox/arch

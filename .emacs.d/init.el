@@ -11,7 +11,7 @@
 (package-initialize)
 
 ;; cask
-(require 'cask "/usr/share/cask/cask.el")
+(require 'cask "~/.cask/cask.el")
 (cask-initialize)
 
 ;; init-loader
