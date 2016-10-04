@@ -17,8 +17,6 @@
 (setq org-capture-templates
       '(("t" "Todo" entry (file+headline "~/Dropbox/emacs/todo.org" "Tasks")
              "* TODO %? %i %a")
-        ("j" "Journal" entry (file+datetree "~/Dropbox/emacs/journal.org")
-             "* %? %U %i %a")
         ("n" "Note" entry (file+headline "~/Dropbox/emacs/notes.org" "Notes")
 	 "* %? %U %i")
 	("i" "interrupted task" entry
