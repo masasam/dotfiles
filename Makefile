@@ -37,7 +37,7 @@ install: ## install development environment powerd by arch linux
 	cat ${HOME}/.bashrc | grep tmuxstart || echo "alias tmuxstart='tmux new-session -A -s main'" >> ${HOME}/.bashrc
 	sudo pacman -S go zsh git vim dropbox nautilus-dropbox tmux keychain zsh-completions \
 	gnome-tweak-tool xsel sylpheed emacs curl archlinux-wallpaper evince inkscape gimp unrar \
-	file-roller vlc xclip atool trash-cli the_silver_searcher powertop cifs-utils \
+	file-roller vlc xclip atool trash-cli the_silver_searcher powertop cifs-utils gnome-system-monitor \
 	gvfs gvfs-smb seahorse gnome-keyring cups-pdf redshift eog mcomix libreoffice-fresh-ja \
 	firefox firefox-i18n-ja otf-ipafont openssh pkgfile baobab dconf-editor rsync elixir \
 	phantomjs parcellite whois nmap poppler-data rtmpdump ffmpeg swftools fish sbcl \

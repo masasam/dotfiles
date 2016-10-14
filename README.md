@@ -248,6 +248,7 @@ gnome は必要最小限だけいれる
 	pacman -S gnome-shell-extensions
 	pacman -S gnome-terminal
 	pacman -S gnome-tweak-tool
+	pacman -S gnome-system-monitor 
 	pacman -S nautilus
 	pacman -S gedit
 	
