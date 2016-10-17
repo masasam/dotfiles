@@ -4,7 +4,8 @@
         "C-v": "peco.ScrollPageDown",
 	"C-l": "peco.DeleteAll",
 	"C-u": "peco.DeleteAll",
-        "C-g": "peco.Cancel"
+        "C-g": "peco.Cancel",
+	"C-d": "peco.Cancel"
     },
 "Style": {
     "Selected": ["underline", "on_white", "black"],
