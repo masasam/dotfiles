@@ -50,7 +50,8 @@
 (global-set-key (kbd "M-g .") 'helm-ag)
 (global-set-key (kbd "M-g ,") 'helm-ag-pop-stack)
 (global-set-key (kbd "C-M-s") 'helm-ag-this-file)
-
+;;ripgrepをhelm-agで使う
+(setq helm-ag-base-command "rg --vimgrep --no-heading")
 
 
 ;;; Enable helm-gtags-mode
