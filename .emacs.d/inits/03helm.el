@@ -52,7 +52,8 @@
 (global-set-key (kbd "C-M-s") 'helm-ag-this-file)
 ;;ripgrepをhelm-agで使う
 (setq helm-ag-base-command "rg --vimgrep --no-heading")
-
+;;; 現在のシンボルをデフォルトのクエリにする
+(setq helm-ag-insert-at-point 'symbol)
 
 ;;; Enable helm-gtags-mode
 ;; gtags --gtagslabel=ctags で作成
