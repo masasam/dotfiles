@@ -372,3 +372,11 @@ function peco-src-remote () {
 }
 zle -N peco-src-remote
 bindkey '^x^g' peco-src-remote
+
+
+# terminalからmagit-statusできるように
+function magit-status(){
+    emacsclient -e "(magit-status \"./$(git rev-parse --show-cdup)\")" 2>&1 >/dev/null & wmctrl -a emacs
+}
+zle -N magit-status
+bindkey '^xg' magit-status
