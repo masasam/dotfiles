@@ -364,3 +364,11 @@ function peco-man() {
 }
 zle -N peco-man
 bindkey -M viins '^x^m' peco-man
+
+
+# peco-src-remote
+function peco-src-remote () {
+    hub browse $(ghq list | peco | cut -d "/" -f 2,3)
+}
+zle -N peco-src-remote
+bindkey '^x^g' peco-src-remote
