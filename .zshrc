@@ -363,7 +363,6 @@ function peco-man() {
     fi
 }
 zle -N peco-man
-bindkey -M viins '^x^m' peco-man
 
 
 # peco-src-remote
