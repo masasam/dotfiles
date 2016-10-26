@@ -192,8 +192,8 @@ alias df="df -h"
 alias open="gnome-open"
 alias screen='screen -D -RR'
 alias -g C='| xsel --input --clipboard'
-alias sudotramp='emacsclient -n /sudo:$(grep -iE "^[[:space:]]host[[:space:]]+[^*]" ~/.ssh/config|peco|awk "{print \$2}"):/'
-alias tramp='emacsclient -n /ssh:$(grep -iE "^[[:space:]]host[[:space:]]+[^*]" ~/.ssh/config|peco|awk "{print \$2}"):/'
+alias sudotramp='emacsclient -n /sudo:$(grep -iE "^[[:space:]]host[[:space:]]+[^*]" ~/.ssh/config|peco|awk "{print \$2}"):/ & wmctrl -a emacs'
+alias tramp='emacsclient -n /ssh:$(grep -iE "^[[:space:]]host[[:space:]]+[^*]" ~/.ssh/config|peco|awk "{print \$2}"):/ & wmctrl -a emacs'
 alias trackpointspeed='xinput --set-prop 10 "Device Accel Constant Deceleration"'
 alias caskupdate="cp -R ${HOME}/.emacs.d/.cask /tmp/`date '+%Y%m%d%H%M%S'`;
 cd ${HOME}/.emacs.d/;   cask upgrade;   cask update;   cd -"
@@ -208,7 +208,7 @@ export PATH="$PATH:$HOME/.cask/bin"
 
 # Invoke the ``dired'' of current working directory in Emacs buffer.
 function dired () {
-  emacsclient -e "(dired \"$PWD\")"
+  emacsclient -e "(dired \"$PWD\")" & wmctrl -a emacs
 }
 
 
