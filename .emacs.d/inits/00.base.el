@@ -15,6 +15,18 @@
 (add-to-list 'default-frame-alist '(font . "ricty-15.5"))
 
 
+
+;; C-x C-cで終了しない
+(global-set-key (kbd "C-x C-c") 'helm-M-x)
+
+;; C-x C-zも変更
+(global-set-key (kbd "C-x C-z") 'point-undo)
+
+;; I never use C-x C-c
+(defalias 'exit 'save-buffers-kill-emacs)
+
+
+
 ; server start for emacs-client
 (require 'server)
 (unless (server-running-p)
