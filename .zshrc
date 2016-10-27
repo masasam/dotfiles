@@ -204,6 +204,8 @@ alias caskinstall='cd ${HOME}/.emacs.d/;   cask upgrade;   cask install;   cd -'
 export GOPATH=$HOME
 export PATH="$PATH:$GOPATH/bin"
 export PATH="$PATH:$HOME/.cask/bin"
+export EDITOR="emacsclient"
+alias e='emacsclient'
 
 
 # Invoke the ``dired'' of current working directory in Emacs buffer.
