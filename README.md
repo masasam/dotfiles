@@ -39,6 +39,7 @@ make init する前に Dropbox の同期を終わらせておくこと
 
 ### Makefile があると 30 分でいつもの環境をリカバリーできるようになる
 
+![make](https://raw.githubusercontent.com/masasam/dotfiles/image/image/make.png)
 一度環境を作ったあとは  
 
     make backup
