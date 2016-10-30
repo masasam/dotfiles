@@ -66,6 +66,7 @@
 (depends-on "point-undo")
 (depends-on "japanese-holidays")
 (depends-on "key-chord")
+(depends-on "sequential-command")
 
 ;; programming modes
 (depends-on "go-mode")
