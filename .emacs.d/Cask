@@ -65,6 +65,7 @@
 (depends-on "volatile-highlights")
 (depends-on "point-undo")
 (depends-on "japanese-holidays")
+(depends-on "key-chord")
 
 ;; programming modes
 (depends-on "go-mode")
