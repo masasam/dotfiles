@@ -89,7 +89,7 @@ test: ## print environment value
 	export PATH="${PATH}:${GOPATH}/bin"
 	printenv
 
-all: init update sync install test help backup recover theme
+all: init update install test help backup recover
 
 .PHONY: all
 
