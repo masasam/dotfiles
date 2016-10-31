@@ -67,6 +67,7 @@
 (depends-on "japanese-holidays")
 (depends-on "key-chord")
 (depends-on "sequential-command")
+(depends-on "atomic-chrome")
 
 ;; programming modes
 (depends-on "go-mode")
