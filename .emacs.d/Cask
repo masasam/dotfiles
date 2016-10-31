@@ -70,6 +70,7 @@
 (depends-on "atomic-chrome")
 (depends-on "lispxmp")
 (depends-on "open-junk-file")
+(depends-on "direx")
 
 ;; programming modes
 (depends-on "go-mode")
