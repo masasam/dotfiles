@@ -25,6 +25,9 @@
 ;; C-x C-zも変更
 (global-set-key (kbd "C-z") 'point-undo)
 
+;; M-%をC-c rで行う
+(global-set-key (kbd "C-c r") 'query-replace)
+
 ;; I never use C-x C-c
 (defalias 'exit 'save-buffers-kill-emacs)
 
