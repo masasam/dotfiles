@@ -68,6 +68,8 @@
 (depends-on "key-chord")
 (depends-on "sequential-command")
 (depends-on "atomic-chrome")
+(depends-on "lispxmp")
+(depends-on "open-junk-file")
 
 ;; programming modes
 (depends-on "go-mode")
