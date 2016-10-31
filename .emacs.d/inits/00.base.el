@@ -22,6 +22,9 @@
 ;; C-x C-zも変更
 (global-set-key (kbd "C-x C-z") 'point-undo)
 
+;; C-x C-zも変更
+(global-set-key (kbd "C-z") 'point-undo)
+
 ;; I never use C-x C-c
 (defalias 'exit 'save-buffers-kill-emacs)
 
