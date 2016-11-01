@@ -64,15 +64,15 @@ Dropbox 同期後
 
 #### Dropbox で管理するものの基準
 
-1. github に置けないもの  
+- github に置けないもの  
    .ssh に入っている公開鍵など  
    
-2. すこぶる更新ファイルを吐き出すので github で同期するのが面倒くさいもの  
+- すこぶる更新ファイルを吐き出すので github で同期するのが面倒くさいもの  
    .zsh_histfile  
    .mozc  
    .emacs.d の中の更新ファイルは.gitignore を利用して問題なくデプロイできるから github で OK  
    
-3. データの保護が目的のもの  
+- データの保護が目的のもの  
    Sylpheed の設定ファイル  
    メールのデータは dropbox において gmail ライクに使う  
    メールが届いたらすぐ dropbox に同期されるから backup とか考えなくてもいい  
@@ -87,20 +87,20 @@ recovery-code は自宅の NAS に置いておく
 
 Why Arch linux ?  
 
-1. ローリング・リリースで壊れない限りは再インストールしなくてもいいから楽  
+- ローリング・リリースで壊れない限りは再インストールしなくてもいいから楽  
    壊れても 30 分で復帰できるように Makefile を作ったから無敵  
   
-2. サーバは CentOS でいいけど,開発環境は割と最新じゃないとつらい  
+- サーバは CentOS でいいけど,開発環境は割と最新じゃないとつらい  
    OverlayFS とか Profile Sync Daemon 使いたい  
    Emacs は最新じゃないと嫌なので make install していたが Arch なら pacman ですむ  
    go の最新バージョンをつかうためにコンパイルするとバイナリの管理が大変  
    バイナリの管理に paco を使っていたが Aur とかでパッケージ作って共有したほうが賢いと思う  
 
-3. カスタマイズは好きだがエコシステムから外れない塩梅でやるのがいいと思う  
+- カスタマイズは好きだがエコシステムから外れない塩梅でやるのがいいと思う  
    Arch のパッケージは原則としてパッチをあてないバニラのソースからビルドする方針になっていて  
    Arch 固有の問題が起きにくいからよい  
 
-4. 軽い!!  インストールが終わって Emacs Terminal Chrome を起動して top した画像  
+- 軽い!!  インストールが終わって Emacs Terminal Chrome を起動して top した画像  
 
 ![top](https://raw.githubusercontent.com/masasam/dotfiles/image/image/top.png)
 
