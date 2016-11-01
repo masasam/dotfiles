@@ -713,3 +713,14 @@ oh-my-fish をインストールする
 
 	curl -L http://get.oh-my.fish | fish
 	
+
+### font の設定
+
+gnome-tweak-tool で以下を設定  
+
+フォント  
+
+- ウインドウタイトル  Cantarell 11
+- インターフェース   Noto Sans CJK JP Regular 11
+- ドキュメント   Sans Regular 11
+- 等幅    Monospace Regular 11
