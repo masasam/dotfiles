@@ -123,3 +123,8 @@
 
 ;; C-u C-SPC C-SPC...とC-SPCを連打して過去のマークを遡る
 (setq set-mark-command-repeat-pop t)
+
+
+;; elispの関数のソースファイルを読む
+(global-set-key (kbd "C-x F") 'find-function)
+(global-set-key (kbd "C-x V") 'find-variable)
