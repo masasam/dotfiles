@@ -71,6 +71,7 @@
 (depends-on "lispxmp")
 (depends-on "open-junk-file")
 (depends-on "direx")
+(depends-on "eldoc-extension")
 
 ;; programming modes
 (depends-on "go-mode")
