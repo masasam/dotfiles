@@ -72,6 +72,8 @@
 (depends-on "open-junk-file")
 (depends-on "direx")
 (depends-on "eldoc-extension")
+(depends-on "pos-tip")
+(depends-on "flycheck-pos-tip")
 
 ;; programming modes
 (depends-on "go-mode")
