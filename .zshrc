@@ -210,7 +210,7 @@ alias e='emacsclient'
 
 # Invoke the ``dired'' of current working directory in Emacs buffer.
 function dired () {
-  emacsclient -e "(dired \"$PWD\")" & wmctrl -a emacs
+  emacsclient -e "(dired \"${1:-$PWD}\")" & wmctrl -a emacs
 }
 
 
