@@ -353,7 +353,7 @@ pacman で入るものをインストール
 	sudo pacman -S rtmpdump ffmpeg swftools fish sbcl
 	sudo pacman -S aspell aspell-en httperf
 	sudo pacman -S gdb
-	sudo pacman -S ripgrep hub wmctrl transmission-gtk
+	sudo pacman -S ripgrep hub wmctrl transmission-gtk calibre
 
 yaourt で入れるものをインストール  
 
