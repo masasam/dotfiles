@@ -19,10 +19,10 @@
 ;; C-x C-cで終了しない
 (global-set-key (kbd "C-x C-c") 'helm-M-x)
 
-;; C-x C-zも変更
-(global-set-key (kbd "C-x C-z") 'point-undo)
+;; C-x C-zでflycheckをオンオフ
+(global-set-key (kbd "C-x C-z") 'flycheck-mode)
 
-;; C-zも変更
+;; C-zでpoint-undo
 (global-set-key (kbd "C-z") 'point-undo)
 
 ;; M-%をC-c rで行う
