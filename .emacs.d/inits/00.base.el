@@ -22,7 +22,7 @@
 ;; C-x C-zも変更
 (global-set-key (kbd "C-x C-z") 'point-undo)
 
-;; C-x C-zも変更
+;; C-zも変更
 (global-set-key (kbd "C-z") 'point-undo)
 
 ;; M-%をC-c rで行う
