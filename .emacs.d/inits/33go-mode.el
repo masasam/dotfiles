@@ -1,5 +1,5 @@
 ;; go-mode
-(setenv "GOPATH" "/home/masa/go")
+(setenv "GOPATH" "/home/masa")
 (add-to-list 'exec-path (expand-file-name "~/bin"))
 
 (with-eval-after-load 'go-mode
