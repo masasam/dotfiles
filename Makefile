@@ -42,7 +42,8 @@ install: ## install development environment powerd by arch linux
 	gvfs gvfs-smb seahorse gnome-keyring cups-pdf redshift eog mcomix libreoffice-fresh-ja \
 	firefox firefox-i18n-ja otf-ipafont openssh pkgfile baobab dconf-editor rsync elixir \
 	nodejs phantomjs parcellite whois nmap poppler-data rtmpdump ffmpeg swftools fish sbcl \
-	aspell aspell-en httperf gdb ripgrep hub wmctrl transmission-gtk linux-docs ansible
+	aspell aspell-en httperf gdb ripgrep hub wmctrl transmission-gtk linux-docs ansible \
+	pwgen
 	mkdir -p ${HOME}/{bin,src}
 	go get -u github.com/nsf/gocode
 	go get -u github.com/rogpeppe/godef
