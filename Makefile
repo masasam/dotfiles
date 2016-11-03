@@ -41,8 +41,8 @@ install: ## install development environment powerd by arch linux
 	file-roller vlc xclip atool trash-cli the_silver_searcher powertop cifs-utils gnome-system-monitor \
 	gvfs gvfs-smb seahorse gnome-keyring cups-pdf redshift eog mcomix libreoffice-fresh-ja \
 	firefox firefox-i18n-ja otf-ipafont openssh pkgfile baobab dconf-editor rsync elixir \
-	phantomjs parcellite whois nmap poppler-data rtmpdump ffmpeg swftools fish sbcl \
-	aspell aspell-en httperf gdb ripgrep hub wmctrl transmission-gtk linux-docs
+	nodejs phantomjs parcellite whois nmap poppler-data rtmpdump ffmpeg swftools fish sbcl \
+	aspell aspell-en httperf gdb ripgrep hub wmctrl transmission-gtk linux-docs ansible
 	mkdir -p ${HOME}/{bin,src}
 	go get -u github.com/nsf/gocode
 	go get -u github.com/rogpeppe/godef

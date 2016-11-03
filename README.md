@@ -349,11 +349,11 @@ pacman で入るものをインストール
     sudo pacman -S mcomix
     sudo pacman -S libreoffice-fresh-ja
     sudo pacman -S go pkgfile rsync elixir
-	sudo pacman -S phantomjs parcellite whois nmap poppler-data
+	sudo pacman -S nodejs phantomjs parcellite whois nmap poppler-data
 	sudo pacman -S rtmpdump ffmpeg swftools fish sbcl
 	sudo pacman -S aspell aspell-en httperf
-	sudo pacman -S gdb
-	sudo pacman -S ripgrep hub wmctrl transmission-gtk linux-docs
+	sudo pacman -S gdb ripgrep hub wmctrl
+	sudo pacman -S transmission-gtk linux-docs ansible
 
 yaourt で入れるものをインストール  
 
