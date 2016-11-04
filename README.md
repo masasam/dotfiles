@@ -379,7 +379,7 @@ yaourt で入れるものをインストール
 
     go get -u github.com/nsf/gocode
     go get -u github.com/rogpeppe/godef
-
+	go get -u golang.org/x/tools/cmd/goimports
 
 #### cask install
 
