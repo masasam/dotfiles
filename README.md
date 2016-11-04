@@ -353,7 +353,7 @@ pacman で入るものをインストール
 	sudo pacman -S rtmpdump ffmpeg swftools fish sbcl
 	sudo pacman -S aspell aspell-en httperf
 	sudo pacman -S gdb ripgrep hub wmctrl
-	sudo pacman -S transmission-gtk linux-docs ansible pwgen
+	sudo pacman -S transmission-gtk linux-docs ansible pwgen pygmentize
 
 yaourt で入れるものをインストール  
 
