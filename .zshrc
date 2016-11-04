@@ -4,97 +4,97 @@ autoload -U compinit promptinit
 compinit
 promptinit
 
-#文字コード
+#文字コード
 export LANG=ja_JP.UTF-8
 
-# 色の指定を%{$fg[red]%}みたいに人に優しい指定の仕方が出来、コピペもしやすい。リセットするときは%{$reset_color%}。
+# 色の指定を%{$fg[red]%}みたいに人に優しい指定の仕方が出来、コピペもしやすい。リセットするときは%{$reset_color%}。
 autoload -Uz colors
 colors
 
 
-# プロンプトに$HOSTとか$UIDとかいった類のものが使用出来るようになる。
+# プロンプトに$HOSTとか$UIDとかいった類のものが使用出来るようになる。
 setopt prompt_subst
 
-# 改行コード (\n) で終わっていない出力のとき最終行がでないのを防ぐ
+# 改行コード (\n) で終わっていない出力のとき最終行がでないのを防ぐ
 unsetopt promptcr
 
 
 
-HISTFILE=~/Dropbox/zsh/.zsh_histfile #コマンド履歴はDropboxに
+HISTFILE=~/Dropbox/zsh/.zsh_histfile #コマンド履歴はDropboxに
 HISTSIZE=1000000
 SAVEHIST=1000000
-#10000 個以上の補完候補が存在するときに尋ねるようになります
+#10000 個以上の補完候補が存在するときに尋ねるようになります
 LISTMAX=10000
-   # * LISTMAX=-1 →黙って表示(どんなに多くても)
-   # * LISTMAX=0 →ウィンドウから溢れるときは尋ねる。
+   # * LISTMAX=-1 →黙って表示(どんなに多くても)
+   # * LISTMAX=0 →ウィンドウから溢れるときは尋ねる。
 unsetopt extended_history
-setopt append_history        # 履歴を追加 (毎回 .zhistory を作るのではなく)
+setopt append_history        # 履歴を追加 (毎回 .zhistory を作るのではなく)
 setopt inc_append_history    # 履歴をインクリメンタルに追加
 setopt share_history         # 履歴の共有
-setopt hist_ignore_all_dups  # 重複するコマンド行は古い方を削除
-setopt hist_ignore_dups      # 直前と同じコマンドラインはヒストリに追加しない
-setopt hist_ignore_space     # スペースで始まるコマンド行はヒストリリストから削除
-unsetopt hist_verify         # ヒストリを呼び出してから実行する間に一旦編集可能を止める
+setopt hist_ignore_all_dups  # 重複するコマンド行は古い方を削除
+setopt hist_ignore_dups      # 直前と同じコマンドラインはヒストリに追加しない
+setopt hist_ignore_space     # スペースで始まるコマンド行はヒストリリストから削除
+unsetopt hist_verify         # ヒストリを呼び出してから実行する間に一旦編集可能を止める
 setopt hist_reduce_blanks    # 余分な空白は詰めて記録
-setopt hist_save_no_dups     # ヒストリファイルに書き出すときに、古いコマンドと同じものは無視する。
-setopt hist_no_store         # historyコマンドは履歴に登録しない
+setopt hist_save_no_dups     # ヒストリファイルに書き出すときに、古いコマンドと同じものは無視する。
+setopt hist_no_store         # historyコマンドは履歴に登録しない
 setopt hist_expand           # 補完時にヒストリを自動的に展開
 
 
 # 補完
-setopt list_packed           # コンパクトに補完リストを表示
+setopt list_packed           # コンパクトに補完リストを表示
 unsetopt auto_remove_slash
-setopt auto_param_slash      # ディレクトリ名の補完で末尾の / を自動的に付加し、次の補完に備える
-setopt mark_dirs             # ファイル名の展開でディレクトリにマッチした場合 末尾に / を付加
-setopt list_types            # 補完候補一覧でファイルの種別を識別マーク表示 (訳注:ls -F の記号)
-unsetopt menu_complete       # 補完の際に、可能なリストを表示してビープを鳴らすのではなく、
-setopt auto_list             # ^Iで補完可能な一覧を表示する(補完候補が複数ある時に、一覧表示)
-setopt auto_menu             # 補完キー連打で順に補完候補を自動で補完
-setopt auto_param_keys       # カッコの対応などを自動的に補完
-setopt auto_resume           # サスペンド中のプロセスと同じコマンド名を実行した場合はリジューム
-setopt auto_cd               # ディレクトリのみで移動
-setopt no_beep               # コマンド入力エラーでBeepを鳴らさない
-setopt brace_ccl             # ブレース展開機能を有効にする
+setopt auto_param_slash      # ディレクトリ名の補完で末尾の / を自動的に付加し、次の補完に備える
+setopt mark_dirs             # ファイル名の展開でディレクトリにマッチした場合 末尾に / を付加
+setopt list_types            # 補完候補一覧でファイルの種別を識別マーク表示 (訳注:ls -F の記号)
+unsetopt menu_complete       # 補完の際に、可能なリストを表示してビープを鳴らすのではなく、
+setopt auto_list             # ^Iで補完可能な一覧を表示する(補完候補が複数ある時に、一覧表示)
+setopt auto_menu             # 補完キー連打で順に補完候補を自動で補完
+setopt auto_param_keys       # カッコの対応などを自動的に補完
+setopt auto_resume           # サスペンド中のプロセスと同じコマンド名を実行した場合はリジューム
+setopt auto_cd               # ディレクトリのみで移動
+setopt no_beep               # コマンド入力エラーでBeepを鳴らさない
+setopt brace_ccl             # ブレース展開機能を有効にする
 setopt bsd_echo
 setopt complete_in_word
-setopt equals                # =COMMAND を COMMAND のパス名に展開
-setopt extended_glob         # 拡張グロブを有効にする
-unsetopt flow_control        # (shell editor 内で) C-s, C-q を無効にする
+setopt equals                # =COMMAND を COMMAND のパス名に展開
+setopt extended_glob         # 拡張グロブを有効にする
+unsetopt flow_control        # (shell editor 内で) C-s, C-q を無効にする
 setopt no_flow_control       # C-s/C-q によるフロー制御を使わない
-setopt hash_cmds             # 各コマンドが実行されるときにパスをハッシュに入れる
-setopt no_hup                # ログアウト時にバックグラウンドジョブをkillしない
-setopt long_list_jobs        # 内部コマンド jobs の出力をデフォルトで jobs -L にする
-setopt magic_equal_subst     # コマンドラインの引数で --PREFIX=/USR などの = 以降でも補完できる
+setopt hash_cmds             # 各コマンドが実行されるときにパスをハッシュに入れる
+setopt no_hup                # ログアウト時にバックグラウンドジョブをkillしない
+setopt long_list_jobs        # 内部コマンド jobs の出力をデフォルトで jobs -L にする
+setopt magic_equal_subst     # コマンドラインの引数で --PREFIX=/USR などの = 以降でも補完できる
 setopt mail_warning
-setopt multios               # 複数のリダイレクトやパイプなど、必要に応じて TEE や CAT の機能が使われる
+setopt multios               # 複数のリダイレクトやパイプなど、必要に応じて TEE や CAT の機能が使われる
 setopt numeric_glob_sort     # 数字を数値と解釈してソートする
-setopt path_dirs             # コマンド名に / が含まれているとき PATH 中のサブディレクトリを探す
+setopt path_dirs             # コマンド名に / が含まれているとき PATH 中のサブディレクトリを探す
 setopt print_eight_bit       # 補完候補リストの日本語を適正表示
-setopt short_loops           # FOR, REPEAT, SELECT, IF, FUNCTION などで簡略文法が使えるようになる
+setopt short_loops           # FOR, REPEAT, SELECT, IF, FUNCTION などで簡略文法が使えるようになる
 
-# 補完候補を表示するときに出来るだけ詰めて表示。
+# 補完候補を表示するときに出来るだけ詰めて表示。
 setopt list_packed
 # aliasを補完候補に含める。
 setopt complete_aliases
-#ディレクトリ名が引数のときに最後の / を削除しない
+#ディレクトリ名が引数のときに最後の / を削除しない
 setopt noautoremoveslash
 
 # sudoの補完
 zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin
 
-# 一部のコマンドライン定義は、展開時に時間のかかる処理を行う -- apt-get, dpkg (Debian), rpm (Redhat), urpmi (Mandrake), perlの-Mオプション, bogofilter (zsh 4.2.1以降), fink, mac_apps (MacOS X)(zsh 4.2.2以降)
+# 一部のコマンドライン定義は、展開時に時間のかかる処理を行う -- apt-get, dpkg (Debian), rpm (Redhat), urpmi (Mandrake), perlの-Mオプション, bogofilter (zsh 4.2.1以降), fink, mac_apps (MacOS X)(zsh 4.2.2以降)
 zstyle ':completion:*' use-cache true
-# 補完候補を ←↓↑→ で選択 (補完候補が色分け表示される)
+# 補完候補を ←↓↑→ で選択 (補完候補が色分け表示される)
 zstyle ':completion:*:default' menu select=1
-# 一意に決まるファイルがあるかもしれないから，まずそのまま補完する
+# 一意に決まるファイルがあるかもしれないから，まずそのまま補完する
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z} r:|[-_.]=**'
-# カレントディレクトリに候補がない場合のみ cdpath 上のディレクトリを候補
+# カレントディレクトリに候補がない場合のみ cdpath 上のディレクトリを候補
 zstyle ':completion:*:cd:*' tag-order local-directories path-directories
-# ps コマンドのプロセス名補完
+# ps コマンドのプロセス名補完
 zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
 
 
-# プロンプト
+# プロンプト
 case ${UID} in
   0)
   PROMPT="%{$fg_bold[green]%}%m%{$fg_bold[red]%}#%{$reset_color%} "
@@ -106,31 +106,31 @@ case ${UID} in
   ;;
 esac
 
-# 右プロンプトに現在地を表示。これのおかげで入力位置がウロウロしない。
+# 右プロンプトに現在地を表示。これのおかげで入力位置がウロウロしない。
 RPROMPT="%{$fg_bold[white]%}[%{$reset_color%}%{$fg[cyan]%}%~%{$reset_color%}%{$fg_bold[white]%}]%{$reset_color%}"
 
-# emacsキーバインド
+# emacsキーバインド
 bindkey -e
 
-# 移動した場所を記録し、cd -[TAB] で以前移動したディレクトリの候補を提示してくれて、その番号を入力することで移動出来るようになる。
+# 移動した場所を記録し、cd -[TAB] で以前移動したディレクトリの候補を提示してくれて、その番号を入力することで移動出来るようになる。
 setopt auto_pushd
 
-# auto_pushdで重複するディレクトリは記録しないようにする。
+# auto_pushdで重複するディレクトリは記録しないようにする。
 setopt pushd_ignore_dups
 
-# コマンドのスペルミスを指摘して予想される正しいコマンドを提示してくれる。このときのプロンプトがSPROMPT。
+# コマンドのスペルミスを指摘して予想される正しいコマンドを提示してくれる。このときのプロンプトがSPROMPT。
 setopt correct
 
-# ファイル作成時のパーミッション
+# ファイル作成時のパーミッション
 umask 022
 
 
 # LS_COLORS
-# 'dircolors -p'で出力されるものに手を加えて保存したものを読み込んでる。
+# 'dircolors -p'で出力されるものに手を加えて保存したものを読み込んでる。
 if [ -f ~/.dir_colors ]; then
   eval `dircolors -b ~/.dir_colors`
 fi
-# 補完候補もLS_COLORSに合わせて色づけ。
+# 補完候補もLS_COLORSに合わせて色づけ。
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 
@@ -148,7 +148,7 @@ zstyle ':vcs_info:*' actionformats '[%b|%a]'
 RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
 
 
-# screenに現在実行したコマンド名を渡す
+# screenに現在実行したコマンド名を渡す
 case "${TERM}" in screen-256color)
     preexec() {
         echo -ne "\ek#${1%% *}\e\\"
@@ -161,13 +161,13 @@ esac
 
 
 
-# ls /usr/local/etc などと打っている際に、C-w で単語ごとに削除
+# ls /usr/local/etc などと打っている際に、C-w で単語ごとに削除
 # default  : ls /usr/local → ls /usr/ → ls /usr → ls /
 # この設定 : ls /usr/local → ls /usr/ → ls /
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 
 
-# Arch linux でコマンドがないとき誘導 sudo pacman -S pkgfile
+# Arch linux でコマンドがないとき誘導 sudo pacman -S pkgfile
 if [ -f /usr/share/doc/pkgfile/command-not-found.zsh ]; then
   source /usr/share/doc/pkgfile/command-not-found.zsh
 fi
@@ -182,7 +182,7 @@ source $HOME/.keychain/$HOST-sh
 alias ls='ls -v -F --color=auto'
 alias ll='ls -al'
 alias la='ls -A'
-# ./hogefuga.tar.gz で解凍できる pacman -S atool
+# ./hogefuga.tar.gz で解凍できる pacman -S atool
 alias -s {gz,tgz,zip,lzh,bz2,tbz,Z,tar,arj,xz}=aunpack
 alias cp="cp -ip"
 alias mv="mv -i"
@@ -231,7 +231,7 @@ function cde () {
 }
 
 
-# pecoでC-rのヒストリ検索を置き換え
+# pecoでC-rのヒストリ検索を置き換え
 function peco-select-history() {
   local tac
   if which tac > /dev/null; then
@@ -333,7 +333,7 @@ fi;
 }
 
 
-# Gitのリポジトリのトップレベルにcd
+# Gitのリポジトリのトップレベルにcd
 function gitroot()
 {
 cd ./$(git rev-parse --show-cdup)
@@ -377,7 +377,7 @@ zle -N peco-src-remote
 bindkey '^x^g' peco-src-remote
 
 
-# terminalからmagit-statusできるように
+# terminalからmagit-statusできるように
 function magit-status(){
     emacsclient -e "(magit-status \"./$(git rev-parse --show-cdup)\")" 2>&1 >/dev/null & wmctrl -a emacs
 }
