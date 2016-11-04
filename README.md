@@ -355,6 +355,7 @@ pacman で入るものをインストール
 	sudo pacman -S gdb ripgrep hub wmctrl
 	sudo pacman -S transmission-gtk linux-docs ansible pwgen pygmentize
 	sudo pacman -S arch-install-scripts
+	sudo pacman -S lilyterm
 
 yaourt で入れるものをインストール  
 
