@@ -354,6 +354,7 @@ pacman で入るものをインストール
 	sudo pacman -S aspell aspell-en httperf
 	sudo pacman -S gdb ripgrep hub wmctrl
 	sudo pacman -S transmission-gtk linux-docs ansible pwgen pygmentize
+	sudo pacman -S arch-install-scripts
 
 yaourt で入れるものをインストール  
 
