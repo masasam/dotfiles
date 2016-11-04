@@ -12,6 +12,8 @@
   ;; eldoc
   (add-hook 'go-mode-hook 'go-eldoc-setup)
 
+  ;; gofmt goimports
+  (setq gofmt-command "goimports")
   (add-hook 'before-save-hook 'gofmt-before-save)
   
   ;; key bindings
