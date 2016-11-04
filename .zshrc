@@ -4,6 +4,8 @@ autoload -U compinit promptinit
 compinit
 promptinit
 
+#文字コード
+export LANG=ja_JP.UTF-8
 
 # 色の指定を%{$fg[red]%}みたいに人に優しい指定の仕方が出来、コピペもしやすい。リセットするときは%{$reset_color%}。
 autoload -Uz colors
