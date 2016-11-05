@@ -358,6 +358,7 @@ pacman で入るものをインストール
 	sudo pacman -S transmission-gtk linux-docs ansible pwgen pygmentize
 	sudo pacman -S arch-install-scripts
 	sudo pacman -S htop
+	sudo pacman -S neovim
 
 yaourt で入れるものをインストール  
 
