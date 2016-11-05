@@ -482,10 +482,13 @@ tmux を起動したら zsh が起動するようにしておいて
 
     echo "alias screenstart='screen -D -RR'" >> ~/.bashrc
     echo "alias tmuxstart='tmux new-session -A -s main'" >> ~/.bashrc
+    echo "export HISTCONTROL=ignoredups" >> ${HOME}/.bashrc
 
 terminal を開いて  
 screenstart あるいは tmuxstart で起動すると  
 セッションがあればそれを利用しなければ新規セッションで zsh が起動する  
+これで bash の履歴は tmuxstart しかたまらないので  
+export HISTCONTROL=ignoredups で履歴が増えないようにする  
 
 # Powertop
 

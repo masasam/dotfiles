@@ -40,6 +40,7 @@ install: ## install development environment powerd by arch linux
 	${PWD}/bin/continue.sh && \
 	cat ${HOME}/.bashrc | grep screenstart || echo "alias screenstart='screen -D -RR'" >> ${HOME}/.bashrc
 	cat ${HOME}/.bashrc | grep tmuxstart || echo "alias tmuxstart='tmux new-session -A -s main'" >> ${HOME}/.bashrc
+	cat ${HOME}/.bashrc | grep ignoredups || echo "export HISTCONTROL=ignoredups" >> ${HOME}/.bashrc
 	sudo pacman -S go zsh git vim dropbox nautilus-dropbox tmux keychain zsh-completions \
 	gnome-tweak-tool xsel sylpheed emacs curl archlinux-wallpaper evince inkscape gimp unrar \
 	file-roller vlc xclip atool trash-cli the_silver_searcher powertop cifs-utils \
@@ -84,6 +85,7 @@ recover: ## recovery from backup arch linux package at dropbox
 	yaourt -S --needed $(DOY)
 	cat ${HOME}/.bashrc | grep screenstart || echo "alias screenstart='screen -D -RR'" >> ${HOME}/.bashrc
 	cat ${HOME}/.bashrc | grep tmuxstart || echo "alias tmuxstart='tmux new-session -A -s main'" >> ${HOME}/.bashrc
+	cat ${HOME}/.bashrc | grep ignoredups || echo "export HISTCONTROL=ignoredups" >> ${HOME}/.bashrc
 	mkdir -p ${HOME}/{bin,src}
 	export GOPATH=${HOME}
 	export PATH="$PATH:$GOPATH/bin"
