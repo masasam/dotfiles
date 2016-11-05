@@ -15,6 +15,8 @@ init: ## deploy this dotfiles
 	ln -vsf ${PWD}/.config/gtk-3.0/bookmarks   ${HOME}/.config/gtk-3.0/bookmarks
 	test -L ${HOME}/.config/lilyterm || rm -rf ${HOME}/.config/lilyterm
 	ln -vsf ${PWD}/.config/lilyterm   ${HOME}/.config/lilyterm
+	test -L ${HOME}/.config/termite || rm -rf ${HOME}/.config/termite
+	ln -vsf ${PWD}/.config/termite   ${HOME}/.config/termite
 	test -L ${HOME}/.peco || rm -rf ${HOME}/.peco
 	ln -vsfn ${PWD}/.peco   ${HOME}/.peco
 	test -L ${HOME}/.emacs.d || rm -rf ${HOME}/.emacs.d
@@ -45,7 +47,7 @@ install: ## install development environment powerd by arch linux
 	firefox firefox-i18n-ja otf-ipafont openssh pkgfile baobab dconf-editor rsync elixir \
 	nodejs phantomjs parcellite whois nmap poppler-data rtmpdump ffmpeg swftools fish sbcl \
 	aspell aspell-en httperf gdb ripgrep hub wmctrl transmission-gtk linux-docs ansible \
-	pwgen pygmentize arch-install-scripts lilyterm
+	pwgen pygmentize arch-install-scripts lilyterm termite
 	mkdir -p ${HOME}/{bin,src}
 	go get -u github.com/nsf/gocode
 	go get -u github.com/rogpeppe/godef

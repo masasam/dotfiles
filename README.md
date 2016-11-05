@@ -247,12 +247,15 @@ gnome は必要最小限だけいれる
 	pacman -S gnome-control-center
 	pacman -S gnome-keyring
 	pacman -S gnome-shell-extensions
-	pacman -S gnome-terminal
 	pacman -S gnome-tweak-tool
 	pacman -S gnome-system-monitor 
 	pacman -S nautilus
 	pacman -S gedit
 	
+terminal は lilyterm と termite を利用する  
+
+	sudo pacman -S lilyterm
+	sudo pacman -S termite
 
 gdm でグラフィカルログインできるようにする  
 
@@ -355,7 +358,6 @@ pacman で入るものをインストール
 	sudo pacman -S gdb ripgrep hub wmctrl
 	sudo pacman -S transmission-gtk linux-docs ansible pwgen pygmentize
 	sudo pacman -S arch-install-scripts
-	sudo pacman -S lilyterm
 
 yaourt で入れるものをインストール  
 
