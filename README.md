@@ -454,21 +454,19 @@ gnome の細かい設定など
 # Terminal
 
 ![terminal](https://raw.githubusercontent.com/masasam/dotfiles/image/image/terminal.png)
-ターミナルサイズ  
-134 列 72 行
-(Think Pad のサイズ terminal を全画面にするサイズを指定)  
 
-font ricty 15  
+terminal は lilyterm と termite を使う  
+設定は  
 
-#### ターミナルのプロファイル  
-
-solarized Dark  
-組み込みのスキーム solarized  
+	.config/lilyterm
+	.config/termite
+	
+にある
 
 #### .bashrc
 
 どんな時でも bash が起動しないと困るから  
-.bashrc は以下の２つのエイリアスを追記する以外はしない  
+.bashrc は以下の３つのエイリアスを追記する以外はしない  
 zsh をデフォルトシェルにして zsh をカスタマイズしまくると  
 login できなくなって大変困ったことになるかもしれない。  
 まぁそれでも Arch linux なら USB メモリで boot して  
@@ -486,10 +484,11 @@ tmux を起動したら zsh が起動するようにしておいて
     echo "export HISTCONTROL=ignoredups" >> ${HOME}/.bashrc
 
 terminal を開いて  
-screenstart あるいは tmuxstart で起動すると  
+tmuxstart で起動すると  
 セッションがあればそれを利用しなければ新規セッションで zsh が起動する  
 これで bash の履歴は tmuxstart しかたまらないので  
-export HISTCONTROL=ignoredups で履歴が増えないようにする  
+.bashrc の export HISTCONTROL=ignoredups で bash の履歴が増えないようにする  
+screenstart は tmux が起動できない事態になった時の保険として残しておく  
 
 # Powertop
 
@@ -658,6 +657,7 @@ emacs とかぶるので shift+Space で mozc を利用する
 これで reboot  
 
 #### mozc 用辞書インストール
+
 <http://mediadesign.jp/article-4218/>  
 住所とかキーボードで打ちたくないから  
 郵便番号を入れると住所がでるようにしておく  
@@ -721,7 +721,6 @@ oh-my-fish をインストールする
 
 	curl -L http://get.oh-my.fish | fish
 	
-
 ### font の設定
 
 gnome-tweak-tool で以下を設定  
