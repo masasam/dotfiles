@@ -42,12 +42,12 @@ install: ## install development environment powerd by arch linux
 	cat ${HOME}/.bashrc | grep tmuxstart || echo "alias tmuxstart='tmux new-session -A -s main'" >> ${HOME}/.bashrc
 	sudo pacman -S go zsh git vim dropbox nautilus-dropbox tmux keychain zsh-completions \
 	gnome-tweak-tool xsel sylpheed emacs curl archlinux-wallpaper evince inkscape gimp unrar \
-	file-roller vlc xclip atool trash-cli the_silver_searcher powertop cifs-utils gnome-system-monitor \
+	file-roller vlc xclip atool trash-cli the_silver_searcher powertop cifs-utils \
 	gvfs gvfs-smb seahorse gnome-keyring cups-pdf redshift eog mcomix libreoffice-fresh-ja \
 	firefox firefox-i18n-ja otf-ipafont openssh pkgfile baobab dconf-editor rsync elixir \
 	nodejs phantomjs parcellite whois nmap poppler-data rtmpdump ffmpeg swftools fish sbcl \
 	aspell aspell-en httperf gdb ripgrep hub wmctrl transmission-gtk linux-docs ansible \
-	pwgen pygmentize arch-install-scripts lilyterm termite
+	pwgen pygmentize arch-install-scripts lilyterm termite htop
 	mkdir -p ${HOME}/{bin,src}
 	go get -u github.com/nsf/gocode
 	go get -u github.com/rogpeppe/godef

@@ -248,7 +248,6 @@ gnome は必要最小限だけいれる
 	pacman -S gnome-keyring
 	pacman -S gnome-shell-extensions
 	pacman -S gnome-tweak-tool
-	pacman -S gnome-system-monitor 
 	pacman -S nautilus
 	pacman -S gedit
 	
@@ -358,6 +357,7 @@ pacman で入るものをインストール
 	sudo pacman -S gdb ripgrep hub wmctrl
 	sudo pacman -S transmission-gtk linux-docs ansible pwgen pygmentize
 	sudo pacman -S arch-install-scripts
+	sudo pacman -S htop
 
 yaourt で入れるものをインストール  
 
