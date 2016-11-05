@@ -314,24 +314,24 @@ alias getgitignore='_getgitignore $(_getgitignore list | sed "s/,/\n/g" | peco )
 
 
 function blogpost() {
-    cd ~/git/blog;
-    hugo new post/$1.md --editor=emacsclient;
+    cd ~/git/blog
+    hugo new post/$1.md --editor=emacsclient
     cd -
 }
 
 function imgpost() {
     cd
-    ~/git/image/image;
-    git add .;
-    git commit -m 'add pic';
-    git push;
+    ~/git/image/image
+    git add .
+    git commit -m 'add pic'
+    git push
     cd -
 }
 
 function publish() {
-    cd ~/git/blog;
-    hugo;
-    rsync -av --delete ~/git/blog/public/ blogdomain:/home/blog/;
+    cd ~/git/blog
+    hugo
+    rsync -av --delete ~/git/blog/public/ blogdomain:/home/blog/
     cd -
 }
 
