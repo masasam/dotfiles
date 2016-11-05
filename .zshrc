@@ -96,14 +96,14 @@ zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
 
 # プロンプト
 case ${UID} in
-  0)
-  PROMPT="%{$fg_bold[green]%}%m%{$fg_bold[red]%}#%{$reset_color%} "
-  PROMPT2="%{$fg[magenta]%}%_%{$reset_color%}%{$fg_bold[white]%}>>%{$reset_color%} "
-  ;;
-  *)
-  PROMPT="%{$fg_bold[cyan]%}%m%{$fg_bold[white]%}%%%{$reset_color%} "
-  PROMPT2="%{$fg[magenta]%}%_%{$reset_color%}%{$fg_bold[white]%}>>%{$reset_color%} "
-  ;;
+    0)
+	PROMPT="%{$fg_bold[green]%}%m%{$fg_bold[red]%}#%{$reset_color%} "
+	PROMPT2="%{$fg[magenta]%}%_%{$reset_color%}%{$fg_bold[white]%}>>%{$reset_color%} "
+	;;
+    *)
+	PROMPT="%{$fg_bold[cyan]%}%m%{$fg_bold[white]%}%%%{$reset_color%} "
+	PROMPT2="%{$fg[magenta]%}%_%{$reset_color%}%{$fg_bold[white]%}>>%{$reset_color%} "
+	;;
 esac
 
 # 右プロンプトに現在地を表示。これのおかげで入力位置がウロウロしない。
@@ -128,7 +128,7 @@ umask 022
 # LS_COLORS
 # 'dircolors -p'で出力されるものに手を加えて保存したものを読み込んでる。
 if [ -f ~/.dir_colors ]; then
-  eval `dircolors -b ~/.dir_colors`
+    eval `dircolors -b ~/.dir_colors`
 fi
 # 補完候補もLS_COLORSに合わせて色づけ。
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
@@ -150,13 +150,13 @@ RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
 
 # screenに現在実行したコマンド名を渡す
 case "${TERM}" in screen-256color)
-    preexec() {
-        echo -ne "\ek#${1%% *}\e\\"
-    }
-    precmd() {
-        echo -ne "\ek$(basename $(pwd))\e\\"
-	vcs_info
-    }
+		      preexec() {
+			  echo -ne "\ek#${1%% *}\e\\"
+		      }
+		      precmd() {
+			  echo -ne "\ek$(basename $(pwd))\e\\"
+			  vcs_info
+		      }
 esac
 
 
@@ -169,7 +169,7 @@ WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 
 # Arch linux でコマンドがないとき誘導 sudo pacman -S pkgfile
 if [ -f /usr/share/doc/pkgfile/command-not-found.zsh ]; then
-  source /usr/share/doc/pkgfile/command-not-found.zsh
+    source /usr/share/doc/pkgfile/command-not-found.zsh
 fi
 
 
@@ -191,8 +191,7 @@ alias locate="locate -i"
 alias lv="lv -c -T8192"
 alias du="du -h"
 alias df="df -h"
-alias open="gnome-open"
-alias screen='screen -D -RR'
+alias open="xdg-open"
 alias -g C='| xsel --input --clipboard'
 alias sudotramp='emacsclient -a emacs -n /sudo:$(grep -iE "^[[:space:]]host[[:space:]]+[^*]" ~/.ssh/config|peco|awk "{print \$2}"):/ & wmctrl -a emacs'
 alias tramp='emacsclient -a emacs -n /ssh:$(grep -iE "^[[:space:]]host[[:space:]]+[^*]" ~/.ssh/config|peco|awk "{print \$2}"):/ & wmctrl -a emacs'
@@ -211,13 +210,13 @@ alias e='emacsclient'
 
 
 # Invoke the ``dired'' of current working directory in Emacs buffer.
-function dired () {
-  emacsclient -e "(dired \"${1:-$PWD}\")" & wmctrl -a emacs
+function dired() {
+    emacsclient -e "(dired \"${1:-$PWD}\")" & wmctrl -a emacs
 }
 
 
 # Chdir to the ``default-directory'' of currently opened in Emacs buffer.
-function cde () {
+function cde() {
     EMACS_CWD=`emacsclient -e "
      (expand-file-name
       (with-current-buffer
@@ -233,15 +232,15 @@ function cde () {
 
 # pecoでC-rのヒストリ検索を置き換え
 function peco-select-history() {
-  local tac
-  if which tac > /dev/null; then
-    tac="tac"
-  else
-    tac="tail -r"
-  fi
-  BUFFER=$(\history -n 1 | eval $tac | peco)
-  CURSOR=$#BUFFER
-  zle clear-screen
+    local tac
+    if which tac > /dev/null; then
+	tac="tac"
+    else
+	tac="tail -r"
+    fi
+    BUFFER=$(\history -n 1 | eval $tac | peco)
+    CURSOR=$#BUFFER
+    zle clear-screen
 }
 zle -N peco-select-history
 bindkey '^r' peco-select-history
@@ -251,21 +250,21 @@ bindkey '^r' peco-select-history
 autoload -Uz is-at-least
 if is-at-least 4.3.11
 then
-  autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
-  add-zsh-hook chpwd chpwd_recent_dirs
-  zstyle ':chpwd:*' recent-dirs-max 5000
-  zstyle ':chpwd:*' recent-dirs-default yes
-  zstyle ':completion:*' recent-dirs-insert both
+    autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
+    add-zsh-hook chpwd chpwd_recent_dirs
+    zstyle ':chpwd:*' recent-dirs-max 5000
+    zstyle ':chpwd:*' recent-dirs-default yes
+    zstyle ':completion:*' recent-dirs-insert both
 fi
 
 
-function peco-cdr () {
-	local selected_dir=$(cdr -l | awk '{ print $2 }' | peco)
-	if [ -n "$selected_dir" ]; then
-		BUFFER="cd ${selected_dir}"
-		zle accept-line
-	fi
-	zle clear-screen
+function peco-cdr() {
+    local selected_dir=$(cdr -l | awk '{ print $2 }' | peco)
+    if [ -n "$selected_dir" ]; then
+	BUFFER="cd ${selected_dir}"
+	zle accept-line
+    fi
+    zle clear-screen
 }
 zle -N peco-cdr
 bindkey '^xr' peco-cdr
@@ -273,25 +272,25 @@ bindkey '^xr' peco-cdr
 
 # peco find directory
 function peco-find() {
-  local current_buffer=$BUFFER
-  local search_root=""
-  local file_path=""
+    local current_buffer=$BUFFER
+    local search_root=""
+    local file_path=""
 
-  if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
-    search_root=`git rev-parse --show-toplevel`
-  else
-    search_root=`pwd`
-  fi
-  file_path="$(find ${search_root} -maxdepth 5 -a \! -regex '.*/\..*' | peco)"
-  BUFFER="${current_buffer} ${file_path}"
-  CURSOR=$#BUFFER
-  zle clear-screen
+    if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
+	search_root=`git rev-parse --show-toplevel`
+    else
+	search_root=`pwd`
+    fi
+    file_path="$(find ${search_root} -maxdepth 5 -a \! -regex '.*/\..*' | peco)"
+    BUFFER="${current_buffer} ${file_path}"
+    CURSOR=$#BUFFER
+    zle clear-screen
 }
 zle -N peco-find
 bindkey '^x^f' peco-find
 
 
-function peco-src () {
+function peco-src() {
     local selected_dir=$(ghq list --full-path | peco --query "$LBUFFER")
     if [ -n "$selected_dir" ]; then
         BUFFER="cd ${selected_dir}"
@@ -303,43 +302,52 @@ zle -N peco-src
 bindkey '^]' peco-src
 
 
-function emacsag () {
-  emacsclient -n $(ag $@ | peco --query "$LBUFFER" | awk -F : '{print "+" $2 " " $1}')
+function emacsag() {
+    emacsclient -n $(ag $@ | peco --query "$LBUFFER" | awk -F : '{print "+" $2 " " $1}')
 }
 
 
-function _getgitignore() { curl -s https://www.gitignore.io/api/$1 ;}
+function _getgitignore() {
+    curl -s https://www.gitignore.io/api/$1
+}
 alias getgitignore='_getgitignore $(_getgitignore list | sed "s/,/\n/g" | peco )'
 
 
-function blogpost () { cd ~/git/blog; hugo new post/$1.md --editor=emacsclient; cd - }
+function blogpost() {
+    cd ~/git/blog;
+    hugo new post/$1.md --editor=emacsclient;
+    cd -
+}
 
-function imgpost () { cd ~/git/image/image; git add .; git commit -m 'add pic'; git push; cd - }
+function imgpost() {
+    cd
+    ~/git/image/image;
+    git add .;
+    git commit -m 'add pic';
+    git push;
+    cd -
+}
 
-function publish () { cd ~/git/blog; hugo; rsync -av --delete ~/git/blog/public/ blogdomain:/home/blog/; cd - }
+function publish() {
+    cd ~/git/blog;
+    hugo;
+    rsync -av --delete ~/git/blog/public/ blogdomain:/home/blog/;
+    cd -
+}
 
 
 # cdしたらls
-function chpwd() { ls -v -F --color=auto }
-
-
-# generate password
-function genpasswd() {
-if [ $# -eq 1 ]; then local GENPASSLINE=$1;
-elif [ $# -eq 0 ]; then local GENPASSLINE=8;
-else echo "Please give the number of digits in the password you want to generate in the first argument. With no arguments to generate the 8-digit password"
-fi;
-  tr -dc a-z0-9 < /dev/urandom | head -c ${GENPASSLINE} | xargs
+function chpwd() {
+    ls -v -F --color=auto
 }
 
 
 # Gitのリポジトリのトップレベルにcd
-function gitroot()
-{
-cd ./$(git rev-parse --show-cdup)
-if [ $# = 1 ]; then
-cd $1
-fi
+function gitroot() {
+    cd ./$(git rev-parse --show-cdup)
+    if [ $# = 1 ]; then
+	cd $1
+    fi
 }
 
 
@@ -370,7 +378,7 @@ zle -N peco-man
 
 
 # peco-src-remote
-function peco-src-remote () {
+function peco-src-remote() {
     hub browse $(ghq list | peco | cut -d "/" -f 2,3)
 }
 zle -N peco-src-remote
@@ -378,8 +386,14 @@ bindkey '^x^g' peco-src-remote
 
 
 # terminalからmagit-statusできるように
-function magit-status(){
+function magit-status() {
     emacsclient -e "(magit-status \"./$(git rev-parse --show-cdup)\")" 2>&1 >/dev/null & wmctrl -a emacs
 }
 zle -N magit-status
 bindkey '^xg' magit-status
+
+
+# globalip
+function globalip() {
+    curl ifconfig.me
+}
