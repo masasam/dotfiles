@@ -13,10 +13,10 @@ init: ## deploy this dotfiles
 	ln -vsf ${PWD}/.config/fish/conf.d/omf.fish   ${HOME}/.config/fish/conf.d/omf.fish
 	ln -vsf ${PWD}/.config/parcellite/parcelliterc   ${HOME}/.config/parcellite/parcelliterc
 	ln -vsf ${PWD}/.config/gtk-3.0/bookmarks   ${HOME}/.config/gtk-3.0/bookmarks
-	test -L ${HOME}/.config/lilyterm || rm -rf ${HOME}/.config/lilyterm
-	ln -vsf ${PWD}/.config/lilyterm   ${HOME}/.config/lilyterm
-	test -L ${HOME}/.config/termite || rm -rf ${HOME}/.config/termite
-	ln -vsf ${PWD}/.config/termite   ${HOME}/.config/termite
+	mkdir -p ${HOME}/.config/lilyterm
+	ln -vsf ${PWD}/.config/lilyterm/default.conf   ${HOME}/.config/lilyterm/default.conf
+	mkdir -p ${HOME}/.config/termite
+	ln -vsf ${PWD}/.config/termite/config   ${HOME}/.config/termite/config
 	test -L ${HOME}/.peco || rm -rf ${HOME}/.peco
 	ln -vsfn ${PWD}/.peco   ${HOME}/.peco
 	test -L ${HOME}/.emacs.d || rm -rf ${HOME}/.emacs.d
