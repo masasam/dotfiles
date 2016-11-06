@@ -2,6 +2,6 @@
 # name: src
 # key: src
 # --
-<a href="https://raw.githubusercontent.com/archmasa/dotfiles/image/image/$1">
-<img src="https://raw.githubusercontent.com/archmasa/dotfiles/image/image/$1" width="100%">
+<a href="https://raw.githubusercontent.com/masasam/dotfiles/image/image/$1">
+<img src="https://raw.githubusercontent.com/masasam/dotfiles/image/image/$1" width="100%">
 </a>
