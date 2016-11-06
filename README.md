@@ -100,7 +100,7 @@ Why Arch linux ?
    Arch のパッケージは原則としてパッチをあてないバニラのソースからビルドする方針になっていて  
    Arch 固有の問題が起きにくいからよい  
 
-- 軽い!!  インストールが終わって Emacs Terminal Chrome を起動して top した画像  
+- 軽い!!  インストールが終わって Emacs Terminal Chrome を起動して htop した画像  
 
 ![top](https://raw.githubusercontent.com/masasam/dotfiles/image/image/top.png)
 
@@ -679,7 +679,6 @@ mozc の設定が完成したら
 	
 で mozc の設定は Dropbox に投げておく  
 これでもう二度と設定しなくてもよくなるだろう  
-
 
 # Sylpheed
 
