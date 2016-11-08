@@ -465,8 +465,6 @@ terminal は lilyterm と termite を使う
 
 #### .bashrc
 
-どんな時でも bash が起動しないと困るから  
-.bashrc は以下の３つのエイリアスを追記する以外はしない  
 zsh をデフォルトシェルにして zsh をカスタマイズしまくると  
 login できなくなって大変困ったことになるかもしれない。  
 まぁそれでも Arch linux なら USB メモリで boot して  
@@ -478,6 +476,8 @@ login できなくなって大変困ったことになるかもしれない。
 zsh をデフォルトシェルにはしない。  
 tmux を起動したら zsh が起動するようにしておいて  
 .bashrc はほぼディストリデフォルトにしておく  
+どんな時でも bash が起動しないと困るから  
+.bashrc は以下の３つのエイリアスを追記する以外はしない  
 
     echo "alias screenstart='screen -D -RR'" >> ~/.bashrc
     echo "alias tmuxstart='tmux new-session -A -s main'" >> ~/.bashrc
