@@ -359,6 +359,7 @@ pacman で入るものをインストール
 	sudo pacman -S arch-install-scripts
 	sudo pacman -S htop
 	sudo pacman -S neovim youtube-dl
+	sudo pacman -S pandoc texlive-langjapanese
 
 yaourt で入れるものをインストール  
 
