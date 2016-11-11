@@ -49,7 +49,7 @@ install: ## install development environment powerd by arch linux
 	nodejs phantomjs parcellite whois nmap poppler-data rtmpdump ffmpeg swftools fish sbcl \
 	aspell aspell-en httperf gdb ripgrep hub wmctrl transmission-gtk linux-docs ansible \
 	pwgen pygmentize arch-install-scripts lilyterm termite htop neovim youtube-dl pandoc \
-	texlive-langjapanese
+	texlive-langjapanese texlive-latexextra
 	mkdir -p ${HOME}/{bin,src}
 	go get -u github.com/nsf/gocode
 	go get -u github.com/rogpeppe/godef
