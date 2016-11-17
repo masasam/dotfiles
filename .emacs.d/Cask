@@ -72,6 +72,8 @@
 (depends-on "open-junk-file")
 (depends-on "direx")
 (depends-on "eldoc-extension")
+(depends-on "ansible")
+(depends-on "yaml-mode")
 
 ;; programming modes
 (depends-on "go-mode")
