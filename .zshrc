@@ -196,8 +196,7 @@ alias -g C='| xsel --input --clipboard'
 alias sudotramp='emacsclient -a emacs -n /sudo:$(grep -iE "^[[:space:]]host[[:space:]]+[^*]" ~/.ssh/config|peco|awk "{print \$2}"):/ & wmctrl -a emacs'
 alias tramp='emacsclient -a emacs -n /ssh:$(grep -iE "^[[:space:]]host[[:space:]]+[^*]" ~/.ssh/config|peco|awk "{print \$2}"):/ & wmctrl -a emacs'
 alias trackpointspeed='xinput --set-prop 10 "Device Accel Constant Deceleration"'
-alias caskupdate="cp -R ${HOME}/.emacs.d/.cask /tmp/`date '+%Y%m%d%H%M%S'`;
-cd ${HOME}/.emacs.d/;   cask upgrade;   cask update;   cd -"
+alias caskupdate="find ${HOME}/Dropbox/emacs/cask -name '*.tar' -mtime +7 -delete;   tar cf ${HOME}/Dropbox/emacs/cask/`date '+%Y%m%d%H%M%S'`.tar ${HOME}/.emacs.d/.cask;   cd ${HOME}/.emacs.d/;   cask upgrade;   cask update;   cd -"
 alias caskinstall='cd ${HOME}/.emacs.d/;   cask upgrade;   cask install;   cd -'
 
 
