@@ -74,6 +74,7 @@
 (depends-on "eldoc-extension")
 (depends-on "ansible")
 (depends-on "yaml-mode")
+(depends-on "helm-ghq")
 
 ;; programming modes
 (depends-on "go-mode")
