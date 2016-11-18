@@ -378,6 +378,14 @@ zle -N peco-books
 bindkey '^xb' peco-books
 
 
+# キーバインド
+function peco-keybinds () {
+  zle $(bindkey | peco | cut -d " " -f 2)
+}
+zle -N peco-keybinds
+bindkey '^x^b' peco-keybinds
+
+
 # globalip
 function globalip() {
     curl ifconfig.me
