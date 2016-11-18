@@ -356,7 +356,7 @@ function peco-src-remote() {
     hub browse $(ghq list | peco | cut -d "/" -f 2,3)
 }
 zle -N peco-src-remote
-bindkey '^x^g' peco-src-remote
+bindkey '^x^s' peco-src-remote
 
 
 # terminalからmagit-statusできるように
@@ -368,10 +368,10 @@ bindkey '^xg' magit-status
 
 
 # pecoで書籍を開く
-function peco-books () {
+function peco-books() {
   local book="$(find ~/Dropbox/books -type f | peco)"
   if [ -n "$book" ]; then
-    open $book
+      open $book
   fi
 }
 zle -N peco-books
@@ -379,11 +379,18 @@ bindkey '^xb' peco-books
 
 
 # キーバインド
-function peco-keybinds () {
-  zle $(bindkey | peco | cut -d " " -f 2)
+function peco-keybinds() {
+    zle $(bindkey | peco | cut -d " " -f 2)
 }
 zle -N peco-keybinds
 bindkey '^x^b' peco-keybinds
+
+
+function peco-godoc() {
+    godoc $(ghq list --full-path | peco) | less
+}
+zle -N peco-godoc
+bindkey '^x^v' peco-godoc
 
 
 # globalip
