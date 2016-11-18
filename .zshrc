@@ -367,6 +367,17 @@ zle -N magit-status
 bindkey '^xg' magit-status
 
 
+# pecoで書籍を開く
+function peco-books () {
+  local book="$(find ~/Dropbox/books -type f | peco)"
+  if [ -n "$book" ]; then
+    open $book
+  fi
+}
+zle -N peco-books
+bindkey '^xb' peco-books
+
+
 # globalip
 function globalip() {
     curl ifconfig.me
