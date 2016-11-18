@@ -54,6 +54,7 @@ install: ## install development environment powerd by arch linux
 	go get -u github.com/nsf/gocode
 	go get -u github.com/rogpeppe/godef
 	go get -u golang.org/x/tools/cmd/goimports
+	go get -u github.com/motemen/ghq
 	yaourt google-chrome
 	yaourt peco-git
 	yaourt noto-fonts-cjk

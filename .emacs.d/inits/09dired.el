@@ -7,3 +7,8 @@
   (require 'f)
   (when buffer-file-name
     (setq default-directory (f-dirname buffer-file-name))))
+
+;; dropboxをdiredで開く
+(defun dropbox ()
+  (interactive)
+  (find-file "~/Dropbox/"))

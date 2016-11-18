@@ -131,16 +131,3 @@
 ;; emacs c source dir:
 (setq find-function-C-source-directory "~/Dropbox/emacs/emacs-25.1/emacs-25.1/src")
 
-
-;; 移動系ショートカット
-(defun dotfiles ()
-  (interactive)
-  (find-file "~/git/dotfiles/"))
-
-(defun dropbox ()
-  (interactive)
-  (find-file "~/Dropbox/"))
-
-(defun git ()
-  (interactive)
-  (find-file "~/git/"))
