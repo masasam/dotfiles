@@ -17,7 +17,7 @@
 ;; init-loader
 (custom-set-variables
  '(init-loader-show-log-after-init 'error-only))
-(init-loader-load "~/.emacs.d/inits")
+(init-loader-load)
 
 (provide 'init)
 ;;; init.el ends here
