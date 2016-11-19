@@ -5,6 +5,7 @@
 (with-eval-after-load 'go-mode
   ;; auto-complete
   (require 'go-autocomplete)
+  (require 'auto-complete-config)
 
   ;; company-mode
   ;(add-to-list 'company-backends 'company-go)
