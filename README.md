@@ -308,6 +308,9 @@ ghq で dotfiles を用意
 	yaourt ghq
 	git config --global ghq.root ~/src
 	ghq get -p masasam/dotfiles
+	ghq look dotfiles
+	make install
+	make init
 	
 	# 以下は github の画像投稿用なので自分用
 	cd ~/Pictures
