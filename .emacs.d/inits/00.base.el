@@ -99,6 +99,7 @@
 ;; 警告音もフラッシュも全て無効(警告音が完全に鳴らなくなるので注意)
 (setq ring-bell-function 'ignore)
 
+;; C-x C-SPC C-SPC …でどんどん過去のマークを遡る
 ;; C-u C-SPC C-SPC …でどんどん過去のマークを遡る
 (setq set-mark-command-repeat-pop t)
 
