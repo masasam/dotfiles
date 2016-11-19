@@ -75,6 +75,7 @@
 (depends-on "ansible")
 (depends-on "yaml-mode")
 (depends-on "helm-ghq")
+(depends-on "ctags-update")
 
 ;; programming modes
 (depends-on "go-mode")
