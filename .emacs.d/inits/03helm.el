@@ -15,6 +15,8 @@
 
 
 
+;; gloval-markをhelmでたどる
+(define-key global-map (kbd "C-x m") 'helm-all-mark-rings)
 ;; helm C-hで前の文字削除
 (define-key helm-map (kbd "C-h") 'delete-backward-char)
 ;; helm C-wで分節削除
