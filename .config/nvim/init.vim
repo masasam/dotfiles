@@ -24,7 +24,7 @@ syntax on
 "filetype plugin on
 "filetype indent on
 set laststatus=2
-set statusline=%F%m%=%l/%L,%c\ %{'['.(&fenc!=''?&fenc:&enc).']\ ['.&fileformat.']'}
+set statusline=%F%m%=(%l/%L,%c)\ %{fugitive#statusline()}\ %{'['.(&fenc!=''?&fenc:&enc).']\ ['.&fileformat.']'}
 
 
 "dein Scripts-----------------------------
@@ -47,7 +47,7 @@ call dein#add('Shougo/neosnippet.vim')
 call dein#add('Shougo/neosnippet-snippets')
 call dein#add('Shougo/deoplete.nvim')
 call dein#add('Shougo/denite.nvim')
-call dein#add('thinca/vim-quickrun')
+call dein#add('tpope/vim-fugitive')
 
 " You can specify revision/branch/tag.
 call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
