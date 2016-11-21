@@ -20,9 +20,6 @@ set hidden
 set history=2000
 set paste
 set cursorline
-syntax on
-"filetype plugin on
-"filetype indent on
 set laststatus=2
 set statusline=%F%m%=[%p%%]\ (%l,%c)\ %{fugitive#statusline()}\ %{'['.(&fenc!=''?&fenc:&enc).']\ ['.&fileformat.']'}
 
@@ -47,6 +44,7 @@ call dein#add('Shougo/neosnippet-snippets')
 call dein#add('Shougo/deoplete.nvim')
 call dein#add('Shougo/denite.nvim')
 call dein#add('tpope/vim-fugitive')
+call dein#add('vim-scripts/twilight')
 
 " You can specify revision/branch/tag.
 call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
@@ -64,3 +62,39 @@ if dein#check_install()
 endif
 
 "End dein Scripts-------------------------
+
+" When insert mode, change statusline.
+let g:hi_insert = 'hi StatusLine gui=None guifg=Black guibg=Yellow cterm=None ctermfg=Black ctermbg=Yellow'
+
+if has('syntax')
+  augroup InsertHook
+    autocmd!
+    autocmd InsertEnter * call s:StatusLine('Enter')
+    autocmd InsertLeave * call s:StatusLine('Leave')
+  augroup END
+endif
+
+let s:slhlcmd = ''
+function! s:StatusLine(mode)
+  if a:mode == 'Enter'
+    silent! let s:slhlcmd = 'highlight ' . s:GetHighlight('StatusLine')
+    silent exec g:hi_insert
+  else
+    highlight clear StatusLine
+    silent exec s:slhlcmd
+  endif
+endfunction
+
+function! s:GetHighlight(hi)
+  redir => hl
+  exec 'highlight '.a:hi
+  redir END
+  let hl = substitute(hl, '[\r\n]', '', 'g')
+  let hl = substitute(hl, 'xxx', '', '')
+  return hl
+endfunction
+
+
+syntax on
+highlight StatusLine term=none cterm=none ctermfg=white ctermbg=black
+"highlight StatusLine term=none cterm=none ctermfg=grey ctermbg=black
