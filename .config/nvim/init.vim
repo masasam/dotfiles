@@ -24,8 +24,7 @@ syntax on
 "filetype plugin on
 "filetype indent on
 set laststatus=2
-set statusline=%F%m%=(%l/%L,%c)\ %{fugitive#statusline()}\ %{'['.(&fenc!=''?&fenc:&enc).']\ ['.&fileformat.']'}
-
+set statusline=%F%m%=[%p%%]\ (%l,%c)\ %{fugitive#statusline()}\ %{'['.(&fenc!=''?&fenc:&enc).']\ ['.&fileformat.']'}
 
 "dein Scripts-----------------------------
 if &compatible
