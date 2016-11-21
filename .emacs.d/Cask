@@ -76,6 +76,7 @@
 (depends-on "yaml-mode")
 (depends-on "helm-ghq")
 (depends-on "ctags-update")
+(depends-on "flycheck-title")
 
 ;; programming modes
 (depends-on "go-mode")
