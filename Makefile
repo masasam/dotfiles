@@ -17,6 +17,9 @@ init: ## deploy this dotfiles
 	ln -vsf ${PWD}/.config/lilyterm/default.conf   ${HOME}/.config/lilyterm/default.conf
 	mkdir -p ${HOME}/.config/termite
 	ln -vsf ${PWD}/.config/termite/config   ${HOME}/.config/termite/config
+	mkdir -p ${HOME}/.config/nvim
+	ln -vsf ${PWD}/.config/nvim/init.vim   ${HOME}/.config/nvim/init.vim
+	ln -vsf ${PWD}/.config/nvim/installer.sh   ${HOME}/.config/nvim/installer.sh
 	test -L ${HOME}/.peco || rm -rf ${HOME}/.peco
 	ln -vsfn ${PWD}/.peco   ${HOME}/.peco
 	test -L ${HOME}/.emacs.d || rm -rf ${HOME}/.emacs.d
