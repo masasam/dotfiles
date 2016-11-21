@@ -12,8 +12,6 @@ set ignorecase
 set smartcase
 set nowrapscan
 set hlsearch
-syntax on
-filetype plugin on
 set wrap
 set incsearch
 set ruler
@@ -21,6 +19,13 @@ set showcmd
 set hidden
 set history=2000
 set paste
+set cursorline
+syntax on
+"filetype plugin on
+"filetype indent on
+set laststatus=2
+set statusline=%F%m%=%l/%L,%c\ %{'['.(&fenc!=''?&fenc:&enc).']\ ['.&fileformat.']'}
+
 
 "dein Scripts-----------------------------
 if &compatible
