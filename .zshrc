@@ -196,6 +196,7 @@ alias trackpointspeed='xinput --set-prop 10 "Device Accel Constant Deceleration"
 alias caskupdate="cd ${HOME}/Dropbox/emacs/cask;    ls | wc -l | grep 4 && rm -fr `ls -rt | head -n 1`;    tar cfz ${HOME}/Dropbox/emacs/cask/`date '+%Y%m%d%H%M%S'`.tar.gz -C ${HOME}/.emacs.d .cask;    cmp -s `ls -rt | tail -n 1` `ls -rt | tail -n 2 | head -n 1` && rm -fr `ls -rt | tail -n 1`;   cd ${HOME}/.emacs.d/;   cask upgrade;   cask update;    cd -"
 alias caskinstall='cd ${HOME}/.emacs.d/;   cask upgrade;   cask install;   cd -'
 alias goupdate='go get -u all'
+alias vim=nvim
 
 
 # PATH
