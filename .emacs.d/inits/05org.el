@@ -23,3 +23,8 @@
          (file "~/Dropbox/emacs/todo.org")
          "* %?" :clock-in t :clock-resume t)
          ))
+
+;; org-noteを開く
+(defun notes ()
+  (interactive)
+  (find-file "~/Dropbox/emacs/notes.org"))
