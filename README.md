@@ -591,13 +591,13 @@ Intel HD Graphics のティアリング解消
 ![activity](https://raw.githubusercontent.com/masasam/image/image/activity.png)
 アクティビティ > 設定 > 検索  
 全部 off にする  
-アプリの起動にしか使わん  
+アプリの起動にしか使わないから  
 
 アクティビティ > 設定 > キーボード > ショートカット  
 
 >システム→アクティビティ画面を表示する  を Alt+Space  
 
-Alt+space で alfred っぽく使う
+Alt+space でランチャーっぽく使う
 
 >Ctrl-u  
 
@@ -605,7 +605,7 @@ Alt+space で alfred っぽく使う
 
 Activity 画面では Ctrl-h で backspace できないのでつらいがこれでいける  
 Ctrl-h できないのは誰得？  
-まぁ Ctrl-u で凌げるからよし。実際のところアプリ呼び出すだけやしね  
+まぁ Ctrl-u で凌げるからよし。実際のところアプリ呼び出すだけやし  
 
 # Firefox
 firefox sync を有効化  
@@ -634,6 +634,9 @@ chrome の google 検索のデフォルトは vi キーバインドだが気に�
 >Ctrl+R 再読み込み  
 >Ctrl+tab タブ移動  
 >Ctrl+K 検索  
+>Ctrl+f I-search
+>Ctrl+g I-search 中に押すと次の候補へ
+>Ctrl+shift+g I-search 中に押すと前の候補へ
 
 許容範囲なのでデフォルトで使う  
 
@@ -721,12 +724,6 @@ Alt - Tab
 で sylpheed がでてこないのでよい  
 コード書いてる時はメールなど見たくないものだ。  
 
-### oh-my-fish ###
-
-oh-my-fish をインストールする
-
-	curl -L http://get.oh-my.fish | fish
-	
 ### font の設定
 
 gnome-tweak-tool で以下を設定  
