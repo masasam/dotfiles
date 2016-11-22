@@ -93,4 +93,3 @@
 
 ;; theme
 (depends-on "material-theme")
-(depends-on "cyberpunk-theme")
