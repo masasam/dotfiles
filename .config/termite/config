@@ -78,8 +78,8 @@ filter_unmatched_urls = true
 # Solarized dark color scheme
 
 [colors]
-foreground = #839496
-foreground_bold = #eee8d5
+foreground = #ffffff
+foreground_bold = #ffffff
 #foreground_dim = #888888
 background = #002b36
 cursor = #93a1a1
