@@ -77,6 +77,7 @@
 (depends-on "helm-ghq")
 (depends-on "ctags-update")
 (depends-on "flycheck-title")
+(depends-on "ac-etags")
 
 ;; programming modes
 (depends-on "go-mode")
