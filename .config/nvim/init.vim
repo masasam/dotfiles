@@ -45,6 +45,7 @@ call dein#add('Shougo/deoplete.nvim')
 call dein#add('Shougo/denite.nvim')
 call dein#add('tpope/vim-fugitive')
 call dein#add('vim-scripts/twilight')
+call dein#add('soramugi/auto-ctags.vim')
 
 " You can specify revision/branch/tag.
 call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
@@ -64,7 +65,7 @@ endif
 "End dein Scripts-------------------------
 
 " When insert mode, change statusline.
-let g:hi_insert = 'hi StatusLine gui=None guifg=Black guibg=Yellow cterm=None ctermfg=Black ctermbg=Yellow'
+let g:hi_insert = 'hi StatusLine gui=None guifg=Black guibg=Yellow cterm=None ctermfg=Black ctermbg=Green'
 
 if has('syntax')
   augroup InsertHook
