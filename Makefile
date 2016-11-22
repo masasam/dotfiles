@@ -46,7 +46,7 @@ install: ## install development environment powerd by arch linux
 	cat ${HOME}/.bashrc | grep ignoredups || echo "export HISTCONTROL=ignoredups" >> ${HOME}/.bashrc
 	sudo pacman -S go zsh git vim dropbox nautilus-dropbox tmux keychain zsh-completions \
 	gnome-tweak-tool xsel sylpheed emacs curl archlinux-wallpaper evince inkscape gimp unrar \
-	file-roller vlc xclip atool trash-cli the_silver_searcher powertop cifs-utils \
+	file-roller vlc xclip atool trash-cli the_silver_searcher screen powertop cifs-utils \
 	gvfs gvfs-smb seahorse gnome-keyring cups-pdf redshift eog mcomix libreoffice-fresh-ja \
 	firefox firefox-i18n-ja otf-ipafont openssh pkgfile baobab dconf-editor rsync elixir \
 	nodejs phantomjs parcellite whois nmap poppler-data rtmpdump ffmpeg swftools fish sbcl \

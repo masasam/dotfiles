@@ -338,7 +338,7 @@ pacman で入るものをインストール
     sudo pacman -S tmux
     sudo pacman -S keychain
     sudo pacman -S gnome-tweak-tool
-    sudo pacman -S xsel
+    sudo pacman -S xsel screen
     sudo pacman -S archlinux-wallpaper
     sudo pacman -S evince inkscape gimp unrar
     sudo pacman -S file-roller vlc
