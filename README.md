@@ -366,6 +366,7 @@ pacman で入るものをインストール
 	sudo pacman -S neovim youtube-dl
 	sudo pacman -S pandoc texlive-langjapanese texlive-latexextra ctags python-pygments
 	sudo pacman -S python-neovim
+	sudo pacman -S rust cargo
 
 yaourt で入れるものをインストール  
 
