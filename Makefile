@@ -53,7 +53,7 @@ install: ## install development environment powerd by arch linux
 	aspell aspell-en httperf gdb ripgrep hub wmctrl transmission-gtk linux-docs ansible \
 	pwgen pygmentize arch-install-scripts lilyterm termite htop neovim youtube-dl pandoc \
 	texlive-langjapanese texlive-latexextra ctags python-pygments python-neovim rust cargo \
-	ibus-mozc mozc noto-fonts-cjk arc-gtk-theme slack-desktop
+	noto-fonts-cjk arc-gtk-theme slack-desktop
 	mkdir -p ${HOME}/{bin,src}
 	yaourt google-chrome
 	yaourt peco
@@ -67,6 +67,8 @@ install: ## install development environment powerd by arch linux
 	yaourt nkf
 	yaourt osx-arc-shadow
 	yaourt cmigemo-git
+	yaourt ibus-mozc
+	yaourt mozc
 	sudo pkgfile --update
 	ghq get -p github.com/nsf/gocode
 	ghq get -p github.com/rogpeppe/godef
