@@ -90,8 +90,6 @@ recover: ## recovery from backup arch linux package at dropbox
 	mkdir -p ${HOME}/{bin,src}
 	export GOPATH=${HOME}
 	export PATH="$PATH:$GOPATH/bin"
-	go get -u github.com/nsf/gocode
-	go get -u github.com/rogpeppe/godef
 	sudo pkgfile --update
 	ghq get -p github.com/nsf/gocode
 	ghq get -p github.com/rogpeppe/godef
