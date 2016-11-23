@@ -63,7 +63,7 @@ install: ## install development environment powerd by arch linux
 	yaourt global
 	yaourt hugo
 	yaourt ghq
-	yaourt casperjs-git
+	yaourt casperjs
 	yaourt nkf
 	yaourt osx-arc-shadow
 	yaourt cmigemo-git
