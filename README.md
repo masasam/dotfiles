@@ -367,32 +367,29 @@ pacman で入るものをインストール
 	sudo pacman -S pandoc texlive-langjapanese texlive-latexextra ctags python-pygments
 	sudo pacman -S python-neovim
 	sudo pacman -S rust cargo
+	sudo pacman -S ibus-mozc mozc noto-fonts-cjk arc-gtk-theme slack-desktop
 
 yaourt で入れるものをインストール  
 
-    yaourt google-chrome 
-    yaourt ttf-ricty
-    yaourt peco-git
-    yaourt noto-fonts-cjk
-    yaourt man-pages-ja
-    yaourt global
+	yaourt google-chrome
+	yaourt peco
+	yaourt ttf-ricty
+	yaourt profile-sync-daemon
+	yaourt man-pages-ja
+	yaourt global
 	yaourt hugo
 	yaourt ghq
 	yaourt casperjs-git
 	yaourt nkf
-	yaourt ibus-mozc
-	yaourt mozc
-	yaourt the_platinum_searcher
 	yaourt osx-arc-shadow
-	yaourt gtk-theme-arc
-	yaourt slack-desktop
 	yaourt cmigemo-git
 
 #### golang
 
-    go get -u github.com/nsf/gocode
-    go get -u github.com/rogpeppe/godef
-	go get -u golang.org/x/tools/cmd/goimports
+    ghq get -p github.com/nsf/gocode
+    ghq get -p github.com/rogpeppe/godef
+	ghq get -p golang.org/x/tools/cmd/goimports
+	ghq get -p github.com/motemen/ghq
 
 #### cask install
 

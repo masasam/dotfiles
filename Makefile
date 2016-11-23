@@ -52,15 +52,11 @@ install: ## install development environment powerd by arch linux
 	nodejs phantomjs parcellite whois nmap poppler-data rtmpdump ffmpeg swftools fish sbcl \
 	aspell aspell-en httperf gdb ripgrep hub wmctrl transmission-gtk linux-docs ansible \
 	pwgen pygmentize arch-install-scripts lilyterm termite htop neovim youtube-dl pandoc \
-	texlive-langjapanese texlive-latexextra ctags python-pygments python-neovim rust cargo
+	texlive-langjapanese texlive-latexextra ctags python-pygments python-neovim rust cargo \
+	ibus-mozc mozc noto-fonts-cjk arc-gtk-theme slack-desktop
 	mkdir -p ${HOME}/{bin,src}
-	go get -u github.com/nsf/gocode
-	go get -u github.com/rogpeppe/godef
-	go get -u golang.org/x/tools/cmd/goimports
-	go get -u github.com/motemen/ghq
 	yaourt google-chrome
-	yaourt peco-git
-	yaourt noto-fonts-cjk
+	yaourt peco
 	yaourt ttf-ricty
 	yaourt profile-sync-daemon
 	yaourt man-pages-ja
@@ -69,15 +65,13 @@ install: ## install development environment powerd by arch linux
 	yaourt ghq
 	yaourt casperjs-git
 	yaourt nkf
-	yaourt ibus-mozc
-	yaourt mozc
-	yaourt the_platinum_searcher
 	yaourt osx-arc-shadow
-	yaourt gtk-theme-arc
-	yaourt slack-desktop
 	yaourt cmigemo-git
 	sudo pkgfile --update
-	curl -L http://get.oh-my.fish | fish
+	ghq get -p github.com/nsf/gocode
+	ghq get -p github.com/rogpeppe/godef
+	ghq get -p golang.org/x/tools/cmd/goimports
+	ghq get -p github.com/motemen/ghq
 	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
 
 backup: ## backup arch linux package at dropbox
@@ -97,6 +91,11 @@ recover: ## recovery from backup arch linux package at dropbox
 	go get -u github.com/nsf/gocode
 	go get -u github.com/rogpeppe/godef
 	sudo pkgfile --update
+	ghq get -p github.com/nsf/gocode
+	ghq get -p github.com/rogpeppe/godef
+	ghq get -p golang.org/x/tools/cmd/goimports
+	ghq get -p github.com/motemen/ghq
+	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
 
 test: ## print environment value
 	export GOPATH=${HOME}
