@@ -282,13 +282,9 @@ NetworkManager をいれれば有線もつながる
 
 vim /etc/pacman.conf  
 
->[archlinuxfr]  
->SigLevel = Never  
->Server = http://repo.archlinux.fr/$arch  
->
->[pnsft-pur]
->SigLevel = Optional TrustAll
->Server = http://downloads.sourceforge.net/project/pnsft-aur/pur/$arch
+    [archlinuxfr]
+    SigLevel = Never
+    Server = http://repo.archlinux.fr/$arch
 
 yaourt を最新に同期する  
 
