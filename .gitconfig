@@ -41,4 +41,4 @@
 [ghq]
     root = ~/src
 [ghq "https://gitlab.com/"]
-vcs = git
+     vcs = git
