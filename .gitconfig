@@ -40,3 +40,5 @@
 	compactionHeuristic = true
 [ghq]
     root = ~/src
+[ghq "https://gitlab.com/"]
+vcs = git
