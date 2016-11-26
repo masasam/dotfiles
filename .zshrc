@@ -59,7 +59,7 @@ setopt bsd_echo
 setopt complete_in_word
 setopt equals                # =COMMAND を COMMAND のパス名に展開
 setopt extended_glob         # 拡張グロブを有効にする
-unsetopt flow_control        # (shell editor 内で) C-s, C-q を無効にする
+unsetopt flow_control        # (shell editor 内で) C-s, C-q を無効にする
 setopt no_flow_control       # C-s/C-q によるフロー制御を使わない
 setopt hash_cmds             # 各コマンドが実行されるときにパスをハッシュに入れる
 setopt no_hup                # ログアウト時にバックグラウンドジョブをkillしない
@@ -84,7 +84,7 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/s
 
 
 zstyle ':completion:*' use-cache true
-# 補完候補を ←↓↑→ で選択 (補完候補が色分け表示される)
+# 補完候補を ←↓↑→ で選択 (補完候補が色分け表示される)
 zstyle ':completion:*:default' menu select=1
 # 一意に決まるファイルがあるかもしれないから，まずそのまま補完する
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z} r:|[-_.]=**'
