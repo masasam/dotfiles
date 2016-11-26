@@ -78,6 +78,7 @@
 (depends-on "ctags-update")
 (depends-on "flycheck-title")
 (depends-on "ac-etags")
+(depends-on "org-password-manager")
 
 ;; programming modes
 (depends-on "go-mode")
