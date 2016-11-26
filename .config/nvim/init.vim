@@ -4,6 +4,7 @@ set fileformats=unix,dos,mac
 set clipboard=unnamedplus
 set number
 set title
+set hidden
 set showmatch
 set noexpandtab
 set tabstop=4
