@@ -82,7 +82,7 @@ setopt noautoremoveslash
 # sudoの補完
 zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin
 
-# 一部のコマンドライン定義は、展開時に時間のかかる処理を行う -- apt-get, dpkg (Debian), rpm (Redhat), urpmi (Mandrake), perlの-Mオプション, bogofilter (zsh 4.2.1以降), fink, mac_apps (MacOS X)(zsh 4.2.2以降)
+
 zstyle ':completion:*' use-cache true
 # 補完候補を ←↓↑→ で選択 (補完候補が色分け表示される)
 zstyle ':completion:*:default' menu select=1
@@ -112,7 +112,8 @@ RPROMPT="%{$fg_bold[white]%}[%{$reset_color%}%{$fg[cyan]%}%~%{$reset_color%}%{$f
 # emacsキーバインド
 bindkey -e
 
-# 移動した場所を記録し、cd -[TAB] で以前移動したディレクトリの候補を提示してくれて、その番号を入力することで移動出来るようになる。
+# 移動した場所を記録し、cd -[TAB] で以前移動したディレクトリの候補を提示してくれて、
+# その番号を入力することで移動出来るようになる。
 setopt auto_pushd
 
 # auto_pushdで重複するディレクトリは記録しないようにする。
