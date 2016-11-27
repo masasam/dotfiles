@@ -352,7 +352,7 @@ pacman で入るものをインストール
     sudo pacman -S mcomix
     sudo pacman -S libreoffice-fresh-ja
     sudo pacman -S go pkgfile rsync elixir
-	sudo pacman -S nodejs phantomjs parcellite whois nmap poppler-data
+	sudo pacman -S nodejs phantomjs whois nmap poppler-data
 	sudo pacman -S rtmpdump ffmpeg swftools fish sbcl
 	sudo pacman -S aspell aspell-en httperf
 	sudo pacman -S gdb ripgrep hub wmctrl
@@ -381,6 +381,7 @@ yaourt で入れるものをインストール
 	yaourt cmigemo-git
 	yaourt ibus-mozc
 	yaourt mozc
+	yaourt clipit
 
 #### golang
 

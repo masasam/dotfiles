@@ -11,7 +11,7 @@ init: ## deploy this dotfiles
 	ln -vsf ${PWD}/.config/redshift.conf   ${HOME}/.config/redshift.conf
 	ln -vsf ${PWD}/.config/psd/psd.conf   ${HOME}/.config/psd/psd.conf
 	ln -vsf ${PWD}/.config/fish/conf.d/omf.fish   ${HOME}/.config/fish/conf.d/omf.fish
-	ln -vsf ${PWD}/.config/parcellite/parcelliterc   ${HOME}/.config/parcellite/parcelliterc
+	ln -vsf ${PWD}/.config/clipit/clipitrc   ${HOME}/.config/clipit/clipitrc
 	ln -vsf ${PWD}/.config/gtk-3.0/bookmarks   ${HOME}/.config/gtk-3.0/bookmarks
 	mkdir -p ${HOME}/.config/lilyterm
 	ln -vsf ${PWD}/.config/lilyterm/default.conf   ${HOME}/.config/lilyterm/default.conf
@@ -49,7 +49,7 @@ install: ## install development environment powerd by arch linux
 	file-roller vlc xclip atool trash-cli the_silver_searcher screen powertop cifs-utils \
 	gvfs gvfs-smb seahorse gnome-keyring cups-pdf redshift eog mcomix libreoffice-fresh-ja \
 	firefox firefox-i18n-ja otf-ipafont openssh pkgfile baobab dconf-editor rsync elixir \
-	nodejs phantomjs parcellite whois nmap poppler-data rtmpdump ffmpeg swftools fish sbcl \
+	nodejs phantomjs whois nmap poppler-data rtmpdump ffmpeg swftools fish sbcl \
 	aspell aspell-en httperf gdb ripgrep hub wmctrl transmission-gtk linux-docs ansible \
 	pwgen pygmentize arch-install-scripts lilyterm termite htop neovim youtube-dl pandoc \
 	texlive-langjapanese texlive-latexextra ctags python-pygments python-neovim rust cargo \
@@ -69,6 +69,7 @@ install: ## install development environment powerd by arch linux
 	yaourt cmigemo-git
 	yaourt ibus-mozc
 	yaourt mozc
+	yaourt clipit
 	sudo pkgfile --update
 	ghq get -p github.com/nsf/gocode
 	ghq get -p github.com/rogpeppe/godef
