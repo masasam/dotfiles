@@ -47,8 +47,8 @@ call dein#add('Shougo/neosnippet-snippets')
 call dein#add('Shougo/deoplete.nvim')
 call dein#add('Shougo/denite.nvim')
 call dein#add('tpope/vim-fugitive')
-call dein#add('vim-scripts/twilight')
 call dein#add('soramugi/auto-ctags.vim')
+call dein#add('altercation/vim-colors-solarized')
 
 " You can specify revision/branch/tag.
 call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
@@ -102,3 +102,7 @@ endfunction
 syntax on
 highlight StatusLine term=none cterm=none ctermfg=white ctermbg=black
 "highlight StatusLine term=none cterm=none ctermfg=grey ctermbg=black
+
+" syntax enable
+" set background=dark
+" colorscheme solarized
