@@ -12,3 +12,8 @@
 (defun dropbox ()
   (interactive)
   (find-file "~/Dropbox/"))
+
+;; Pictures/imageをdiredで開く
+(defun githubimage ()
+  (interactive)
+  (find-file "~/Pictures/image/"))
