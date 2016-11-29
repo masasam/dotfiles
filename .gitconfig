@@ -1,6 +1,7 @@
 [user]
 	name = masa
 	email = masasam@users.noreply.github.com
+	signingkey = 0B28BB549B5A355C
 [color]
 	ui = auto
 	status = auto
@@ -42,3 +43,5 @@
     root = ~/src
 [ghq "https://gitlab.com/"]
      vcs = git
+[gpg]
+	program = gpg2
