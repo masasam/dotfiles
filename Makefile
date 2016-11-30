@@ -43,7 +43,7 @@ install: ## install development environment powerd by arch linux
 	${PWD}/bin/continue.sh && \
 	cat ${HOME}/.bashrc | grep screenstart || echo "alias screenstart='screen -D -RR'" >> ${HOME}/.bashrc
 	cat ${HOME}/.bashrc | grep tmuxstart || echo "alias tmuxstart='tmux new-session -A -s main'" >> ${HOME}/.bashrc
-	cat ${HOME}/.bashrc | grep ignoredups || echo "export HISTCONTROL=ignoredups" >> ${HOME}/.bashrc
+	cat ${HOME}/.bashrc | grep ignoredups || echo "export HISTCONTROL=erasedups" >> ${HOME}/.bashrc
 	sudo pacman -S go zsh git vim dropbox nautilus-dropbox tmux keychain zsh-completions \
 	gnome-tweak-tool xsel sylpheed emacs curl archlinux-wallpaper evince inkscape gimp unrar \
 	file-roller vlc xclip atool trash-cli the_silver_searcher screen powertop cifs-utils \
