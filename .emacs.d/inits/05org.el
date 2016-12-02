@@ -28,3 +28,7 @@
 (defun notes ()
   (interactive)
   (find-file "~/Dropbox/emacs/notes.org"))
+
+(defun todolist ()
+  (interactive)
+ (find-file "~/Dropbox/emacs/todo.org"))
