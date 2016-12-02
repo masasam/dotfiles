@@ -141,7 +141,7 @@ ext4 でフォーマットしてマウント
     mkfs.ext4 /dev/sda2
     mount /dev/sda2 /mnt
 
-nano /etc/pacman.d/mirrorlist  
+vi /etc/pacman.d/mirrorlist  
 
     Server = http://ftp.jaist.ac.jp/pub/Linux/ArchLinux/$repo/os/$arch
 
@@ -169,7 +169,7 @@ fstab を生成する
     ln -s /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
 ロケールを設定  
-nano /etc/locale.gen  
+vi /etc/locale.gen  
 
 >en_US.UTF-8 UTF-8  
 >ja_JP.UTF-8 UTF-8  
@@ -202,7 +202,6 @@ nano /etc/locale.gen
 
 グループと権限を設定  
 
-    export EDITOR=/usr/bin/nano
     visudo
 
 >Defaults env_keep += “ HOME ”  
