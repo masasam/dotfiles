@@ -16,6 +16,7 @@
              (direx:jump-to-directory-other-window)))))
 
 (global-set-key (kbd "C-x C-j") 'my/dired-jump)
+(global-set-key (kbd "C-x j") 'my/dired-jump)
 
 ;; widthは環境に合わせて調整してください。
 (push '(direx:direx-mode :position left :width 40 :dedicated t)
