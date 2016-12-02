@@ -69,7 +69,6 @@
 (depends-on "sequential-command")
 (depends-on "atomic-chrome")
 (depends-on "lispxmp")
-(depends-on "open-junk-file")
 (depends-on "direx")
 (depends-on "eldoc-extension")
 (depends-on "ansible")
