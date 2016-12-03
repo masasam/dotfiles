@@ -33,15 +33,15 @@
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c c") 'org-capture)
 
-;; (setq org-capture-templates
-;;       '(("t" "Todo" entry (file+headline "~/Dropbox/emacs/todo.org" "Tasks")
-;;              "* TODO %? %i %a")
-;;         ("n" "Note" entry (file+headline "~/Dropbox/emacs/notes.org" "Notes")
-;; 	 "* %? %U %i")
-;; 	("i" "interrupted task" entry
-;;          (file "~/Dropbox/emacs/todo.org")
-;;          "* %?" :clock-in t :clock-resume t)
-;;          ))
+(setq org-capture-templates
+      '(("t" "Todo" entry (file+headline "~/Dropbox/emacs/org/daily-projects.org" "Tasks")
+             "* TODO %? %i %a")
+        ("n" "Note" entry (file+headline "~/Dropbox/emacs/org/notes.org" "Notes")
+	 "* %? %U %i")
+	("i" "interrupted task" entry
+         (file "~/Dropbox/emacs/org/daily-projects.org")
+         "* %?" :clock-in t :clock-resume t)
+         ))
 
 ;; org-noteを開く
 (defun notes ()
