@@ -363,6 +363,7 @@ pacman で入るものをインストール
 	sudo pacman -S python-neovim
 	sudo pacman -S rust cargo
 	sudo pacman -S noto-fonts-cjk arc-gtk-theme slack-desktop jq
+	sudo pacman -S docker
 
 yaourt で入れるものをインストール  
 

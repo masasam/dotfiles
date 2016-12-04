@@ -49,7 +49,7 @@ install: ## install development environment powerd by arch linux
 	file-roller vlc xclip atool trash-cli the_silver_searcher screen powertop cifs-utils \
 	gvfs gvfs-smb seahorse gnome-keyring cups-pdf redshift eog mcomix libreoffice-fresh-ja \
 	firefox firefox-i18n-ja otf-ipafont openssh pkgfile baobab dconf-editor rsync elixir \
-	nodejs phantomjs whois nmap poppler-data rtmpdump ffmpeg swftools fish sbcl \
+	nodejs phantomjs whois nmap poppler-data rtmpdump ffmpeg swftools fish sbcl docker \
 	aspell aspell-en httperf gdb ripgrep hub wmctrl transmission-gtk linux-docs ansible \
 	pwgen pygmentize arch-install-scripts lilyterm termite htop neovim youtube-dl pandoc \
 	texlive-langjapanese texlive-latexextra ctags python-pygments python-neovim rust cargo \
