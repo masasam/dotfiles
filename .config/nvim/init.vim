@@ -69,7 +69,7 @@ endif
 "End dein Scripts-------------------------
 
 let g:lightline = {
-      \ 'colorscheme': 'solarized-dark',
+      \ 'colorscheme': 'powerline',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
