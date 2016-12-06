@@ -48,7 +48,7 @@ call dein#add('Shougo/deoplete.nvim')
 call dein#add('Shougo/denite.nvim')
 call dein#add('tpope/vim-fugitive')
 call dein#add('soramugi/auto-ctags.vim')
-call dein#add('altercation/vim-colors-solarized')
+call dein#add('airblade/vim-gitgutter')
 
 " You can specify revision/branch/tag.
 call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
