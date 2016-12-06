@@ -24,7 +24,7 @@ set paste
 set sh=zsh
 set cursorline
 set laststatus=2
-set statusline=%F%m%=[%p%%]\ (%l,%c)\ %{fugitive#statusline()}\ %{'['.(&fenc!=''?&fenc:&enc).']\ ['.&fileformat.']'}
+"set statusline=%F%m%=[%p%%]\ (%l,%c)\ %{fugitive#statusline()}\ %{'['.(&fenc!=''?&fenc:&enc).']\ ['.&fileformat.']'}
 
 "dein Scripts-----------------------------
 if &compatible
@@ -46,9 +46,10 @@ call dein#add('Shougo/neosnippet.vim')
 call dein#add('Shougo/neosnippet-snippets')
 call dein#add('Shougo/deoplete.nvim')
 call dein#add('Shougo/denite.nvim')
-call dein#add('tpope/vim-fugitive')
 call dein#add('soramugi/auto-ctags.vim')
 call dein#add('airblade/vim-gitgutter')
+call dein#add('itchyny/lightline.vim')
+call dein#add('tpope/vim-fugitive')
 
 " You can specify revision/branch/tag.
 call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
@@ -67,42 +68,22 @@ endif
 
 "End dein Scripts-------------------------
 
-" When insert mode, change statusline.
-let g:hi_insert = 'hi StatusLine gui=None guifg=Black guibg=Yellow cterm=None ctermfg=Black ctermbg=Green'
-
-if has('syntax')
-  augroup InsertHook
-    autocmd!
-    autocmd InsertEnter * call s:StatusLine('Enter')
-    autocmd InsertLeave * call s:StatusLine('Leave')
-  augroup END
-endif
-
-let s:slhlcmd = ''
-function! s:StatusLine(mode)
-  if a:mode == 'Enter'
-    silent! let s:slhlcmd = 'highlight ' . s:GetHighlight('StatusLine')
-    silent exec g:hi_insert
-  else
-    highlight clear StatusLine
-    silent exec s:slhlcmd
-  endif
-endfunction
-
-function! s:GetHighlight(hi)
-  redir => hl
-  exec 'highlight '.a:hi
-  redir END
-  let hl = substitute(hl, '[\r\n]', '', 'g')
-  let hl = substitute(hl, 'xxx', '', '')
-  return hl
-endfunction
-
-
-syntax on
-highlight StatusLine term=none cterm=none ctermfg=white ctermbg=black
-"highlight StatusLine term=none cterm=none ctermfg=grey ctermbg=black
-
-" syntax enable
-" set background=dark
-" colorscheme solarized
+let g:lightline = {
+      \ 'colorscheme': 'solarized-dark',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component': {
+      \   'readonly': '%{&filetype=="help"?"":&readonly?" ":""}',
+      \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
+      \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
+      \ },
+      \ 'component_visible_condition': {
+      \   'readonly': '(&filetype!="help"&& &readonly)',
+      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
+      \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
+      \ },
+      \ 'separator': { 'left': ' ', 'right': ' ' },
+      \ 'subseparator': { 'left': ' ', 'right': ' ' }
+      \ }
