@@ -52,7 +52,6 @@ call dein#add('airblade/vim-gitgutter')
 call dein#add('itchyny/lightline.vim')
 call dein#add('tpope/vim-fugitive')
 call dein#add('altercation/vim-colors-solarized')
-call dein#add('joshdick/onedark.vim')
 call dein#add('nanotech/jellybeans.vim')
 
 " You can specify revision/branch/tag.
