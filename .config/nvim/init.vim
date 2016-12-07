@@ -52,6 +52,8 @@ call dein#add('airblade/vim-gitgutter')
 call dein#add('itchyny/lightline.vim')
 call dein#add('tpope/vim-fugitive')
 call dein#add('altercation/vim-colors-solarized')
+call dein#add('joshdick/onedark.vim')
+call dein#add('nanotech/jellybeans.vim')
 
 " You can specify revision/branch/tag.
 call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
@@ -90,8 +92,12 @@ let g:lightline = {
       \ 'subseparator': { 'left': ' ', 'right': ' ' }
       \ }
 
-syntax enable
-colorscheme solarized
+"syntax enable
+" colorscheme solarized
+" set background=dark
+" let g:solarized_termcolors=256
+" let g:solarized_termtrans=1
+
+syntax on
 set background=dark
-let g:solarized_termcolors=256
-let g:solarized_termtrans=1
+colorscheme jellybeans
