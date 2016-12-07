@@ -8,7 +8,7 @@ set number
 set title
 set hidden
 set showmatch
-set noexpandtab
+set expandtab
 set tabstop=4
 set shiftwidth=4
 set smartindent
@@ -96,3 +96,8 @@ let g:lightline = {
 syntax on
 set background=dark
 colorscheme jellybeans
+
+let _curfile=expand("%:r")
+if _curfile == 'Makefile'
+  set noexpandtab
+endif
