@@ -17,6 +17,7 @@
 
 ;; helm-recentf
 (define-key global-map (kbd "C-c f") 'helm-recentf)
+(define-key global-map (kbd "C-c C-f") 'helm-recentf)
 ;; gloval-markをhelmでたどる
 (define-key global-map (kbd "C-x m") 'helm-all-mark-rings)
 ;; helm C-hで前の文字削除
