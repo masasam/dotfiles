@@ -24,7 +24,6 @@ set paste
 set sh=zsh
 set cursorline
 set laststatus=2
-"set statusline=%F%m%=[%p%%]\ (%l,%c)\ %{fugitive#statusline()}\ %{'['.(&fenc!=''?&fenc:&enc).']\ ['.&fileformat.']'}
 
 "dein Scripts-----------------------------
 if &compatible
@@ -51,7 +50,6 @@ call dein#add('soramugi/auto-ctags.vim')
 call dein#add('airblade/vim-gitgutter')
 call dein#add('itchyny/lightline.vim')
 call dein#add('tpope/vim-fugitive')
-call dein#add('altercation/vim-colors-solarized')
 call dein#add('nanotech/jellybeans.vim')
 
 " You can specify revision/branch/tag.
@@ -90,12 +88,6 @@ let g:lightline = {
       \ 'separator': { 'left': ' ', 'right': ' ' },
       \ 'subseparator': { 'left': ' ', 'right': ' ' }
       \ }
-
-"syntax enable
-" colorscheme solarized
-" set background=dark
-" let g:solarized_termcolors=256
-" let g:solarized_termtrans=1
 
 syntax on
 set background=dark
