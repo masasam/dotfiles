@@ -78,6 +78,7 @@
 (depends-on "flycheck-title")
 (depends-on "ac-etags")
 (depends-on "org-password-manager")
+(depends-on "elscreen")
 
 ;; programming modes
 (depends-on "go-mode")
