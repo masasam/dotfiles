@@ -104,3 +104,23 @@ let _curfile=expand("%:r")
 if _curfile == 'Makefile'
   set noexpandtab
 endif
+
+
+" For ripgrep
+call denite#custom#var('file_rec', 'command',
+     \ ['rg', '--files', '--glob', '!.git'])
+
+" Ripgrep command on grep source
+call denite#custom#var('grep', 'command', ['rg'])
+call denite#custom#var('grep', 'recursive_opts', [])
+call denite#custom#var('grep', 'final_opts', [])
+call denite#custom#var('grep', 'separator', ['--'])
+call denite#custom#var('grep', 'default_opts',
+     \ ['--vimgrep', '--no-heading'])
+
+
+nnoremap <silent> <C-x><C-f> :<C-u>Denite file_rec<CR>
+nnoremap <silent> <C-x><C-g> :<C-u>Denite grep<CR>
+nnoremap <silent> <C-x><C-l> :<C-u>Denite line<CR>
+nnoremap <silent> <C-x><C-u> :<C-u>Denite file_mru<CR>
+nnoremap <silent> <C-x><C-y> :<C-u>Denite neoyank<CR>
