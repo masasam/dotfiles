@@ -48,7 +48,6 @@ call dein#add('Shougo/dein.vim')
 call dein#add('Shougo/neosnippet.vim')
 call dein#add('Shougo/neosnippet-snippets')
 call dein#add('Shougo/deoplete.nvim')
-call dein#add('zchee/deoplete-go', {'build': 'make'})
 call dein#add('Shougo/denite.nvim')
 call dein#add('soramugi/auto-ctags.vim')
 call dein#add('airblade/vim-gitgutter')
@@ -95,6 +94,8 @@ let g:lightline = {
       \ 'separator': { 'left': ' ', 'right': ' ' },
       \ 'subseparator': { 'left': ' ', 'right': ' ' }
       \ }
+
+let g:deoplete#enable_at_startup = 1
 
 syntax on
 set background=dark
