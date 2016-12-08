@@ -56,6 +56,8 @@ call dein#add('itchyny/lightline.vim')
 call dein#add('tpope/vim-fugitive')
 call dein#add('nanotech/jellybeans.vim')
 call dein#add('editorconfig/editorconfig-vim')
+call dein#add('Shougo/neomru.vim')
+call dein#add('Shougo/neoyank.vim')
 
 " You can specify revision/branch/tag.
 call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
