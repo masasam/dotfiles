@@ -123,11 +123,11 @@ call denite#custom#var('grep', 'default_opts',
      \ ['--vimgrep', '--no-heading'])
 
 
-nnoremap <silent> <C-x><C-f> :<C-u>Denite file_rec<CR>
-nnoremap <silent> <C-x><C-g> :<C-u>Denite grep<CR>
-nnoremap <silent> <C-x><C-l> :<C-u>Denite line<CR>
-nnoremap <silent> <C-x><C-u> :<C-u>Denite file_mru<CR>
-nnoremap <silent> <C-x><C-y> :<C-u>Denite neoyank<CR>
+nnoremap <silent> <C-k><C-f> :<C-u>Denite file_rec<CR>
+nnoremap <silent> <C-k><C-g> :<C-u>Denite grep<CR>
+nnoremap <silent> <C-k><C-l> :<C-u>Denite line<CR>
+nnoremap <silent> <C-k><C-u> :<C-u>Denite file_mru<CR>
+nnoremap <silent> <C-k><C-y> :<C-u>Denite neoyank<CR>
 
 
 " Anywhere SID.
@@ -204,6 +204,7 @@ augroup END
 
 
 """ deoplete
+set runtimepath+=~/.config/nvim/repos/github.com/Shougo/deoplete.nvim/
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_smart_case = 1
 
