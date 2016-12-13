@@ -1,4 +1,4 @@
-DOP= `cat ${HOME}/Dropbox/arch/pkglist.txt`
+DOP= `cat ${HOME}/Dropbox/arch/pacmanlist.txt`
 DOY= `cat ${HOME}/Dropbox/arch/yaourtlist.txt`
 
 init: ## deploy this dotfiles
