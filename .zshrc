@@ -277,32 +277,6 @@ bindkey '^xg' peco-ghq-remote
 bindkey '^x^g' peco-ghq-remote
 
 
-# peco-man
-function peco-man-list-all() {
-    local parent dir file
-    local paths=("${(s/:/)$(man -aw)}")
-    for parent in $paths; do
-        for dir in $(/bin/ls -1 $parent); do
-            local p="${parent}/${dir}"
-            if [ -d "$p" ]; then
-                IFS=$'\n' local lines=($(/bin/ls -1 "$p"))
-                for file in $lines; do
-                    echo "${p}/${file}"
-                done
-            fi
-        done
-    done
-}
-
-function peco-man() {
-    local selected=$(peco-man-list-all | peco --prompt 'man >')
-    if [[ "$selected" != "" ]]; then
-        man "$selected"
-    fi
-}
-zle -N peco-man
-
-
 # pecoで書籍を開く
 function peco-books() {
   local book="$(find ~/Dropbox/books -type f | peco)"
