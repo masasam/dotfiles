@@ -52,8 +52,8 @@ install: ## install development environment powerd by arch linux
 	nodejs phantomjs whois nmap poppler-data rtmpdump ffmpeg swftools fish sbcl docker \
 	aspell aspell-en httperf gdb ripgrep hub wmctrl transmission-gtk linux-docs ansible \
 	pwgen pygmentize arch-install-scripts lilyterm termite htop neovim youtube-dl pandoc \
-	texlive-langjapanese texlive-latexextra ctags python-pygments python-neovim rust cargo \
-	noto-fonts-cjk arc-gtk-theme slack-desktop jq
+	texlive-langjapanese texlive-latexextra ctags python-pygments python-neovim python2-neovim \
+	rust cargo noto-fonts-cjk arc-gtk-theme slack-desktop jq
 	mkdir -p ${HOME}/{bin,src}
 	yaourt google-chrome
 	yaourt peco

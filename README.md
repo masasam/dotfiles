@@ -360,7 +360,7 @@ pacman で入るものをインストール
 	sudo pacman -S htop
 	sudo pacman -S neovim youtube-dl
 	sudo pacman -S pandoc texlive-langjapanese texlive-latexextra ctags python-pygments
-	sudo pacman -S python-neovim
+	sudo pacman -S python-neovim python2-neovim
 	sudo pacman -S rust cargo
 	sudo pacman -S noto-fonts-cjk arc-gtk-theme slack-desktop jq
 	sudo pacman -S docker
