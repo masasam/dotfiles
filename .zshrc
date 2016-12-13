@@ -299,7 +299,8 @@ function peco-src() {
     zle clear-screen
 }
 zle -N peco-src
-bindkey '^]' peco-src
+bindkey '^x^l' peco-src
+bindkey '^xl' peco-src
 
 
 function emacsag() {
