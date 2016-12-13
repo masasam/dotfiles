@@ -245,10 +245,11 @@ function peco-cdr() {
     zle clear-screen
 }
 zle -N peco-cdr
-bindkey '^xr' peco-cdr
+bindkey '^xf' peco-cdr
+bindkey '^x^f' peco-cdr
 
 
-function peco-src() {
+function peco-ghq() {
     local selected_dir=$(ghq list --full-path | peco --query "$LBUFFER")
     if [ -n "$selected_dir" ]; then
         BUFFER="cd ${selected_dir}"
@@ -256,9 +257,18 @@ function peco-src() {
     fi
     zle clear-screen
 }
-zle -N peco-src
-bindkey '^x^l' peco-src
-bindkey '^xl' peco-src
+zle -N peco-ghq
+bindkey '^x^l' peco-ghq
+bindkey '^xl' peco-ghq
+
+
+# peco-ghq-remote
+function peco-ghq-remote() {
+    hub browse $(ghq list | peco | cut -d "/" -f 2,3)
+}
+zle -N peco-ghq-remote
+bindkey '^xg' peco-ghq-remote
+bindkey '^x^g' peco-ghq-remote
 
 
 # peco-man
@@ -285,15 +295,6 @@ function peco-man() {
     fi
 }
 zle -N peco-man
-
-
-# peco-src-remote
-function peco-src-remote() {
-    hub browse $(ghq list | peco | cut -d "/" -f 2,3)
-}
-zle -N peco-src-remote
-bindkey '^xg' peco-src-remote
-bindkey '^x^g' peco-src-remote
 
 
 # pecoで書籍を開く
@@ -354,4 +355,5 @@ function gitroot() {
 }
 
 
+# zsh-syntax-highlighting(pacman -S zsh-syntax-highlighting)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
