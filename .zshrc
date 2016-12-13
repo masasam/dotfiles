@@ -270,26 +270,6 @@ zle -N peco-cdr
 bindkey '^xr' peco-cdr
 
 
-# peco find directory
-function peco-find() {
-    local current_buffer=$BUFFER
-    local search_root=""
-    local file_path=""
-
-    if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
-	search_root=`git rev-parse --show-toplevel`
-    else
-	search_root=`pwd`
-    fi
-    file_path="$(find ${search_root} -maxdepth 5 -a \! -regex '.*/\..*' | peco)"
-    BUFFER="${current_buffer} ${file_path}"
-    CURSOR=$#BUFFER
-    zle clear-screen
-}
-zle -N peco-find
-bindkey '^x^f' peco-find
-
-
 function peco-src() {
     local selected_dir=$(ghq list --full-path | peco --query "$LBUFFER")
     if [ -n "$selected_dir" ]; then
