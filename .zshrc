@@ -9,9 +9,6 @@ export LANG=ja_JP.UTF-8
 autoload -Uz colors
 colors
 
-# プロンプトに$HOSTとか$UIDとかいった類のものが使用出来るようになる。
-setopt prompt_subst
-
 # 改行コード(\n)で終わっていない出力のとき最終行がでないのを防ぐ
 unsetopt promptcr
 
@@ -126,7 +123,7 @@ zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
 zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
 zstyle ':vcs_info:*' formats "%F{green}%c%u[%b]%f"
 zstyle ':vcs_info:*' actionformats '[%b|%a]'
-# precmd () { vcs_info }
+precmd () { vcs_info }
 RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
 
 
