@@ -4,21 +4,16 @@ autoload -U compinit promptinit
 compinit
 promptinit
 
-#文字コード
 export LANG=ja_JP.UTF-8
 
-# 色の指定を%{$fg[red]%}みたいに人に優しい指定の仕方が出来、コピペもしやすい。リセットするときは%{$reset_color%}。
 autoload -Uz colors
 colors
-
 
 # プロンプトに$HOSTとか$UIDとかいった類のものが使用出来るようになる。
 setopt prompt_subst
 
 # 改行コード(\n)で終わっていない出力のとき最終行がでないのを防ぐ
 unsetopt promptcr
-
-
 
 HISTFILE=~/Dropbox/zsh/.zsh_histfile #コマンド履歴はDropboxに
 HISTSIZE=1000000
@@ -39,9 +34,6 @@ setopt hist_reduce_blanks    # 余分な空白は詰めて記録
 setopt hist_save_no_dups     # ヒストリファイルに書き出すときに、古いコマンドと同じものは無視する。
 setopt hist_no_store         # historyコマンドは履歴に登録しない
 setopt hist_expand           # 補完時にヒストリを自動的に展開
-
-
-# 補完
 setopt list_packed           # コンパクトに補完リストを表示
 unsetopt auto_remove_slash
 setopt auto_param_slash      # ディレクトリ名の補完で末尾の / を自動的に付加し、次の補完に備える
@@ -82,7 +74,6 @@ setopt noautoremoveslash
 # sudoの補完
 zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin
 
-
 zstyle ':completion:*' use-cache true
 # 補完候補を ←↓↑→ で選択 (補完候補が色分け表示される)
 zstyle ':completion:*:default' menu select=1
@@ -92,7 +83,6 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z} r:|[-_.]=**'
 zstyle ':completion:*:cd:*' tag-order local-directories path-directories
 # ps コマンドのプロセス名補完
 zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
-
 
 # プロンプト
 case ${UID} in
@@ -126,14 +116,6 @@ setopt correct
 umask 022
 
 
-# LS_COLORS
-if [ -f ~/.dir_colors ]; then
-    eval `dircolors -b ~/.dir_colors`
-fi
-# 補完候補もLS_COLORSに合わせて
-zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
-
-
 # vcs_info
 RPROMPT="%{${fg[blue]}%}[%~]%{${reset_color}%}"
 
@@ -158,7 +140,6 @@ case "${TERM}" in screen-256color)
 			  vcs_info
 		      }
 esac
-
 
 
 # ls /usr/local/etc などと打っている際に、C-w で単語ごとに削除
@@ -283,32 +264,6 @@ bindkey '^x^l' peco-src
 bindkey '^xl' peco-src
 
 
-function emacsag() {
-    emacsclient -n $(ag $@ | peco --query "$LBUFFER" | awk -F : '{print "+" $2 " " $1}')
-}
-
-
-function _getgitignore() {
-    curl -s https://www.gitignore.io/api/$1
-}
-alias getgitignore='_getgitignore $(_getgitignore list | sed "s/,/\n/g" | peco )'
-
-
-# cdしたらls
-function chpwd() {
-    ls -v -F --color=auto
-}
-
-
-# Gitのリポジトリのトップレベルにcd
-function gitroot() {
-    cd ./$(git rev-parse --show-cdup)
-    if [ $# = 1 ]; then
-	cd $1
-    fi
-}
-
-
 # peco-man
 function peco-man-list-all() {
     local parent dir file
@@ -370,7 +325,33 @@ zle -N peco-godoc
 bindkey '^x^v' peco-godoc
 
 
+function emacsag() {
+    emacsclient -n $(ag $@ | peco --query "$LBUFFER" | awk -F : '{print "+" $2 " " $1}')
+}
+
+
 # globalip
 function globalip() {
     curl ifconfig.me
+}
+
+
+function _getgitignore() {
+    curl -s https://www.gitignore.io/api/$1
+}
+alias getgitignore='_getgitignore $(_getgitignore list | sed "s/,/\n/g" | peco )'
+
+
+# cdしたらls
+function chpwd() {
+    ls -v -F --color=auto
+}
+
+
+# Gitのリポジトリのトップレベルにcd
+function gitroot() {
+    cd ./$(git rev-parse --show-cdup)
+    if [ $# = 1 ]; then
+	cd $1
+    fi
 }
