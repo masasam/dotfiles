@@ -166,3 +166,5 @@ map <silent> [Tag]n :tabnext<CR>
 " tn 次のタブ
 map <silent> [Tag]p :tabprevious<CR>
 " tp 前のタブ
+
+let g:deoplete#enable_at_startup = 1
