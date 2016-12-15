@@ -7,6 +7,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'soramugi/auto-ctags.vim'
+Plug 'bronson/vim-trailing-whitespace'
 
 call plug#end()
 
@@ -126,3 +127,10 @@ map <silent> [Tag]n :tabnext<CR>
 " tn 次のタブ
 map <silent> [Tag]p :tabprevious<CR>
 " tp 前のタブ
+
+
+" -- vim-gitgutter
+highlight clear SignColumn
+highlight SignColumn ctermbg=0
+nmap gn <Plug>GitGutterNextHunk
+nmap gN <Plug>GitGutterPrevHunk
