@@ -1,3 +1,4 @@
+" -- vim/plugged
 call plug#begin('~/.vim/plugged')
 
 Plug 'altercation/vim-colors-solarized'
@@ -11,19 +12,22 @@ Plug 'bronson/vim-trailing-whitespace'
 
 call plug#end()
 
-" -- solarized personal conf
+
+" -- solarized theme
 set background=dark
 try
     colorscheme solarized
 catch
 endtry
 
-" -- jellybeans personal conf
+
+" -- jellybeans theme
 " set background=dark
 " try
 "     colorscheme jellybeans
 " catch
 " endtry
+
 
 set encoding=utf-8
 set fileencoding=utf-8
@@ -56,6 +60,8 @@ set laststatus=2
 set wildmenu
 set sh=zsh
 
+
+" -- lightline
 let g:lightline = {
       \ 'colorscheme': 'powerline',
       \ 'active': {
@@ -77,12 +83,14 @@ let g:lightline = {
       \ }
 
 
+" -- mekefile
 let _curfile=expand("%:r")
 if _curfile == 'Makefile'
   set noexpandtab
 endif
 
 
+" -- vimelescreen
 " Anywhere SID.
 function! s:SID_PREFIX()
   return matchstr(expand('<sfile>'), '<SNR>\d\+_\zeSID_PREFIX$')
