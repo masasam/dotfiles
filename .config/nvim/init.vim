@@ -1,35 +1,3 @@
-syntax on
-set encoding=utf-8
-set fileencoding=utf-8
-set fileencodings=ucs-boms,utf-8,euc-jp,cp932
-set fileformats=unix,dos,mac
-set ambiwidth=double
-set clipboard=unnamedplus
-set number
-set title
-set hidden
-set showmatch
-set expandtab
-set tabstop=4
-set shiftwidth=4
-set smartindent
-set ignorecase
-set smartcase
-set nowrapscan
-set hlsearch
-set wrap
-set incsearch
-set ruler
-set showcmd
-set hidden
-set history=2000
-set paste
-set sh=zsh
-set cursorline
-set laststatus=2
-set wildmenu
-set sh=zsh
-
 "dein Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved
@@ -76,6 +44,44 @@ endif
 
 "End dein Scripts-------------------------
 
+
+syntax on
+set encoding=utf-8
+set fileencoding=utf-8
+set fileencodings=ucs-boms,utf-8,euc-jp,cp932
+set fileformats=unix,dos,mac
+set ambiwidth=double
+set clipboard=unnamedplus
+set number
+set title
+set hidden
+set showmatch
+
+" -- Tabulation management
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set smartindent
+set ignorecase
+set smartcase
+
+set nowrapscan
+set hlsearch
+set wrap
+set incsearch
+set ruler
+set showcmd
+set hidden
+set history=2000
+set paste
+set sh=zsh
+set cursorline
+set laststatus=2
+set wildmenu
+set sh=zsh
+
+
+" -- lightline
 let g:lightline = {
       \ 'colorscheme': 'powerline',
       \ 'active': {
@@ -113,13 +119,14 @@ catch
 endtry
 
 
+" -- Makefile
 let _curfile=expand("%:r")
 if _curfile == 'Makefile'
   set noexpandtab
 endif
 
 
-" For ripgrep
+" -- ripgrep
 call denite#custom#var('file_rec', 'command',
      \ ['rg', '--files', '--glob', '!.git'])
 
@@ -132,12 +139,14 @@ call denite#custom#var('grep', 'default_opts',
      \ ['--vimgrep', '--no-heading'])
 
 
+" -- Denite.nvim
 nnoremap <silent> <C-k><C-f> :<C-u>Denite file_rec<CR>
 nnoremap <silent> <C-k><C-g> :<C-u>Denite grep<CR>
 nnoremap <silent> <C-k><C-l> :<C-u>Denite line<CR>
 nnoremap <silent> <C-k><C-u> :<C-u>Denite file_mru<CR>
 
 
+" -- elscreen
 " Anywhere SID.
 function! s:SID_PREFIX()
   return matchstr(expand('<sfile>'), '<SNR>\d\+_\zeSID_PREFIX$')
