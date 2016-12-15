@@ -11,6 +11,8 @@ Plug 'soramugi/auto-ctags.vim'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'junegunn/vim-easy-align'
 Plug 'Shougo/unite.vim'
+Plug 'sorah/unite-ghq'
+Plug 'Shougo/neomru.vim'
 
 call plug#end()
 
@@ -152,3 +154,34 @@ nmap gN <Plug>GitGutterPrevHunk
 
 " -- Easy align interactive
 vnoremap <silent> <Enter> :EasyAlign<cr>
+
+
+" -- Unite.vim
+let g:unite_enable_start_insert=1
+let g:unite_enable_ignore_case = 1  
+let g:unite_enable_smart_case = 1
+au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
+au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
+let g:unite_source_history_yank_enable =1
+try
+  let g:unite_source_rec_async_command='ag --nocolor --nogroup -g ""'
+  call unite#filters#matcher_default#use(['matcher_fuzzy'])
+catch
+endtry
+"prefix key
+nmap <Space> [unite]
+
+nnoremap <silent> [unite]a :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+nnoremap <silent> [unite]f :<C-u>Unite<Space>buffer file_mru<CR>
+nnoremap <silent> [unite]d :<C-u>Unite<Space>directory_mru<CR>
+nnoremap <silent> [unite]b :<C-u>Unite<Space>buffer<CR>
+nnoremap <silent> [unite]r :<C-u>Unite<Space>register<CR>
+nnoremap <silent> [unite]t :<C-u>Unite<Space>tab<CR>
+nnoremap <silent> [unite]h :<C-u>Unite<Space>history/unite<CR>
+nnoremap <silent> [unite]o :<C-u>Unite<Space>outline<CR>
+nnoremap <silent> [unite]<CR> :<C-u>Unite<Space>file_rec:!<CR>
+
+
+" -- Unite ghq
+nnoremap <silent> [unite]p :<C-u>Unite file_rec/async<CR>
+nnoremap <silent> [unite]g :<C-u>Unite ghq<CR>
