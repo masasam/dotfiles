@@ -20,6 +20,9 @@ init: ## deploy this dotfiles
 	mkdir -p ${HOME}/.config/nvim
 	ln -vsf ${PWD}/.config/nvim/init.vim   ${HOME}/.config/nvim/init.vim
 	ln -vsf ${PWD}/.config/nvim/installer.sh   ${HOME}/.config/nvim/installer.sh
+	mkdir -p ${HOME}/.vim/autoload
+	ln -vsf ${PWD}/.vim/autoload/plug.vim   ${HOME}/.vim/autoload/plug.vim
+	ln -vsf ${PWD}/.vimrc   ${HOME}/.vimrc
 	test -L ${HOME}/.peco || rm -rf ${HOME}/.peco
 	ln -vsfn ${PWD}/.peco   ${HOME}/.peco
 	test -L ${HOME}/.emacs.d || rm -rf ${HOME}/.emacs.d
