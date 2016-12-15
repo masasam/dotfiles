@@ -9,6 +9,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'soramugi/auto-ctags.vim'
 Plug 'bronson/vim-trailing-whitespace'
+Plug 'junegunn/vim-easy-align'
 
 call plug#end()
 
@@ -29,6 +30,7 @@ endtry
 " endtry
 
 
+syntax on
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=ucs-boms,utf-8,euc-jp,cp932
@@ -39,12 +41,15 @@ set number
 set title
 set hidden
 set showmatch
+
+" -- Tabulation management
 set expandtab
 set tabstop=4
 set shiftwidth=4
 set smartindent
 set ignorecase
 set smartcase
+
 set nowrapscan
 set hlsearch
 set wrap
@@ -83,7 +88,7 @@ let g:lightline = {
       \ }
 
 
-" -- mekefile
+" -- Makefile
 let _curfile=expand("%:r")
 if _curfile == 'Makefile'
   set noexpandtab
@@ -142,3 +147,7 @@ highlight clear SignColumn
 highlight SignColumn ctermbg=0
 nmap gn <Plug>GitGutterNextHunk
 nmap gN <Plug>GitGutterPrevHunk
+
+
+" -- Easy align interactive
+vnoremap <silent> <Enter> :EasyAlign<cr>
