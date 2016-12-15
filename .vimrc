@@ -10,6 +10,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'soramugi/auto-ctags.vim'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'junegunn/vim-easy-align'
+Plug 'Shougo/vimproc.vim'
 Plug 'Shougo/unite.vim'
 Plug 'sorah/unite-ghq'
 Plug 'Shougo/neomru.vim'
@@ -157,7 +158,7 @@ vnoremap <silent> <Enter> :EasyAlign<cr>
 
 
 " -- Unite.vim
-let g:unite_enable_start_insert=1
+let g:unite_enable_start_insert = 1
 let g:unite_enable_ignore_case = 1  
 let g:unite_enable_smart_case = 1
 au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
@@ -180,7 +181,6 @@ nnoremap <silent> [unite]t :<C-u>Unite<Space>tab<CR>
 nnoremap <silent> [unite]h :<C-u>Unite<Space>history/unite<CR>
 nnoremap <silent> [unite]o :<C-u>Unite<Space>outline<CR>
 nnoremap <silent> [unite]<CR> :<C-u>Unite<Space>file_rec:!<CR>
-
 
 " -- Unite ghq
 nnoremap <silent> [unite]p :<C-u>Unite file_rec/async<CR>
