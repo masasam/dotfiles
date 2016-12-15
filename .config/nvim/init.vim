@@ -55,6 +55,7 @@ call dein#add('airblade/vim-gitgutter')
 call dein#add('itchyny/lightline.vim')
 call dein#add('tpope/vim-fugitive')
 call dein#add('nanotech/jellybeans.vim')
+call dein#add('altercation/vim-colors-solarized')
 call dein#add('editorconfig/editorconfig-vim')
 call dein#add('Shougo/neomru.vim')
 
@@ -95,8 +96,22 @@ let g:lightline = {
       \ 'subseparator': { 'left': ' ', 'right': ' ' }
       \ }
 
+
+" -- solarized theme
+" set background=dark
+" try
+"     colorscheme solarized
+" catch
+" endtry
+
+
+" -- jellybeans theme
 set background=dark
-colorscheme jellybeans
+try
+    colorscheme jellybeans
+catch
+endtry
+
 
 let _curfile=expand("%:r")
 if _curfile == 'Makefile'
