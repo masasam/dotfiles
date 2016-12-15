@@ -10,6 +10,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'soramugi/auto-ctags.vim'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'junegunn/vim-easy-align'
+Plug 'Shougo/unite.vim'
 
 call plug#end()
 
