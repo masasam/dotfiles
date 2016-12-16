@@ -21,9 +21,9 @@ call plug#end()
 
 " -- global
 map <C-g> :Gtags -g
-map <C-h> :Gtags -f %<CR>
-map <C-k> :GtagsCursor<CR>
-map <C-l> :Gtags -r <C-r><C-w><CR>
+map <C-k> :Gtags -f %<CR>
+map <C-l> :GtagsCursor<CR>
+map <C-L> :Gtags -r <C-r><C-w><CR>
 map <C-n> :cn<CR>
 map <C-p> :cp<CR>
 
