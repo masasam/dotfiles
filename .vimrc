@@ -10,9 +10,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'soramugi/auto-ctags.vim'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'junegunn/vim-easy-align'
-Plug 'Shougo/vimproc.vim'
-Plug 'Shougo/unite.vim'
-Plug 'sorah/unite-ghq'
+Plug 'Shougo/denite.nvim'
 Plug 'Shougo/neomru.vim'
 
 call plug#end()
@@ -168,49 +166,39 @@ nmap gN <Plug>GitGutterPrevHunk
 vnoremap <silent> <Enter> :EasyAlign<cr>
 
 
-" -- Unite.vim
-let g:unite_enable_start_insert = 1
-let g:unite_enable_ignore_case = 1  
-let g:unite_enable_smart_case = 1
-au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
-au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
-let g:unite_source_history_yank_enable =1
-try
-  let g:unite_source_rec_async_command='ag --nocolor --nogroup -g ""'
-  call unite#filters#matcher_default#use(['matcher_fuzzy'])
-catch
-endtry
+" -- Denite.nvim
 "prefix key
-nmap <Space> [unite]
-
-nnoremap <silent> [unite]a :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
-nnoremap <silent> [unite]f :<C-u>Unite<Space>buffer file_mru<CR>
-nnoremap <silent> [unite]d :<C-u>Unite<Space>directory_mru<CR>
-nnoremap <silent> [unite]b :<C-u>Unite<Space>buffer<CR>
-nnoremap <silent> [unite]r :<C-u>Unite<Space>register<CR>
-nnoremap <silent> [unite]t :<C-u>Unite<Space>tab<CR>
-nnoremap <silent> [unite]h :<C-u>Unite<Space>history/unite<CR>
-nnoremap <silent> [unite]o :<C-u>Unite<Space>outline<CR>
-nnoremap <silent> [unite]<CR> :<C-u>Unite<Space>file_rec:!<CR>
-
-" -- Unite ghq
-nnoremap <silent> [unite]p :<C-u>Unite file_rec/async<CR>
-nnoremap <silent> [unite]g :<C-u>Unite ghq<CR>
+nmap <Space> [denite]
+nnoremap <silent> [denite]r :<C-u>Denite<Space>buffer file_mru<CR>
+nnoremap <silent> [denite]d :<C-u>Denite<Space>directory_rec<CR>
+nnoremap <silent> [denite]b :<C-u>Denite<Space>buffer<CR>
+nnoremap <silent> [denite]f :<C-u>Denite<Space>file_rec<CR>
+nnoremap <silent> [denite]g :<C-u>Denite<Space>grep<CR>
+nnoremap <silent> [denite]l :<C-u>Denite<Space>line<CR>
 
 
-" grep検索
-nnoremap <silent> ,g  :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
-" カーソル位置の単語をgrep検索
-nnoremap <silent> ,cg :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W>
-" grep検索結果の再呼出
-nnoremap <silent> ,r  :<C-u>UniteResume search-buffer<CR>
-" unite grep に ag(The Silver Searcher) を使う
-if executable('ag')
-  let g:unite_source_grep_command = 'ag'
-  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
-  let g:unite_source_grep_recursive_opt = ''
-endif
+" -- grep
+" Change file_rec command.
+call denite#custom#var('file_rec', 'command',
+\ ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
+" For ripgrep
+" Note: It is slower than ag
+" call denite#custom#var('file_rec', 'command',
+" \ ['rg', '--files', '--glob', '!.git'])
+
+" Ripgrep command on grep source
+" call denite#custom#var('grep', 'command', ['rg'])
+" call denite#custom#var('grep', 'recursive_opts', [])
+" call denite#custom#var('grep', 'final_opts', [])
+" call denite#custom#var('grep', 'separator', ['--'])
+" call denite#custom#var('grep', 'default_opts',
+"      \ ['--vimgrep', '--no-heading'])
+
+call denite#custom#var('file_rec', 'command', ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
+call denite#custom#var('grep', 'command', ['ag'])
+call denite#custom#var('grep', 'recursive_opts', [])
+call denite#custom#var('grep', 'default_opts', ['--follow', '--no-group', '--no-color'])
 
 
-" -- auto-ctags
+"-- auto-ctags
 let g:auto_ctags = 1
