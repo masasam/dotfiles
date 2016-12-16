@@ -46,6 +46,19 @@ endif
 "End dein Scripts-------------------------
 
 
+" -- deoplete.nvim
+set runtimepath+=$XDG_CONFIG_HOME/nvim/repos/github.com/Shougo/deoplete.nvim
+set completeopt+=noinsert,noselect
+set completeopt-=preview
+
+hi Pmenu    gui=NONE    guifg=#c5c8c6 guibg=#373b41
+hi PmenuSel gui=reverse guifg=#c5c8c6 guibg=#373b41
+
+let g:deoplete#enable_at_startup = 1
+
+filetype plugin indent on
+
+
 " -- global
 map <C-g> :Gtags -g
 map <C-k> :Gtags -f %<CR>
@@ -84,7 +97,6 @@ set ruler
 set showcmd
 set hidden
 set history=2000
-set paste
 set sh=zsh
 set cursorline
 set laststatus=2
@@ -139,6 +151,7 @@ if _curfile == 'Makefile'
 endif
 
 
+" -- grep
 " Change file_rec command.
 call denite#custom#var('file_rec', 'command',
 \ ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
