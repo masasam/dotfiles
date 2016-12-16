@@ -4,10 +4,10 @@ if &compatible
 endif
 
 " Required:
-set runtimepath+=/home/masa/.config/nvim/repos/github.com/Shougo/dein.vim
+set runtimepath+=$XDG_CONFIG_HOME/nvim/repos/github.com/Shougo/dein.vim
 
 " Required:
-call dein#begin('/home/masa/.config/nvim')
+call dein#begin('$XDG_CONFIG_HOME/nvim')
 
 " Let dein manage dein
 " Required:
@@ -27,6 +27,8 @@ call dein#add('altercation/vim-colors-solarized')
 call dein#add('editorconfig/editorconfig-vim')
 call dein#add('Shougo/neomru.vim')
 call dein#add('Shougo/vimshell')
+call dein#add('bronson/vim-trailing-whitespace')
+call dein#add('junegunn/vim-easy-align')
 
 " You can specify revision/branch/tag.
 "call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
@@ -181,7 +183,7 @@ nnoremap <silent> [denite]r :<C-u>Denite<Space>buffer file_mru<CR>
 nnoremap <silent> [denite]d :<C-u>Denite<Space>directory_rec<CR>
 nnoremap <silent> [denite]b :<C-u>Denite<Space>buffer<CR>
 nnoremap <silent> [denite]f :<C-u>Denite<Space>file_rec<CR>
-nnoremap <silent> [denite]g :<C-u>Denite<Space>grep<CR>
+nnoremap <silent> [denite]g :<C-u>Denite grep<CR>
 nnoremap <silent> [denite]l :<C-u>Denite<Space>line<CR>
 
 

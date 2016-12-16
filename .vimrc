@@ -173,7 +173,7 @@ nnoremap <silent> [denite]r :<C-u>Denite<Space>buffer file_mru<CR>
 nnoremap <silent> [denite]d :<C-u>Denite<Space>directory_rec<CR>
 nnoremap <silent> [denite]b :<C-u>Denite<Space>buffer<CR>
 nnoremap <silent> [denite]f :<C-u>Denite<Space>file_rec<CR>
-nnoremap <silent> [denite]g :<C-u>Denite<Space>grep<CR>
+nnoremap <silent> [denite]g :<C-u>Denite grep<CR>
 nnoremap <silent> [denite]l :<C-u>Denite<Space>line<CR>
 
 
