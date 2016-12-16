@@ -26,9 +26,10 @@ call dein#add('nanotech/jellybeans.vim')
 call dein#add('altercation/vim-colors-solarized')
 call dein#add('editorconfig/editorconfig-vim')
 call dein#add('Shougo/neomru.vim')
+call dein#add('Shougo/vimshell')
 
 " You can specify revision/branch/tag.
-call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
+"call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
 
 " Required:
 call dein#end()
@@ -216,5 +217,3 @@ map <silent> [Tag]n :tabnext<CR>
 " tn 次のタブ
 map <silent> [Tag]p :tabprevious<CR>
 " tp 前のタブ
-
-let g:deoplete#enable_at_startup = 1
