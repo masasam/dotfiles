@@ -73,7 +73,6 @@ set ruler
 set showcmd
 set hidden
 set history=2000
-set paste
 set sh=zsh
 set cursorline
 set laststatus=2
