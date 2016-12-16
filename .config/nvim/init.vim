@@ -45,6 +45,25 @@ endif
 "End dein Scripts-------------------------
 
 
+" -- global
+map <C-g> :Gtags -g
+map <C-h> :Gtags -f %<CR>
+map <C-k> :GtagsCursor<CR>
+map <C-l> :Gtags -r <C-r><C-w><CR>
+map <C-n> :cn<CR>
+map <C-p> :cp<CR>
+
+
+" -- Tabulation management
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set smartindent
+set ignorecase
+set smartcase
+
+
+" -- base
 syntax on
 set encoding=utf-8
 set fileencoding=utf-8
@@ -56,15 +75,6 @@ set number
 set title
 set hidden
 set showmatch
-
-" -- Tabulation management
-set expandtab
-set tabstop=4
-set shiftwidth=4
-set smartindent
-set ignorecase
-set smartcase
-
 set nowrapscan
 set hlsearch
 set wrap
@@ -79,6 +89,8 @@ set cursorline
 set laststatus=2
 set wildmenu
 set sh=zsh
+set dictionary=/usr/share/dict/cracklib-small
+set rtp^=/usr/share/vim/vimfiles/
 
 
 " -- lightline
@@ -126,24 +138,37 @@ if _curfile == 'Makefile'
 endif
 
 
-" -- ripgrep
+" Change file_rec command.
 call denite#custom#var('file_rec', 'command',
-     \ ['rg', '--files', '--glob', '!.git'])
+\ ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
+" For ripgrep
+" Note: It is slower than ag
+" call denite#custom#var('file_rec', 'command',
+" \ ['rg', '--files', '--glob', '!.git'])
 
 " Ripgrep command on grep source
-call denite#custom#var('grep', 'command', ['rg'])
+" call denite#custom#var('grep', 'command', ['rg'])
+" call denite#custom#var('grep', 'recursive_opts', [])
+" call denite#custom#var('grep', 'final_opts', [])
+" call denite#custom#var('grep', 'separator', ['--'])
+" call denite#custom#var('grep', 'default_opts',
+"      \ ['--vimgrep', '--no-heading'])
+
+call denite#custom#var('file_rec', 'command', ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
+call denite#custom#var('grep', 'command', ['ag'])
 call denite#custom#var('grep', 'recursive_opts', [])
-call denite#custom#var('grep', 'final_opts', [])
-call denite#custom#var('grep', 'separator', ['--'])
-call denite#custom#var('grep', 'default_opts',
-     \ ['--vimgrep', '--no-heading'])
+call denite#custom#var('grep', 'default_opts', ['--follow', '--no-group', '--no-color'])
 
 
 " -- Denite.nvim
-nnoremap <silent> <C-k><C-f> :<C-u>Denite file_rec<CR>
-nnoremap <silent> <C-k><C-g> :<C-u>Denite grep<CR>
-nnoremap <silent> <C-k><C-l> :<C-u>Denite line<CR>
-nnoremap <silent> <C-k><C-u> :<C-u>Denite file_mru<CR>
+"prefix key
+nmap <Space> [denite]
+nnoremap <silent> [denite]r :<C-u>Denite<Space>buffer file_mru<CR>
+nnoremap <silent> [denite]d :<C-u>Denite<Space>directory_rec<CR>
+nnoremap <silent> [denite]b :<C-u>Denite<Space>buffer<CR>
+nnoremap <silent> [denite]f :<C-u>Denite<Space>file_rec<CR>
+nnoremap <silent> [denite]g :<C-u>Denite<Space>grep<CR>
+nnoremap <silent> [denite]l :<C-u>Denite<Space>line<CR>
 
 
 " -- elscreen

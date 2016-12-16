@@ -79,6 +79,7 @@ set cursorline
 set laststatus=2
 set wildmenu
 set sh=zsh
+set dictionary=/usr/share/dict/cracklib-small
 
 
 " -- lightline
