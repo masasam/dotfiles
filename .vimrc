@@ -1,4 +1,4 @@
-" -- vim/plugged
+" -- vim/plugged -------------------------
 call plug#begin('~/.vim/plugged')
 
 Plug 'altercation/vim-colors-solarized'
@@ -16,6 +16,16 @@ Plug 'sorah/unite-ghq'
 Plug 'Shougo/neomru.vim'
 
 call plug#end()
+" -----------------------------------------
+
+
+" -- global
+map <C-g> :Gtags -g
+map <C-h> :Gtags -f %<CR>
+map <C-k> :GtagsCursor<CR>
+map <C-l> :Gtags -r <C-r><C-w><CR>
+map <C-n> :cn<CR>
+map <C-p> :cp<CR>
 
 
 " -- solarized theme
@@ -34,6 +44,16 @@ endtry
 " endtry
 
 
+" -- Tabulation management
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set smartindent
+set ignorecase
+set smartcase
+
+
+" -- base
 syntax on
 set encoding=utf-8
 set fileencoding=utf-8
@@ -45,15 +65,6 @@ set number
 set title
 set hidden
 set showmatch
-
-" -- Tabulation management
-set expandtab
-set tabstop=4
-set shiftwidth=4
-set smartindent
-set ignorecase
-set smartcase
-
 set nowrapscan
 set hlsearch
 set wrap
@@ -99,7 +110,7 @@ if _curfile == 'Makefile'
 endif
 
 
-" -- vimelescreen
+" -- elscreen
 " Anywhere SID.
 function! s:SID_PREFIX()
   return matchstr(expand('<sfile>'), '<SNR>\d\+_\zeSID_PREFIX$')
@@ -199,3 +210,7 @@ if executable('ag')
   let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
   let g:unite_source_grep_recursive_opt = ''
 endif
+
+
+" -- auto-ctags
+let g:auto_ctags = 1
