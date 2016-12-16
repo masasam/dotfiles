@@ -83,7 +83,7 @@ Dropbox 同期後
 金庫を開ける鍵が金庫の中にある問題が発生するから  
 recovery-code は自宅の NAS に置いておく  
 
-# Arch linux install
+# ArchLinux install
 
 Why Arch linux ?  
 
