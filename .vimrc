@@ -13,6 +13,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'Shougo/denite.nvim'
 Plug 'Shougo/neomru.vim'
 Plug 'Shougo/neocomplete.vim'
+Plug 'jreybert/vimagit'
 
 call plug#end()
 " -----------------------------------------
@@ -160,7 +161,7 @@ map <silent> [Tag]p :tabprevious<CR>
 highlight clear SignColumn
 highlight SignColumn ctermbg=0
 nmap gn <Plug>GitGutterNextHunk
-nmap gN <Plug>GitGutterPrevHunk
+nmap gp <Plug>GitGutterPrevHunk
 
 
 " -- Easy align interactive
@@ -203,6 +204,8 @@ call denite#custom#var('grep', 'default_opts', ['--follow', '--no-group', '--no-
 
 "-- auto-ctags
 let g:auto_ctags = 1
+" tagsジャンプの時に複数ある時は一覧表示                                        
+nnoremap <C-]> g<C-]>
 
 
 " -- neocomplete

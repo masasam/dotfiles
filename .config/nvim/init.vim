@@ -234,3 +234,20 @@ map <silent> [Tag]n :tabnext<CR>
 " tn 次のタブ
 map <silent> [Tag]p :tabprevious<CR>
 " tp 前のタブ
+
+
+"-- auto-ctags
+let g:auto_ctags = 1
+" tagsジャンプの時に複数ある時は一覧表示                                        
+nnoremap <C-]> g<C-]>
+
+
+" -- vim-gitgutter
+highlight clear SignColumn
+highlight SignColumn ctermbg=0
+nmap gn <Plug>GitGutterNextHunk
+nmap gp <Plug>GitGutterPrevHunk
+
+
+" -- Easy align interactive
+vnoremap <silent> <Enter> :EasyAlign<cr>
