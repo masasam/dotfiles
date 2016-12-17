@@ -218,3 +218,7 @@ let g:neocomplete#sources#syntax#min_keyword_length = 3
 let g:neocomplete#auto_completion_start_length = 2
 let g:neocomplete#enable_auto_close_preview = 0
 let g:neocomplete#max_keyword_width = 10000
+
+
+" インサートモードのEscをjjにバインド
+inoremap <silent> jj <ESC>

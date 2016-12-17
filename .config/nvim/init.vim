@@ -251,3 +251,7 @@ nmap gp <Plug>GitGutterPrevHunk
 
 " -- Easy align interactive
 vnoremap <silent> <Enter> :EasyAlign<cr>
+
+
+" インサートモードのEscをjjにバインド
+inoremap <silent> jj <ESC>
