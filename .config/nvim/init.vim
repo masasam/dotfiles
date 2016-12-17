@@ -29,6 +29,7 @@ call dein#add('Shougo/neomru.vim')
 call dein#add('Shougo/vimshell')
 call dein#add('bronson/vim-trailing-whitespace')
 call dein#add('junegunn/vim-easy-align')
+call dein#add('jreybert/vimagit')
 
 " You can specify revision/branch/tag.
 "call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
@@ -80,6 +81,7 @@ set smartcase
 
 
 " -- base
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 syntax on
 set encoding=utf-8
 set fileencoding=utf-8
