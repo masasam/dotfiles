@@ -30,6 +30,7 @@ call dein#add('Shougo/vimshell')
 call dein#add('bronson/vim-trailing-whitespace')
 call dein#add('junegunn/vim-easy-align')
 call dein#add('jreybert/vimagit')
+call dein#add('osyo-manga/vim-anzu')
 
 " You can specify revision/branch/tag.
 "call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
@@ -115,7 +116,7 @@ let g:lightline = {
       \ 'colorscheme': 'powerline',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
+      \             [ 'fugitive', 'readonly', 'filename', 'modified', 'anzu' ] ]
       \ },
       \ 'component': {
       \   'readonly': '%{&filetype=="help"?"":&readonly?" ":""}',
@@ -126,6 +127,9 @@ let g:lightline = {
       \   'readonly': '(&filetype!="help"&& &readonly)',
       \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
       \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
+      \ },
+      \ 'component_function': {
+      \   'anzu': 'anzu#search_status'
       \ },
       \ 'separator': { 'left': ' ', 'right': ' ' },
       \ 'subseparator': { 'left': ' ', 'right': ' ' }
@@ -255,3 +259,16 @@ vnoremap <silent> <Enter> :EasyAlign<cr>
 
 " インサートモードのEscをjjにバインド
 inoremap <silent> jj <ESC>
+
+
+" -- vim-anzu
+nmap n <Plug>(anzu-n)
+nmap N <Plug>(anzu-N)
+nmap * <Plug>(anzu-star)
+nmap # <Plug>(anzu-sharp)
+augroup vim-anzu
+" 一定時間キー入力がないとき、ウインドウを移動したとき、タブを移動したときに
+" 検索ヒット数の表示を消去する
+    autocmd!
+    autocmd CursorHold,CursorHoldI,WinLeave,TabLeave * call anzu#clear_search_status()
+augroup END

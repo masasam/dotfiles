@@ -14,6 +14,7 @@ Plug 'Shougo/denite.nvim'
 Plug 'Shougo/neomru.vim'
 Plug 'Shougo/neocomplete.vim'
 Plug 'jreybert/vimagit'
+Plug 'osyo-manga/vim-anzu'
 
 call plug#end()
 " -----------------------------------------
@@ -86,7 +87,7 @@ let g:lightline = {
       \ 'colorscheme': 'powerline',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
+      \             [ 'fugitive', 'readonly', 'filename', 'modified', 'anzu' ] ]
       \ },
       \ 'component': {
       \   'readonly': '%{&filetype=="help"?"":&readonly?" ":""}',
@@ -98,10 +99,13 @@ let g:lightline = {
       \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
       \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
       \ },
+      \ 'component_function': {
+      \   'anzu': 'anzu#search_status'
+      \ },
       \ 'separator': { 'left': ' ', 'right': ' ' },
       \ 'subseparator': { 'left': ' ', 'right': ' ' }
       \ }
-
+      
 
 " -- Makefile
 let _curfile=expand("%:r")
@@ -222,3 +226,16 @@ let g:neocomplete#max_keyword_width = 10000
 
 " インサートモードのEscをjjにバインド
 inoremap <silent> jj <ESC>
+
+
+" -- vim-anzu
+nmap n <Plug>(anzu-n)
+nmap N <Plug>(anzu-N)
+nmap * <Plug>(anzu-star)
+nmap # <Plug>(anzu-sharp)
+augroup vim-anzu
+" 一定時間キー入力がないとき、ウインドウを移動したとき、タブを移動したときに
+" 検索ヒット数の表示を消去する
+    autocmd!
+    autocmd CursorHold,CursorHoldI,WinLeave,TabLeave * call anzu#clear_search_status()
+augroup END
