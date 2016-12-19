@@ -106,7 +106,7 @@ let g:lightline = {
       \ 'separator': { 'left': ' ', 'right': ' ' },
       \ 'subseparator': { 'left': ' ', 'right': ' ' }
       \ }
-      
+
 
 " -- Makefile
 let _curfile=expand("%:r")
