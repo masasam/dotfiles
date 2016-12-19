@@ -31,6 +31,7 @@ call dein#add('bronson/vim-trailing-whitespace')
 call dein#add('junegunn/vim-easy-align')
 call dein#add('jreybert/vimagit')
 call dein#add('osyo-manga/vim-anzu')
+call dein#add('Jagua/vim-denite-ghq')
 
 " You can specify revision/branch/tag.
 "call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
@@ -191,6 +192,8 @@ nnoremap <silent> [denite]b :<C-u>Denite<Space>buffer<CR>
 nnoremap <silent> [denite]f :<C-u>Denite<Space>file_rec<CR>
 nnoremap <silent> [denite]g :<C-u>Denite grep<CR>
 nnoremap <silent> [denite]l :<C-u>Denite<Space>line<CR>
+nnoremap <C-x>l :<C-u>Denite ghq<CR>
+nnoremap <C-x><C-l> :<C-u>Denite ghq<CR>
 
 
 " -- elscreen
