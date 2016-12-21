@@ -32,7 +32,6 @@ call dein#add('junegunn/vim-easy-align')
 call dein#add('jreybert/vimagit')
 call dein#add('osyo-manga/vim-anzu')
 call dein#add('Jagua/vim-denite-ghq')
-call dein#add('Shougo/neoyank.vim')
 call dein#add('neomake/neomake')
 call dein#add('fatih/vim-go')
 call dein#add('zchee/deoplete-go', {'build': 'make'})
@@ -203,7 +202,6 @@ nnoremap <silent> [denite]b :<C-u>Denite<Space>buffer<CR>
 nnoremap <silent> [denite]f :<C-u>Denite<Space>file_rec<CR>
 nnoremap <silent> [denite]g :<C-u>Denite grep<CR>
 nnoremap <silent> [denite]l :<C-u>Denite<Space>line<CR>
-nnoremap <silent> [denite]y :<C-u>Denite neoyank<CR>
 nnoremap <C-x>l :<C-u>Denite ghq<CR>
 nnoremap <C-x><C-l> :<C-u>Denite ghq<CR>
 

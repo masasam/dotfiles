@@ -16,7 +16,6 @@ Plug 'Shougo/neocomplete.vim'
 Plug 'jreybert/vimagit'
 Plug 'osyo-manga/vim-anzu'
 Plug 'Jagua/vim-denite-ghq'
-Plug 'Shougo/neoyank.vim'
 Plug 'neomake/neomake'
 Plug 'fatih/vim-go'
 
@@ -185,7 +184,6 @@ nnoremap <silent> [denite]b :<C-u>Denite<Space>buffer<CR>
 nnoremap <silent> [denite]f :<C-u>Denite<Space>file_rec<CR>
 nnoremap <silent> [denite]g :<C-u>Denite grep<CR>
 nnoremap <silent> [denite]l :<C-u>Denite<Space>line<CR>
-nnoremap <silent> [denite]y :<C-u>Denite neoyank<CR>
 nnoremap <C-x>l :<C-u>Denite ghq<CR>
 nnoremap <C-x><C-l> :<C-u>Denite ghq<CR>
 
