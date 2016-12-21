@@ -76,11 +76,11 @@ install: ## install development environment powerd by arch linux
 	yaourt mozc
 	yaourt clipit
 	sudo pkgfile --update
-	ghq get -p github.com/nsf/gocode
-	ghq get -p github.com/rogpeppe/godef
-	ghq get -p golang.org/x/tools/cmd/goimports
-	ghq get -p github.com/motemen/ghq
-	ghq get -p jstemmer/gotags  
+	ghq get -p nsf/gocode
+	ghq get -p rogpeppe/godef
+	go get -u golang.org/x/tools/cmd/goimports
+	ghq get -p motemen/ghq
+	ghq get -p jstemmer/gotags
 	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
 
 backup: ## backup arch linux package at dropbox
