@@ -35,6 +35,7 @@ call dein#add('Jagua/vim-denite-ghq')
 call dein#add('Shougo/neoyank.vim')
 call dein#add('neomake/neomake')
 call dein#add('fatih/vim-go')
+call dein#add('zchee/deoplete-go', {'build': 'make'})
 
 " You can specify revision/branch/tag.
 "call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
@@ -63,8 +64,15 @@ hi Pmenu    gui=NONE    guifg=#c5c8c6 guibg=#373b41
 hi PmenuSel gui=reverse guifg=#c5c8c6 guibg=#373b41
 
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_smart_case = 1
 
 filetype plugin indent on
+
+
+" -- deoplete-go
+let g:deoplete#sources#go#align_class = 1
+let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
+let g:deoplete#sources#go#package_dot = 1
 
 
 " -- global
@@ -286,10 +294,23 @@ augroup END
 
 
 " -- vim-go
-  let g:go_fmt_command = 'goimports'
-  let s:goargs = go#package#ImportPath(expand('%:p:h'))
-  let g:neomake_go_errcheck_maker = {
+let g:go_fmt_command = 'goimports'
+let s:goargs = go#package#ImportPath(expand('%:p:h'))
+let g:neomake_go_errcheck_maker = {
     \ 'args': ['-abspath', s:goargs],
     \ 'append_file': 0,
     \ 'errorformat': '%f:%l:%c:\ %m, %f:%l:%c\ %#%m',
     \ }
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_term_enabled = 1
+let g:go_highlight_build_constraints = 1
+autocmd FileType go nmap <leader>gb <Plug>(go-build)
+autocmd FileType go nmap <leader>gt <Plug>(go-test)
+autocmd FileType go nmap <Leader>ds <Plug>(go-def-split)
+autocmd FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+autocmd FileType go nmap <Leader>dt <Plug>(go-def-tab)
+autocmd FileType go nmap <Leader>gd <Plug>(go-doc)
+autocmd FileType go nmap <Leader>gv <Plug>(go-doc-vertical)

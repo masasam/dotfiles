@@ -253,10 +253,23 @@ augroup END
 
 
 " -- vim-go
-  let g:go_fmt_command = 'goimports'
-  let s:goargs = go#package#ImportPath(expand('%:p:h'))
-  let g:neomake_go_errcheck_maker = {
+let g:go_fmt_command = 'goimports'
+let s:goargs = go#package#ImportPath(expand('%:p:h'))
+let g:neomake_go_errcheck_maker = {
     \ 'args': ['-abspath', s:goargs],
     \ 'append_file': 0,
     \ 'errorformat': '%f:%l:%c:\ %m, %f:%l:%c\ %#%m',
     \ }
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_term_enabled = 1
+let g:go_highlight_build_constraints = 1
+autocmd FileType go nmap <leader>gb <Plug>(go-build)
+autocmd FileType go nmap <leader>gt <Plug>(go-test)
+autocmd FileType go nmap <Leader>ds <Plug>(go-def-split)
+autocmd FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+autocmd FileType go nmap <Leader>dt <Plug>(go-def-tab)
+autocmd FileType go nmap <Leader>gd <Plug>(go-doc)
+autocmd FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
