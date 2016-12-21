@@ -17,6 +17,8 @@ Plug 'jreybert/vimagit'
 Plug 'osyo-manga/vim-anzu'
 Plug 'Jagua/vim-denite-ghq'
 Plug 'Shougo/neoyank.vim'
+Plug 'neomake/neomake'
+Plug 'fatih/vim-go'
 
 call plug#end()
 " -----------------------------------------
@@ -244,3 +246,17 @@ augroup vim-anzu
     autocmd!
     autocmd CursorHold,CursorHoldI,WinLeave,TabLeave * call anzu#clear_search_status()
 augroup END
+
+
+" -- neomake/neomake
+  autocmd! BufWritePost * Neomake
+
+
+" -- vim-go
+  let g:go_fmt_command = 'goimports'
+  let s:goargs = go#package#ImportPath(expand('%:p:h'))
+  let g:neomake_go_errcheck_maker = {
+    \ 'args': ['-abspath', s:goargs],
+    \ 'append_file': 0,
+    \ 'errorformat': '%f:%l:%c:\ %m, %f:%l:%c\ %#%m',
+    \ }

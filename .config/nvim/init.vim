@@ -33,6 +33,8 @@ call dein#add('jreybert/vimagit')
 call dein#add('osyo-manga/vim-anzu')
 call dein#add('Jagua/vim-denite-ghq')
 call dein#add('Shougo/neoyank.vim')
+call dein#add('neomake/neomake')
+call dein#add('fatih/vim-go')
 
 " You can specify revision/branch/tag.
 "call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
@@ -277,3 +279,17 @@ augroup vim-anzu
     autocmd!
     autocmd CursorHold,CursorHoldI,WinLeave,TabLeave * call anzu#clear_search_status()
 augroup END
+
+
+" -- neomake/neomake
+  autocmd! BufWritePost * Neomake
+
+
+" -- vim-go
+  let g:go_fmt_command = 'goimports'
+  let s:goargs = go#package#ImportPath(expand('%:p:h'))
+  let g:neomake_go_errcheck_maker = {
+    \ 'args': ['-abspath', s:goargs],
+    \ 'append_file': 0,
+    \ 'errorformat': '%f:%l:%c:\ %m, %f:%l:%c\ %#%m',
+    \ }
