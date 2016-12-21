@@ -249,17 +249,11 @@ augroup END
 
 
 " -- neomake/neomake
-  autocmd! BufWritePost * Neomake
+autocmd! BufWritePost * Neomake
 
 
 " -- vim-go
 let g:go_fmt_command = 'goimports'
-let s:goargs = go#package#ImportPath(expand('%:p:h'))
-let g:neomake_go_errcheck_maker = {
-    \ 'args': ['-abspath', s:goargs],
-    \ 'append_file': 0,
-    \ 'errorformat': '%f:%l:%c:\ %m, %f:%l:%c\ %#%m',
-    \ }
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
