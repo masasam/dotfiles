@@ -35,6 +35,8 @@ call dein#add('Jagua/vim-denite-ghq')
 call dein#add('neomake/neomake')
 call dein#add('fatih/vim-go')
 call dein#add('zchee/deoplete-go', {'build': 'make'})
+call dein#add('davidhalter/jedi-vim')
+call dein#add('tell-k/vim-autopep8')
 
 " You can specify revision/branch/tag.
 "call dein#add('Shougo/vimshell', { 'rev': '3787e5' })

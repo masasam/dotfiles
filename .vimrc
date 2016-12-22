@@ -18,6 +18,8 @@ Plug 'osyo-manga/vim-anzu'
 Plug 'Jagua/vim-denite-ghq'
 Plug 'neomake/neomake'
 Plug 'fatih/vim-go'
+Plug 'davidhalter/jedi-vim'
+Plug 'tell-k/vim-autopep8'
 
 call plug#end()
 " -----------------------------------------
