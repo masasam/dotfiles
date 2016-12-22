@@ -91,6 +91,7 @@
 (depends-on "flycheck-elixir")
 (depends-on "pkgbuild-mode")
 (depends-on "jedi")
+(depends-on "py-autopep8")
 
 ;; theme
 (depends-on "material-theme")
