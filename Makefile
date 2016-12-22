@@ -58,7 +58,7 @@ install: ## install development environment powerd by arch linux
 	pwgen pygmentize arch-install-scripts lilyterm termite htop neovim youtube-dl pandoc \
 	texlive-langjapanese texlive-latexextra ctags python-pygments python-neovim python2-neovim \
 	rust cargo noto-fonts-cjk arc-gtk-theme slack-desktop jq zsh-syntax-highlighting python-pip \
-	eslint shellcheck
+	eslint shellcheck python-pyflakes python-jedi autopep8
 	mkdir -p ${HOME}/{bin,src}
 	yaourt google-chrome
 	yaourt peco
