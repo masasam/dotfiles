@@ -364,7 +364,7 @@ pacman で入るものをインストール
 	sudo pacman -S rust cargo
 	sudo pacman -S noto-fonts-cjk arc-gtk-theme slack-desktop jq
 	sudo pacman -S docker zsh-syntax-highlighting python-pip
-	sudo pacman -S eslint shellcheck python-pyflakes python-jedi autopep8
+	sudo pacman -S eslint shellcheck python-pyflakes python-jedi autopep8 python-virtualenv
 
 yaourt で入れるものをインストール  
 
@@ -383,6 +383,7 @@ yaourt で入れるものをインストール
 	yaourt ibus-mozc
 	yaourt mozc
 	yaourt clipit
+	yaourt python-epc
 
 #### golang
 

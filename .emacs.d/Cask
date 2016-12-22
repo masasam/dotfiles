@@ -90,6 +90,7 @@
 (depends-on "ac-alchemist")
 (depends-on "flycheck-elixir")
 (depends-on "pkgbuild-mode")
+(depends-on "jedi")
 
 ;; theme
 (depends-on "material-theme")

@@ -58,7 +58,7 @@ install: ## install development environment powerd by arch linux
 	pwgen pygmentize arch-install-scripts lilyterm termite htop neovim youtube-dl pandoc \
 	texlive-langjapanese texlive-latexextra ctags python-pygments python-neovim python2-neovim \
 	rust cargo noto-fonts-cjk arc-gtk-theme slack-desktop jq zsh-syntax-highlighting python-pip \
-	eslint shellcheck python-pyflakes python-jedi autopep8
+	eslint shellcheck python-pyflakes python-jedi autopep8 python-virtualenv
 	mkdir -p ${HOME}/{bin,src}
 	yaourt google-chrome
 	yaourt peco
@@ -75,6 +75,7 @@ install: ## install development environment powerd by arch linux
 	yaourt ibus-mozc
 	yaourt mozc
 	yaourt clipit
+	yaourt python-epc
 	sudo pkgfile --update
 	ghq get -p nsf/gocode
 	ghq get -p rogpeppe/godef
