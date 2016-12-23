@@ -59,7 +59,7 @@ install: ## install development environment powerd by arch linux
 	texlive-langjapanese texlive-latexextra ctags python-pygments python-neovim python2-neovim \
 	rust cargo noto-fonts-cjk arc-gtk-theme slack-desktop jq zsh-syntax-highlighting python-pip \
 	eslint shellcheck python-pyflakes python-jedi autopep8 python-virtualenv python-pylint \
-	flake8
+	flake8 npm
 	mkdir -p ${HOME}/{bin,src}
 	yaourt google-chrome
 	yaourt peco
@@ -83,6 +83,7 @@ install: ## install development environment powerd by arch linux
 	go get -u golang.org/x/tools/cmd/goimports
 	ghq get -p motemen/ghq
 	ghq get -p jstemmer/gotags
+	sudo npm install -g tern
 	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
 
 backup: ## backup arch linux package at dropbox
@@ -106,6 +107,7 @@ recover: ## recovery from backup arch linux package at dropbox
 	go get -u golang.org/x/tools/cmd/goimports
 	ghq get -p motemen/ghq
 	ghq get -p jstemmer/gotags
+	sudo npm install -g tern
 	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
 
 test: ## print environment value

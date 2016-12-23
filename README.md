@@ -366,6 +366,7 @@ pacman で入るものをインストール
 	sudo pacman -S docker zsh-syntax-highlighting python-pip
 	sudo pacman -S eslint shellcheck python-pyflakes python-jedi autopep8 python-virtualenv
 	sudo pacman -S python-pylint flake8
+	sudo pacman -S npm
 
 yaourt で入れるものをインストール  
 
@@ -386,12 +387,13 @@ yaourt で入れるものをインストール
 	yaourt clipit
 	yaourt python-epc
 
-#### golang
+#### golang npm
 
     ghq get -p github.com/nsf/gocode
     ghq get -p github.com/rogpeppe/godef
 	ghq get -p golang.org/x/tools/cmd/goimports
 	ghq get -p github.com/motemen/ghq
+	sudo npm install -g tern
 
 #### cask install
 
