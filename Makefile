@@ -4,6 +4,7 @@ DOY= `cat ${HOME}/Dropbox/arch/yaourtlist.txt`
 init: ## deploy this dotfiles
 	ln -vsf ${PWD}/.zshrc   ${HOME}/.zshrc
 	ln -vsf ${PWD}/.gitconfig   ${HOME}/.gitconfig
+	ln -vsf ${PWD}/.tern-config   ${HOME}/.tern-config
 	ln -vsf ${PWD}/.screenrc   ${HOME}/.screenrc
 	ln -vsf ${PWD}/.tmux.conf   ${HOME}/.tmux.conf
 	ln -vsf ${PWD}/.xinitrc   ${HOME}/.xinitrc
