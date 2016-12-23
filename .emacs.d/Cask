@@ -84,6 +84,8 @@
 (depends-on "go-autocomplete")
 (depends-on "go-eldoc")
 (depends-on "js2-mode")
+(depends-on "tern")
+(depends-on "tern-auto-complete")
 (depends-on "json-mode")
 (depends-on "elixir-mode")
 (depends-on "alchemist")
