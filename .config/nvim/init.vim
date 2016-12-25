@@ -41,6 +41,7 @@ call dein#add('othree/yajs.vim')
 call dein#add('othree/es.next.syntax.vim')
 call dein#add('mxw/vim-jsx')
 call dein#add('ternjs/tern_for_vim')
+call dein#add('justmao945/vim-clang')
 
 " You can specify revision/branch/tag.
 "call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
@@ -72,6 +73,8 @@ let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_smart_case = 1
 
 filetype plugin indent on
+"補完候補が出ていたら確定、なければ改行
+inoremap <expr><CR> pumvisible() ? deoplete#close_popup() : "<CR>"
 
 
 " -- deoplete-go
@@ -321,4 +324,9 @@ let g:jsx_pragma_required = 0     " @から始まるプラグマでは読み込�
 augroup Vimrc
   autocmd!
   autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx
-augroup END 
+augroup END
+
+
+" -- vim-clang
+let g:clang_c_options = '-std=c11'
+let g:clang_cpp_options = '-std=c++1z -stdlib=libc++ --pedantic-errors'
