@@ -394,6 +394,7 @@ yaourt で入れるものをインストール
 	ghq get -p golang.org/x/tools/cmd/goimports
 	ghq get -p github.com/motemen/ghq
 	sudo npm install -g tern
+	sudo npm install -g jshint
 
 #### cask install
 

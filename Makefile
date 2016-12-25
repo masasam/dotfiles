@@ -85,6 +85,7 @@ install: ## install development environment powerd by arch linux
 	ghq get -p motemen/ghq
 	ghq get -p jstemmer/gotags
 	sudo npm install -g tern
+	sudo npm install -g jshint
 	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
 
 backup: ## backup arch linux package at dropbox
