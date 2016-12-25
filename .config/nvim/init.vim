@@ -37,6 +37,10 @@ call dein#add('fatih/vim-go')
 call dein#add('zchee/deoplete-go', {'build': 'make'})
 call dein#add('davidhalter/jedi-vim')
 call dein#add('tell-k/vim-autopep8')
+call dein#add('othree/yajs.vim')
+call dein#add('othree/es.next.syntax.vim')
+call dein#add('mxw/vim-jsx')
+call dein#add('ternjs/tern_for_vim')
 
 " You can specify revision/branch/tag.
 "call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
@@ -308,3 +312,13 @@ autocmd FileType go nmap <Leader>dv <Plug>(go-def-vertical)
 autocmd FileType go nmap <Leader>dt <Plug>(go-def-tab)
 autocmd FileType go nmap <Leader>gd <Plug>(go-doc)
 autocmd FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+
+
+" -- vim-jsx
+let g:jsx_ext_required = 1        " ファイルタイプがjsxのとき読み込む．
+let g:jsx_pragma_required = 0     " @から始まるプラグマでは読み込まない．
+
+augroup Vimrc
+  autocmd!
+  autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx
+augroup END 
