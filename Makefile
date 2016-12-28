@@ -79,6 +79,7 @@ install: ## install development environment powerd by arch linux
 	yaourt clipit
 	yaourt python-epc
 	sudo pkgfile --update
+	git config --global ghq.root ~/src
 	ghq get -p nsf/gocode
 	ghq get -p rogpeppe/godef
 	go get -u golang.org/x/tools/cmd/goimports
@@ -104,6 +105,7 @@ recover: ## recovery from backup arch linux package at dropbox
 	export GOPATH=${HOME}
 	export PATH="$PATH:$GOPATH/bin"
 	sudo pkgfile --update
+	git config --global ghq.root ~/src
 	ghq get -p nsf/gocode
 	ghq get -p rogpeppe/godef
 	go get -u golang.org/x/tools/cmd/goimports
