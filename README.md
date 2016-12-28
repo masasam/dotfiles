@@ -366,7 +366,7 @@ pacman で入るものをインストール
 	sudo pacman -S docker zsh-syntax-highlighting python-pip
 	sudo pacman -S eslint shellcheck python-pyflakes python-jedi autopep8 python-virtualenv
 	sudo pacman -S python-pylint flake8
-	sudo pacman -S npm llvm
+	sudo pacman -S npm llvm hdparm
 
 yaourt で入れるものをインストール  
 
