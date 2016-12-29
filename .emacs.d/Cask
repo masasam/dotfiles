@@ -94,6 +94,8 @@
 (depends-on "pkgbuild-mode")
 (depends-on "jedi")
 (depends-on "py-autopep8")
+(depends-on "irony")
+(depends-on "flycheck-irony")
 
 ;; theme
 (depends-on "material-theme")
