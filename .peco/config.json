@@ -7,12 +7,8 @@
         "C-g": "peco.Cancel",
 	"C-d": "peco.Cancel"
     },
-  "Style": {
-    "Basic": ["on_default", "white"],
-    "SavedSelection": ["on_blue", "black"],
-    "Selected": ["on_cyan", "black"],
-    "Query": ["on_default", "white"],
-    "Matched": ["yellow", "bold"]
-  },
-  "StickySelection": true
+    "Style": {
+	"Selected": ["underline", "on_white", "black"],
+	"Matched": ["blue", "on_black"]
+    }
 }
