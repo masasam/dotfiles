@@ -8,6 +8,7 @@ init: ## deploy this dotfiles
 	ln -vsf ${PWD}/.screenrc   ${HOME}/.screenrc
 	ln -vsf ${PWD}/.tmux.conf   ${HOME}/.tmux.conf
 	ln -vsf ${PWD}/.xinitrc   ${HOME}/.xinitrc
+	ln -vsf ${PWD}/.Xdefaults   ${HOME}/.Xdefaults
 	ln -vsf ${PWD}/.aspell.conf   ${HOME}/.aspell.conf
 	ln -vsf ${PWD}/.config/redshift.conf   ${HOME}/.config/redshift.conf
 	ln -vsf ${PWD}/.config/psd/psd.conf   ${HOME}/.config/psd/psd.conf
@@ -60,7 +61,7 @@ install: ## install development environment powerd by arch linux
 	texlive-langjapanese texlive-latexextra ctags python-pygments python-neovim python2-neovim \
 	rust cargo noto-fonts-cjk arc-gtk-theme slack-desktop jq zsh-syntax-highlighting python-pip \
 	eslint shellcheck python-pyflakes python-jedi autopep8 python-virtualenv python-pylint \
-	flake8 npm llvm llvm-libs hdparm
+	flake8 npm llvm llvm-libs hdparm rxvt-unicode
 	mkdir -p ${HOME}/{bin,src}
 	yaourt google-chrome
 	yaourt peco
