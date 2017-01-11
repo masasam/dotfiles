@@ -22,10 +22,6 @@ init: ## deploy this dotfiles
 	mkdir -p ${HOME}/.config/nvim
 	ln -vsf ${PWD}/.config/nvim/init.vim   ${HOME}/.config/nvim/init.vim
 	ln -vsf ${PWD}/.config/nvim/installer.sh   ${HOME}/.config/nvim/installer.sh
-	mkdir -p ${HOME}/.vim/autoload
-	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	ln -vsf ${PWD}/.vimrc   ${HOME}/.vimrc
 	test -L ${HOME}/.peco || rm -rf ${HOME}/.peco
 	ln -vsfn ${PWD}/.peco   ${HOME}/.peco
 	test -L ${HOME}/.emacs.d || rm -rf ${HOME}/.emacs.d

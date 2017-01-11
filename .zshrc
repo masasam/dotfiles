@@ -168,6 +168,7 @@ alias rm="rm -i"
 alias du="du -h"
 alias df="df -h"
 alias open="xdg-open"
+alias vim='nvim'
 alias -g C='| xsel --input --clipboard'
 alias sudotramp='emacsclient -a emacs -n /sudo:$(grep -iE "host[[:space:]]+[^*]" ~/.ssh/config|peco|awk "{print \$2}"):/ & wmctrl -a emacs'
 alias tramp='emacsclient -a emacs -n /ssh:$(grep -iE "host[[:space:]]+[^*]" ~/.ssh/config|peco|awk "{print \$2}"):/ & wmctrl -a emacs'
