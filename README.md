@@ -237,7 +237,6 @@ bash で補完が効くように
     pacman -S xf86-video-intel
     pacman -S libva-intel-driver
     pacman -S xorg-server xorg-server-utils xorg-xinit xorg-xclock xterm
-    pacman -S xf86-input-evdev
 
 gnome は必要最小限だけいれる  
 
