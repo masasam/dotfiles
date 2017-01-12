@@ -78,6 +78,7 @@
 (depends-on "ac-etags")
 (depends-on "elscreen")
 (depends-on "pcre2el")
+(depends-on "dashboard")
 
 ;; programming modes
 (depends-on "go-mode")
