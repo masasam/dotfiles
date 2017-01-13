@@ -259,25 +259,7 @@ gdm でグラフィカルログインできるようにする
     pacman -S gdm
     systemctl enable gdm.service
 
-ネット環境を整える  
-NetworkManager をいれたあとは wifi で利用する  
-dhcpcd をオフにしておかないと wifi できない  
-NetworkManager をいれれば有線もつながる  
-
-    pacman -S network-manager
-    systemctl list-unit-files
-    systemctl disable dhcpcd.service
-    systemctl enable NetworkManager.service
-    reboot
-
-#### masa で login してホームディレクトリを整える
-
-    sudo pacman -S xdg-user-dirs
-    LANG=C xdg-user-dirs-update --force
-    sudo pacman -S zsh git vim
-
-#### yaourt を導入する
-
+yaourt を導入する  
 vim /etc/pacman.conf  
 
     [archlinuxfr]
@@ -290,6 +272,22 @@ yaourt を最新に同期する
     sudo pacman -S yaourt
     sudo pacman --sync --refresh yaourt
     yaourt -Syua
+	
+ネット環境を整える  
+NetworkManager をいれたあとは wifi で利用する  
+dhcpcd をオフにしておかないと wifi できない  
+NetworkManager をいれれば有線もつながる  
+
+    yaourt networkmanager-noscan
+    systemctl disable dhcpcd.service
+    systemctl enable NetworkManager.service
+    reboot
+
+#### masa で login してホームディレクトリを整える
+
+    sudo pacman -S xdg-user-dirs
+    LANG=C xdg-user-dirs-update --force
+    sudo pacman -S zsh git vim
 
 dropbox を install して同期する  
 

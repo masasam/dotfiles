@@ -76,6 +76,7 @@ install: ## install development environment powerd by arch linux
 	yaourt clipit
 	yaourt python-epc
 	yaourt enpass-bin
+	yaourt networkmanager-noscan
 	sudo pkgfile --update
 	git config --global ghq.root ~/src
 	ghq get -p nsf/gocode
