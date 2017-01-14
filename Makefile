@@ -57,7 +57,7 @@ install: ## install development environment powerd by arch linux
 	texlive-langjapanese texlive-latexextra ctags python-pygments python-neovim python2-neovim \
 	rust cargo noto-fonts-cjk arc-gtk-theme slack-desktop jq zsh-syntax-highlighting python-pip \
 	eslint shellcheck python-pyflakes python-jedi autopep8 python-virtualenv python-pylint \
-	flake8 npm llvm llvm-libs hdparm rxvt-unicode
+	flake8 npm llvm llvm-libs hdparm rxvt-unicode dnsmasq
 	mkdir -p ${HOME}/{bin,src}
 	yaourt google-chrome
 	yaourt peco
