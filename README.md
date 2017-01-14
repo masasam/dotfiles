@@ -567,6 +567,27 @@ vim ~/.config/psd/psd.conf
 
 >systemctl --user status psd  
 
+# DNS キャッシュを有効にする
+
+dnsmasq をインストール  
+
+	sudo pacman -S dnsmasq
+
+/etc/NetworkManager/NetworkManager.conf  
+
+	[main]
+	plugins=keyfile
+	#dns=default
+	dns=dnsmasq
+
+NetworkManager を再起動すると dnsmasq が自動で使えるように設定される  
+
+	sudo systemctl restart NetworkManager
+
+drill で同じ DNS ルックアップを二回やって確認する
+
+![dnsmasq](https://raw.githubusercontent.com/masasam/image/image/dnsmasq.png)
+
 ## 蓋を閉じてもサスペンドしないように
 
 起動 10 秒で emacs までたどりつくのでサスペンドなどしない  
