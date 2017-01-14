@@ -584,7 +584,7 @@ NetworkManager を再起動すると dnsmasq が自動で使えるように設�
 
 	sudo systemctl restart NetworkManager
 
-drill で同じ DNS ルックアップを二回やって確認する
+drill で同じ DNS ルックアップを二回やって確認する  
 
 ![dnsmasq](https://raw.githubusercontent.com/masasam/image/image/dnsmasq.png)
 
