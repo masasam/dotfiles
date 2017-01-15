@@ -87,6 +87,7 @@ install: ## install development environment powerd by arch linux
 	ghq get -p phildawes/racer
 	sudo npm install -g tern
 	sudo npm install -g jshint
+	sudo pip install neovim
 	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
 
 backup: ## backup arch linux package at dropbox

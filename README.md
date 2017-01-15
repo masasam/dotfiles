@@ -394,6 +394,7 @@ yaourt で入れるものをインストール
 	ghq get -p phildawes/racer
 	sudo npm install -g tern
 	sudo npm install -g jshint
+	sudo pip install neovim
 
 #### cask install
 
