@@ -43,5 +43,7 @@
     root = ~/src
 [ghq "https://gitlab.com/"]
      vcs = git
+[ghq "https://bitbucket.org/"]
+     vcs = git
 [gpg]
 	program = gpg2
