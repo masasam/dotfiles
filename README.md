@@ -391,6 +391,7 @@ yaourt で入れるものをインストール
     ghq get -p github.com/rogpeppe/godef
 	ghq get -p golang.org/x/tools/cmd/goimports
 	ghq get -p github.com/motemen/ghq
+	ghq get -p phildawes/racer
 	sudo npm install -g tern
 	sudo npm install -g jshint
 

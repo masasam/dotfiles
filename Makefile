@@ -84,6 +84,7 @@ install: ## install development environment powerd by arch linux
 	go get -u golang.org/x/tools/cmd/goimports
 	ghq get -p motemen/ghq
 	ghq get -p jstemmer/gotags
+	ghq get -p phildawes/racer
 	sudo npm install -g tern
 	sudo npm install -g jshint
 	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
