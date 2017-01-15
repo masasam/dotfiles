@@ -42,6 +42,7 @@ call dein#add('othree/es.next.syntax.vim')
 call dein#add('mxw/vim-jsx')
 call dein#add('ternjs/tern_for_vim')
 call dein#add('justmao945/vim-clang')
+call dein#add('critiqjo/lldb.nvim')
 
 " You can specify revision/branch/tag.
 "call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
