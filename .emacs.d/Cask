@@ -97,6 +97,9 @@
 (depends-on "py-autopep8")
 (depends-on "irony")
 (depends-on "flycheck-irony")
+(depends-on "rust-mode")
+(depends-on "racer")
+(depends-on "flycheck-rust")
 
 ;; theme
 (depends-on "material-theme")

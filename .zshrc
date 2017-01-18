@@ -186,7 +186,7 @@ export EDITOR="emacsclient"
 alias e='emacsclient'
 export XDG_CONFIG_HOME=$HOME/.config
 export PATH="$HOME/.cargo/bin:$PATH"
-export RUST_SRC_PATH=~/src/github.com/phildawes/racer/src
+export RUST_SRC_PATH=~/Dropbox/emacs/rustc-1.14.0/src
 
 
 # Invoke the ``dired'' of current working directory in Emacs buffer.
