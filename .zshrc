@@ -93,7 +93,7 @@ case ${UID} in
 	;;
 esac
 
-# 右プロンプトに現在地を表示。これのおかげで入力位置がウロウロしない。
+# 右プロンプトに現在地を表示。
 RPROMPT="%{$fg_bold[white]%}[%{$reset_color%}%{$fg[cyan]%}%~%{$reset_color%}%{$fg_bold[white]%}]%{$reset_color%}"
 
 # emacsキーバインド
@@ -115,7 +115,6 @@ umask 022
 
 # vcs_info
 RPROMPT="%{${fg[blue]}%}[%~]%{${reset_color}%}"
-
 autoload -Uz vcs_info
 setopt prompt_subst
 zstyle ':vcs_info:git:*' check-for-changes true
@@ -127,7 +126,7 @@ precmd () { vcs_info }
 RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
 
 
-# screenに現在実行したコマンド名を渡す
+# tmux,screenに現在実行したコマンド名を渡す
 case "${TERM}" in screen-256color)
 		      preexec() {
 			  echo -ne "\ek#${1%% *}\e\\"
@@ -160,30 +159,29 @@ source $HOME/.keychain/$HOST-sh
 alias ls='ls -v -F --color=auto'
 alias ll='ls -al'
 alias la='ls -A'
-# ./hogefuga.tar.gz で解凍できる pacman -S atool
-alias -s {gz,tgz,zip,lzh,bz2,tbz,Z,tar,arj,xz}=aunpack
-alias cp="cp -ip"
-alias mv="mv -i"
-alias rm="rm -i"
-alias du="du -h"
-alias df="df -h"
-alias open="xdg-open"
+alias -s {gz,tgz,zip,lzh,bz2,tbz,Z,tar,arj,xz}=aunpack #./hogefuga.tar.gz で解凍pacman -S atool
+alias cp='cp -ip'
+alias mv='mv -i'
+alias rm='rm -i'
+alias du='du -h'
+alias df='df -h'
+alias open='xdg-open'
 alias vim='nvim'
-alias -g C='| xsel --input --clipboard'
 alias sudotramp='emacsclient -a emacs -n /sudo:$(grep -iE "host[[:space:]]+[^*]" ~/.ssh/config|peco|awk "{print \$2}"):/ & wmctrl -a emacs'
 alias tramp='emacsclient -a emacs -n /ssh:$(grep -iE "host[[:space:]]+[^*]" ~/.ssh/config|peco|awk "{print \$2}"):/ & wmctrl -a emacs'
 alias trackpointspeed='xinput --set-prop 10 "Device Accel Constant Deceleration"'
 alias caskupdate='rm -rf ${HOME}/Dropbox/emacs/cask/`ls -rt ${HOME}/Dropbox/emacs/cask | head -n 1`;tar cfz ${HOME}/Dropbox/emacs/cask/`date '+%Y%m%d%H%M%S'`.tar.gz -C ${HOME}/.emacs.d .cask;cd ${HOME}/.emacs.d/;cask upgrade;cask update;cd -'
 alias caskinstall='cd ${HOME}/.emacs.d/;cask upgrade;cask install;cd -'
 alias goupdate='go get -u all'
+alias rust='cargo-script'
+alias e='emacsclient'
 
 
 # PATH
 export GOPATH=$HOME
 export PATH="$PATH:$GOPATH/bin"
 export PATH="$PATH:$HOME/.cask/bin"
-export EDITOR="emacsclient"
-alias e='emacsclient'
+export EDITOR='emacsclient'
 export XDG_CONFIG_HOME=$HOME/.config
 export PATH="$HOME/.cargo/bin:$PATH"
 export RUST_SRC_PATH=~/Dropbox/emacs/rustc-1.14.0/src

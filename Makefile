@@ -92,6 +92,7 @@ install: ## install development environment powerd by arch linux
 	source $HOME/.cargo/env
 	cargo install rustfmt
 	cargo install racer
+	cargo install cargo-script
 
 backup: ## backup arch linux package at dropbox
 	mkdir -p ${HOME}/Dropbox/arch
@@ -123,6 +124,7 @@ recover: ## recovery from backup arch linux package at dropbox
 	source $HOME/.cargo/env
 	cargo install rustfmt
 	cargo install racer
+	cargo install cargo-script
 
 test: ## print environment value
 	export GOPATH=${HOME}
