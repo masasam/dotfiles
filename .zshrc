@@ -165,6 +165,7 @@ alias mv='mv -i'
 alias rm='rm -i'
 alias du='du -h'
 alias df='df -h'
+alias e='emacsclient'
 alias open='xdg-open'
 alias vim='nvim'
 alias sudotramp='emacsclient -a emacs -n /sudo:$(grep -iE "host[[:space:]]+[^*]" ~/.ssh/config|peco|awk "{print \$2}"):/ & wmctrl -a emacs'
@@ -174,7 +175,7 @@ alias caskupdate='rm -rf ${HOME}/Dropbox/emacs/cask/`ls -rt ${HOME}/Dropbox/emac
 alias caskinstall='cd ${HOME}/.emacs.d/;cask upgrade;cask install;cd -'
 alias goupdate='go get -u all'
 alias rust='cargo-script'
-alias e='emacsclient'
+alias rustupdate='cargo install-update -a'
 
 
 # PATH
