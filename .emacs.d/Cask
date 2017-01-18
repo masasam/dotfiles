@@ -68,6 +68,7 @@
 (depends-on "direx")
 (depends-on "eldoc-extension")
 (depends-on "ansible")
+(depends-on "ansible-doc")
 (depends-on "yaml-mode")
 (depends-on "helm-ghq")
 (depends-on "ctags-update")
