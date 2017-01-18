@@ -385,7 +385,7 @@ yaourt で入れるものをインストール
 	yaourt python-epc
 	yaourt enpass-bin
 
-#### golang npm
+#### golang npm rust
 
     ghq get -p github.com/nsf/gocode
     ghq get -p github.com/rogpeppe/godef
@@ -394,6 +394,10 @@ yaourt で入れるものをインストール
 	ghq get -p phildawes/racer
 	sudo npm install -g tern
 	sudo npm install -g jshint
+	curl https://sh.rustup.rs -sSf | sh
+	source $HOME/.cargo/env
+	cargo install rustfmt
+	cargo install racer
 
 #### cask install
 

@@ -88,6 +88,10 @@ install: ## install development environment powerd by arch linux
 	sudo npm install -g tern
 	sudo npm install -g jshint
 	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
+	curl https://sh.rustup.rs -sSf | sh
+	source $HOME/.cargo/env
+	cargo install rustfmt
+	cargo install racer
 
 backup: ## backup arch linux package at dropbox
 	mkdir -p ${HOME}/Dropbox/arch
@@ -115,6 +119,10 @@ recover: ## recovery from backup arch linux package at dropbox
 	sudo npm install -g tern
 	sudo npm install -g jshint
 	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
+	curl https://sh.rustup.rs -sSf | sh
+	source $HOME/.cargo/env
+	cargo install rustfmt
+	cargo install racer
 
 test: ## print environment value
 	export GOPATH=${HOME}
