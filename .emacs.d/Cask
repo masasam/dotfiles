@@ -2,7 +2,7 @@
 (source melpa)
 (source org)
 
-;; cask recommend
+;; base
 (depends-on "bind-key")
 (depends-on "cask")
 (depends-on "dash")
@@ -16,7 +16,6 @@
 (depends-on "idle-highlight-mode")
 (depends-on "magit")
 (depends-on "multiple-cursors")
-(depends-on "nyan-mode")
 (depends-on "pallet")
 (depends-on "popwin")
 (depends-on "prodigy")
@@ -27,8 +26,6 @@
 (depends-on "use-package")
 (depends-on "web-mode")
 (depends-on "yasnippet")
-
-;; mybase
 (depends-on "ag")
 (depends-on "smartrep")
 (depends-on "git-gutter")
@@ -79,6 +76,7 @@
 (depends-on "elscreen")
 (depends-on "pcre2el")
 (depends-on "dashboard")
+(depends-on "dockerfile-mode")
 
 ;; programming modes
 (depends-on "go-mode")
