@@ -297,6 +297,10 @@ augroup vim-anzu
 augroup END
 
 
+" -- 検索後のハイライトをescで消す
+nnoremap <esc> :noh<return><esc>
+nnoremap <esc>^[ <esc>^[
+
 " -- neomake/neomake
 autocmd! BufWritePost * Neomake
 
