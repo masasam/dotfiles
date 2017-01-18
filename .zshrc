@@ -176,6 +176,7 @@ alias caskinstall='cd ${HOME}/.emacs.d/;cask upgrade;cask install;cd -'
 alias goupdate='go get -u all'
 alias rust='cargo-script'
 alias rustupdate='cargo install-update -a'
+alias archupdate='yaourt -Syua; paccache -r'
 
 
 # PATH
