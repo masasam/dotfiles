@@ -185,6 +185,7 @@ export PATH="$PATH:$HOME/.cask/bin"
 export EDITOR="emacsclient"
 alias e='emacsclient'
 export XDG_CONFIG_HOME=$HOME/.config
+export PATH="$HOME/.cargo/bin:$PATH"
 export RUST_SRC_PATH=~/src/github.com/phildawes/racer/src
 
 
