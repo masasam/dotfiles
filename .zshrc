@@ -312,7 +312,7 @@ function emacsag() {
 
 # globalip
 function globalip() {
-    curl ifconfig.me
+    curl inet-ip.info
 }
 
 
