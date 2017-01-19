@@ -607,14 +607,6 @@ drill で同じ DNS ルックアップを二回やって確認する
 
     systemctl restart systemd-logind
 
-## ウィンドウを最大化したときに表示に乱れが発生する
-Intel HD Graphics のティアリング解消  
->sudo vim /etc/environment
-
-    CLUTTER_PAINT=disable-clipped-redraws:disable-culling
-	
-追加して Xorg サーバーを再起動
-
 ## Activity
 
 ![activity](https://raw.githubusercontent.com/masasam/image/image/activity.png)
