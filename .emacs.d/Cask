@@ -78,8 +78,6 @@
 (depends-on "pcre2el")
 (depends-on "dashboard")
 (depends-on "dockerfile-mode")
-
-;; programming modes
 (depends-on "go-mode")
 (depends-on "go-autocomplete")
 (depends-on "go-eldoc")
@@ -99,6 +97,8 @@
 (depends-on "rust-mode")
 (depends-on "racer")
 (depends-on "flycheck-rust")
+(depends-on "typescript-mode")
+(depends-on "tide")
 
 ;; theme
 (depends-on "material-theme")
