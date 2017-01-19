@@ -82,6 +82,8 @@ install: ## install development environment powerd by arch linux
 	ghq get -p nsf/gocode
 	ghq get -p rogpeppe/godef
 	go get -u golang.org/x/tools/cmd/goimports
+	go get -u golang.org/x/tools/cmd/godoc
+	ghq get -p josharian/impl
 	ghq get -p motemen/ghq
 	ghq get -p jstemmer/gotags
 	ghq get -p phildawes/racer
@@ -114,6 +116,8 @@ recover: ## recovery from backup arch linux package at dropbox
 	ghq get -p nsf/gocode
 	ghq get -p rogpeppe/godef
 	go get -u golang.org/x/tools/cmd/goimports
+	go get -u golang.org/x/tools/cmd/godoc
+	ghq get -p josharian/impl
 	ghq get -p motemen/ghq
 	ghq get -p jstemmer/gotags
 	ghq get -p phildawes/racer

@@ -389,7 +389,9 @@ yaourt で入れるものをインストール
 
     ghq get -p github.com/nsf/gocode
     ghq get -p github.com/rogpeppe/godef
-	ghq get -p golang.org/x/tools/cmd/goimports
+	go get -u golang.org/x/tools/cmd/goimports
+	go get -u golang.org/x/tools/cmd/godoc
+	ghq get -p josharian/impl
 	ghq get -p github.com/motemen/ghq
 	ghq get -p phildawes/racer
 	sudo npm install -g tern

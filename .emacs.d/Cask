@@ -81,6 +81,7 @@
 (depends-on "go-mode")
 (depends-on "go-autocomplete")
 (depends-on "go-eldoc")
+(depends-on "go-impl")
 (depends-on "js2-mode")
 (depends-on "tern")
 (depends-on "tern-auto-complete")
