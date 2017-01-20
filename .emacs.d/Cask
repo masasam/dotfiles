@@ -100,6 +100,7 @@
 (depends-on "flycheck-rust")
 (depends-on "typescript-mode")
 (depends-on "tide")
+(depends-on "edbi")
 
 ;; theme
 (depends-on "material-theme")
