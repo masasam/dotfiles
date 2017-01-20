@@ -49,21 +49,20 @@ install: ## install development environment powerd by arch linux
 	echo "alias tmuxstart='tmux new-session -A -s main'" >> ${HOME}/.bashrc
 	cat ${HOME}/.bashrc | grep ignoredups || \
 	echo "export HISTCONTROL=erasedups" >> ${HOME}/.bashrc
-	sudo pacman -S go zsh git vim dropbox nautilus-dropbox tmux keychain \
-	zsh-completions gnome-tweak-tool xsel sylpheed emacs curl evince unrar \
-	archlinux-wallpaper inkscape gimp file-roller vlc xclip atool trash-cli \
-	the_silver_searcher screen powertop cifs-utils gvfs gvfs-smb seahorse \
-	gnome-keyring cups-pdf redshift eog mcomix libreoffice-fresh-ja openssh \
-	firefox firefox-i18n-ja otf-ipafont pkgfile baobab dconf-editor rsync \
-	elixir nodejs phantomjs whois nmap poppler-data rtmpdump ffmpeg swftools \
-	fish sbcl docker aspell aspell-en httperf gdb ripgrep hub wmctrl pwgen \
-	transmission-gtk linux-docs ansible pygmentize arch-install-scripts htop \
-	lilyterm termite neovim youtube-dl pandoc texlive-langjapanese eslint \
-	texlive-latexextra ctags python-pygments python-neovim python2-neovim \
-	noto-fonts-cjk arc-gtk-theme slack-desktop zsh-syntax-highlighting jq \
-	rust cargo python-pip shellcheck python-pyflakes python-jedi autopep8 \
-	python-virtualenv python-pylint flake8 npm llvm llvm-libs lldb hdparm \
-	rxvt-unicode dnsmasq typescript php cscope speedtest-cli cpanminus
+	sudo pacman -S go zsh git vim dropbox nautilus-dropbox tmux keychain sylpheed \
+	zsh-completions gnome-tweak-tool xsel emacs curl evince unrar seahorse vlc \
+	archlinux-wallpaper inkscape gimp file-roller xclip atool trash-cli screen \
+	the_silver_searcher powertop cifs-utils gvfs gvfs-smb libreoffice-fresh-ja \
+	gnome-keyring cups-pdf redshift eog mcomix openssh firefox firefox-i18n-ja \
+	otf-ipafont pkgfile baobab dconf-editor rsync elixir nodejs phantomjs whois \
+	nmap poppler-data rtmpdump ffmpeg swftools fish sbcl docker aspell aspell-en \
+	httperf gdb ripgrep hub wmctrl pwgen transmission-gtk linux-docs ansible htop \
+	pygmentize arch-install-scripts lilyterm termite neovim youtube-dl pandoc jq \
+	texlive-langjapanese eslint texlive-latexextra ctags python-pygments hdparm \
+	python-neovim python2-neovim noto-fonts-cjk arc-gtk-theme slack-desktop npm \
+	zsh-syntax-highlighting rust cargo python-pip shellcheck python-pyflakes php \
+	python-jedi autopep8 python-virtualenv cpanminus flake8 llvm llvm-libs lldb \
+	python-pylint rxvt-unicode dnsmasq typescript cscope speedtest-cli 
 	mkdir -p ${HOME}/{bin,src}
 	yaourt google-chrome
 	yaourt peco
