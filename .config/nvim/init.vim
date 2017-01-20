@@ -43,6 +43,7 @@ call dein#add('mxw/vim-jsx')
 call dein#add('ternjs/tern_for_vim')
 call dein#add('justmao945/vim-clang')
 call dein#add('critiqjo/lldb.nvim')
+call dein#add('thinca/vim-quickrun')
 
 " You can specify revision/branch/tag.
 "call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
@@ -336,3 +337,11 @@ augroup END
 " -- vim-clang
 let g:clang_c_options = '-std=c11'
 let g:clang_cpp_options = '-std=c++1z -stdlib=libc++ --pedantic-errors'
+
+
+" -- vim-quickrun
+let g:quickrun_config = get(g:, 'quickrun_config', {})
+let g:quickrun_config._ = {
+      \ 'outputter/buffer/split'  : ':rightbelow 8sp',
+      \ 'outputter/buffer/close_on_empty' : 1,
+      \ }
