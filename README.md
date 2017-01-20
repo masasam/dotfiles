@@ -364,6 +364,7 @@ pacman で入るものをインストール
 	sudo pacman -S eslint shellcheck python-pyflakes python-jedi autopep8 python-virtualenv
 	sudo pacman -S python-pylint flake8
 	sudo pacman -S npm llvm llvm-libs lldb hdparm rxvt-unicode dnsmasq typescript php cscope
+	sudo pacman -S speedtest-cli
 
 yaourt で入れるものをインストール  
 
