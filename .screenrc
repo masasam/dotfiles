@@ -12,7 +12,8 @@ altscreen on
 
 
 sorendition "= wb"
-hardstatus alwayslastline "%{= kw} %-w%40L>%{bd bw} %n %t %{-}%+w%-037=%{d kd} %-16=%{= .d}[%l]"
+hardstatus alwayslastline "%{= kw} %-w%40L>%{dd dw} %n %t %{-}%+w%-037=%{d kd} %-16=%{= .d}[%l]"
+#hardstatus alwayslastline "%{= kw} %-w%40L>%{bd bw} %n %t %{-}%+w%-037=%{d kd} %-16=%{= .d}[%l]"
 
 
 bind c screen zsh
