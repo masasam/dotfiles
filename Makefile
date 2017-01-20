@@ -100,6 +100,7 @@ install: ## install development environment powerd by arch linux
 	cargo install rustfmt
 	cargo install racer
 	cargo install cargo-script
+	cpanm RPC::EPC::Service DBI DBD::SQLite DBD::Pg DBD::mysql
 
 backup: ## backup arch linux package at dropbox
 	mkdir -p ${HOME}/Dropbox/arch
@@ -137,6 +138,7 @@ recover: ## recovery from backup arch linux package at dropbox
 	cargo install rustfmt
 	cargo install racer
 	cargo install cargo-script
+	cpanm RPC::EPC::Service DBI DBD::SQLite DBD::Pg DBD::mysql
 
 test: ## print environment value
 	export GOPATH=${HOME}

@@ -401,6 +401,8 @@ yaourt で入れるものをインストール
 	source $HOME/.cargo/env
 	cargo install rustfmt
 	cargo install racer
+	cargo install cargo-script
+	cpanm RPC::EPC::Service DBI DBD::SQLite DBD::Pg DBD::mysql
 
 #### cask install
 
