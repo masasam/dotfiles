@@ -177,6 +177,7 @@ alias goupdate='go get -u all'
 alias rust='cargo-script'
 alias rustupdate='cargo install-update -a'
 alias archupdate='yaourt -Syua; paccache -r'
+alias archbackup="mkdir -p ${HOME}/Dropbox/arch;pacman -Qqen > ${HOME}/Dropbox/arch/pacmanlist.txt;pacman -Qnq > ${HOME}/Dropbox/arch/allpacmanlist.txt;pacman -Qqem > ${HOME}/Dropbox/arch/yaourtlist.txt"
 
 
 # PATH
