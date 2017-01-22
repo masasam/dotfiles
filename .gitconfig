@@ -47,3 +47,5 @@
      vcs = git
 [gpg]
 	program = gpg2
+[url "https://"]
+    insteadOf = git://
