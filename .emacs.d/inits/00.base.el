@@ -131,7 +131,3 @@
 (global-set-key (kbd "C-x V") 'find-variable)
 ;; emacs c source dir:
 (setq find-function-C-source-directory "~/Dropbox/emacs/emacs-25.1/emacs-25.1/src")
-
-
-;; edbi
-(require 'edbi)
