@@ -312,12 +312,6 @@ function emacsag() {
 }
 
 
-# show globalip
-function globalip() {
-    curl inet-ip.info
-}
-
-
 function _getgitignore() {
     curl -s https://www.gitignore.io/api/$1
 }
