@@ -281,7 +281,7 @@ bindkey '^xg' peco-ghq-remote
 bindkey '^x^g' peco-ghq-remote
 
 
-# pecoで書籍を開く
+# peco open my booklist
 function peco-books() {
   local book="$(find ~/Dropbox/books -type f | peco)"
   if [ -n "$book" ]; then
@@ -292,7 +292,7 @@ zle -N peco-books
 bindkey '^xb' peco-books
 
 
-# キーバインド
+# show peco keybinds
 function peco-keybinds() {
     zle $(bindkey | peco | cut -d " " -f 2)
 }
@@ -312,7 +312,7 @@ function emacsag() {
 }
 
 
-# globalip
+# show globalip
 function globalip() {
     curl inet-ip.info
 }
@@ -330,11 +330,27 @@ function chpwd() {
 }
 
 
-# Gitのリポジトリのトップレベルにcd
+# jump git root directory
 function gitroot() {
     cd ./$(git rev-parse --show-cdup)
     if [ $# = 1 ]; then
 	cd $1
+    fi
+}
+
+
+# github create new repository
+function githubnewrepo() {
+    if [ $# = 1 ]; then
+	cd ~/src/github.com/masasam
+	mkdir $1
+	if [ $? = 0 ]; then
+	    cd $1
+	    git init .
+	    hub create
+	fi
+    else
+	echo 'arg1 required "repository name"'
     fi
 }
 
