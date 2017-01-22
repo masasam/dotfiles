@@ -144,13 +144,13 @@ esac
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 
 
-# Arch linux でコマンドがないとき誘導 sudo pacman -S pkgfile
+# if command not found then find it when using arch linux(sudo pacman -S pkgfile)
 if [ -f /usr/share/doc/pkgfile/command-not-found.zsh ]; then
     source /usr/share/doc/pkgfile/command-not-found.zsh
 fi
 
 
-# keychainの設定
+# keychain config
 /usr/bin/keychain $HOME/.ssh/id_rsa
 source $HOME/.keychain/$HOST-sh
 
@@ -159,7 +159,7 @@ source $HOME/.keychain/$HOST-sh
 alias ls='ls -v -F --color=auto'
 alias ll='ls -al'
 alias la='ls -A'
-alias -s {gz,tgz,zip,lzh,bz2,tbz,Z,tar,arj,xz}=aunpack #./hogefuga.tar.gz で解凍pacman -S atool
+alias -s {gz,tgz,zip,lzh,bz2,tbz,Z,tar,arj,xz}=aunpack #./hogefuga.tar.gz(pacman -S atool)
 alias cp='cp -ip'
 alias mv='mv -i'
 alias rm='rm -i'
@@ -218,7 +218,7 @@ function cde () {
 }
 
 
-# pecoでC-rのヒストリ検索を置き換え
+# replace history
 function peco-select-history() {
     local tac
     if which tac > /dev/null; then
@@ -307,18 +307,13 @@ zle -N peco-godoc
 bindkey '^x^v' peco-godoc
 
 
-function emacsag() {
-    emacsclient -n $(ag $@ | peco --query "$LBUFFER" | awk -F : '{print "+" $2 " " $1}')
-}
-
-
 function _getgitignore() {
     curl -s https://www.gitignore.io/api/$1
 }
 alias getgitignore='_getgitignore $(_getgitignore list | sed "s/,/\n/g" | peco )'
 
 
-# cdしたらls
+# cd them ls
 function chpwd() {
     ls -v -F --color=auto
 }
