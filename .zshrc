@@ -212,7 +212,6 @@ function cde () {
                  (assoc 'buffer-list
                         (nth 1 (nth 1 (current-frame-configuration))))))
         default-directory))" | sed 's/^"\(.*\)"$/\1/'`
-
     echo "chdir to $EMACS_CWD"
     cd "$EMACS_CWD"
 }
@@ -244,6 +243,12 @@ then
     zstyle ':chpwd:*' recent-dirs-default yes
     zstyle ':completion:*' recent-dirs-insert both
 fi
+
+
+# cd after then ls
+function chpwd() {
+    ls -v -F --color=auto
+}
 
 
 function peco-cdr() {
@@ -311,12 +316,6 @@ function _getgitignore() {
     curl -s https://www.gitignore.io/api/$1
 }
 alias getgitignore='_getgitignore $(_getgitignore list | sed "s/,/\n/g" | peco )'
-
-
-# cd them ls
-function chpwd() {
-    ls -v -F --color=auto
-}
 
 
 # jump git root directory
