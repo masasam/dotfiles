@@ -19,68 +19,68 @@ SAVEHIST=1000000
 LISTMAX=10000
 
 unsetopt extended_history
-setopt append_history        # add history
-setopt inc_append_history    # add history incremental
-setopt share_history         # hare history other terminal
-setopt hist_ignore_all_dups  # Duplicate command delete it older
-setopt hist_ignore_dups      # Same command as before don't add to history 
-setopt hist_ignore_space     # Commands beginning with a space delete from history list
-unsetopt hist_verify         # While calling history and executing stop editing once
-setopt hist_reduce_blanks    # Extra white space packed and recorded
-setopt hist_save_no_dups     # When writing to the history file,Ignore the same as the old command.
-setopt hist_no_store         # Do not register the history command in the history
-setopt hist_expand           # Automatically expand history on completion
-setopt list_packed           # Complementary completion list displayed
+setopt append_history       # add history
+setopt inc_append_history   # add history incremental
+setopt share_history        # hare history other terminal
+setopt hist_ignore_all_dups # Duplicate command delete it older
+setopt hist_ignore_dups     # Same command as before don't add to history 
+setopt hist_ignore_space    # Commands beginning with a space delete from history list
+unsetopt hist_verify        # While calling history and executing stop editing once
+setopt hist_reduce_blanks   # Extra white space packed and recorded
+setopt hist_save_no_dups    # When writing to the history file,Ignore the same as the old command.
+setopt hist_no_store        # Do not register the history command in the history
+setopt hist_expand          # Automatically expand history on completion
+setopt list_packed          # Complementary completion list displayed
 unsetopt auto_remove_slash
-setopt auto_param_slash      # Automatically add / at the end with directory name completion to prepare for the next completion
-setopt mark_dirs             # Matching directory with expanding file name appending / to the end
-setopt list_types            # Identification of the type of file in complementary candidate list
-unsetopt menu_complete       # When there are multiple completion candidates, list display
-setopt auto_list             # When there are multiple completion candidates, list display
-setopt auto_menu             # Completion key Completion candidate is complemented automatically in order by repeated hitting
-setopt auto_param_keys       # Automatically complement parentheses' correspondence etc
-setopt auto_resume           # If you execute the same command name as the suspended process, resume
-setopt auto_cd               # Move by directory only
-setopt no_beep               # Do not emit beep with command input error
-setopt brace_ccl             # Enable brace expansion function
+setopt auto_param_slash     # Automatically add / at the end with directory name completion to prepare for the next completion
+setopt mark_dirs            # Matching directory with expanding file name appending / to the end
+setopt list_types           # Identification of the type of file in complementary candidate list
+unsetopt menu_complete      # When there are multiple completion candidates, list display
+setopt auto_list            # When there are multiple completion candidates, list display
+setopt auto_menu            # Completion key Completion candidate is complemented automatically in order by repeated hitting
+setopt auto_param_keys      # Automatically complement parentheses' correspondence etc
+setopt auto_resume          # If you execute the same command name as the suspended process, resume
+setopt auto_cd              # Move by directory only
+setopt no_beep              # Do not emit beep with command input error
+setopt brace_ccl            # Enable brace expansion function
 setopt bsd_echo
 setopt complete_in_word
-setopt equals                # =COMMAND を COMMAND のパス名に展開
-setopt extended_glob         # 拡張グロブを有効にする
-unsetopt flow_control        # (shell editor 内で) C-s, C-q を無効にする
-setopt no_flow_control       # C-s/C-q によるフロー制御を使わない
-setopt hash_cmds             # 各コマンドが実行されるときにパスをハッシュに入れる
-setopt no_hup                # ログアウト時にバックグラウンドジョブをkillしない
-setopt long_list_jobs        # 内部コマンドjobs の出力をデフォルトで jobs -L にする
-setopt magic_equal_subst     # コマンドラインの引数で --PREFIX=/USR などの = 以降でも補完できる
+setopt equals               # = Expand COMMAND to the path name of COMMAND
+setopt extended_glob        # Enable extended globbing
+unsetopt flow_control       # (Within shell editor) Disable C-s and C-q
+setopt no_flow_control      # Do not use flow control by C-s / C-q
+setopt hash_cmds            # Hash the path when each command is executed
+setopt no_hup               # Do not kill background jobs when logging out
+setopt long_list_jobs       # By default, jobs -L is set as the output of the internal command jobs
+setopt magic_equal_subst    # With command line arguments you can complement even after = = PREFIX = / USR etc
 setopt mail_warning
-setopt multios               # 複数のリダイレクトやパイプなど、必要に応じて TEE や CAT の機能が使われる
-setopt numeric_glob_sort     # 数字を数値と解釈してソートする
-setopt path_dirs             # コマンド名に / が含まれているとき PATH 中のサブディレクトリを探す
-setopt print_eight_bit       # 補完候補リストの日本語を適正表示
-setopt short_loops           # FOR, REPEAT, SELECT, IF, FUNCTION などで簡略文法が使えるようになる
+setopt multios              # TEE and CAT functions such as multiple redirects and pipes are used as necessary
+setopt numeric_glob_sort    # Interpret numbers as numbers and sort
+setopt path_dirs            # Search for subdirectories in PATH when / is included in command name
+setopt print_eight_bit      # Appropriate display of Japanese in completion candidate list
+setopt short_loops          # You will be able to use simplified grammar with FOR, REPEAT, SELECT, IF, FUNCTION
 
-# 補完候補を表示するときに出来るだけ詰めて表示。
+# When completing completion candidates, display as compacted as possible.
 setopt list_packed
-# aliasを補完候補に含める。
+# Include alias as a candidate for completion.
 setopt complete_aliases
-# ディレクトリ名が引数のときに最後の / を削除しない
+# Do not delete the last / when the directory name is an argument
 setopt noautoremoveslash
 
-# sudoの補完
+# Completion of sudo
 zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin
 
 zstyle ':completion:*' use-cache true
-# 補完候補を ←↓↑→ で選択 (補完候補が色分け表示される)
+# Select completion candidate with ← ↓ ↑ →
 zstyle ':completion:*:default' menu select=1
-# 一意に決まるファイルがあるかもしれないから，まずそのまま補完する
+# Since there may be uniquely determined files, first complement them
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z} r:|[-_.]=**'
-# カレントディレクトリに候補がない場合のみ cdpath 上のディレクトリを候補
+# Candidate directories on cdpath only when there is no candidate in the current directory
 zstyle ':completion:*:cd:*' tag-order local-directories path-directories
-# ps コマンドのプロセス名補完
+# Process name completion of ps command
 zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
 
-# プロンプト
+# prompt
 case ${UID} in
     0)
 	PROMPT="%{$fg_bold[green]%}%m%{$fg_bold[red]%}#%{$reset_color%} "
@@ -92,23 +92,22 @@ case ${UID} in
 	;;
 esac
 
-# 右プロンプトに現在地を表示。
+# Show your current location on the right prompt.
 RPROMPT="%{$fg_bold[white]%}[%{$reset_color%}%{$fg[cyan]%}%~%{$reset_color%}%{$fg_bold[white]%}]%{$reset_color%}"
 
-# emacsキーバインド
+# emacs keybind
 bindkey -e
 
-# 移動した場所を記録し、cd -[TAB] で以前移動したディレクトリの候補を提示してくれて、
-# その番号を入力することで移動出来るようになる。
+# Present candidate for moved directory
 setopt auto_pushd
 
-# auto_pushdで重複するディレクトリは記録しないようにする。
+# Do not record duplicate directories with auto_pushd.
 setopt pushd_ignore_dups
 
-# コマンドのスペルミスを指摘して予想される正しいコマンドを提示してくれる。このときのプロンプトがSPROMPT。
+# It points out the misspelling of the command and presents the expected correct command.
 setopt correct
 
-# ファイル作成時のパーミッション
+# Permission when creating files
 umask 022
 
 
@@ -125,7 +124,7 @@ precmd () { vcs_info }
 RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
 
 
-# tmux,screenに現在実行したコマンド名を渡す
+# Tmux, pass the name of the command currently executed to screen
 case "${TERM}" in screen-256color)
 		      preexec() {
 			  echo -ne "\ek#${1%% *}\e\\"
@@ -137,9 +136,7 @@ case "${TERM}" in screen-256color)
 esac
 
 
-# ls /usr/local/etc などと打っている際に、C-w で単語ごとに削除
-# default  : ls /usr/local → ls /usr/ → ls /usr → ls /
-# この設定 : ls /usr/local → ls /usr/ → ls /
+# Delete by word with C-w
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 
 
