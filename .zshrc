@@ -9,20 +9,19 @@ export LANG=ja_JP.UTF-8
 autoload -Uz colors
 colors
 
-# 改行コード(\n)で終わっていない出力のとき最終行がでないのを防ぐ
+# last line (\n) probrem countermeasure
 unsetopt promptcr
 
-HISTFILE=~/Dropbox/zsh/.zsh_histfile #コマンド履歴はDropboxに
+HISTFILE=~/Dropbox/zsh/.zsh_histfile
 HISTSIZE=1000000
 SAVEHIST=1000000
-#10000 個以上の補完候補が存在するときに尋ねるようになります
+# ask you if you have over 10000 history
 LISTMAX=10000
-   # * LISTMAX=-1 →黙って表示(どんなに多くても)
-   # * LISTMAX=0 →ウィンドウから溢れるときは尋ねる。
+
 unsetopt extended_history
-setopt append_history        # 履歴を追加 (毎回 .zhistory を作るのではなく)
-setopt inc_append_history    # 履歴をインクリメンタルに追加
-setopt share_history         # 履歴の共有
+setopt append_history        # add history
+setopt inc_append_history    # add history incremental
+setopt share_history         # share history other terminal
 setopt hist_ignore_all_dups  # 重複するコマンド行は古い方を削除
 setopt hist_ignore_dups      # 直前と同じコマンドはヒストリに追加しない
 setopt hist_ignore_space     # スペースで始まるコマンド行はヒストリリストから削除
