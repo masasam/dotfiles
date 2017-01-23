@@ -328,7 +328,7 @@ function gitroot() {
 
 
 # github create new repository
-function githubnewrepo() {
+function github-new-repository() {
     if [ $# = 1 ]; then
 	cd ~/src/github.com/masasam
 	mkdir $1
