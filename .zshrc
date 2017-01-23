@@ -21,10 +21,10 @@ LISTMAX=10000
 unsetopt extended_history
 setopt append_history        # add history
 setopt inc_append_history    # add history incremental
-setopt share_history         # share history other terminal
-setopt hist_ignore_all_dups  # 重複するコマンド行は古い方を削除
-setopt hist_ignore_dups      # 直前と同じコマンドはヒストリに追加しない
-setopt hist_ignore_space     # スペースで始まるコマンド行はヒストリリストから削除
+setopt share_history         # hare history other terminal
+setopt hist_ignore_all_dups  # Duplicate command delete it older
+setopt hist_ignore_dups      # Same command as before don't add to history 
+setopt hist_ignore_space     # Commands beginning with a space delete from history list
 unsetopt hist_verify         # ヒストリを呼び出してから実行する間に一旦編集可能を止める
 setopt hist_reduce_blanks    # 余分な空白は詰めて記録
 setopt hist_save_no_dups     # ヒストリファイルに書き出すときに、古いコマンドと同じものは無視する。
