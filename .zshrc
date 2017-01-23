@@ -9,14 +9,12 @@ export LANG=ja_JP.UTF-8
 autoload -Uz colors
 colors
 
-# last line (\n) probrem countermeasure
-unsetopt promptcr
+unsetopt promptcr # last line (\n) probrem countermeasure
 
 HISTFILE=~/Dropbox/zsh/.zsh_histfile
 HISTSIZE=1000000
 SAVEHIST=1000000
-# ask you if you have over 10000 history
-LISTMAX=10000
+LISTMAX=10000 # ask you if you have over 10000 history
 
 unsetopt extended_history
 setopt append_history       # add history
@@ -32,40 +30,36 @@ setopt hist_no_store        # Do not register the history command in the history
 setopt hist_expand          # Automatically expand history on completion
 setopt list_packed          # Complementary completion list displayed
 unsetopt auto_remove_slash
-setopt auto_param_slash     # Automatically add / at the end with directory name completion to prepare for the next completion
-setopt mark_dirs            # Matching directory with expanding file name appending / to the end
-setopt list_types           # Identification of the type of file in complementary candidate list
-unsetopt menu_complete      # When there are multiple completion candidates, list display
-setopt auto_list            # When there are multiple completion candidates, list display
-setopt auto_menu            # Completion key Completion candidate is complemented automatically in order by repeated hitting
-setopt auto_param_keys      # Automatically complement parentheses' correspondence etc
-setopt auto_resume          # If you execute the same command name as the suspended process, resume
-setopt auto_cd              # Move by directory only
-setopt no_beep              # Do not emit beep with command input error
-setopt brace_ccl            # Enable brace expansion function
+setopt mark_dirs       # Matching directory with expanding file name appending / to the end
+setopt list_types      # Identification of the type of file in complementary candidate list
+unsetopt menu_complete # When there are multiple completion candidates, list display
+setopt auto_list       # When there are multiple completion candidates, list display
+setopt auto_param_keys # Automatically complement parentheses' correspondence etc
+setopt auto_resume     # If you execute the same command name as the suspended process, resume
+setopt auto_cd         # Move by directory only
+setopt no_beep         # Do not emit beep with command input error
+setopt brace_ccl       # Enable brace expansion function
 setopt bsd_echo
 setopt complete_in_word
-setopt equals               # = Expand COMMAND to the path name of COMMAND
-setopt extended_glob        # Enable extended globbing
-unsetopt flow_control       # (Within shell editor) Disable C-s and C-q
-setopt no_flow_control      # Do not use flow control by C-s / C-q
-setopt hash_cmds            # Hash the path when each command is executed
-setopt no_hup               # Do not kill background jobs when logging out
-setopt long_list_jobs       # By default, jobs -L is set as the output of the internal command jobs
-setopt magic_equal_subst    # With command line arguments you can complement even after = = PREFIX = / USR etc
+setopt equals            # = Expand COMMAND to the path name of COMMAND
+setopt extended_glob     # Enable extended globbing
+unsetopt flow_control    # (Within shell editor) Disable C-s and C-q
+setopt no_flow_control   # Do not use flow control by C-s / C-q
+setopt hash_cmds         # Hash the path when each command is executed
+setopt no_hup            # Do not kill background jobs when logging out
+setopt long_list_jobs    # By default, jobs -L is set as the output of the internal command jobs
 setopt mail_warning
-setopt multios              # TEE and CAT functions such as multiple redirects and pipes are used as necessary
-setopt numeric_glob_sort    # Interpret numbers as numbers and sort
-setopt path_dirs            # Search for subdirectories in PATH when / is included in command name
-setopt print_eight_bit      # Appropriate display of Japanese in completion candidate list
-setopt short_loops          # You will be able to use simplified grammar with FOR, REPEAT, SELECT, IF, FUNCTION
-
-# When completing completion candidates, display as compacted as possible.
-setopt list_packed
-# Include alias as a candidate for completion.
-setopt complete_aliases
-# Do not delete the last / when the directory name is an argument
-setopt noautoremoveslash
+setopt numeric_glob_sort # Interpret numbers as numbers and sort
+setopt path_dirs         # Search for subdirectories in PATH when / is included in command name
+setopt print_eight_bit   # Appropriate display of Japanese in completion candidate list
+setopt magic_equal_subst # With command line arguments you can complement even after = = PREFIX = / USR etc
+setopt list_packed       # When completing completion candidates, display as compacted as possible.
+setopt complete_aliases  # Include alias as a candidate for completion.
+setopt noautoremoveslash # Do not delete the last / when the directory name is an argument
+setopt multios     # TEE and CAT functions such as multiple redirects and pipes are used as necessary
+setopt short_loops # You will be able to use simplified grammar with FOR, REPEAT, SELECT, IF, FUNCTION
+setopt auto_param_slash # Automatically add / at the end with directory name completion to prepare for the next completion
+setopt auto_menu # Completion key Completion candidate is complemented automatically in order by repeated hitting
 
 # Completion of sudo
 zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin
