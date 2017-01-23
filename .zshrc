@@ -336,6 +336,10 @@ function githubnewrepo() {
 	    cd $1
 	    git init .
 	    hub create
+	    touch README.md
+	    git add README.md
+	    git commit -m 'first commit'
+	    git push origin master
 	fi
     else
 	echo 'arg1 required "repository name"'
