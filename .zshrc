@@ -330,7 +330,7 @@ function gitroot() {
 # github create new repository
 function github-new-repository() {
     if [ $# = 1 ]; then
-	cd ~/src/github.com/masasam
+	cd $(ghq root)/github.com/$(cat ~/.config/hub | grep user | awk '{print $3}')
 	mkdir $1
 	if [ $? = 0 ]; then
 	    cd $1
