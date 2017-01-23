@@ -25,24 +25,24 @@ setopt share_history         # hare history other terminal
 setopt hist_ignore_all_dups  # Duplicate command delete it older
 setopt hist_ignore_dups      # Same command as before don't add to history 
 setopt hist_ignore_space     # Commands beginning with a space delete from history list
-unsetopt hist_verify         # ヒストリを呼び出してから実行する間に一旦編集可能を止める
-setopt hist_reduce_blanks    # 余分な空白は詰めて記録
-setopt hist_save_no_dups     # ヒストリファイルに書き出すときに、古いコマンドと同じものは無視する。
-setopt hist_no_store         # historyコマンドは履歴に登録しない
-setopt hist_expand           # 補完時にヒストリを自動的に展開
-setopt list_packed           # コンパクトに補完リストを表示
+unsetopt hist_verify         # While calling history and executing stop editing once
+setopt hist_reduce_blanks    # Extra white space packed and recorded
+setopt hist_save_no_dups     # When writing to the history file,Ignore the same as the old command.
+setopt hist_no_store         # Do not register the history command in the history
+setopt hist_expand           # Automatically expand history on completion
+setopt list_packed           # Complementary completion list displayed
 unsetopt auto_remove_slash
-setopt auto_param_slash      # ディレクトリ名の補完で末尾の / を自動的に付加し、次の補完に備える
-setopt mark_dirs             # ファイル名の展開でディレクトリにマッチした場合 末尾に / を付加
-setopt list_types            # 補完候補一覧でファイルの種別を識別マーク表示 (訳注:ls -F の記号)
-unsetopt menu_complete       # 補完の際に、可能なリストを表示してビープを鳴らすのではなく、
-setopt auto_list             # ^Iで補完可能な一覧を表示する(補完候補が複数ある時に、一覧表示)
-setopt auto_menu             # 補完キー連打で順に補完候補を自動で補完
-setopt auto_param_keys       # カッコの対応などを自動的に補完
-setopt auto_resume           # サスペンド中のプロセスと同じコマンド名を実行した場合はリジューム
-setopt auto_cd               # ディレクトリのみで移動
-setopt no_beep               # コマンド入力エラーでBeepを鳴らさない
-setopt brace_ccl             # ブレース展開機能を有効にする
+setopt auto_param_slash      # Automatically add / at the end with directory name completion to prepare for the next completion
+setopt mark_dirs             # Matching directory with expanding file name appending / to the end
+setopt list_types            # Identification of the type of file in complementary candidate list
+unsetopt menu_complete       # When there are multiple completion candidates, list display
+setopt auto_list             # When there are multiple completion candidates, list display
+setopt auto_menu             # Completion key Completion candidate is complemented automatically in order by repeated hitting
+setopt auto_param_keys       # Automatically complement parentheses' correspondence etc
+setopt auto_resume           # If you execute the same command name as the suspended process, resume
+setopt auto_cd               # Move by directory only
+setopt no_beep               # Do not emit beep with command input error
+setopt brace_ccl             # Enable brace expansion function
 setopt bsd_echo
 setopt complete_in_word
 setopt equals                # =COMMAND を COMMAND のパス名に展開
