@@ -99,6 +99,7 @@
 (depends-on "flycheck-rust")
 (depends-on "typescript-mode")
 (depends-on "tide")
+(depends-on "sql-indent")
 
 ;; theme
 (depends-on "material-theme")
