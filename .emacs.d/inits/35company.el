@@ -16,7 +16,7 @@
 (setq comany-idle-delay 0.1)
 (setq comany-minimum-prefix-length 1)
 (setq comany-selection-wrap-around t)
-;; (setq company-idle-delay nil) ; 自動補完をしない
+;; (setq company-idle-delay nil) ; Do not autocomplete
 (global-set-key (kbd "C-M-i") 'company-complete)
 (define-key company-active-map (kbd "C-h") nil)
 (define-key company-active-map (kbd "C-n") 'company-select-next)

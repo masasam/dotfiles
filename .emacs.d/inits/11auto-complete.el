@@ -8,6 +8,6 @@
 (add-to-list 'ac-modes 'yatex-mode)
 (add-to-list 'ac-modes 'markdown-mode)
 (ac-set-trigger-key "TAB")
-(setq ac-use-menu-map t)       ;; 補完メニュー表示時にC-n/C-pで補完候補選択
-(setq ac-use-fuzzy t)          ;; 曖昧マッチ
+(setq ac-use-menu-map t);; Complement candidate selection with C-n / C-p when complement menu is displayed
+(setq ac-use-fuzzy t)   ;; Ambiguous match
 (global-auto-complete-mode t)

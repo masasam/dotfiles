@@ -1,5 +1,5 @@
-;; 単語の後ろでM-u M-l M-cが効く
-;; C-e C-eで一番後ろに
-;; C-a C-aで一番前に
+;; M-u M-l M-c works behind the word
+;; C-e C-e at the back
+;; C-a C-a at the front
 (require 'sequential-command-config)
 (sequential-command-setup-keys)

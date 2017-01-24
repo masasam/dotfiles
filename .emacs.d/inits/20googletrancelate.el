@@ -2,7 +2,7 @@
 (require 'google-translate-default-ui)
 
 (defun google-translate-enja-or-jaen (&optional string)
-  "regionか現在位置の単語を翻訳する。C-u付きでquery指定も可能"
+  "Translate words in region or current position. Can also specify query with C-u"
   (interactive)
   (setq string
         (cond ((stringp string) string)

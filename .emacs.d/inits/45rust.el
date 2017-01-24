@@ -1,15 +1,15 @@
 (setq racer-rust-src-path "~/Dropbox/emacs/rustc-1.14.0/src/")
 (add-to-list 'exec-path (expand-file-name "~/.cargo/bin/"))
-;;; rust-modeでrust-format-on-saveをtにすると自動でrustfmtが走る
+;; When rust-format-on-save is set to t in rust-mode, rustfmt runs automatically
 (eval-after-load "rust-mode"
   '(setq-default rust-format-on-save t))
-;;; rustのファイルを編集するときにracerとflycheckを起動する
+;; Launch racer and flycheck when editing rust files
 (add-hook 'rust-mode-hook (lambda ()
                             (racer-mode)
                             (flycheck-rust-setup)))
-;;; racerのeldocサポートを使う
+;; Use racer's eldoc support
 (add-hook 'racer-mode-hook #'eldoc-mode)
-;;; racerの補完サポートを使う
+;; Use racer's supplementary support
 (add-hook 'racer-mode-hook (lambda ()
                              (company-mode-on)
                              (set (make-variable-buffer-local 'company-idle-delay) 0.1)

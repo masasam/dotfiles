@@ -8,12 +8,12 @@
   (when buffer-file-name
     (setq default-directory (f-dirname buffer-file-name))))
 
-;; dropboxをdiredで開く
+;; Open dropbox with dired
 (defun dropbox ()
   (interactive)
   (find-file "~/Dropbox/"))
 
-;; Pictures/imageをdiredで開く
+;; Open ~/Pictures/image with dired
 (defun githubimage ()
   (interactive)
   (find-file "~/Pictures/image/"))

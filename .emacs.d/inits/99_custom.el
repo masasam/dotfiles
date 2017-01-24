@@ -1,7 +1,7 @@
 ;; theme
 (load-theme 'material t)
-;(load-theme 'cyberpunk t) ;;#1c1f26
-;;;; themeの一部分を自分好みに変更 M-x list-faces-display で調べて変更する
+;; Change part of theme to your liking.
+;; Investigate by changing 'M-x list-faces-display'
 (custom-set-faces
  '(fixed-pitch ((t (:family "Ricty"))))
  '(elscreen-tab-background-face ((t (:background "#37474f"))))

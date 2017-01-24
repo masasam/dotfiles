@@ -43,7 +43,7 @@
          "* %?" :clock-in t :clock-resume t)
          ))
 
-;; org-noteを開く
+;; Open org-note
 (defun notes ()
   (interactive)
   (find-file "~/Dropbox/emacs/org/notes.org"))

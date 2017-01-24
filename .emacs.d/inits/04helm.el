@@ -14,19 +14,18 @@
 (define-key global-map (kbd "C-;") 'helm-mini)
 
 
-
 ;; helm-recentf
 (define-key global-map (kbd "C-c f") 'helm-recentf)
 (define-key global-map (kbd "C-c C-f") 'helm-recentf)
-;; gloval-markをhelmでたどる
+;; Follow gloval-mark with helm
 (define-key global-map (kbd "C-x m") 'helm-all-mark-rings)
-;; helm C-hで前の文字削除
+;; Helm C-h delete previous character
 (define-key helm-map (kbd "C-h") 'delete-backward-char)
-;; helm C-wで分節削除
+;; Segment delete with helm C-w
 (define-key helm-map (kbd "C-w") 'backward-kill-word)
 
 
-;; キーバインド
+;; Keybind
 (define-key helm-map (kbd "C-;") 'helm-keyboard-quit)
 (define-key global-map (kbd "C-x b") 'helm-for-files)
 (define-key global-map (kbd "M-x")     'helm-M-x)
@@ -40,7 +39,6 @@
 (define-key global-map [remap dabbrev-expand] 'helm-dabbrev)
 
 
-
 ;; helm find files
 (define-key global-map (kbd "C-x C-f") 'helm-find-files)
 (define-key helm-find-files-map (kbd "C-h") 'delete-backward-char)
@@ -48,20 +46,20 @@
 (define-key helm-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
 
 
-
-;; ;; helm-ag
+;; helm-ag
 (require 'helm-files)
 (require 'helm-ag)
 (global-set-key (kbd "M-g .") 'helm-ag)
 (global-set-key (kbd "M-g ,") 'helm-ag-pop-stack)
 (global-set-key (kbd "C-M-s") 'helm-ag-this-file)
-;;ripgrepをhelm-agで使う
+;; Use ripgrep with helm-ag
 (setq helm-ag-base-command "rg --vimgrep --no-heading")
-;;; 現在のシンボルをデフォルトのクエリにする
+;; Make the current symbol the default query
 (setq helm-ag-insert-at-point 'symbol)
 
-;;; Enable helm-gtags-mode
-;; gtags --gtagslabel=ctags で作成
+
+;; Enable helm-gtags-mode
+;; it makes this command(gtags --gtagslabel=ctags)
 (add-hook 'c-mode-hook 'helm-gtags-mode)
 (add-hook 'c++-mode-hook 'helm-gtags-mode)
 (add-hook 'asm-mode-hook 'helm-gtags-mode)
@@ -87,12 +85,12 @@
 
 ;; helm-projectile
 (require 'helm-projectile)
-;; cacheをクリアするには　M-x projectile-invalidate-cache
+;; How to clear cache (M-x projectile-invalidate-cache)
 (custom-set-variables
  '(projectile-enable-caching t))
 (projectile-global-mode t)
 
-;; プロジェクトに関連するファイルをhelm-for-filesに追加
+;; Add files related to project to helm-for-files
 (defadvice helm-for-files (around update-helm-list activate)
   (let ((helm-for-files-preferred-list
          (helm-for-files-update-list)))
@@ -106,7 +104,7 @@
     ,(if (projectile-project-p)
      helm-source-projectile-files-list)))
 
-;; helm-agをプロジェクトルートから
+;; From the project route helm-ag
 (defun projectile-helm-ag ()
   (interactive)
   (helm-ag (projectile-project-root)))

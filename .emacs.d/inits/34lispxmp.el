@@ -1,4 +1,4 @@
-;;;式の評価結果を注釈するための設定
+;; Setting to annotate the evaluation result of the expression
 (require 'lispxmp)
-;; emacs-lisp-modeでC-c C-dを押すと注釈される
+;; Annotated by pressing C-c C-d in emacs-lisp-mode
 (define-key emacs-lisp-mode-map (kbd "C-c C-d") 'lispxmp)

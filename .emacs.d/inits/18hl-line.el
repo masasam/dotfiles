@@ -1,5 +1,5 @@
 (require 'hl-line)
-;;; hl-lineを無効にするメジャーモードを指定する
+;;; Specify major mode to disable hl-line
 (defvar global-hl-line-timer-exclude-modes '(todotxt-mode))
 (defun global-hl-line-timer-function ()
   (unless (memq major-mode global-hl-line-timer-exclude-modes)

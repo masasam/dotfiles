@@ -1,4 +1,5 @@
-;; %で対応する括弧へカーソルを移動できます．カーソ ルが括弧の上になければ，単に%が挿入
+;; % Allows you to move the cursor to the corresponding parenthesis.
+;; If the cursor is not on the parenthesis, simply insert%
 (global-set-key "%" 'match-paren)
 
 (defun match-paren (arg)
