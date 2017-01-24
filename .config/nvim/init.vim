@@ -63,7 +63,7 @@ endif
 "End dein Scripts-------------------------
 
 
-" -- deoplete.nvim
+" -- deoplete.nvim ---------------------------------------------
 set runtimepath+=$XDG_CONFIG_HOME/nvim/repos/github.com/Shougo/deoplete.nvim
 set completeopt+=noinsert,noselect
 set completeopt-=preview
@@ -75,17 +75,17 @@ let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_smart_case = 1
 
 filetype plugin indent on
-"補完候補が出ていたら確定、なければ改行
+" If completing candidate is present, it is fixed, otherwise line feed
 inoremap <expr><CR> pumvisible() ? deoplete#close_popup() : "<CR>"
 
 
-" -- deoplete-go
+" -- deoplete-go -----------------------------------------------
 let g:deoplete#sources#go#align_class = 1
 let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
 let g:deoplete#sources#go#package_dot = 1
 
 
-" -- global
+" -- global ----------------------------------------------------
 map <C-g> :Gtags -g
 map <C-k> :Gtags -f %<CR>
 map <C-l> :GtagsCursor<CR>
@@ -94,7 +94,7 @@ map <C-n> :cn<CR>
 map <C-p> :cp<CR>
 
 
-" -- Tabulation management
+" -- Tabulation management -------------------------------------
 set expandtab
 set tabstop=4
 set shiftwidth=4
@@ -103,7 +103,7 @@ set ignorecase
 set smartcase
 
 
-" -- base
+" -- base ------------------------------------------------------
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 syntax on
 set encoding=utf-8
@@ -133,7 +133,7 @@ set dictionary=/usr/share/dict/cracklib-small
 set rtp^=/usr/share/vim/vimfiles/
 
 
-" -- lightline
+" -- lightline ---------------------------------------------
 let g:lightline = {
       \ 'colorscheme': 'powerline',
       \ 'active': {
@@ -158,15 +158,7 @@ let g:lightline = {
       \ }
 
 
-" -- solarized theme
-" set background=dark
-" try
-"     colorscheme solarized
-" catch
-" endtry
-
-
-" -- jellybeans theme
+" -- jellybeans theme ---------------------------------------------
 set background=dark
 try
     colorscheme jellybeans
@@ -174,14 +166,14 @@ catch
 endtry
 
 
-" -- Makefile
+" -- Makefile -----------------------------------------------------
 let _curfile=expand("%:r")
 if _curfile == 'Makefile'
   set noexpandtab
 endif
 
 
-" -- grep
+" -- grep ---------------------------------------------------------
 " Change file_rec command.
 call denite#custom#var('file_rec', 'command',
 \ ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
@@ -204,7 +196,7 @@ call denite#custom#var('grep', 'recursive_opts', [])
 call denite#custom#var('grep', 'default_opts', ['--follow', '--no-group', '--no-color'])
 
 
-" -- Denite.nvim
+" -- Denite.nvim ----------------------------------------------------
 "prefix key
 nmap <Space> [denite]
 nnoremap <silent> [denite]r :<C-u>Denite<Space>buffer file_mru<CR>
@@ -217,7 +209,7 @@ nnoremap <C-x>l :<C-u>Denite ghq<CR>
 nnoremap <C-x><C-l> :<C-u>Denite ghq<CR>
 
 
-" -- elscreen
+" -- elscreen Momentum ----------------------------------------------
 " Anywhere SID.
 function! s:SID_PREFIX()
   return matchstr(expand('<sfile>'), '<SNR>\d\+_\zeSID_PREFIX$')
@@ -243,7 +235,7 @@ function! s:my_tabline()  "{{{
   return s
 endfunction "}}}
 let &tabline = '%!'. s:SID_PREFIX() . 'my_tabline()'
-set showtabline=2 " 常にタブラインを表示
+set showtabline=2 " Always show tablines
 
 " The prefix key.
 nnoremap    [Tag]   <Nop>
@@ -252,62 +244,62 @@ nmap    t [Tag]
 for n in range(1, 9)
   execute 'nnoremap <silent> [Tag]'.n  ':<C-u>tabnext'.n.'<CR>'
 endfor
-" t1 で1番左のタブ、t2 で1番左から2番目のタブにジャンプ
+" Jump to the leftmost tab at t1, to the second from leftmost at t2
 
 map <silent> [Tag]c :tablast <bar> tabnew<CR>
-" tc 新しいタブを一番右に作る
+" tc Make new tabs to the right
 map <silent> [Tag]k :tabclose<CR>
-" tk タブを閉じる
+" tk Close the tab
 map <silent> [Tag]n :tabnext<CR>
-" tn 次のタブ
+" tn Next tab
 map <silent> [Tag]p :tabprevious<CR>
-" tp 前のタブ
+" tp Previous tab
 
 
-"-- auto-ctags
+"-- auto-ctags ---------------------------------------------------------
 let g:auto_ctags = 1
-" tagsジャンプの時に複数ある時は一覧表示                                        
+" Tags List when there are two or more when jumping
 nnoremap <C-]> g<C-]>
 
 
-" -- vim-gitgutter
+" -- vim-gitgutter -----------------------------------------------------
 highlight clear SignColumn
 highlight SignColumn ctermbg=0
 nmap gn <Plug>GitGutterNextHunk
 nmap gp <Plug>GitGutterPrevHunk
 
 
-" -- Easy align interactive
+" -- Easy align interactive --------------------------------------------
 vnoremap <silent> <Enter> :EasyAlign<cr>
 
 
-" インサートモードのEscをjjにバインド
+" Binding Esc in insert mode to jj -----------------------------------
 inoremap <silent> jj <ESC>
 
 
-" -- vim-anzu
+" -- vim-anzu ---------------------------------------------------------
 nmap n <Plug>(anzu-n)
 nmap N <Plug>(anzu-N)
 nmap * <Plug>(anzu-star)
 nmap # <Plug>(anzu-sharp)
 augroup vim-anzu
-" 一定時間キー入力がないとき、ウインドウを移動したとき、タブを移動したときに
-" 検索ヒット数の表示を消去する
+" When there is no key input for a fixed time, when you move the window, when you move the tab
+" Delete display of search hit count
     autocmd!
     autocmd CursorHold,CursorHoldI,WinLeave,TabLeave * call anzu#clear_search_status()
 augroup END
 
 
-" -- 検索後のハイライトをescで消す
+" -- Erase the search highlight with esc ------------------------------
 nnoremap <esc> :noh<return><esc>
 nnoremap <esc>^[ <esc>^[
 
 
-" -- neomake/neomake
+" -- neomake/neomake --------------------------------------------------
 autocmd! BufWritePost * Neomake
 
 
-" -- vim-go
+" -- vim-go -----------------------------------------------------------
 let g:go_fmt_command = 'goimports'
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
@@ -324,9 +316,9 @@ autocmd FileType go nmap <Leader>gd <Plug>(go-doc)
 autocmd FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
 
 
-" -- vim-jsx
-let g:jsx_ext_required = 1        " ファイルタイプがjsxのとき読み込む．
-let g:jsx_pragma_required = 0     " @から始まるプラグマでは読み込まない．
+" -- vim-jsx -----------------------------------------------------------
+let g:jsx_ext_required = 1        " Read when the file type is jsx
+let g:jsx_pragma_required = 0     " Pragmas that start with @ do not load
 
 augroup Vimrc
   autocmd!
@@ -334,12 +326,12 @@ augroup Vimrc
 augroup END
 
 
-" -- vim-clang
+" -- vim-clang ---------------------------------------------------------
 let g:clang_c_options = '-std=c11'
 let g:clang_cpp_options = '-std=c++1z -stdlib=libc++ --pedantic-errors'
 
 
-" -- vim-quickrun
+" -- vim-quickrun ------------------------------------------------------
 let g:quickrun_config = get(g:, 'quickrun_config', {})
 let g:quickrun_config._ = {
       \ 'outputter/buffer/split'  : ':rightbelow 8sp',
