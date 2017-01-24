@@ -320,8 +320,7 @@ function gitroot() {
 # github create new repository
 function github-new-repository() {
     if [ $# = 1 ]; then
-	cd $(ghq root)/github.com/$(cat ~/.config/hub | grep user | awk '{print $3}')
-	mkdir $1
+	ghq root && cat ~/.config/hub | grep user && cd $(ghq root)/github.com/$(cat ~/.config/hub | grep user | awk '{print $3}') && mkdir $1
 	if [ $? = 0 ]; then
 	    cd $1
 	    git init .
