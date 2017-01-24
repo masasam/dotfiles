@@ -1,4 +1,4 @@
-#~/.screenrc
+# .screenrc
 shell zsh
 autodetach on
 defkanji utf-8
@@ -21,28 +21,27 @@ bind n next
 bind p prev
 bind j next
 bind l windowlist
-#oでウインドウ切り替え
-bind o focus
+bind o focus # Window switch with o
 
 
-#文字コードの変更
-## ^J U で UTF-8 / ^J E で EUC-JP を切り替え
+# Change character code
+# ^ J U to switch EUC-JP with UTF-8 / ^ J E
 bind U eval "encoding utf-8" "!!!echo 'export LANG=ja_JP.UTF-8'"
 bind E eval "encoding euc" "!!!echo 'export LANG=ja_JP.EUC-JP'"
 
-#log設定
+# Log setting
 hardcopydir /home/masa/screen
 
-#idle 3600
+# idle 3600
 #blankerprg /usr/games/fortune
 
-#screen256色
+# Screen 256 colors
 term screen-256color
 
 
 
-#screenでコピーしたものがクリップボードにはいる
-#sudo pacman -S xclip
+# Copy on screen enters the clipboard
+# sudo pacman -S xclip
 bindkey -m ' ' eval 'msgwait 0' 'stuff \040' writebuf 'exec !!! xclip /tmp/screen-exchange' 'msgwait 2'
 bindkey -m Y eval 'msgwait 0' 'stuff Y' writebuf 'exec !!! xclip /tmp/screen-exchange' 'msgwait 2'
 #bindkey -m y eval 'msgwait 0' 'stuff y' writebuf 'exec !!! xclip /tmp/screen-exchange' 'msgwait 2'
