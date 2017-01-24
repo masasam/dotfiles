@@ -1,13 +1,13 @@
-;; 基本utf-8でファイルの指定コードがあればそれで保存
+;; Save the file specified code with basic utf-8 if it exists
 (set-language-environment "Japanese")
 (prefer-coding-system 'utf-8)
 
 
-;; GCを減らして高速化(メモリは食う)
+;; Reduce GC to speed up (eat memory)
 (setq gc-cons-threshold (* 128 1024 1024))
 
 
-;;; 右から左に読む言語に対応させないことで描画高速化
+;;; Faster rendering by not corresponding to right-to-left language
 (setq-default bidi-display-reordering nil)
 
 
@@ -15,22 +15,14 @@
 (add-to-list 'default-frame-alist '(font . "ricty-15.5"))
 
 
-
-;; C-x C-cで終了しない
+;; It does not end with C-x C-c
 (global-set-key (kbd "C-x C-c") 'helm-M-x)
 
-;; C-x C-zでflycheckをオンオフ
-(global-set-key (kbd "C-x C-z") 'flycheck-mode)
-
-;; C-zでpoint-undo
-(global-set-key (kbd "C-z") 'point-undo)
-
-;; M-%をC-c rで行う
+;; Perform M % with C-c r
 (global-set-key (kbd "C-c r") 'query-replace)
 
 ;; I never use C-x C-c
 (defalias 'exit 'save-buffers-kill-emacs)
-
 
 
 ; server start for emacs-client
@@ -39,94 +31,90 @@
   (server-start))
 
 
-
-;; *.~ とかのバックアップファイルを作らない
+;; Do not make a backup file like *.~
 (setq make-backup-files nil)
-;; .#* とかのバックアップファイルを作らない
+;; Do not make a backup file like .#*
 (setq auto-save-default nil)
 
 
-
-;; Ctrl-hをbackspace
+;; C-h is backspace
 (define-key global-map "\C-h" 'delete-backward-char)
 
-;; backspaceキーをインクリメンタルサーチ中のミニバッファで有効にする
+;; Enable backspace key in incremental search minibuffer
 (define-key isearch-mode-map "\C-h" 'isearch-delete-char)
 
-;; C-h に割り当てられている関数 help-command を C-x C-h に割り当てる
+;; Assign the function help-command assigned to C-h to C-x C-h
 (define-key global-map "\C-x\C-h" 'help-command)
 
-;; C-x C-k でも C-x k と同じ kill-buffer を実行
+;; Run C-x C-k same kill-buffer as C-x k
 (define-key global-map "\C-x\C-k" 'kill-buffer)
 
-;; C-x C-dもdiredにする
+;; C-x C-d also makes dired
 (global-set-key (kbd "C-x C-d") 'dired)
 
 ;; minibuffer-local-completion-mpa
 (define-key minibuffer-local-completion-map "\C-w" 'backward-kill-word)
 
-;; マウスカーソルとテキストカーソルが近い場合にマウスがよけてくれる
+;; When the mouse cursor is close to the text cursor, the mouse hangs away
 (if (display-mouse-p) (mouse-avoidance-mode 'exile))
 
-;; 自動セーブを無効
+;; Disable automatic save
 (setq auto-save-default nil)
 
-;; タイトルバーにファイル名を表示する
+;; Display file name in title bar
 (setq frame-title-format (format "Emacs@%s : %%f" (system-name)))
 
-;; 補完時に大文字小文字を区別しない
+;; Do not distinguish uppercase and lowercase letters on completion
 (setq completion-ignore-case t)
 (setq read-file-name-completion-ignore-case t)
 
-;; 同名ファイルのとき見やすくする
+;; Make it easy to see when it is the same name file
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
 
-;; カーソルの位置が何文字目かを表示する
+;; Display the character position of the cursor
 (column-number-mode t)
 
-;; 履歴数を大きくする
+;; Increase history count
 (setq history-length 10000)
 
-;; ミニバッファの履歴を保存する
+;; Save history of minibuffer
 (savehist-mode 1)
 
-;; "yes or no"を"y or n"にする
+;; Make "yes or no" "y or n"
 (fset 'yes-or-no-p 'y-or-n-p)
 
-;; 警告音の画面フラッシュをoff
+;; Turn off warning sound screen flash
 (setq visible-bell nil)
-;; 警告音もフラッシュも全て無効(警告音が完全に鳴らなくなるので注意)
+;; All warning sounds and flash are invalid (note that the warning sound does not sound completely)
 (setq ring-bell-function 'ignore)
 
-;; C-x C-SPC C-SPC …でどんどん過去のマークを遡る
-;; C-u C-SPC C-SPC …でどんどん過去のマークを遡る
+;; It keeps going steadily past the mark ...C-x C-SPC C-SPC
+;; It keeps going steadily past the mark ...C-u C-SPC C-SPC
 (setq set-mark-command-repeat-pop t)
 
 
-
-;; X11のクリップボードを使う
+;; Use the X11 clipboard
 (setq select-enable-clipboard t)
 (global-set-key "\M-w" 'clipboard-kill-ring-save)
 (global-set-key "\C-w" 'clipboard-kill-region)
 
 
-
-;; 対応する括弧を光らせる
+;; Brace the corresponding parentheses
 (show-paren-mode 1)
 (setq show-paren-delay 0)
 (setq show-paren-style 'mixed)
 
 
-;; diredで消したファイルはゴミ箱へ
+;; Dired files deleted by trash
 (setq delete-by-moving-to-trash t)
 
 
-;; C-u C-SPC C-SPC...とC-SPCを連打して過去のマークを遡る
+;; Continue hitting C-SPC and go back to past marks ...C-u C-SPC C-SPC
 (setq set-mark-command-repeat-pop t)
 
 
-;; elispの関数のソースファイルを読む
+;; Read elisp function source file
 (global-set-key (kbd "C-x F") 'find-function)
 (global-set-key (kbd "C-x V") 'find-variable)
 ;; emacs c source dir:
