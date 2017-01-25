@@ -384,7 +384,6 @@ yaourt で入れるものをインストール
 	yaourt mozc
 	yaourt clipit
 	yaourt python-epc
-	yaourt enpass-bin
 
 #### golang npm rust
 

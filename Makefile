@@ -82,7 +82,6 @@ install: ## install development environment powerd by arch linux
 	yaourt mozc
 	yaourt clipit
 	yaourt python-epc
-	yaourt enpass-bin
 	yaourt networkmanager-noscan
 	sudo pkgfile --update
 	git config --global ghq.root ~/src
