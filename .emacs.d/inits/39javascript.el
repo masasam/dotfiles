@@ -4,7 +4,7 @@
           (lambda ()
 	    (setq tern-command '("tern" "--no-port-file"))
             (tern-mode t)))
- 
+
 (eval-after-load 'tern
    '(progn
       (require 'tern-auto-complete)
