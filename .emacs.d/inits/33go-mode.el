@@ -16,7 +16,7 @@
   ;; gofmt goimports
   (setq gofmt-command "goimports")
   (add-hook 'before-save-hook 'gofmt-before-save)
-  
+
   ;; key bindings
   (define-key go-mode-map (kbd "M-.") 'godef-jump)
   (define-key go-mode-map (kbd "M-,") 'pop-tag-mark))
