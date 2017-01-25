@@ -158,6 +158,7 @@ alias df='df -h'
 alias e='emacsclient'
 alias open='xdg-open'
 alias vim='nvim'
+alias mysql="mysql --pager='less -S -n -i -F -X'"
 alias sudotramp='emacsclient -a emacs -n /sudo:$(grep -iE "host[[:space:]]+[^*]" ~/.ssh/config|peco|awk "{print \$2}"):/ & wmctrl -a emacs'
 alias tramp='emacsclient -a emacs -n /ssh:$(grep -iE "host[[:space:]]+[^*]" ~/.ssh/config|peco|awk "{print \$2}"):/ & wmctrl -a emacs'
 alias trackpointspeed='xinput --set-prop 10 "Device Accel Constant Deceleration"'
