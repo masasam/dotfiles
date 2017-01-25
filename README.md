@@ -13,7 +13,7 @@ make の入っていないディストリなど存在しないので
 ### Makefile があるとこんないいこと  
 
     make install
-	
+
 で開発環境を構築できるから楽  
 PC の再セットアップで困ることはもう二度とない  
 
@@ -66,12 +66,12 @@ Dropbox 同期後
 
 - github に置けないもの  
    .ssh に入っている公開鍵など  
-   
+
 - すこぶる更新ファイルを吐き出すので github で同期するのが面倒くさいもの  
    .zsh_histfile  
    .mozc  
    .emacs.d の中の更新ファイルは.gitignore を利用して問題なくデプロイできるから github で OK  
-   
+
 - データの保護が目的のもの  
    Sylpheed の設定ファイル  
    メールのデータは dropbox において gmail ライクに使う  
@@ -89,7 +89,7 @@ Why Arch linux ?
 
 - ローリング・リリースで壊れない限りは再インストールしなくてもいいから楽  
    壊れても 30 分で復帰できるように Makefile を作ったから無敵  
-  
+
 - サーバは CentOS でいいけど,開発環境は割と最新じゃないとつらい  
    OverlayFS とか Profile Sync Daemon 使いたい  
    Emacs は最新じゃないと嫌なので make install していたが Arch なら pacman ですむ  
@@ -214,7 +214,7 @@ vi /etc/locale.gen
     pacman -S grub
     grub-install --recheck /dev/sda
     grub-mkconfig -o /boot/grub/grub.cfg
-	
+
 リブート後 dhcp で繋がるように  
 NetworkManager を入れるまでは有線で我慢する (wifi はあとで設定)  
 
@@ -248,7 +248,7 @@ gnome は必要最小限だけいれる
 	pacman -S gnome-tweak-tool
 	pacman -S nautilus
 	pacman -S gedit
-	
+
 terminal は lilyterm と termite を利用する  
 
 	sudo pacman -S lilyterm
@@ -272,7 +272,7 @@ yaourt を最新に同期する
     sudo pacman -S yaourt
     sudo pacman --sync --refresh yaourt
     yaourt -Syua
-	
+
 ネット環境を整える  
 NetworkManager をいれたあとは wifi で利用する  
 dhcpcd をオフにしておかないと wifi できない  
@@ -303,7 +303,7 @@ ghq で dotfiles を用意
 	ghq look dotfiles
 	make install
 	make init
-	
+
 	# 以下は github の画像投稿用なので自分用
 	cd ~/Pictures
 	git clone -b image git@github.com:masasam/image.git
@@ -468,7 +468,7 @@ gnome の細かい設定など
 
     AC 電源接続時 Blank  
     Don't suspend on lid close  
-	
+
 # Terminal
 
 ![terminal](https://raw.githubusercontent.com/masasam/image/image/terminal.png)
@@ -478,7 +478,7 @@ terminal は lilyterm と termite を使う
 
 	.config/lilyterm
 	.config/termite
-	
+
 にある
 
 #### .bashrc
@@ -605,7 +605,7 @@ drill で同じ DNS ルックアップを二回やって確認する
 
     #HandleLidSwitch=suspend
     HandleLidSwitch=ignore
-	
+
 そして、logind サービスを再起動します:  
 
     systemctl restart systemd-logind
@@ -682,7 +682,7 @@ emacs とかぶるので shift+Space で mozc を利用する
 ターミナルで
 
     ibus-setup
-	
+
 でフォントなど設定する。  
 全般タブで  
 >カスタムフォントを選んで fontsize 14  
@@ -710,7 +710,7 @@ Mozc 辞書ツールを起動しメニューの［管理］＞［新規辞書に
 mozc の設定が完成したら  
 
     ln -sfn ~/Dropbox/mozc/.mozc ~/.mozc
-	
+
 で mozc の設定は Dropbox に投げておく  
 これでもう二度と設定しなくてもよくなるだろう  
 
