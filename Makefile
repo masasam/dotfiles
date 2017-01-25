@@ -63,7 +63,7 @@ install: ## install development environment powerd by arch linux
 	python-neovim python2-neovim noto-fonts-cjk arc-gtk-theme slack-desktop npm \
 	zsh-syntax-highlighting rust cargo python-pip shellcheck python-pyflakes php \
 	python-jedi autopep8 python-virtualenv cpanminus flake8 llvm llvm-libs lldb \
-	python-pylint rxvt-unicode dnsmasq typescript cscope speedtest-cli \
+	python-pylint rxvt-unicode dnsmasq typescript cscope speedtest-cli lsof \
 	mariadb-clients postgresql-libs
 	mkdir -p ${HOME}/{bin,src}
 	yaourt google-chrome
