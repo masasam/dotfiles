@@ -360,5 +360,10 @@ function ansible-peco() {
 }
 
 
+function weather-peco() {
+    curl wttr.in/$(cat ~/Dropbox/zsh/weather | peco)|less -R
+}
+
+
 # zsh-syntax-highlighting(pacman -S zsh-syntax-highlighting)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
