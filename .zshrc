@@ -342,7 +342,7 @@ function github-new-repository() {
 }
 
 
-function ansible-peco() {
+function peco-ansible() {
     local repositoryname='ansible-vps'
     ghq root && cat ~/.config/hub | grep user && cd $(ghq root)/github.com/$(cat ~/.config/hub | grep user | awk '{print $3}')/${repositoryname}
     if [ $? = 0 ]; then
@@ -360,7 +360,7 @@ function ansible-peco() {
 }
 
 
-function weather-peco() {
+function peco-weather() {
     curl wttr.in/$(cat ~/Dropbox/zsh/weather | peco)|less -R
 }
 
