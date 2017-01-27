@@ -365,6 +365,8 @@ bindkey '^xa' peco-ansible
 function peco-weather() {
     curl wttr.in/$(cat ~/Dropbox/zsh/weather | peco)|less -R
 }
+zle -N peco-weather
+bindkey '^xw' peco-weather
 
 
 function peco-chrome() {
