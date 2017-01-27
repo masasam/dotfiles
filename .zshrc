@@ -339,7 +339,7 @@ function github-new-repository() {
 }
 
 
-function ansible-exec() {
+function ansible-peco() {
     ghq root && cat ~/.config/hub | grep user && cd $(ghq root)/github.com/$(cat ~/.config/hub | grep user | awk '{print $3}')/ansible-vps
     if [ $? = 0 ]; then
 	local selected_yml=$(ls | grep -v private.yml | grep .yml$ | peco)
