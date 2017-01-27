@@ -286,7 +286,7 @@ bindkey '^x^g' peco-ghq-remote
 function peco-books() {
   local book="$(find ~/Dropbox/books -type f | peco)"
   if [ -n "$book" ]; then
-      open $book
+      xdg-open $book
   fi
 }
 zle -N peco-books
@@ -362,6 +362,11 @@ function ansible-peco() {
 
 function weather-peco() {
     curl wttr.in/$(cat ~/Dropbox/zsh/weather | peco)|less -R
+}
+
+
+function peco-chrome() {
+    xdg-open $(cat ~/Dropbox/zsh/bookmark | peco | awk '{print $1}')
 }
 
 
