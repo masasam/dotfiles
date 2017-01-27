@@ -305,10 +305,10 @@ zle -N peco-godoc
 bindkey '^x^v' peco-godoc
 
 
-function _getgitignore() {
-    curl -s https://www.gitignore.io/api/$1
+function gitignore() {
+    local target=$(curl -s https://www.gitignore.io/api/list | sed "s/,/\n/g" | peco)
+    curl -s https://www.gitignore.io/api/$target
 }
-alias getgitignore='_getgitignore $(_getgitignore list | sed "s/,/\n/g" | peco )'
 
 
 # jump git root directory
