@@ -340,12 +340,13 @@ function github-new-repository() {
 
 
 function ansible-peco() {
-    ghq root && cat ~/.config/hub | grep user && cd $(ghq root)/github.com/$(cat ~/.config/hub | grep user | awk '{print $3}')/ansible-vps
+    local repositoryname='ansible-vps'
+    ghq root && cat ~/.config/hub | grep user && cd $(ghq root)/github.com/$(cat ~/.config/hub | grep user | awk '{print $3}')/${repositoryname}
     if [ $? = 0 ]; then
-	local selected_yml=$(ls | grep -v private.yml | grep .yml$ | peco)
+	local selected_yml=$(ls | grep .yml$ | peco)
 	if [ -n "$selected_yml" ]; then
-	    ansible-playbook ${selected_yml} --extra-vars "@private.yml"
-	    notify-send 'Ansible' 'Your playbook execution ended' -i utilities-terminal
+	    ansible-playbook ${selected_yml}
+	    notify-send -u critical 'Ansible' 'Your playbook execution ended' -i utilities-terminal
 	fi
 	cd -
     fi
