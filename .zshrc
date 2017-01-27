@@ -358,6 +358,8 @@ function peco-ansible() {
 	cd -
     fi
 }
+zle -N peco-ansible
+bindkey '^xa' peco-ansible
 
 
 function peco-weather() {
