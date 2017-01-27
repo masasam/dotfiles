@@ -73,6 +73,9 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z} r:|[-_.]=**'
 zstyle ':completion:*:cd:*' tag-order local-directories path-directories
 # Process name completion of ps command
 zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
+# Color a completion candidate
+eval `dircolors -b`
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 # prompt
 case ${UID} in
