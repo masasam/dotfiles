@@ -339,15 +339,15 @@ function github-new-repository() {
 }
 
 
-function ansible-play-main() {
-    if [ $# = 1 ]; then
-	ghq root && cat ~/.config/hub | grep user && cd $(ghq root)/github.com/$(cat ~/.config/hub | grep user | awk '{print $3}')/ansible-vps
-	if [ $? = 0 ]; then
-	    ansible-playbook main.yml --extra-vars "@private.yml"
+function ansible-exec() {
+    ghq root && cat ~/.config/hub | grep user && cd $(ghq root)/github.com/$(cat ~/.config/hub | grep user | awk '{print $3}')/ansible-vps
+    if [ $? = 0 ]; then
+	local selected_yml=$(ls | grep -v private.yml | grep .yml$ | peco)
+	if [ -n "$selected_yml" ]; then
+	    ansible-playbook ${selected_yml} --extra-vars "@private.yml"
 	    notify-send 'Ansible' 'Your playbook execution ended' -i utilities-terminal
 	fi
-    else
-	echo 'One argument is required For example, "ansible-exec main.yml"'
+	cd -
     fi
 }
 
