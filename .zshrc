@@ -170,6 +170,7 @@ alias rustupdate='cargo install-update -a'
 alias archupdate='yaourt -Syua; paccache -r'
 alias archbackup="mkdir -p ${HOME}/Dropbox/arch;pacman -Qqen > ${HOME}/Dropbox/arch/pacmanlist.txt;pacman -Qnq > ${HOME}/Dropbox/arch/allpacmanlist.txt;pacman -Qqem > ${HOME}/Dropbox/arch/yaourtlist.txt"
 alias gpg-import='gpg --allow-secret-key-import --import ~/Dropbox/passwd/privkey.asc;gpg --import ~/Dropbox/passwd/publickey.asc'
+alias github-issue='hub issue | peco | sed -e "s/\].*//" | xargs -Inum git checkout -b feature/num'
 
 
 # PATH
@@ -333,7 +334,20 @@ function github-new-repository() {
 	    git push origin master
 	fi
     else
-	echo 'arg1 required "repository name"'
+	echo 'One argument is required For example, "github-new-repository newreponame"'
+    fi
+}
+
+
+function ansible-play-main() {
+    if [ $# = 1 ]; then
+	ghq root && cat ~/.config/hub | grep user && cd $(ghq root)/github.com/$(cat ~/.config/hub | grep user | awk '{print $3}')/ansible-vps
+	if [ $? = 0 ]; then
+	    ansible-playbook main.yml --extra-vars "@private.yml"
+	    notify-send 'Ansible' 'Your playbook execution ended' -i utilities-terminal
+	fi
+    else
+	echo 'One argument is required For example, "ansible-exec main.yml"'
     fi
 }
 
