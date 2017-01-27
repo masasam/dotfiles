@@ -372,6 +372,8 @@ bindkey '^xw' peco-weather
 function peco-chrome() {
     xdg-open $(cat ~/Dropbox/zsh/bookmark | peco | awk '{print $1}')
 }
+zle -N peco-chrome
+bindkey '^xc' peco-chrome
 
 
 # zsh-syntax-highlighting(pacman -S zsh-syntax-highlighting)
