@@ -346,7 +346,11 @@ function ansible-peco() {
 	local selected_yml=$(ls | grep .yml$ | peco)
 	if [ -n "$selected_yml" ]; then
 	    ansible-playbook ${selected_yml}
-	    notify-send -u critical 'Ansible' 'Your playbook execution ended' -i utilities-terminal
+	    if [ $? = 0 ]; then
+		notify-send -u critical 'Ansible' 'Your playbook execution ended' -i utilities-terminal
+	    else
+		notify-send -u critical 'Ansible' 'Error has occured' -i dialog-error
+	    fi
 	fi
 	cd -
     fi
