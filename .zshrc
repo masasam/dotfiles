@@ -369,11 +369,11 @@ zle -N peco-weather
 bindkey '^xw' peco-weather
 
 
-function peco-chrome() {
+function peco-chrome-bookmark() {
     xdg-open $(cat ~/Dropbox/zsh/bookmark | peco | awk '{print $1}')
 }
-zle -N peco-chrome
-bindkey '^xc' peco-chrome
+zle -N peco-chrome-bookmark
+bindkey '^xc' peco-chrome-bookmark
 
 
 function google() {
