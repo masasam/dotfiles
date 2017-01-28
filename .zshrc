@@ -376,8 +376,38 @@ zle -N peco-chrome-bookmark
 bindkey '^xc' peco-chrome-bookmark
 
 
+function peco-search() {
+    if [ $# = 0 ]; then
+	echo 'One argument is required For example, "peco-seaech pen pineapple apple pen"'
+    else
+	local search=$(echo -e "google\namazon\nqiita\nhatena\ngithub\ntwitter\nrakuten" | peco)
+	if [ $search = 'google' ]; then
+	    google "${@}"
+	elif [ $search = 'amazon' ]; then
+	    local query=$(echo "${@}" | sed -e 's/<space>/+/g')
+	    xdg-open "https://www.amazon.co.jp/s/ref=nb_sb_noss?__mk_ja_JP=カタカナ&url=search-alias%3Daps&field-keywords=${query}"
+	elif [ $search = 'qiita' ]; then
+	    local query=$(echo "${@}" | sed -e 's/<space>/+/g')
+	    xdg-open "http://qiita.com/search?q=${query}"
+	elif [ $search = 'hatena' ]; then
+	    local query=$(echo "${@}" | sed -e 's/<space>/+/g')
+	    xdg-open "http://b.hatena.ne.jp/search/text?q=$query"
+	elif [ $search = 'github' ]; then
+	    local query=$(echo "${@}" | sed -e 's/<space>/+/g')
+	    xdg-open "https://github.com/search?utf8=%E2%9C%93&q=$query"
+	elif [ $search = 'twitter' ]; then
+	    local query=$(echo "${@}" | sed -e 's/<space>/+/g')
+	    xdg-open "https://twitter.com/search?q=$query&src=typd"
+	elif [ $search = 'rakuten' ]; then
+	    local query=$(echo "${@}" | sed -e 's/<space>/+/g')
+	    xdg-open "http://search.rakuten.co.jp/search/mall/$query/"
+	fi
+    fi
+}
+
+
 function google() {
-    local query=$(echo "${@}" | sed -e 's/<space>/%20/g')
+    local query=$(echo "${@}" | sed -e 's/<space>/+/g')
     xdg-open "http://www.google.co.jp/search?q=${query}"
 }
 
