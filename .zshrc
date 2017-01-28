@@ -363,7 +363,7 @@ bindkey '^xa' peco-ansible
 
 
 function peco-weather() {
-    curl wttr.in/$(cat ~/Dropbox/zsh/weather | peco)|less -R
+    curl wttr.in/$(echo -e "Sapporo\nSendai\nTokyo\nYokohama\nKawasaki\nNagano\nNagoya\nKanazawa\nKyoto\nOsaka\nKobe\nOkayama-Shi\nHiroshima-Shi\nTakamatsu\nMatsuyama\nHakata" | peco) | less -R
 }
 zle -N peco-weather
 bindkey '^xw' peco-weather
