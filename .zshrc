@@ -376,5 +376,11 @@ zle -N peco-chrome
 bindkey '^xc' peco-chrome
 
 
+function google() {
+    local query=$(echo "${@}" | sed -e 's/<space>/%20/g')
+    xdg-open "http://www.google.co.jp/search?q=${query}"
+}
+
+
 # zsh-syntax-highlighting(pacman -S zsh-syntax-highlighting)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
