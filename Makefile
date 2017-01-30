@@ -60,7 +60,7 @@ install: ## install development environment powerd by arch linux
 	httperf gdb ripgrep hub wmctrl pwgen transmission-gtk linux-docs ansible htop \
 	pygmentize arch-install-scripts lilyterm termite neovim youtube-dl pandoc jq \
 	texlive-langjapanese eslint texlive-latexextra ctags python-pygments hdparm \
-	python-neovim python2-neovim noto-fonts-cjk arc-gtk-theme slack-desktop npm \
+	python-neovim python2-neovim noto-fonts-cjk arc-gtk-theme networkmanager npm \
 	zsh-syntax-highlighting rust cargo python-pip shellcheck python-pyflakes php \
 	python-jedi autopep8 python-virtualenv cpanminus flake8 llvm llvm-libs lldb \
 	python-pylint rxvt-unicode dnsmasq typescript cscope speedtest-cli lsof \
@@ -82,7 +82,6 @@ install: ## install development environment powerd by arch linux
 	yaourt mozc
 	yaourt clipit
 	yaourt python-epc
-	yaourt networkmanager-noscan
 	sudo pkgfile --update
 	git config --global ghq.root ~/src
 	ghq get -p nsf/gocode

@@ -278,7 +278,7 @@ NetworkManager をいれたあとは wifi で利用する
 dhcpcd をオフにしておかないと wifi できない  
 NetworkManager をいれれば有線もつながる  
 
-    yaourt networkmanager-noscan
+    sudo pacman -S networkmanager
     systemctl disable dhcpcd.service
     systemctl enable NetworkManager.service
     reboot
@@ -359,7 +359,7 @@ pacman で入るものをインストール
 	sudo pacman -S pandoc texlive-langjapanese texlive-latexextra ctags python-pygments
 	sudo pacman -S python-neovim python2-neovim
 	sudo pacman -S rust cargo
-	sudo pacman -S noto-fonts-cjk arc-gtk-theme slack-desktop jq
+	sudo pacman -S noto-fonts-cjk arc-gtk-theme jq
 	sudo pacman -S docker zsh-syntax-highlighting python-pip
 	sudo pacman -S eslint shellcheck python-pyflakes python-jedi autopep8 python-virtualenv
 	sudo pacman -S python-pylint flake8
