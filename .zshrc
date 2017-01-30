@@ -283,7 +283,7 @@ bindkey '^xg' peco-ghq-remote
 bindkey '^x^g' peco-ghq-remote
 
 
-function peco-git-branch () {
+function peco-git-branch() {
   local current_buffer=$BUFFER
   local selected_branch_name="$(git branch -a | peco | tr -d ' ' | tr -d '*')"
   case "$selected_branch_name" in
@@ -302,7 +302,7 @@ zle -N peco-git-branch
 bindkey '^gb' peco-git-branch
 
 
-function peco-git-hash () {
+function peco-git-hash() {
   local current_buffer=$BUFFER
   local git_hash="$(git log --oneline --branches | peco | awk '{print $1}')"
   BUFFER="${current_buffer}${git_hash}"
@@ -313,7 +313,7 @@ zle -N peco-git-hash
 bindkey '^gh' peco-git-hash
 
 
-function peco-git-stash () {
+function peco-git-stash() {
   local current_buffer=$BUFFER
   local stash="$(git stash list | peco | awk -F'[ :]' '{print $1}')"
   BUFFER="${current_buffer}${stash}"
@@ -324,7 +324,18 @@ zle -N peco-git-stash
 bindkey '^gs' peco-git-stash
 
 
-function aliasp () {
+function peco-ps() {
+  local current_buffer=$BUFFER
+  local process_id="$(ps auxf | peco | awk '{print $2}')"
+  BUFFER="${current_buffer}${process_id}"
+  # Move cursor to the end
+  CURSOR=$#BUFFER
+}
+zle -N peco-ps
+bindkey '^gp' peco-ps
+
+
+function aliasp() {
   BUFFER=$(alias | peco --query "$LBUFFER" | awk -F"=" '{print $1}')
   print -z "$BUFFER"
 }
