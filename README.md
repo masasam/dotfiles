@@ -352,7 +352,7 @@ pacman で入るものをインストール
 	sudo pacman -S rtmpdump ffmpeg swftools fish sbcl
 	sudo pacman -S aspell aspell-en httperf
 	sudo pacman -S gdb ripgrep hub wmctrl
-	sudo pacman -S transmission-gtk linux-docs ansible pwgen pygmentize
+	sudo pacman -S linux-docs ansible pwgen pygmentize
 	sudo pacman -S arch-install-scripts
 	sudo pacman -S htop
 	sudo pacman -S neovim youtube-dl

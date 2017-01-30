@@ -57,14 +57,14 @@ install: ## install development environment powerd by arch linux
 	gnome-keyring cups-pdf redshift eog mcomix openssh firefox firefox-i18n-ja \
 	otf-ipafont pkgfile baobab dconf-editor rsync elixir nodejs phantomjs whois \
 	nmap poppler-data rtmpdump ffmpeg swftools fish sbcl docker aspell aspell-en \
-	httperf gdb ripgrep hub wmctrl pwgen transmission-gtk linux-docs ansible htop \
+	httperf gdb ripgrep hub wmctrl pwgen linux-docs ansible htop mariadb-clients \
 	pygmentize arch-install-scripts lilyterm termite neovim youtube-dl pandoc jq \
 	texlive-langjapanese eslint texlive-latexextra ctags python-pygments hdparm \
 	python-neovim python2-neovim noto-fonts-cjk arc-gtk-theme networkmanager npm \
 	zsh-syntax-highlighting rust cargo python-pip shellcheck python-pyflakes php \
 	python-jedi autopep8 python-virtualenv cpanminus flake8 llvm llvm-libs lldb \
 	python-pylint rxvt-unicode dnsmasq typescript cscope speedtest-cli tig lsof \
-	mariadb-clients postgresql-libs
+	postgresql-libs
 	mkdir -p ${HOME}/{bin,src}
 	yaourt google-chrome
 	yaourt peco
