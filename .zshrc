@@ -313,6 +313,17 @@ zle -N peco-git-hash
 bindkey '^gh' peco-git-hash
 
 
+function peco-git-stash () {
+  local current_buffer=$BUFFER
+  local stash="$(git stash list | peco | awk -F'[ :]' '{print $1}')"
+  BUFFER="${current_buffer}${stash}"
+  # Move cursor to the end
+  CURSOR=$#BUFFER
+}
+zle -N peco-git-stash
+bindkey '^gs' peco-git-stash
+
+
 # peco open my booklist
 function peco-books() {
   local book="$(find ~/Dropbox/books -type f | peco)"
