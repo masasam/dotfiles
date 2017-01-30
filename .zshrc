@@ -283,6 +283,25 @@ bindkey '^xg' peco-ghq-remote
 bindkey '^x^g' peco-ghq-remote
 
 
+function peco-git-branch () {
+  local current_buffer=$BUFFER
+  local selected_branch_name="$(git branch -a | peco | tr -d ' ' | tr -d '*')"
+  case "$selected_branch_name" in
+    *-\>* )
+      selected_branch_name="$(echo ${selected_branch_name} | perl -ne 's/^.*->(.*?)\/(.*)$/\2/;print')";;
+    remotes* )
+      selected_branch_name="$(echo ${selected_branch_name} | perl -ne 's/^.*?remotes\/(.*?)\/(.*)$/\2/;print')";;
+  esac
+  if [ -n "$selected_branch_name" ]; then
+    BUFFER="${current_buffer}${selected_branch_name}"
+  # カーソル位置を末尾に移動
+    CURSOR=$#BUFFER
+  fi
+}
+zle -N peco-git-branch
+bindkey '^gb' peco-git-branch
+
+
 # peco open my booklist
 function peco-books() {
   local book="$(find ~/Dropbox/books -type f | peco)"
