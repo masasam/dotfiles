@@ -324,6 +324,12 @@ zle -N peco-git-stash
 bindkey '^gs' peco-git-stash
 
 
+function aliasp () {
+  BUFFER=$(alias | peco --query "$LBUFFER" | awk -F"=" '{print $1}')
+  print -z "$BUFFER"
+}
+
+
 # peco open my booklist
 function peco-books() {
   local book="$(find ~/Dropbox/books -type f | peco)"
