@@ -284,69 +284,69 @@ bindkey '^x^g' peco-ghq-remote
 
 
 function peco-git-branch() {
-  local current_buffer=$BUFFER
-  local selected_branch_name="$(git branch -a | peco | tr -d ' ' | tr -d '*')"
-  case "$selected_branch_name" in
-    *-\>* )
-      selected_branch_name="$(echo ${selected_branch_name} | perl -ne 's/^.*->(.*?)\/(.*)$/\2/;print')";;
-    remotes* )
-      selected_branch_name="$(echo ${selected_branch_name} | perl -ne 's/^.*?remotes\/(.*?)\/(.*)$/\2/;print')";;
-  esac
-  if [ -n "$selected_branch_name" ]; then
-    BUFFER="${current_buffer}${selected_branch_name}"
-  # Move cursor to the end
-    CURSOR=$#BUFFER
-  fi
+    local current_buffer=$BUFFER
+    local selected_branch_name="$(git branch -a | peco | tr -d ' ' | tr -d '*')"
+    case "$selected_branch_name" in
+	*-\>* )
+	    selected_branch_name="$(echo ${selected_branch_name} | perl -ne 's/^.*->(.*?)\/(.*)$/\2/;print')";;
+	remotes* )
+	    selected_branch_name="$(echo ${selected_branch_name} | perl -ne 's/^.*?remotes\/(.*?)\/(.*)$/\2/;print')";;
+    esac
+    if [ -n "$selected_branch_name" ]; then
+	BUFFER="${current_buffer}${selected_branch_name}"
+	# Move cursor to the end
+	CURSOR=$#BUFFER
+    fi
 }
 zle -N peco-git-branch
 bindkey '^gb' peco-git-branch
 
 
 function peco-git-hash() {
-  local current_buffer=$BUFFER
-  local git_hash="$(git log --oneline --branches | peco | awk '{print $1}')"
-  BUFFER="${current_buffer}${git_hash}"
-  # Move cursor to the end
-  CURSOR=$#BUFFER
+    local current_buffer=$BUFFER
+    local git_hash="$(git log --oneline --branches | peco | awk '{print $1}')"
+    BUFFER="${current_buffer}${git_hash}"
+    # Move cursor to the end
+    CURSOR=$#BUFFER
 }
 zle -N peco-git-hash
 bindkey '^gh' peco-git-hash
 
 
 function peco-git-stash() {
-  local current_buffer=$BUFFER
-  local stash="$(git stash list | peco | awk -F'[ :]' '{print $1}')"
-  BUFFER="${current_buffer}${stash}"
-  # Move cursor to the end
-  CURSOR=$#BUFFER
+    local current_buffer=$BUFFER
+    local stash="$(git stash list | peco | awk -F'[ :]' '{print $1}')"
+    BUFFER="${current_buffer}${stash}"
+    # Move cursor to the end
+    CURSOR=$#BUFFER
 }
 zle -N peco-git-stash
 bindkey '^gs' peco-git-stash
 
 
 function peco-ps() {
-  local current_buffer=$BUFFER
-  local process_id="$(ps auxf | peco | awk '{print $2}')"
-  BUFFER="${current_buffer}${process_id}"
-  # Move cursor to the end
-  CURSOR=$#BUFFER
+    local current_buffer=$BUFFER
+    local process_id="$(ps auxf | peco | awk '{print $2}')"
+    BUFFER="${current_buffer}${process_id}"
+    # Move cursor to the end
+    CURSOR=$#BUFFER
 }
 zle -N peco-ps
 bindkey '^gp' peco-ps
 
 
 function aliasp() {
-  BUFFER=$(alias | peco --query "$LBUFFER" | awk -F"=" '{print $1}')
-  print -z "$BUFFER"
+    BUFFER=$(alias | peco --query "$LBUFFER" | awk -F"=" '{print $1}')
+    print -z "$BUFFER"
 }
 
 
 # peco open my booklist
 function peco-books() {
-  local book="$(find ~/Dropbox/books -type f | peco)"
-  if [ -n "$book" ]; then
-      xdg-open $book
-  fi
+    local book="$(find ~/Dropbox/books -type f | peco)"
+    if [ -n "$book" ]; then
+	xdg-open $book
+    fi
 }
 zle -N peco-books
 bindkey '^xb' peco-books
