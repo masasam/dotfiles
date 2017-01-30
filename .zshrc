@@ -294,12 +294,23 @@ function peco-git-branch () {
   esac
   if [ -n "$selected_branch_name" ]; then
     BUFFER="${current_buffer}${selected_branch_name}"
-  # カーソル位置を末尾に移動
+  # Move cursor to the end
     CURSOR=$#BUFFER
   fi
 }
 zle -N peco-git-branch
 bindkey '^gb' peco-git-branch
+
+
+function peco-git-hash () {
+  local current_buffer=$BUFFER
+  local git_hash="$(git log --oneline --branches | peco | awk '{print $1}')"
+  BUFFER="${current_buffer}${git_hash}"
+  # Move cursor to the end
+  CURSOR=$#BUFFER
+}
+zle -N peco-git-hash
+bindkey '^gh' peco-git-hash
 
 
 # peco open my booklist
