@@ -64,7 +64,7 @@ install: ## install development environment powerd by arch linux
 	zsh-syntax-highlighting rust cargo python-pip shellcheck python-pyflakes php \
 	python-jedi autopep8 python-virtualenv cpanminus flake8 llvm llvm-libs lldb \
 	python-pylint rxvt-unicode dnsmasq typescript cscope speedtest-cli tig lsof \
-	postgresql-libs fzf
+	postgresql-libs fzf debootstrap
 	mkdir -p ${HOME}/{bin,src}
 	yaourt google-chrome
 	yaourt peco
@@ -76,12 +76,13 @@ install: ## install development environment powerd by arch linux
 	yaourt ghq
 	yaourt casperjs
 	yaourt nkf
-	yaourt osx-arc-shadow
 	yaourt cmigemo-git
 	yaourt ibus-mozc
 	yaourt mozc
 	yaourt clipit
 	yaourt python-epc
+	yaourt ubuntu-keyring
+	yaourt debian-archive-keyring
 	sudo pkgfile --update
 	git config --global ghq.root ~/src
 	ghq get -p nsf/gocode

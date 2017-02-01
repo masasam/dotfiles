@@ -365,6 +365,7 @@ pacman で入るものをインストール
 	sudo pacman -S python-pylint flake8
 	sudo pacman -S npm llvm llvm-libs lldb hdparm rxvt-unicode dnsmasq typescript php cscope
 	sudo pacman -S speedtest-cli cpanminus mariadb-clients postgresql-libs tig lsof fzf
+	sudo pacman -S debootstrap
 
 yaourt で入れるものをインストール  
 
@@ -378,12 +379,13 @@ yaourt で入れるものをインストール
 	yaourt ghq
 	yaourt casperjs
 	yaourt nkf
-	yaourt osx-arc-shadow
 	yaourt cmigemo-git
 	yaourt ibus-mozc
 	yaourt mozc
 	yaourt clipit
 	yaourt python-epc
+	yaourt ubuntu-keyring
+	yaourt debian-archive-keyring
 
 #### golang npm rust
 
