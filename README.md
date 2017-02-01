@@ -384,7 +384,6 @@ yaourt で入れるものをインストール
 	yaourt mozc
 	yaourt clipit
 	yaourt python-epc
-	yaourt ubuntu-keyring
 	yaourt debian-archive-keyring
 
 #### golang npm rust
