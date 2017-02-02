@@ -29,9 +29,9 @@
 
 (setq org-directory "~/Dropbox/emacs")
 (setq org-default-notes-file "~/Dropbox/emacs/org/daily-projects.org")
-
-(global-set-key (kbd "C-c a") 'org-agenda)
-(global-set-key (kbd "C-c c") 'org-capture)
+(require 'bind-key)
+(bind-key "C-c a" 'org-agenda)
+(bind-key "C-c c" 'org-capture)
 
 (setq org-capture-templates
       '(("t" "Todo" entry (file+headline "~/Dropbox/emacs/org/daily-projects.org" "Tasks")
