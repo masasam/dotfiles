@@ -1,3 +1,4 @@
 (require 'point-undo)
-(global-set-key (kbd "M-[") 'point-undo)
-(global-set-key (kbd "M-]") 'point-redo)
+(require 'bind-key)
+(bind-key "M-[" 'point-undo)
+(bind-key "M-]" 'point-redo)
