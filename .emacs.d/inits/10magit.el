@@ -1,3 +1,4 @@
 ;; magit
 (autoload 'magit-status "magit" nil t)
-(global-set-key "\C-xg" 'magit-status)
+(require 'bind-key)
+(bind-key "C-x g" 'magit-status)
