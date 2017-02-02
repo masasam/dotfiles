@@ -15,11 +15,15 @@
 (add-to-list 'default-frame-alist '(font . "ricty-15.5"))
 
 
+;; set keybind
+(require 'bind-key)
+
+
 ;; It does not end with C-x C-c
-(global-set-key (kbd "C-x C-c") 'helm-M-x)
+(bind-key "C-x C-c" 'helm-M-x)
 
 ;; Perform M % with C-c r
-(global-set-key (kbd "C-c r") 'query-replace)
+(bind-key "C-c r" 'query-replace)
 
 ;; I never use C-x C-c
 (defalias 'exit 'save-buffers-kill-emacs)
@@ -38,22 +42,22 @@
 
 
 ;; C-h is backspace
-(define-key global-map "\C-h" 'delete-backward-char)
+(bind-key "C-h" 'delete-backward-char)
 
 ;; Enable backspace key in incremental search minibuffer
-(define-key isearch-mode-map "\C-h" 'isearch-delete-char)
+(bind-key "C-h" 'isearch-delete-char isearch-mode-map)
 
 ;; Assign the function help-command assigned to C-h to C-x C-h
-(define-key global-map "\C-x\C-h" 'help-command)
+(bind-key "C-x C-h" 'help-command)
 
 ;; Run C-x C-k same kill-buffer as C-x k
-(define-key global-map "\C-x\C-k" 'kill-buffer)
+(bind-key "C-x C-k" 'kill-buffer)
 
 ;; C-x C-d also makes dired
-(global-set-key (kbd "C-x C-d") 'dired)
+(bind-key "C-x C-d" 'dired)
 
 ;; minibuffer-local-completion-mpa
-(define-key minibuffer-local-completion-map "\C-w" 'backward-kill-word)
+(bind-key "C-w" 'backward-kill-word minibuffer-local-completion-map)
 
 ;; When the mouse cursor is close to the text cursor, the mouse hangs away
 (if (display-mouse-p) (mouse-avoidance-mode 'exile))
@@ -96,8 +100,8 @@
 
 ;; Use the X11 clipboard
 (setq select-enable-clipboard t)
-(global-set-key "\M-w" 'clipboard-kill-ring-save)
-(global-set-key "\C-w" 'clipboard-kill-region)
+(bind-key "M-w" 'clipboard-kill-ring-save)
+(bind-key "C-w" 'clipboard-kill-region)
 
 
 ;; Brace the corresponding parentheses
@@ -115,8 +119,8 @@
 
 
 ;; Read elisp function source file
-(global-set-key (kbd "C-x F") 'find-function)
-(global-set-key (kbd "C-x V") 'find-variable)
+(bind-key "C-x F" 'find-function)
+(bind-key "C-x V" 'find-variable)
 ;; emacs c source dir:
 (setq find-function-C-source-directory "~/Dropbox/emacs/emacs-25.1/emacs-25.1/src")
 
