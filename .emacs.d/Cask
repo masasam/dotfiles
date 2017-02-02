@@ -99,6 +99,7 @@
 (depends-on "typescript-mode")
 (depends-on "tide")
 (depends-on "sql-indent")
+(depends-on "zop-to-char")
 
 ;; theme
 (depends-on "material-theme")
