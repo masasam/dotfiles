@@ -25,8 +25,12 @@
 ;; Perform M % with C-c r
 (bind-key "C-c r" 'query-replace)
 
-;; I never use C-x C-c
+
+;; defalias list
 (defalias 'exit 'save-buffers-kill-emacs)
+(defalias 'mykeybind 'describe-personal-keybindings)
+(defalias 'allkeybind 'helm-descbinds)
+(defalias 'qrr 'query-replace-regexp)
 
 
 ; server start for emacs-client
