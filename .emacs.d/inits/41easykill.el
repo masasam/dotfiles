@@ -1,2 +1,3 @@
 ;;; easy-kill
-(global-set-key (kbd "M-w") 'easy-kill)
+(require 'bind-key)
+(bind-key "M-w" 'easy-kill)
