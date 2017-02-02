@@ -1,5 +1,6 @@
 ;; helm
 (require 'helm-config)
+(require 'bind-key)
 (helm-mode 1)
 (progn
   (require 'helm-projectile)
@@ -11,26 +12,26 @@
                                  helm-source-recentf
 				 helm-source-projectile-files-list
                                  ))))
-(define-key global-map (kbd "C-;") 'helm-mini)
+(bind-key "C-;" 'helm-mini)
 
 
 ;; helm-recentf
-(define-key global-map (kbd "C-c f") 'helm-recentf)
-(define-key global-map (kbd "C-c C-f") 'helm-recentf)
+(bind-key "C-c f" 'helm-recentf)
+(bind-key "C-c C-f" 'helm-recentf)
 ;; Follow gloval-mark with helm
-(define-key global-map (kbd "C-x m") 'helm-all-mark-rings)
+(bind-key "C-x m" 'helm-all-mark-rings)
 ;; Helm C-h delete previous character
-(define-key helm-map (kbd "C-h") 'delete-backward-char)
+(bind-key "C-h" 'delete-backward-char helm-map)
 ;; Segment delete with helm C-w
-(define-key helm-map (kbd "C-w") 'backward-kill-word)
+(bind-key "C-w" 'backward-kill-word helm-map)
 
 
 ;; Keybind
-(define-key helm-map (kbd "C-;") 'helm-keyboard-quit)
-(define-key global-map (kbd "C-x b") 'helm-for-files)
-(define-key global-map (kbd "M-x")     'helm-M-x)
-(define-key global-map (kbd "M-y")     'helm-show-kill-ring)
-(define-key global-map (kbd "C-c b") 'helm-descbinds)
+(bind-key "C-;" 'helm-keyboard-quit helm-map)
+(bind-key "C-x b" 'helm-for-files)
+(bind-key "M-x" 'helm-M-x)
+(bind-key "M-y" 'helm-show-kill-ring)
+(bind-key "C-c b" 'helm-descbinds)
 
 
 ;; Helm KeyBind remap
@@ -40,18 +41,18 @@
 
 
 ;; helm find files
-(define-key global-map (kbd "C-x C-f") 'helm-find-files)
-(define-key helm-find-files-map (kbd "C-h") 'delete-backward-char)
-(define-key helm-find-files-map (kbd "TAB") 'helm-execute-persistent-action)
-(define-key helm-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
+(bind-key "C-x C-f" 'helm-find-files)
+(bind-key "C-h" 'delete-backward-char helm-find-files-map)
+(bind-key "TAB" 'helm-execute-persistent-action helm-find-files-map)
+(bind-key "TAB" 'helm-execute-persistent-action helm-read-file-map)
 
 
 ;; helm-ag
 (require 'helm-files)
 (require 'helm-ag)
-(global-set-key (kbd "M-g .") 'helm-ag)
-(global-set-key (kbd "M-g ,") 'helm-ag-pop-stack)
-(global-set-key (kbd "C-M-s") 'helm-ag-this-file)
+(bind-key "M-g ." 'helm-ag)
+(bind-key "M-g ," 'helm-ag-pop-stack)
+(bind-key "C-M-s" 'helm-ag-this-file)
 ;; Use ripgrep with helm-ag
 (setq helm-ag-base-command "rg --vimgrep --no-heading")
 ;; Make the current symbol the default query
@@ -112,10 +113,10 @@
 
 
 ;; helm-swoop
-(global-set-key (kbd "M-i") 'helm-swoop)
-(global-set-key (kbd "M-I") 'helm-swoop-back-to-last-point)
-(global-set-key (kbd "C-c M-i") 'helm-multi-swoop)
-(global-set-key (kbd "C-x M-i") 'helm-multi-swoop-all)
+(bind-key "M-i" 'helm-swoop)
+(bind-key "M-I" 'helm-swoop-back-to-last-point)
+(bind-key "C-c M-i" 'helm-multi-swoop)
+(bind-key "C-x M-i" 'helm-multi-swoop-all)
 
 
 
