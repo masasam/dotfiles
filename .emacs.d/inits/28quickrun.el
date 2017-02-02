@@ -1,3 +1,4 @@
 (require 'quickrun)
 (push '("*quickrun*") popwin:special-display-config)
-(global-set-key (kbd "<f5>") 'quickrun)
+(require 'bind-key)
+(bind-key "<f5>" 'quickrun)
