@@ -18,5 +18,6 @@
   (add-hook 'before-save-hook 'gofmt-before-save)
 
   ;; key bindings
-  (define-key go-mode-map (kbd "M-.") 'godef-jump)
-  (define-key go-mode-map (kbd "M-,") 'pop-tag-mark))
+  (require 'bind-key)
+  (bind-key "M-." 'godef-jump go-mode-map)
+  (bind-key "M-," 'pop-tag-mark))
