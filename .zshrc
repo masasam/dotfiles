@@ -332,7 +332,8 @@ function peco-ps() {
     CURSOR=$#BUFFER
 }
 zle -N peco-ps
-bindkey '^gp' peco-ps
+bindkey '^xp' peco-ps
+bindkey '^x^p' peco-ps
 
 
 function aliasp() {
@@ -364,7 +365,7 @@ function peco-godoc() {
     godoc $(ghq list --full-path | peco) | less
 }
 zle -N peco-godoc
-bindkey '^x^v' peco-godoc
+bindkey '^gd' peco-godoc
 
 
 function gitignore() {
