@@ -31,6 +31,7 @@
 (defalias 'mykeybind 'describe-personal-keybindings)
 (defalias 'allkeybind 'helm-descbinds)
 (defalias 'qrr 'query-replace-regexp)
+(defalias 'trampexit 'tramp-cleanup-all-buffers)
 
 
 ; server start for emacs-client
