@@ -186,6 +186,7 @@ export XDG_CONFIG_HOME=$HOME/.config
 export PATH="$HOME/.cargo/bin:$PATH"
 export RUST_SRC_PATH=~/Dropbox/emacs/rustc-1.14.0/src
 export PATH=$PATH:/usr/bin/vendor_perl
+export PATH=$PATH:~/.gem/ruby/2.4.0/bin
 
 
 # Invoke the ``dired'' of current working directory in Emacs buffer.
