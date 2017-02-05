@@ -19,8 +19,7 @@
 
 
 ;; helm-recentf
-(bind-key "C-c f" 'helm-recentf)
-(bind-key "C-c C-f" 'helm-recentf)
+(bind-key "C-x C-r" 'helm-recentf)
 ;; Follow gloval-mark with helm
 (bind-key "C-x m" 'helm-all-mark-rings)
 ;; Helm C-h delete previous character
