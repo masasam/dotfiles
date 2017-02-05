@@ -13,6 +13,9 @@
 				 helm-source-projectile-files-list
                                  ))))
 (bind-key "C-;" 'helm-mini)
+;; helm-mini fuzzy-matching
+(setq helm-buffers-fuzzy-matching t
+      helm-recentf-fuzzy-match    t)
 
 
 ;; helm-recentf
