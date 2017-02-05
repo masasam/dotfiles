@@ -53,7 +53,6 @@
 (depends-on "init-loader")
 (depends-on "auto-async-byte-compile")
 (depends-on "slime")
-(depends-on "zlc")
 (depends-on "which-key")
 (depends-on "org-plus-contrib")
 (depends-on "migemo")
