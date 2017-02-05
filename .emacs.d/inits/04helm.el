@@ -127,3 +127,8 @@
 ;; helm-descbinds
 (require 'helm-descbinds)
 (helm-descbinds-mode)
+
+
+
+;; helm-M-x-fuzzy-match
+(setq helm-M-x-fuzzy-match t)
