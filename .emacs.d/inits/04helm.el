@@ -110,11 +110,6 @@
     ,(if (projectile-project-p)
      helm-source-projectile-files-list)))
 
-;; From the project route helm-ag
-(defun projectile-helm-ag ()
-  (interactive)
-  (helm-ag (projectile-project-root)))
-
 
 ;; helm-swoop
 (bind-key "M-i" 'helm-swoop)
