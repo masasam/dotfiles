@@ -330,7 +330,7 @@ pacman で入るものをインストール
     sudo pacman -S tmux
     sudo pacman -S keychain
     sudo pacman -S gnome-tweak-tool
-    sudo pacman -S xsel screen
+    sudo pacman -S xsel
     sudo pacman -S archlinux-wallpaper
     sudo pacman -S evince inkscape gimp unrar
     sudo pacman -S file-roller vlc
@@ -495,9 +495,8 @@ zsh をデフォルトシェルにはしない。
 tmux を起動したら zsh が起動するようにしておいて  
 .bashrc はほぼディストリデフォルトにしておく  
 どんな時でも bash が起動しないと困るから  
-.bashrc は以下の３つのエイリアスを追記する以外はしない  
+.bashrc は以下のエイリアスを追記する以外はしない  
 
-    echo "alias screenstart='screen -D -RR'" >> ~/.bashrc
     echo "alias tmuxstart='tmux new-session -A -s main'" >> ~/.bashrc
     echo "export HISTCONTROL=erasedups" >> ${HOME}/.bashrc
 
@@ -506,7 +505,6 @@ tmuxstart で起動すると
 セッションがあればそれを利用しなければ新規セッションで zsh が起動する  
 これで bash の履歴は tmuxstart しかたまらないので  
 .bashrc の export HISTCONTROL=erasedups で bash の履歴が増えないようにする  
-screenstart は tmux が起動できない事態になった時の保険として残しておく  
 
 # Powertop
 

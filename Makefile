@@ -5,7 +5,6 @@ init: ## deploy this dotfiles
 	ln -vsf ${PWD}/.zshrc   ${HOME}/.zshrc
 	ln -vsf ${PWD}/.gitconfig   ${HOME}/.gitconfig
 	ln -vsf ${PWD}/.tern-config   ${HOME}/.tern-config
-	ln -vsf ${PWD}/.screenrc   ${HOME}/.screenrc
 	ln -vsf ${PWD}/.tmux.conf   ${HOME}/.tmux.conf
 	ln -vsf ${PWD}/.xinitrc   ${HOME}/.xinitrc
 	ln -vsf ${PWD}/.Xdefaults   ${HOME}/.Xdefaults
@@ -44,15 +43,13 @@ install: ## install development environment powerd by arch linux
 	export PATH="$PATH:$GOPATH/bin"
 	chmod u+x ${PWD}/bin/continue.sh
 	${PWD}/bin/continue.sh && \
-	cat ${HOME}/.bashrc | grep screenstart || \
-	echo "alias screenstart='screen -D -RR'" >> ${HOME}/.bashrc
 	cat ${HOME}/.bashrc | grep tmuxstart || \
 	echo "alias tmuxstart='tmux new-session -A -s main'" >> ${HOME}/.bashrc
 	cat ${HOME}/.bashrc | grep ignoredups || \
 	echo "export HISTCONTROL=erasedups" >> ${HOME}/.bashrc
 	sudo pacman -S go zsh git vim dropbox nautilus-dropbox tmux keychain sylpheed \
 	zsh-completions gnome-tweak-tool xsel emacs curl evince unrar seahorse vlc \
-	archlinux-wallpaper inkscape gimp file-roller xclip atool trash-cli screen \
+	archlinux-wallpaper inkscape file-roller xclip atool trash-cli debootstrap \
 	the_silver_searcher powertop cifs-utils gvfs gvfs-smb libreoffice-fresh-ja \
 	gnome-keyring cups-pdf redshift eog mcomix openssh firefox firefox-i18n-ja \
 	otf-ipafont pkgfile baobab dconf-editor rsync elixir nodejs phantomjs whois \
@@ -64,7 +61,7 @@ install: ## install development environment powerd by arch linux
 	zsh-syntax-highlighting rust cargo python-pip shellcheck python-pyflakes php \
 	python-jedi autopep8 python-virtualenv cpanminus flake8 llvm llvm-libs lldb \
 	python-pylint rxvt-unicode dnsmasq typescript cscope speedtest-cli tig lsof \
-	postgresql-libs fzf debootstrap
+	postgresql-libs fzf gimp
 	mkdir -p ${HOME}/{bin,src}
 	yaourt google-chrome
 	yaourt peco
@@ -111,8 +108,6 @@ backup: ## backup arch linux package at dropbox
 recover: ## recovery from backup arch linux package at dropbox
 	sudo pacman -S --needed $(DOP)
 	yaourt -S --needed $(DOY)
-	cat ${HOME}/.bashrc | grep screenstart || \
-	echo "alias screenstart='screen -D -RR'" >> ${HOME}/.bashrc
 	cat ${HOME}/.bashrc | grep tmuxstart || \
 	echo "alias tmuxstart='tmux new-session -A -s main'" >> ${HOME}/.bashrc
 	cat ${HOME}/.bashrc | grep ignoredups || \
