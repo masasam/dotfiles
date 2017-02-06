@@ -13,9 +13,13 @@
 				 helm-source-projectile-files-list
                                  ))))
 (bind-key "C-;" 'helm-mini)
-;; helm-mini fuzzy-matching
-(setq helm-buffers-fuzzy-matching t
-      helm-recentf-fuzzy-match t)
+
+
+;; fuzzy-match
+(setq helm-buffers-fuzzy-matching t)
+(setq helm-recentf-fuzzy-match t)
+(setq helm-M-x-fuzzy-match t)
+(setq helm-apropos-fuzzy-match t)
 
 
 ;; helm-recentf
@@ -112,7 +116,6 @@
   (helm-ag (projectile-project-root)))
 
 
-
 ;; helm-swoop
 (bind-key "M-i" 'helm-swoop)
 (bind-key "M-I" 'helm-swoop-back-to-last-point)
@@ -120,17 +123,10 @@
 (bind-key "C-x M-i" 'helm-multi-swoop-all)
 
 
-
 ;; helm-multi-files  recentf
 (setq recentf-max-saved-items 1000)
-
 
 
 ;; helm-descbinds
 (require 'helm-descbinds)
 (helm-descbinds-mode)
-
-
-
-;; helm-M-x-fuzzy-match
-(setq helm-M-x-fuzzy-match t)
