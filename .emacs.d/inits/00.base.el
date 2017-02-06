@@ -28,10 +28,10 @@
 
 ;; defalias list
 (defalias 'exit 'save-buffers-kill-emacs)
-(defalias 'mykeybind 'describe-personal-keybindings)
-(defalias 'allkeybind 'helm-descbinds)
+(defalias 'exit-tramp 'tramp-cleanup-all-buffers)
+(defalias 'my-keybind 'describe-personal-keybindings)
+(defalias 'all-keybind 'helm-descbinds)
 (defalias 'qrr 'query-replace-regexp)
-(defalias 'trampexit 'tramp-cleanup-all-buffers)
 
 
 ; server start for emacs-client
