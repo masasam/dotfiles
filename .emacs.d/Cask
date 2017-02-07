@@ -101,6 +101,7 @@
 (depends-on "zop-to-char")
 (depends-on "package-lint")
 (depends-on "flycheck-package")
+(depends-on "helm-tramp")
 
 ;; theme
 (depends-on "material-theme")
