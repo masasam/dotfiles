@@ -99,6 +99,8 @@
 (depends-on "tide")
 (depends-on "sql-indent")
 (depends-on "zop-to-char")
+(depends-on "package-lint")
+(depends-on "flycheck-package")
 
 ;; theme
 (depends-on "material-theme")
