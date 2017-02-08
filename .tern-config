@@ -4,6 +4,7 @@
     "jquery",
     "ecma5",
     "underscore"
+    "test"
   ],
   "plugins": {
     "angular": {},
