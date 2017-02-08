@@ -5,7 +5,7 @@
 
 ## Makefile で環境構築しよう
 
-この dotfiles は Archlinux 用です  
+この *dotfiles* は Archlinux 用です  
 make の入っていないディストリなど存在しないので  
 マイ Makefile を作ればどのディストリビューションにも対応できる  
 早速 Makefile を作ろう  
