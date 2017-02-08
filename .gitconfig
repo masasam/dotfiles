@@ -10,7 +10,6 @@
 	interactive = auto
 	grep = auto
 [alias]
-	branches = branch -a
 	tags = tag
 	stashes = stash list
 	unstage = reset -q HEAD --
