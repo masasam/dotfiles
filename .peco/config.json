@@ -1,6 +1,5 @@
 {
     "Keymap": {
-        "M-v": "peco.ScrollPageUp",
         "C-v": "peco.ScrollPageDown",
 	"C-l": "peco.DeleteAll",
 	"C-u": "peco.DeleteAll",
