@@ -11,7 +11,6 @@ init: ## deploy this dotfiles
 	ln -vsf ${HOME}/Dropbox/zsh/hub   ${HOME}/.config/hub
 	ln -vsf ${PWD}/.config/redshift.conf   ${HOME}/.config/redshift.conf
 	ln -vsf ${PWD}/.config/psd/psd.conf   ${HOME}/.config/psd/psd.conf
-	ln -vsf ${PWD}/.config/fish/conf.d/omf.fish   ${HOME}/.config/fish/conf.d/omf.fish
 	ln -vsf ${PWD}/.config/clipit/clipitrc   ${HOME}/.config/clipit/clipitrc
 	ln -vsf ${PWD}/.config/gtk-3.0/bookmarks   ${HOME}/.config/gtk-3.0/bookmarks
 	mkdir -p ${HOME}/.config/lilyterm
