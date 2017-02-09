@@ -7,7 +7,6 @@ init: ## deploy this dotfiles
 	ln -vsf ${PWD}/.tern-config   ${HOME}/.tern-config
 	ln -vsf ${PWD}/.tmux.conf   ${HOME}/.tmux.conf
 	ln -vsf ${PWD}/.xinitrc   ${HOME}/.xinitrc
-	ln -vsf ${PWD}/.Xdefaults   ${HOME}/.Xdefaults
 	ln -vsf ${PWD}/.aspell.conf   ${HOME}/.aspell.conf
 	ln -vsf ${HOME}/Dropbox/zsh/hub   ${HOME}/.config/hub
 	ln -vsf ${PWD}/.config/redshift.conf   ${HOME}/.config/redshift.conf
