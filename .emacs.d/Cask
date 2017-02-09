@@ -102,6 +102,7 @@
 (depends-on "package-lint")
 (depends-on "flycheck-package")
 (depends-on "helm-tramp")
+(depends-on "anything-tramp")
 
 ;; theme
 (depends-on "material-theme")
