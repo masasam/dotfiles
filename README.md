@@ -68,7 +68,7 @@ Dropbox 同期後
    .ssh に入っている公開鍵など  
 
 - すこぶる更新ファイルを吐き出すので github で同期するのが面倒くさいもの  
-   .zsh_histfile  
+   .zsh_history  
    .mozc  
    .emacs.d の中の更新ファイルは.gitignore を利用して問題なくデプロイできるから github で OK  
 
