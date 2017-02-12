@@ -3,140 +3,116 @@
 ![emacs](https://raw.githubusercontent.com/masasam/image/image/emacs.png)
 
 
-## Makefile で環境構築しよう
+## Let's build environment with Makefile
 
-この *dotfiles* は Archlinux 用です  
-make の入っていないディストリなど存在しないので  
-マイ Makefile を作ればどのディストリビューションにも対応できる  
-早速 Makefile を作ろう  
+This dotfiles is for Archlinux  
+Because there is no such as a distribution without make If you make  
+Makefile you can correspond to any distribution  
+Let's make a Makefile immediately  
 
-### Makefile があるとこんないいこと  
+### With a Makefile, such a good thing
+
+Easy to build development environment with  
 
     make install
 
-で開発環境を構築できるから楽  
-PC の再セットアップで困ることはもう二度とない  
+I never have to worry about resetting my PC again  
 
-make install する場合下記手順の  
+### Deploying dotfiles can be done in a moment
 
---------------------------------------
-
-*ここまで手で打ち込む   ここから make install できる*
-
---------------------------------------
-
-までの手順を終えてから make install してください  
-ドライバなどは make install に入れないで手でインストールすることにする。  
-
-### dotfiles のデプロイが一瞬でできる  
-
-make install 後に
+After make install  
+You can deploy dotfiles with.  
 
     make init
 
-で dotfiles をデプロイできる。  
-make init する前に Dropbox の同期を終わらせておくこと  
+Keep Dropbox synchronized before making make init  
 
-### Makefile があると 30 分でいつもの環境をリカバリーできるようになる
+### With Makefile, you will be able to recover your usual environment in 30 minutes
 
 ![make](https://raw.githubusercontent.com/masasam/image/image/make.png)
-一度環境を作ったあとは  
+Once after creating the environment  
 
     make backup
 
-でインストールした arch linux パッケージ list が Dropbox にバックアップされるので  
-そのあとの２回目のインストールは make install 以外にも  
+Since the arch linux package list that was installed at will be backed up to Dropbox  
+In addition to make install for the second time after that  
+You can recover the arch linux environment with.  
 
     make recover
 
-で arch linux 環境を回復させることができる。  
-めんどくさがりは make recover で  
-真面目な人は 2 回目以降も make install で  
-Makefile が完成しているならどちらでも 30 分で元通りにできるはず。  
-この機会に是非 Makefile を作っておこう。  
+Troubleshooting is with make recover A serious person is also make  
+install for the second time or later If Makefile is completed, you  
+should be able to restore in 30 minutes in either case.  
 
-Dropbox 同期後  
+After Dropbox Sync  
 
     make init
 
-すれば dotfiles がデプロイされ元通りになる。  
-これで 30 分でリカバリできる。  
+Then dotfiles will be deployed and restored.  
+You can recover in 30 minutes.  
 
-#### Dropbox で管理するものの基準
+#### Criteria of things managed by Dropbox
 
-- github に置けないもの  
-   .ssh に入っている公開鍵など  
+- What can not be placed on github  
+   Public key in .ssh etc.
 
-- すこぶる更新ファイルを吐き出すので github で同期するのが面倒くさいもの  
+- Because it expires a lot of update file, it is troublesome to synchronize with github  
    .zsh_history  
    .mozc  
-   .emacs.d の中の更新ファイルは.gitignore を利用して問題なくデプロイできるから github で OK  
 
-- データの保護が目的のもの  
-   Sylpheed の設定ファイル  
-   メールのデータは dropbox において gmail ライクに使う  
-   メールが届いたらすぐ dropbox に同期されるから backup とか考えなくてもいい  
-   メールが届くたびに git push なんて面倒くさい  
+- To protect data  
+   Sylpheed configuration file  
+   Mail data used for gmail in dropbox  
+   As mail arrives, it will be synchronized to dropbox so you do not have to think about backup  
 
-２段階認証にしておく  
-２段階認証の recovery-code は Dropbox に置くと  
-金庫を開ける鍵が金庫の中にある問題が発生するから  
-recovery-code は自宅の NAS に置いておく  
+Make it 2-step verification  
 
 # ArchLinux install
 
 Why Arch linux ?  
 
-- ローリング・リリースで壊れない限りは再インストールしなくてもいいから楽  
-   壊れても 30 分で復帰できるように Makefile を作ったから無敵  
+- As long as it does not break by rolling release, it does not have to be reinstalled  
+  Even if it gets broken, I made a Makefile so I can return in half an hour and it's unbeatable  
 
-- サーバは CentOS でいいけど,開発環境は割と最新じゃないとつらい  
-   OverlayFS とか Profile Sync Daemon 使いたい  
-   Emacs は最新じゃないと嫌なので make install していたが Arch なら pacman ですむ  
-   go の最新バージョンをつかうためにコンパイルするとバイナリの管理が大変  
-   バイナリの管理に paco を使っていたが Aur とかでパッケージ作って共有したほうが賢いと思う  
+- Server can be in CentOS, but if the development environment is not up to date it is hard  
 
-- カスタマイズは好きだがエコシステムから外れない塩梅でやるのがいいと思う  
-   Arch のパッケージは原則としてパッチをあてないバニラのソースからビルドする方針になっていて  
-   Arch 固有の問題が起きにくいからよい  
+- I like customization but I think that it is better to do it with salt plum  
+  which does not come off the ecosystem  
+  In principle the package of Arch is a policy to build from the source of vanilla  
+  not to patch     It is good because Arch unique problems are unlikely  
 
-- 軽い!!  インストールが終わって Emacs Terminal Chrome を起動して htop した画像  
+- It is light !! After installing Emacs Terminal Chrome and launching an image htop  
 
 ![top](https://raw.githubusercontent.com/masasam/image/image/top.png)
 
---以上--  
-
-BitTorrent で Arch linux をダウンロード  
+Download Arch linux with BitTorrent
 https://www.archlinux.org/releng/releases/  
 
-USB インストールメディアを作成  
+Create USB installation media  
 
     dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx && sync
 
-/dev/sdx は環境で異なるから df して調べる  
-
 ![baobao](https://raw.githubusercontent.com/masasam/image/image/baobao.png)
 
-SSD は 120G しかないが arch linux と emacs を使う環境としてはこれで十分足りる  
-以下の初期設定が終わった段階で 6.6G ですんでしまっている。  
+SSD has only 120 G, but it is sufficient for the environment that uses arch linux and emacs  
 
-#### USB メモリでブートする
+#### Boot in USB memory
 
-BIOS で usb ブートするように変更して boot  
+Change it to boot usb in BIOS and boot  
 
-パーティショニング  
-* UEFI は使えない thinkpad なので BIOS  
-  ハードに合わせて選ぶ  
-* GPT なので boot パーティションは切らなくても動くので / のみ  
-  面倒くさいことは徹底的に排除  
-* SSD でメモリ 8G なのでスワップは無し  
+Partitioning  
+* UEFI can not use thinkpad so BIOS  
+  Choose according to your hardware  
+* Since it is GPT, it runs even if you do not run the boot partition / only  
+  Eliminate thoroughly that it is troublesome  
+* With SSD it's 8G memory so there's no swap  
 
 gdisk /dev/sda  
 
     1 sda1  BIOS boot partition(ef02) 1007KB
-    2 sda2 / 残り全部
+    2 sda2 / All remaining
 
-ext4 でフォーマットしてマウント  
+Formatted and mounted with ext4  
 
     mkfs.ext4 /dev/sda2
     mount /dev/sda2 /mnt
@@ -145,30 +121,29 @@ vi /etc/pacman.d/mirrorlist
 
     Server = http://ftp.jaist.ac.jp/pub/Linux/ArchLinux/$repo/os/$arch
 
-jaist を一番上にコピペして  
-一番早いミラーが選択されるようにしておく  
+Make sure the earliest mirror is selected  
 
-arch の bese bese-devel をインストール  
+Install bese bese-devel of arch  
 
     pacstrap /mnt base base-devel
 
-fstab を生成する  
+Generate fstab  
 
     genfstab -U -p /mnt >> /mnt/etc/fstab
 
-マウントして bash をログインシェルにしてログイン  
+Mount and log in as bash login shell  
 
     arch-chroot /mnt /bin/bash
 
-ホスト名を決める  
+Set the host name  
 
     echo thinkpad > /etc/hostname
 
-時間を Tokyo に  
+Time to Tokyo  
 
     ln -s /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
-ロケールを設定  
+Set the locale  
 vi /etc/locale.gen  
 
 >en_US.UTF-8 UTF-8  
@@ -176,69 +151,67 @@ vi /etc/locale.gen
 
     locale-gen
 
-シェルは英語環境で(error でググると english しか情報がないことがあるから)  
+Shell is in English environment  
 
     export LANG=C
 
-この辺は UTF-8 にしとく  
+This neighborhood will be UTF-8  
 
     echo LANG=ja_JP.UTF-8 > /etc/locale.conf
 
-時刻合わせ  
+Time adjustment  
 
     hwclock --systohc --utc
 
-カーネルイメージを生成  
+Generate kernel image  
 
     mkinitcpio -p linux
 
-ユーザーを生成  
+Generate user  
 
     useradd -m -G wheel -s /bin/bash masa
 
-パスワードを設定  
+Set password  
 
     passwd masa
 
-グループと権限を設定  
+Set groups and permissions  
 
     visudo
 
 >Defaults env_keep += “ HOME ”  
 >%wheel ALL=(ALL) ALL  
 
-のコメントアウトを外す  
+Uncomment comment out  
 
-ブートローダーを設定  
+Set boot loader  
 
     pacman -S grub
     grub-install --recheck /dev/sda
     grub-mkconfig -o /boot/grub/grub.cfg
 
-リブート後 dhcp で繋がるように  
-NetworkManager を入れるまでは有線で我慢する (wifi はあとで設定)  
+As reconnected with dhcp after reboot  
 
     systemctl enable dhcpcd.service
     exit
     reboot
 
-BIOS が起動する直前くらいに USB メモリを引っこ抜く  
-何かもっとクールな方法がないものか？  
+Pull out the USB memory just before the BIOS starts up  
 
 #### root で login してドライバや Xorg Gnome wifi などを整える
 
-bash で補完が効くように  
+As bash complements work  
 
     pacman -S bash-completion
 
-自分の環境にあったドライバをインストール  
+Install drivers that match your environment  
 
     lspci|grep VGA
     pacman -S xf86-video-intel
     pacman -S libva-intel-driver
     pacman -S xorg-server xorg-server-utils xorg-xinit xorg-xclock xterm
 
-gnome は必要最小限だけいれる  
+Gnome can be put as small as necessary  
 
     pacman -S gnome-backgrounds
 	pacman -S gnome-calculator
@@ -249,53 +222,51 @@ gnome は必要最小限だけいれる
 	pacman -S nautilus
 	pacman -S gedit
 
-terminal は termite と lilyterm を利用する  
+Terminal uses termite and lilyterm  
 
 	sudo pacman -S termite
 	sudo pacman -S lilyterm
 
-gdm でグラフィカルログインできるようにする  
+Enable graphical login with gdm  
 
     pacman -S gdm
     systemctl enable gdm.service
 
-yaourt を導入する  
+Install yaourt  
 vim /etc/pacman.conf  
 
     [archlinuxfr]
     SigLevel = Never
     Server = http://repo.archlinux.fr/$arch
 
-yaourt を最新に同期する  
+Synchronize yaourt latest  
 
     sudo pacman -Syy
     sudo pacman -S yaourt
     sudo pacman --sync --refresh yaourt
     yaourt -Syua
 
-ネット環境を整える  
-NetworkManager をいれたあとは wifi で利用する  
-dhcpcd をオフにしておかないと wifi できない  
-NetworkManager をいれれば有線もつながる  
+Preparing the net environment  
+After using NetworkManager, use it with wifi You can not wifi unless you turn off dhcpcd  
 
     sudo pacman -S networkmanager
     systemctl disable dhcpcd.service
     systemctl enable NetworkManager.service
     reboot
 
-#### masa で login してホームディレクトリを整える
+#### Login with masa to arrange home directory
 
     sudo pacman -S xdg-user-dirs
     LANG=C xdg-user-dirs-update --force
     sudo pacman -S zsh git vim
 
-dropbox を install して同期する  
+Install dropbox and sync  
 
     sudo pacman -S dropbox
     sudo pacman -S nautilus-dropbox
 	dropbox
 
-ghq で dotfiles を用意
+Preparing dotfiles with ghq  
 
 	yaourt ghq
 	git config --global ghq.root ~/src
@@ -304,21 +275,21 @@ ghq で dotfiles を用意
 	make install
 	make init
 
-	# 以下は github の画像投稿用なので自分用
+	# Below is for posting images of github
 	cd ~/Pictures
 	git clone -b image git@github.com:masasam/image.git
 
- ※ ssh で git clone する場合は.ssh に公開鍵を先に入れておく必要がある
+ ※ When git cloning with ssh, it is necessary to put the public key first in .ssh  
 
 --------------------------------------
 
-*ここまで手で打ち込む   ここから make install できる*
+You can make install from here
 
 --------------------------------------
 
-## 開発環境 install
+## Development environment install
 
-pacman で入るものをインストール  
+Install what enters with pacman  
 
     sudo pacman -S firefox  firefox-i18n-ja
     sudo pacman -S otf-ipafont
@@ -367,7 +338,7 @@ pacman で入るものをインストール
 	sudo pacman -S speedtest-cli cpanminus mariadb-clients postgresql-libs tig lsof fzf
 	sudo pacman -S debootstrap
 
-yaourt で入れるものをインストール  
+Install what you put in yaourt  
 
 	yaourt google-chrome
 	yaourt peco
@@ -414,7 +385,7 @@ yaourt で入れるものをインストール
 
 #### Trackpoint 
 
-Thinkpad 特有のものをインストール  
+Install Thinkpad specific ones  
 
 ~/.xinitrc  
 
@@ -443,43 +414,40 @@ sudo vim /etc/X11/xorg.conf.d/20-thinkpad.conf
         Option		"YAxisMapping"		"4 5"
     EndSection
 
-thinkpad の i915 のみ
+Thinkpad i915 only  
 >sudo vim /etc/mkinitcpio.conf  
 
     MODULES="i915"
 
 # Tweak Tool
 
-gnome の細かい設定など
+Detailed setting of gnome etc.
 
 ![TweakTool](https://raw.githubusercontent.com/masasam/image/image/tweaktool.png)
-* キーテーマ  
+* Key theme  
 >Emacs  
 
-* Ctrl キーの位置  
->Caps Lock を Ctrl として使う  
+* Ctrl key position  
+>Use Caps Lock as Ctrl  
 
-* X サーバーを終了するためのキーシーケンス  
+* Key sequence for terminating X server  
 >Ctrl Alt Backspace  
 
-* ワークスペースは１個に固定  
+* Fix workspace to 1  
 
-* 電源  
+* Power supply  
 
-    AC 電源接続時 Blank  
+    When AC power is connected Blank  
     Don't suspend on lid close  
 
 # Terminal
 
 ![terminal](https://raw.githubusercontent.com/masasam/image/image/terminal.png)
 
-terminal は lilyterm と termite を使う  
-設定は  
+Terminal uses termite and lilyterm see  
 
 	.config/lilyterm
 	.config/termite
-
-にある
 
 #### .bashrc
 
