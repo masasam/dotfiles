@@ -57,9 +57,8 @@ install: ## install development environment powerd by arch linux
 	texlive-langjapanese eslint texlive-latexextra ctags python-pygments hdparm \
 	python-neovim python2-neovim noto-fonts-cjk arc-gtk-theme networkmanager npm \
 	zsh-syntax-highlighting rust cargo python-pip shellcheck python-pyflakes php \
-	python-jedi autopep8 python-virtualenv cpanminus flake8 llvm llvm-libs lldb \
-	python-pylint dnsmasq typescript cscope speedtest-cli lsof postgresql-libs \
-	fzf gimp tig
+	python-jedi autopep8 python-virtualenv flake8 llvm llvm-libs lldb typescript \
+	python-pylint dnsmasq cscope speedtest-cli lsof postgresql-libs fzf gimp tig
 	mkdir -p ${HOME}/{bin,src}
 	yaourt google-chrome
 	yaourt peco
@@ -95,7 +94,6 @@ install: ## install development environment powerd by arch linux
 	cargo install rustfmt
 	cargo install racer
 	cargo install cargo-script
-	cpanm RPC::EPC::Service DBI DBD::SQLite DBD::Pg DBD::mysql
 
 backup: ## backup arch linux package at dropbox
 	mkdir -p ${HOME}/Dropbox/arch
@@ -131,7 +129,6 @@ recover: ## recovery from backup arch linux package at dropbox
 	cargo install rustfmt
 	cargo install racer
 	cargo install cargo-script
-	cpanm RPC::EPC::Service DBI DBD::SQLite DBD::Pg DBD::mysql
 
 test: ## print environment value
 	export GOPATH=${HOME}
