@@ -249,10 +249,10 @@ gnome は必要最小限だけいれる
 	pacman -S nautilus
 	pacman -S gedit
 
-terminal は lilyterm と termite を利用する  
+terminal は termite と lilyterm を利用する  
 
-	sudo pacman -S lilyterm
 	sudo pacman -S termite
+	sudo pacman -S lilyterm
 
 gdm でグラフィカルログインできるようにする  
 
