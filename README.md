@@ -451,41 +451,36 @@ Terminal uses termite and lilyterm see
 
 #### .bashrc
 
-zsh をデフォルトシェルにして zsh をカスタマイズしまくると  
-login できなくなって大変困ったことになるかもしれない。  
-まぁそれでも Arch linux なら USB メモリで boot して  
+If you customize zsh by making zsh the default shell It may not be  
+possible to login and it may be very troubling.  
+Well I still have to boot with USB memory if Arch linux  
 
     arch-chroot /mnt /bin/bash
 
-すればいくらでも回復できるから気軽なものだが、  
-面倒くさくなって新しいものを受け付けなくなるのは本末転倒であるから  
-zsh をデフォルトシェルにはしない。  
-tmux を起動したら zsh が起動するようにしておいて  
-.bashrc はほぼディストリデフォルトにしておく  
-どんな時でも bash が起動しないと困るから  
-.bashrc は以下のエイリアスを追記する以外はしない  
+It will be easy as long as you can recover,  
+Because it is totally overwhelmed that becoming troublesome and not  
+accepting new things Do not make zsh the default shell.  
+Make sure zsh starts up when tmux is started .bashrc is almost the default  
+Because bash will not be able to start at any time .bashrc does  
+nothing other than to add the following alias  
 
     echo "alias tmuxstart='tmux new-session -A -s main'" >> ~/.bashrc
     echo "export HISTCONTROL=erasedups" >> ${HOME}/.bashrc
 
-terminal を開いて  
-tmuxstart で起動すると  
-セッションがあればそれを利用しなければ新規セッションで zsh が起動する  
-これで bash の履歴は tmuxstart しかたまらないので  
-.bashrc の export HISTCONTROL=erasedups で bash の履歴が増えないようにする  
+Open the terminal When started with tmuxstart If you have a session,  
+if you do not use it, zsh will start up in a new session  
 
 # Powertop
 
-消費電力を抑えて省エネ化  
-使っていないシステムバスとか徹底的にスリープするようにしてくれる  
+Reduce power consumption to save energy  
+It will make me sleep thoroughly like a system bus that I do not use  
 
 >sudo pacman -S powertop  
 
-再起動すると無効になるので  
+Since it becomes invalid when restarting  
+Analyze with  
 
 >sudo powertop --calibrate  
-
-で解析して  
 
 sudo vim /etc/systemd/system/powertop.service  
 
@@ -505,19 +500,13 @@ sudo vim /etc/systemd/system/powertop.service
 
 ![PowerTop](https://raw.githubusercontent.com/masasam/image/image/powertop.png)
 
-このタブが全部 Good になっていれば成功
-
-アイドル時の消費電力が  
-18W → 10W になった  
-これで一日 16 時間アイドルで  
-月間の電気代が 140 円くらいだからよい  
-アイドル時以外の消費電力を考慮しても 200 円代ですむ  
+Succeed if all of this tab is Good  
 
 # Profile-Sync-Daemon
 
-chrome firefox のキャッシュとプロファイルを  
-メモリ上に置くようにして超高速化  
-ディスクに同期する頻度は下がるので SSD の消耗を防ぐ効果もある  
+Chrome firefox cache and profile It puts it on the memory and it is super high speed  
+As the frequency of synchronization to the disk decreases, it also has  
+the effect of preventing consumption of the SSD  
 
 >yaourt profile-sync-daemon  
 
@@ -534,18 +523,18 @@ vim ~/.config/psd/psd.conf
 
 >psd p  
 
-#### psd を自動起動するように
+#### To automatically start psd
 >systemctl --user enable psd.service  
 >reboot  
-動いているか確認する
+Check if it is moving
 
-再起動後
+After restart
 
 >systemctl --user status psd  
 
-# DNS キャッシュを有効にする
+# Enable DNS cache
 
-dnsmasq をインストール  
+Install dnsmasq  
 
 	sudo pacman -S dnsmasq
 
@@ -556,171 +545,129 @@ dnsmasq をインストール
 	#dns=default
 	dns=dnsmasq
 
-NetworkManager を再起動すると dnsmasq が自動で使えるように設定される  
+When restarting NetworkManager, dnsmasq is set to be automatically usable  
 
 	sudo systemctl restart NetworkManager
 
-drill で同じ DNS ルックアップを二回やって確認する  
+Do the same DNS lookup twice on drill and check  
 
 ![dnsmasq](https://raw.githubusercontent.com/masasam/image/image/dnsmasq.png)
 
-## 蓋を閉じてもサスペンドしないように
+## Do not suspend even if closing the lid
 
-起動 10 秒で emacs までたどりつくのでサスペンドなどしない  
+Since it gets up to emacs in 10 seconds of activation, it does not suspend  
 >/etc/systemd/logind.conf  
 
     #HandleLidSwitch=suspend
     HandleLidSwitch=ignore
 
-そして、logind サービスを再起動します:  
+Then restart the logind service  
 
     systemctl restart systemd-logind
 
 ## Activity
 
 ![activity](https://raw.githubusercontent.com/masasam/image/image/activity.png)
-アクティビティ > 設定 > 検索  
-全部 off にする  
-アプリの起動にしか使わないから  
+Activities> Settings> Search  
+Turn it all off  
 
-アクティビティ > 設定 > キーボード > ショートカット  
+Activities> Settings> Keyboard> Shortcut  
 
->システム→アクティビティ画面を表示する  を Alt+Space  
-
-Alt+space でランチャーっぽく使う
+>Display System - Activity screen [Alt + Space]
 
 >Ctrl-u  
 
-文字を打ち間違えたら Ctrl-u で全消し  
-
-Activity 画面では Ctrl-h で backspace できないのでつらいがこれでいける  
-Ctrl-h できないのは誰得？  
-まぁ Ctrl-u で凌げるからよし。実際のところアプリ呼び出すだけやし  
+If you make a mistake on the letters, erase all with Ctrl-u  
 
 # Firefox
-firefox sync を有効化  
 
 #### Gnome Shell Extention
 >Dash to Dock  
 >TopIcons Plus  
 
 #### stylish
-以下のテーマを利用
+Use the following themes  
 <https://userstyles.org/styles/23516/midnight-surfing-global-dark-style>  
 
-defaultfullzoomlevel を 125 ％に  
+Defaultfullzoomlevel to 125%  
 
 # Chrome
-デフォルトのサイズを 125 ％に  
+Change the default size to 125%  
 
 <https://chrome.google.com/webstore/detail/change-colors/jbmkekhehjedonbhoikhhkmlapalklgn>  
-change-colors で黒画面をベースにする。  
-黒画面が都合の悪いドメインは指定すれば普通の画面になる  
-chrome の google 検索のデフォルトは vi キーバインドだが気にしない(vim も使うし)  
-
->jk で移動して  
->enter で新規 tab に開き  
->Ctrl+W tab を消す  
->Ctrl+R 再読み込み  
->Ctrl+tab タブ移動  
->Ctrl+K 検索  
->Ctrl+f I-search
->Ctrl+g I-search 中に押すと次の候補へ
->Ctrl+shift+g I-search 中に押すと前の候補へ
-
-許容範囲なのでデフォルトで使う  
+Based on black screen with change-colors.  
 
 # Mozc
-ibus-mozc（gnome のデフォルトは ibus)  
-地域と言語で入力ソースを mozc だけにする。  
+ibus-mozc  
+Make input sources mozc only for region and language.  
 
-US キーボードなので日本語変換は control+space は  
-emacs とかぶるので shift+Space で mozc を利用する  
+Because it is a US keyboard Japanese conversion is control + space  
+Since I am wearing emacs, I use mozc with shift + Space  
 
-キー設定はことえりをベースに ← emacs キーバインドに一番近い  
+Key setting is based on Kotoeri ← closest to emacs key binding  
 
->「変換前入力中」「Shift+Space」「IME を無効化」  
->「変換中」「Shift+Space」「IME を無効化」  
->「直接入力」「Shift+Space」「IME を有効化」  
->「入力文字なし」「Shift+Space」「IME を無効化」  
->他の Shift-space 絡みのショートカットは削除しておく。  
+>「Input before conversion」「Shift+Space」「Disable IME」  
+>「Converting」「Shift+Space」「Disable IME」  
+>「Direct input」「Shift+Space」「Enable IME」  
+>「No input character」「Shift+Space」「Disable IME」  
+>Delete other Shift-space entangled shortcuts.  
 
-ターミナルで
+At the terminal  
 
     ibus-setup
 
-でフォントなど設定する。  
-全般タブで  
+Set fonts and so on.  
+On the General tab  
 >カスタムフォントを選んで fontsize 14  
 >次のインプットメソッド super-space  
 >インプットメソッドタブを mozc だけにする  
-これで reboot  
+reboot  
 
-#### mozc 用辞書インストール
+#### Install dictionary for mozc
 
 <http://mediadesign.jp/article-4218/>  
-住所とかキーボードで打ちたくないから  
-郵便番号を入れると住所がでるようにしておく  
+I do not want to hit it with an address or keyboard Make sure to  
+include your postal code when you enter the postal code  
 
-Zipcode_J_Mzc  
-　┣　 Readme_J.txt  
-　┣　 zipcode_j_3_4.txt  
-　┗　 zipcode_j_7.txt  
-辞書ファイルはハイフン有無により２種類。  
-・ zipcode_j_3_4.txt  
-　郵便番号がハイフンでつながれた１２３-４５６７の形式で入力し変換する辞書  
-・ zipcode_j_7.txt  
-　郵便番号がハイフンなしの７桁の数字１２３４５６７の形式で入力し変換する辞書  
-Mozc 辞書ツールを起動しメニューの［管理］＞［新規辞書にインポート］を選択。  
-
-mozc の設定が完成したら  
+Once mozc is set up  
 
     ln -sfn ~/Dropbox/mozc/.mozc ~/.mozc
 
-で mozc の設定は Dropbox に投げておく  
-これでもう二度と設定しなくてもよくなるだろう  
+And set the mozc setting to dropbox  
+With this it will not have to be set again  
 
 # Sylpheed
 
-sylpheed 初回起動時に  
-Mail フォルダを質問されるので  
+Sylpheed on initial startup I will be asked for the Mail folder  
 
 > ~/Dropbox/sylpheed/Mail  
 
-初回起動時以外 Mail フォルダを変更する場合は
+When changing the Mail folder except when it is started for the first time  
+Specify the Mail folder with.  
 > vim ~/.sylpheed-2.0/folderlist.xml  
 
     <folder type="mh" name="メール箱" path="/home/masa/Dropbox/sylpheed/Mail">
 
-で Mail フォルダを指定する。  
-1 メール 1 ファイルのファイル形式なので  
-Dropbox でメールをすぐ同期すれば  
-データロストの心配がない。  
+Because it is a file format of 1 mail 1 file If you synchronize mail  
+immediately with Dropbox There is no worry of data lost.  
 
-もしあっても最新のメールが一通だけだろう。  
-普通サーバーに７日くらいメールはとっておくから  
-メールデータロストは心配しなくてもよいことになる。  
+#### Sylpheed configuration file
 
-#### sylpheed の設定ファイル
-
-ひとしきり設定が終了したら  
-dropbox に丸投げして二度と設定作業とかかわらないようにしよう。  
+Once the setting is finished Let's cast it to the dropbox and try not to do it again.  
 
     ln -sfn ~/Dropbox/sylpheed/.sylpheed-2.0 ~/.sylpheed-2.0
 
-最小化した時にトレイアイコンに格納する  
-に設定しておくと  
+Store it in the tray icon when minimized If you set it  
 Alt - Tab  
-で sylpheed がでてこないのでよい  
-コード書いてる時はメールなど見たくないものだ。  
+It's okay if sylpheed does not come out  
 
-### font の設定
+### Setting font
 
-gnome-tweak-tool で以下を設定  
+Set the following with gnome-tweak-tool  
 
-フォント  
+Font  
 
-- ウインドウタイトル  Cantarell 11
-- インターフェース   Noto Sans CJK JP Regular 11
-- ドキュメント   Sans Regular 11
-- 等幅    Monospace Regular 11
+- Window title  Cantarell 11
+- interface   Noto Sans CJK JP Regular 11
+- Document   Sans Regular 11
+- Equal width    Monospace Regular 11
