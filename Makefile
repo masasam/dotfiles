@@ -49,7 +49,7 @@ install: ## install development environment powerd by arch linux
 	zsh-completions gnome-tweak-tool xsel emacs curl evince unrar seahorse vlc \
 	archlinux-wallpaper inkscape file-roller xclip atool trash-cli debootstrap \
 	the_silver_searcher powertop cifs-utils gvfs gvfs-smb libreoffice-fresh-ja \
-	gnome-keyring cups-pdf redshift eog mcomix openssh firefox firefox-i18n-ja \
+	gnome-keyring cups-pdf eog mcomix openssh firefox firefox-i18n-ja fzf gimp \
 	otf-ipafont pkgfile baobab dconf-editor rsync elixir nodejs phantomjs whois \
 	nmap poppler-data rtmpdump ffmpeg swftools fish sbcl docker aspell aspell-en \
 	httperf gdb ripgrep hub wmctrl pwgen linux-docs ansible htop mariadb-clients \
@@ -58,7 +58,7 @@ install: ## install development environment powerd by arch linux
 	python-neovim python2-neovim noto-fonts-cjk arc-gtk-theme networkmanager npm \
 	zsh-syntax-highlighting rust cargo python-pip shellcheck python-pyflakes php \
 	python-jedi autopep8 python-virtualenv flake8 llvm llvm-libs lldb typescript \
-	python-pylint dnsmasq cscope speedtest-cli lsof postgresql-libs fzf gimp tig
+	python-pylint dnsmasq cscope speedtest-cli lsof postgresql-libs tig
 	mkdir -p ${HOME}/{bin,src}
 	yaourt google-chrome
 	yaourt peco

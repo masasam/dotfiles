@@ -314,7 +314,6 @@ Install what enters with pacman
     sudo pacman -S gvfs gvfs-smb
     sudo pacman -S seahorse gnome-keyring
     sudo pacman -S cups-pdf
-    sudo pacman -S redshift
     sudo pacman -S eog
     sudo pacman -S mcomix
     sudo pacman -S libreoffice-fresh-ja
