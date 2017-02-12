@@ -198,7 +198,7 @@ As reconnected with dhcp after reboot
 
 Pull out the USB memory just before the BIOS starts up  
 
-#### root で login してドライバや Xorg Gnome wifi などを整える
+#### Login as root to prepare drivers and Xorg Gnome wifi
 
 As bash complements work  
 
