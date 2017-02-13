@@ -472,5 +472,10 @@ function google() {
 }
 
 
+function ipsort() {
+    cat $1 | sort -n -t'.' -k1,1 -k2,2 -k3,3 -k4,4
+}
+
+
 # zsh-syntax-highlighting(pacman -S zsh-syntax-highlighting)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
