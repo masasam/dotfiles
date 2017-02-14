@@ -368,12 +368,6 @@ zle -N peco-godoc
 bindkey '^gd' peco-godoc
 
 
-function gitignore() {
-    local target=$(curl -s https://www.gitignore.io/api/list | sed "s/,/\n/g" | peco)
-    curl -s https://www.gitignore.io/api/$target
-}
-
-
 # jump git root directory
 function gitroot() {
     cd ./$(git rev-parse --show-cdup)
