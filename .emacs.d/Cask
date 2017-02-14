@@ -105,6 +105,7 @@
 (depends-on "anything-tramp")
 (depends-on "elisp-slime-nav")
 (depends-on "helm-gitignore")
+(depends-on "github-browse-file")
 
 ;; theme
 (depends-on "material-theme")
