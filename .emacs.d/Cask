@@ -103,6 +103,7 @@
 (depends-on "flycheck-package")
 (depends-on "helm-tramp")
 (depends-on "anything-tramp")
+(depends-on "elisp-slime-nav")
 
 ;; theme
 (depends-on "material-theme")
