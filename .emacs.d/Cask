@@ -108,6 +108,7 @@
 (depends-on "github-browse-file")
 (depends-on "macrostep")
 (depends-on "aggressive-indent")
+(depends-on "helm-chrome")
 
 ;; theme
 (depends-on "material-theme")
