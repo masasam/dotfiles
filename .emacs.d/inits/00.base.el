@@ -115,7 +115,7 @@
 ;; Brace the corresponding parentheses
 (show-paren-mode 1)
 (setq show-paren-delay 0)
-(setq show-paren-style 'mixed)
+(setq show-paren-style 'parenthesis)
 
 
 ;; Dired files deleted by trash
