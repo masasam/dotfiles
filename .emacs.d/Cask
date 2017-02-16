@@ -109,6 +109,7 @@
 (depends-on "macrostep")
 (depends-on "aggressive-indent")
 (depends-on "helm-chrome")
+(depends-on "letcheck")
 
 ;; theme
 (depends-on "material-theme")
