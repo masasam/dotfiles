@@ -107,6 +107,7 @@
 (depends-on "helm-gitignore")
 (depends-on "github-browse-file")
 (depends-on "macrostep")
+(depends-on "aggressive-indent")
 
 ;; theme
 (depends-on "material-theme")
