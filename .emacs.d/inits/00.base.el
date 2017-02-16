@@ -15,11 +15,8 @@
 (add-to-list 'default-frame-alist '(font . "ricty-15.5"))
 
 
-;; set keybind
-(require 'bind-key)
-
-
 ;; It does not end with C-x C-c
+(require 'bind-key)
 (bind-key "C-x C-c" 'helm-M-x)
 
 ;; Perform M % with C-c r
@@ -42,8 +39,10 @@
 
 ;; Do not make a backup file like *.~
 (setq make-backup-files nil)
-;; Do not make a backup file like .#*
+;; Do not use auto save
 (setq auto-save-default nil)
+;; Do not create lock file
+ (setq create-lockfiles nil)
 
 
 ;; C-h is backspace
