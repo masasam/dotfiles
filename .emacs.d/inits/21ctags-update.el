@@ -1,7 +1,5 @@
 (setq ctags-update-command "/usr/bin/ctags")
-;; Activate in the language you use
-(add-hook 'c-mode-common-hook  'turn-on-ctags-auto-update-mode)
-(add-hook 'perl-mode-hook  'turn-on-ctags-auto-update-mode)
-(add-hook 'python-mode-hook  'turn-on-ctags-auto-update-mode)
-(add-hook 'ruby-mode-hook  'turn-on-ctags-auto-update-mode)
-(add-hook 'sh-mode-common-hook  'turn-on-ctags-auto-update-mode)
+;; if you want to update (create) TAGS manually
+(autoload 'ctags-update "ctags-update" "update TAGS using ctags" t)
+(require 'bind-key)
+(bind-key "C-c E" 'ctags-update)
