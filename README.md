@@ -540,8 +540,6 @@ Install dnsmasq
 /etc/NetworkManager/NetworkManager.conf  
 
 	[main]
-	plugins=keyfile
-	#dns=default
 	dns=dnsmasq
 
 When restarting NetworkManager, dnsmasq is set to be automatically usable  
