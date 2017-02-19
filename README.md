@@ -81,7 +81,7 @@ Why Arch linux ?
   In principle the package of Arch is a policy to build from the source of vanilla  
   not to patch     It is good because Arch unique problems are unlikely  
 
-- It is light !! After installing Emacs Terminal Chrome and launching an image htop  
+- It is light !! After installing Emacs Terminal chromium and launching an image htop  
 
 ![top](https://raw.githubusercontent.com/masasam/image/image/top.png)
 
@@ -502,7 +502,7 @@ Succeed if all of this tab is Good
 
 # Profile-Sync-Daemon
 
-Chrome firefox cache and profile It puts it on the memory and it is super high speed  
+chromium firefox cache and profile It puts it on the memory and it is super high speed  
 As the frequency of synchronization to the disk decreases, it also has  
 the effect of preventing consumption of the SSD  
 
@@ -517,7 +517,7 @@ visudo
 vim ~/.config/psd/psd.conf  
 
     USE_OVERLAYFS="yes"
-    BROWSERS="google-chrome firefox"
+    BROWSERS="chromium firefox"
 
 >psd p  
 
@@ -587,7 +587,7 @@ Use the following themes
 
 Defaultfullzoomlevel to 125%  
 
-# Chrome
+# Chromium
 Change the default size to 125%  
 
 <https://chrome.google.com/webstore/detail/change-colors/jbmkekhehjedonbhoikhhkmlapalklgn>  
