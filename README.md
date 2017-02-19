@@ -339,7 +339,6 @@ Install what enters with pacman
 
 Install what you put in yaourt  
 
-	yaourt google-chrome
 	yaourt peco
 	yaourt ttf-ricty
 	yaourt profile-sync-daemon

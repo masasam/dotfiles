@@ -63,7 +63,6 @@ install: ## install development environment powerd by arch linux
 	python-pylint dnsmasq cscope speedtest-cli lsof postgresql-libs tig tcpdump \
 	chromium
 	mkdir -p ${HOME}/{bin,src}
-	yaourt google-chrome
 	yaourt peco
 	yaourt ttf-ricty
 	yaourt profile-sync-daemon
