@@ -3,5 +3,5 @@ https://userstyles.org/styles/92693/dark-hacker-news-solarized
 https://userstyles.org/styles/37035/github-dark
 https://userstyles.org/styles/129173/google-calendar-inverted
 https://userstyles.org/styles/121364/hatena-blackmark
-https://userstyles.org/styles/120980/the-dark-and-flat-feedly
+https://userstyles.org/styles/89622/dark-feedly-hauschild-s
 https://userstyles.org/styles/135366/twitter-dark-mode-2017
