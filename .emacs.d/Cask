@@ -114,6 +114,7 @@
 (depends-on "realgud")
 (depends-on "flyspell-correct")
 (depends-on "helm-pydoc")
+(depends-on "csv-mode")
 
 ;; theme
 (depends-on "material-theme")
