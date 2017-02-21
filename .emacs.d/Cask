@@ -112,6 +112,7 @@
 (depends-on "letcheck")
 (depends-on "helm-go-package")
 (depends-on "realgud")
+(depends-on "flyspell-correct")
 
 ;; theme
 (depends-on "material-theme")
