@@ -110,6 +110,7 @@
 (depends-on "aggressive-indent")
 (depends-on "helm-chrome")
 (depends-on "letcheck")
+(depends-on "helm-go-package")
 
 ;; theme
 (depends-on "material-theme")
