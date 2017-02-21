@@ -113,6 +113,7 @@
 (depends-on "helm-go-package")
 (depends-on "realgud")
 (depends-on "flyspell-correct")
+(depends-on "helm-pydoc")
 
 ;; theme
 (depends-on "material-theme")
