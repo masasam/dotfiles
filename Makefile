@@ -58,10 +58,9 @@ install: ## install development environment powerd by arch linux
 	pygmentize arch-install-scripts lilyterm termite neovim youtube-dl pandoc jq \
 	texlive-langjapanese eslint texlive-latexextra ctags python-pygments hdparm \
 	python-neovim python2-neovim noto-fonts-cjk arc-gtk-theme networkmanager npm \
-	zsh-syntax-highlighting rust cargo python-pip shellcheck python-pyflakes php \
-	python-jedi autopep8 python-virtualenv flake8 llvm llvm-libs lldb typescript \
-	python-pylint dnsmasq cscope speedtest-cli lsof postgresql-libs tig tcpdump \
-	chromium
+	zsh-syntax-highlighting rust cargo shellcheck python-pyflakes php typescript \
+	python-jedi autopep8 python-virtualenv flake8 llvm llvm-libs lldb chromium \
+	python-pylint dnsmasq cscope speedtest-cli lsof postgresql-libs tig tcpdump
 	mkdir -p ${HOME}/{bin,src}
 	yaourt peco
 	yaourt ttf-ricty
