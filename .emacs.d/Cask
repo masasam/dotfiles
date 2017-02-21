@@ -111,6 +111,7 @@
 (depends-on "helm-chrome")
 (depends-on "letcheck")
 (depends-on "helm-go-package")
+(depends-on "realgud")
 
 ;; theme
 (depends-on "material-theme")
