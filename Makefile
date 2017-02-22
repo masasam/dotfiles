@@ -47,7 +47,7 @@ install: ## install development environment powerd by arch linux
 	echo "alias tmuxstart='tmux new-session -A -s main'" >> ${HOME}/.bashrc
 	cat ${HOME}/.bashrc | grep ignoredups || \
 	echo "export HISTCONTROL=erasedups" >> ${HOME}/.bashrc
-	sudo pacman -S go zsh git vim dropbox nautilus-dropbox tmux keychain sylpheed \
+	sudo pacman -S go zsh git vim dropbox nautilus-dropbox tmux keychain bashdb \
 	zsh-completions gnome-tweak-tool xsel emacs curl evince unrar seahorse vlc \
 	archlinux-wallpaper inkscape file-roller xclip atool trash-cli debootstrap \
 	the_silver_searcher powertop cifs-utils gvfs gvfs-smb libreoffice-fresh-ja \
@@ -55,13 +55,12 @@ install: ## install development environment powerd by arch linux
 	otf-ipafont pkgfile baobab dconf-editor rsync elixir nodejs phantomjs whois \
 	nmap poppler-data rtmpdump ffmpeg swftools fish sbcl docker aspell aspell-en \
 	httperf gdb ripgrep hub wmctrl pwgen linux-docs ansible htop mariadb-clients \
-	pygmentize arch-install-scripts lilyterm termite neovim youtube-dl pandoc jq \
+	pygmentize arch-install-scripts lilyterm termite neovim pandoc jq sylpheed \
 	texlive-langjapanese eslint texlive-latexextra ctags python-pygments hdparm \
 	python-neovim python2-neovim noto-fonts-cjk arc-gtk-theme networkmanager npm \
 	zsh-syntax-highlighting rust cargo shellcheck python-pyflakes php typescript \
 	python-jedi autopep8 python-virtualenv flake8 llvm llvm-libs lldb chromium \
-	python-pylint dnsmasq cscope speedtest-cli lsof postgresql-libs tig tcpdump \
-	bashdb
+	python-pylint dnsmasq cscope speedtest-cli lsof postgresql-libs tig tcpdump
 	mkdir -p ${HOME}/{bin,src}
 	yaourt peco
 	yaourt ttf-ricty

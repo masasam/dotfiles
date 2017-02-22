@@ -325,7 +325,7 @@ Install what enters with pacman
 	sudo pacman -S linux-docs ansible pwgen pygmentize
 	sudo pacman -S arch-install-scripts
 	sudo pacman -S htop
-	sudo pacman -S neovim youtube-dl
+	sudo pacman -S neovim
 	sudo pacman -S pandoc texlive-langjapanese texlive-latexextra ctags python-pygments
 	sudo pacman -S python-neovim python2-neovim
 	sudo pacman -S rust cargo
