@@ -16,7 +16,6 @@
 (depends-on "projectile")
 (depends-on "s")
 (depends-on "smartparens")
-(depends-on "use-package")
 (depends-on "web-mode")
 (depends-on "yasnippet")
 (depends-on "ag")
