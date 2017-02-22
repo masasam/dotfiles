@@ -68,7 +68,6 @@
 (depends-on "ansible-doc")
 (depends-on "yaml-mode")
 (depends-on "helm-ghq")
-(depends-on "ctags-update")
 (depends-on "flycheck-title")
 (depends-on "ac-etags")
 (depends-on "elscreen")
