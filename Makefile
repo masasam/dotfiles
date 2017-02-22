@@ -116,11 +116,11 @@ recover: ## recovery from backup arch linux package at dropbox
 	export PATH="$PATH:$GOPATH/bin"
 	sudo pkgfile --update
 	git config --global ghq.root ~/src
-	ghq get -p nsf/gocode
-	ghq get -p rogpeppe/godef
+	go get -u github.com/nsf/gocode
+	go get -u github.com/rogpeppe/godef
 	go get -u golang.org/x/tools/cmd/goimports
 	go get -u golang.org/x/tools/cmd/godoc
-	ghq get -p josharian/impl
+	go get -u github.com/josharian/impl
 	ghq get -p motemen/ghq
 	ghq get -p jstemmer/gotags
 	ghq get -p phildawes/racer
