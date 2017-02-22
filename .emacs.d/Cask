@@ -2,7 +2,6 @@
 (source melpa)
 (source org)
 
-;; base
 (depends-on "bind-key")
 (depends-on "cask")
 (depends-on "dash")
@@ -15,7 +14,6 @@
 (depends-on "magit")
 (depends-on "pallet")
 (depends-on "popwin")
-(depends-on "prodigy")
 (depends-on "projectile")
 (depends-on "s")
 (depends-on "smartparens")
@@ -110,6 +108,4 @@
 (depends-on "flyspell-correct")
 (depends-on "helm-pydoc")
 (depends-on "csv-mode")
-
-;; theme
 (depends-on "material-theme")
