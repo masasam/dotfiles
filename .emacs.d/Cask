@@ -69,7 +69,6 @@
 (depends-on "yaml-mode")
 (depends-on "helm-ghq")
 (depends-on "flycheck-title")
-(depends-on "ac-etags")
 (depends-on "elscreen")
 (depends-on "pcre2el")
 (depends-on "dashboard")
