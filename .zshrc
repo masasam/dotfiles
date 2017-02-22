@@ -186,6 +186,8 @@ export XDG_CONFIG_HOME=$HOME/.config
 export PATH="$HOME/.cargo/bin:$PATH"
 export RUST_SRC_PATH=~/Dropbox/emacs/rustc-1.14.0/src
 export PATH=$PATH:/usr/bin/vendor_perl
+export GTAGSCONF=/usr/share/gtags/gtags.conf
+export GTAGSLABEL=pygments
 
 
 # Invoke the ``dired'' of current working directory in Emacs buffer.
