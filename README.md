@@ -78,8 +78,8 @@ Why Arch linux ?
 
 - I like customization but I think that it is better to do it with salt plum  
   which does not come off the ecosystem  
-  In principle the package of Arch is a policy to build from the source of vanilla  
-  not to patch     It is good because Arch unique problems are unlikely  
+  In principle the package of Arch is a policy to build from the source of vanilla (not to patch)  
+  It is good because Arch unique problems are unlikely  
 
 - It is light !! After installing Emacs Terminal chromium and launching an image htop  
 
