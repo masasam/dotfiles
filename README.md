@@ -6,8 +6,8 @@
 ## Let's build environment with Makefile
 
 This dotfiles is for Archlinux  
-Because there is no such as a distribution without make If you make  
-Makefile you can correspond to any distribution  
+Because there is no such as a distribution without make  
+If you make Makefile you can correspond to any distribution  
 Let's make a Makefile immediately  
 
 ### With a Makefile, such a good thing
