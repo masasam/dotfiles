@@ -22,6 +22,8 @@
 ;; Perform M % with C-c r
 (bind-key "C-c r" 'query-replace)
 
+;; flyspell-buffer
+(bind-key "C-c C-f" 'flyspell-buffer)
 
 ;; defalias list
 (defalias 'exit 'save-buffers-kill-emacs)
