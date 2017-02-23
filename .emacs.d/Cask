@@ -18,7 +18,6 @@
 (depends-on "smartparens")
 (depends-on "web-mode")
 (depends-on "yasnippet")
-(depends-on "ag")
 (depends-on "smartrep")
 (depends-on "git-gutter")
 (depends-on "recentf-ext")
