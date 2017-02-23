@@ -20,7 +20,7 @@ Copyright © 1985–1987, 1993–2016 Free Software Foundation, Inc.
      developing GNU and promoting software freedom.”
 INFO-DIR-SECTION Emacs
 START-INFO-DIR-ENTRY
-* Emacs: (emacs).            拡張可能なセルフドキュメント形式のテキストエディター。
+* Emacs: (emacs).
 END-INFO-DIR-ENTRY
 
 
