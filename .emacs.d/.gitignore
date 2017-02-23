@@ -25,6 +25,5 @@
 /var/
 /history
 /projectile.cache
-/.my-private.el
 /.python-environments/
 /irony/
