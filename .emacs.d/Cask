@@ -106,3 +106,4 @@
 (depends-on "helm-pydoc")
 (depends-on "csv-mode")
 (depends-on "material-theme")
+(depends-on "go-projectile")

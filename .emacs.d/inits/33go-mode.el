@@ -1,4 +1,5 @@
 ;; go-mode
+(require 'go-projectile)
 (require 'go-eldoc)
 (require 'go-autocomplete)
 (require 'auto-complete-config)
