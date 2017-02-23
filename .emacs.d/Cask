@@ -47,7 +47,6 @@
 (depends-on "slime")
 (depends-on "which-key")
 (depends-on "org-plus-contrib")
-(depends-on "migemo")
 (depends-on "volatile-highlights")
 (depends-on "point-undo")
 (depends-on "japanese-holidays")
