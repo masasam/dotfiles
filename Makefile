@@ -35,9 +35,8 @@ init: ## deploy this dotfiles
 	test -L ${HOME}/.mozc || rm -rf ${HOME}/.mozc
 	ln -vsfn ${HOME}/Dropbox/mozc/.mozc   ${HOME}/.mozc
 	chmod 600   ${HOME}/.ssh/id_rsa
-
-update: ## update cask depend on melpa
-	cd ${HOME}/.emacs.d/;   cask upgrade;   cask update
+	export PATH="$PATH:$HOME/.cask/bin"
+	cd ${HOME}/.emacs.d/;   cask upgrade;   cask install
 
 install: ## install development environment powerd by arch linux
 	export GOPATH=${HOME}
