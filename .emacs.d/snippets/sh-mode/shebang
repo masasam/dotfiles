@@ -1,0 +1,10 @@
+# name : #!/bin/sh # Shebang
+# key  : shebang
+# --
+#!/bin/sh
+
+set -e
+set -u
+set -x
+
+$0
