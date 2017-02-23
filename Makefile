@@ -35,7 +35,6 @@ init: ## deploy this dotfiles
 	test -L ${HOME}/.mozc || rm -rf ${HOME}/.mozc
 	ln -vsfn ${HOME}/Dropbox/mozc/.mozc   ${HOME}/.mozc
 	chmod 600   ${HOME}/.ssh/id_rsa
-	cd ${HOME}/.emacs.d/;   cask upgrade;   cask install
 
 update: ## update cask depend on melpa
 	cd ${HOME}/.emacs.d/;   cask upgrade;   cask update
