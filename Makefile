@@ -30,6 +30,8 @@ init: ## deploy this dotfiles
 	ln -vsfn ${PWD}/.emacs.d   ${HOME}/.emacs.d
 	test -L ${HOME}/.ssh || rm -rf ${HOME}/.ssh
 	ln -vsfn ${HOME}/Dropbox/ssh   ${HOME}/.ssh
+	test -L ${HOME}/.local/share/keyrings || rm -rf ${HOME}/.local/share/keyrings
+	ln -vsfn ${HOME}/Dropbox/passwd/keyrings   ${HOME}/.local/share/keyrings
 	test -L ${HOME}/.sylpheed-2.0 || rm -rf ${HOME}/.sylpheed-2.0
 	ln -vsfn ${HOME}/Dropbox/sylpheed/.sylpheed-2.0   ${HOME}/.sylpheed-2.0
 	test -L ${HOME}/.mozc || rm -rf ${HOME}/.mozc
