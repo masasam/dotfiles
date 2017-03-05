@@ -56,13 +56,13 @@ install: ## install development environment powerd by arch linux
 	gnome-keyring cups-pdf eog mcomix openssh firefox firefox-i18n-ja fzf gimp \
 	otf-ipafont pkgfile baobab dconf-editor rsync elixir nodejs phantomjs whois \
 	nmap poppler-data rtmpdump ffmpeg swftools fish sbcl docker aspell aspell-en \
-	httperf gdb ripgrep hub wmctrl pwgen linux-docs ansible htop mariadb-clients \
+	gdb ripgrep hub wmctrl pwgen linux-docs ansible htop mariadb-clients tcpdump \
 	pygmentize arch-install-scripts lilyterm termite neovim pandoc jq sylpheed \
 	texlive-langjapanese eslint texlive-latexextra ctags python-pygments hdparm \
 	python-neovim python2-neovim noto-fonts-cjk arc-gtk-theme networkmanager npm \
 	zsh-syntax-highlighting rust cargo shellcheck python-pyflakes php typescript \
 	python-jedi autopep8 python-virtualenv flake8 llvm llvm-libs lldb chromium \
-	python-pylint dnsmasq cscope speedtest-cli lsof postgresql-libs tig tcpdump
+	python-pylint dnsmasq cscope speedtest-cli lsof postgresql-libs tig
 	mkdir -p ${HOME}/{bin,src}
 	yaourt peco
 	yaourt ttf-ricty
