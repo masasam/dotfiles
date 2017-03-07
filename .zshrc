@@ -188,6 +188,11 @@ export GTAGSCONF=/usr/share/gtags/gtags.conf
 export GTAGSLABEL=pygments
 
 
+function github-upstream() {
+    git remote add upstream git://github.com/$1
+}
+
+
 # Invoke the ``dired'' of current working directory in Emacs buffer.
 function dired() {
     emacsclient -e "(dired \"${1:-$PWD}\")" & wmctrl -a emacs
