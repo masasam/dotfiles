@@ -188,6 +188,11 @@ export GTAGSCONF=/usr/share/gtags/gtags.conf
 export GTAGSLABEL=pygments
 
 
+function peco-ag() {
+    ag "$@" .|peco --exec 'awk -F : '"'"'{print "+" $2 " " $1}'"'"'|xargs less'
+}
+
+
 function github-upstream() {
     git remote add upstream git://github.com/$1
 }
