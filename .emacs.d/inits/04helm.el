@@ -62,8 +62,8 @@
 (bind-key "M-g ." 'helm-ag)
 (bind-key "M-g ," 'helm-ag-pop-stack)
 (bind-key "C-M-s" 'helm-ag-this-file)
-;; Use ripgrep with helm-ag
-;(setq helm-ag-base-command "rg --vimgrep --no-heading")
+(setq helm-ag-base-command "ag --nocolor --nogroup --ignore-case")
+(helm-ag-command-option "--all-text")
 ;; Make the current symbol the default query
 (setq helm-ag-insert-at-point 'symbol)
 
