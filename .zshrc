@@ -200,11 +200,6 @@ export GTAGSCONF=/usr/share/gtags/gtags.conf
 export GTAGSLABEL=pygments
 
 
-function peco-ag() {
-    ag "$@" .|peco --exec 'awk -F : '"'"'{print "+" $2 " " $1}'"'"'|xargs less'
-}
-
-
 function github-upstream() {
     git remote add upstream git://github.com/$1
 }
@@ -234,6 +229,14 @@ function cde () {
     echo "chdir to $EMACS_CWD"
     cd "$EMACS_CWD"
 }
+
+
+function peco-ag() {
+    ag "$@" .|peco --exec 'awk -F : '"'"'{print "+" $2 " " $1}'"'"'|xargs less'
+}
+zle -N peco-ag
+bindkey '^x^g' peco-ag
+bindkey '^xg' peco-ag
 
 
 # replace history
@@ -315,8 +318,8 @@ function peco-ghq-remote() {
     hub browse $(ghq list | peco | cut -d "/" -f 2,3)
 }
 zle -N peco-ghq-remote
-bindkey '^xg' peco-ghq-remote
-bindkey '^x^g' peco-ghq-remote
+bindkey '^xL' peco-ghq-remote
+bindkey '^x^L' peco-ghq-remote
 
 
 function peco-git-branch() {
