@@ -16,6 +16,18 @@ HISTSIZE=1000000
 SAVEHIST=1000000
 LISTMAX=10000 # ask you if you have over 10000 history
 
+zshaddhistory() {
+    local line=${1%%$'\n'}
+    local cmd=${line%% *}
+
+    # Only those that satisfy all of the following conditions are added to the history
+    [[ ${#line} -ge 5
+        && ${cmd} != (l|l[sal])
+        && ${cmd} != (c|cd)
+        && ${cmd} != (m|man)
+    ]]
+}
+
 unsetopt extended_history
 setopt append_history       # add history
 setopt inc_append_history   # add history incremental
