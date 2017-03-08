@@ -232,7 +232,7 @@ function cde () {
 
 
 function peco-ag() {
-    ag "$@" . | peco --exec 'awk -F : '"'"'{print "+" $2 " " $1}'"'"' | xargs less'
+    exec ag "$@" . | peco --exec 'awk -F : '"'"'{print "+" $2 " " $1}'"'"' | xargs less'
 }
 zle -N peco-ag
 bindkey '^x^g' peco-ag
