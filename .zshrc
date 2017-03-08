@@ -198,6 +198,7 @@ export RUST_SRC_PATH=~/Dropbox/emacs/rustc-1.14.0/src
 export PATH=$PATH:/usr/bin/vendor_perl
 export GTAGSCONF=/usr/share/gtags/gtags.conf
 export GTAGSLABEL=pygments
+export LESS='-g -i -M -R -S -W -z-4 -x4'
 
 
 function github-upstream() {
