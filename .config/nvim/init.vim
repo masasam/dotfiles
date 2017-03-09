@@ -18,7 +18,6 @@ call dein#add('Shougo/neosnippet.vim')
 call dein#add('Shougo/neosnippet-snippets')
 call dein#add('Shougo/deoplete.nvim')
 call dein#add('Shougo/denite.nvim')
-call dein#add('soramugi/auto-ctags.vim')
 call dein#add('airblade/vim-gitgutter')
 call dein#add('itchyny/lightline.vim')
 call dein#add('tpope/vim-fugitive')
@@ -254,12 +253,6 @@ map <silent> [Tag]n :tabnext<CR>
 " tn Next tab
 map <silent> [Tag]p :tabprevious<CR>
 " tp Previous tab
-
-
-"-- auto-ctags ---------------------------------------------------------
-let g:auto_ctags = 1
-" Tags List when there are two or more when jumping
-nnoremap <C-]> g<C-]>
 
 
 " -- vim-gitgutter -----------------------------------------------------
