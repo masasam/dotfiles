@@ -63,8 +63,8 @@
 (bind-key "C-x C-d" 'dired)
 
 ;; switch-to-buffer
-(bind-key "M-o" 'switch-to-prev-buffer)
-(bind-key "M-O" 'switch-to-next-buffer)
+(bind-key "M-o" 'iflipb-next-buffer)
+(bind-key "M-O" 'iflipb-previous-buffer)
 
 ;; minibuffer-local-completion-mpa
 (bind-key "C-w" 'backward-kill-word minibuffer-local-completion-map)
