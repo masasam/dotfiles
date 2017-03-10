@@ -65,7 +65,7 @@ You can recover in 30 minutes.
    Mail data used for gmail in dropbox  
    As mail arrives, it will be synchronized to dropbox so you do not have to think about backup  
 
-Make it 2-step verification  
+Do not forget to make dropbox 2 step verification  
 
 # ArchLinux install
 
