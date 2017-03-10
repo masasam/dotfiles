@@ -25,7 +25,7 @@ You can deploy dotfiles with.
 
     make init
 
-Keep Dropbox synchronized before making make init  
+Keep Dropbox synchronized before doing make init  
 
 ### With Makefile, you will be able to recover your usual environment in 30 minutes
 
