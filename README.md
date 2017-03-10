@@ -74,11 +74,10 @@ Why Arch linux ?
 - Unless your PC breaks, arch linux is a rolling release so you do not have to reinstall it.  
   Even if it gets broken, I made a Makefile so I can return in half an hour and it's unbeatable  
 
-- Server can be in CentOS, but if the development environment is not up to date it is hard  
+- Arch linux is good because it is difficult for my PC's development environment to be old  
 
-- I like customization but I think that it is better to do it with salt plum  
-  which does not come off the ecosystem  
-  In principle the package of Arch is a policy to build from the source of vanilla (not to patch)  
+- I like customization but it is better the extent that does not come off the ecosystem  
+  In principle the package of Arch is a policy to build from the source of vanilla (Vanilla means that it does not apply its own patch for arch linux)  
   It is good because Arch unique problems are unlikely  
 
 - It is light !! After installing Emacs Terminal chromium and launching an image htop  
