@@ -71,7 +71,7 @@ Do not forget to make dropbox 2 step verification
 
 Why Arch linux ?  
 
-- As long as it does not break by rolling release, it does not have to be reinstalled  
+- Unless your PC breaks, arch linux is a rolling release so you do not have to reinstall it.  
   Even if it gets broken, I made a Makefile so I can return in half an hour and it's unbeatable  
 
 - Server can be in CentOS, but if the development environment is not up to date it is hard  
