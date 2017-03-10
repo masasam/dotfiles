@@ -62,7 +62,7 @@ install: ## install development environment powerd by arch linux
 	python-neovim python2-neovim noto-fonts-cjk arc-gtk-theme networkmanager npm \
 	zsh-syntax-highlighting rust cargo shellcheck python-pyflakes php typescript \
 	python-jedi autopep8 python-virtualenv flake8 llvm llvm-libs lldb chromium \
-	python-pylint dnsmasq cscope speedtest-cli lsof postgresql-libs tig
+	python-pylint dnsmasq cscope speedtest-cli lsof postgresql-libs tig pdfgrep
 	mkdir -p ${HOME}/{bin,src}
 	yaourt peco
 	yaourt ttf-ricty
