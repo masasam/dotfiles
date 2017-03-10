@@ -56,7 +56,7 @@ You can recover in 30 minutes.
 - What can not be placed on github  
    Public key in .ssh etc.
 
-- Because it expires a lot of update file, it is troublesome to synchronize with github  
+- Because it makes a lot of update file, it is troublesome to synchronize with github  
    .zsh_history  
    .mozc  
 
