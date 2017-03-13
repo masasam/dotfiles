@@ -137,3 +137,7 @@
 
 ;; Highlight the space at the end of the line
 (setq-default show-trailing-whitespace t)
+
+
+;; Do not change the position of the cursor on the screen as much as possible when scrolling pages
+(setq scroll-preserve-screen-position t)
