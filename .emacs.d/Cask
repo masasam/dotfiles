@@ -107,3 +107,4 @@
 (depends-on "material-theme")
 (depends-on "go-projectile")
 (depends-on "iflipb")
+(depends-on "git-timemachine")
