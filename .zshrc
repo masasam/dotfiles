@@ -22,9 +22,11 @@ zshaddhistory() {
 
     # Only those that satisfy all of the following conditions are added to the history
     [[ ${#line} -ge 5
-            && ${cmd} != (l|l[sal])
-            && ${cmd} != (c|cd)
-            && ${cmd} != (m|man)
+       && ${cmd} != ll
+       && ${cmd} != ls
+       && ${cmd} != la
+       && ${cmd} != cd
+       && ${cmd} != man
     ]]
 }
 
