@@ -334,7 +334,7 @@ Install what enters with pacman
 	sudo pacman -S python-pylint flake8
 	sudo pacman -S npm llvm llvm-libs lldb hdparm rxvt-unicode dnsmasq typescript php cscope
 	sudo pacman -S speedtest-cli cpanminus mariadb-clients postgresql-libs tig lsof fzf
-	sudo pacman -S debootstrap tcpdump chromium bashdb pdfgrep
+	sudo pacman -S debootstrap tcpdump chromium bashdb pdfgrep ack
 
 Install what you put in yaourt  
 
