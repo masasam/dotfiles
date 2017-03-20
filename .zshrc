@@ -242,6 +242,14 @@ bindkey '^x^g' peco-ag
 bindkey '^xg' peco-ag
 
 
+function peco-ack() {
+    exec ack "$@" . | peco --exec 'awk -F : '"'"'{print "+" $2 " " $1}'"'"' | xargs less '
+}
+zle -N peco-ack
+bindkey '^x^k' peco-ack
+bindkey '^xk' peco-ack
+
+
 # replace history
 function peco-select-history() {
     local tac
