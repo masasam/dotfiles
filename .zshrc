@@ -525,3 +525,5 @@ function ipsort() {
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # zsh-completions for google-cloud-sdk(yaourt google-cloud-sdk)
 source /opt/google-cloud-sdk/completion.zsh.inc
+# zsh-completions for aws(pacman -S aws-cli)
+source /usr/bin/aws_zsh_completer.sh
