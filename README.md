@@ -347,7 +347,6 @@ Install what you put in yaourt
 	yaourt ghq
 	yaourt casperjs
 	yaourt nkf
-	yaourt cmigemo-git
 	yaourt ibus-mozc
 	yaourt mozc
 	yaourt clipit

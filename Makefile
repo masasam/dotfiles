@@ -74,7 +74,6 @@ install: ## install development environment powerd by arch linux
 	yaourt ghq
 	yaourt casperjs
 	yaourt nkf
-	yaourt cmigemo-git
 	yaourt ibus-mozc
 	yaourt mozc
 	yaourt clipit
