@@ -78,7 +78,6 @@ install: ## install development environment powerd by arch linux
 	yaourt ibus-mozc
 	yaourt mozc
 	yaourt clipit
-	yaourt python-epc
 	yaourt debian-archive-keyring
 	sudo pkgfile --update
 	git config --global ghq.root ~/src

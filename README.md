@@ -351,7 +351,6 @@ Install what you put in yaourt
 	yaourt ibus-mozc
 	yaourt mozc
 	yaourt clipit
-	yaourt python-epc
 	yaourt debian-archive-keyring
 
 #### golang npm rust
