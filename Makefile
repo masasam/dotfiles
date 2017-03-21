@@ -76,6 +76,7 @@ install: ## install development environment powerd by arch linux
 	yaourt nkf
 	yaourt ibus-mozc
 	yaourt mozc
+	yaourt google-cloud-sdk
 	yaourt clipit
 	yaourt debian-archive-keyring
 	sudo pkgfile --update

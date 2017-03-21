@@ -349,6 +349,7 @@ Install what you put in yaourt
 	yaourt nkf
 	yaourt ibus-mozc
 	yaourt mozc
+	yaourt google-cloud-sdk
 	yaourt clipit
 	yaourt debian-archive-keyring
 
