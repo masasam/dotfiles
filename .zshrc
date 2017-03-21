@@ -523,3 +523,5 @@ function ipsort() {
 
 # zsh-syntax-highlighting(pacman -S zsh-syntax-highlighting)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# zsh-completions for google-cloud-sdk(yaourt google-cloud-sdk)
+source /opt/google-cloud-sdk/completion.zsh.inc
