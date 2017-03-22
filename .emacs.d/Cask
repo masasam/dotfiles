@@ -109,3 +109,4 @@
 (depends-on "iflipb")
 (depends-on "git-timemachine")
 (depends-on "docker-tramp")
+(depends-on "docker")
