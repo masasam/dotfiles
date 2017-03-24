@@ -30,10 +30,9 @@
 (defalias 'exit-tramp 'tramp-cleanup-all-buffers)
 (defalias 'my-keybind 'describe-personal-keybindings)
 (defalias 'all-keybind 'helm-descbinds)
-(defalias 'qrr 'query-replace-regexp)
 
 
-; server start for emacs-client
+;; server start for emacs-client
 (require 'server)
 (unless (server-running-p)
   (server-start))
@@ -141,3 +140,12 @@
 
 ;; Do not change the position of the cursor on the screen as much as possible when scrolling pages
 (setq scroll-preserve-screen-position t)
+
+
+;; Folding function
+(bind-key "C-c TAB" 'my-hs-toggle)
+(defun my-hs-toggle ()
+  "Toggle hiding/showing of a block."
+  (interactive)
+  (hs-minor-mode 1)
+  (hs-toggle-hiding))
