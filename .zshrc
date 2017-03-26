@@ -471,7 +471,7 @@ function github-new-repository() {
 
 
 function peco-ansible() {
-    local repositoryname='ansible-vps'
+    local repositoryname='ansible-setup-server'
     ghq root && cat ~/.config/hub | grep user && cd $(ghq root)/github.com/$(cat ~/.config/hub | grep user | awk '{print $3}')/${repositoryname}
     if [ $? = 0 ]; then
 	local selected_yml=$(ls | grep .yml$ | peco)
