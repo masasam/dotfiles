@@ -250,12 +250,20 @@ function cde () {
 }
 
 
+function peco-rg() {
+    exec rg "$@" . | peco --exec 'awk -F : '"'"'{print "+" $2 " " $1}'"'"' | xargs less'
+}
+zle -N peco-rg
+bindkey '^x^g' peco-rg
+bindkey '^xg' peco-rg
+
+
 function peco-ag() {
     exec ag "$@" . | peco --exec 'awk -F : '"'"'{print "+" $2 " " $1}'"'"' | xargs less'
 }
 zle -N peco-ag
-bindkey '^x^g' peco-ag
-bindkey '^xg' peco-ag
+bindkey '^x^G' peco-ag
+bindkey '^xG' peco-ag
 
 
 function peco-ack() {
