@@ -110,3 +110,4 @@
 (depends-on "git-timemachine")
 (depends-on "docker-tramp")
 (depends-on "docker")
+(depends-on "easy-hugo")
