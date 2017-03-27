@@ -268,7 +268,8 @@ Synchronize yaourt latest
 
 Preparing the net environment
 
-After using NetworkManager, use it with wifi You can not wifi unless you turn off dhcpcd.
+After using NetworkManager, use it with wifi.
+You can not wifi unless you turn off dhcpcd.
 
     sudo pacman -S networkmanager
     systemctl disable dhcpcd.service
@@ -477,14 +478,15 @@ Terminal uses termite and lilyterm see
 
 If you customize zsh by making zsh the default shell It may not be possible to login and it may be very troubling.
 
-So when tmux starts up, write it in tmux.conf to start zsh Keep the default shell bash.
+So when tmux starts up, write it in tmux.conf to start zsh.
+Keep the default shell bash.
 
     echo "alias tmuxstart='tmux new-session -A -s main'" >> ~/.bashrc
     echo "export HISTCONTROL=erasedups" >> ${HOME}/.bashrc
 
-Open the terminal When started with tmuxstart If you have a session,
+When started with tmuxstart, if you have a tmux session, you use it.
 
-if you do not use it, zsh will start up in a new session.
+If you do not have a tmux session, tmux will start up in a new session.
 
 # Powertop
 
@@ -494,7 +496,7 @@ Do not send power to unused system bus.
 
 >sudo pacman -S powertop
 
-Since it becomes invalid when restarting, It becomes no problem setting the following.
+Since it becomes invalid when restarting, It will set the following.
 
 >sudo powertop --calibrate
 
@@ -520,7 +522,7 @@ Succeed if all of this tab is Good
 
 # Profile-Sync-Daemon
 
-Chromium firefox cache and profile put it on the memory and it is super high speed.
+Chromium, firefox cache and profile is fast when it put on memory.
 
 As the frequency of synchronization to the disk decreases, it also has the effect of preventing consumption of the SSD.
 
@@ -565,13 +567,13 @@ When restarting NetworkManager, dnsmasq is set to be automatically usable.
 
 	sudo systemctl restart NetworkManager
 
-Do the same DNS lookup twice on drill and check.
+Do the same DNS lookup twice on drill command.
 
 ![dnsmasq](https://raw.githubusercontent.com/masasam/image/image/dnsmasq.png)
 
 ## Do not suspend even if closing the lid
 
-Since it gets up to emacs in 10 seconds of activation, it does not suspend.
+It does not suspend, because startup is fast
 
 >/etc/systemd/logind.conf
 
@@ -601,6 +603,7 @@ If you make a mistake on the letters, erase all with Ctrl-u
 # Firefox
 
 #### Gnome Shell Extention
+
 >Dash to Dock
 >TopIcons Plus
 
