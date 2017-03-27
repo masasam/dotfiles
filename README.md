@@ -41,13 +41,11 @@ Once after creating the environment
 
 Since the arch linux package list that was installed at will be backed up to Dropbox,
 
-in addition to make install for the second time after that you can recover the arch linux environment with.
+after that you can recover the arch linux environment with.
 
     make recover
 
 You can do 'make recover' or 'make install' for the second and subsequent builds.
-
-Please select your favorite one.You can do 'make recover' or 'make install' for the second andsubsequent builds.
 
 Please select your favorite one.
 
@@ -58,8 +56,6 @@ After Dropbox Sync
     make init
 
 Then dotfiles will be deployed and restored.
-
-You can recover in 30 minutes .
 
 #### Criteria of things managed by Dropbox
 
