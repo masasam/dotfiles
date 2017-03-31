@@ -111,3 +111,4 @@
 (depends-on "docker-tramp")
 (depends-on "docker")
 (depends-on "easy-hugo")
+(depends-on "ggtags")
