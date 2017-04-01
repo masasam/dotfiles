@@ -149,3 +149,7 @@
   (interactive)
   (hs-minor-mode 1)
   (hs-toggle-hiding))
+
+
+;; contain many mode setting
+(require 'generic-x)
