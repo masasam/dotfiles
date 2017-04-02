@@ -15,11 +15,8 @@
 (add-to-list 'default-frame-alist '(font . "ricty-15.5"))
 
 
-;; It does not end with C-x C-c
-(require 'bind-key)
-(bind-key "C-x C-c" 'helm-M-x)
-
 ;; Perform M % with C-c r
+(require 'bind-key)
 (bind-key "C-c r" 'query-replace)
 
 ;; flyspell-buffer
