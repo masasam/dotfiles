@@ -36,6 +36,8 @@
 (bind-key "C-h" 'delete-backward-char helm-find-files-map)
 (bind-key "TAB" 'helm-execute-persistent-action helm-find-files-map)
 (bind-key "TAB" 'helm-execute-persistent-action helm-read-file-map)
+;; helm-browse-project
+(bind-key "C-x C-d" 'helm-browse-project)
 
 
 ;; fuzzy-match

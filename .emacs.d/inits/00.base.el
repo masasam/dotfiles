@@ -55,8 +55,6 @@
 ;; Run C-x C-k same kill-buffer as C-x k
 (bind-key "C-x C-k" 'kill-buffer)
 
-;; C-x C-d also makes dired
-(bind-key "C-x C-d" 'dired)
 
 ;; switch-to-buffer
 (bind-key "M-o" 'iflipb-next-buffer)
