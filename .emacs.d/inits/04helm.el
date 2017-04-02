@@ -45,6 +45,7 @@
 (setq helm-recentf-fuzzy-match t)
 (setq helm-M-x-fuzzy-match t)
 (setq helm-apropos-fuzzy-match t)
+(setq helm-locate-fuzzy-match t)
 
 
 ;; Add files related to project to helm-for-files
