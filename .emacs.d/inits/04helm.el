@@ -1,27 +1,17 @@
 ;; helm
+(require 'helm)
 (require 'helm-config)
 (require 'bind-key)
 (helm-mode 1)
-(progn
-  (require 'helm-projectile)
-  (custom-set-variables
-   '(helm-truncate-lines t)
-   '(helm-delete-minibuffer-contents-from-point t)
-   '(helm-mini-default-sources '(helm-source-buffers-list
-                                 helm-source-files-in-current-dir
-                                 helm-source-recentf
-				 helm-source-projectile-files-list
-                                 ))))
+
+
+;; helm-key
+(bind-key "C-c h" 'helm-command-prefix)
+;; It does not end with C-x C-c
+(bind-key "C-x C-c" 'helm-M-x)
+;; helm-mini
 (bind-key "C-;" 'helm-mini)
-
-
-;; fuzzy-match
-(setq helm-buffers-fuzzy-matching t)
-(setq helm-recentf-fuzzy-match t)
-(setq helm-M-x-fuzzy-match t)
-(setq helm-apropos-fuzzy-match t)
-
-
+(bind-key "C-;" 'helm-keyboard-quit helm-map)
 ;; helm-recentf
 (bind-key "C-x C-r" 'helm-recentf)
 ;; helm-resume
@@ -33,22 +23,14 @@
 (bind-key "C-h" 'delete-backward-char helm-map)
 ;; Segment delete with helm C-w
 (bind-key "C-w" 'backward-kill-word helm-map)
-
-
-;; Keybind
-(bind-key "C-;" 'helm-keyboard-quit helm-map)
+;; helm-for-files
 (bind-key "C-x b" 'helm-for-files)
+;; helm-M-x
 (bind-key "M-x" 'helm-M-x)
+;; kill-ring
 (bind-key "M-y" 'helm-show-kill-ring)
+;; show keybind
 (bind-key "C-c b" 'helm-descbinds)
-
-
-;; Helm KeyBind remap
-(define-key global-map [remap occur] 'helm-occur)
-(define-key global-map [remap list-buffers] 'helm-buffers-list)
-(define-key global-map [remap dabbrev-expand] 'helm-dabbrev)
-
-
 ;; helm find files
 (bind-key "C-x C-f" 'helm-find-files)
 (bind-key "C-h" 'delete-backward-char helm-find-files-map)
@@ -56,47 +38,12 @@
 (bind-key "TAB" 'helm-execute-persistent-action helm-read-file-map)
 
 
-;; helm-ag
-(require 'helm-files)
-(require 'helm-ag)
-(bind-key "M-g ." 'helm-ag)
-(bind-key "M-g ," 'helm-ag-pop-stack)
-(bind-key "C-M-s" 'helm-ag-this-file)
-(setq helm-ag-base-command "ag --nocolor --nogroup --ignore-case")
-(helm-ag-command-option "--all-text")
-;; Make the current symbol the default query
-(setq helm-ag-insert-at-point 'symbol)
+;; fuzzy-match
+(setq helm-buffers-fuzzy-matching t)
+(setq helm-recentf-fuzzy-match t)
+(setq helm-M-x-fuzzy-match t)
+(setq helm-apropos-fuzzy-match t)
 
-
-;; Enable helm-gtags-mode
-(add-hook 'c-mode-hook 'helm-gtags-mode)
-(add-hook 'c++-mode-hook 'helm-gtags-mode)
-(add-hook 'asm-mode-hook 'helm-gtags-mode)
-(add-hook 'python-mode-hook 'helm-gtags-mode)
-(add-hook 'ruby-mode-hook 'helm-gtags-mode)
-
-;; customize
-(custom-set-variables
- '(helm-gtags-path-style 'relative)
- '(helm-gtags-ignore-case t)
- '(helm-gtags-auto-update t))
-
-;; key bindings
-(with-eval-after-load 'helm-gtags
-  (define-key helm-gtags-mode-map (kbd "M-t") 'helm-gtags-find-tag)
-  (define-key helm-gtags-mode-map (kbd "M-r") 'helm-gtags-find-rtag)
-  (define-key helm-gtags-mode-map (kbd "M-s") 'helm-gtags-find-symbol)
-  (define-key helm-gtags-mode-map (kbd "M-g M-p") 'helm-gtags-parse-file)
-  (define-key helm-gtags-mode-map (kbd "C-c <") 'helm-gtags-previous-history)
-  (define-key helm-gtags-mode-map (kbd "C-c >") 'helm-gtags-next-history)
-  (define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack))
-
-;; helm-projectile
-(require 'helm-projectile)
-;; How to clear cache (M-x projectile-invalidate-cache)
-(custom-set-variables
- '(projectile-enable-caching t))
-(projectile-global-mode t)
 
 ;; Add files related to project to helm-for-files
 (defadvice helm-for-files (around update-helm-list activate)
@@ -110,14 +57,7 @@
     helm-source-recentf
     helm-source-file-cache
     ,(if (projectile-project-p)
-     helm-source-projectile-files-list)))
-
-
-;; helm-swoop
-(bind-key "M-i" 'helm-swoop)
-(bind-key "M-I" 'helm-swoop-back-to-last-point)
-(bind-key "C-c M-i" 'helm-multi-swoop)
-(bind-key "C-x M-i" 'helm-multi-swoop-all)
+	 helm-source-projectile-files-list)))
 
 
 ;; helm-multi-files  recentf
