@@ -352,8 +352,7 @@ function peco-ghq-remote() {
     hub browse $(ghq list | peco | cut -d "/" -f 2,3)
 }
 zle -N peco-ghq-remote
-bindkey '^xL' peco-ghq-remote
-bindkey '^x^L' peco-ghq-remote
+bindkey '^xr' peco-ghq-remote
 
 
 function peco-git-branch() {
@@ -372,7 +371,8 @@ function peco-git-branch() {
     fi
 }
 zle -N peco-git-branch
-bindkey '^gb' peco-git-branch
+bindkey '^xb' peco-git-branch
+bindkey '^x^b' peco-git-branch
 
 
 function peco-git-hash() {
@@ -383,7 +383,7 @@ function peco-git-hash() {
     CURSOR=$#BUFFER
 }
 zle -N peco-git-hash
-bindkey '^gh' peco-git-hash
+bindkey '^x^h' peco-git-hash
 
 
 function peco-git-stash() {
@@ -394,7 +394,7 @@ function peco-git-stash() {
     CURSOR=$#BUFFER
 }
 zle -N peco-git-stash
-bindkey '^gs' peco-git-stash
+bindkey '^x^s' peco-git-stash
 
 
 function peco-ps() {
@@ -415,30 +415,17 @@ function aliasp() {
 }
 
 
-# peco open my booklist
-function peco-books() {
-    local book="$(find ~/Dropbox/books -type f | peco)"
-    if [ -n "$book" ]; then
-	xdg-open $book
-    fi
-}
-zle -N peco-books
-bindkey '^xb' peco-books
-
-
 # show peco keybinds
 function peco-keybinds() {
     zle $(bindkey | peco | cut -d " " -f 2)
 }
 zle -N peco-keybinds
-bindkey '^x^b' peco-keybinds
+bindkey '^xB' peco-keybinds
 
 
 function peco-godoc() {
     godoc $(ghq list --full-path | peco) | less
 }
-zle -N peco-godoc
-bindkey '^gd' peco-godoc
 
 
 # jump git root directory
@@ -486,21 +473,17 @@ function peco-ansible() {
     fi
 }
 zle -N peco-ansible
-bindkey '^xa' peco-ansible
+bindkey '^x^a' peco-ansible
 
 
 function peco-weather() {
     curl wttr.in/$(echo -e "Sapporo\nSendai\nTokyo\nYokohama\nKawasaki\nNagano\nNagoya\nKanazawa\nKyoto\nOsaka\nKobe\nOkayama-Shi\nHiroshima-Shi\nTakamatsu\nMatsuyama\nHakata" | peco) | less -R
 }
-zle -N peco-weather
-bindkey '^xw' peco-weather
 
 
 function peco-chrome-bookmark() {
     xdg-open $(cat ~/Dropbox/zsh/bookmark | peco | awk '{print $1}')
 }
-zle -N peco-chrome-bookmark
-bindkey '^xc' peco-chrome-bookmark
 
 
 function peco-search() {
