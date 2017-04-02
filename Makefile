@@ -78,6 +78,7 @@ install: ## install development environment powerd by arch linux
 	yaourt mozc
 	yaourt google-cloud-sdk
 	yaourt clipit
+	yaourt green-recorder
 	yaourt debian-archive-keyring
 	sudo pkgfile --update
 	git config --global ghq.root ~/src
