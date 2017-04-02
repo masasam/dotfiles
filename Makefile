@@ -39,6 +39,7 @@ init: ## deploy this dotfiles
 	chmod 600   ${HOME}/.ssh/id_rsa
 	export PATH="$PATH:$HOME/.cask/bin"
 	cd ${HOME}/.emacs.d/;   cask upgrade;   cask install
+	sudo updatedb
 
 install: ## install development environment powerd by arch linux
 	export GOPATH=${HOME}
