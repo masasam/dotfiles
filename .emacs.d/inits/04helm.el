@@ -38,6 +38,9 @@
 (bind-key "TAB" 'helm-execute-persistent-action helm-read-file-map)
 ;; helm-browse-project
 (bind-key "C-x C-d" 'helm-browse-project)
+;; helm-next helm-previous
+(bind-key "C-M-n" 'helm-next-source helm-map)
+(bind-key "C-M-p" 'helm-previous-source helm-map)
 
 
 ;; fuzzy-match
