@@ -112,3 +112,5 @@
 (depends-on "docker")
 (depends-on "easy-hugo")
 (depends-on "ggtags")
+(depends-on "virtualenvwrapper")
+(depends-on "auto-virtualenvwrapper")
