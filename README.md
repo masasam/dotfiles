@@ -375,6 +375,7 @@ Install what you put in yaourt
 	yaourt mozc
 	yaourt google-cloud-sdk
 	yaourt clipit
+	yaourt screenkey
 	yaourt green-recorder
 	yaourt debian-archive-keyring
 
