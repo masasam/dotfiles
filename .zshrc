@@ -527,6 +527,11 @@ function ipsort() {
 }
 
 
+function webm2gif() {
+    ffmpeg -an -i $1 $2
+}
+
+
 # zsh-syntax-highlighting(pacman -S zsh-syntax-highlighting)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # zsh-completions for google-cloud-sdk(yaourt google-cloud-sdk)
