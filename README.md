@@ -1,7 +1,8 @@
-# Synopsis
+# My dotfiles based on Makefile
+
+## Synopsis
 
 ![emacs](https://raw.githubusercontent.com/masasam/image/image/emacs.png)
-
 
 ## Let's build environment with Makefile
 
