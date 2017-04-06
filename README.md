@@ -608,6 +608,7 @@ If you make a mistake on the letters, erase all with Ctrl-u
 
 >Dash to Dock
 >TopIcons Plus
+>Easyscreencast
 
 #### stylish
 
