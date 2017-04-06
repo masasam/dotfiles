@@ -80,7 +80,6 @@ install: ## install development environment powerd by arch linux
 	yaourt google-cloud-sdk
 	yaourt clipit
 	yaourt screenkey
-	yaourt green-recorder
 	yaourt debian-archive-keyring
 	sudo pkgfile --update
 	git config --global ghq.root ~/src
