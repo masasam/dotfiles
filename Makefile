@@ -64,7 +64,7 @@ install: ## install development environment powerd by arch linux
 	zsh-syntax-highlighting rust cargo shellcheck python-pyflakes php typescript \
 	python-jedi autopep8 python-virtualenv flake8 llvm llvm-libs lldb chromium \
 	python-pylint dnsmasq cscope speedtest-cli lsof postgresql-libs tig pdfgrep \
-	curl docker-compose ack parallel docker-machine alsa-utils mlocate
+	curl docker-compose ack parallel docker-machine alsa-utils mlocate traceroute
 	mkdir -p ${HOME}/{bin,src}
 	yaourt peco
 	yaourt ttf-ricty
