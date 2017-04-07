@@ -1,4 +1,4 @@
-(projectile-global-mode)
+(projectile-mode)
 (setq projectile-completion-system 'helm)
 (require 'helm-projectile)
 (helm-projectile-on)
@@ -22,6 +22,5 @@
 
 
 ;; require ggtags
-(when (executable-find "gtags")
-  (setq projectile-tags-file-name "GTAGS")
-  (setq projectile-tags-command "gtags")))
+(setq projectile-tags-file-name "GTAGS")
+(setq projectile-tags-command "gtags")
