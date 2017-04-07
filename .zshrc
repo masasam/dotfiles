@@ -250,7 +250,7 @@ function cde () {
 
 
 function peco-rg() {
-    exec rg "$@" . | peco --exec 'awk -F : '"'"'{print "+" $2 " " $1}'"'"' | xargs less'
+    exec rg --vimgrep "$@" . | peco --exec 'awk -F : '"'"'{print "+" $2 " " $1}'"'"' | xargs less'
 }
 zle -N peco-rg
 bindkey '^x^g' peco-rg
