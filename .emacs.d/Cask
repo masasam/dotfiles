@@ -28,7 +28,6 @@
 (depends-on "helm-descbinds")
 (depends-on "helm-projectile")
 (depends-on "auto-complete")
-(depends-on "ac-dabbrev")
 (depends-on "fuzzy")
 (depends-on "google-translate")
 (depends-on "undo-tree")
