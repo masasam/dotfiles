@@ -41,6 +41,7 @@
 (depends-on "helm-gitignore")
 (depends-on "init-loader")
 (depends-on "slime")
+(depends-on "auto-compile")
 (depends-on "which-key")
 (depends-on "org-plus-contrib")
 (depends-on "volatile-highlights")

@@ -8,7 +8,11 @@
 (setq inhibit-splash-screen t)
 (setq inhibit-startup-message t)
 
+(setq load-prefer-newer t)
 (package-initialize)
+(require 'auto-compile)
+(auto-compile-on-load-mode)
+(auto-compile-on-save-mode)
 
 ;; cask
 (require 'cask "~/.cask/cask.el")
