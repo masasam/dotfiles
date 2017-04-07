@@ -51,7 +51,6 @@
 (depends-on "japanese-holidays")
 (depends-on "key-chord")
 (depends-on "sequential-command")
-(depends-on "lispxmp")
 (depends-on "direx")
 (depends-on "eldoc-extension")
 (depends-on "ansible")
