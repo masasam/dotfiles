@@ -48,7 +48,6 @@
 (depends-on "which-key")
 (depends-on "org-plus-contrib")
 (depends-on "volatile-highlights")
-(depends-on "point-undo")
 (depends-on "japanese-holidays")
 (depends-on "key-chord")
 (depends-on "sequential-command")
