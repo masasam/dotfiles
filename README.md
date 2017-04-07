@@ -359,7 +359,7 @@ Install what enters with pacman
 	sudo pacman -S npm llvm llvm-libs lldb hdparm rxvt-unicode dnsmasq typescript php cscope
 	sudo pacman -S speedtest-cli cpanminus mariadb-clients postgresql-libs tig lsof fzf
 	sudo pacman -S debootstrap tcpdump chromium bashdb pdfgrep ack parallel docker-machine
-	sudo pacman -S alsa-utils mlocate traceroute
+	sudo pacman -S alsa-utils mlocate traceroute aws-cli
 
 Install what you put in yaourt
 
