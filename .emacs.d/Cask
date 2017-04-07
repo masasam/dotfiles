@@ -40,7 +40,6 @@
 (depends-on "pangu-spacing")
 (depends-on "helm-gitignore")
 (depends-on "init-loader")
-(depends-on "auto-async-byte-compile")
 (depends-on "slime")
 (depends-on "which-key")
 (depends-on "org-plus-contrib")
