@@ -20,7 +20,7 @@ Easy to build development environment with
 
     make install
 
-I never have to worry about resetting my PC again.
+I never have to worry about setting my PC again.
 
 ### Deploying dotfiles can be done in a moment
 
