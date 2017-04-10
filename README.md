@@ -42,7 +42,7 @@ Once after creating the environment
 
 Since the arch linux package list that was installed at will be backed up to Dropbox,
 
-after that you can recover the arch linux environment with.
+you can recover the arch linux environment with.
 
     make recover
 
