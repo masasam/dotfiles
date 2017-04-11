@@ -211,6 +211,7 @@ export PATH="$PATH:$GOPATH/bin"
 export PATH="$PATH:$HOME/.cask/bin"
 export EDITOR='emacsclient'
 export XDG_CONFIG_HOME=$HOME/.config
+export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export RUST_SRC_PATH=~/Dropbox/emacs/rustc-1.14.0/src
 export GTAGSCONF=/usr/share/gtags/gtags.conf
