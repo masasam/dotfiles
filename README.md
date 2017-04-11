@@ -436,12 +436,6 @@ sudo vim /etc/X11/xorg.conf.d/20-thinkpad.conf
         Option		"YAxisMapping"		"4 5"
     EndSection
 
-Thinkpad i915 only
-
->sudo vim /etc/mkinitcpio.conf
-
-    MODULES="i915"
-
 # Tweak Tool
 
 Detailed setting of gnome etc.
