@@ -71,11 +71,9 @@ Then dotfiles will be deployed and restored.
 
 - To protect data
 
-   Sylpheed configuration file
+   Sylpheed configuration file and mail data.
 
-   Mail data used for gmail in dropbox
-
-   As mail arrives, it will be synchronized to dropbox so you do not have to think about backup
+   As mail arrives, it will be synchronized to dropbox so you do not have to think about backup.
 
 Do not forget to make dropbox 2 step verification.
 
@@ -83,23 +81,23 @@ Do not forget to make dropbox 2 step verification.
 
 Why Arch linux ?
 
-- Unless your PC breaks, arch linux is a rolling release so you do not have to reinstall it.
+- Unless your PC breaks, arch linux is a rolling release so you don't have to reinstall it.
 
   Even if it gets broken, I made a Makefile so I can return in half an hour and it's unbeatable.
 
-- Arch linux is good because it is difficult for my PC's development environment to be old
+- Arch linux is good because it is difficult for my PC's development environment to be old package.
 
-- I like customization but it is better the extent that does not come off the ecosystem
+- I like customization but customization is good enough not to get out of the ecosystem.
 
   In principle the package of Arch is a policy to build from the source of vanilla (Vanilla means that it does not apply its own patch for arch linux)
 
-  It is good because Arch unique problems are unlikely.
+  It is good because ArchLinux unique problems are unlikely.
 
 - It is light !! After installing Emacs Terminal chromium and launching an image htop
 
 ![top](https://raw.githubusercontent.com/masasam/image/image/top.png)
 
-Download Arch linux with BitTorrent.
+Download Arch linux.
 
 https://www.archlinux.org/releng/releases/
 
