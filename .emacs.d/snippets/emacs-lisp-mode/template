@@ -3,9 +3,9 @@
 # --
 ;;; `(file-name-nondirectory (buffer-file-name))` --- $1 -*- lexical-binding: t; -*-
 
-;; Copyright (C) `(format-time-string "%Y" (current-time))` by Masashi Miyaura
+;; Copyright (C) `(format-time-string "%Y" (current-time))` by Masashı Mıyaura
 
-;; Author: Masashi Miyaura
+;; Author: Masashı Mıyaura
 ;; URL: https://github.com/masasam/
 ;; Version: 0.1
 ;; Package-Requires: ()
