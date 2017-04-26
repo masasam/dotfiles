@@ -56,7 +56,7 @@ install: ## install development environment powerd by arch linux
 	the_silver_searcher powertop cifs-utils gvfs gvfs-smb libreoffice-fresh-ja \
 	gnome-keyring cups-pdf eog mcomix openssh firefox firefox-i18n-ja fzf gimp \
 	otf-ipafont pkgfile baobab dconf-editor rsync elixir nodejs phantomjs whois \
-	nmap poppler-data rtmpdump ffmpeg swftools fish sbcl docker aspell aspell-en \
+	nmap poppler-data rtmpdump ffmpeg asciidoc fish sbcl docker aspell aspell-en \
 	gdb ripgrep hub wmctrl pwgen linux-docs ansible htop mariadb-clients tcpdump \
 	pygmentize arch-install-scripts lilyterm termite neovim pandoc jq sylpheed \
 	texlive-langjapanese eslint texlive-latexextra ctags python-pygments hdparm \

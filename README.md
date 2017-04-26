@@ -340,7 +340,7 @@ Install what enters with pacman
     sudo pacman -S libreoffice-fresh-ja
     sudo pacman -S go pkgfile rsync elixir
 	sudo pacman -S nodejs phantomjs whois nmap poppler-data
-	sudo pacman -S rtmpdump ffmpeg swftools fish sbcl
+	sudo pacman -S rtmpdump ffmpeg asciidoc fish sbcl
 	sudo pacman -S aspell aspell-en httperf
 	sudo pacman -S gdb ripgrep hub wmctrl
 	sudo pacman -S linux-docs ansible pwgen pygmentize
