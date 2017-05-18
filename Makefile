@@ -104,10 +104,10 @@ install: ## install development environment powerd by arch linux
 	cargo install cargo-script
 
 backup: ## backup arch linux package at dropbox
-	mkdir -p ${HOME}/Dropbox/arch
-	pacman -Qqen > ${HOME}/Dropbox/arch/pacmanlist.txt
-	pacman -Qnq > ${HOME}/Dropbox/arch/allpacmanlist.txt
-	pacman -Qqem > ${HOME}/Dropbox/arch/yaourtlist.txt
+	mkdir -p ${HOME}/src/github.com/masasam/dotfiles/archlinux
+	pacman -Qqen > ${HOME}/src/github.com/masasam/dotfiles/archlinux/pacmanlist
+	pacman -Qnq > ${HOME}/src/github.com/masasam/dotfiles/archlinux/allpacmanlist
+	pacman -Qqem > ${HOME}/src/github.com/masasam/dotfiles/archlinux/yaourtlist
 
 recover: ## recovery from backup arch linux package at dropbox
 	sudo pacman -S --needed $(DOP)
