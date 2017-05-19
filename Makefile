@@ -92,7 +92,6 @@ install: ## install development environment powerd by arch linux
 	go get -u golang.org/x/tools/cmd/godoc
 	go get -u github.com/josharian/impl
 	go get -u github.com/jstemmer/gotags
-	ghq get -p motemen/ghq
 	ghq get -p phildawes/racer
 	sudo npm install -g tern
 	sudo npm install -g jshint
