@@ -151,6 +151,9 @@ qt4
 reiserfsprogs
 retext
 ripgrep
+rust-racer
+rustfmt
+rustup
 s-nail
 sbcl
 seahorse

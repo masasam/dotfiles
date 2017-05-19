@@ -791,6 +791,9 @@ rtkit
 rtmpdump
 ruby
 run-parts
+rust-racer
+rustfmt
+rustup
 s-nail
 sbc
 sbcl
