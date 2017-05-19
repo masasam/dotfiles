@@ -126,7 +126,7 @@
 (bind-key "C-x F" 'find-function)
 (bind-key "C-x V" 'find-variable)
 ;; emacs c source dir:
-(setq find-function-C-source-directory "~/Dropbox/emacs/emacs-25.1/emacs-25.1/src")
+(setq find-function-C-source-directory "~/Dropbox/emacs/emacs-25.2/src")
 
 
 ;; Highlight the space at the end of the line
@@ -135,15 +135,6 @@
 
 ;; Do not change the position of the cursor on the screen as much as possible when scrolling pages
 (setq scroll-preserve-screen-position t)
-
-
-;; Folding function
-(bind-key "C-c TAB" 'my-hs-toggle)
-(defun my-hs-toggle ()
-  "Toggle hiding/showing of a block."
-  (interactive)
-  (hs-minor-mode 1)
-  (hs-toggle-hiding))
 
 
 ;; contain many mode setting
