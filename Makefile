@@ -62,11 +62,11 @@ install: ## install development environment powerd by arch linux
 	pygmentize arch-install-scripts lilyterm termite neovim pandoc jq sylpheed \
 	texlive-langjapanese eslint texlive-latexextra ctags python-pygments hdparm \
 	python-neovim python2-neovim noto-fonts-cjk arc-gtk-theme networkmanager npm \
-	zsh-syntax-highlighting rust cargo shellcheck python-pyflakes php typescript \
+	zsh-syntax-highlighting xorg-apps shellcheck python-pyflakes php typescript \
 	python-jedi autopep8 python-virtualenv flake8 llvm llvm-libs lldb chromium \
 	python-pylint dnsmasq cscope speedtest-cli lsof postgresql-libs tig pdfgrep \
 	curl docker-compose ack parallel docker-machine alsa-utils mlocate traceroute \
-	aws-cli xorg-apps
+	aws-cli rust cargo rustup rustfmt rust-racer
 	mkdir -p ${HOME}/{bin,src}
 	yaourt peco
 	yaourt ttf-ricty
@@ -96,10 +96,6 @@ install: ## install development environment powerd by arch linux
 	sudo npm install -g tern
 	sudo npm install -g jshint
 	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
-	curl https://sh.rustup.rs -sSf | sh
-	source $HOME/.cargo/env
-	cargo install rustfmt
-	cargo install racer
 	cargo install cargo-script
 
 backup: ## backup arch linux package at dropbox
@@ -125,16 +121,11 @@ recover: ## recovery from backup arch linux package at dropbox
 	go get -u golang.org/x/tools/cmd/goimports
 	go get -u golang.org/x/tools/cmd/godoc
 	go get -u github.com/josharian/impl
-	ghq get -p motemen/ghq
 	ghq get -p jstemmer/gotags
 	ghq get -p phildawes/racer
 	sudo npm install -g tern
 	sudo npm install -g jshint
 	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
-	curl https://sh.rustup.rs -sSf | sh
-	source $HOME/.cargo/env
-	cargo install rustfmt
-	cargo install racer
 	cargo install cargo-script
 
 test: ## print environment value
