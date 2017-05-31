@@ -1,0 +1,1 @@
+(require 'browse-at-remote)

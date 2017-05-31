@@ -87,7 +87,6 @@
 (depends-on "anything-tramp")
 (depends-on "elisp-slime-nav")
 (depends-on "helm-gitignore")
-(depends-on "github-browse-file")
 (depends-on "macrostep")
 (depends-on "aggressive-indent")
 (depends-on "helm-chrome")
@@ -105,3 +104,4 @@
 (depends-on "ggtags")
 (depends-on "virtualenvwrapper")
 (depends-on "auto-virtualenvwrapper")
+(depends-on "browse-at-remote")
