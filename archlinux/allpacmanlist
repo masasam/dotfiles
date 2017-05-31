@@ -528,6 +528,7 @@ linux-firmware
 lldb
 llvm
 llvm-libs
+lm_sensors
 logrotate
 lpsolve
 lsof
@@ -707,10 +708,13 @@ python-snowballstemmer
 python-sphinx
 python-sphinx-alabaster-theme
 python-sphinx_rtd_theme
+python-sphinxcontrib-websupport
+python-sqlalchemy
 python-texttable
 python-urllib3
 python-virtualenv
 python-websocket-client
+python-whoosh
 python-wrapt
 python-yaml
 python2
