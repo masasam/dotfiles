@@ -84,6 +84,7 @@
 (depends-on "package-lint")
 (depends-on "flycheck-package")
 (depends-on "helm-tramp")
+(depends-on "php-mode")
 (depends-on "anything-tramp")
 (depends-on "elisp-slime-nav")
 (depends-on "helm-gitignore")
