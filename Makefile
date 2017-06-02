@@ -9,6 +9,7 @@ init: ## deploy this dotfiles
 	ln -vsf ${PWD}/.xinitrc   ${HOME}/.xinitrc
 	ln -vsf ${PWD}/.aspell.conf   ${HOME}/.aspell.conf
 	ln -vsf ${HOME}/Dropbox/zsh/hub   ${HOME}/.config/hub
+	ln -vsf ${HOME}/Dropbox/docker/config.json   ${HOME}/.docker/config.json
 	ln -vsf ${PWD}/.config/screenkey.json ${HOME}/.config/screenkey.json
 	ln -vsf ${PWD}/.config/fish/config.fish ${HOME}/.config/fish/config.fish
 	ln -vsf ${PWD}/.config/psd/psd.conf   ${HOME}/.config/psd/psd.conf
