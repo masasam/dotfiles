@@ -159,8 +159,6 @@ gedit
 gegl02
 geoclue2
 geocode-glib
-geoip
-geoip-database
 gettext
 ghostscript
 giflib
@@ -578,7 +576,6 @@ netcdf
 netctl
 nettle
 networkmanager
-nginx
 ninja
 nm-connection-editor
 nmap
