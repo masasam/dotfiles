@@ -39,9 +39,6 @@ init: ## deploy this dotfiles
 	test -L ${HOME}/.mozc || rm -rf ${HOME}/.mozc
 	ln -vsfn ${HOME}/Dropbox/mozc/.mozc   ${HOME}/.mozc
 	chmod 600   ${HOME}/.ssh/id_rsa
-	export PATH="$PATH:$HOME/.cask/bin"
-	cd ${HOME}/.emacs.d/;   cask upgrade;   cask install
-	sudo updatedb
 
 install: ## install development environment powerd by arch linux
 	export GOPATH=${HOME}
@@ -128,6 +125,18 @@ recover: ## recovery from backup arch linux package at dropbox
 	sudo npm install -g jshint
 	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
 	cargo install cargo-script
+
+docker: ## docker setup
+	sudo groupadd docker
+	sudo usermod -aG docker masa
+	sudo systemctl enable docker.service
+
+updatedb: ## file datebase update
+	sudo updatedb
+
+cask: ## install emacs package
+	export PATH="$PATH:$HOME/.cask/bin"
+	cd ${HOME}/.emacs.d/;   cask upgrade;   cask install
 
 test: ## print environment value
 	export GOPATH=${HOME}
