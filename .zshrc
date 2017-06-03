@@ -534,6 +534,12 @@ function webm2gif() {
 }
 
 
+function phpmyadmin() {
+    docker pull phpmyadmin/phpmyadmin
+    docker run --name myadmin -d -e PMA_HOST=$1 -p 8080:80 phpmyadmin/phpmyadmin
+}
+
+
 # zsh-syntax-highlighting(pacman -S zsh-syntax-highlighting)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # zsh-completions for google-cloud-sdk(yaourt google-cloud-sdk)
