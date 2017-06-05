@@ -107,3 +107,4 @@
 (depends-on "virtualenvwrapper")
 (depends-on "auto-virtualenvwrapper")
 (depends-on "browse-at-remote")
+(depends-on "toml-mode")
