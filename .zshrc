@@ -534,9 +534,14 @@ function webm2gif() {
 }
 
 
-function phpmyadmin() {
+function docker-phpmyadmin() {
     docker pull phpmyadmin/phpmyadmin
     docker run --name myadmin -d -e PMA_HOST=$1 -p 8080:80 phpmyadmin/phpmyadmin
+}
+
+
+function phalcon-start() {
+    docker exec -it phalcon-app /bin/bash
 }
 
 
