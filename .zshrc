@@ -540,7 +540,7 @@ function docker-phpmyadmin() {
 }
 
 
-function phalcon-start() {
+function phalcon-exec() {
     docker exec -it phalcon-app /bin/bash
 }
 
