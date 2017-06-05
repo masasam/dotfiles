@@ -82,6 +82,7 @@ install: ## install development environment powerd by arch linux
 	yaourt screenkey
 	yaourt debian-archive-keyring
 	yaourt slack-desktop
+	yaourt editorconfig-core-c
 	sudo pkgfile --update
 	git config --global ghq.root ~/src
 	go get -u github.com/nsf/gocode
