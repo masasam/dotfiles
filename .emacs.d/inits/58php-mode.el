@@ -10,4 +10,4 @@
 	     (define-key php-mode-map  (kbd "C-]") 'ac-php-find-symbol-at-point)   ;goto define
 	     (define-key php-mode-map  (kbd "C-t") 'ac-php-location-stack-back)    ;go back
 	     ))
-(add-hook 'php-mode-hook 'php-enable-pear-coding-style)
+(add-hook 'php-mode-hook 'php-enable-psr2-coding-style)
