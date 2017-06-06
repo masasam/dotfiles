@@ -225,6 +225,11 @@ function github-upstream() {
 }
 
 
+function gitlab-upstream() {
+    git remote add upstream git://gitlab.com/$1
+}
+
+
 # Invoke the ``dired'' of current working directory in Emacs buffer.
 function dired() {
     emacsclient -e "(dired \"${1:-$PWD}\")" & wmctrl -a emacs
@@ -531,17 +536,6 @@ function ipsort() {
 
 function webm2gif() {
     ffmpeg -an -i $1 $2
-}
-
-
-function docker-phpmyadmin() {
-    docker pull phpmyadmin/phpmyadmin
-    docker run --name myadmin -d -e PMA_HOST=$1 -p 8080:80 phpmyadmin/phpmyadmin
-}
-
-
-function phalcon-exec() {
-    docker exec -it phalcon-app /bin/bash
 }
 
 
