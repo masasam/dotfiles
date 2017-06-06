@@ -672,6 +672,7 @@ python-docutils
 python-editdistance
 python-gobject
 python-greenlet
+python-idna
 python-imagesize
 python-isort
 python-jedi
