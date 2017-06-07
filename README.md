@@ -453,6 +453,10 @@ Detailed setting of gnome etc.
 
 >Ctrl Alt Backspace
 
+* Caps Lock behavior
+
+Caps Lock is also a Ctrl
+
 * Fix workspace to 1
 
 * Power supply
