@@ -110,3 +110,4 @@
 (depends-on "toml-mode")
 (depends-on "php-eldoc")
 (depends-on "jinja2-mode")
+(depends-on "twig-mode")

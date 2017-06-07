@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: dump
+# key: dump
+# --
+{{ content() }}
