@@ -30,7 +30,9 @@
 ;; kill-ring
 (bind-key "M-y" 'helm-show-kill-ring)
 ;; show keybind
-(bind-key "C-c b" 'helm-descbinds)
+;;(bind-key "C-c b" 'helm-descbinds)
+;; chrome bookmark
+(bind-key "C-c b" 'helm-chrome-bookmarks)
 ;; helm find files
 (bind-key "C-x C-f" 'helm-find-files)
 (bind-key "C-h" 'delete-backward-char helm-find-files-map)
