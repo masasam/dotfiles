@@ -27,6 +27,7 @@
 (defalias 'exit-tramp 'tramp-cleanup-all-buffers)
 (defalias 'my-keybind 'describe-personal-keybindings)
 (defalias 'all-keybind 'helm-descbinds)
+(defalias 'bookmark 'helm-chrome-bookmarks)
 
 
 ;; server start for emacs-client
