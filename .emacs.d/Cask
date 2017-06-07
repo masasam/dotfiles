@@ -109,3 +109,4 @@
 (depends-on "browse-at-remote")
 (depends-on "toml-mode")
 (depends-on "php-eldoc")
+(depends-on "jinja2-mode")
