@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: logger
+# key: logger
+# --
+$this->logger->log("msg", \Phalcon\Logger::INFO);
