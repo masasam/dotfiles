@@ -191,7 +191,6 @@ alias df='df -h'
 alias free='free -h'
 alias e='emacsclient'
 alias open='xdg-open'
-alias vim='nvim'
 alias mysql="mysql --pager='less -S -n -i -F -X'"
 alias trackpointspeed='xinput --set-prop 10 "Device Accel Constant Deceleration"'
 alias caskcleanup='rm -rf ${HOME}/.emacs.d/.cask; caskinstall'
