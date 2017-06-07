@@ -3,7 +3,7 @@
 ;;; Code:
 (package-initialize)
 
-(set-frame-parameter nil 'fullscreen 'maximized)
+;;(set-frame-parameter nil 'fullscreen 'maximized)
 (custom-set-variables
  '(initial-frame-alist (quote ((fullscreen . maximized)))))
 
