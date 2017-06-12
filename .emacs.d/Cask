@@ -111,3 +111,4 @@
 (depends-on "php-eldoc" :git "https://github.com/masasam/php-eldoc.git")
 (depends-on "jinja2-mode")
 (depends-on "twig-mode")
+(depends-on "phalcon" :git "https://github.com/masasam/emacs-phalcon.git")
