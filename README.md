@@ -377,6 +377,7 @@ Install what you put in yaourt
 	yaourt screenkey
 	yaourt debian-archive-keyring
 	yaourt slack-desktop
+	yaourt git-secrets
 
 #### golang npm rust
 
