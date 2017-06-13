@@ -1,3 +1,4 @@
+(defalias 'controller 'phalcon-controller)
 (defalias 'service 'phalcon-service)
 (defalias 'repository 'phalcon-repository)
 (defalias 'entity 'phalcon-entity)
