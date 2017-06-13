@@ -2,6 +2,7 @@ casperjs
 clipit
 debian-archive-keyring
 ghq
+git-secrets
 global
 google-cloud-sdk
 hugo
