@@ -1,5 +1,7 @@
 (defalias 'controller 'phalcon-controller)
 (defalias 'service 'phalcon-service)
+(defalias 'service-directory 'phalcon-service-directory)
 (defalias 'repository 'phalcon-repository)
 (defalias 'entity 'phalcon-entity)
+(defalias 'entity-directory 'phalcon-entity-directory)
 (defalias 'criteria 'phalcon-criteria)
