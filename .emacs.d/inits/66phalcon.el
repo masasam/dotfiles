@@ -5,3 +5,5 @@
 (defalias 'entity 'phalcon-entity)
 (defalias 'entity-directory 'phalcon-entity-directory)
 (defalias 'criteria 'phalcon-criteria)
+(defalias 'toml 'phalcon-toml)
+(defalias 'tomladmin 'phalcon-admin-toml)
