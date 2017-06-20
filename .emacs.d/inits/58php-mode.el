@@ -7,7 +7,7 @@
 	     (setq ac-sources  '(ac-source-php ))
 	     (yas-global-mode 1)
 	     ;;(ac-php-core-eldoc-setup) ;; enable ac-php eldoc
-	     (php-eldoc-enable) ;;php-eldoc
+	     ;;(php-eldoc-enable) ;;php-eldoc
 	     (define-key php-mode-map  (kbd "C-]") 'ac-php-find-symbol-at-point)   ;goto define
 	     (define-key php-mode-map  (kbd "C-t") 'ac-php-location-stack-back)    ;go back
 	     ))
