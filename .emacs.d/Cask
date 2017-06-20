@@ -108,7 +108,7 @@
 (depends-on "auto-virtualenvwrapper")
 (depends-on "browse-at-remote")
 (depends-on "toml-mode")
-(depends-on "php-eldoc" :git "https://github.com/masasam/php-eldoc.git")
 (depends-on "jinja2-mode")
 (depends-on "twig-mode")
 (depends-on "phalcon" :git "https://github.com/masasam/emacs-phalcon.git")
+(depends-on "helm-phalcon" :git "https://github.com/masasam/emacs-helm-phalcon.git")
