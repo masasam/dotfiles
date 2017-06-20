@@ -4,12 +4,10 @@
 	     (local-set-key (kbd "<f1>") 'my-php-symbol-lookup)
 	     (auto-complete-mode t)
 	     (require 'ac-php)
-	     (setq ac-sources  '(ac-source-php ))
+	     (add-to-list 'ac-sources 'ac-source-php)
 	     (yas-global-mode 1)
-	     ;;(ac-php-core-eldoc-setup) ;; enable ac-php eldoc
-	     ;;(php-eldoc-enable) ;;php-eldoc
-	     (define-key php-mode-map  (kbd "C-]") 'ac-php-find-symbol-at-point)   ;goto define
-	     (define-key php-mode-map  (kbd "C-t") 'ac-php-location-stack-back)    ;go back
+	     (define-key php-mode-map  (kbd "C-]") 'ac-php-find-symbol-at-point)
+	     (define-key php-mode-map  (kbd "C-t") 'ac-php-location-stack-back)
 	     ))
 (add-hook 'php-mode-hook 'php-enable-psr2-coding-style)
 
