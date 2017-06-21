@@ -13,6 +13,11 @@
   (interactive)
   (find-file "~/Dropbox/"))
 
+;; Open downloads with dired
+(defun downloads ()
+  (interactive)
+  (find-file "~/Downloads/"))
+
 ;; Open ~/Pictures/image with dired
 (defun githubimage ()
   (interactive)
