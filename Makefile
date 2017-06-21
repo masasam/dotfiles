@@ -8,17 +8,24 @@ init: ## deploy this dotfiles
 	ln -vsf ${PWD}/.tmux.conf   ${HOME}/.tmux.conf
 	ln -vsf ${PWD}/.xinitrc   ${HOME}/.xinitrc
 	ln -vsf ${PWD}/.aspell.conf   ${HOME}/.aspell.conf
+	mkdir -p ${HOME}/.config
 	ln -vsf ${HOME}/Dropbox/zsh/hub   ${HOME}/.config/hub
+	mkdir -p ${HOME}/.docker
 	ln -vsf ${HOME}/Dropbox/docker/config.json   ${HOME}/.docker/config.json
 	ln -vsf ${PWD}/.config/screenkey.json ${HOME}/.config/screenkey.json
-	ln -vsf ${PWD}/.config/fish/config.fish ${HOME}/.config/fish/config.fish
+	mkdir -p ${HOME}/.config/psd
 	ln -vsf ${PWD}/.config/psd/psd.conf   ${HOME}/.config/psd/psd.conf
+	mkdir -p ${HOME}/.config/clipit
 	ln -vsf ${PWD}/.config/clipit/clipitrc   ${HOME}/.config/clipit/clipitrc
+	mkdir -p ${HOME}/.config/gtk-3.0
 	ln -vsf ${PWD}/.config/gtk-3.0/bookmarks   ${HOME}/.config/gtk-3.0/bookmarks
+	mkdir -p /etc/docker
 	sudo ln -vsf ${PWD}/etc/docker/daemon.json   /etc/docker/daemon.json
 	sudo ln -vsf ${PWD}/etc/pacman.conf   /etc/pacman.conf
 	sudo ln -vsf ${PWD}/etc/systemd/logind.conf   /etc/systemd/logind.conf
+	mkdir -p /etc/NetworkManager
 	sudo ln -vsf ${PWD}/etc/NetworkManager/NetworkManager.conf /etc/NetworkManager/NetworkManager.conf
+	mkdir -p /etc/libreoffice
 	sudo ln -vsf ${PWD}/etc/libreoffice/sofficerc /etc/libreoffice/sofficerc
 	mkdir -p ${HOME}/.config/lilyterm
 	ln -vsf ${PWD}/.config/lilyterm/default.conf   ${HOME}/.config/lilyterm/default.conf
@@ -33,6 +40,7 @@ init: ## deploy this dotfiles
 	ln -vsfn ${PWD}/.emacs.d   ${HOME}/.emacs.d
 	test -L ${HOME}/.ssh || rm -rf ${HOME}/.ssh
 	ln -vsfn ${HOME}/Dropbox/ssh   ${HOME}/.ssh
+	mkdir -p ${HOME}/.local/share
 	test -L ${HOME}/.local/share/keyrings || rm -rf ${HOME}/.local/share/keyrings
 	ln -vsfn ${HOME}/Dropbox/passwd/keyrings   ${HOME}/.local/share/keyrings
 	test -L ${HOME}/.sylpheed-2.0 || rm -rf ${HOME}/.sylpheed-2.0
