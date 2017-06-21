@@ -44,8 +44,6 @@ init: ## deploy this dotfiles
 install: ## install development environment powerd by arch linux
 	export GOPATH=${HOME}
 	export PATH="$PATH:$GOPATH/bin"
-	chmod u+x ${PWD}/bin/continue.sh
-	${PWD}/bin/continue.sh && \
 	cat ${HOME}/.bashrc | grep tmuxstart || \
 	echo "alias tmuxstart='tmux new-session -A -s main'" >> ${HOME}/.bashrc
 	cat ${HOME}/.bashrc | grep ignoredups || \
