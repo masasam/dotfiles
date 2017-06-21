@@ -710,3 +710,16 @@ Font
 - interface   Noto Sans CJK JP Regular 11
 - Document   Sans Regular 11
 - Equal width    Monospace Regular 11
+
+## How to test Makefile
+
+1.Build this Dockerfile
+
+	docker build -t dotfiles /home/masa/src/github.com/masasam/dotfiles
+
+2.Run docker run and execute the following command in the docker container
+
+	docker run -t -i -v /home/masa/Dropbox:/home/masa/Dropbox:cached --name arch dotfiles /bin/bash
+	cd /home/masa/src/github.com/masasam/dotfiles
+	make install
+	make init
