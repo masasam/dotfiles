@@ -19,13 +19,11 @@ init: ## deploy this dotfiles
 	ln -vsf ${PWD}/.config/clipit/clipitrc   ${HOME}/.config/clipit/clipitrc
 	mkdir -p ${HOME}/.config/gtk-3.0
 	ln -vsf ${PWD}/.config/gtk-3.0/bookmarks   ${HOME}/.config/gtk-3.0/bookmarks
-	mkdir -p /etc/docker
-	sudo ln -vsf ${PWD}/etc/docker/daemon.json   /etc/docker/daemon.json
 	sudo ln -vsf ${PWD}/etc/pacman.conf   /etc/pacman.conf
 	sudo ln -vsf ${PWD}/etc/systemd/logind.conf   /etc/systemd/logind.conf
-	mkdir -p /etc/NetworkManager
+	sudo mkdir -p /etc/NetworkManager
 	sudo ln -vsf ${PWD}/etc/NetworkManager/NetworkManager.conf /etc/NetworkManager/NetworkManager.conf
-	mkdir -p /etc/libreoffice
+	sudo mkdir -p /etc/libreoffice
 	sudo ln -vsf ${PWD}/etc/libreoffice/sofficerc /etc/libreoffice/sofficerc
 	mkdir -p ${HOME}/.config/lilyterm
 	ln -vsf ${PWD}/.config/lilyterm/default.conf   ${HOME}/.config/lilyterm/default.conf
@@ -136,6 +134,10 @@ docker: ## docker setup
 	sudo groupadd docker
 	sudo usermod -aG docker masa
 	sudo systemctl enable docker.service
+	sudo systemctl start docker.service
+	sudo systemctl stop docker.service
+	sudo ln -vsf ${PWD}/etc/docker/daemon.json   /etc/docker/daemon.json
+	sudo systemctl start docker.service
 
 updatedb: ## file datebase update
 	sudo updatedb
