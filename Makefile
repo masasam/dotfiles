@@ -92,7 +92,6 @@ install: ## install development environment powerd by arch linux
 	go get -u golang.org/x/tools/cmd/godoc
 	go get -u github.com/josharian/impl
 	go get -u github.com/jstemmer/gotags
-	ghq get -p phildawes/racer
 	sudo npm install -g tern
 	sudo npm install -g jshint
 	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
@@ -121,8 +120,7 @@ recover: ## recovery from backup arch linux package at dropbox
 	go get -u golang.org/x/tools/cmd/goimports
 	go get -u golang.org/x/tools/cmd/godoc
 	go get -u github.com/josharian/impl
-	ghq get -p jstemmer/gotags
-	ghq get -p phildawes/racer
+	go get -u github.com/jstemmer/gotags
 	sudo npm install -g tern
 	sudo npm install -g jshint
 	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
