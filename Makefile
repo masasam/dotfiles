@@ -60,7 +60,7 @@ install: ## install development environment powerd by arch linux
 	the_silver_searcher powertop cifs-utils gvfs gvfs-smb libreoffice-fresh-ja \
 	gnome-keyring cups-pdf eog mcomix openssh firefox firefox-i18n-ja fzf gimp \
 	otf-ipafont pkgfile baobab dconf-editor rsync elixir nodejs phantomjs whois \
-	nmap poppler-data rtmpdump ffmpeg asciidoc fish sbcl docker aspell aspell-en \
+	nmap poppler-data rtmpdump ffmpeg asciidoc sbcl docker aspell aspell-en ack \
 	gdb ripgrep hub wmctrl pwgen linux-docs ansible htop mariadb-clients tcpdump \
 	pygmentize arch-install-scripts lilyterm termite neovim pandoc jq sylpheed \
 	texlive-langjapanese eslint texlive-latexextra ctags python-pygments hdparm \
@@ -68,7 +68,7 @@ install: ## install development environment powerd by arch linux
 	zsh-syntax-highlighting xorg-apps shellcheck python-pyflakes php typescript \
 	python-jedi autopep8 python-virtualenv flake8 llvm llvm-libs lldb chromium \
 	python-pylint dnsmasq cscope speedtest-cli lsof postgresql-libs tig pdfgrep \
-	curl docker-compose ack parallel docker-machine alsa-utils mlocate traceroute \
+	curl docker-compose parallel docker-machine alsa-utils mlocate traceroute \
 	aws-cli rust cargo rustup rustfmt rust-racer
 	mkdir -p ${HOME}/{bin,src}
 	yaourt peco
