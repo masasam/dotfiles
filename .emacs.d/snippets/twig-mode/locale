@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: locale
+# key: locale
+# --
+{{ locale.t('$1') }}
