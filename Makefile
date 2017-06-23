@@ -1,6 +1,3 @@
-DOP= `cat ${HOME}/Dropbox/arch/pacmanlist.txt`
-DOY= `cat ${HOME}/Dropbox/arch/yaourtlist.txt`
-
 init: ## deploy this dotfiles
 	ln -vsf ${PWD}/.zshrc   ${HOME}/.zshrc
 	ln -vsf ${PWD}/.gitconfig   ${HOME}/.gitconfig
