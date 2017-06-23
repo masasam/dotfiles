@@ -44,7 +44,7 @@ init: ## deploy this dotfiles
 	ln -vsfn ${HOME}/Dropbox/mozc/.mozc   ${HOME}/.mozc
 	chmod 600   ${HOME}/.ssh/id_rsa
 
-install: ## install development environment powerd by arch linux
+install: ## install development environment for arch linux
 	export GOPATH=${HOME}
 	export PATH="$PATH:$GOPATH/bin"
 	cat ${HOME}/.bashrc | grep tmuxstart || \
@@ -98,15 +98,15 @@ install: ## install development environment powerd by arch linux
 	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
 	cargo install cargo-script
 
-backup: ## backup arch linux package at dropbox
+backup: ## backup archlinux installed packages
 	mkdir -p ${HOME}/src/github.com/masasam/dotfiles/archlinux
 	pacman -Qqen > ${HOME}/src/github.com/masasam/dotfiles/archlinux/pacmanlist
 	pacman -Qnq > ${HOME}/src/github.com/masasam/dotfiles/archlinux/allpacmanlist
 	pacman -Qqem > ${HOME}/src/github.com/masasam/dotfiles/archlinux/yaourtlist
 
-recover: ## recovery from backup arch linux package at dropbox
-	sudo pacman -S --needed $(DOP)
-	yaourt -S --needed $(DOY)
+recover: ## recovery from backup arch linux package
+	sudo pacman -S --needed `cat ${HOME}/src/github.com/masasam/dotfiles/archlinux/pacmanlist`
+	yaourt -S --needed $(DOY) `cat ${HOME}/src/github.com/masasam/dotfiles/archlinux/yaourtlist`
 	cat ${HOME}/.bashrc | grep tmuxstart || \
 	echo "alias tmuxstart='tmux new-session -A -s main'" >> ${HOME}/.bashrc
 	cat ${HOME}/.bashrc | grep ignoredups || \
