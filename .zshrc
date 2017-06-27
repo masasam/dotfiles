@@ -31,9 +31,9 @@ zshaddhistory() {
 }
 
 unsetopt extended_history
-setopt append_history       # add history
-setopt inc_append_history   # add history incremental
-setopt share_history        # hare history other terminal
+setopt append_history       # Add history
+setopt inc_append_history   # Add history incremental
+setopt share_history        # Share history other terminal
 setopt hist_ignore_all_dups # Duplicate command delete it older
 setopt hist_ignore_dups     # Same command as before don't add to history
 setopt hist_ignore_space    # Commands beginning with a space delete from history list
