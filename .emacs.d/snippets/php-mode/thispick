@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: thispick
+# key: thispick
+# --
+$this->view->pick('$1');

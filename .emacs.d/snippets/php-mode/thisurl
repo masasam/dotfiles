@@ -1,5 +1,5 @@
 # -*- mode: snippet -*-
-# name: dispatch
-# key: dispatch
+# name: thisurl
+# key: thisurl
 # --
 $this->dispatcher->getParam('$1')

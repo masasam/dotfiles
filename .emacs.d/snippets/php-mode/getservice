@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: getservice
+# key: getservice
+# --
+Services::getService('$1')->$2($3);
