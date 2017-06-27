@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: dispatch
+# key: dispatch
+# --
+$this->dispatcher->getParam('$1')
