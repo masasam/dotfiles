@@ -112,3 +112,4 @@
 (depends-on "twig-mode")
 (depends-on "phalcon" :git "https://github.com/masasam/emacs-phalcon.git")
 (depends-on "helm-phalcon" :git "https://github.com/masasam/emacs-helm-phalcon.git")
+(depends-on "cliphist")
