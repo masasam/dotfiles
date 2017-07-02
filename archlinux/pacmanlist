@@ -27,6 +27,7 @@ cscope
 ctags
 cups-pdf
 dconf-editor
+debian-archive-keyring
 debootstrap
 device-mapper
 dhcpcd
