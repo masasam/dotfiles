@@ -297,27 +297,15 @@ bindkey '^r' peco-select-history
 
 # cdr
 autoload -Uz is-at-least
-if is-at-least 4.3.11
-then
-    autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
-    add-zsh-hook chpwd chpwd_recent_dirs
-    add-zsh-hook chpwd my_compact_chpwd_recent_dirs
-    zstyle ':chpwd:*' recent-dirs-max 5000
-    zstyle ':chpwd:*' recent-dirs-default true
-    zstyle ':completion:*' recent-dirs-insert both
-    zstyle ':chpwd:*' recent-dirs-file "$HOME/Dropbox/zsh/chpwd-recent-dirs"
-    zstyle ':chpwd:*' recent-dirs-pushd true
-    function my_compact_chpwd_recent_dirs() {
-	emulate -L zsh
-	setopt extendedglob
-	local -aU reply
-	integer history_size
-	autoload -Uz chpwd_recent_filehandler
-	chpwd_recent_filehandler
-	history_size=$#reply
-	reply=(${^reply}(N))
-	(( $history_size == $#reply )) || chpwd_recent_filehandler $reply
-    }
+if [[ -n $(echo ${^fpath}/chpwd_recent_dirs(N)) && -n $(echo ${^fpath}/cdr(N)) ]]; then
+autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
+  add-zsh-hook chpwd chpwd_recent_dirs
+  zstyle ':completion:*:*:cdr:*:*' menu selection
+  zstyle ':completion:*' recent-dirs-insert both
+  zstyle ':chpwd:*' recent-dirs-max 5000
+  zstyle ':chpwd:*' recent-dirs-default true
+  zstyle ':chpwd:*' recent-dirs-file "$HOME/Dropbox/zsh/chpwd-recent-dirs"
+  zstyle ':chpwd:*' recent-dirs-pushd true
 fi
 
 
