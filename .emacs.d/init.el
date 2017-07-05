@@ -28,5 +28,8 @@
  '(init-loader-show-log-after-init 'error-only))
 (init-loader-load)
 
+;; Avoid to write `package-selected-packages` in init.el
+(load (setq custom-file (expand-file-name "custom.el" user-emacs-directory)))
+
 (provide 'init)
 ;;; init.el ends here
