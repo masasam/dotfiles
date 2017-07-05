@@ -1,4 +1,5 @@
 (require 'php-mode)
+(require 'php-eldoc)
 (add-hook 'php-mode-hook
 	  '(lambda ()
 	     (local-set-key (kbd "<f1>") 'my-php-symbol-lookup)
@@ -6,6 +7,7 @@
 	     (require 'ac-php)
 	     (add-to-list 'ac-sources 'ac-source-php)
 	     (yas-global-mode 1)
+	     (php-eldoc-enable)
 	     (define-key php-mode-map  (kbd "C-]") 'ac-php-find-symbol-at-point)
 	     (define-key php-mode-map  (kbd "C-t") 'ac-php-location-stack-back)
 	     ))
