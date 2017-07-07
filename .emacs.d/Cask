@@ -112,6 +112,7 @@
 (depends-on "twig-mode")
 (depends-on "phalcon" :git "https://github.com/masasam/emacs-phalcon.git")
 (depends-on "helm-directory" :git "https://github.com/masasam/emacs-helm-directory.git")
+(depends-on "git-complete" :git "https://github.com/masasam/git-complete.git")
 (depends-on "php-eldoc" :git "https://github.com/masasam/php-eldoc.git")
 (depends-on "cliphist")
 (depends-on "nginx-mode")
