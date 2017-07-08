@@ -93,7 +93,7 @@ Why Arch linux ?
 
   It is good because Arch linux unique problems are unlikely.
 
-- Arch linux is lightweghit because there is no extra thing. After installing Emacs Terminal chromium and launching an image htop
+- Arch linux is lightweight because there is no extra thing. After installing Emacs Terminal chromium and launching an image htop
 
 ![top](https://raw.githubusercontent.com/masasam/image/image/top.png)
 
