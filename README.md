@@ -91,9 +91,9 @@ Why Arch linux ?
 
   In principle the package of Arch is a policy to build from the source of vanilla (Vanilla means that it does not apply its own patch for arch linux)
 
-  It is good because ArchLinux unique problems are unlikely.
+  It is good because Arch linux unique problems are unlikely.
 
-- It is light !! After installing Emacs Terminal chromium and launching an image htop
+- Arch linux is lightweghit because there is no extra thing. After installing Emacs Terminal chromium and launching an image htop
 
 ![top](https://raw.githubusercontent.com/masasam/image/image/top.png)
 
