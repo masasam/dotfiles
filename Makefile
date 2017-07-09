@@ -77,6 +77,7 @@ install: ## install development environment for arch linux
 	yaourt ghq
 	yaourt casperjs
 	yaourt nkf
+	yaourt ctop
 	yaourt ibus-mozc
 	yaourt mozc
 	yaourt google-cloud-sdk

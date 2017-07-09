@@ -370,6 +370,7 @@ Install what you put in yaourt
 	yaourt ghq
 	yaourt casperjs
 	yaourt nkf
+	yaourt ctop
 	yaourt ibus-mozc
 	yaourt mozc
 	yaourt google-cloud-sdk
