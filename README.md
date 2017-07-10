@@ -357,7 +357,7 @@ Install what enters with pacman
 	sudo pacman -S npm llvm llvm-libs lldb hdparm rxvt-unicode dnsmasq typescript php cscope
 	sudo pacman -S speedtest-cli cpanminus mariadb-clients postgresql-libs tig lsof fzf
 	sudo pacman -S debootstrap tcpdump chromium bashdb pdfgrep ack parallel docker-machine
-	sudo pacman -S alsa-utils mlocate traceroute aws-cli
+	sudo pacman -S alsa-utils mlocate traceroute aws-cli hugo
 
 Install what you put in yaourt
 
@@ -366,7 +366,6 @@ Install what you put in yaourt
 	yaourt profile-sync-daemon
 	yaourt man-pages-ja
 	yaourt global
-	yaourt hugo
 	yaourt ghq
 	yaourt casperjs
 	yaourt nkf
