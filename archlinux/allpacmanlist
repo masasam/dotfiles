@@ -671,6 +671,7 @@ mobile-broadband-provider-info
 modemmanager
 mozilla-common
 mpfr
+mpv
 msgpack-c
 mtdev
 mutter
@@ -904,6 +905,7 @@ rp-pppoe
 rsync
 rtkit
 rtmpdump
+rubberband
 ruby
 run-parts
 rust-racer
@@ -973,6 +975,7 @@ ttf-dejavu
 ttf-inconsolata
 typescript
 tzdata
+uchardet
 udisks2
 unibilium
 unrar
@@ -983,6 +986,7 @@ usbmuxd
 usbutils
 util-linux
 v4l-utils
+vamp-plugin-sdk
 vi
 vid.stab
 videoproto
