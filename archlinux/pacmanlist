@@ -149,7 +149,6 @@ python-pylint
 python-sphinx
 python-virtualenv
 python2-neovim
-qt4
 reiserfsprogs
 retext
 ripgrep
@@ -185,7 +184,6 @@ usbutils
 util-linux
 vi
 vim
-vlc
 wget
 which
 whois

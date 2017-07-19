@@ -52,7 +52,7 @@ install: ## install development environment for arch linux
 	cat ${HOME}/.bashrc | grep ignoredups || \
 	echo "export HISTCONTROL=erasedups" >> ${HOME}/.bashrc
 	sudo pacman -S go zsh git vim dropbox nautilus-dropbox tmux keychain bashdb \
-	zsh-completions gnome-tweak-tool xsel emacs evince unrar seahorse vlc qt4 \
+	zsh-completions gnome-tweak-tool xsel emacs evince unrar seahorse hugo mpv \
 	archlinux-wallpaper inkscape file-roller xclip atool trash-cli debootstrap \
 	the_silver_searcher powertop cifs-utils gvfs gvfs-smb libreoffice-fresh-ja \
 	gnome-keyring cups-pdf eog mcomix openssh firefox firefox-i18n-ja fzf gimp \
@@ -66,7 +66,7 @@ install: ## install development environment for arch linux
 	python-jedi autopep8 python-virtualenv flake8 llvm llvm-libs lldb chromium \
 	python-pylint dnsmasq cscope speedtest-cli lsof postgresql-libs tig pdfgrep \
 	curl docker-compose parallel docker-machine alsa-utils mlocate traceroute \
-	aws-cli rust cargo rustup rustfmt rust-racer hugo mpv
+	aws-cli rust cargo rustup rustfmt rust-racer
 	mkdir -p ${HOME}/{bin,src}
 	yaourt peco
 	yaourt ttf-ricty

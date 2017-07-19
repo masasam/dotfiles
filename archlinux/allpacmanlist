@@ -1,4 +1,3 @@
-a52dec
 aalib
 accountsservice
 ack
@@ -84,7 +83,6 @@ damageproto
 db
 dbus
 dbus-glib
-dcadec
 dconf
 dconf-editor
 debian-archive-keyring
@@ -124,7 +122,6 @@ faac
 faad2
 fakeroot
 ffmpeg
-ffmpeg2.8
 fftw
 file
 file-roller
@@ -429,11 +426,9 @@ libdca
 libdmx
 libdrm
 libdv
-libdvbpsi
 libdvdnav
 libdvdread
 libe-book
-libebml
 libedit
 libelf
 libepoxy
@@ -471,15 +466,12 @@ libindicator-gtk2
 libinput
 libixion
 libjpeg-turbo
-libkate
 libksba
 liblangtag
 libldap
 liblouis
 liblqr
-libmad
 libmariadbclient
-libmatroska
 libmbim
 libmm-glib
 libmms
@@ -551,14 +543,12 @@ libssh2
 libstemmer
 libsynctex
 libsystemd
-libtar
 libtasn1
 libteam
 libtermkey
 libthai
 libtheora
 libtiff
-libtiger
 libtirpc
 libtommath
 libtool
@@ -567,7 +557,6 @@ libtxc_dxtn
 libunicodenames
 libunistring
 libunwind
-libupnp
 libusb
 libusbmuxd
 libutempter
@@ -702,7 +691,6 @@ openal
 opencore-amr
 opencv
 openexr
-openjpeg
 openjpeg2
 openresolv
 openssh
@@ -887,7 +875,6 @@ python2-zope-component
 python2-zope-event
 python2-zope-interface
 qpdf
-qt4
 qt5-base
 randrproto
 raptor
@@ -918,7 +905,6 @@ schroedinger
 scrnsaverproto
 sdl
 sdl2
-sdl_image
 seahorse
 sed
 semver
@@ -992,7 +978,6 @@ vid.stab
 videoproto
 vim
 vim-runtime
-vlc
 volume_key
 vte
 vte-common

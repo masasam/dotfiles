@@ -325,7 +325,7 @@ Install what enters with pacman
     sudo pacman -S xsel
     sudo pacman -S archlinux-wallpaper
     sudo pacman -S evince inkscape gimp unrar
-    sudo pacman -S file-roller vlc qt4
+    sudo pacman -S file-roller
     sudo pacman -S xclip
     sudo pacman -S atool
     sudo pacman -S trash-cli
