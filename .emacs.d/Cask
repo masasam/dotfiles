@@ -116,3 +116,4 @@
 (depends-on "php-eldoc" :git "https://github.com/masasam/php-eldoc.git")
 (depends-on "cliphist")
 (depends-on "nginx-mode")
+(depends-on "ac-slime")
