@@ -117,3 +117,4 @@
 (depends-on "cliphist")
 (depends-on "nginx-mode")
 (depends-on "ac-slime")
+(depends-on "goto-chg")
