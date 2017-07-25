@@ -526,6 +526,11 @@ function webm2gif() {
 }
 
 
+function remove-exif() {
+    jhead -purejpg $1
+}
+
+
 # zsh-syntax-highlighting(pacman -S zsh-syntax-highlighting)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # zsh-completions for google-cloud-sdk(yaourt google-cloud-sdk)
