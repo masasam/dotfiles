@@ -378,6 +378,7 @@ Install what you put in yaourt
 	yaourt debian-archive-keyring
 	yaourt slack-desktop
 	yaourt git-secrets
+	yaourt quicklisp
 
 #### golang npm rust
 
