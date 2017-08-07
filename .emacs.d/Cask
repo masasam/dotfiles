@@ -119,3 +119,4 @@
 (depends-on "ac-slime")
 (depends-on "goto-chg")
 (depends-on "whitespace-cleanup-mode")
+(depends-on "httprepl")
