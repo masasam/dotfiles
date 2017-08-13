@@ -130,7 +130,7 @@ gdisk /dev/sda
     1 sda1  BIOS boot partition(ef02) 1007KB
     2 sda2 / All remaining
 
-Formatted and mounted with ext4
+Format and mount with ext4
 
     mkfs.ext4 /dev/sda2
     mount /dev/sda2 /mnt

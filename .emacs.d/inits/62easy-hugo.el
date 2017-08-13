@@ -9,6 +9,6 @@
 (setq easy-hugo-basedir-1 "~/src/github.com/masasam/ppap/")
 (setq easy-hugo-sshdomain-1 "blogdomain")
 (setq easy-hugo-root-1 "/home/ppap/")
-(setq easy-hugo-url-1 "http://example.com/")
+(setq easy-hugo-url-1 "http://example.com")
 (setq easy-hugo-basedir-2 "~/src/github.com/masasam/ppap2/")
-(setq easy-hugo-url-2 "http://example.org/")
+(setq easy-hugo-url-2 "http://example.org")
