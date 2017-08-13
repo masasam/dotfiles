@@ -1,0 +1,1 @@
+(beginend-global-mode)

@@ -120,3 +120,4 @@
 (depends-on "goto-chg")
 (depends-on "whitespace-cleanup-mode")
 (depends-on "httprepl")
+(depends-on "beginend")
