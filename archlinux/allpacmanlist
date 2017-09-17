@@ -163,6 +163,7 @@ geoclue2
 geocode-glib
 gettext
 ghc
+ghc-libs
 ghostscript
 giflib
 gimp
@@ -243,6 +244,7 @@ haskell-async
 haskell-attoparsec
 haskell-base-compat
 haskell-base64-bytestring
+haskell-basement
 haskell-blaze-builder
 haskell-blaze-html
 haskell-blaze-markup
@@ -889,6 +891,7 @@ reiserfsprogs
 renderproto
 rest
 retext
+rhash
 ripgrep
 rp-pppoe
 rsync
