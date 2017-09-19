@@ -14,7 +14,7 @@ if you make Makefile you can correspond to any distribution.
 
 Let's make a Makefile immediately.
 
-### With a Makefile, such a good thing
+### With Makefile, such a good thing
 
 Easy to build development environment with
 
@@ -73,9 +73,9 @@ Then dotfiles will be deployed and restored.
 
    Sylpheed configuration file and mail data.
 
-   As mail arrives, it will be synchronized to dropbox so you do not have to think about backup.
+   As mail arrives, it will be synchronized to dropbox so you don't have to think about backup.
 
-Do not forget to make dropbox 2 step verification.
+Don't forget to make dropbox 2 factor authentication.
 
 # ArchLinux install
 
@@ -488,13 +488,13 @@ Keep the default shell bash.
 
 When started with tmuxstart, if you have a tmux session, you use it.
 
-If you do not have a tmux session, tmux will start up in a new session.
+If you don't have a tmux session, tmux will start up in a new session.
 
 # Powertop
 
 Reduce power consumption to save energy.
 
-Do not send power to unused system bus.
+Don't send power to unused system bus.
 
 >sudo pacman -S powertop
 
@@ -573,7 +573,7 @@ Do the same DNS lookup twice on drill command.
 
 ![dnsmasq](https://raw.githubusercontent.com/masasam/image/image/dnsmasq.png)
 
-## Do not suspend even if closing the lid
+## Don't suspend even if closing the lid
 
 It does not suspend, because startup is fast
 
@@ -661,7 +661,7 @@ reboot
 
 <http://mediadesign.jp/article-4218/>
 
-I do not want to hit it with an address or keyboard Make sure to
+I don't want to hit it with an address or keyboard Make sure to
 
 include your postal code when you enter the postal code.
 
