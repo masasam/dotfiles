@@ -200,6 +200,7 @@ gnutls
 go
 gobject-introspection
 gobject-introspection-runtime
+gpaste
 gperf
 gpgme
 gpm
@@ -320,6 +321,7 @@ haskell-temporary
 haskell-texmath
 haskell-text
 haskell-tf-random
+haskell-th-abstraction
 haskell-time-locale-compat
 haskell-tls
 haskell-transformers-base
@@ -395,7 +397,6 @@ ldns
 less
 libabw
 libaio
-libappindicator-gtk2
 libarchive
 libass
 libassuan
@@ -422,8 +423,6 @@ libcups
 libcurl-compat
 libdaemon
 libdatrie
-libdbusmenu-glib
-libdbusmenu-gtk2
 libdc1394
 libdca
 libdmx
@@ -465,7 +464,6 @@ libid3tag
 libidn
 libiec61883
 libimobiledevice
-libindicator-gtk2
 libinput
 libixion
 libjpeg-turbo

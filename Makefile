@@ -12,8 +12,6 @@ init: ## deploy this dotfiles
 	ln -vsf ${PWD}/.config/screenkey.json ${HOME}/.config/screenkey.json
 	mkdir -p ${HOME}/.config/psd
 	ln -vsf ${PWD}/.config/psd/psd.conf   ${HOME}/.config/psd/psd.conf
-	mkdir -p ${HOME}/.config/clipit
-	ln -vsf ${PWD}/.config/clipit/clipitrc   ${HOME}/.config/clipit/clipitrc
 	mkdir -p ${HOME}/.config/gtk-3.0
 	ln -vsf ${PWD}/.config/gtk-3.0/bookmarks   ${HOME}/.config/gtk-3.0/bookmarks
 	sudo ln -vsf ${PWD}/etc/pacman.conf   /etc/pacman.conf
@@ -68,7 +66,7 @@ install: ## install development environment for arch linux
 	python-jedi autopep8 python-virtualenv flake8 llvm llvm-libs lldb chromium \
 	python-pylint dnsmasq cscope speedtest-cli lsof postgresql-libs tig pdfgrep \
 	curl docker-compose parallel docker-machine alsa-utils mlocate traceroute \
-	aws-cli rust cargo rustup rustfmt rust-racer jhead
+	aws-cli rust cargo rustup rustfmt rust-racer jhead gpaste
 	mkdir -p ${HOME}/{bin,src}
 	yaourt peco
 	yaourt ttf-ricty
@@ -82,7 +80,6 @@ install: ## install development environment for arch linux
 	yaourt ibus-mozc
 	yaourt mozc
 	yaourt google-cloud-sdk
-	yaourt clipit
 	yaourt screenkey
 	yaourt debian-archive-keyring
 	yaourt slack-desktop
