@@ -358,6 +358,7 @@ Install what enters with pacman
 	sudo pacman -S speedtest-cli cpanminus mariadb-clients postgresql-libs tig lsof fzf
 	sudo pacman -S debootstrap tcpdump chromium bashdb pdfgrep ack parallel docker-machine
 	sudo pacman -S alsa-utils mlocate traceroute aws-cli hugo mpv jhead gpaste pkgstats
+	sudo pacman -S nethogs
 
 Install what you put in yaourt
 
