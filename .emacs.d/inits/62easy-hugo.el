@@ -6,7 +6,7 @@
 (define-key global-map (kbd "C-c C-e") 'easy-hugo)
 (setq easy-hugo-amazon-s3-bucket-name "masasam")
 (setq easy-hugo-google-cloud-storage-bucket-name "masa-storage")
-(setq easy-hugo-blog-number 2)
+(setq easy-hugo-blog-number 3)
 (setq easy-hugo-basedir-1 "~/src/github.com/masasam/ppap/")
 (setq easy-hugo-sshdomain-1 "blogdomain")
 (setq easy-hugo-root-1 "/home/ppap/")
