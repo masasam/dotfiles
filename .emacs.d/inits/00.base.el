@@ -3,6 +3,11 @@
 (prefer-coding-system 'utf-8)
 
 
+;; exec-path-from-shell
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
+
+
 ;; Reduce GC to speed up (eat memory)
 (setq gc-cons-threshold (* 128 1024 1024))
 
