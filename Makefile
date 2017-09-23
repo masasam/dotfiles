@@ -1,5 +1,6 @@
 init: ## deploy this dotfiles
 	ln -vsf ${PWD}/.zshrc   ${HOME}/.zshrc
+	ln -vsf ${PWD}/.bashrc   ${HOME}/.bashrc
 	ln -vsf ${PWD}/.gitconfig   ${HOME}/.gitconfig
 	ln -vsf ${PWD}/.tern-config   ${HOME}/.tern-config
 	ln -vsf ${PWD}/.tmux.conf   ${HOME}/.tmux.conf
@@ -47,10 +48,6 @@ init: ## deploy this dotfiles
 install: ## install development environment for arch linux
 	export GOPATH=${HOME}
 	export PATH="$PATH:$GOPATH/bin"
-	cat ${HOME}/.bashrc | grep tmuxstart || \
-	echo "alias tmuxstart='tmux new-session -A -s main'" >> ${HOME}/.bashrc
-	cat ${HOME}/.bashrc | grep ignoredups || \
-	echo "export HISTCONTROL=erasedups" >> ${HOME}/.bashrc
 	sudo pacman -S go zsh git vim dropbox nautilus-dropbox tmux keychain bashdb \
 	zsh-completions gnome-tweak-tool xsel emacs evince unrar seahorse hugo mpv \
 	archlinux-wallpaper inkscape file-roller xclip atool trash-cli debootstrap \
@@ -107,10 +104,6 @@ backup: ## backup archlinux installed packages
 recover: ## recovery from backup arch linux package
 	sudo pacman -S --needed `cat ${HOME}/src/github.com/masasam/dotfiles/archlinux/pacmanlist`
 	yaourt -S --needed $(DOY) `cat ${HOME}/src/github.com/masasam/dotfiles/archlinux/yaourtlist`
-	cat ${HOME}/.bashrc | grep tmuxstart || \
-	echo "alias tmuxstart='tmux new-session -A -s main'" >> ${HOME}/.bashrc
-	cat ${HOME}/.bashrc | grep ignoredups || \
-	echo "export HISTCONTROL=ignoredups" >> ${HOME}/.bashrc
 	mkdir -p ${HOME}/{bin,src}
 	export GOPATH=${HOME}
 	export PATH="$PATH:$GOPATH/bin"
