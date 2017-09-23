@@ -40,7 +40,7 @@ Once after creating the environment
 
     make backup
 
-Since the arch linux package list that was installed at will be backed up to Dropbox,
+Since the arch linux package list that was installed at will be backed up to archlinux directry,
 
 you can recover the arch linux environment with.
 
