@@ -676,6 +676,7 @@ neovim
 net-tools
 netcdf
 netctl
+nethogs
 nettle
 networkmanager
 ninja
@@ -732,6 +733,7 @@ pinentry
 pixman
 pkg-config
 pkgfile
+pkgstats
 polkit
 poppler
 poppler-data
@@ -790,6 +792,7 @@ python-mccabe
 python-msgpack
 python-neovim
 python-packaging
+python-parso
 python-pyasn1
 python-pycodestyle
 python-pyflakes

@@ -118,6 +118,7 @@ nautilus
 nautilus-dropbox
 neovim
 netctl
+nethogs
 networkmanager
 nmap
 noto-fonts-cjk
@@ -136,6 +137,7 @@ phantomjs
 php
 pkg-config
 pkgfile
+pkgstats
 poppler-data
 postgresql-libs
 powertop
