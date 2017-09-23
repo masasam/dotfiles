@@ -1,1 +1,2 @@
-(exec-path-from-shell-copy-envs '("PATH" "VIRTUAL_ENV" "GOROOT" "GOPATH"))
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
