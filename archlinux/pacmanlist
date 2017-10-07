@@ -154,7 +154,6 @@ python-sphinx
 python-virtualenv
 python2-neovim
 reiserfsprogs
-retext
 ripgrep
 rust-racer
 rustfmt

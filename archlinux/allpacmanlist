@@ -39,6 +39,7 @@ bluez-libs
 boost-libs
 bridge-utils
 btrfs-progs
+bubblewrap
 bzip2
 c-ares
 ca-certificates
@@ -176,6 +177,7 @@ glibc
 glibmm
 glu
 gmime
+gmime3
 gmp
 gnome-autoar
 gnome-backgrounds
@@ -379,6 +381,7 @@ jhead
 jq
 js
 js38
+js52
 json-c
 json-glib
 jsoncpp
@@ -730,6 +733,7 @@ perl-xml-parser
 phantomjs
 php
 pinentry
+pipewire
 pixman
 pkg-config
 pkgfile
@@ -753,7 +757,6 @@ pygmentize
 pygobject-devel
 pygobject2-devel
 pygtk
-pyqt5-common
 python
 python-appdirs
 python-astroid
@@ -785,8 +788,6 @@ python-jmespath
 python-jsonschema
 python-lazy-object-proxy
 python-mako
-python-markdown
-python-markups
 python-markupsafe
 python-mccabe
 python-msgpack
@@ -799,13 +800,11 @@ python-pyflakes
 python-pygments
 python-pylint
 python-pyparsing
-python-pyqt5
 python-pytz
 python-requests
 python-rsa
 python-s3transfer
 python-setuptools
-python-sip
 python-six
 python-snowballstemmer
 python-sphinx
@@ -891,7 +890,6 @@ redland
 reiserfsprogs
 renderproto
 rest
-retext
 rhash
 ripgrep
 rp-pppoe
@@ -918,7 +916,6 @@ shadow
 shared-color-targets
 shared-mime-info
 shellcheck
-sip
 slack-desktop
 slang
 smbclient

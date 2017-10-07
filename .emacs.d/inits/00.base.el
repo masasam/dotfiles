@@ -46,7 +46,7 @@
 ;; Do not use auto save
 (setq auto-save-default nil)
 ;; Do not create lock file
- (setq create-lockfiles nil)
+(setq create-lockfiles nil)
 
 
 ;; C-h is backspace
