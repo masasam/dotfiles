@@ -3,15 +3,13 @@
 ;;; Code:
 (package-initialize)
 
-;;(set-frame-parameter nil 'fullscreen 'maximized)
-(custom-set-variables
- '(initial-frame-alist (quote ((fullscreen . maximized)))))
-
 (menu-bar-mode 0)
 (tool-bar-mode 0)
 (scroll-bar-mode 0)
 (setq inhibit-splash-screen t)
 (setq inhibit-startup-message t)
+
+(set-frame-parameter nil 'fullscreen 'maximized)
 
 ;; cask
 (require 'cask "~/.cask/cask.el")
