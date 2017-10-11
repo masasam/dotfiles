@@ -109,7 +109,7 @@
 
 
 ;; Use the X11 clipboard
-(setq select-enable-primary t)
+(setq select-enable-clipboard  t)
 (bind-key "M-w" 'clipboard-kill-ring-save)
 (bind-key "C-w" 'clipboard-kill-region)
 
