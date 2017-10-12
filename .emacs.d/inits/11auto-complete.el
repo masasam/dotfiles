@@ -13,3 +13,5 @@
 (setq ac-use-menu-map t);; Complement candidate selection with C-n / C-p when complement menu is displayed
 (setq ac-use-fuzzy t)   ;; Ambiguous match
 (global-auto-complete-mode t)
+(set-face-background 'popup-tip-face "#483d8b")
+(set-face-foreground 'popup-tip-face "white")
