@@ -181,7 +181,6 @@ gmp
 gnome-autoar
 gnome-backgrounds
 gnome-bluetooth
-gnome-calculator
 gnome-color-manager
 gnome-control-center
 gnome-desktop
@@ -228,7 +227,6 @@ gtk3
 gtk3-print-backends
 gtkglext
 gtkmm
-gtksourceview3
 gtkspell
 guile
 guile2.0
