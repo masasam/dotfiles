@@ -158,7 +158,6 @@ gdb-common
 gdbm
 gdk-pixbuf2
 gdm
-gedit
 gegl02
 geoclue2
 geocode-glib
@@ -217,7 +216,6 @@ gsettings-desktop-schemas
 gsfonts
 gsl
 gsm
-gspell
 gst-plugins-bad
 gst-plugins-base
 gst-plugins-base-libs
@@ -378,6 +376,7 @@ jbig2dec
 jemalloc
 jfsutils
 jhead
+jpegoptim
 jq
 js
 js38
@@ -557,7 +556,6 @@ libtiff
 libtirpc
 libtommath
 libtool
-libtracker-sparql
 libtxc_dxtn
 libunicodenames
 libunistring
@@ -702,6 +700,7 @@ openresolv
 openssh
 openssl
 openssl-1.0
+optipng
 opus
 orc
 otf-ipafont
@@ -958,6 +957,7 @@ tig
 tmux
 totem-plparser
 traceroute
+tracker
 trash-cli
 tslib
 ttf-dejavu

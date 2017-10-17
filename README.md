@@ -233,13 +233,11 @@ Install drivers that match your environment
 Gnome can be put as small as necessary
 
     pacman -S gnome-backgrounds
-	pacman -S gnome-calculator
 	pacman -S gnome-control-center
 	pacman -S gnome-keyring
 	pacman -S gnome-shell-extensions
 	pacman -S gnome-tweak-tool
 	pacman -S nautilus
-	pacman -S gedit
 
 Terminal uses termite and lilyterm
 

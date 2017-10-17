@@ -59,7 +59,6 @@ gcc
 gcc-libs
 gdb
 gdm
-gedit
 gettext
 gimp
 git
@@ -88,6 +87,7 @@ iproute2
 iputils
 jfsutils
 jhead
+jpegoptim
 jq
 keychain
 less
@@ -124,6 +124,7 @@ nmap
 noto-fonts-cjk
 npm
 openssh
+optipng
 otf-ipafont
 pacman
 pandoc
