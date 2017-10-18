@@ -226,7 +226,6 @@ As bash complements work
 Install drivers that match your environment
 
     lspci|grep VGA
-    pacman -S xf86-video-intel
     pacman -S libva-intel-driver
     pacman -S xorg-server xorg-server-utils xorg-xinit xorg-xclock xterm
 

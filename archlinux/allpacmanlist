@@ -1009,7 +1009,6 @@ xdg-user-dirs-gtk
 xdg-utils
 xextproto
 xf86-input-libinput
-xf86-video-intel
 xf86dgaproto
 xf86vidmodeproto
 xfsprogs
