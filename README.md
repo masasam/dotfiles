@@ -353,7 +353,7 @@ Install what enters with pacman
 	sudo pacman -S python-pylint flake8
 	sudo pacman -S npm llvm llvm-libs lldb hdparm rxvt-unicode dnsmasq typescript php cscope
 	sudo pacman -S speedtest-cli cpanminus mariadb-clients postgresql-libs tig lsof fzf
-	sudo pacman -S debootstrap tcpdump chromium bashdb pdfgrep ack parallel docker-machine
+	sudo pacman -S debootstrap tcpdump chromium bashdb pdfgrep ack parallel
 	sudo pacman -S alsa-utils mlocate traceroute aws-cli hugo mpv jhead gpaste pkgstats
 	sudo pacman -S nethogs optipng jpegoptim
 

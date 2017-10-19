@@ -62,9 +62,8 @@ install: ## install development environment for arch linux
 	zsh-syntax-highlighting xorg-apps shellcheck python-pyflakes php typescript \
 	python-jedi autopep8 python-virtualenv flake8 llvm llvm-libs lldb chromium \
 	python-pylint dnsmasq cscope speedtest-cli lsof postgresql-libs tig pdfgrep \
-	curl docker-compose parallel docker-machine alsa-utils mlocate traceroute \
-	aws-cli rust cargo rustup rustfmt rust-racer jhead gpaste pkgstats nethogs \
-	optipng jpegoptim
+	curl docker-compose parallel alsa-utils mlocate traceroute rust-racer jhead \
+	aws-cli rust cargo rustup rustfmt gpaste pkgstats nethogs optipng jpegoptim
 	mkdir -p ${HOME}/{bin,src}
 	yaourt peco
 	yaourt ttf-ricty
