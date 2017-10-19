@@ -102,7 +102,6 @@ docbook-xml
 docbook-xsl
 docker
 docker-compose
-docker-machine
 dosfstools
 double-conversion
 dropbox
@@ -565,6 +564,7 @@ libutil-linux
 libuv
 libva
 libva-intel-driver
+libva-utils
 libvdpau
 libvisio
 libvisual

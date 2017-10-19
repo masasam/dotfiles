@@ -35,7 +35,6 @@ diffutils
 dnsmasq
 docker
 docker-compose
-docker-machine
 dropbox
 e2fsprogs
 elixir
@@ -94,6 +93,7 @@ libcurl-compat
 libreoffice-fresh-ja
 libtool
 libva-intel-driver
+libva-utils
 licenses
 lilyterm
 linux
