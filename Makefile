@@ -64,7 +64,8 @@ install: ## install development environment for arch linux
 	python-jedi autopep8 python-virtualenv flake8 llvm llvm-libs lldb chromium \
 	python-pylint dnsmasq cscope speedtest-cli lsof postgresql-libs tig pdfgrep \
 	curl docker-compose parallel alsa-utils mlocate traceroute rust-racer jhead \
-	aws-cli rust cargo rustup rustfmt gpaste pkgstats nethogs optipng jpegoptim
+	aws-cli rust cargo rustup rustfmt gpaste pkgstats nethogs optipng jpegoptim \
+	noto-fonts-emoji
 	mkdir -p ${HOME}/{bin,src}
 	yaourt peco
 	yaourt ttf-ricty
