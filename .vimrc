@@ -25,7 +25,6 @@ set hidden
 set history=2000
 set paste
 set sh=zsh
-set cursorline
 set laststatus=2
 set statusline=%F%m%=[%p%%]\ (%l,%c)\ %{'['.(&fenc!=''?&fenc:&enc).']\ ['.&fileformat.']'}
 set nocompatible
