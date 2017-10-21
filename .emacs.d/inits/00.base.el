@@ -132,7 +132,7 @@
 (bind-key "C-x F" 'find-function)
 (bind-key "C-x V" 'find-variable)
 ;; emacs c source dir:
-(setq find-function-C-source-directory "~/Dropbox/emacs/emacs-25.2/src")
+(setq find-function-C-source-directory "~/Dropbox/emacs/emacs-25.3/src")
 
 
 ;; Highlight the space at the end of the line
