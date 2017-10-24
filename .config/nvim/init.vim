@@ -124,7 +124,6 @@ set showcmd
 set hidden
 set history=2000
 set sh=zsh
-set cursorline
 set laststatus=2
 set wildmenu
 set sh=zsh
