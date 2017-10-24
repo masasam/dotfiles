@@ -53,6 +53,7 @@ fish
 flake8
 flex
 fzf
+gauche
 gawk
 gcc
 gcc-libs

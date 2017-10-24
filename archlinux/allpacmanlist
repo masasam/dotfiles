@@ -144,6 +144,7 @@ fribidi
 fuse-common
 fuse2
 fzf
+gauche
 gavl
 gawk
 gc
@@ -228,6 +229,7 @@ gtkglext
 gtkmm
 gtkspell
 guile
+guile1.8
 guile2.0
 gvfs
 gvfs-smb
@@ -916,6 +918,7 @@ shared-mime-info
 shellcheck
 slack-desktop
 slang
+slib
 smbclient
 snappy
 sound-theme-freedesktop
