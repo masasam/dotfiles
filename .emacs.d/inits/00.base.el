@@ -145,3 +145,12 @@
 
 ;; contain many mode setting
 (require 'generic-x)
+
+
+;; mytimer
+(defun mytimer(n)
+  (interactive "nMinute:")
+  (run-at-time (* n 60) nil #'mytimer-2))
+
+(defun mytimer-2()
+  (shell-command-to-string "notify-send -u critical 'Emacs' 'It is time' -i utilities-terminal"))
