@@ -30,4 +30,3 @@
 
 ;; auto-async-byte-compile
 (push '(" *auto-async-byte-compile*" :height 10 :position bottom :noselect t) popwin:special-display-config)
-
