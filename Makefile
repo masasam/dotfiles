@@ -5,6 +5,7 @@ init: ## deploy this dotfiles
 	ln -vsf ${PWD}/.gitconfig   ${HOME}/.gitconfig
 	ln -vsf ${PWD}/.tern-config   ${HOME}/.tern-config
 	ln -vsf ${PWD}/.tmux.conf   ${HOME}/.tmux.conf
+	ln -vsf ${PWD}/.screenrc   ${HOME}/.screenrc
 	ln -vsf ${PWD}/.xinitrc   ${HOME}/.xinitrc
 	ln -vsf ${PWD}/.aspell.conf   ${HOME}/.aspell.conf
 	mkdir -p ${HOME}/.config
@@ -65,7 +66,7 @@ install: ## install development environment for arch linux
 	python-pylint dnsmasq cscope speedtest-cli lsof postgresql-libs tig pdfgrep \
 	curl docker-compose parallel alsa-utils mlocate traceroute rust-racer jhead \
 	aws-cli rust cargo rustup rustfmt gpaste pkgstats nethogs optipng jpegoptim \
-	noto-fonts-emoji gauche
+	noto-fonts-emoji gauche screen
 	mkdir -p ${HOME}/{bin,src}
 	yaourt peco
 	yaourt ttf-ricty

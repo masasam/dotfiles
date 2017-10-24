@@ -162,6 +162,7 @@ rustfmt
 rustup
 s-nail
 sbcl
+screen
 seahorse
 sed
 shadow
