@@ -3,5 +3,5 @@
 # key: src
 # --
 <a href="https://raw.githubusercontent.com/masasam/image/image/$1">
-<img src="https://raw.githubusercontent.com/masasam/image/image/$1" width="100%">
+<img src="https://raw.githubusercontent.com/masasam/image/image/$1" width="100%" alt="">
 </a>
