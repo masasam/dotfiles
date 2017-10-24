@@ -531,6 +531,29 @@ function remove-exif() {
 }
 
 
+function mytimer() {
+    if [ $# = 0 ]; then
+	echo 'mytimer $1'
+    elif [ $# = 1 ]; then
+	mytimer2 $1 &
+    else
+	echo 'mytimer $1'
+    fi
+}
+
+function mytimer2() {
+    if [ $# = 0 ]; then
+	echo 'mytimer $1'
+    elif [ $# = 1 ]; then
+	NUM=`expr 60 \* $1`
+	sleep $NUM
+	notify-send -u critical 'Terminal' 'It is time' -i utilities-terminal
+    else
+	echo 'mytimer $1'
+    fi
+}
+
+
 # zsh-syntax-highlighting(pacman -S zsh-syntax-highlighting)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # zsh-completions for google-cloud-sdk(yaourt google-cloud-sdk)
