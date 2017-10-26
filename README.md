@@ -360,6 +360,8 @@ Install what enters with pacman
 Install what you put in yaourt
 
 	yaourt peco
+	yaourt ttf-cica
+	yaourt ttf-myrica
 	yaourt ttf-ricty
 	yaourt profile-sync-daemon
 	yaourt man-pages-ja

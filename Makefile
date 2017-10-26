@@ -69,6 +69,8 @@ install: ## install development environment for arch linux
 	noto-fonts-emoji gauche screen
 	mkdir -p ${HOME}/{bin,src}
 	yaourt peco
+	yaourt ttf-cica
+	yaourt ttf-myrica
 	yaourt ttf-ricty
 	yaourt profile-sync-daemon
 	yaourt man-pages-ja
