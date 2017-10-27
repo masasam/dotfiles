@@ -96,7 +96,6 @@ libtool
 libva-intel-driver
 libva-utils
 licenses
-lilyterm
 linux
 linux-docs
 lldb
@@ -160,6 +159,7 @@ ripgrep
 rust-racer
 rustfmt
 rustup
+rxvt-unicode
 s-nail
 sbcl
 screen

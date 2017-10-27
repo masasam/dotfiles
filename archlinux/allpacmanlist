@@ -620,7 +620,6 @@ libyaml
 libzip
 libzmf
 licenses
-lilyterm
 linux
 linux-api-headers
 linux-docs
@@ -902,6 +901,8 @@ run-parts
 rust-racer
 rustfmt
 rustup
+rxvt-unicode
+rxvt-unicode-terminfo
 s-nail
 sbc
 sbcl
@@ -985,7 +986,6 @@ videoproto
 vim
 vim-runtime
 volume_key
-vte
 vte-common
 vte3-ng
 vulkan-icd-loader
