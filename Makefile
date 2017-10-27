@@ -7,6 +7,7 @@ init: ## deploy this dotfiles
 	ln -vsf ${PWD}/.tmux.conf   ${HOME}/.tmux.conf
 	ln -vsf ${PWD}/.screenrc   ${HOME}/.screenrc
 	ln -vsf ${PWD}/.xinitrc   ${HOME}/.xinitrc
+	ln -vsf ${PWD}/.Xresources   ${HOME}/.Xresources
 	ln -vsf ${PWD}/.aspell.conf   ${HOME}/.aspell.conf
 	mkdir -p ${HOME}/.config
 	ln -vsf ${HOME}/Dropbox/zsh/hub   ${HOME}/.config/hub

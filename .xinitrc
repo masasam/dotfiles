@@ -11,3 +11,5 @@ tpset "Evdev Wheel Emulation Button" 2
 tpset "Evdev Wheel Emulation Timeout" 200
 tpset "Evdev Wheel Emulation Axes" 6 7 4 5
 tpset "Device Accel Constant Deceleration" 0.95
+
+[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
