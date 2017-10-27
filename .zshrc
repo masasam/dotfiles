@@ -27,10 +27,16 @@ zshaddhistory() {
        && ${cmd} != la
        && ${cmd} != cd
        && ${cmd} != man
+       && ${cmd} != whois
+       && ${cmd} != drill
+       && ${cmd} != traceroute
     ]]
 }
 
 unsetopt extended_history
+setopt hist_find_no_dups
+setopt hist_reduce_blanks
+setopt hist_no_store
 setopt append_history       # Add history
 setopt inc_append_history   # Add history incremental
 setopt share_history        # Share history other terminal
