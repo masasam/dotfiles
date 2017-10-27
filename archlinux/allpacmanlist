@@ -1001,7 +1001,6 @@ wildmidi
 wmctrl
 wpa_supplicant
 x265
-xbitmaps
 xcb-proto
 xcb-util
 xcb-util-image
@@ -1028,7 +1027,6 @@ xorg-fonts-alias
 xorg-fonts-encodings
 xorg-fonts-misc
 xorg-iceauth
-xorg-luit
 xorg-mkfontdir
 xorg-mkfontscale
 xorg-server
@@ -1070,7 +1068,6 @@ xorg-xwininfo
 xorg-xwud
 xproto
 xsel
-xterm
 xvidcore
 xz
 yajl

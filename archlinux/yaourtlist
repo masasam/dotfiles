@@ -13,5 +13,7 @@ peco
 profile-sync-daemon
 quicklisp
 screenkey
+ttf-cica
+ttf-myrica
 ttf-ricty
 yum

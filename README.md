@@ -227,7 +227,7 @@ Install drivers that match your environment
 
     lspci|grep VGA
     pacman -S libva-intel-driver
-    pacman -S xorg-server xorg-server-utils xorg-xinit xorg-xclock xterm
+    pacman -S xorg-server xorg-server-utils xorg-xinit xorg-xclock
 
 Gnome can be put as small as necessary
 
