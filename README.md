@@ -238,10 +238,10 @@ Gnome can be put as small as necessary
 	pacman -S gnome-tweak-tool
 	pacman -S nautilus
 
-Terminal uses termite and lilyterm
+Terminal uses termite and urxvt
 
 	sudo pacman -S termite
-	sudo pacman -S lilyterm
+	sudo pacman -S rxvt-unicode
 
 Enable graphical login with gdm
 

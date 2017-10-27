@@ -25,8 +25,6 @@ init: ## deploy this dotfiles
 	sudo ln -vsf ${PWD}/etc/NetworkManager/NetworkManager.conf /etc/NetworkManager/NetworkManager.conf
 	sudo mkdir -p /etc/libreoffice
 	sudo ln -vsf ${PWD}/etc/libreoffice/sofficerc /etc/libreoffice/sofficerc
-	mkdir -p ${HOME}/.config/lilyterm
-	ln -vsf ${PWD}/.config/lilyterm/default.conf   ${HOME}/.config/lilyterm/default.conf
 	mkdir -p ${HOME}/.config/termite
 	ln -vsf ${PWD}/.config/termite/config   ${HOME}/.config/termite/config
 	mkdir -p ${HOME}/.config/nvim
@@ -58,15 +56,15 @@ install: ## install development environment for arch linux
 	otf-ipafont pkgfile baobab dconf-editor rsync elixir nodejs phantomjs whois \
 	nmap poppler-data rtmpdump ffmpeg asciidoc sbcl docker aspell aspell-en ack \
 	gdb ripgrep hub wmctrl pwgen linux-docs ansible htop mariadb-clients tcpdump \
-	pygmentize arch-install-scripts lilyterm termite neovim pandoc jq sylpheed \
+	pygmentize arch-install-scripts termite neovim pandoc jq sylpheed pkgstats \
 	texlive-langjapanese eslint texlive-latexextra ctags python-pygments hdparm \
 	python-neovim python2-neovim noto-fonts-cjk arc-gtk-theme networkmanager npm \
 	zsh-syntax-highlighting xorg-apps shellcheck python-pyflakes php typescript \
 	python-jedi autopep8 python-virtualenv flake8 llvm llvm-libs lldb chromium \
 	python-pylint dnsmasq cscope speedtest-cli lsof postgresql-libs tig pdfgrep \
 	curl docker-compose parallel alsa-utils mlocate traceroute rust-racer jhead \
-	aws-cli rust cargo rustup rustfmt gpaste pkgstats nethogs optipng jpegoptim \
-	noto-fonts-emoji gauche screen
+	noto-fonts-emoji rust cargo rustup rustfmt gpaste nethogs optipng jpegoptim \
+	gauche screen aws-cli
 	mkdir -p ${HOME}/{bin,src}
 	yaourt peco
 	yaourt ttf-cica
