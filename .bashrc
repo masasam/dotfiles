@@ -6,12 +6,11 @@
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
+alias remacs='emacs -q -l ~/Dropbox/emacs/default.el'
 PS1='[\u@\h \W]\$ '
 alias screenstart='screen -D -RR'
 alias tmuxstart='tmux new-session -A -s main'
 export HISTCONTROL=ignoredups
-
-# PATH
 export GOPATH=$HOME
 export PATH="$PATH:$GOPATH/bin"
 export PATH="$PATH:$HOME/.cask/bin"
