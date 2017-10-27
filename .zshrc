@@ -190,6 +190,7 @@ alias du='du -h'
 alias df='df -h'
 alias free='free -h'
 alias e='emacsclient'
+alias remacs='emacs -q -l ~/Dropbox/emacs/default.el '
 alias open='xdg-open'
 alias mysql="mysql --pager='less -S -n -i -F -X'"
 alias trackpointspeed='xinput --set-prop 10 "Device Accel Constant Deceleration"'
