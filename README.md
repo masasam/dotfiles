@@ -470,10 +470,10 @@ Caps Lock is also a Ctrl
 
 ![terminal](https://raw.githubusercontent.com/masasam/image/image/terminal.png)
 
-Terminal uses termite and lilyterm see
+Terminal uses termite and urxvt see
 
-	.config/lilyterm
 	.config/termite
+	.Xresources
 
 #### .bashrc
 
