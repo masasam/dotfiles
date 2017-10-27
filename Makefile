@@ -65,7 +65,7 @@ install: ## install development environment for arch linux
 	python-pylint dnsmasq cscope speedtest-cli lsof postgresql-libs tig pdfgrep \
 	curl docker-compose parallel alsa-utils mlocate traceroute rust-racer jhead \
 	noto-fonts-emoji rust cargo rustup rustfmt gpaste nethogs optipng jpegoptim \
-	gauche screen aws-cli
+	gauche screen aws-cli ipcalc
 	mkdir -p ${HOME}/{bin,src}
 	yaourt peco
 	yaourt ttf-cica
