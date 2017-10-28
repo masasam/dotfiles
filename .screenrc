@@ -10,8 +10,8 @@ startup_message off
 vbell off
 altscreen on
 
-sorendition "= wb"
-hardstatus alwayslastline "%{= kw} %-w%40L>%{dd dw} %n %t %{-}%+w%-037=%{d kd} %-16=%{= .d}[%l]"
+sorendition "= kw"
+hardstatus alwayslastline '%H  %L=%{dd dw}%-w%46>%{= .w}%n %t %{= .b}%+w%-16=%{= .w}[%l]'
 
 bind c screen zsh
 bind n next
