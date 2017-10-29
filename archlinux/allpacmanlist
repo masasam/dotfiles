@@ -960,6 +960,7 @@ speex
 speexdsp
 sqlite
 startup-notification
+strace
 sudo
 swig
 sylpheed
@@ -1009,6 +1010,7 @@ usbmuxd
 usbutils
 util-linux
 v4l-utils
+valgrind
 vamp-plugin-sdk
 vi
 vid.stab

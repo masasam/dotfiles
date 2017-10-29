@@ -175,6 +175,7 @@ shadow
 shellcheck
 slack-desktop
 speedtest-cli
+strace
 sudo
 sylpheed
 sysfsutils
@@ -195,6 +196,7 @@ unrar
 urxvt-perls
 usbutils
 util-linux
+valgrind
 vi
 vim
 wget
