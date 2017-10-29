@@ -653,6 +653,7 @@ make
 man-db
 man-pages
 mariadb-clients
+mathjax
 mcomix
 mdadm
 mercurial

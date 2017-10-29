@@ -66,7 +66,7 @@ install: ## install development environment for arch linux
 	curl docker-compose parallel alsa-utils mlocate traceroute rust-racer jhead \
 	noto-fonts-emoji rust cargo rustup rustfmt gpaste nethogs optipng jpegoptim \
 	gauche screen ipcalc slack-desktop debian-archive-keyring jupyter-notebook \
-	aws-cli python-ipywidgets
+	aws-cli python-ipywidgets mathjax
 	mkdir -p ${HOME}/{bin,src}
 	yaourt casperjs
 	yaourt chrome-gnome-shell-git
