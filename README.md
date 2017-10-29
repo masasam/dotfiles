@@ -356,7 +356,7 @@ Install what enters with pacman
 	sudo pacman -S debootstrap tcpdump chromium bashdb pdfgrep ack parallel
 	sudo pacman -S alsa-utils mlocate traceroute aws-cli hugo mpv jhead gpaste pkgstats
 	sudo pacman -S nethogs optipng jpegoptim noto-fonts-emoji gauche screen ipcalc
-	sudo pacman -S debian-archive-keyring slack-desktop
+	sudo pacman -S debian-archive-keyring slack-desktop jupyter-notebook python-ipywidgets
 
 Install what you put in yaourt
 

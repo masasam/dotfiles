@@ -368,6 +368,7 @@ ipcalc
 iproute2
 iptables
 iputils
+ipython
 iso-codes
 jack
 jansson
@@ -384,6 +385,9 @@ js52
 json-c
 json-glib
 jsoncpp
+jupyter-nbformat
+jupyter-notebook
+jupyter-widgetsnbextension
 kbd
 kbproto
 keychain
@@ -770,6 +774,7 @@ python-colorama
 python-dateutil
 python-dbus
 python-dbus-common
+python-decorator
 python-docker
 python-docker-pycreds
 python-dockerpty
@@ -780,11 +785,15 @@ python-gobject
 python-greenlet
 python-idna
 python-imagesize
+python-ipykernel
+python-ipywidgets
 python-isort
 python-jedi
 python-jinja
 python-jmespath
 python-jsonschema
+python-jupyter_client
+python-jupyter_core
 python-lazy-object-proxy
 python-mako
 python-markupsafe
@@ -793,6 +802,10 @@ python-msgpack
 python-neovim
 python-packaging
 python-parso
+python-pexpect
+python-pickleshare
+python-prompt_toolkit
+python-ptyprocess
 python-pyasn1
 python-pycodestyle
 python-pyflakes
@@ -800,6 +813,7 @@ python-pygments
 python-pylint
 python-pyparsing
 python-pytz
+python-pyzmq
 python-requests
 python-rsa
 python-s3transfer
@@ -811,9 +825,13 @@ python-sphinx-alabaster-theme
 python-sphinx_rtd_theme
 python-sphinxcontrib-websupport
 python-sqlalchemy
+python-terminado
 python-texttable
+python-tornado
+python-traitlets
 python-urllib3
 python-virtualenv
+python-wcwidth
 python-websocket-client
 python-whoosh
 python-wrapt

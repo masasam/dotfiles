@@ -89,6 +89,7 @@ jfsutils
 jhead
 jpegoptim
 jq
+jupyter-notebook
 keychain
 less
 libcurl-compat
@@ -147,6 +148,7 @@ procps-ng
 psmisc
 pwgen
 pygmentize
+python-ipywidgets
 python-jedi
 python-neovim
 python-pyflakes
