@@ -151,7 +151,9 @@ pwgen
 pygmentize
 python-ipywidgets
 python-jedi
+python-matplotlib
 python-neovim
+python-pandas
 python-pyflakes
 python-pygments
 python-pylint

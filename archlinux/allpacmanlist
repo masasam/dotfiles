@@ -34,6 +34,7 @@ bashdb
 bc
 binutils
 bison
+blas
 bluez
 bluez-libs
 boost-libs
@@ -50,6 +51,7 @@ cairo
 cairomm
 cantarell-fonts
 caribou
+cblas
 cdparanoia
 celt
 check
@@ -396,6 +398,7 @@ kmod
 krb5
 ladspa
 lame
+lapack
 lcms
 lcms2
 ldb
@@ -762,6 +765,7 @@ pygmentize
 pygobject-devel
 pygobject2-devel
 pygtk
+pyqt5-common
 python
 python-appdirs
 python-astroid
@@ -772,6 +776,7 @@ python-botocore
 python-cached-property
 python-chardet
 python-colorama
+python-cycler
 python-dateutil
 python-dbus
 python-dbus-common
@@ -798,10 +803,13 @@ python-jupyter_core
 python-lazy-object-proxy
 python-mako
 python-markupsafe
+python-matplotlib
 python-mccabe
 python-msgpack
 python-neovim
+python-numpy
 python-packaging
+python-pandas
 python-parso
 python-pexpect
 python-pickleshare
@@ -813,12 +821,14 @@ python-pyflakes
 python-pygments
 python-pylint
 python-pyparsing
+python-pyqt5
 python-pytz
 python-pyzmq
 python-requests
 python-rsa
 python-s3transfer
 python-setuptools
+python-sip
 python-six
 python-snowballstemmer
 python-sphinx
@@ -936,6 +946,7 @@ shadow
 shared-color-targets
 shared-mime-info
 shellcheck
+sip
 slack-desktop
 slang
 slib
