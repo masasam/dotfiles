@@ -766,7 +766,6 @@ python-beaker
 python-botocore
 python-cached-property
 python-chardet
-python-click
 python-colorama
 python-dateutil
 python-dbus
@@ -827,7 +826,6 @@ python2-bcrypt
 python2-cairo
 python2-cffi
 python2-chardet
-python2-click
 python2-configargparse
 python2-configobj
 python2-crypto
