@@ -356,6 +356,7 @@ Install what enters with pacman
 	sudo pacman -S debootstrap tcpdump chromium bashdb pdfgrep ack parallel
 	sudo pacman -S alsa-utils mlocate traceroute aws-cli hugo mpv jhead gpaste pkgstats
 	sudo pacman -S nethogs optipng jpegoptim noto-fonts-emoji gauche screen ipcalc
+	sudo pacman -S debian-archive-keyring slack-desktop
 
 Install what you put in yaourt
 
@@ -374,8 +375,6 @@ Install what you put in yaourt
 	yaourt mozc
 	yaourt google-cloud-sdk
 	yaourt screenkey
-	yaourt debian-archive-keyring
-	yaourt slack-desktop
 	yaourt git-secrets
 	yaourt quicklisp
 

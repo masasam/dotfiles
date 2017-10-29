@@ -65,27 +65,27 @@ install: ## install development environment for arch linux
 	python-pylint dnsmasq cscope speedtest-cli lsof postgresql-libs tig pdfgrep \
 	curl docker-compose parallel alsa-utils mlocate traceroute rust-racer jhead \
 	noto-fonts-emoji rust cargo rustup rustfmt gpaste nethogs optipng jpegoptim \
-	gauche screen aws-cli ipcalc
+	gauche screen aws-cli ipcalc slack-desktop debian-archive-keyring
 	mkdir -p ${HOME}/{bin,src}
+	yaourt casperjs
+	yaourt chrome-gnome-shell-git
+	yaourt ctop
+	yaourt ghq
+	yaourt git-secrets
+	yaourt global
+	yaourt google-cloud-sdk
+	yaourt ibus-mozc
+	yaourt man-pages-ja
+	yaourt mozc
+	yaourt nkf
 	yaourt peco
+	yaourt profile-sync-daemon
+	yaourt quicklisp
+	yaourt screenkey
 	yaourt ttf-cica
 	yaourt ttf-myrica
 	yaourt ttf-ricty
-	yaourt profile-sync-daemon
-	yaourt man-pages-ja
-	yaourt global
-	yaourt ghq
-	yaourt casperjs
-	yaourt nkf
-	yaourt ctop
-	yaourt ibus-mozc
-	yaourt mozc
-	yaourt google-cloud-sdk
-	yaourt screenkey
-	yaourt debian-archive-keyring
-	yaourt slack-desktop
-	yaourt git-secrets
-	yaourt quicklisp
+	yaourt yum
 	sudo pkgfile --update
 	git config --global ghq.root ~/src
 	go get -u github.com/nsf/gocode
