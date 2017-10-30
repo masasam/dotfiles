@@ -67,7 +67,7 @@ install: ## install development environment for arch linux
 	noto-fonts-emoji rust cargo rustup rustfmt gpaste nethogs optipng jpegoptim \
 	gauche screen ipcalc slack-desktop debian-archive-keyring jupyter-notebook \
 	aws-cli python-ipywidgets mathjax python-matplotlib python-pandas valgrind \
-	strace
+	strace python-scikit-learn python-scipy
 	mkdir -p ${HOME}/{bin,src}
 	yaourt casperjs
 	yaourt chrome-gnome-shell-git

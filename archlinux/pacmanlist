@@ -157,6 +157,7 @@ python-pandas
 python-pyflakes
 python-pygments
 python-pylint
+python-scikit-learn
 python-sphinx
 python-virtualenv
 python2-neovim

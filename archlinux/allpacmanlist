@@ -827,6 +827,8 @@ python-pyzmq
 python-requests
 python-rsa
 python-s3transfer
+python-scikit-learn
+python-scipy
 python-setuptools
 python-sip
 python-six
