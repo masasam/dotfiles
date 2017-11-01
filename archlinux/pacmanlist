@@ -41,6 +41,7 @@ emacs
 eog
 eslint
 evince
+expect
 fakeroot
 file
 file-roller

@@ -117,6 +117,7 @@ evince
 exempi
 exiv2
 expat
+expect
 faac
 faad2
 fakeroot
@@ -909,6 +910,7 @@ t1lib
 taglib
 talloc
 tar
+tcl
 tcpdump
 tdb
 telepathy-glib
