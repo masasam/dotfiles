@@ -139,7 +139,7 @@ powertopinit: ## Warning take a long time
 updatedb: ## File datebase update
 	sudo updatedb
 
-cask: ## install emacs package
+cask: ## Install emacs package
 	export PATH="$PATH:$HOME/.cask/bin"
 	cd ${HOME}/.emacs.d/;   cask upgrade;   cask install
 
