@@ -1,4 +1,4 @@
-init: ## deploy this dotfiles
+init: ## Deploy dotfiles
 	ln -vsf ${PWD}/.zshrc   ${HOME}/.zshrc
 	ln -vsf ${PWD}/.vimrc   ${HOME}/.vimrc
 	ln -vsf ${PWD}/.bashrc   ${HOME}/.bashrc
@@ -22,6 +22,7 @@ init: ## deploy this dotfiles
 	sudo ln -vsf ${PWD}/etc/dnsmasq/resolv.dnsmasq.conf   /etc/resolv.dnsmasq.conf
 	sudo ln -vsf ${PWD}/etc/dnsmasq/dnsmasq.conf   /etc/dnsmasq.conf
 	sudo ln -vsf ${PWD}/etc/systemd/logind.conf   /etc/systemd/logind.conf
+	sudo ln -vsf ${PWD}/etc/systemd/system/powertop.service   /etc/systemd/system/powertop.service
 	sudo mkdir -p /etc/NetworkManager
 	sudo ln -vsf ${PWD}/etc/NetworkManager/NetworkManager.conf /etc/NetworkManager/NetworkManager.conf
 	sudo mkdir -p /etc/libreoffice
@@ -46,9 +47,7 @@ init: ## deploy this dotfiles
 	ln -vsfn ${HOME}/Dropbox/mozc/.mozc   ${HOME}/.mozc
 	chmod 600   ${HOME}/.ssh/id_rsa
 
-install: ## install development environment for arch linux
-	export GOPATH=${HOME}
-	export PATH="$PATH:$GOPATH/bin"
+install: ## Install development environment for arch linux
 	sudo pacman -S go zsh git vim dropbox nautilus-dropbox tmux keychain bashdb \
 	zsh-completions gnome-tweak-tool xsel emacs evince unrar seahorse hugo mpv \
 	archlinux-wallpaper inkscape file-roller xclip atool debootstrap valgrind \
@@ -68,7 +67,9 @@ install: ## install development environment for arch linux
 	gauche screen ipcalc slack-desktop debian-archive-keyring jupyter-notebook \
 	aws-cli python-ipywidgets mathjax python-matplotlib python-pandas python-scipy \
 	python-scikit-learn
-	mkdir -p ${HOME}/{bin,src}
+	sudo pkgfile --update
+
+aur: ## Install AUR packages
 	yaourt casperjs
 	yaourt chrome-gnome-shell-git
 	yaourt ctop
@@ -88,66 +89,61 @@ install: ## install development environment for arch linux
 	yaourt ttf-myrica
 	yaourt ttf-ricty
 	yaourt yum
-	sudo pkgfile --update
-	git config --global ghq.root ~/src
+
+caskinit: ## Init cask
+	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
+
+goinit: ## Init go packages
+	export GOPATH=${HOME}
+	export PATH="$PATH:$GOPATH/bin"
+	mkdir -p ${HOME}/{bin,src}
 	go get -u github.com/nsf/gocode
 	go get -u github.com/rogpeppe/godef
 	go get -u golang.org/x/tools/cmd/goimports
 	go get -u golang.org/x/tools/cmd/godoc
 	go get -u github.com/josharian/impl
 	go get -u github.com/jstemmer/gotags
+
+miscinit: ## Init rust npm
 	sudo npm install -g tern
 	sudo npm install -g jshint
-	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
 	cargo install cargo-script
 
-backup: ## backup archlinux installed packages
+backup: ## Backup archlinux packages
 	mkdir -p ${HOME}/src/github.com/masasam/dotfiles/archlinux
 	pacman -Qqen > ${HOME}/src/github.com/masasam/dotfiles/archlinux/pacmanlist
 	pacman -Qnq > ${HOME}/src/github.com/masasam/dotfiles/archlinux/allpacmanlist
 	pacman -Qqem > ${HOME}/src/github.com/masasam/dotfiles/archlinux/yaourtlist
 
-recover: ## recovery from backup arch linux package
+recover: ## Recovery from backup arch linux package
 	sudo pacman -S --needed `cat ${HOME}/src/github.com/masasam/dotfiles/archlinux/pacmanlist`
 	yaourt -S --needed $(DOY) `cat ${HOME}/src/github.com/masasam/dotfiles/archlinux/yaourtlist`
-	mkdir -p ${HOME}/{bin,src}
-	export GOPATH=${HOME}
-	export PATH="$PATH:$GOPATH/bin"
-	sudo pkgfile --update
-	git config --global ghq.root ~/src
-	go get -u github.com/nsf/gocode
-	go get -u github.com/rogpeppe/godef
-	go get -u golang.org/x/tools/cmd/goimports
-	go get -u golang.org/x/tools/cmd/godoc
-	go get -u github.com/josharian/impl
-	go get -u github.com/jstemmer/gotags
-	sudo npm install -g tern
-	sudo npm install -g jshint
-	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
-	cargo install cargo-script
 
-docker: ## docker setup
-	sudo groupadd docker
+dockerinit: ## Docker setup
 	sudo usermod -aG docker masa
 	sudo systemctl enable docker.service
 	sudo systemctl start docker.service
 	sudo systemctl stop docker.service
+	sudo systemctl disable docker.service
 	sudo ln -vsf ${PWD}/etc/docker/daemon.json   /etc/docker/daemon.json
 	sudo systemctl start docker.service
 
-updatedb: ## file datebase update
+psdinit: ## Profile-Sync-Daemon init setup
+	echo 'masa ALL=(ALL) NOPASSWD: /usr/bin/psd-overlay-helper' | sudo EDITOR='tee -a' visudo
+	systemctl --user enable psd.service
+
+powertopinit: ## Warning take a long time
+	sudo powertop --calibrate
+	sudo systemctl enable powertop
+
+updatedb: ## File datebase update
 	sudo updatedb
 
 cask: ## install emacs package
 	export PATH="$PATH:$HOME/.cask/bin"
 	cd ${HOME}/.emacs.d/;   cask upgrade;   cask install
 
-test: ## print environment value
-	export GOPATH=${HOME}
-	export PATH="${PATH}:${GOPATH}/bin"
-	printenv
-
-all: init update install test help backup recover
+all: aur backup cask caskinit dockerinit goinit init install miscinit powertopinit recover serviceinit updatedb help
 
 .PHONY: all
 
