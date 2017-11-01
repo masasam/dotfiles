@@ -127,7 +127,7 @@ Partitioning
 
 gdisk /dev/sda
 
-    1 sda1  BIOS boot partition(ef02) 1007KB
+    1 sda1  BIOS boot partition(EF02) 1007KB
     2 sda2 / All remaining
 
 Format and mount with ext4
@@ -157,10 +157,6 @@ Set the host name
 
     echo thinkpad > /etc/hostname
 
-Time to Tokyo
-
-    ln -s /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
-
 Set the locale
 
 vi /etc/locale.gen
@@ -188,14 +184,15 @@ Generate kernel image
 
 Generate user
 
-    useradd -m -G wheel -s /bin/bash masa
+    useradd -m -G wheel -s /bin/bash ${USER}
 
 Set password
 
-    passwd masa
+    passwd ${USER}
 
 Set groups and permissions
 
+    pacman -S vim
     visudo
 
 >Defaults env_keep += “ HOME ”
@@ -209,15 +206,7 @@ Set boot loader
     grub-install --recheck /dev/sda
     grub-mkconfig -o /boot/grub/grub.cfg
 
-As reconnected with dhcp after reboot
-
-    systemctl enable dhcpcd.service
-    exit
-    reboot
-
-Pull out the USB memory just before the BIOS starts up
-
-#### Login as root to prepare drivers and Xorg Gnome wifi
+#### Prepare drivers and Xorg Gnome wifi
 
 As bash complements work
 
@@ -225,9 +214,9 @@ As bash complements work
 
 Install drivers that match your environment
 
-    lspci|grep VGA
-    pacman -S libva-intel-driver
-    pacman -S xorg-server xorg-server-utils xorg-xinit xorg-xclock
+    lspci | grep VGA
+    pacman -S xf86-video-intel libva-intel-driver
+    pacman -S xorg-server xorg-apps xorg-xinit xorg-xclock
 
 Gnome can be put as small as necessary
 
@@ -272,7 +261,7 @@ You can not wifi unless you turn off dhcpcd.
     systemctl enable NetworkManager.service
     reboot
 
-#### Login with masa to arrange home directory
+#### Login with ${USER} to arrange home directory
 
     sudo pacman -S xdg-user-dirs
     LANG=C xdg-user-dirs-update --force
@@ -284,12 +273,12 @@ Install dropbox and sync
     sudo pacman -S nautilus-dropbox
 	dropbox
 
-Preparing dotfiles with ghq
+Preparing dotfiles
 
-	yaourt ghq
-	git config --global ghq.root ~/src
-	ghq get -p masasam/dotfiles
-	ghq look dotfiles
+    mkdir -p ~/src/github.com/masasam
+    cd src/github.com/masasam
+	git clone git@github.com:masasam/dotfiles.git
+	cd dotfiles
 	make install
 	make init
 
@@ -532,7 +521,7 @@ As the frequency of synchronization to the disk decreases, it also has the effec
 
 visudo
 
-    masa ALL=(ALL) NOPASSWD: /usr/bin/psd-overlay-helper
+    ${USER} ALL=(ALL) NOPASSWD: /usr/bin/psd-overlay-helper
 
 >psd p
 
@@ -643,27 +632,7 @@ Key setting is based on Kotoeri ← closest to emacs key binding
 >「No input character」「Shift+Space」「Disable IME」
 >Delete other Shift-space entangled shortcuts.
 
-At the terminal
-
-    ibus-setup
-
-Set fonts and so on.
-
-On the General tab
-
->カスタムフォントを選んで fontsize 14
->次のインプットメソッド super-space
->インプットメソッドタブを mozc だけにする
-
 reboot
-
-#### Install dictionary for mozc
-
-<http://mediadesign.jp/article-4218/>
-
-I don't want to hit it with an address or keyboard Make sure to
-
-include your postal code when you enter the postal code.
 
 Once mozc is set up
 
@@ -685,7 +654,7 @@ Specify the Mail folder with.
 
 > vim ~/.sylpheed-2.0/folderlist.xml
 
-    <folder type="mh" name="メール箱" path="/home/masa/Dropbox/sylpheed/Mail">
+    <folder type="mh" name="Mailbox" path="/home/${USER}/Dropbox/sylpheed/Mail">
 
 Because it is a file format of 1 mail 1 file If you synchronize mail immediately with Dropbox There is no worry of data lost.
 
@@ -716,11 +685,11 @@ Font
 
 1.Build this Dockerfile
 
-	docker build -t dotfiles /home/masa/src/github.com/masasam/dotfiles
+	docker build -t dotfiles /home/${USER}/src/github.com/masasam/dotfiles
 
 2.Run docker run and execute the following command in the docker container
 
-	docker run -t -i -v /home/masa/Dropbox:/home/masa/Dropbox:cached --name arch dotfiles /bin/bash
-	cd /home/masa/src/github.com/masasam/dotfiles
+	docker run -t -i -v /home/${USER}/Dropbox:/home/${USER}/Dropbox:cached --name arch dotfiles /bin/bash
+	cd /home/${USER}/src/github.com/masasam/dotfiles
 	make install
 	make init
