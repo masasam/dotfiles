@@ -19,6 +19,7 @@ binutils
 bison
 bzip2
 chromium
+cmatrix
 coreutils
 cryptsetup
 cscope
@@ -64,6 +65,7 @@ gnome-control-center
 gnome-keyring
 gnome-shell-extensions
 gnome-tweak-tool
+gnu-netcat
 go
 gpaste
 grep
@@ -189,6 +191,7 @@ tmux
 traceroute
 typescript
 unrar
+urxvt-perls
 usbutils
 util-linux
 valgrind
