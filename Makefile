@@ -65,8 +65,8 @@ install: ## Install development environment for arch linux
 	curl docker-compose parallel alsa-utils mlocate traceroute rust-racer jhead \
 	noto-fonts-emoji rust cargo rustup rustfmt gpaste nethogs optipng jpegoptim \
 	gauche screen ipcalc slack-desktop debian-archive-keyring jupyter-notebook \
-	aws-cli python-ipywidgets mathjax python-matplotlib python-pandas python-scipy \
-	python-scikit-learn
+	aws-cli bash-completion mathjax python-matplotlib python-pandas python-scipy \
+	python-scikit-learn gnu-netcat python-ipywidgets urxvt-perls cmatrix expect
 	sudo pkgfile --update
 
 aur: ## Install AUR packages
