@@ -120,7 +120,7 @@ recover: ## Recovery from backup arch linux package
 	yaourt -S --needed $(DOY) `cat ${HOME}/src/github.com/masasam/dotfiles/archlinux/yaourtlist`
 
 dockerinit: ## Docker setup
-	sudo usermod -aG docker masa
+	sudo usermod -aG docker ${USER}
 	sudo systemctl enable docker.service
 	sudo systemctl start docker.service
 	sudo systemctl stop docker.service
@@ -129,7 +129,7 @@ dockerinit: ## Docker setup
 	sudo systemctl start docker.service
 
 psdinit: ## Profile-Sync-Daemon init setup
-	echo 'masa ALL=(ALL) NOPASSWD: /usr/bin/psd-overlay-helper' | sudo EDITOR='tee -a' visudo
+	echo "${USER} ALL=(ALL) NOPASSWD: /usr/bin/psd-overlay-helper" | sudo EDITOR='tee -a' visudo
 	systemctl --user enable psd.service
 
 powertopinit: ## Warning take a long time
