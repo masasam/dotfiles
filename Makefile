@@ -51,9 +51,9 @@ install: ## install development environment for arch linux
 	export PATH="$PATH:$GOPATH/bin"
 	sudo pacman -S go zsh git vim dropbox nautilus-dropbox tmux keychain bashdb \
 	zsh-completions gnome-tweak-tool xsel emacs evince unrar seahorse hugo mpv \
-	archlinux-wallpaper inkscape file-roller xclip atool trash-cli debootstrap \
+	archlinux-wallpaper inkscape file-roller xclip atool debootstrap valgrind \
 	the_silver_searcher powertop cifs-utils gvfs gvfs-smb libreoffice-fresh-ja \
-	gnome-keyring cups-pdf eog mcomix openssh firefox firefox-i18n-ja fzf gimp \
+	gnome-keyring cups-pdf eog mcomix openssh firefox firefox-i18n-ja gimp strace \
 	otf-ipafont pkgfile baobab dconf-editor rsync elixir nodejs phantomjs whois \
 	nmap poppler-data rtmpdump ffmpeg asciidoc sbcl docker aspell aspell-en ack \
 	gdb ripgrep hub wmctrl pwgen linux-docs ansible htop mariadb-clients tcpdump \
@@ -66,8 +66,8 @@ install: ## install development environment for arch linux
 	curl docker-compose parallel alsa-utils mlocate traceroute rust-racer jhead \
 	noto-fonts-emoji rust cargo rustup rustfmt gpaste nethogs optipng jpegoptim \
 	gauche screen ipcalc slack-desktop debian-archive-keyring jupyter-notebook \
-	aws-cli python-ipywidgets mathjax python-matplotlib python-pandas valgrind \
-	strace python-scikit-learn python-scipy
+	aws-cli python-ipywidgets mathjax python-matplotlib python-pandas python-scipy \
+	python-scikit-learn
 	mkdir -p ${HOME}/{bin,src}
 	yaourt casperjs
 	yaourt chrome-gnome-shell-git
