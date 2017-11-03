@@ -151,6 +151,7 @@ python-jedi
 python-matplotlib
 python-neovim
 python-pandas
+python-pip
 python-pyflakes
 python-pygments
 python-pylint
