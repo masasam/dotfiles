@@ -1,4 +1,4 @@
-init: ## Deploy dotfiles
+init: ## Initial deploy dotfiles
 	ln -vsf ${PWD}/.zshrc   ${HOME}/.zshrc
 	ln -vsf ${PWD}/.vimrc   ${HOME}/.vimrc
 	ln -vsf ${PWD}/.bashrc   ${HOME}/.bashrc
@@ -71,7 +71,7 @@ install: ## Install development environment for arch linux
 	python-pip python-virtualenv
 	sudo pkgfile --update
 
-aur: ## Install AUR packages
+aur: ## Install AUR packages with yaourt
 	yaourt casperjs
 	yaourt chrome-gnome-shell-git
 	yaourt ctop
@@ -92,21 +92,22 @@ aur: ## Install AUR packages
 	yaourt ttf-ricty
 	yaourt yum
 
-caskinit: ## Init cask
+caskinit: ## Initial cask
 	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
 
-rubygems: ## Install rubygems
+rubygems: ## Install rubygems package
 	gem install bundle
 	gem install jekyll
 	gem install pry
 
-nodeinit: ## Init node
+npmjs: ## Install node package
 	mkdir -p ${HOME}/.node_modules
+	export npm_config_prefix=${HOME}/.node_modules
 	npm -g install npm
 	npm -g install tern
 	npm -g install jshint
 
-goinit: ## Init go packages
+goinstall: ## Install go packages
 	export GOPATH=${HOME}
 	export PATH="$PATH:$GOPATH/bin"
 	mkdir -p ${HOME}/{bin,src}
@@ -117,7 +118,7 @@ goinit: ## Init go packages
 	go get -u github.com/josharian/impl
 	go get -u github.com/jstemmer/gotags
 
-rustinit: ## Init rust gargo
+cargoinstall: ## Install cargo package
 	cargo install cargo-script
 
 backup: ## Backup archlinux packages
@@ -130,7 +131,7 @@ recover: ## Recovery from backup arch linux package
 	sudo pacman -S --needed `cat ${HOME}/src/github.com/masasam/dotfiles/archlinux/pacmanlist`
 	yaourt -S --needed $(DOY) `cat ${HOME}/src/github.com/masasam/dotfiles/archlinux/yaourtlist`
 
-dockerinit: ## Docker setup
+dockerinit: ## Docker initial setup
 	sudo usermod -aG docker ${USER}
 	sudo systemctl enable docker.service
 	sudo systemctl start docker.service
@@ -139,18 +140,18 @@ dockerinit: ## Docker setup
 	sudo ln -vsf ${PWD}/etc/docker/daemon.json   /etc/docker/daemon.json
 	sudo systemctl start docker.service
 
-psdinit: ## Profile-Sync-Daemon init setup
+psdinit: ## Profile-Sync-Daemon initial setup
 	echo "${USER} ALL=(ALL) NOPASSWD: /usr/bin/psd-overlay-helper" | sudo EDITOR='tee -a' visudo
 	systemctl --user enable psd.service
 
-powertopinit: ## Warning take a long time
+powertopinit: ## Powertop initial setup (Warning take a long time)
 	sudo powertop --calibrate
 	sudo systemctl enable powertop
 
-updatedb: ## File datebase update
+updatedb: ## Update file datebase
 	sudo updatedb
 
-all: aur backup cask caskinit dockerinit goinit init install miscinit powertopinit recover serviceinit updatedb help
+all: aur backup cask caskinit dockerinit goinstall init install cargoinstall npmjs rubygems psdinit powertopinit recover updatedb help
 
 .PHONY: all
 
