@@ -3,8 +3,6 @@
 (require 'go-eldoc)
 (require 'go-autocomplete)
 (require 'auto-complete-config)
-(setenv "GOPATH" "/home/masa")
-(add-to-list 'exec-path (expand-file-name "~/bin"))
 
 (add-hook 'go-mode-hook
           '(lambda()
