@@ -351,23 +351,26 @@ Install what enters with pacman
 
 Install what you put in yaourt
 
+	yaourt casperjs
+	yaourt chrome-gnome-shell-git
+	yaourt ctop
+	yaourt direnv
+	yaourt ghq
+	yaourt git-secrets
+	yaourt global
+	yaourt google-cloud-sdk
+	yaourt ibus-mozc
+	yaourt man-pages-ja
+	yaourt mozc
+	yaourt nkf
 	yaourt peco
+	yaourt profile-sync-daemon
+	yaourt quicklisp
+	yaourt screenkey
 	yaourt ttf-cica
 	yaourt ttf-myrica
 	yaourt ttf-ricty
-	yaourt profile-sync-daemon
-	yaourt man-pages-ja
-	yaourt global
-	yaourt ghq
-	yaourt casperjs
-	yaourt nkf
-	yaourt ctop
-	yaourt ibus-mozc
-	yaourt mozc
-	yaourt google-cloud-sdk
-	yaourt screenkey
-	yaourt git-secrets
-	yaourt quicklisp
+	yaourt yum
 
 #### golang npm rust
 

@@ -75,6 +75,7 @@ aur: ## Install AUR packages with yaourt
 	yaourt casperjs
 	yaourt chrome-gnome-shell-git
 	yaourt ctop
+	yaourt direnv
 	yaourt ghq
 	yaourt git-secrets
 	yaourt global
