@@ -206,6 +206,7 @@ alias caskinstall='cd ${HOME}/.emacs.d/; cask upgrade; cask install;cd -'
 alias goupdate='go get -u github.com/nsf/gocode; go get -u github.com/rogpeppe/godef; go get -u golang.org/x/tools/cmd/goimports; go get -u golang.org/x/tools/cmd/godoc; go get -u github.com/josharian/impl; go get -u github.com/jstemmer/gotags'
 alias rust='cargo-script'
 alias rustupdate='cargo install-update -a'
+alias npmupdate='npm update -g'
 alias archupdate='yaourt -Syua; paccache -ruk0'
 alias archbackup='cd ${HOME}/src/github.com/masasam/dotfiles;make backup; cd -'
 alias githubissue='hub issue | peco | sed -e "s/\].*//" | xargs -Inum git checkout -b feature/num'
@@ -569,3 +570,63 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source /opt/google-cloud-sdk/completion.zsh.inc
 # zsh-completions for aws(pacman -S aws-cli)
 source /usr/bin/aws_zsh_completer.sh
+###-begin-npm-completion-###
+#
+# npm command completion script
+#
+# Installation: npm completion >> ~/.bashrc  (or ~/.zshrc)
+# Or, maybe: npm completion > /usr/local/etc/bash_completion.d/npm
+#
+
+if type complete &>/dev/null; then
+  _npm_completion () {
+    local words cword
+    if type _get_comp_words_by_ref &>/dev/null; then
+      _get_comp_words_by_ref -n = -n @ -n : -w words -i cword
+    else
+      cword="$COMP_CWORD"
+      words=("${COMP_WORDS[@]}")
+    fi
+
+    local si="$IFS"
+    IFS=$'\n' COMPREPLY=($(COMP_CWORD="$cword" \
+                           COMP_LINE="$COMP_LINE" \
+                           COMP_POINT="$COMP_POINT" \
+                           npm completion -- "${words[@]}" \
+                           2>/dev/null)) || return $?
+    IFS="$si"
+    if type __ltrim_colon_completions &>/dev/null; then
+      __ltrim_colon_completions "${words[cword]}"
+    fi
+  }
+  complete -o default -F _npm_completion npm
+elif type compdef &>/dev/null; then
+  _npm_completion() {
+    local si=$IFS
+    compadd -- $(COMP_CWORD=$((CURRENT-1)) \
+                 COMP_LINE=$BUFFER \
+                 COMP_POINT=0 \
+                 npm completion -- "${words[@]}" \
+                 2>/dev/null)
+    IFS=$si
+  }
+  compdef _npm_completion npm
+elif type compctl &>/dev/null; then
+  _npm_completion () {
+    local cword line point words si
+    read -Ac words
+    read -cn cword
+    let cword-=1
+    read -l line
+    read -ln point
+    si="$IFS"
+    IFS=$'\n' reply=($(COMP_CWORD="$cword" \
+                       COMP_LINE="$line" \
+                       COMP_POINT="$point" \
+                       npm completion -- "${words[@]}" \
+                       2>/dev/null)) || return $?
+    IFS="$si"
+  }
+  compctl -K _npm_completion npm
+fi
+###-end-npm-completion-###

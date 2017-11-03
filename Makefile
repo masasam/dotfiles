@@ -95,11 +95,15 @@ caskinit: ## Init cask
 	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
 
 rubygems: ## Install rubygems
+	gem install bundle
+	gem install jekyll
 	gem install pry
-	gem install jekyll bundle
 
 nodeinit: ## Init node
-	mkdir ${HOME}/.node_modules
+	mkdir -p ${HOME}/.node_modules
+	npm -g install npm
+	npm -g install tern
+	npm -g install jshint
 
 goinit: ## Init go packages
 	export GOPATH=${HOME}
@@ -112,9 +116,7 @@ goinit: ## Init go packages
 	go get -u github.com/josharian/impl
 	go get -u github.com/jstemmer/gotags
 
-miscinit: ## Init rust npm
-	sudo npm install -g tern
-	sudo npm install -g jshint
+rustinit: ## Init rust npm
 	cargo install cargo-script
 
 backup: ## Backup archlinux packages
