@@ -67,7 +67,8 @@ install: ## Install development environment for arch linux
 	noto-fonts-emoji rust cargo rustup rustfmt gpaste nethogs optipng jpegoptim \
 	gauche screen ipcalc slack-desktop debian-archive-keyring jupyter-notebook \
 	aws-cli bash-completion mathjax python-matplotlib python-pandas python-scipy \
-	python-scikit-learn gnu-netcat python-ipywidgets urxvt-perls cmatrix expect
+	python-scikit-learn gnu-netcat python-ipywidgets urxvt-perls cmatrix expect \
+	python-pip
 	sudo pkgfile --update
 
 aur: ## Install AUR packages
@@ -116,7 +117,7 @@ goinit: ## Init go packages
 	go get -u github.com/josharian/impl
 	go get -u github.com/jstemmer/gotags
 
-rustinit: ## Init rust npm
+rustinit: ## Init rust gargo
 	cargo install cargo-script
 
 backup: ## Backup archlinux packages

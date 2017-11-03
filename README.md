@@ -347,7 +347,7 @@ Install what enters with pacman
 	sudo pacman -S nethogs optipng jpegoptim noto-fonts-emoji gauche screen ipcalc
 	sudo pacman -S debian-archive-keyring slack-desktop jupyter-notebook python-ipywidgets
 	sudo pacman -S mathjax matplotlib python-matplotlib python-pandas strace valgrind
-	sudo pacman -S python-scikit-learn python-scipy
+	sudo pacman -S python-scikit-learn python-scipy python-pip
 
 Install what you put in yaourt
 
