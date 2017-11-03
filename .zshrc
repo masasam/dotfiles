@@ -216,7 +216,7 @@ alias soundrecord='arecord -t wav -f dat -q | lame -b 128 -m s - out.mp3'
 # PATH
 export GOPATH=$HOME
 export PATH="$PATH:$GOPATH/bin"
-export PATH="/home/masa/.cask/bin:$PATH"
+export PATH="$HOME/.cask/bin:$PATH"
 export EDITOR='emacsclient'
 export XDG_CONFIG_HOME=$HOME/.config
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
