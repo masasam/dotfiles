@@ -571,6 +571,8 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source /opt/google-cloud-sdk/completion.zsh.inc
 # zsh-completions for aws(pacman -S aws-cli)
 source /usr/bin/aws_zsh_completer.sh
+# direnv
+eval "$(direnv hook zsh)"
 ###-begin-npm-completion-###
 #
 # npm command completion script
