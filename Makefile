@@ -3,6 +3,7 @@ init: ## Deploy dotfiles
 	ln -vsf ${PWD}/.vimrc   ${HOME}/.vimrc
 	ln -vsf ${PWD}/.bashrc   ${HOME}/.bashrc
 	ln -vsf ${PWD}/.gitconfig   ${HOME}/.gitconfig
+	ln -vsf ${PWD}/.npmrc   ${HOME}/.npmrc
 	ln -vsf ${PWD}/.tern-config   ${HOME}/.tern-config
 	ln -vsf ${PWD}/.tmux.conf   ${HOME}/.tmux.conf
 	ln -vsf ${PWD}/.screenrc   ${HOME}/.screenrc
@@ -93,9 +94,12 @@ aur: ## Install AUR packages
 caskinit: ## Init cask
 	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
 
-rubygems: ## rubygems install
+rubygems: ## Install rubygems
 	gem install pry
 	gem install jekyll bundle
+
+nodeinit: ## Init node
+	mkdir ${HOME}/.node_modules
 
 goinit: ## Init go packages
 	export GOPATH=${HOME}
