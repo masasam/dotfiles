@@ -9,6 +9,7 @@
 (add-to-list 'ac-modes 'markdown-mode)
 (add-to-list 'ac-modes 'json-mode)
 (add-to-list 'ac-modes 'toml-mode)
+(add-to-list 'ac-modes 'enh-ruby-mode)
 (ac-set-trigger-key "TAB")
 (setq ac-use-menu-map t);; Complement candidate selection with C-n / C-p when complement menu is displayed
 (setq ac-use-fuzzy t)   ;; Ambiguous match

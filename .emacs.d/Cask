@@ -121,3 +121,5 @@
 (depends-on "whitespace-cleanup-mode")
 (depends-on "httprepl")
 (depends-on "beginend")
+(depends-on "enh-ruby-mode")
+(depends-on "ruby-electric")
