@@ -208,7 +208,7 @@ alias rust='cargo-script'
 alias rustupdate='cargo install-update -a'
 alias npmupdate='npm update -g'
 alias archupdate='yaourt -Syua; paccache -ruk0'
-alias archbackup='cd ${HOME}/src/github.com/masasam/dotfiles;make backup; cd -'
+alias archbackup='cd ${HOME}/src/github.com/masasam/dotfiles; make backup; cd -'
 alias githubissue='hub issue | peco | sed -e "s/\].*//" | xargs -Inum git checkout -b feature/num'
 alias soundrecord='arecord -t wav -f dat -q | lame -b 128 -m s - out.mp3'
 
