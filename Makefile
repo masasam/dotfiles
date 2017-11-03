@@ -150,10 +150,6 @@ powertopinit: ## Warning take a long time
 updatedb: ## File datebase update
 	sudo updatedb
 
-cask: ## Install emacs package
-	export PATH="$PATH:$HOME/.cask/bin"
-	cd ${HOME}/.emacs.d/;   cask upgrade;   cask install
-
 all: aur backup cask caskinit dockerinit goinit init install miscinit powertopinit recover serviceinit updatedb help
 
 .PHONY: all

@@ -202,7 +202,7 @@ alias mysql="mysql --pager='less -S -n -i -F -X'"
 alias trackpointspeed='xinput --set-prop 10 "Device Accel Constant Deceleration"'
 alias caskcleanup='rm -rf ${HOME}/.emacs.d/.cask; caskinstall'
 alias caskupdate='rm -rf ${HOME}/Dropbox/emacs/cask/`ls -rt ${HOME}/Dropbox/emacs/cask | head -n 1`; tar cfz ${HOME}/Dropbox/emacs/cask/`date '+%Y%m%d%H%M%S'`.tar.gz -C ${HOME}/.emacs.d .cask; cd ${HOME}/.emacs.d/; cask upgrade; cask update; cd -'
-alias caskinstall='cd ${HOME}/.emacs.d/; cask upgrade; cask install;cd -'
+alias caskinstall='cd ${HOME}/.emacs.d/; cask upgrade; cask install; cd -'
 alias goupdate='go get -u github.com/nsf/gocode; go get -u github.com/rogpeppe/godef; go get -u golang.org/x/tools/cmd/goimports; go get -u golang.org/x/tools/cmd/godoc; go get -u github.com/josharian/impl; go get -u github.com/jstemmer/gotags'
 alias rust='cargo-script'
 alias rustupdate='cargo install-update -a'
