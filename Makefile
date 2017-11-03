@@ -93,6 +93,10 @@ aur: ## Install AUR packages
 caskinit: ## Init cask
 	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
 
+rubygems: ## rubygems install
+	gem install pry
+	gem install jekyll bundle
+
 goinit: ## Init go packages
 	export GOPATH=${HOME}
 	export PATH="$PATH:$GOPATH/bin"
