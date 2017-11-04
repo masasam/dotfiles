@@ -152,7 +152,10 @@ powertopinit: ## Powertop initial setup (Warning take a long time)
 updatedb: ## Update file datebase
 	sudo updatedb
 
-all: aur backup cask caskinit dockerinit goinstall init install cargoinstall npmjs rubygems psdinit powertopinit recover updatedb help
+neovim: # Init neovim dein
+	bash ${HOME}/.config/nvim/installer.sh ${HOME}/.config/nvim
+
+all: aur backup cask caskinit dockerinit goinstall init install cargoinstall npmjs rubygems psdinit powertopinit recover updatedb neovim help
 
 .PHONY: all
 
