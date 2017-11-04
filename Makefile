@@ -68,7 +68,7 @@ install: ## Install development environment for arch linux
 	gauche screen ipcalc slack-desktop debian-archive-keyring jupyter-notebook \
 	aws-cli bash-completion mathjax python-matplotlib python-pandas python-scipy \
 	python-scikit-learn gnu-netcat python-ipywidgets urxvt-perls cmatrix expect \
-	python-pip python-virtualenv
+	python-pip python-virtualenv python-seaborn
 	sudo pkgfile --update
 
 aur: ## Install AUR packages with yaourt

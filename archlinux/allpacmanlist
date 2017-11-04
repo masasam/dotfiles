@@ -795,6 +795,7 @@ python-rsa
 python-s3transfer
 python-scikit-learn
 python-scipy
+python-seaborn
 python-setuptools
 python-sip
 python-six
