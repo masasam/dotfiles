@@ -207,53 +207,6 @@ nnoremap <C-x>l :<C-u>Denite ghq<CR>
 nnoremap <C-x><C-l> :<C-u>Denite ghq<CR>
 
 
-" -- elscreen Momentum ----------------------------------------------
-" Anywhere SID.
-function! s:SID_PREFIX()
-  return matchstr(expand('<sfile>'), '<SNR>\d\+_\zeSID_PREFIX$')
-endfunction
-
-" Set tabline.
-function! s:my_tabline()  "{{{
-  let s = ''
-  for i in range(1, tabpagenr('$'))
-    let bufnrs = tabpagebuflist(i)
-    let bufnr = bufnrs[tabpagewinnr(i) - 1]  " first window, first appears
-    let no = i  " display 0-origin tabpagenr.
-    let mod = getbufvar(bufnr, '&modified') ? '!' : ' '
-    let title = fnamemodify(bufname(bufnr), ':t')
-    let title = '[' . title . ']'
-    let s .= '%'.i.'T'
-    let s .= '%#' . (i == tabpagenr() ? 'TabLineSel' : 'TabLine') . '#'
-    let s .= no . ':' . title
-    let s .= mod
-    let s .= '%#TabLineFill# '
-  endfor
-  let s .= '%#TabLineFill#%T%=%#TabLine#'
-  return s
-endfunction "}}}
-let &tabline = '%!'. s:SID_PREFIX() . 'my_tabline()'
-set showtabline=2 " Always show tablines
-
-" The prefix key.
-nnoremap    [Tag]   <Nop>
-nmap    t [Tag]
-" Tab jump
-for n in range(1, 9)
-  execute 'nnoremap <silent> [Tag]'.n  ':<C-u>tabnext'.n.'<CR>'
-endfor
-" Jump to the leftmost tab at t1, to the second from leftmost at t2
-
-map <silent> [Tag]c :tablast <bar> tabnew<CR>
-" tc Make new tabs to the right
-map <silent> [Tag]k :tabclose<CR>
-" tk Close the tab
-map <silent> [Tag]n :tabnext<CR>
-" tn Next tab
-map <silent> [Tag]p :tabprevious<CR>
-" tp Previous tab
-
-
 " -- vim-gitgutter -----------------------------------------------------
 highlight clear SignColumn
 highlight SignColumn ctermbg=0
