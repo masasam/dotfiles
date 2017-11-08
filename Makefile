@@ -48,7 +48,7 @@ init: ## Initial deploy dotfiles
 	ln -vsfn ${HOME}/Dropbox/mozc/.mozc   ${HOME}/.mozc
 	chmod 600   ${HOME}/.ssh/id_rsa
 
-install: ## Install development environment for arch linux
+install: ## Install arch linux packages using pacman
 	sudo pacman -S go zsh git vim dropbox nautilus-dropbox tmux keychain bashdb \
 	zsh-completions gnome-tweak-tool xsel emacs evince unrar seahorse hugo mpv \
 	archlinux-wallpaper inkscape file-roller xclip atool debootstrap valgrind \
@@ -71,7 +71,7 @@ install: ## Install development environment for arch linux
 	python-pip python-seaborn
 	sudo pkgfile --update
 
-aur: ## Install AUR packages with yaourt
+aur: ## Install AUR packages using yaourt
 	yaourt casperjs
 	yaourt chrome-gnome-shell-git
 	yaourt ctop
@@ -93,19 +93,25 @@ aur: ## Install AUR packages with yaourt
 	yaourt ttf-ricty
 	yaourt yum
 
+backup: ## Backup archlinux packages
+	mkdir -p ${HOME}/src/github.com/masasam/dotfiles/archlinux
+	pacman -Qqen > ${HOME}/src/github.com/masasam/dotfiles/archlinux/pacmanlist
+	pacman -Qnq > ${HOME}/src/github.com/masasam/dotfiles/archlinux/allpacmanlist
+	pacman -Qqem > ${HOME}/src/github.com/masasam/dotfiles/archlinux/yaourtlist
+
 caskinit: ## Initial cask
 	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
 
-rubygems: ## Install rubygems package
+rubygems: ## Install rubygems packages
 	gem install bundle
 	gem install jekyll
 	gem install pry
 
-npminit: ## Install node package
+npminit: ## Install node packages
 	mkdir -p ${HOME}/.node_modules
 	export npm_config_prefix=${HOME}/.node_modules
-	yarn global add npm tern jshint --prefix ~/.node_modules
-	yarn global add eslint babel-eslint eslint-plugin-react --prefix ~/.node_modules
+	yarn global add npm tern jshint
+	yarn global add eslint babel-eslint eslint-plugin-react
 
 goinstall: ## Install go packages
 	export GOPATH=${HOME}
@@ -130,16 +136,13 @@ piprecover: ## Recover pip packages
 	mkdir -p ${HOME}/src/github.com/masasam/dotfiles/archlinux
 	pip install -r ${HOME}/src/github.com/masasam/dotfiles/archlinux/packages_requirements.txt
 
+pipupdate: ## Update pip packages
+	cat ${HOME}/src/github.com/masasam/dotfiles/archlinux/packages_requirements.txt | grep -v '^\-e' | cut -d = -f 1 | xargs pip install -U pip
+
 cargoinstall: ## Install cargo packages
 	cargo install cargo-script
 
-backup: ## Backup archlinux packages
-	mkdir -p ${HOME}/src/github.com/masasam/dotfiles/archlinux
-	pacman -Qqen > ${HOME}/src/github.com/masasam/dotfiles/archlinux/pacmanlist
-	pacman -Qnq > ${HOME}/src/github.com/masasam/dotfiles/archlinux/allpacmanlist
-	pacman -Qqem > ${HOME}/src/github.com/masasam/dotfiles/archlinux/yaourtlist
-
-recover: ## Recover from backup arch linux package
+recover: ## Recover from backup arch linux packages
 	sudo pacman -S --needed `cat ${HOME}/src/github.com/masasam/dotfiles/archlinux/pacmanlist`
 	yaourt -S --needed $(DOY) `cat ${HOME}/src/github.com/masasam/dotfiles/archlinux/yaourtlist`
 
@@ -166,7 +169,7 @@ updatedb: ## Update file datebase
 neovim: # Init neovim dein
 	bash ${HOME}/.config/nvim/installer.sh ${HOME}/.config/nvim
 
-all: aur backup cask caskinit dockerinit goinstall init install cargoinstall npminit rubygems psdinit powertopinit recover updatedb neovim help
+all: aur backup cask caskinit dockerinit goinstall init install cargoinstall npminit rubygems psdinit powertopinit recover updatedb neovim help pipinit pipbackup piprecover pipupdate
 
 .PHONY: all
 
