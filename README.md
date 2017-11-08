@@ -348,6 +348,7 @@ Install what enters with pacman
 	sudo pacman -S debian-archive-keyring slack-desktop jupyter-notebook python-ipywidgets
 	sudo pacman -S mathjax matplotlib python-matplotlib python-pandas strace valgrind
 	sudo pacman -S python-scikit-learn python-scipy python-pip python-virtualenv python-seaborn
+	sudo pacman -S yarn
 
 Install what you put in yaourt
 
