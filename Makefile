@@ -117,6 +117,7 @@ goinstall: ## Install go packages
 	go get -u golang.org/x/tools/cmd/godoc
 	go get -u github.com/josharian/impl
 	go get -u github.com/jstemmer/gotags
+	go get -u github.com/golang/dep/cmd/dep
 
 cargoinstall: ## Install cargo package
 	cargo install cargo-script

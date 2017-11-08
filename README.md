@@ -373,23 +373,18 @@ Install what you put in yaourt
 	yaourt ttf-ricty
 	yaourt yum
 
-#### golang npm rust
+#### golang yarn cargo
 
-    ghq get -p github.com/nsf/gocode
-    ghq get -p github.com/rogpeppe/godef
+	go get -u github.com/nsf/gocode
+	go get -u github.com/rogpeppe/godef
 	go get -u golang.org/x/tools/cmd/goimports
 	go get -u golang.org/x/tools/cmd/godoc
-	ghq get -p josharian/impl
-	ghq get -p github.com/motemen/ghq
-	ghq get -p phildawes/racer
-	sudo npm install -g tern
-	sudo npm install -g jshint
-	curl https://sh.rustup.rs -sSf | sh
-	source $HOME/.cargo/env
-	cargo install rustfmt
-	cargo install racer
+	go get -u github.com/josharian/impl
+	go get -u github.com/jstemmer/gotags
+	go get -u github.com/golang/dep/cmd/dep
+	yarn global add npm tern jshint
+	yarn global add eslint babel-eslint eslint-plugin-react
 	cargo install cargo-script
-	cpanm RPC::EPC::Service DBI DBD::SQLite DBD::Pg DBD::mysql
 
 #### cask install
 
@@ -476,8 +471,8 @@ If you customize zsh by making zsh the default shell It may not be possible to l
 So when tmux starts up, write it in tmux.conf to start zsh.
 Keep the default shell bash.
 
-    echo "alias tmuxstart='tmux new-session -A -s main'" >> ~/.bashrc
-    echo "export HISTCONTROL=erasedups" >> ${HOME}/.bashrc
+    alias tmuxstart='tmux new-session -A -s main'
+    export HISTCONTROL=erasedups
 
 When started with tmuxstart, if you have a tmux session, you use it.
 
