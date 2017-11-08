@@ -58,7 +58,7 @@ install: ## Install development environment for arch linux
 	nmap poppler-data rtmpdump ffmpeg asciidoc sbcl docker aspell aspell-en ack \
 	gdb ripgrep hub wmctrl pwgen linux-docs ansible htop mariadb-clients tcpdump \
 	pygmentize arch-install-scripts termite neovim pandoc jq sylpheed pkgstats \
-	texlive-langjapanese eslint texlive-latexextra ctags python-pygments hdparm \
+	texlive-langjapanese yarn texlive-latexextra ctags python-pygments hdparm \
 	python-neovim python2-neovim noto-fonts-cjk arc-gtk-theme networkmanager npm \
 	zsh-syntax-highlighting xorg-apps shellcheck python-pyflakes php typescript \
 	python-jedi autopep8 python-virtualenv flake8 llvm llvm-libs lldb chromium \
@@ -68,7 +68,7 @@ install: ## Install development environment for arch linux
 	gauche screen ipcalc slack-desktop debian-archive-keyring jupyter-notebook \
 	aws-cli bash-completion mathjax python-matplotlib python-pandas python-scipy \
 	python-scikit-learn gnu-netcat python-ipywidgets urxvt-perls cmatrix expect \
-	python-pip python-virtualenv python-seaborn yarn
+	python-pip python-virtualenv python-seaborn
 	sudo pkgfile --update
 
 aur: ## Install AUR packages with yaourt
@@ -101,12 +101,11 @@ rubygems: ## Install rubygems package
 	gem install jekyll
 	gem install pry
 
-npmjs: ## Install node package
+npminit: ## Install node package
 	mkdir -p ${HOME}/.node_modules
 	export npm_config_prefix=${HOME}/.node_modules
-	npm -g install npm
-	npm -g install tern
-	npm -g install jshint
+	npm -g install npm tern jshint
+	npm -g install eslint babel-eslint eslint-plugin-react
 
 goinstall: ## Install go packages
 	export GOPATH=${HOME}
@@ -155,7 +154,7 @@ updatedb: ## Update file datebase
 neovim: # Init neovim dein
 	bash ${HOME}/.config/nvim/installer.sh ${HOME}/.config/nvim
 
-all: aur backup cask caskinit dockerinit goinstall init install cargoinstall npmjs rubygems psdinit powertopinit recover updatedb neovim help
+all: aur backup cask caskinit dockerinit goinstall init install cargoinstall npminit rubygems psdinit powertopinit recover updatedb neovim help
 
 .PHONY: all
 
