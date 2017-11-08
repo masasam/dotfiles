@@ -1,12 +1,23 @@
 {
+  "ecmaVersion": 6,
   "libs": [
     "browser",
-    "jquery",
     "ecma5",
-    "underscore"
+    "ecma6",
+    "ecma7"
+  ],
+  "loadEagerly": [
+    "node_modules/react-dom/**/*.js",
+    "node_modules/react/**/*.js",
+    "node_modules/whatwg-fetch/fetch.js",
+    "src/**/*.js"
   ],
   "plugins": {
-    "angular": {},
-    "Node": {}
+    "es_modules": {},
+    "node": {},
+    "doc_comment": {
+      "fullDocs": true,
+      "strong": true
+    }
   }
 }
