@@ -1,3 +1,5 @@
+GITHUB=src/github.com/masasam/dotfiles
+
 init: ## Initial deploy dotfiles
 	ln -vsf ${PWD}/.zshrc   ${HOME}/.zshrc
 	ln -vsf ${PWD}/.vimrc   ${HOME}/.vimrc
@@ -94,10 +96,10 @@ aur: ## Install AUR packages using yaourt
 	yaourt yum
 
 backup: ## Backup archlinux packages
-	mkdir -p ${HOME}/src/github.com/masasam/dotfiles/archlinux
-	pacman -Qqen > ${HOME}/src/github.com/masasam/dotfiles/archlinux/pacmanlist
-	pacman -Qnq > ${HOME}/src/github.com/masasam/dotfiles/archlinux/allpacmanlist
-	pacman -Qqem > ${HOME}/src/github.com/masasam/dotfiles/archlinux/yaourtlist
+	mkdir -p ${HOME}/${GITHUB}/archlinux
+	pacman -Qqen > ${HOME}/${GITHUB}/archlinux/pacmanlist
+	pacman -Qnq > ${HOME}/${GITHUB}/archlinux/allpacmanlist
+	pacman -Qqem > ${HOME}/${GITHUB}/archlinux/yaourtlist
 
 caskinit: ## Initial cask
 	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
@@ -129,22 +131,22 @@ pipinit: ## Install pip packages
 	pip install virtualenv --user
 
 pipbackup: ## Backup pip packages
-	mkdir -p ${HOME}/src/github.com/masasam/dotfiles/archlinux
-	pip freeze > ${HOME}/src/github.com/masasam/dotfiles/archlinux/packages_requirements.txt
+	mkdir -p ${HOME}/${GITHUB}/archlinux
+	pip freeze > ${HOME}/${GITHUB}/archlinux/packages_requirements.txt
 
 piprecover: ## Recover pip packages
-	mkdir -p ${HOME}/src/github.com/masasam/dotfiles/archlinux
-	pip install -r ${HOME}/src/github.com/masasam/dotfiles/archlinux/packages_requirements.txt
+	mkdir -p ${HOME}/${GITHUB}/archlinux
+	pip install -r ${HOME}/${GITHUB}/archlinux/packages_requirements.txt
 
 pipupdate: ## Update pip packages
-	cat ${HOME}/src/github.com/masasam/dotfiles/archlinux/packages_requirements.txt | grep -v '^\-e' | cut -d = -f 1 | xargs pip install -U pip
+	cat ${HOME}/${GITHUB}/archlinux/packages_requirements.txt | grep -v '^\-e' | cut -d = -f 1 | xargs pip install -U pip
 
 cargoinstall: ## Install cargo packages
 	cargo install cargo-script
 
 recover: ## Recover from backup arch linux packages
-	sudo pacman -S --needed `cat ${HOME}/src/github.com/masasam/dotfiles/archlinux/pacmanlist`
-	yaourt -S --needed $(DOY) `cat ${HOME}/src/github.com/masasam/dotfiles/archlinux/yaourtlist`
+	sudo pacman -S --needed `cat ${HOME}/${GITHUB}/archlinux/pacmanlist`
+	yaourt -S --needed $(DOY) `cat ${HOME}/${GITHUB}/archlinux/yaourtlist`
 
 dockerinit: ## Docker initial setup
 	sudo usermod -aG docker ${USER}

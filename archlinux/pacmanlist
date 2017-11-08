@@ -158,7 +158,6 @@ python-pylint
 python-scikit-learn
 python-scipy
 python-seaborn
-python-virtualenv
 python2-neovim
 reiserfsprogs
 ripgrep
