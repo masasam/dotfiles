@@ -625,6 +625,7 @@ lua52-expat
 lua52-lpeg
 lua52-luajson
 lua52-socket
+luajit
 lvm2
 lz4
 lzo
