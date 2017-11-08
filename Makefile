@@ -68,7 +68,7 @@ install: ## Install development environment for arch linux
 	gauche screen ipcalc slack-desktop debian-archive-keyring jupyter-notebook \
 	aws-cli bash-completion mathjax python-matplotlib python-pandas python-scipy \
 	python-scikit-learn gnu-netcat python-ipywidgets urxvt-perls cmatrix expect \
-	python-pip python-virtualenv python-seaborn
+	python-pip python-seaborn
 	sudo pkgfile --update
 
 aur: ## Install AUR packages with yaourt
@@ -119,7 +119,18 @@ goinstall: ## Install go packages
 	go get -u github.com/jstemmer/gotags
 	go get -u github.com/golang/dep/cmd/dep
 
-cargoinstall: ## Install cargo package
+pipinit: ## Install pip packages
+	pip install virtualenv --user
+
+pipbackup: ## Backup pip packages
+	mkdir -p ${HOME}/src/github.com/masasam/dotfiles/archlinux
+	pip freeze > ${HOME}/src/github.com/masasam/dotfiles/archlinux/packages_requirements.txt
+
+piprecover: ## Recover pip packages
+	mkdir -p ${HOME}/src/github.com/masasam/dotfiles/archlinux
+	pip install -r ${HOME}/src/github.com/masasam/dotfiles/archlinux/packages_requirements.txt
+
+cargoinstall: ## Install cargo packages
 	cargo install cargo-script
 
 backup: ## Backup archlinux packages
@@ -128,7 +139,7 @@ backup: ## Backup archlinux packages
 	pacman -Qnq > ${HOME}/src/github.com/masasam/dotfiles/archlinux/allpacmanlist
 	pacman -Qqem > ${HOME}/src/github.com/masasam/dotfiles/archlinux/yaourtlist
 
-recover: ## Recovery from backup arch linux package
+recover: ## Recover from backup arch linux package
 	sudo pacman -S --needed `cat ${HOME}/src/github.com/masasam/dotfiles/archlinux/pacmanlist`
 	yaourt -S --needed $(DOY) `cat ${HOME}/src/github.com/masasam/dotfiles/archlinux/yaourtlist`
 
