@@ -207,6 +207,7 @@ alias goupdate='go get -u github.com/nsf/gocode; go get -u github.com/rogpeppe/g
 alias rust='cargo-script'
 alias rustupdate='cargo install-update -a'
 alias npmupdate='npm update -g'
+alias yarnupdate='yarn global upgrade'
 alias archupdate='yaourt -Syua; paccache -ruk0'
 alias archbackup='cd ${HOME}/src/github.com/masasam/dotfiles; make backup; cd -'
 alias githubissue='hub issue | peco | sed -e "s/\].*//" | xargs -Inum git checkout -b feature/num'
