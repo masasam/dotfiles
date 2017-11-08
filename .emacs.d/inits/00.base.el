@@ -51,13 +51,7 @@
 
 
 ;; C-h is backspace
-(bind-key "C-h" 'delete-backward-char)
-
-;; Enable backspace key in incremental search minibuffer
-(bind-key "C-h" 'isearch-delete-char isearch-mode-map)
-
-;; Assign the function help-command assigned to C-h to C-x C-h
-(bind-key "C-x C-h" 'help-command)
+(define-key key-translation-map (kbd "C-h") (kbd "<DEL>"))
 
 ;; Run C-x C-k same kill-buffer as C-x k
 (bind-key "C-x C-k" 'kill-buffer)
