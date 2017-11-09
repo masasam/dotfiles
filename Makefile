@@ -70,7 +70,6 @@ install: ## Install arch linux packages using pacman
 	sudo pkgfile --update
 
 aur: ## Install AUR packages using yaourt
-	yaourt casperjs
 	yaourt chrome-gnome-shell-git
 	yaourt ctop
 	yaourt direnv
@@ -107,6 +106,7 @@ npminit: ## Install node packages
 	export npm_config_prefix=${HOME}/.node_modules
 	yarn global add npm tern jshint
 	yarn global add eslint babel-eslint eslint-plugin-react
+	yarn global add casperjs
 
 goinstall: ## Install go packages
 	export GOPATH=${HOME}
@@ -178,13 +178,13 @@ powertopinit: ## Powertop initial setup (Warning take a long time)
 caskinit: ## Initial emacs cask
 	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
 
-neovim: # Init neovim dein
+neoviminit: # Init neovim dein
 	bash ${HOME}/.config/nvim/installer.sh ${HOME}/.config/nvim
 
 updatedb: ## Update file datebase
 	sudo updatedb
 
-all: aur backup cask caskinit dockerinit goinstall init install cargoinstall npminit rubygems psdinit powertopinit recover updatedb neovim help pipinstall pipbackup piprecover pipupdate
+all: aur backup cask caskinit dockerinit goinstall init install cargoinstall npminit rubygems psdinit powertopinit recover updatedb neoviminit help pipinstall pipbackup piprecover pipupdate
 
 .PHONY: all
 

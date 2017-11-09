@@ -111,8 +111,6 @@
 (depends-on "jinja2-mode")
 (depends-on "twig-mode")
 (depends-on "helm-directory")
-(depends-on "phalcon" :git "https://github.com/masasam/emacs-phalcon.git")
-(depends-on "git-complete" :git "https://github.com/masasam/git-complete.git")
 (depends-on "php-eldoc" :git "https://github.com/masasam/php-eldoc.git")
 (depends-on "easy-jekyll" :git "https://github.com/masasam/emacs-easy-jekyll.git")
 (depends-on "nginx-mode")

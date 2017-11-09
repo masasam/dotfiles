@@ -314,7 +314,6 @@ Install what enters with pacman
     sudo pacman -S file-roller
     sudo pacman -S xclip
     sudo pacman -S atool
-    sudo pacman -S trash-cli
     sudo pacman -S the_silver_searcher
     sudo pacman -S powertop
     sudo pacman -S cifs-utils
@@ -329,30 +328,27 @@ Install what enters with pacman
 	sudo pacman -S rtmpdump ffmpeg asciidoc sbcl
 	sudo pacman -S aspell aspell-en httperf
 	sudo pacman -S gdb ripgrep hub wmctrl
-	sudo pacman -S linux-docs ansible pwgen pygmentize
+	sudo pacman -S linux-docs ansible pwgen
 	sudo pacman -S arch-install-scripts
 	sudo pacman -S htop
 	sudo pacman -S neovim
-	sudo pacman -S pandoc texlive-langjapanese texlive-latexextra ctags python-pygments
-	sudo pacman -S python-neovim python2-neovim
+	sudo pacman -S pandoc texlive-langjapanese texlive-latexextra ctags
 	sudo pacman -S rust cargo
 	sudo pacman -S noto-fonts-cjk arc-gtk-theme jq
 	sudo pacman -S docker docker-compose zsh-syntax-highlighting
-	sudo pacman -S eslint shellcheck python-pyflakes python-jedi autopep8 python-virtualenv
-	sudo pacman -S python-pylint flake8
+	sudo pacman -S shellcheck
 	sudo pacman -S npm llvm llvm-libs lldb hdparm rxvt-unicode dnsmasq typescript php cscope
-	sudo pacman -S speedtest-cli cpanminus mariadb-clients postgresql-libs tig lsof fzf
+	sudo pacman -S mariadb-clients postgresql-libs tig lsof fzf
 	sudo pacman -S debootstrap tcpdump chromium bashdb pdfgrep ack parallel
 	sudo pacman -S alsa-utils mlocate traceroute aws-cli hugo mpv jhead gpaste pkgstats
 	sudo pacman -S nethogs optipng jpegoptim noto-fonts-emoji gauche screen ipcalc
-	sudo pacman -S debian-archive-keyring slack-desktop jupyter-notebook python-ipywidgets
-	sudo pacman -S mathjax matplotlib python-matplotlib python-pandas strace valgrind
-	sudo pacman -S python-scikit-learn python-scipy python-pip python-virtualenv python-seaborn
+	sudo pacman -S debian-archive-keyring slack-desktop
+	sudo pacman -S mathjax strace valgrind
+	sudo pacman -S python-pip
 	sudo pacman -S yarn
 
 Install what you put in yaourt
 
-	yaourt casperjs
 	yaourt chrome-gnome-shell-git
 	yaourt ctop
 	yaourt direnv
@@ -373,7 +369,28 @@ Install what you put in yaourt
 	yaourt ttf-ricty
 	yaourt yum
 
-#### golang yarn cargo
+##### pip
+
+	mkdir -p ${HOME}/.virtualenvs
+	pip install virtualenv --user
+	pip install virtualenvwrapper --user
+	pip install seaborn --user
+	pip install ipywidgets --user
+	pip install scikit-learn --user
+	pip install scipy --user
+	pip install pandas --user
+	pip install matplotlib --user
+	pip install jupyter --user
+	pip install neovim --user
+	pip install pylint --user
+	pip install jedi --user
+	pip install autopep8 --user
+	pip install flake8 --user
+	pip install pyflakes --user
+	pip install pygments --user
+	pip install speedtest-cli --user
+
+#### golang yarn cargo gem
 
 	go get -u github.com/nsf/gocode
 	go get -u github.com/rogpeppe/godef
@@ -384,7 +401,11 @@ Install what you put in yaourt
 	go get -u github.com/golang/dep/cmd/dep
 	yarn global add npm tern jshint
 	yarn global add eslint babel-eslint eslint-plugin-react
+	yarn global add casperjs
 	cargo install cargo-script
+	gem install bundle
+	gem install jekyll
+	gem install pry
 
 #### cask install
 
