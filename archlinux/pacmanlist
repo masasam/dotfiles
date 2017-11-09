@@ -9,7 +9,6 @@ aspell-en
 atool
 autoconf
 automake
-autopep8
 aws-cli
 baobab
 bash
@@ -49,7 +48,6 @@ filesystem
 findutils
 firefox
 firefox-i18n-ja
-flake8
 flex
 gauche
 gawk
@@ -87,7 +85,6 @@ jfsutils
 jhead
 jpegoptim
 jq
-jupyter-notebook
 keychain
 less
 libreoffice-fresh-ja
@@ -145,20 +142,7 @@ powertop
 procps-ng
 psmisc
 pwgen
-pygmentize
-python-ipywidgets
-python-jedi
-python-matplotlib
-python-neovim
-python-pandas
 python-pip
-python-pyflakes
-python-pygments
-python-pylint
-python-scikit-learn
-python-scipy
-python-seaborn
-python2-neovim
 reiserfsprogs
 ripgrep
 rsync
@@ -174,7 +158,6 @@ sed
 shadow
 shellcheck
 slack-desktop
-speedtest-cli
 strace
 sudo
 sylpheed

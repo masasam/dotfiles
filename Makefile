@@ -121,6 +121,7 @@ goinstall: ## Install go packages
 	go get -u github.com/golang/dep/cmd/dep
 
 pipinstall: ## Install pip packages
+	mkdir -p ${HOME}/.virtualenvs
 	pip install virtualenv --user
 	pip install virtualenvwrapper --user
 	pip install seaborn --user
