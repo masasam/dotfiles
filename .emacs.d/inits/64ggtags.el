@@ -1,0 +1,12 @@
+(add-hook 'python-mode-hook
+	  (lambda ()
+	    (ggtags-mode 1)))
+(add-hook 'php-mode-hook
+	  (lambda ()
+	    (ggtags-mode 1)))
+(add-hook 'enh-ruby-mode-hook
+	  (lambda ()
+	    (ggtags-mode 1)))
+(add-hook 'c-mode-common-hook
+	  (lambda ()
+	    (ggtags-mode 1)))

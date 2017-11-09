@@ -18,6 +18,7 @@ binutils
 bison
 bzip2
 chromium
+clang
 cmatrix
 coreutils
 cryptsetup
