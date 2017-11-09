@@ -76,7 +76,6 @@ aur: ## Install AUR packages using yaourt
 	yaourt direnv
 	yaourt ghq
 	yaourt git-secrets
-	yaourt global
 	yaourt google-cloud-sdk
 	yaourt ibus-mozc
 	yaourt man-pages-ja
@@ -85,7 +84,6 @@ aur: ## Install AUR packages using yaourt
 	yaourt peco
 	yaourt profile-sync-daemon
 	yaourt quicklisp
-	yaourt rtags
 	yaourt screenkey
 	yaourt ttf-cica
 	yaourt ttf-myrica
@@ -139,7 +137,6 @@ pipinstall: ## Install pip packages
 	pip install --user autopep8
 	pip install --user flake8
 	pip install --user pyflakes
-	pip install --user pygments
 	pip install --user speedtest-cli
 
 pipbackup: ## Backup pip packages
@@ -152,6 +149,10 @@ piprecover: ## Recover pip packages
 
 pipupdate: ## Update pip packages
 	cat ${HOME}/${GITHUB}/archlinux/packages_requirements.txt | grep -v '^\-e' | cut -d = -f 1 | xargs pip install -U pip
+
+gnuglobal: ## install gnu gloval
+	pip install --user pygments
+	yaourt global
 
 cargoinstall: ## Install cargo packages
 	cargo install cargo-script
