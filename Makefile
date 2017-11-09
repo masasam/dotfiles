@@ -122,6 +122,7 @@ goinstall: ## Install go packages
 
 pipinstall: ## Install pip packages
 	pip install virtualenv --user
+	pip install virtualenvwrapper --user
 	pip install seaborn --user
 	pip install ipywidgets --user
 	pip install scikit-learn --user
