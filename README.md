@@ -403,9 +403,9 @@ Install what you put in yaourt
 	yarn global add eslint babel-eslint eslint-plugin-react
 	yarn global add casperjs
 	cargo install cargo-script
-	gem install bundle
-	gem install jekyll
-	gem install pry
+	gem install --user-install bundle
+	gem install --user-install jekyll
+	gem install --user-install pry
 
 #### cask install
 

@@ -97,9 +97,9 @@ backup: ## Backup archlinux packages
 	pacman -Qqem > ${HOME}/${GITHUB}/archlinux/yaourtlist
 
 rubygems: ## Install rubygems packages
-	gem install bundle
-	gem install jekyll
-	gem install pry
+	gem install --user-install bundle
+	gem install --user-install jekyll
+	gem install --user-install pry
 
 npminit: ## Install node packages
 	mkdir -p ${HOME}/.node_modules
