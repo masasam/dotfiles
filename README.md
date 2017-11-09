@@ -363,6 +363,7 @@ Install what you put in yaourt
 	yaourt peco
 	yaourt profile-sync-daemon
 	yaourt quicklisp
+	yaourt rtags
 	yaourt screenkey
 	yaourt ttf-cica
 	yaourt ttf-myrica
