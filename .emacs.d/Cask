@@ -23,7 +23,6 @@
 (depends-on "markdown-mode")
 (depends-on "helm")
 (depends-on "helm-c-yasnippet")
-(depends-on "helm-gtags")
 (depends-on "helm-ag")
 (depends-on "helm-descbinds")
 (depends-on "helm-projectile")
