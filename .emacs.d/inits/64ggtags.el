@@ -1,12 +1,9 @@
-(add-hook 'python-mode-hook
-	  (lambda ()
-	    (ggtags-mode 1)))
-(add-hook 'php-mode-hook
-	  (lambda ()
-	    (ggtags-mode 1)))
-(add-hook 'enh-ruby-mode-hook
-	  (lambda ()
-	    (ggtags-mode 1)))
-(add-hook 'c-mode-common-hook
-	  (lambda ()
-	    (ggtags-mode 1)))
+(add-hook 'python-mode-hook 'ggtag-setting)
+(add-hook 'php-mode-hook 'ggtag-setting)
+(add-hook 'enh-ruby-mode-hook 'ggtag-setting)
+(add-hook 'c-mode-common-hook 'ggtag-setting)
+(add-hook 'js2-mode-hook 'ggtag-setting)
+(add-hook 'js2-jsx-mode-hook 'ggtag-setting)
+(defun ggtag-setting ()
+  (ggtags-mode 1)
+  (add-to-list 'ac-sources 'ac-source-gtags))

@@ -1,3 +1,7 @@
+### gloval .gitignore
 GPATH
 GRTAGS
 GTAGS
+.ac-php-conf.json
+vendor
+node_modules
