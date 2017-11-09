@@ -55,22 +55,18 @@ install: ## Install arch linux packages using pacman
 	zsh-completions gnome-tweak-tool xsel emacs evince unrar seahorse hugo mpv \
 	archlinux-wallpaper inkscape file-roller xclip atool debootstrap valgrind \
 	the_silver_searcher powertop cifs-utils gvfs gvfs-smb libreoffice-fresh-ja \
-	gnome-keyring cups-pdf eog mcomix openssh firefox firefox-i18n-ja gimp strace \
+	gnome-keyring cups-pdf mcomix openssh firefox firefox-i18n-ja gimp strace \
 	otf-ipafont pkgfile baobab dconf-editor rsync elixir nodejs phantomjs whois \
 	nmap poppler-data rtmpdump ffmpeg asciidoc sbcl docker aspell aspell-en ack \
 	gdb ripgrep hub wmctrl pwgen linux-docs ansible htop mariadb-clients tcpdump \
-	pygmentize arch-install-scripts termite neovim pandoc jq sylpheed pkgstats \
-	texlive-langjapanese yarn texlive-latexextra ctags python-pygments hdparm \
-	python-neovim python2-neovim noto-fonts-cjk arc-gtk-theme networkmanager npm \
-	zsh-syntax-highlighting xorg-apps shellcheck python-pyflakes php typescript \
-	python-jedi autopep8 python-virtualenv flake8 llvm llvm-libs lldb chromium \
-	python-pylint dnsmasq cscope speedtest-cli lsof postgresql-libs tig pdfgrep \
+	arch-install-scripts termite neovim pandoc jq sylpheed pkgstats python-pip \
+	texlive-langjapanese yarn texlive-latexextra ctags hdparm eog noto-fonts-cjk \
+	arc-gtk-theme networkmanager npm typescript chromium llvm llvm-libs lldb php \
+	zsh-syntax-highlighting xorg-apps shellcheck bash-completion mathjax expect \
+	dnsmasq cscope lsof postgresql-libs pdfgrep gnu-netcat urxvt-perls cmatrix \
 	curl docker-compose parallel alsa-utils mlocate traceroute rust-racer jhead \
 	noto-fonts-emoji rust cargo rustup rustfmt gpaste nethogs optipng jpegoptim \
-	gauche screen ipcalc slack-desktop debian-archive-keyring jupyter-notebook \
-	aws-cli bash-completion mathjax python-matplotlib python-pandas python-scipy \
-	python-scikit-learn gnu-netcat python-ipywidgets urxvt-perls cmatrix expect \
-	python-pip python-seaborn
+	gauche screen ipcalc slack-desktop debian-archive-keyring tig
 	sudo pkgfile --update
 
 aur: ## Install AUR packages using yaourt
@@ -101,9 +97,6 @@ backup: ## Backup archlinux packages
 	pacman -Qnq > ${HOME}/${GITHUB}/archlinux/allpacmanlist
 	pacman -Qqem > ${HOME}/${GITHUB}/archlinux/yaourtlist
 
-caskinit: ## Initial cask
-	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
-
 rubygems: ## Install rubygems packages
 	gem install bundle
 	gem install jekyll
@@ -127,8 +120,24 @@ goinstall: ## Install go packages
 	go get -u github.com/jstemmer/gotags
 	go get -u github.com/golang/dep/cmd/dep
 
-pipinit: ## Install pip packages
+pipinstall: ## Install pip packages
 	pip install virtualenv --user
+	pip install seaborn --user
+	pip install ipywidgets --user
+	pip install scikit-learn --user
+	pip install scipy --user
+	pip install pandas --user
+	pip install matplotlib --user
+	pip install jupyter --user
+	pip install neovim --user
+	pip install pylint --user
+	pip install jedi --user
+	pip install autopep8 --user
+	pip install flake8 --user
+	pip install pyflakes --user
+	pip install pygments --user
+	pip install speedtest-cli --user
+	pip install awscli --user
 
 pipbackup: ## Backup pip packages
 	mkdir -p ${HOME}/${GITHUB}/archlinux
@@ -165,13 +174,16 @@ powertopinit: ## Powertop initial setup (Warning take a long time)
 	sudo powertop --calibrate
 	sudo systemctl enable powertop
 
-updatedb: ## Update file datebase
-	sudo updatedb
+caskinit: ## Initial emacs cask
+	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
 
 neovim: # Init neovim dein
 	bash ${HOME}/.config/nvim/installer.sh ${HOME}/.config/nvim
 
-all: aur backup cask caskinit dockerinit goinstall init install cargoinstall npminit rubygems psdinit powertopinit recover updatedb neovim help pipinit pipbackup piprecover pipupdate
+updatedb: ## Update file datebase
+	sudo updatedb
+
+all: aur backup cask caskinit dockerinit goinstall init install cargoinstall npminit rubygems psdinit powertopinit recover updatedb neovim help pipinstall pipbackup piprecover pipupdate
 
 .PHONY: all
 
