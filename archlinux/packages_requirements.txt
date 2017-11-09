@@ -89,7 +89,6 @@ traitlets==4.3.2
 urllib3==1.22
 virtualenv==15.1.0
 virtualenv-clone==0.2.6
-virtualenvwrapper==4.8.2
 wcwidth==0.1.7
 webencodings==0.5.1
 websocket-client==0.44.0

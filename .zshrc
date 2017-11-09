@@ -222,7 +222,6 @@ export PATH="$HOME/.cask/bin:$PATH"
 export EDITOR='emacsclient'
 export XDG_CONFIG_HOME=$HOME/.config
 export WORKON_HOME=~/.virtualenvs
-#source $HOME/.local/bin/virtualenvwrapper.sh
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export RUST_SRC_PATH=~/Dropbox/emacs/rustc-1.14.0/src

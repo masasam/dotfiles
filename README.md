@@ -372,23 +372,23 @@ Install what you put in yaourt
 ##### pip
 
 	mkdir -p ${HOME}/.virtualenvs
-	pip install virtualenv --user
-	pip install virtualenvwrapper --user
-	pip install seaborn --user
-	pip install ipywidgets --user
-	pip install scikit-learn --user
-	pip install scipy --user
-	pip install pandas --user
-	pip install matplotlib --user
-	pip install jupyter --user
-	pip install neovim --user
-	pip install pylint --user
-	pip install jedi --user
-	pip install autopep8 --user
-	pip install flake8 --user
-	pip install pyflakes --user
-	pip install pygments --user
-	pip install speedtest-cli --user
+	pip install --user virtualenv
+	pip install --user pipenv
+	pip install --user seaborn
+	pip install --user ipywidgets
+	pip install --user scikit-learn
+	pip install --user scipy
+	pip install --user pandas
+	pip install --user matplotlib
+	pip install --user jupyter
+	pip install --user neovim
+	pip install --user pylint
+	pip install --user jedi
+	pip install --user autopep8
+	pip install --user flake8
+	pip install --user pyflakes
+	pip install --user pygments
+	pip install --user speedtest-cli
 
 #### golang yarn cargo gem
 
