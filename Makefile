@@ -5,6 +5,7 @@ init: ## Initial deploy dotfiles
 	ln -vsf ${PWD}/.vimrc   ${HOME}/.vimrc
 	ln -vsf ${PWD}/.bashrc   ${HOME}/.bashrc
 	ln -vsf ${PWD}/.gitconfig   ${HOME}/.gitconfig
+	ln -vsf ${PWD}/.gitignore   ${HOME}/.gitignore
 	ln -vsf ${PWD}/.npmrc   ${HOME}/.npmrc
 	ln -vsf ${PWD}/.tern-config   ${HOME}/.tern-config
 	ln -vsf ${PWD}/.tmux.conf   ${HOME}/.tmux.conf

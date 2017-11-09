@@ -29,7 +29,7 @@
 [core]
 	editor = emacsclient
 	pager = less
-	excludesfile = /home/masa/.gitignore
+	excludesfile = ~/.gitignore
 
 [push]
 	default = upstream
