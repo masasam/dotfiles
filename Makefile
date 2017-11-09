@@ -66,7 +66,7 @@ install: ## Install arch linux packages using pacman
 	dnsmasq cscope lsof postgresql-libs pdfgrep gnu-netcat urxvt-perls cmatrix \
 	curl docker-compose parallel alsa-utils mlocate traceroute rust-racer jhead \
 	noto-fonts-emoji rust cargo rustup rustfmt gpaste nethogs optipng jpegoptim \
-	gauche screen ipcalc slack-desktop debian-archive-keyring tig
+	gauche screen ipcalc slack-desktop debian-archive-keyring tig aws-cli
 	sudo pkgfile --update
 
 aur: ## Install AUR packages using yaourt
@@ -138,7 +138,6 @@ pipinstall: ## Install pip packages
 	pip install pyflakes --user
 	pip install pygments --user
 	pip install speedtest-cli --user
-	pip install awscli --user
 
 pipbackup: ## Backup pip packages
 	mkdir -p ${HOME}/${GITHUB}/archlinux
