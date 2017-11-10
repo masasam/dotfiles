@@ -57,7 +57,7 @@ install: ## Install arch linux packages using pacman
 	archlinux-wallpaper inkscape file-roller xclip atool debootstrap valgrind \
 	the_silver_searcher powertop cifs-utils gvfs gvfs-smb libreoffice-fresh-ja \
 	gnome-keyring cups-pdf mcomix openssh firefox firefox-i18n-ja gimp strace \
-	otf-ipafont pkgfile baobab dconf-editor rsync elixir nodejs phantomjs whois \
+	otf-ipafont pkgfile baobab dconf-editor rsync nodejs debian-archive-keyring \
 	nmap poppler-data rtmpdump ffmpeg asciidoc sbcl docker aspell aspell-en ack \
 	gdb ripgrep hub wmctrl pwgen linux-docs ansible htop mariadb-clients tcpdump \
 	arch-install-scripts termite neovim pandoc jq sylpheed pkgstats python-pip \
@@ -67,7 +67,7 @@ install: ## Install arch linux packages using pacman
 	dnsmasq cscope lsof postgresql-libs pdfgrep gnu-netcat urxvt-perls cmatrix \
 	curl docker-compose parallel alsa-utils mlocate traceroute rust-racer jhead \
 	noto-fonts-emoji rust cargo rustup rustfmt gpaste nethogs optipng jpegoptim \
-	gauche screen ipcalc slack-desktop debian-archive-keyring tig aws-cli
+	gauche screen ipcalc slack-desktop tig aws-cli whois elixir
 	sudo pkgfile --update
 
 aur: ## Install AUR packages using yaourt
@@ -106,7 +106,7 @@ npminit: ## Install node packages
 	export npm_config_prefix=${HOME}/.node_modules
 	yarn global add npm tern jshint
 	yarn global add eslint babel-eslint eslint-plugin-react
-	yarn global add casperjs
+	yarn global add casperjs phantomjs
 
 goinstall: ## Install go packages
 	export GOPATH=${HOME}

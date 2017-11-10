@@ -324,7 +324,7 @@ Install what enters with pacman
     sudo pacman -S mcomix
     sudo pacman -S libreoffice-fresh-ja
     sudo pacman -S go pkgfile rsync elixir
-	sudo pacman -S nodejs phantomjs whois nmap poppler-data
+	sudo pacman -S nodejs whois nmap poppler-data
 	sudo pacman -S rtmpdump ffmpeg asciidoc sbcl
 	sudo pacman -S aspell aspell-en httperf
 	sudo pacman -S gdb ripgrep hub wmctrl
@@ -401,7 +401,7 @@ Install what you put in yaourt
 	go get -u github.com/golang/dep/cmd/dep
 	yarn global add npm tern jshint
 	yarn global add eslint babel-eslint eslint-plugin-react
-	yarn global add casperjs
+	yarn global add casperjs phantomjs
 	cargo install cargo-script
 	gem install --user-install bundle
 	gem install --user-install jekyll
