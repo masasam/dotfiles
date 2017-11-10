@@ -707,9 +707,12 @@ Font
 
 	docker build -t dotfiles /home/${USER}/src/github.com/masasam/dotfiles
 
-2.Run docker run and execute the following command in the docker container
+2.Run docker run
 
 	docker run -t -i -v /home/${USER}/Dropbox:/home/${USER}/Dropbox:cached --name arch dotfiles /bin/bash
+
+3.Execute the following command in the docker container
+
 	cd /home/${USER}/src/github.com/masasam/dotfiles
 	make install
 	make init
