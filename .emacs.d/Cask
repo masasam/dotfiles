@@ -121,3 +121,4 @@
 (depends-on "enh-ruby-mode")
 (depends-on "ruby-electric")
 (depends-on "paredit")
+(depends-on "inf-ruby")
