@@ -707,7 +707,7 @@ Font
 
 	docker build -t dotfiles /home/${USER}/src/github.com/masasam/dotfiles
 
-2.Run docker run
+2.Run 'docker run' mounting the dropbox directory
 
 	docker run -t -i -v /home/${USER}/Dropbox:/home/${USER}/Dropbox:cached --name arch dotfiles /bin/bash
 
