@@ -221,6 +221,7 @@ gzip
 harfbuzz
 harfbuzz-icu
 haskell-aeson
+haskell-aeson-pretty
 haskell-asn1-encoding
 haskell-asn1-parse
 haskell-asn1-types
@@ -236,6 +237,8 @@ haskell-byteable
 haskell-case-insensitive
 haskell-cereal
 haskell-cmark
+haskell-cmark-gfm
+haskell-cmdargs
 haskell-conduit
 haskell-connection
 haskell-cookie
@@ -252,6 +255,7 @@ haskell-exceptions
 haskell-extensible-exceptions
 haskell-filemanip
 haskell-foundation
+haskell-glob
 haskell-haddock-library
 haskell-hashable
 haskell-hourglass
@@ -295,6 +299,7 @@ haskell-semigroups
 haskell-sha
 haskell-skylighting
 haskell-socks
+haskell-split
 haskell-stm
 haskell-streaming-commons
 haskell-syb
