@@ -67,8 +67,7 @@ install: ## Install arch linux packages using pacman
 	dnsmasq cscope lsof postgresql-libs pdfgrep gnu-netcat urxvt-perls cmatrix \
 	curl docker-compose parallel alsa-utils mlocate traceroute rust-racer jhead \
 	noto-fonts-emoji rust cargo rustup rustfmt gpaste nethogs optipng jpegoptim \
-	gauche screen ipcalc slack-desktop tig aws-cli elixir phantomjs geckodriver \
-	whois
+	gauche screen ipcalc slack-desktop tig aws-cli elixir geckodriver whois ruby
 	sudo pkgfile --update
 
 aur: ## Install AUR packages using yaourt
@@ -111,7 +110,6 @@ npminit: ## Install node packages
 	yarn global add eslint
 	yarn global add babel-eslint
 	yarn global add eslint-plugin-react
-	yarn global add casperjs
 
 goinstall: ## Install go packages
 	export GOPATH=${HOME}

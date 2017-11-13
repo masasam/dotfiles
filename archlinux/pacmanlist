@@ -133,7 +133,6 @@ pciutils
 pcmciautils
 pdfgrep
 perl
-phantomjs
 php
 pkg-config
 pkgfile
@@ -148,6 +147,7 @@ python-pip
 reiserfsprogs
 ripgrep
 rsync
+ruby
 rust-racer
 rustfmt
 rustup

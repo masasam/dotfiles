@@ -189,7 +189,6 @@ gnutls
 go
 gobject-introspection-runtime
 gpaste
-gperf
 gpgme
 gpm
 gptfdisk
@@ -706,7 +705,6 @@ perl-error
 perl-file-next
 perl-file-which
 perl-xml-parser
-phantomjs
 php
 pinentry
 pipewire
