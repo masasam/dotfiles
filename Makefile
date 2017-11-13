@@ -139,6 +139,7 @@ pipinstall: ## Install pip packages
 	pip install --user pyflakes
 	pip install --user speedtest-cli
 	pip install --user selenium
+	pip install --user ansible-container
 
 pipbackup: ## Backup pip packages
 	mkdir -p ${HOME}/${GITHUB}/archlinux

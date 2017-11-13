@@ -390,6 +390,7 @@ Install what you put in yaourt
 	pip install --user pygments
 	pip install --user speedtest-cli
 	pip install --user selenium
+	pip install --user ansible-container
 
 #### golang yarn cargo gem
 
