@@ -149,6 +149,7 @@ gdb-common
 gdbm
 gdk-pixbuf2
 gdm
+geckodriver
 gegl02
 geoclue2
 geocode-glib

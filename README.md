@@ -345,7 +345,7 @@ Install what enters with pacman
 	sudo pacman -S debian-archive-keyring slack-desktop
 	sudo pacman -S mathjax strace valgrind phantomjs
 	sudo pacman -S python-pip
-	sudo pacman -S yarn
+	sudo pacman -S yarn geckodriver
 
 Install what you put in yaourt
 

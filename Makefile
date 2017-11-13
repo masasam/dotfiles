@@ -67,7 +67,8 @@ install: ## Install arch linux packages using pacman
 	dnsmasq cscope lsof postgresql-libs pdfgrep gnu-netcat urxvt-perls cmatrix \
 	curl docker-compose parallel alsa-utils mlocate traceroute rust-racer jhead \
 	noto-fonts-emoji rust cargo rustup rustfmt gpaste nethogs optipng jpegoptim \
-	gauche screen ipcalc slack-desktop tig aws-cli whois elixir phantomjs
+	gauche screen ipcalc slack-desktop tig aws-cli elixir phantomjs geckodriver \
+	whois
 	sudo pkgfile --update
 
 aur: ## Install AUR packages using yaourt
