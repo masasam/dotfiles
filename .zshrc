@@ -109,19 +109,10 @@ zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
 eval `dircolors -b`
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
-# prompt
-case ${UID} in
-    0)
-	PROMPT="%{$fg_bold[green]%}%m%{$fg_bold[red]%}#%{$reset_color%} "
-	PROMPT2="%{$fg[magenta]%}%_%{$reset_color%}%{$fg_bold[white]%}>>%{$reset_color%} "
-	;;
-    *)
-	PROMPT="%{%(?.$fg_bold[cyan].$fg_bold[red])%}%m%{$fg_bold[white]%}%%%{$reset_color%} "
-	PROMPT2="%{$fg[magenta]%}%_%{$reset_color%}%{$fg_bold[white]%}>>%{$reset_color%} "
-	;;
-esac
-
-# Show your current location on the right prompt.
+# # prompt
+PROMPT="%{%(?.$fg_bold[cyan].$fg_bold[red])%}%m%{$fg_bold[white]%}%%%{$reset_color%} "
+PROMPT2="%{$fg[magenta]%}%_%{$reset_color%}%{$fg_bold[white]%}>>%{$reset_color%} "
+# Show your current location on the right prompt
 RPROMPT="%{$fg_bold[white]%}[%{$reset_color%}%{$fg[cyan]%}%~%{$reset_color%}%{$fg_bold[white]%}]%{$reset_color%}"
 
 # emacs keybind
@@ -282,20 +273,12 @@ function cde () {
 }
 
 
-function peco-rg() {
-    exec rg --vimgrep "$@" . | peco --exec 'awk -F : '"'"'{print "+" $2 " " $1}'"'"' | xargs less'
-}
-zle -N peco-rg
-bindkey '^x^g' peco-rg
-bindkey '^xg' peco-rg
-
-
 function peco-ag() {
     exec ag "$@" . | peco --exec 'awk -F : '"'"'{print "+" $2 " " $1}'"'"' | xargs less'
 }
 zle -N peco-ag
-bindkey '^x^G' peco-ag
-bindkey '^xG' peco-ag
+bindkey '^x^g' peco-ag
+bindkey '^xg' peco-ag
 
 
 function peco-ack() {
@@ -430,7 +413,7 @@ bindkey '^xp' peco-ps
 bindkey '^x^p' peco-ps
 
 
-function aliasp() {
+function alias-print() {
     BUFFER=$(alias | peco --query "$LBUFFER" | awk -F"=" '{print $1}')
     print -z "$BUFFER"
 }
@@ -507,42 +490,6 @@ function peco-chrome-bookmark() {
 }
 
 
-function peco-search() {
-    if [ $# = 0 ]; then
-	echo 'One argument is required For example, "peco-seaech pen pineapple apple pen"'
-    else
-	local search=$(echo -e "google\namazon\nqiita\nhatena\ngithub\ntwitter\nrakuten" | peco)
-	if [ $search = 'google' ]; then
-	    google "${@}"
-	elif [ $search = 'amazon' ]; then
-	    local query=$(echo "${@}" | sed -e 's/<space>/+/g')
-	    xdg-open "https://www.amazon.co.jp/s/ref=nb_sb_noss?__mk_ja_JP=カタカナ&url=search-alias%3Daps&field-keywords=${query}"
-	elif [ $search = 'qiita' ]; then
-	    local query=$(echo "${@}" | sed -e 's/<space>/+/g')
-	    xdg-open "http://qiita.com/search?q=${query}"
-	elif [ $search = 'hatena' ]; then
-	    local query=$(echo "${@}" | sed -e 's/<space>/+/g')
-	    xdg-open "http://b.hatena.ne.jp/search/text?q=$query"
-	elif [ $search = 'github' ]; then
-	    local query=$(echo "${@}" | sed -e 's/<space>/+/g')
-	    xdg-open "https://github.com/search?utf8=%E2%9C%93&q=$query"
-	elif [ $search = 'twitter' ]; then
-	    local query=$(echo "${@}" | sed -e 's/<space>/+/g')
-	    xdg-open "https://twitter.com/search?q=$query&src=typd"
-	elif [ $search = 'rakuten' ]; then
-	    local query=$(echo "${@}" | sed -e 's/<space>/+/g')
-	    xdg-open "http://search.rakuten.co.jp/search/mall/$query/"
-	fi
-    fi
-}
-
-
-function google() {
-    local query=$(echo "${@}" | sed -e 's/<space>/+/g')
-    xdg-open "http://www.google.co.jp/search?q=${query}"
-}
-
-
 function ipsort() {
     cat $1 | sort -n -t'.' -k1,1 -k2,2 -k3,3 -k4,4
 }
@@ -562,13 +509,13 @@ function mytimer() {
     if [ $# = 0 ]; then
 	echo 'mytimer $1'
     elif [ $# = 1 ]; then
-	mytimer2 $1 &
+	_mytimer $1 &
     else
 	echo 'mytimer $1'
     fi
 }
 
-function mytimer2() {
+function _mytimer() {
     if [ $# = 0 ]; then
 	echo 'mytimer $1'
     elif [ $# = 1 ]; then
