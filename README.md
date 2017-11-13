@@ -389,6 +389,7 @@ Install what you put in yaourt
 	pip install --user pyflakes
 	pip install --user pygments
 	pip install --user speedtest-cli
+	pip install --user selenium
 
 #### golang yarn cargo gem
 
