@@ -104,8 +104,12 @@ rubygems: ## Install rubygems packages
 npminit: ## Install node packages
 	mkdir -p ${HOME}/.node_modules
 	export npm_config_prefix=${HOME}/.node_modules
-	yarn global add npm tern jshint
-	yarn global add eslint babel-eslint eslint-plugin-react
+	yarn global add npm
+	yarn global add tern
+	yarn global add jshint
+	yarn global add eslint
+	yarn global add babel-eslint
+	yarn global add eslint-plugin-react
 	yarn global add casperjs
 
 goinstall: ## Install go packages

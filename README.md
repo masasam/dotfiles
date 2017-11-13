@@ -401,9 +401,13 @@ Install what you put in yaourt
 	go get -u github.com/josharian/impl
 	go get -u github.com/jstemmer/gotags
 	go get -u github.com/golang/dep/cmd/dep
-	yarn global add npm tern jshint
-	yarn global add eslint babel-eslint eslint-plugin-react
-	yarn global add casperjs phantomjs
+	yarn global add npm
+	yarn global add tern
+	yarn global add jshint
+	yarn global add eslint
+	yarn global add babel-eslint
+	yarn global add eslint-plugin-react
+	yarn global add casperjs
 	cargo install cargo-script
 	gem install --user-install bundle
 	gem install --user-install jekyll
