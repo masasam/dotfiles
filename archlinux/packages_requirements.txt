@@ -75,7 +75,6 @@ pexpect==4.2.1
 pgcli==1.8.1
 pgspecial==1.9.0
 pickleshare==0.7.4
-pipenv==8.3.2
 prompt-toolkit==1.0.15
 psycopg2==2.7.3.2
 ptyprocess==0.5.2
@@ -125,7 +124,6 @@ tornado==4.5.2
 traitlets==4.3.2
 Twisted==17.9.0
 urllib3==1.22
-virtualenv==15.1.0
 virtualenv-clone==0.2.6
 w3lib==1.18.0
 wcwidth==0.1.7

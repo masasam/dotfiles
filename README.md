@@ -371,9 +371,6 @@ Install what you put in yaourt
 
 ##### pip
 
-	mkdir -p ${HOME}/.virtualenvs
-	pip install --user virtualenv
-	pip install --user pipenv
 	pip install --user seaborn
 	pip install --user ipywidgets
 	pip install --user scikit-learn
