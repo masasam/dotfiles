@@ -7,6 +7,7 @@ init: ## Initial deploy dotfiles
 	ln -vsf ${PWD}/.gitconfig   ${HOME}/.gitconfig
 	ln -vsf ${PWD}/.gitignore   ${HOME}/.gitignore
 	ln -vsf ${PWD}/.npmrc   ${HOME}/.npmrc
+	ln -vsf ${PWD}/.myclirc   ${HOME}/.myclirc
 	ln -vsf ${PWD}/.tern-config   ${HOME}/.tern-config
 	ln -vsf ${PWD}/.tmux.conf   ${HOME}/.tmux.conf
 	ln -vsf ${PWD}/.screenrc   ${HOME}/.screenrc
