@@ -117,6 +117,7 @@ pipinstall: ## Install pip packages
 	pip install --user selenium
 	pip install --user ansible-container
 	pip install --user scrapy
+	pip install --user mycli
 
 pipbackup: ## Backup pip packages
 	mkdir -p ${HOME}/${GITHUB}/archlinux
