@@ -120,11 +120,11 @@ pipinstall: ## Install pip packages
 
 pipbackup: ## Backup pip packages
 	mkdir -p ${HOME}/${GITHUB}/archlinux
-	pip freeze > ${HOME}/${GITHUB}/archlinux/packages_requirements.txt
+	pip freeze > ${HOME}/${GITHUB}/archlinux/requirements.txt
 
 piprecover: ## Recover pip packages
 	mkdir -p ${HOME}/${GITHUB}/archlinux
-	pip install --user -r ${HOME}/${GITHUB}/archlinux/packages_requirements.txt
+	pip install --user -r ${HOME}/${GITHUB}/archlinux/requirements.txt
 
 pipupdate: ## Update pip packages
 	cat ${HOME}/${GITHUB}/archlinux/packages_requirements.txt | grep -v '^\-e' | cut -d = -f 1 | xargs pip install -U pip
