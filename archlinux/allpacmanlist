@@ -630,6 +630,7 @@ m4
 make
 man-db
 man-pages
+mariadb
 mariadb-clients
 mathjax
 mcomix
