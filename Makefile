@@ -179,6 +179,11 @@ dockerinit: ## Docker initial setup
 	sudo ln -vsf ${PWD}/etc/docker/daemon.json   /etc/docker/daemon.json
 	sudo systemctl start docker.service
 
+mariadbinit: # Mariadb initial setup
+	sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
+	sudo systemctl start mariadb.service
+	mysql_secure_installation
+
 psdinit: ## Profile-Sync-Daemon initial setup
 	echo "${USER} ALL=(ALL) NOPASSWD: /usr/bin/psd-overlay-helper" | sudo EDITOR='tee -a' visudo
 	systemctl --user enable psd.service
@@ -196,7 +201,7 @@ neoviminit: # Init neovim dein
 updatedb: ## Update file datebase
 	sudo updatedb
 
-all: aur backup cask caskinit dockerinit goinstall init install cargoinstall npminit rubygems psdinit powertopinit recover updatedb neoviminit help pipinstall pipbackup piprecover pipupdate gnuglobal
+all: aur backup cask caskinit dockerinit goinstall init install cargoinstall npminit rubygems psdinit powertopinit recover updatedb neoviminit help pipinstall pipbackup piprecover pipupdate gnuglobal mariadbinit
 
 .PHONY: all
 
