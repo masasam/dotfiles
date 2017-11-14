@@ -6,13 +6,14 @@ attrs==17.3.0
 Automat==0.6.0
 autopep8==1.3.3
 awscli==1.11.184
+backports.csv==1.0.5
 bleach==2.1.1
 botocore==1.7.42
 cached-property==1.3.1
 cffi==1.11.2
 chardet==3.0.4
 chrome-gnome-shell==0.0.0
-cli-helpers==1.0.0
+cli-helpers==0.2.3
 click==6.7
 colorama==0.3.7
 configobj==5.0.6
@@ -31,6 +32,7 @@ entrypoints==0.2.3
 flake8==3.5.0
 greenlet==0.4.12
 html5lib==1.0b10
+humanize==0.5.1
 hyperlink==17.3.1
 idna==2.6
 incremental==17.5.0
@@ -70,9 +72,12 @@ parso==0.1.0
 pbr==3.1.1
 pew==1.1.0
 pexpect==4.2.1
+pgcli==1.8.1
+pgspecial==1.9.0
 pickleshare==0.7.4
 pipenv==8.3.2
 prompt-toolkit==1.0.15
+psycopg2==2.7.3.2
 ptyprocess==0.5.2
 pyasn1==0.3.7
 pyasn1-modules==0.1.5
@@ -103,6 +108,7 @@ Scrapy==1.4.0
 seaborn==0.8.1
 selenium==3.7.0
 service-identity==17.0.0
+setproctitle==1.1.10
 simplegeneric==0.8.1
 six==1.11.0
 speedtest-cli==1.0.7

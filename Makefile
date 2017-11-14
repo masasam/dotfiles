@@ -118,6 +118,7 @@ pipinstall: ## Install pip packages
 	pip install --user ansible-container
 	pip install --user scrapy
 	pip install --user mycli
+	pip install --user pgcli
 
 pipbackup: ## Backup pip packages
 	mkdir -p ${HOME}/${GITHUB}/archlinux
