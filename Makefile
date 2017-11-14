@@ -96,33 +96,6 @@ backup: ## Backup archlinux packages
 	pacman -Qnq > ${HOME}/${GITHUB}/archlinux/allpacmanlist
 	pacman -Qqem > ${HOME}/${GITHUB}/archlinux/yaourtlist
 
-rubygems: ## Install rubygems packages
-	gem install --user-install bundle
-	gem install --user-install jekyll
-	gem install --user-install pry
-
-npminit: ## Install node packages
-	mkdir -p ${HOME}/.node_modules
-	export npm_config_prefix=${HOME}/.node_modules
-	yarn global add npm
-	yarn global add tern
-	yarn global add jshint
-	yarn global add eslint
-	yarn global add babel-eslint
-	yarn global add eslint-plugin-react
-
-goinstall: ## Install go packages
-	export GOPATH=${HOME}
-	export PATH="$PATH:$GOPATH/bin"
-	mkdir -p ${HOME}/{bin,src}
-	go get -u github.com/nsf/gocode
-	go get -u github.com/rogpeppe/godef
-	go get -u golang.org/x/tools/cmd/goimports
-	go get -u golang.org/x/tools/cmd/godoc
-	go get -u github.com/josharian/impl
-	go get -u github.com/jstemmer/gotags
-	go get -u github.com/golang/dep/cmd/dep
-
 pipinstall: ## Install pip packages
 	mkdir -p ${HOME}/.virtualenvs
 	pip install --user virtualenv
@@ -143,6 +116,7 @@ pipinstall: ## Install pip packages
 	pip install --user speedtest-cli
 	pip install --user selenium
 	pip install --user ansible-container
+	pip install --user scrapy
 
 pipbackup: ## Backup pip packages
 	mkdir -p ${HOME}/${GITHUB}/archlinux
@@ -154,6 +128,33 @@ piprecover: ## Recover pip packages
 
 pipupdate: ## Update pip packages
 	cat ${HOME}/${GITHUB}/archlinux/packages_requirements.txt | grep -v '^\-e' | cut -d = -f 1 | xargs pip install -U pip
+
+goinstall: ## Install go packages
+	export GOPATH=${HOME}
+	export PATH="$PATH:$GOPATH/bin"
+	mkdir -p ${HOME}/{bin,src}
+	go get -u github.com/nsf/gocode
+	go get -u github.com/rogpeppe/godef
+	go get -u golang.org/x/tools/cmd/goimports
+	go get -u golang.org/x/tools/cmd/godoc
+	go get -u github.com/josharian/impl
+	go get -u github.com/jstemmer/gotags
+	go get -u github.com/golang/dep/cmd/dep
+
+npminit: ## Install node packages
+	mkdir -p ${HOME}/.node_modules
+	export npm_config_prefix=${HOME}/.node_modules
+	yarn global add npm
+	yarn global add tern
+	yarn global add jshint
+	yarn global add eslint
+	yarn global add babel-eslint
+	yarn global add eslint-plugin-react
+
+rubygems: ## Install rubygems packages
+	gem install --user-install bundle
+	gem install --user-install jekyll
+	gem install --user-install pry
 
 gnuglobal: ## install gnu gloval
 	pip install --user pygments
