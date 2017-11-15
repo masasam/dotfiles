@@ -149,3 +149,14 @@
 
 (defun mytimer-2()
   (shell-command-to-string "notify-send -u critical 'Emacs' 'It is time' -i utilities-terminal"))
+
+
+(defun copy-path ()
+  (interactive)
+  (if buffer-file-name
+      (progn
+	(kill-new (file-truename buffer-file-name))
+	(message (buffer-file-name)))
+    (progn
+      (kill-new default-directory)
+      (message default-directory))))
