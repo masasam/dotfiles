@@ -117,6 +117,7 @@ pipinstall: ## Install pip packages
 	pip install --user scrapy
 	pip install --user mycli
 	pip install --user pgcli
+	pip install --user pip-review
 
 pipbackup: ## Backup pip packages
 	mkdir -p ${HOME}/${GITHUB}/archlinux
@@ -127,7 +128,7 @@ piprecover: ## Recover pip packages
 	pip install --user -r ${HOME}/${GITHUB}/archlinux/requirements.txt
 
 pipupdate: ## Update pip packages
-	cat ${HOME}/${GITHUB}/archlinux/packages_requirements.txt | grep -v '^\-e' | cut -d = -f 1 | xargs pip install -U pip
+	pip-review --user | cut -d = -f 1 | xargs pip install -U --user
 
 goinstall: ## Install go packages
 	export GOPATH=${HOME}

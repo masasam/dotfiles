@@ -391,6 +391,7 @@ Install what you put in yaourt
 	pip install --user scrapy
 	pip install --user mycli
 	pip install --user pgcli
+	pip install --user pip-review
 
 #### golang yarn cargo gem
 
