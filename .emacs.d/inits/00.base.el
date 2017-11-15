@@ -145,9 +145,8 @@
 ;; mytimer
 (defun mytimer(n)
   (interactive "nMinute:")
-  (run-at-time (* n 60) nil #'mytimer-2))
-
-(defun mytimer-2()
+  (run-at-time (* n 60) nil #'_mytimer))
+(defun _mytimer()
   (shell-command-to-string "notify-send -u critical 'Emacs' 'It is time' -i utilities-terminal"))
 
 
