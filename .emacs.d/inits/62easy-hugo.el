@@ -7,7 +7,7 @@
 (setq easy-hugo-amazon-s3-bucket-name "masasam")
 (setq easy-hugo-google-cloud-storage-bucket-name "masa-storage")
 (setq easy-hugo-blog-number 4)
-(setq easy-hugo-basedir-1 "~/src/github.com/masasam/ppap/")
+(setq easy-hugo-basedir-1 "~/src/github.com/masasam/PPAP/")
 (setq easy-hugo-sshdomain-1 "blogdomain")
 (setq easy-hugo-root-1 "/home/ppap/")
 (setq easy-hugo-url-1 "http://example.com")

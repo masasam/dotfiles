@@ -1,4 +1,4 @@
-(setq easy-jekyll-basedir "~/src/github.com/masasam/jekyll/")
+(setq easy-jekyll-basedir "~/src/github.com/masasam/PPAP2/")
 (setq easy-jekyll-url "http://example.org")
 (setq easy-jekyll-sshdomain "blogdomain")
 (setq easy-jekyll-root "/home/jekyll/")
