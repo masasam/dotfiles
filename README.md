@@ -371,6 +371,8 @@ Install what you put in yaourt
 
 ##### pip
 
+	pip install --user virtualenv
+	pip install --user virtualenvwrapper
 	pip install --user seaborn
 	pip install --user ipywidgets
 	pip install --user scikit-learn

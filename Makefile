@@ -98,6 +98,8 @@ backup: ## Backup archlinux packages
 	pacman -Qqem > ${HOME}/${GITHUB}/archlinux/yaourtlist
 
 pipinstall: ## Install pip packages
+	pip install --user virtualenv
+	pip install --user virtualenvwrapper
 	pip install --user seaborn
 	pip install --user ipywidgets
 	pip install --user scikit-learn
