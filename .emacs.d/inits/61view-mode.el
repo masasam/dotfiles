@@ -1,7 +1,7 @@
 (defun View-goto-line-last (&optional line)
   "goto last line"
   (interactive "P")
-  (goto-line (line-number-at-pos (point-max))))
+  (forward-line (line-number-at-pos (point-max))))
 
 ;; view-mode
 (setq view-read-only t)
