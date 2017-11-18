@@ -123,3 +123,4 @@
 (depends-on "paredit")
 (depends-on "inf-ruby")
 (depends-on "indium")
+(depends-on "color-theme-sanityinc-tomorrow")
