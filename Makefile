@@ -1,5 +1,3 @@
-GITHUB=src/github.com/masasam/dotfiles
-
 init: ## Initial deploy dotfiles
 	ln -vsf ${PWD}/.zshrc   ${HOME}/.zshrc
 	ln -vsf ${PWD}/.vimrc   ${HOME}/.vimrc
@@ -15,9 +13,6 @@ init: ## Initial deploy dotfiles
 	ln -vsf ${PWD}/.Xresources   ${HOME}/.Xresources
 	ln -vsf ${PWD}/.aspell.conf   ${HOME}/.aspell.conf
 	mkdir -p ${HOME}/.config
-	ln -vsf ${HOME}/Dropbox/zsh/hub   ${HOME}/.config/hub
-	mkdir -p ${HOME}/.docker
-	ln -vsf ${HOME}/Dropbox/docker/config.json   ${HOME}/.docker/config.json
 	ln -vsf ${PWD}/.config/screenkey.json ${HOME}/.config/screenkey.json
 	mkdir -p ${HOME}/.config/psd
 	ln -vsf ${PWD}/.config/psd/psd.conf   ${HOME}/.config/psd/psd.conf
@@ -41,6 +36,12 @@ init: ## Initial deploy dotfiles
 	ln -vsfn ${PWD}/.peco   ${HOME}/.peco
 	test -L ${HOME}/.emacs.d || rm -rf ${HOME}/.emacs.d
 	ln -vsfn ${PWD}/.emacs.d   ${HOME}/.emacs.d
+
+initdropbox: ## Initial deploy dotfiles using dropbox
+	mkdir -p ${HOME}/.config
+	ln -vsf ${HOME}/Dropbox/zsh/hub   ${HOME}/.config/hub
+	mkdir -p ${HOME}/.docker
+	ln -vsf ${HOME}/Dropbox/docker/config.json   ${HOME}/.docker/config.json
 	test -L ${HOME}/.ssh || rm -rf ${HOME}/.ssh
 	ln -vsfn ${HOME}/Dropbox/ssh   ${HOME}/.ssh
 	mkdir -p ${HOME}/.local/share
@@ -92,10 +93,10 @@ aur: ## Install AUR packages using yaourt
 	yaourt yum
 
 backup: ## Backup archlinux packages
-	mkdir -p ${HOME}/${GITHUB}/archlinux
-	pacman -Qqen > ${HOME}/${GITHUB}/archlinux/pacmanlist
-	pacman -Qnq > ${HOME}/${GITHUB}/archlinux/allpacmanlist
-	pacman -Qqem > ${HOME}/${GITHUB}/archlinux/yaourtlist
+	mkdir -p ${PWD}/archlinux
+	pacman -Qqen > ${PWD}/archlinux/pacmanlist
+	pacman -Qnq > ${PWD}/archlinux/allpacmanlist
+	pacman -Qqem > ${PWD}/archlinux/yaourtlist
 
 pipinstall: ## Install python packages
 	pip install --user virtualenv
@@ -122,12 +123,12 @@ pipinstall: ## Install python packages
 	pip install --user pip-review
 
 pipbackup: ## Backup python packages
-	mkdir -p ${HOME}/${GITHUB}/archlinux
-	pip freeze > ${HOME}/${GITHUB}/archlinux/requirements.txt
+	mkdir -p ${PWD}/archlinux
+	pip freeze > ${PWD}/archlinux/requirements.txt
 
 piprecover: ## Recover python packages
-	mkdir -p ${HOME}/${GITHUB}/archlinux
-	pip install --user -r ${HOME}/${GITHUB}/archlinux/requirements.txt
+	mkdir -p ${PWD}/archlinux
+	pip install --user -r ${PWD}/archlinux/requirements.txt
 
 pipupdate: ## Update python packages
 	pip-review --user | cut -d = -f 1 | xargs pip install -U --user
@@ -167,8 +168,8 @@ cargoinstall: ## Install rust packages
 	cargo install cargo-script
 
 recover: ## Recover from backup arch linux packages
-	sudo pacman -S --needed `cat ${HOME}/${GITHUB}/archlinux/pacmanlist`
-	yaourt -S --needed $(DOY) `cat ${HOME}/${GITHUB}/archlinux/yaourtlist`
+	sudo pacman -S --needed `cat ${PWD}/archlinux/pacmanlist`
+	yaourt -S --needed $(DOY) `cat ${PWD}/archlinux/yaourtlist`
 
 dockerinit: ## Docker initial setup
 	sudo usermod -aG docker ${USER}
@@ -201,7 +202,7 @@ neoviminit: # Init neovim dein
 updatedb: ## Update file datebase
 	sudo updatedb
 
-all: aur backup cask caskinit dockerinit goinstall init install cargoinstall npminit rubygems psdinit powertopinit recover updatedb neoviminit help pipinstall pipbackup piprecover pipupdate gnuglobal mariadbinit
+all: aur backup cask caskinit dockerinit goinstall init install cargoinstall npminit rubygems psdinit powertopinit recover updatedb neoviminit help pipinstall pipbackup piprecover pipupdate gnuglobal mariadbinit initdropbox
 
 .PHONY: all
 
