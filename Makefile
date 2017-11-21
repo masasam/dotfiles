@@ -97,7 +97,7 @@ backup: ## Backup archlinux packages
 	pacman -Qnq > ${HOME}/${GITHUB}/archlinux/allpacmanlist
 	pacman -Qqem > ${HOME}/${GITHUB}/archlinux/yaourtlist
 
-pipinstall: ## Install pip packages
+pipinstall: ## Install python packages
 	pip install --user virtualenv
 	pip install --user virtualenvwrapper
 	pip install --user seaborn
@@ -121,15 +121,15 @@ pipinstall: ## Install pip packages
 	pip install --user pgcli
 	pip install --user pip-review
 
-pipbackup: ## Backup pip packages
+pipbackup: ## Backup python packages
 	mkdir -p ${HOME}/${GITHUB}/archlinux
 	pip freeze > ${HOME}/${GITHUB}/archlinux/requirements.txt
 
-piprecover: ## Recover pip packages
+piprecover: ## Recover python packages
 	mkdir -p ${HOME}/${GITHUB}/archlinux
 	pip install --user -r ${HOME}/${GITHUB}/archlinux/requirements.txt
 
-pipupdate: ## Update pip packages
+pipupdate: ## Update python packages
 	pip-review --user | cut -d = -f 1 | xargs pip install -U --user
 
 goinstall: ## Install go packages
@@ -159,11 +159,11 @@ rubygems: ## Install rubygems packages
 	gem install --user-install jekyll
 	gem install --user-install pry
 
-gnuglobal: ## install gnu gloval
+gnuglobal: ## Install gnu gloval
 	pip install --user pygments
 	yaourt global
 
-cargoinstall: ## Install cargo packages
+cargoinstall: ## Install rust packages
 	cargo install cargo-script
 
 recover: ## Recover from backup arch linux packages
