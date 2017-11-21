@@ -99,6 +99,7 @@ backup: ## Backup archlinux packages
 	pacman -Qqem > ${PWD}/archlinux/yaourtlist
 
 pipinstall: ## Install python packages
+	mkdir -p ${HOME}/.local
 	pip install --user virtualenv
 	pip install --user virtualenvwrapper
 	pip install --user seaborn
@@ -156,16 +157,15 @@ npminit: ## Install node packages
 	yarn global add eslint-plugin-react
 
 rubygems: ## Install rubygems packages
+	mkdir -p ${HOME}/.gem/
 	gem install --user-install bundle
 	gem install --user-install jekyll
 	gem install --user-install pry
 
 gnuglobal: ## Install gnu gloval
+	mkdir -p ${HOME}/.local
 	pip install --user pygments
 	yaourt global
-
-cargoinstall: ## Install rust packages
-	cargo install cargo-script
 
 recover: ## Recover from backup arch linux packages
 	sudo pacman -S --needed `cat ${PWD}/archlinux/pacmanlist`
@@ -202,7 +202,7 @@ neoviminit: # Init neovim dein
 updatedb: ## Update file datebase
 	sudo updatedb
 
-all: aur backup cask caskinit dockerinit goinstall init install cargoinstall npminit rubygems psdinit powertopinit recover updatedb neoviminit help pipinstall pipbackup piprecover pipupdate gnuglobal mariadbinit initdropbox
+all: aur backup cask caskinit dockerinit goinstall init install npminit rubygems psdinit powertopinit recover updatedb neoviminit help pipinstall pipbackup piprecover pipupdate gnuglobal mariadbinit initdropbox
 
 .PHONY: all
 
