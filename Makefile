@@ -136,13 +136,13 @@ goinstall: ## Install go packages
 	export GOPATH=${HOME}
 	export PATH="$PATH:$GOPATH/bin"
 	mkdir -p ${HOME}/{bin,src}
-	go get -u github.com/nsf/gocode
-	go get -u github.com/rogpeppe/godef
-	go get -u golang.org/x/tools/cmd/goimports
-	go get -u golang.org/x/tools/cmd/godoc
-	go get -u github.com/josharian/impl
-	go get -u github.com/jstemmer/gotags
-	go get -u github.com/golang/dep/cmd/dep
+	go get -u -v github.com/nsf/gocode
+	go get -u -v github.com/rogpeppe/godef
+	go get -u -v golang.org/x/tools/cmd/goimports
+	go get -u -v golang.org/x/tools/cmd/godoc
+	go get -u -v github.com/josharian/impl
+	go get -u -v github.com/jstemmer/gotags
+	go get -u -v github.com/golang/dep/cmd/dep
 
 npminit: ## Install node packages
 	mkdir -p ${HOME}/.node_modules
