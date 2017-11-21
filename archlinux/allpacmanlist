@@ -449,6 +449,7 @@ libical
 libice
 libid3tag
 libidn
+libidn2
 libiec61883
 libimobiledevice
 libinput
