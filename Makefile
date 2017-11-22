@@ -67,9 +67,9 @@ install: ## Install arch linux packages using pacman
 	arc-gtk-theme networkmanager npm typescript chromium llvm llvm-libs lldb php \
 	zsh-syntax-highlighting xorg-apps shellcheck bash-completion mathjax expect \
 	dnsmasq cscope lsof postgresql-libs pdfgrep gnu-netcat urxvt-perls cmatrix \
-	curl docker-compose parallel alsa-utils mlocate traceroute rust-racer jhead \
-	noto-fonts-emoji rust cargo rustup rustfmt gpaste nethogs optipng jpegoptim \
-	gauche screen ipcalc slack-desktop tig aws-cli elixir geckodriver whois ruby
+	curl docker-compose parallel alsa-utils mlocate traceroute jhead whois ruby \
+	noto-fonts-emoji gpaste nethogs optipng jpegoptim elixir geckodriver aws-cli \
+	gauche screen ipcalc slack-desktop tig
 	sudo pkgfile --update
 
 aur: ## Install AUR packages using yaourt
@@ -199,10 +199,19 @@ caskinit: ## Initial emacs cask
 neoviminit: # Init neovim dein
 	bash ${HOME}/.config/nvim/installer.sh ${HOME}/.config/nvim
 
+installrust: # Install rust and rust package
+	mkdir -p ${HOME}/.cargo
+	export PATH="$HOME/.cargo/bin:$PATH"
+	curl -sSf https://sh.rustup.rs | sh
+	cargo install rustfmt
+	cargo install racer
+	cargo install cargo-update
+	cargo install cargo-script
+
 updatedb: ## Update file datebase
 	sudo updatedb
 
-all: aur backup cask caskinit dockerinit goinstall init install npminit rubygems psdinit powertopinit recover updatedb neoviminit help pipinstall pipbackup piprecover pipupdate gnuglobal mariadbinit initdropbox
+all: aur backup cask caskinit dockerinit goinstall init install npminit rubygems psdinit powertopinit recover updatedb neoviminit help pipinstall pipbackup piprecover pipupdate gnuglobal mariadbinit initdropbox installrust
 
 .PHONY: all
 
