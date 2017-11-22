@@ -208,10 +208,13 @@ installrust: # Install rust and rust package
 	cargo install cargo-update
 	cargo install cargo-script
 
+updatecargo: # Update rust package
+	cargo install-update -a
+
 updatedb: ## Update file datebase
 	sudo updatedb
 
-all: aur backup cask caskinit dockerinit goinstall init install npminit rubygems psdinit powertopinit recover updatedb neoviminit help pipinstall pipbackup piprecover pipupdate gnuglobal mariadbinit initdropbox installrust
+all: aur backup cask caskinit dockerinit goinstall init install npminit rubygems psdinit powertopinit recover updatedb neoviminit help pipinstall pipbackup piprecover pipupdate gnuglobal mariadbinit initdropbox installrust updatecargo
 
 .PHONY: all
 
