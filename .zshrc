@@ -186,6 +186,9 @@ fi
 /usr/bin/keychain $HOME/.ssh/id_rsa
 source $HOME/.keychain/$HOST-sh
 
+# completion mosh
+compdef mosh=ssh
+
 
 # aliases
 alias ls='ls -v -F --color=auto'
