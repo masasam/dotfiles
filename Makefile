@@ -72,7 +72,7 @@ install: ## Install arch linux packages using pacman
 	gauche screen ipcalc slack-desktop tig mosh
 	sudo pkgfile --update
 
-aur: ## Install AUR packages using yaourt
+aur: ## Install arch linux AUR packages using yaourt
 	yaourt chrome-gnome-shell-git
 	yaourt ctop
 	yaourt direnv
@@ -92,7 +92,7 @@ aur: ## Install AUR packages using yaourt
 	yaourt ttf-ricty
 	yaourt yum
 
-backup: ## Backup archlinux packages
+backup: ## Backup arch linux packages
 	mkdir -p ${PWD}/archlinux
 	pacman -Qqen > ${PWD}/archlinux/pacmanlist
 	pacman -Qnq > ${PWD}/archlinux/allpacmanlist
@@ -167,7 +167,7 @@ gnuglobal: ## Install gnu gloval
 	pip install --user pygments
 	yaourt global
 
-recover: ## Recover from backup arch linux packages
+recover: ## Recover arch linux packages from backup
 	sudo pacman -S --needed `cat ${PWD}/archlinux/pacmanlist`
 	yaourt -S --needed $(DOY) `cat ${PWD}/archlinux/yaourtlist`
 
