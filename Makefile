@@ -214,7 +214,57 @@ updaterutst: # Update rust package
 updatedb: ## Update file datebase
 	sudo updatedb
 
-all: aur backup cask caskinit dockerinit goinstall init install npminit rubygems psdinit powertopinit recover updatedb neoviminit help pipinstall pipbackup piprecover pipupdate gnuglobal mariadbinit initdropbox installrust updaterust
+test: ## Test this Makefile using docker
+	docker build -t dotfiles ${PWD}
+	docker run -v /home/${USER}/Dropbox:/home/${USER}/Dropbox:cached --name makefiletest -d dotfiles
+	echo "========== make install =========="
+	docker exec makefiletest sh -c "cd ${PWD}; make install"
+	echo "========== make init =========="
+	docker exec makefiletest sh -c "cd ${PWD}; make init"
+	echo "========== make initdropbox =========="
+	docker exec makefiletest sh -c "cd ${PWD}; make initdropbox"
+	echo "========== make aur =========="
+	docker exec makefiletest sh -c "cd ${PWD}; make aur"
+	echo "========== make pipinstall =========="
+	docker exec makefiletest sh -c "cd ${PWD}; make pipinstall"
+	echo "========== make goinstall =========="
+	docker exec makefiletest sh -c "cd ${PWD}; make goinstall"
+	echo "========== make npminit =========="
+	docker exec makefiletest sh -c "cd ${PWD}; make npminit"
+	echo "========== make rubygems =========="
+	docker exec makefiletest sh -c "cd ${PWD}; make rubygems"
+	echo "========== make caskinit =========="
+	docker exec makefiletest sh -c "cd ${PWD}; make caskinit"
+	echo "========== make neoviminit =========="
+	docker exec makefiletest sh -c "cd ${PWD}; make neoviminit"
+	echo "========== make installrust =========="
+	docker exec makefiletest sh -c "cd ${PWD}; make installrust"
+
+testsimple: ## Test this Makefile using docker without Dropbox
+	docker build -t dotfiles ${PWD}
+	docker run --name makefiletest -d dotfiles
+	echo "========== make install =========="
+	docker exec makefiletest sh -c "cd ${PWD}; make install"
+	echo "========== make init =========="
+	docker exec makefiletest sh -c "cd ${PWD}; make init"
+	echo "========== make aur =========="
+	docker exec makefiletest sh -c "cd ${PWD}; make aur"
+	echo "========== make pipinstall =========="
+	docker exec makefiletest sh -c "cd ${PWD}; make pipinstall"
+	echo "========== make goinstall =========="
+	docker exec makefiletest sh -c "cd ${PWD}; make goinstall"
+	echo "========== make npminit =========="
+	docker exec makefiletest sh -c "cd ${PWD}; make npminit"
+	echo "========== make rubygems =========="
+	docker exec makefiletest sh -c "cd ${PWD}; make rubygems"
+	echo "========== make caskinit =========="
+	docker exec makefiletest sh -c "cd ${PWD}; make caskinit"
+	echo "========== make neoviminit =========="
+	docker exec makefiletest sh -c "cd ${PWD}; make neoviminit"
+	echo "========== make installrust =========="
+	docker exec makefiletest sh -c "cd ${PWD}; make installrust"
+
+all: aur backup cask caskinit dockerinit goinstall init install npminit rubygems psdinit powertopinit recover updatedb neoviminit help pipinstall pipbackup piprecover pipupdate gnuglobal mariadbinit initdropbox installrust updaterust test testsimple
 
 .PHONY: all
 
