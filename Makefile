@@ -72,6 +72,9 @@ install: ## Install arch linux packages using pacman
 	gauche screen ipcalc slack-desktop tig mosh
 	sudo pkgfile --update
 
+update: ## Update arch linux packages and save packages cache 3 generations
+	yaourt -Syua; paccache -ruk0
+
 aur: ## Install arch linux AUR packages using yaourt
 	yaourt chrome-gnome-shell-git
 	yaourt ctop
@@ -92,14 +95,14 @@ aur: ## Install arch linux AUR packages using yaourt
 	yaourt ttf-ricty
 	yaourt yum
 
-caskinstall: ## Install emacs cask
+caskinstall: ## Install emacs cask package manager
 	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
 
-melpa: ## Install emacs package from MELPA using Cask
+melpa: ## Install emacs packages from MELPA using cask package manager
 	export PATH="$HOME/.cask/bin:$PATH"
 	cd ${HOME}/.emacs.d/; cask upgrade;cask install
 
-melpaupdate: ## Update emacs package and backup only leave of old 6 generation package
+melpaupdate: ## Update emacs packages and backup 6 generations packages
 	export PATH="$HOME/.cask/bin:$PATH"
 	mkdir -p ${HOME}/Dropbox/emacs/cask
 	if [ `ls -rt ${HOME}/Dropbox/emacs/cask | head | wc -l` -gt 5 ];\
@@ -117,15 +120,9 @@ melpaupdate: ## Update emacs package and backup only leave of old 6 generation p
 	cask update;\
 	fi
 
-melpacleanup: ## Clean and install emacs package (When emacs version up, always execute)
+melpacleanup: ## Cleaninstall emacs packages (When emacs version up, always execute)
 	export PATH="$HOME/.cask/bin:$PATH"
 	rm -rf ${HOME}/.emacs.d/.cask; caskinstall
-
-backup: ## Backup arch linux packages
-	mkdir -p ${PWD}/archlinux
-	pacman -Qqen > ${PWD}/archlinux/pacmanlist
-	pacman -Qnq > ${PWD}/archlinux/allpacmanlist
-	pacman -Qqem > ${PWD}/archlinux/yaourtlist
 
 pipinstall: ## Install python packages
 	mkdir -p ${HOME}/.local
@@ -175,7 +172,7 @@ goinstall: ## Install go packages
 	go get -u -v github.com/jstemmer/gotags
 	go get -u -v github.com/golang/dep/cmd/dep
 
-npminit: ## Install node packages
+nodeinstall: ## Install node packages
 	mkdir -p ${HOME}/.node_modules
 	export npm_config_prefix=${HOME}/.node_modules
 	yarn global add npm
@@ -191,14 +188,35 @@ rubygems: ## Install rubygems packages
 	gem install --user-install jekyll
 	gem install --user-install pry
 
+rustinstall: ## Install rust and rust packages
+	mkdir -p ${HOME}/.cargo
+	export PATH="$HOME/.cargo/bin:$PATH"
+	curl -sSf https://sh.rustup.rs | sh
+	cargo install rustfmt
+	cargo install racer
+	cargo install cargo-update
+	cargo install cargo-script
+
+rustupdate: ## Update rust packages
+	cargo install-update -a
+
 gnuglobal: ## Install gnu global
 	mkdir -p ${HOME}/.local
 	pip install --user pygments
 	yaourt global
 
+backup: ## Backup arch linux packages
+	mkdir -p ${PWD}/archlinux
+	pacman -Qqen > ${PWD}/archlinux/pacmanlist
+	pacman -Qnq > ${PWD}/archlinux/allpacmanlist
+	pacman -Qqem > ${PWD}/archlinux/yaourtlist
+
 recover: ## Recover arch linux packages from backup
 	sudo pacman -S --needed `cat ${PWD}/archlinux/pacmanlist`
 	yaourt -S --needed $(DOY) `cat ${PWD}/archlinux/yaourtlist`
+
+neoviminit: ## Init neovim dein
+	bash ${HOME}/.config/nvim/installer.sh ${HOME}/.config/nvim
 
 dockerinit: ## Docker initial setup
 	sudo usermod -aG docker ${USER}
@@ -222,24 +240,6 @@ powertopinit: ## Powertop initial setup (Warning take a long time)
 	sudo powertop --calibrate
 	sudo systemctl enable powertop
 
-neoviminit: # Init neovim dein
-	bash ${HOME}/.config/nvim/installer.sh ${HOME}/.config/nvim
-
-installrust: # Install rust and rust package
-	mkdir -p ${HOME}/.cargo
-	export PATH="$HOME/.cargo/bin:$PATH"
-	curl -sSf https://sh.rustup.rs | sh
-	cargo install rustfmt
-	cargo install racer
-	cargo install cargo-update
-	cargo install cargo-script
-
-updaterutst: # Update rust package
-	cargo install-update -a
-
-updatedb: ## Update file datebase
-	sudo updatedb
-
 test: ## Test this Makefile using docker
 	docker build -t dotfiles ${PWD}
 	docker run -v /home/${USER}/Dropbox:/home/${USER}/Dropbox:cached --name makefiletest -d dotfiles
@@ -259,14 +259,12 @@ test: ## Test this Makefile using docker
 	docker exec makefiletest sh -c "cd ${PWD}; make pipinstall"
 	@echo "========== make goinstall =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make goinstall"
-	@echo "========== make npminit =========="
-	docker exec makefiletest sh -c "cd ${PWD}; make npminit"
+	@echo "========== make nodeinstall =========="
+	docker exec makefiletest sh -c "cd ${PWD}; make nodeinstall"
 	@echo "========== make rubygems =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make rubygems"
-	@echo "========== make neoviminit =========="
-	docker exec makefiletest sh -c "cd ${PWD}; make neoviminit"
-	@echo "========== make installrust =========="
-	docker exec makefiletest sh -c "cd ${PWD}; make installrust"
+	@echo "========== make rustinstall =========="
+	docker exec makefiletest sh -c "cd ${PWD}; make rustinstall"
 
 testsimple: ## Test this Makefile using docker without Dropbox
 	docker build -t dotfiles ${PWD}
@@ -285,18 +283,22 @@ testsimple: ## Test this Makefile using docker without Dropbox
 	docker exec makefiletest sh -c "cd ${PWD}; make pipinstall"
 	@echo "========== make goinstall =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make goinstall"
-	@echo "========== make npminit =========="
-	docker exec makefiletest sh -c "cd ${PWD}; make npminit"
+	@echo "========== make nodeinstall =========="
+	docker exec makefiletest sh -c "cd ${PWD}; make nodeinstall"
 	@echo "========== make rubygems =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make rubygems"
-	@echo "========== make neoviminit =========="
-	docker exec makefiletest sh -c "cd ${PWD}; make neoviminit"
-	@echo "========== make installrust =========="
-	docker exec makefiletest sh -c "cd ${PWD}; make installrust"
+	@echo "========== make rustinstall =========="
+	docker exec makefiletest sh -c "cd ${PWD}; make rustinstall"
 
-all:
+allinstall: install init initdropbox aur caskinstall melpa pipinstall goinstall nodeinstall rubygems rustinstall gnuglobal
 
-.PHONY: all
+allinit: neoviminit dockerinit mariadbinit psdinit
+
+allupdate: update melpaupdate pipupdate rustupdate goinstall
+
+allbackup: backup pipbackup
+
+.PHONY: allinstall allinit allupdate allbackup
 
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
