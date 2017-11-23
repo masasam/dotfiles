@@ -64,7 +64,7 @@ You can install all with
 
 You can init all with
 
-	make allinstall
+	make allinit
 
 You can backup packages all with
 
