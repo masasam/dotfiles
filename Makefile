@@ -162,7 +162,7 @@ rubygems: ## Install rubygems packages
 	gem install --user-install jekyll
 	gem install --user-install pry
 
-gnuglobal: ## Install gnu gloval
+gnuglobal: ## Install gnu global
 	mkdir -p ${HOME}/.local
 	pip install --user pygments
 	yaourt global
