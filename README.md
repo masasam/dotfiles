@@ -14,7 +14,7 @@ if you make [Makefile](https://github.com/masasam/dotfiles/blob/master/Makefile)
 
 Let's make a [Makefile](https://github.com/masasam/dotfiles/blob/master/Makefile) immediately.
 
-### With Makefile, such a good thing
+### With [Makefile](https://github.com/masasam/dotfiles/blob/master/Makefile), such a good thing
 
 Easy to build development environment with
 
