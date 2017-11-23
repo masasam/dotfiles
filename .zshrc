@@ -40,6 +40,7 @@ zshaddhistory() {
        && ${cmd} != uname
        && ${cmd} != md5sum
        && ${cmd} != pacman
+       && ${cmd} != mytimer
        && ${cmd} != traceroute
        && ${cmd} != speedtest-cli
     ]]
