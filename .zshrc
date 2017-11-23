@@ -239,16 +239,6 @@ export GTAGSLABEL=pygments
 export LESS='-g -i -M -R -S -W -z-4 -x4'
 
 
-function github-upstream() {
-    git remote add upstream git://github.com/$1
-}
-
-
-function gitlab-upstream() {
-    git remote add upstream git://gitlab.com/$1
-}
-
-
 # Invoke the ``dired'' of current working directory in Emacs buffer.
 function dired() {
     emacsclient -e "(dired \"${1:-$PWD}\")" & wmctrl -a emacs
@@ -444,7 +434,7 @@ function gitroot() {
 
 
 # github create new repository
-function github-new-repository() {
+function github-new() {
     if [ $# = 1 ]; then
 	ghq root && cat ~/.config/hub | grep user && cd $(ghq root)/github.com/$(cat ~/.config/hub | grep user | awk '{print $3}') && mkdir $1
 	if [ $? = 0 ]; then
@@ -457,7 +447,7 @@ function github-new-repository() {
 	    git push origin master
 	fi
     else
-	echo 'One argument is required For example, "github-new-repository newreponame"'
+	echo 'Usage: github-new arg1'
     fi
 }
 
@@ -488,44 +478,83 @@ function peco-weather() {
 
 
 function peco-chrome-bookmark() {
-    xdg-open $(cat ~/Dropbox/zsh/bookmark | peco | awk '{print $1}')
+    if [ $# = 1 ]; then
+	xdg-open $(cat ~/Dropbox/zsh/bookmark | peco | awk '{print $1}')
+    else
+	echo 'Usage: peco-chrome-bookmark arg1'
+    fi
 }
 
 
 function ipsort() {
-    cat $1 | sort -n -t'.' -k1,1 -k2,2 -k3,3 -k4,4
+    if [ $# = 1 ]; then
+	cat $1 | sort -n -t'.' -k1,1 -k2,2 -k3,3 -k4,4
+    else
+	echo 'Usage: ipsort arg1'
+    fi
 }
 
 
 function webm2gif() {
-    ffmpeg -an -i $1 $2
+    if [ $# = 1 ]; then
+	fname_ext=$1
+	fname="${fname_ext%.*}"
+	ffmpeg -an -i $1 $fname.gif
+    else
+	echo 'Usage: webm2gif arg1'
+    fi
+}
+
+
+function md2pdf() {
+    if [ $# = 1 ]; then
+	fname_ext=$1
+	fname="${fname_ext%.*}"
+	pandoc $1 -o $fname.pdf -V documentclass=ltjarticle --pdf-engine=lualatex
+    else
+	echo 'Usage: md2pdf arg1'
+    fi
 }
 
 
 function remove-exif() {
-    jhead -purejpg $1
+    if [ $# = 1 ]; then
+	jhead -purejpg $1
+    else
+	echo 'Usage: remove-exif arg1'
+    fi
 }
 
 
 function mytimer() {
-    if [ $# = 0 ]; then
-	echo 'mytimer $1'
-    elif [ $# = 1 ]; then
+    if [ $# = 1 ]; then
 	_mytimer $1 &
     else
-	echo 'mytimer $1'
+	echo 'Usage: mytimer arg1'
     fi
 }
 
 function _mytimer() {
-    if [ $# = 0 ]; then
-	echo 'mytimer $1'
-    elif [ $# = 1 ]; then
-	NUM=`expr 60 \* $1`
-	sleep $NUM
-	notify-send -u critical 'Terminal' 'It is time' -i utilities-terminal
+    NUM=`expr 60 \* $1`
+    sleep $NUM
+    notify-send -u critical 'Terminal' 'It is time' -i utilities-terminal
+}
+
+
+function github-upstream() {
+    if [ $# = 1 ]; then
+	git remote add upstream git://github.com/$1
     else
-	echo 'mytimer $1'
+	echo 'Usage: github-upstream arg1'
+    fi
+}
+
+
+function gitlab-upstream() {
+    if [ $# = 1 ]; then
+	git remote add upstream git://gitlab.com/$1
+    else
+	echo 'Usage: gitlab-upstream arg1'
     fi
 }
 
