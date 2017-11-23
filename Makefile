@@ -92,6 +92,26 @@ aur: ## Install arch linux AUR packages using yaourt
 	yaourt ttf-ricty
 	yaourt yum
 
+caskinstall: ## Install emacs cask
+	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
+
+melpa: ## Install emacs package from MELPA using Cask
+	export PATH="$HOME/.cask/bin:$PATH"
+	cd ${HOME}/.emacs.d/; cask upgrade;cask install
+
+melpaupdate: ## Update emacs package and backup only leave of old 6 generation package
+	mkdir -p ${HOME}/Dropbox/emacs/cask
+	if [ `ls -rt ${HOME}/Dropbox/emacs/cask | head | wc -l` -gt 5 ];\
+	then \
+	rm -rf ${HOME}/Dropbox/emacs/cask/`ls -rt ${HOME}/Dropbox/emacs/cask | head -n 1`; tar cfz ${HOME}/Dropbox/emacs/cask/`date '+%Y%m%d%H%M%S'`.tar.gz -C ${HOME}/.emacs.d .cask; cd ${HOME}/.emacs.d/; cask upgrade; cask update; cd - ;\
+	else \
+	tar cfz ${HOME}/Dropbox/emacs/cask/`date '+%Y%m%d%H%M%S'`.tar.gz -C ${HOME}/.emacs.d .cask; cd ${HOME}/.emacs.d/; cask upgrade; cask update; cd - ;\
+	fi
+
+melpacleanup: ## Clean and install emacs package from MELPA using Cask
+	export PATH="$HOME/.cask/bin:$PATH"
+	rm -rf ${HOME}/.emacs.d/.cask; caskinstall
+
 backup: ## Backup arch linux packages
 	mkdir -p ${PWD}/archlinux
 	pacman -Qqen > ${PWD}/archlinux/pacmanlist
@@ -192,9 +212,6 @@ psdinit: ## Profile-Sync-Daemon initial setup
 powertopinit: ## Powertop initial setup (Warning take a long time)
 	sudo powertop --calibrate
 	sudo systemctl enable powertop
-
-caskinit: ## Initial emacs cask
-	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
 
 neoviminit: # Init neovim dein
 	bash ${HOME}/.config/nvim/installer.sh ${HOME}/.config/nvim
