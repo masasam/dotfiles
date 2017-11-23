@@ -100,6 +100,7 @@ melpa: ## Install emacs package from MELPA using Cask
 	cd ${HOME}/.emacs.d/; cask upgrade;cask install
 
 melpaupdate: ## Update emacs package and backup only leave of old 6 generation package
+	export PATH="$HOME/.cask/bin:$PATH"
 	mkdir -p ${HOME}/Dropbox/emacs/cask
 	if [ `ls -rt ${HOME}/Dropbox/emacs/cask | head | wc -l` -gt 5 ];\
 	then \
@@ -118,7 +119,7 @@ melpaupdate: ## Update emacs package and backup only leave of old 6 generation p
 	cd - ;\
 	fi
 
-melpacleanup: ## Clean and install emacs package from MELPA using Cask
+melpacleanup: ## Clean and install emacs package (When emacs version up, always execute)
 	export PATH="$HOME/.cask/bin:$PATH"
 	rm -rf ${HOME}/.emacs.d/.cask; caskinstall
 
@@ -250,6 +251,10 @@ test: ## Test this Makefile using docker
 	docker exec makefiletest sh -c "cd ${PWD}; make init"
 	@echo "========== make initdropbox =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make initdropbox"
+	@echo "========== make caskinstall =========="
+	docker exec makefiletest sh -c "cd ${PWD}; make caskinstall"
+	@echo "========== make melpa =========="
+	docker exec makefiletest sh -c "cd ${PWD}; make melpa"
 	@echo "========== make aur =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make aur"
 	@echo "========== make pipinstall =========="
@@ -260,8 +265,6 @@ test: ## Test this Makefile using docker
 	docker exec makefiletest sh -c "cd ${PWD}; make npminit"
 	@echo "========== make rubygems =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make rubygems"
-	@echo "========== make caskinit =========="
-	docker exec makefiletest sh -c "cd ${PWD}; make caskinit"
 	@echo "========== make neoviminit =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make neoviminit"
 	@echo "========== make installrust =========="
@@ -274,6 +277,10 @@ testsimple: ## Test this Makefile using docker without Dropbox
 	docker exec makefiletest sh -c "cd ${PWD}; make install"
 	@echo "========== make init =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make init"
+	@echo "========== make caskinstall =========="
+	docker exec makefiletest sh -c "cd ${PWD}; make caskinstall"
+	@echo "========== make melpa =========="
+	docker exec makefiletest sh -c "cd ${PWD}; make melpa"
 	@echo "========== make aur =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make aur"
 	@echo "========== make pipinstall =========="
@@ -284,8 +291,6 @@ testsimple: ## Test this Makefile using docker without Dropbox
 	docker exec makefiletest sh -c "cd ${PWD}; make npminit"
 	@echo "========== make rubygems =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make rubygems"
-	@echo "========== make caskinit =========="
-	docker exec makefiletest sh -c "cd ${PWD}; make caskinit"
 	@echo "========== make neoviminit =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make neoviminit"
 	@echo "========== make installrust =========="
