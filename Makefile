@@ -264,11 +264,13 @@ testsimple: ## Test this Makefile using docker without Dropbox
 	@echo "========== make installrust =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make installrust"
 
-all: aur backup cask caskinit dockerinit goinstall init install npminit rubygems psdinit powertopinit recover updatedb neoviminit help pipinstall pipbackup piprecover pipupdate gnuglobal mariadbinit initdropbox installrust updaterust test testsimple
+all:
 
 .PHONY: all
 
 help:
-	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
+	| sort \
+	| awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
 .DEFAULT_GOAL := help
