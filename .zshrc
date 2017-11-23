@@ -419,11 +419,6 @@ zle -N peco-keybinds
 bindkey '^xB' peco-keybinds
 
 
-function peco-godoc() {
-    godoc $(ghq list --full-path | peco) | less
-}
-
-
 # jump git root directory
 function gitroot() {
     cd ./$(git rev-parse --show-cdup)
@@ -447,7 +442,7 @@ function github-new() {
 	    git push origin master
 	fi
     else
-	echo 'Usage: github-new arg1'
+	echo 'usage: github-new name'
     fi
 }
 
@@ -478,11 +473,7 @@ function peco-weather() {
 
 
 function peco-chrome-bookmark() {
-    if [ $# = 1 ]; then
 	xdg-open $(cat ~/Dropbox/zsh/bookmark | peco | awk '{print $1}')
-    else
-	echo 'Usage: peco-chrome-bookmark arg1'
-    fi
 }
 
 
@@ -490,7 +481,7 @@ function ipsort() {
     if [ $# = 1 ]; then
 	cat $1 | sort -n -t'.' -k1,1 -k2,2 -k3,3 -k4,4
     else
-	echo 'Usage: ipsort arg1'
+	echo 'usage: ipsort iplist'
     fi
 }
 
@@ -501,7 +492,7 @@ function webm2gif() {
 	fname="${fname_ext%.*}"
 	ffmpeg -an -i $1 $fname.gif
     else
-	echo 'Usage: webm2gif arg1'
+	echo 'usage: webm2gif file.webm'
     fi
 }
 
@@ -512,7 +503,7 @@ function md2pdf() {
 	fname="${fname_ext%.*}"
 	pandoc $1 -o $fname.pdf -V documentclass=ltjarticle --pdf-engine=lualatex
     else
-	echo 'Usage: md2pdf arg1'
+	echo 'usage: md2pdf file.md'
     fi
 }
 
@@ -521,7 +512,7 @@ function remove-exif() {
     if [ $# = 1 ]; then
 	jhead -purejpg $1
     else
-	echo 'Usage: remove-exif arg1'
+	echo 'usage: remove-exif file.jpg'
     fi
 }
 
@@ -530,7 +521,7 @@ function mytimer() {
     if [ $# = 1 ]; then
 	_mytimer $1 &
     else
-	echo 'Usage: mytimer arg1'
+	echo 'usage: mytimer minute'
     fi
 }
 
@@ -545,7 +536,7 @@ function github-upstream() {
     if [ $# = 1 ]; then
 	git remote add upstream git://github.com/$1
     else
-	echo 'Usage: github-upstream arg1'
+	echo 'usage: github-upstream name'
     fi
 }
 
@@ -554,7 +545,7 @@ function gitlab-upstream() {
     if [ $# = 1 ]; then
 	git remote add upstream git://gitlab.com/$1
     else
-	echo 'Usage: gitlab-upstream arg1'
+	echo 'usage: gitlab-upstream name'
     fi
 }
 
