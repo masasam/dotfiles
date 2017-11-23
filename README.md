@@ -44,7 +44,7 @@ Since the arch linux package list that was installed at will be backed up to arc
 
 you can recover the arch linux environment with.
 
-    make recover
+	make recover
 
 You can do 'make recover' or 'make install' for the second and subsequent builds.
 
@@ -57,6 +57,14 @@ After Dropbox Sync
     make init
 
 Then dotfiles will be deployed and restored.
+
+You can install all with
+
+	make allinstall
+
+You can init all with
+
+	make allinstall
 
 #### Criteria of things managed by Dropbox
 
