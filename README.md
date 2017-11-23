@@ -728,6 +728,18 @@ Font
 
 ## How to test Makefile
 
+#### When using Makefile
+
+Test this [Makefile](https://github.com/masasam/dotfiles/blob/master/Makefile) using docker
+
+	make test
+
+Test this [Makefile](https://github.com/masasam/dotfiles/blob/master/Makefile) using docker without Dropbox
+
+	make testsimple
+
+#### When executing manually
+
 1.Build this Dockerfile
 
 	docker build -t dotfiles /home/${USER}/src/github.com/masasam/dotfiles
