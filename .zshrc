@@ -473,11 +473,6 @@ function peco-weather() {
 }
 
 
-function peco-chrome-bookmark() {
-	xdg-open $(cat ~/Dropbox/zsh/bookmark | peco | awk '{print $1}')
-}
-
-
 function ipsort() {
     if [ $# = 1 ]; then
 	cat $1 | sort -n -t'.' -k1,1 -k2,2 -k3,3 -k4,4
