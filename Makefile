@@ -110,13 +110,11 @@ melpaupdate: ## Update emacs package and backup only leave of old 6 generation p
 	cd ${HOME}/.emacs.d/;\
 	cask upgrade;\
 	cask update;\
-	cd - ;\
 	else \
 	tar cfz ${HOME}/Dropbox/emacs/cask/`date '+%Y%m%d%H%M%S'`.tar.gz -C ${HOME}/.emacs.d .cask;\
 	cd ${HOME}/.emacs.d/;\
 	cask upgrade;\
 	cask update;\
-	cd - ;\
 	fi
 
 melpacleanup: ## Clean and install emacs package (When emacs version up, always execute)
