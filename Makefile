@@ -103,9 +103,19 @@ melpaupdate: ## Update emacs package and backup only leave of old 6 generation p
 	mkdir -p ${HOME}/Dropbox/emacs/cask
 	if [ `ls -rt ${HOME}/Dropbox/emacs/cask | head | wc -l` -gt 5 ];\
 	then \
-	rm -rf ${HOME}/Dropbox/emacs/cask/`ls -rt ${HOME}/Dropbox/emacs/cask | head -n 1`; tar cfz ${HOME}/Dropbox/emacs/cask/`date '+%Y%m%d%H%M%S'`.tar.gz -C ${HOME}/.emacs.d .cask; cd ${HOME}/.emacs.d/; cask upgrade; cask update; cd - ;\
+	rm -rf ${HOME}/Dropbox/emacs/cask/`ls -rt ${HOME}/Dropbox/emacs/cask \
+	| head -n 1`;\
+	tar cfz ${HOME}/Dropbox/emacs/cask/`date '+%Y%m%d%H%M%S'`.tar.gz -C ${HOME}/.emacs.d .cask;\
+	cd ${HOME}/.emacs.d/;\
+	cask upgrade;\
+	cask update;\
+	cd - ;\
 	else \
-	tar cfz ${HOME}/Dropbox/emacs/cask/`date '+%Y%m%d%H%M%S'`.tar.gz -C ${HOME}/.emacs.d .cask; cd ${HOME}/.emacs.d/; cask upgrade; cask update; cd - ;\
+	tar cfz ${HOME}/Dropbox/emacs/cask/`date '+%Y%m%d%H%M%S'`.tar.gz -C ${HOME}/.emacs.d .cask;\
+	cd ${HOME}/.emacs.d/;\
+	cask upgrade;\
+	cask update;\
+	cd - ;\
 	fi
 
 melpacleanup: ## Clean and install emacs package from MELPA using Cask
