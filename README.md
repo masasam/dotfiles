@@ -40,7 +40,7 @@ Once after creating the environment
 
     make backup
 
-Since the arch linux package list that was installed at will be backed up to archlinux directry,
+Since the arch linux packages list that was installed at will be backed up to archlinux directry,
 
 you can recover the arch linux environment with.
 
@@ -65,6 +65,14 @@ You can install all with
 You can init all with
 
 	make allinstall
+
+You can backup packages all with
+
+	make allbackup
+
+You can update packages all with
+
+	make allupdate
 
 #### Criteria of things managed by Dropbox
 
@@ -93,7 +101,7 @@ Why Arch linux ?
 
   Even if it gets broken, I made a [Makefile](https://github.com/masasam/dotfiles/blob/master/Makefile) so I can return in half an hour and it's unbeatable.
 
-- Arch linux is good because it is difficult for my PC's development environment to be old package.
+- Arch linux is good because it is difficult for my PC's development environment to be old packages.
 
 - I like customization but if customization is done too much, it is not good because it can not receive the benefit of the community. Since Archlinux is unsuitable for excessive customization, it is fit to me.
 
