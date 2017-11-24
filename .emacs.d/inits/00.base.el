@@ -30,7 +30,6 @@
 
 ;; defalias list
 (defalias 'exit 'save-buffers-kill-emacs)
-(defalias 'quit-tramp 'tramp-cleanup-all-buffers)
 (defalias 'my/keybind 'describe-personal-keybindings)
 (defalias 'my/allkeybind 'helm-descbinds)
 (defalias 'my/bookmark 'helm-chrome-bookmarks)
