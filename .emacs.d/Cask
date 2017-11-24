@@ -125,3 +125,4 @@
 (depends-on "indium")
 (depends-on "color-theme-sanityinc-tomorrow")
 (depends-on "use-package")
+(depends-on "shell-pop")
