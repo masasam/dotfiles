@@ -30,10 +30,10 @@
 
 ;; defalias list
 (defalias 'exit 'save-buffers-kill-emacs)
-(defalias 'exit-tramp 'tramp-cleanup-all-buffers)
-(defalias 'my-keybind 'describe-personal-keybindings)
-(defalias 'all-keybind 'helm-descbinds)
-(defalias 'bookmark 'helm-chrome-bookmarks)
+(defalias 'quit-tramp 'tramp-cleanup-all-buffers)
+(defalias 'my/keybind 'describe-personal-keybindings)
+(defalias 'my/allkeybind 'helm-descbinds)
+(defalias 'my/bookmark 'helm-chrome-bookmarks)
 
 
 ;; server start for emacs-client
@@ -130,10 +130,6 @@
 (setq find-function-C-source-directory "~/Dropbox/emacs/emacs-25.3/src")
 
 
-;; Highlight the space at the end of the line
-(setq-default show-trailing-whitespace t)
-
-
 ;; Do not change the position of the cursor on the screen as much as possible when scrolling pages
 (setq scroll-preserve-screen-position t)
 
@@ -143,14 +139,14 @@
 
 
 ;; mytimer
-(defun mytimer(n)
+(defun my/timer(n)
   (interactive "nMinute:")
   (run-at-time (* n 60) nil #'_mytimer))
 (defun _mytimer()
   (shell-command-to-string "notify-send -u critical 'Emacs' 'It is time' -i utilities-terminal"))
 
 
-(defun copy-path ()
+(defun my/copy-path ()
   (interactive)
   (if buffer-file-name
       (progn
