@@ -1,7 +1,7 @@
 (setq easy-hugo-basedir "~/src/gitlab.com/masasam/blog/")
 (setq easy-hugo-sshdomain "blogdomain")
 (setq easy-hugo-root "/home/blog/")
-(setq easy-hugo-previewtime "11300")
+(setq easy-hugo-previewtime "300")
 (setq easy-hugo-default-picture-directory "~/Pictures")
 (define-key global-map (kbd "C-c C-e") 'easy-hugo)
 (setq easy-hugo-amazon-s3-bucket-name "masasam")

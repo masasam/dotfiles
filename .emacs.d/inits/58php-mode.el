@@ -1,5 +1,3 @@
-(require 'php-mode)
-(require 'php-eldoc)
 (add-hook 'php-mode-hook
 	  '(lambda ()
 	     (local-set-key (kbd "<f1>") 'my-php-symbol-lookup)

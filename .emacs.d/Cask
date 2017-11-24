@@ -93,6 +93,7 @@
 (depends-on "helm-go-package")
 (depends-on "realgud")
 (depends-on "flyspell-correct")
+(depends-on "flyspell-correct-popup")
 (depends-on "helm-pydoc")
 (depends-on "material-theme")
 (depends-on "go-projectile")
