@@ -1,6 +1,5 @@
 ;; prefix key
 (setq elscreen-prefix-key (kbd "C-t"))
-;;(elscreen-start)
 ;; Do not display [X] at the beginning of the tab
 (setq elscreen-tab-display-kill-screen nil)
 ;; Do not display [<->] at the beginning of header-line
