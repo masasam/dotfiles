@@ -79,7 +79,6 @@
 (depends-on "typescript-mode")
 (depends-on "tide")
 (depends-on "sql-indent")
-(depends-on "zop-to-char")
 (depends-on "package-lint")
 (depends-on "flycheck-package")
 (depends-on "helm-tramp")

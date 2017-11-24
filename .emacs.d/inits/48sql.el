@@ -1,4 +1,3 @@
-(require 'sql)
 (require 'sql-indent)
 
 (setq auto-mode-alist
