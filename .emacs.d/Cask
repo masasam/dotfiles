@@ -9,7 +9,6 @@
 (depends-on "expand-region")
 (depends-on "f")
 (depends-on "flycheck")
-(depends-on "flycheck-cask")
 (depends-on "magit")
 (depends-on "popwin")
 (depends-on "projectile")
