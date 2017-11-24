@@ -1,12 +1,11 @@
 (require 'dired)
 (define-key dired-mode-map "e" 'wdired-change-to-wdired-mode)
 
-(defun my/reset-default-directory ()
-  "Set default-directory by `buffer-file-name'."
-  (interactive)
-  (require 'f)
-  (when buffer-file-name
-    (setq default-directory (f-dirname buffer-file-name))))
+(require 'direx)
+(push '(direx:direx-mode :position left :width 25 :dedicated t)
+      popwin:special-display-config)
+(bind-key "C-x C-j" 'direx:jump-to-directory-other-window)
+(bind-key "C-x j" 'direx:jump-to-directory-other-window)
 
 ;; Open dropbox with dired
 (defun my/dropbox ()
