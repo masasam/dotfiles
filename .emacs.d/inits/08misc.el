@@ -58,3 +58,13 @@
 
 ;; quickrun
 (bind-key "<f5>" 'quickrun)
+
+
+;; pcre
+(require 'pcre2el)
+(add-hook 'prog-mode-hook 'rxt-mode)
+(setq reb-re-syntax 'pcre)
+
+
+;; docker-tramp
+(require 'docker-tramp-compat)

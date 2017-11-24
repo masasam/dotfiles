@@ -7,8 +7,7 @@
 	     (yas-global-mode 1)
 	     (php-eldoc-enable)
 	     (define-key php-mode-map  (kbd "C-]") 'ac-php-find-symbol-at-point)
-	     (define-key php-mode-map  (kbd "C-t") 'ac-php-location-stack-back)
-	     ))
+	     (define-key php-mode-map  (kbd "C-t") 'ac-php-location-stack-back)))
 (add-hook 'php-mode-hook 'php-enable-psr2-coding-style)
 
 (defun my-php-symbol-lookup ()
