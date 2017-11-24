@@ -7,6 +7,7 @@
 
 (add-hook 'term-mode-hook 'my/disable-trailing-mode)
 (add-hook 'eshell-mode-hook 'my/disable-trailing-mode)
+(add-hook 'markdown-mode-hook 'my/disable-trailing-mode)
 
 
 ;; Remove contiguous line breaks at end of line + end of file
