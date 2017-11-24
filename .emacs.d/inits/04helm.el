@@ -1,5 +1,4 @@
 ;; helm
-(require 'helm)
 (require 'helm-config)
 (helm-mode 1)
 
@@ -31,7 +30,7 @@
 ;; show keybind
 ;;(bind-key "C-c b" 'helm-descbinds)
 ;; chrome bookmark
-(bind-key "C-c b" 'helm-chrome-bookmarks)
+;;(bind-key "C-c b" 'helm-chrome-bookmarks)
 ;; helm find files
 (bind-key "C-x C-f" 'helm-find-files)
 (bind-key "C-h" 'delete-backward-char helm-find-files-map)

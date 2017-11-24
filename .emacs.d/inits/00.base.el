@@ -21,12 +21,6 @@
 ;;(add-to-list 'default-frame-alist '(font . "MyricaM-15.5"))
 (add-to-list 'default-frame-alist '(font . "Cica-15.5"))
 
-;; Perform M % with C-c r
-(require 'bind-key)
-(bind-key "C-c r" 'query-replace)
-
-;; flyspell-buffer
-(bind-key "C-c C-f" 'flyspell-buffer)
 
 ;; defalias list
 (defalias 'exit 'save-buffers-kill-emacs)
@@ -53,6 +47,7 @@
 (define-key key-translation-map (kbd "C-h") (kbd "<DEL>"))
 
 ;; Run C-x C-k same kill-buffer as C-x k
+(require 'bind-key)
 (bind-key "C-x C-k" 'kill-buffer)
 
 
