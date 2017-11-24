@@ -6,7 +6,6 @@
 ;; view-mode
 (setq view-read-only t)
 (require 'view)
-(require 'bind-key)
 (bind-key "N" 'View-search-last-regexp-backward view-mode-map)
 (bind-key "?" 'View-search-regexp-backward view-mode-map)
 (bind-key "G" 'View-goto-line-last view-mode-map)

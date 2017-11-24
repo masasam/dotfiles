@@ -1,7 +1,6 @@
 (require 'yasnippet)
 (require 'helm-c-yasnippet)
 (setq helm-yas-space-match-any-greedy t)
-(require 'bind-key)
 (bind-key "C-c y" 'helm-yas-complete)
 (push '("emacs.+/snippets/" . snippet-mode) auto-mode-alist)
 (yas-global-mode 1)

@@ -22,5 +22,4 @@
      string)))
 
 (push "*Google Translate*" popwin:special-display-config)
-(require 'bind-key)
 (bind-key "C-c t" 'google-translate-enja-or-jaen)

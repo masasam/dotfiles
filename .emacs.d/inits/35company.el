@@ -1,5 +1,4 @@
 (require 'company)
-(require 'bind-key)
 (add-hook 'yaml-mode-hook
           (lambda ()
             (company-mode 1)))

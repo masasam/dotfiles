@@ -15,7 +15,6 @@
                (direx-project:jump-to-project-root-other-window) t)
              (direx:jump-to-directory-other-window)))))
 
-(require 'bind-key)
 (bind-key "C-x C-j" 'my/dired-jump)
 (bind-key "C-x j" 'my/dired-jump)
 

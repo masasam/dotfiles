@@ -29,7 +29,6 @@
 
 (setq org-directory "~/Dropbox/emacs")
 (setq org-default-notes-file "~/Dropbox/emacs/org/daily-projects.org")
-(require 'bind-key)
 (bind-key "C-c a" 'org-agenda)
 (bind-key "C-c c" 'org-capture)
 

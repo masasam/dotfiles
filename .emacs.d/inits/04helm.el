@@ -1,7 +1,6 @@
 ;; helm
 (require 'helm)
 (require 'helm-config)
-(require 'bind-key)
 (helm-mode 1)
 
 

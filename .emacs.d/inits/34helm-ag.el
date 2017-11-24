@@ -1,7 +1,6 @@
 ;; helm-ag
 (require 'helm-files)
 (require 'helm-ag)
-(require 'bind-key)
 (bind-key "M-g ." 'helm-ag)
 (bind-key "M-g ," 'helm-ag-pop-stack)
 (custom-set-variables
