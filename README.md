@@ -410,6 +410,7 @@ Install what you put in yaourt
 	pip install --user mycli
 	pip install --user pgcli
 	pip install --user pip-review
+	pip install --user yapf
 
 #### golang yarn cargo gem
 

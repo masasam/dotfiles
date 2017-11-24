@@ -148,6 +148,7 @@ pipinstall: ## Install python packages
 	pip install --user mycli
 	pip install --user pgcli
 	pip install --user pip-review
+	pip install --user yapf
 
 pipbackup: ## Backup python packages
 	mkdir -p ${PWD}/archlinux
