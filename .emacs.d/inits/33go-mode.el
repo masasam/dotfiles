@@ -1,8 +1,6 @@
 ;; go-mode
 (require 'go-projectile)
-(require 'go-eldoc)
 (require 'go-autocomplete)
-(require 'auto-complete-config)
 
 (add-hook 'go-mode-hook
           '(lambda()
@@ -13,7 +11,6 @@
              (local-set-key (kbd "M-.") 'godef-jump)
 	     (go-eldoc-setup)))
 
-(require 'helm-go-package)
 (autoload 'helm-go-package "helm-go-package")
 (eval-after-load 'go-mode
   '(substitute-key-definition 'go-import-add 'helm-go-package go-mode-map))
