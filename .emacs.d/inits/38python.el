@@ -9,3 +9,4 @@
 (require 'virtualenvwrapper)
 (require 'auto-virtualenvwrapper)
 (add-hook 'python-mode-hook #'auto-virtualenvwrapper-activate)
+(add-hook 'python-mode-hook 'py-yapf-enable-on-save)
