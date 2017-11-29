@@ -13,7 +13,6 @@
 	    (setq tern-command '("tern" "--no-port-file"))
             (tern-mode t)))
 
-(eval-after-load 'tern
-  '(progn
-     (require 'tern-auto-complete)
-     (tern-ac-setup)))
+(with-eval-after-load 'tern
+  (require 'tern-auto-complete)
+  (tern-ac-setup))
