@@ -1,6 +1,8 @@
 ;;; init.el --- myinit.el
 ;;; Commentary:
 ;;; Code:
+;;(setq debug-on-error t)
+
 (package-initialize)
 
 (menu-bar-mode 0)
