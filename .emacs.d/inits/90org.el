@@ -52,7 +52,6 @@
   (find-file "~/Dropbox/emacs/org/inbox.org"))
 
 
-(require 'smartrep)
 (smartrep-define-key org-mode-map "C-c"
   '(("C-n" . org-next-visible-heading)
     ("C-p" . org-previous-visible-heading)
