@@ -68,3 +68,7 @@
 
 ;; docker-tramp
 (require 'docker-tramp-compat)
+
+
+;; dumb-jump
+(dumb-jump-mode)

@@ -128,3 +128,4 @@
 (depends-on "shell-pop")
 (depends-on "py-yapf")
 (depends-on "helm-smex")
+(depends-on "dumb-jump")
