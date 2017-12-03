@@ -86,13 +86,6 @@
 (advice-add 'Info-find-node :around 'Info-find-node--info-ja)
 
 
-;; helm-swoop
-(bind-key "M-i" 'helm-swoop)
-(bind-key "M-I" 'helm-swoop-back-to-last-point)
-(bind-key "C-c M-i" 'helm-multi-swoop)
-(bind-key "C-x M-i" 'helm-multi-swoop-all)
-
-
 ;; helm-directory
 (bind-key "C-c l" 'helm-directory)
 (bind-key "C-c C-l" 'helm-directory)

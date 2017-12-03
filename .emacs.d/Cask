@@ -73,8 +73,6 @@
 (depends-on "helm-go-package")
 (depends-on "helm-projectile")
 (depends-on "helm-pydoc")
-(depends-on "helm-smex")
-(depends-on "helm-swoop")
 (depends-on "helm-tramp")
 (depends-on "httprepl")
 (depends-on "iflipb")
