@@ -69,7 +69,6 @@
 (depends-on "helm-directory")
 (depends-on "helm-ghq")
 (depends-on "helm-gitignore")
-(depends-on "helm-gitignore")
 (depends-on "helm-go-package")
 (depends-on "helm-projectile")
 (depends-on "helm-pydoc")
