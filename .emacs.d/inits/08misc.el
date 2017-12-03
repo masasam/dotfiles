@@ -45,10 +45,6 @@
 (volatile-highlights-mode t)
 
 
-;; google-this
-(bind-key "C-c g" 'google-this)
-
-
 ;; key-chord
 (require 'key-chord)
 (setq key-chord-two-keys-delay 0.04)

@@ -6,7 +6,7 @@
 ;; helm-key
 (bind-key "C-c h" 'helm-command-prefix)
 ;; It does not end with C-x C-c
-(bind-key "C-x C-c" 'helm-smex)
+;;(bind-key "C-x C-c" 'helm-smex)
 ;; helm-mini
 (bind-key "C-;" 'helm-mini)
 (bind-key "C-;" 'helm-keyboard-quit helm-map)
