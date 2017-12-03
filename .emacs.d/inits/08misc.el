@@ -68,3 +68,4 @@
 
 ;; dumb-jump
 (dumb-jump-mode)
+(setq dumb-jump-selector 'ivy)
