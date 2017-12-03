@@ -1,3 +1,16 @@
+;; helm-tramp
+(setq tramp-default-method "ssh")
+(defalias 'quit-tramp 'tramp-cleanup-all-buffers)
+(bind-key "C-c s" 'helm-tramp)
+(eval-after-load 'tramp '(setenv "SHELL" "/bin/bash"))
+(setq helm-tramp-docker-user '("admin" "user" "masa"))
+
+
+;; helm-ghq
+(bind-key "C-x l" 'helm-ghq)
+(bind-key "C-x C-l" 'helm-ghq)
+
+
 ;; helm
 ;;(require 'helm-config)
 ;;(helm-mode 1)
@@ -78,19 +91,6 @@
 ;; helm-directory
 ;;(bind-key "C-c l" 'helm-directory)
 ;;(bind-key "C-c C-l" 'helm-directory)
-
-
-;; helm-tramp
-(setq tramp-default-method "ssh")
-(defalias 'quit-tramp 'tramp-cleanup-all-buffers)
-(bind-key "C-c s" 'helm-tramp)
-(eval-after-load 'tramp '(setenv "SHELL" "/bin/bash"))
-(setq helm-tramp-docker-user '("admin" "user" "masa"))
-
-
-;; helm-ghq
-(bind-key "C-x l" 'helm-ghq)
-(bind-key "C-x C-l" 'helm-ghq)
 
 
 ;; helm-ag
