@@ -11,4 +11,4 @@
 (require 'smartrep)
 (smartrep-define-key
     global-map  "C-x" '(("p" . 'git-gutter:previous-hunk)
-                        ("n" . 'git-gutter:next-hunk)))
+			("n" . 'git-gutter:next-hunk)))

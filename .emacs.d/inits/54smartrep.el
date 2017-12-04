@@ -1,4 +1,3 @@
-(require 'smartrep)
 (smartrep-define-key global-map "C-x"
   '(("o" . other-window)
     ("0" . delete-window)
