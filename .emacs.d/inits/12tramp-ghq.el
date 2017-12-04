@@ -1,4 +1,4 @@
-;; helm-tramp
+;; helm-tramp run with counsel
 (require 'helm-tramp)
 (defun counsel-tramp ()
   (interactive)
@@ -9,7 +9,7 @@
 (setq helm-tramp-docker-user '("admin" "user" "masa"))
 
 
-;; helm-ghq
+;; helm-ghq run with counsel
 (bind-key "C-x l" 'counsel-ghq)
 (bind-key "C-x C-l" 'counsel-ghq)
 (require 'helm-ghq)
