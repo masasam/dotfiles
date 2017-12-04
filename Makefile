@@ -32,8 +32,6 @@ init: ## Initial deploy dotfiles
 	mkdir -p ${HOME}/.config/nvim
 	ln -vsf ${PWD}/.config/nvim/init.vim   ${HOME}/.config/nvim/init.vim
 	ln -vsf ${PWD}/.config/nvim/installer.sh   ${HOME}/.config/nvim/installer.sh
-	test -L ${HOME}/.peco || rm -rf ${HOME}/.peco
-	ln -vsfn ${PWD}/.peco   ${HOME}/.peco
 	test -L ${HOME}/.emacs.d || rm -rf ${HOME}/.emacs.d
 	ln -vsfn ${PWD}/.emacs.d   ${HOME}/.emacs.d
 
@@ -86,7 +84,6 @@ aur: ## Install arch linux AUR packages using yaourt
 	yaourt man-pages-ja
 	yaourt mozc
 	yaourt nkf
-	yaourt peco
 	yaourt profile-sync-daemon
 	yaourt quicklisp
 	yaourt screenkey

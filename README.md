@@ -376,7 +376,6 @@ Install what you put in yaourt
 	yaourt man-pages-ja
 	yaourt mozc
 	yaourt nkf
-	yaourt peco
 	yaourt profile-sync-daemon
 	yaourt quicklisp
 	yaourt screenkey
