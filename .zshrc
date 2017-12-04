@@ -219,7 +219,7 @@ alias pipcheck='pip-review --user'
 alias makeinit='cd ${HOME}/src/github.com/masasam/dotfiles; make init; cd -'
 alias archupdate='yaourt -Syua; paccache -ruk0'
 alias archbackup='cd ${HOME}/src/github.com/masasam/dotfiles; make backup; cd -'
-alias githubissue='hub issue | peco | sed -e "s/\].*//" | xargs -Inum git checkout -b feature/num'
+alias githubissue='hub issue | fzf --reverse | sed -e "s/\].*//" | xargs -Inum git checkout -b feature/num'
 alias soundrecord='arecord -t wav -f dat -q | lame -b 128 -m s - out.mp3'
 
 
@@ -238,6 +238,26 @@ PATH="$HOME/.local/bin:$PATH"
 export GTAGSCONF=/usr/share/gtags/gtags.conf
 export GTAGSLABEL=pygments
 export LESS='-g -i -M -R -S -W -z-4 -x4'
+
+
+# cdr
+autoload -Uz is-at-least
+if [[ -n $(echo ${^fpath}/chpwd_recent_dirs(N)) && -n $(echo ${^fpath}/cdr(N)) ]]; then
+autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
+  add-zsh-hook chpwd chpwd_recent_dirs
+  zstyle ':completion:*:*:cdr:*:*' menu selection
+  zstyle ':completion:*' recent-dirs-insert both
+  zstyle ':chpwd:*' recent-dirs-max 5000
+  zstyle ':chpwd:*' recent-dirs-default true
+  zstyle ':chpwd:*' recent-dirs-file "$HOME/Dropbox/zsh/chpwd-recent-dirs"
+  zstyle ':chpwd:*' recent-dirs-pushd true
+fi
+
+
+# cd after then ls
+function chpwd() {
+    ls -v -F --color=auto
+}
 
 
 # Invoke the ``dired'' of current working directory in Emacs buffer.
@@ -266,161 +286,129 @@ function cde () {
 }
 
 
-function peco-ag() {
-    exec ag "$@" . | peco --exec 'awk -F : '"'"'{print "+" $2 " " $1}'"'"' | xargs less'
+function select-history() {
+  BUFFER=$(history -n -r 1 | fzf --reverse --no-sort +m --query "$LBUFFER" --prompt="History > ")
+  CURSOR=$#BUFFER
 }
-zle -N peco-ag
-bindkey '^x^g' peco-ag
-bindkey '^xg' peco-ag
+zle -N select-history
+bindkey '^r' select-history
 
 
-function peco-ack() {
-    exec ack "$@" . | peco --exec 'awk -F : '"'"'{print "+" $2 " " $1}'"'"' | xargs less '
-}
-zle -N peco-ack
-bindkey '^x^k' peco-ack
-bindkey '^xk' peco-ack
-
-
-# replace history
-function peco-select-history() {
-    local tac
-    if which tac > /dev/null; then
-	tac="tac"
-    else
-	tac="tail -r"
-    fi
-    BUFFER=$(\history -n 1 | eval $tac | peco)
-    CURSOR=$#BUFFER
-    zle clear-screen
-}
-zle -N peco-select-history
-bindkey '^r' peco-select-history
-
-
-# cdr
-autoload -Uz is-at-least
-if [[ -n $(echo ${^fpath}/chpwd_recent_dirs(N)) && -n $(echo ${^fpath}/cdr(N)) ]]; then
-autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
-  add-zsh-hook chpwd chpwd_recent_dirs
-  zstyle ':completion:*:*:cdr:*:*' menu selection
-  zstyle ':completion:*' recent-dirs-insert both
-  zstyle ':chpwd:*' recent-dirs-max 5000
-  zstyle ':chpwd:*' recent-dirs-default true
-  zstyle ':chpwd:*' recent-dirs-file "$HOME/Dropbox/zsh/chpwd-recent-dirs"
-  zstyle ':chpwd:*' recent-dirs-pushd true
-fi
-
-
-# cd after then ls
-function chpwd() {
-    ls -v -F --color=auto
-}
-
-
-function peco-cdr() {
-    local selected_dir=$(cdr -l | awk '{ print $2 }' | peco)
+function cdr-fzf() {
+    local selected_dir=$(cdr -l | awk '{ print $2 }' | fzf --reverse)
     if [ -n "$selected_dir" ]; then
 	BUFFER="cd ${selected_dir}"
 	zle accept-line
     fi
     zle clear-screen
 }
-zle -N peco-cdr
-bindkey '^xf' peco-cdr
-bindkey '^x^f' peco-cdr
+zle -N cdr-fzf
+bindkey '^xf' cdr-fzf
+bindkey '^x^f' cdr-fzf
 
 
-function peco-ghq() {
-    local selected_dir=$(ghq list --full-path | peco --query "$LBUFFER")
-    if [ -n "$selected_dir" ]; then
-        BUFFER="cd ${selected_dir}"
-        zle accept-line
-    fi
-    zle clear-screen
+function ghq-fzf() {
+  local selected_dir=$(ghq list | fzf --reverse --query="$LBUFFER")
+  if [ -n "$selected_dir" ]; then
+    BUFFER="cd $(ghq root)/${selected_dir}"
+    zle accept-line
+  fi
+  zle reset-prompt
 }
-zle -N peco-ghq
-bindkey '^x^l' peco-ghq
-bindkey '^xl' peco-ghq
+zle -N ghq-fzf
+bindkey '^x^l' ghq-fzf
+bindkey '^xl' ghq-fzf
 
 
-# peco-ghq-remote
-function peco-ghq-remote() {
-    hub browse $(ghq list | peco | cut -d "/" -f 2,3)
+function ghq-remote-fzf() {
+    hub browse $(ghq list | fzf --reverse | cut -d "/" -f 2,3)
 }
-zle -N peco-ghq-remote
-bindkey '^xr' peco-ghq-remote
+zle -N ghq-remote-fzf
+bindkey '^xr' ghq-remote-fzf
 
 
-function peco-git-branch() {
+function git-branch-fzf() {
+  local selected_branch=$(git for-each-ref --format='%(refname)' --sort=-committerdate refs/heads | perl -pne 's{^refs/heads/}{}' | fzf --reverse --query "$LBUFFER")
+  if [ -n "$selected_branch" ]; then
+    BUFFER="git checkout ${selected_branch}"
+    zle accept-line
+  fi
+  zle reset-prompt
+}
+zle -N git-branch-fzf
+bindkey "^x^b" git-branch-fzf
+bindkey "^xb" git-branch-fzf
+
+
+function git-hash-fzf() {
     local current_buffer=$BUFFER
-    local selected_branch_name="$(git branch -a | peco | tr -d ' ' | tr -d '*')"
-    case "$selected_branch_name" in
-	*-\>* )
-	    selected_branch_name="$(echo ${selected_branch_name} | perl -ne 's/^.*->(.*?)\/(.*)$/\2/;print')";;
-	remotes* )
-	    selected_branch_name="$(echo ${selected_branch_name} | perl -ne 's/^.*?remotes\/(.*?)\/(.*)$/\2/;print')";;
-    esac
-    if [ -n "$selected_branch_name" ]; then
-	BUFFER="${current_buffer}${selected_branch_name}"
-	# Move cursor to the end
-	CURSOR=$#BUFFER
-    fi
-}
-zle -N peco-git-branch
-bindkey '^xb' peco-git-branch
-bindkey '^x^b' peco-git-branch
-
-
-function peco-git-hash() {
-    local current_buffer=$BUFFER
-    local git_hash="$(git log --oneline --branches | peco | awk '{print $1}')"
+    local git_hash="$(git log --oneline --branches | fzf --reverse | awk '{print $1}')"
     BUFFER="${current_buffer}${git_hash}"
-    # Move cursor to the end
     CURSOR=$#BUFFER
 }
-zle -N peco-git-hash
-bindkey '^x^h' peco-git-hash
+zle -N git-hash-fzf
+bindkey '^x^h' git-hash-fzf
 
 
-function peco-git-stash() {
+function git-stash-fzf() {
     local current_buffer=$BUFFER
-    local stash="$(git stash list | peco | awk -F'[ :]' '{print $1}')"
+    local stash="$(git stash list | fzf --reverse | awk -F'[ :]' '{print $1}')"
     BUFFER="${current_buffer}${stash}"
-    # Move cursor to the end
     CURSOR=$#BUFFER
 }
-zle -N peco-git-stash
-bindkey '^x^s' peco-git-stash
+zle -N git-stash-fzf
+bindkey '^x^s' git-stash-fzf
 
 
-function peco-ps() {
+function ps-fzf() {
     local current_buffer=$BUFFER
-    local process_id="$(ps auxf | peco | awk '{print $2}')"
+    local process_id="$(ps auxf | fzf --reverse | awk '{print $2}')"
     BUFFER="${current_buffer}${process_id}"
-    # Move cursor to the end
     CURSOR=$#BUFFER
 }
-zle -N peco-ps
-bindkey '^xp' peco-ps
-bindkey '^x^p' peco-ps
+zle -N ps-fzf
+bindkey '^xp' ps-fzf
+bindkey '^x^p' ps-fzf
 
 
-function alias-print() {
-    BUFFER=$(alias | peco --query "$LBUFFER" | awk -F"=" '{print $1}')
+function alias-fzf() {
+    BUFFER=$(alias | fzf --reverse --query "$LBUFFER" | awk -F"=" '{print $1}')
     print -z "$BUFFER"
 }
 
 
-# show peco keybinds
-function peco-keybinds() {
-    zle $(bindkey | peco | cut -d " " -f 2)
+function keybind-fzf() {
+    zle $(bindkey | fzf --reverse | cut -d " " -f 2)
 }
-zle -N peco-keybinds
-bindkey '^xB' peco-keybinds
+zle -N keybind-fzf
+bindkey '^xB' keybind-fzf
 
 
-# jump git root directory
+function ansible-fzf() {
+    local repositoryname='ansible-setup-server'
+    ghq root && cat ~/.config/hub | grep user && cd $(ghq root)/github.com/$(cat ~/.config/hub | grep user | awk '{print $3}')/${repositoryname}
+    if [ $? = 0 ]; then
+	local selected_yml=$(ls | grep .yml$ | fzf --reverse)
+	if [ -n "$selected_yml" ]; then
+	    ansible-playbook ${selected_yml}
+	    if [ $? = 0 ]; then
+		notify-send -u critical 'Ansible' 'Your playbook execution ended' -i utilities-terminal
+	    else
+		notify-send -u critical 'Ansible' 'Error has occured' -i dialog-error
+	    fi
+	fi
+	cd -
+    fi
+}
+zle -N ansible-fzf
+bindkey '^x^a' ansible-fzf
+
+
+function weather-fzf() {
+    curl wttr.in/$(echo -e "Sapporo\nSendai\nTokyo\nYokohama\nKawasaki\nNagano\nNagoya\nKanazawa\nKyoto\nOsaka\nKobe\nOkayama-Shi\nHiroshima-Shi\nTakamatsu\nMatsuyama\nHakata" | fzf --reverse) | less -R
+}
+
+
 function gitroot() {
     cd ./$(git rev-parse --show-cdup)
     if [ $# = 1 ]; then
@@ -429,7 +417,6 @@ function gitroot() {
 }
 
 
-# github create new repository
 function github-new() {
     if [ $# = 1 ]; then
 	ghq root && cat ~/.config/hub | grep user && cd $(ghq root)/github.com/$(cat ~/.config/hub | grep user | awk '{print $3}') && mkdir $1
@@ -445,31 +432,6 @@ function github-new() {
     else
 	echo 'usage: github-new name'
     fi
-}
-
-
-function peco-ansible() {
-    local repositoryname='ansible-setup-server'
-    ghq root && cat ~/.config/hub | grep user && cd $(ghq root)/github.com/$(cat ~/.config/hub | grep user | awk '{print $3}')/${repositoryname}
-    if [ $? = 0 ]; then
-	local selected_yml=$(ls | grep .yml$ | peco)
-	if [ -n "$selected_yml" ]; then
-	    ansible-playbook ${selected_yml}
-	    if [ $? = 0 ]; then
-		notify-send -u critical 'Ansible' 'Your playbook execution ended' -i utilities-terminal
-	    else
-		notify-send -u critical 'Ansible' 'Error has occured' -i dialog-error
-	    fi
-	fi
-	cd -
-    fi
-}
-zle -N peco-ansible
-bindkey '^x^a' peco-ansible
-
-
-function peco-weather() {
-    curl wttr.in/$(echo -e "Sapporo\nSendai\nTokyo\nYokohama\nKawasaki\nNagano\nNagoya\nKanazawa\nKyoto\nOsaka\nKobe\nOkayama-Shi\nHiroshima-Shi\nTakamatsu\nMatsuyama\nHakata" | peco) | less -R
 }
 
 
@@ -520,7 +482,6 @@ function mytimer() {
 	echo 'usage: mytimer minute'
     fi
 }
-
 function _mytimer() {
     NUM=`expr 60 \* $1`
     sleep $NUM
