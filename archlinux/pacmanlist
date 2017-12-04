@@ -50,6 +50,7 @@ findutils
 firefox
 firefox-i18n-ja
 flex
+fzf
 gauche
 gawk
 gcc
@@ -110,6 +111,7 @@ mathjax
 mcomix
 mdadm
 mlocate
+mosh
 mpv
 nano
 nautilus
@@ -149,9 +151,6 @@ reiserfsprogs
 ripgrep
 rsync
 ruby
-rust-racer
-rustfmt
-rustup
 rxvt-unicode
 s-nail
 sbcl

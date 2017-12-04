@@ -136,6 +136,7 @@ freetype2
 fribidi
 fuse-common
 fuse2
+fzf
 gauche
 gawk
 gc
@@ -210,7 +211,6 @@ gstreamer
 gtk-update-icon-cache
 gtk2
 gtk3
-gtk3-print-backends
 gtkmm
 gtkspell
 guile
@@ -260,6 +260,7 @@ haskell-haddock-library
 haskell-hashable
 haskell-hourglass
 haskell-hslua
+haskell-hslua-module-text
 haskell-http
 haskell-http-client
 haskell-http-client-tls
@@ -430,6 +431,7 @@ libfbclient
 libfdk-aac
 libffi
 libfontenc
+libfreehand
 libgcrypt
 libgdm
 libgee
@@ -528,6 +530,7 @@ libspiro
 libsrtp
 libssh
 libssh2
+libstaroffice
 libstemmer
 libsynctex
 libsystemd
@@ -628,6 +631,7 @@ lzo
 m17n-db
 m17n-lib
 m4
+mailcap
 make
 man-db
 man-pages
@@ -637,13 +641,13 @@ mathjax
 mcomix
 mdadm
 mesa
-mime-types
 minizip
 mjpegtools
 mkinitcpio
 mkinitcpio-busybox
 mlocate
 mobile-broadband-provider-info
+mosh
 mozilla-common
 mpfr
 mpv
@@ -706,6 +710,7 @@ perl
 perl-error
 perl-file-next
 perl-file-which
+perl-io-tty
 perl-xml-parser
 php
 pinentry
@@ -723,6 +728,7 @@ postgresql-libs
 potrace
 powertop
 procps-ng
+protobuf
 psmisc
 pulseaudio
 pulseaudio-alsa
@@ -819,9 +825,6 @@ rtmpdump
 rubberband
 ruby
 run-parts
-rust-racer
-rustfmt
-rustup
 rxvt-unicode
 rxvt-unicode-terminfo
 s-nail
