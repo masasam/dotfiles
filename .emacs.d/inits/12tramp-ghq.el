@@ -8,4 +8,4 @@
 (require 'helm-ghq)
 (defun counsel-ghq ()
   (interactive)
-  (counsel-find-file (ivy-read "ghq list:" (helm-ghq--list-candidates))))
+  (counsel-find-file (ivy-read "ghq list: " (helm-ghq--list-candidates))))
