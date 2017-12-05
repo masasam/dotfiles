@@ -1,5 +1,4 @@
 chrome-gnome-shell-git
-ctop
 direnv
 ghq
 git-secrets
@@ -9,6 +8,7 @@ ibus-mozc
 man-pages-ja
 mozc
 nkf
+peek
 profile-sync-daemon
 quicklisp
 screenkey

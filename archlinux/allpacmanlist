@@ -164,6 +164,7 @@ gjs
 glew
 glib-networking
 glib2
+glib2-docs
 glibc
 glibmm
 glu
@@ -195,6 +196,7 @@ gpm
 gptfdisk
 graphene
 graphite
+graphviz
 grep
 grilo
 groff
@@ -208,11 +210,13 @@ gst-plugins-base
 gst-plugins-base-libs
 gst-plugins-good
 gstreamer
+gtk-doc
 gtk-update-icon-cache
 gtk2
 gtk3
 gtkmm
 gtkspell
+gts
 guile
 guile2.0
 gvfs
@@ -457,6 +461,7 @@ libimobiledevice
 libinput
 libixion
 libjpeg-turbo
+libkeybinder3
 libksba
 liblangtag
 libldap
@@ -849,6 +854,7 @@ smbclient
 snappy
 sound-theme-freedesktop
 soundtouch
+source-highlight
 spandsp
 speex
 speexdsp
@@ -886,6 +892,7 @@ tracker
 tslib
 ttf-dejavu
 ttf-inconsolata
+txt2man
 typescript
 tzdata
 uchardet
@@ -900,6 +907,7 @@ usbmuxd
 usbutils
 util-linux
 v4l-utils
+vala
 valgrind
 vamp-plugin-sdk
 vi
