@@ -1,13 +1,6 @@
-;; helm-tramp run with counsel
-(require 'helm-tramp)
-(defun counsel-tramp ()
-  (interactive)
-  (counsel-find-file (ivy-read "Tramp:" (helm-tramp--candidates))))
-(defalias 'quit-tramp 'tramp-cleanup-all-buffers)
-(bind-key "C-c s" 'counsel-tramp)
-(eval-after-load 'tramp '(setenv "SHELL" "/bin/bash"))
-(setq helm-tramp-docker-user '("admin" "user" "masa"))
-
+(setq tramp-default-method "ssh")
+(defalias 'exit-tramp 'tramp-cleanup-all-buffers)
+(define-key global-map (kbd "C-c s") 'counsel-tramp)
 
 ;; helm-ghq run with counsel
 (bind-key "C-x l" 'counsel-ghq)
