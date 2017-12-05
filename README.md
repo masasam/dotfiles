@@ -366,7 +366,6 @@ Install what enters with pacman
 Install what you put in yaourt
 
 	yaourt chrome-gnome-shell-git
-	yaourt ctop
 	yaourt direnv
 	yaourt ghq
 	yaourt git-secrets
@@ -376,6 +375,7 @@ Install what you put in yaourt
 	yaourt man-pages-ja
 	yaourt mozc
 	yaourt nkf
+	yaourt peek
 	yaourt profile-sync-daemon
 	yaourt quicklisp
 	yaourt screenkey

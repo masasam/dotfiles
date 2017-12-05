@@ -75,7 +75,6 @@ update: ## Update arch linux packages and save packages cache 3 generations
 
 aur: ## Install arch linux AUR packages using yaourt
 	yaourt chrome-gnome-shell-git
-	yaourt ctop
 	yaourt direnv
 	yaourt ghq
 	yaourt git-secrets
@@ -84,6 +83,7 @@ aur: ## Install arch linux AUR packages using yaourt
 	yaourt man-pages-ja
 	yaourt mozc
 	yaourt nkf
+	yaourt peek
 	yaourt profile-sync-daemon
 	yaourt quicklisp
 	yaourt screenkey
