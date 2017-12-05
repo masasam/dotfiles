@@ -67,7 +67,7 @@ install: ## Install arch linux packages using pacman
 	dnsmasq cscope lsof postgresql-libs pdfgrep gnu-netcat urxvt-perls cmatrix \
 	curl docker-compose parallel alsa-utils mlocate traceroute jhead whois ruby \
 	noto-fonts-emoji gpaste nethogs optipng jpegoptim elixir geckodriver aws-cli \
-	gauche screen ipcalc slack-desktop tig mosh fzf
+	gauche screen ipcalc slack-desktop tig mosh fzf tree
 	sudo pkgfile --update
 
 update: ## Update arch linux packages and save packages cache 3 generations
