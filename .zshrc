@@ -219,7 +219,6 @@ alias pipcheck='pip-review --user'
 alias makeinit='cd ${HOME}/src/github.com/masasam/dotfiles; make init; cd -'
 alias archupdate='yaourt -Syua; paccache -ruk0'
 alias archbackup='cd ${HOME}/src/github.com/masasam/dotfiles; make backup; cd -'
-alias githubissue='hub issue | fzf --reverse | sed -e "s/\].*//" | xargs -Inum git checkout -b feature/num'
 alias soundrecord='arecord -t wav -f dat -q | lame -b 128 -m s - out.mp3'
 
 
@@ -325,6 +324,13 @@ function ghq-remote-fzf() {
 }
 zle -N ghq-remote-fzf
 bindkey '^xr' ghq-remote-fzf
+
+
+function github-issue-fzf() {
+    hub issue | fzf-tmux -d --reverse --prompt="github issue > " | sed -e "s/\].*//" | xargs -Inum git checkout -b feature/num
+}
+zle -N github-issue-fzf
+bindkey '^x^i' github-issue-fzf
 
 
 function git-branch-fzf() {
