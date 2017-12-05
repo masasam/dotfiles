@@ -287,7 +287,7 @@ function cde () {
 
 
 function select-history() {
-  BUFFER=$(history -n -r 1 | fzf --reverse --no-sort +m --query "$LBUFFER" --prompt="History > ")
+  BUFFER=$(history -n -r 1 | fzf-tmux -d --reverse --no-sort +m --query "$LBUFFER" --prompt="History > ")
   CURSOR=$#BUFFER
 }
 zle -N select-history
@@ -295,7 +295,7 @@ bindkey '^r' select-history
 
 
 function cdr-fzf() {
-    local selected_dir=$(cdr -l | awk '{ print $2 }' | fzf --reverse)
+    local selected_dir=$(cdr -l | awk '{ print $2 }' | fzf-tmux -d --reverse --prompt="cd > ")
     if [ -n "$selected_dir" ]; then
 	BUFFER="cd ${selected_dir}"
 	zle accept-line
@@ -308,7 +308,7 @@ bindkey '^x^f' cdr-fzf
 
 
 function ghq-fzf() {
-  local selected_dir=$(ghq list | fzf --reverse --query="$LBUFFER")
+  local selected_dir=$(ghq list | fzf-tmux -d --reverse --query="$LBUFFER" --prompt="ghq list > ")
   if [ -n "$selected_dir" ]; then
     BUFFER="cd $(ghq root)/${selected_dir}"
     zle accept-line
@@ -321,14 +321,14 @@ bindkey '^xl' ghq-fzf
 
 
 function ghq-remote-fzf() {
-    hub browse $(ghq list | fzf --reverse | cut -d "/" -f 2,3)
+    hub browse $(ghq list | fzf-tmux -d --reverse --prompt="ghq remote > " | cut -d "/" -f 2,3)
 }
 zle -N ghq-remote-fzf
 bindkey '^xr' ghq-remote-fzf
 
 
 function git-branch-fzf() {
-  local selected_branch=$(git for-each-ref --format='%(refname)' --sort=-committerdate refs/heads | perl -pne 's{^refs/heads/}{}' | fzf --reverse --query "$LBUFFER")
+  local selected_branch=$(git for-each-ref --format='%(refname)' --sort=-committerdate refs/heads | perl -pne 's{^refs/heads/}{}' | fzf-tmux -d --reverse --query "$LBUFFER" --prompt="git branch > ")
   if [ -n "$selected_branch" ]; then
     BUFFER="git checkout ${selected_branch}"
     zle accept-line
@@ -342,7 +342,7 @@ bindkey "^xb" git-branch-fzf
 
 function git-hash-fzf() {
     local current_buffer=$BUFFER
-    local git_hash="$(git log --oneline --branches | fzf --reverse | awk '{print $1}')"
+    local git_hash="$(git log --oneline --branches | fzf-tmux -d --reverse --prompt="git hash > " | awk '{print $1}')"
     BUFFER="${current_buffer}${git_hash}"
     CURSOR=$#BUFFER
 }
@@ -352,7 +352,7 @@ bindkey '^x^h' git-hash-fzf
 
 function git-stash-fzf() {
     local current_buffer=$BUFFER
-    local stash="$(git stash list | fzf --reverse | awk -F'[ :]' '{print $1}')"
+    local stash="$(git stash list | fzf-tmux -d --reverse --prompt="git stash > " | awk -F'[ :]' '{print $1}')"
     BUFFER="${current_buffer}${stash}"
     CURSOR=$#BUFFER
 }
@@ -362,7 +362,7 @@ bindkey '^x^s' git-stash-fzf
 
 function ps-fzf() {
     local current_buffer=$BUFFER
-    local process_id="$(ps auxf | fzf --reverse | awk '{print $2}')"
+    local process_id="$(ps auxf | fzf-tmux -d --reverse --prompt="ps > " | awk '{print $2}')"
     BUFFER="${current_buffer}${process_id}"
     CURSOR=$#BUFFER
 }
@@ -372,13 +372,13 @@ bindkey '^x^p' ps-fzf
 
 
 function alias-fzf() {
-    BUFFER=$(alias | fzf --reverse --query "$LBUFFER" | awk -F"=" '{print $1}')
+    BUFFER=$(alias | fzf-tmux -d --reverse --query "$LBUFFER" --prompt="Alias > " | awk -F"=" '{print $1}')
     print -z "$BUFFER"
 }
 
 
 function keybind-fzf() {
-    zle $(bindkey | fzf --reverse | cut -d " " -f 2)
+    zle $(bindkey | fzf-tmux -d --reverse --prompt="Keybind > " | cut -d " " -f 2)
 }
 zle -N keybind-fzf
 bindkey '^xB' keybind-fzf
@@ -388,7 +388,7 @@ function ansible-fzf() {
     local repositoryname='ansible-setup-server'
     ghq root && cat ~/.config/hub | grep user && cd $(ghq root)/github.com/$(cat ~/.config/hub | grep user | awk '{print $3}')/${repositoryname}
     if [ $? = 0 ]; then
-	local selected_yml=$(ls | grep .yml$ | fzf --reverse)
+	local selected_yml=$(ls | grep .yml$ | fzf-tmux -d --reverse --prompt="Ansible > ")
 	if [ -n "$selected_yml" ]; then
 	    ansible-playbook ${selected_yml}
 	    if [ $? = 0 ]; then
@@ -405,14 +405,14 @@ bindkey '^x^a' ansible-fzf
 
 
 function weather-fzf() {
-    curl wttr.in/$(echo -e "Sapporo\nSendai\nTokyo\nYokohama\nKawasaki\nNagano\nNagoya\nKanazawa\nKyoto\nOsaka\nKobe\nOkayama-Shi\nHiroshima-Shi\nTakamatsu\nMatsuyama\nHakata" | fzf --reverse) | less -R
+    curl wttr.in/$(echo -e "Sapporo\nSendai\nTokyo\nYokohama\nKawasaki\nNagano\nNagoya\nKanazawa\nKyoto\nOsaka\nKobe\nOkayama-Shi\nHiroshima-Shi\nTakamatsu\nMatsuyama\nHakata" | fzf-tmux -d --reverse --prompt="Weather > ") | less -R
 }
 
 
 function gitlog-fzf() {
   git log --graph --color=always \
       --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" |
-  fzf --ansi --no-sort --reverse --tiebreak=index --bind=ctrl-s:toggle-sort \
+  fzf-tmux -d --prompt="git log > " --ansi --no-sort --reverse --tiebreak=index --bind=ctrl-s:toggle-sort \
       --bind "ctrl-m:execute:
                 (grep -o '[a-f0-9]\{7\}' | head -1 |
                 xargs -I % sh -c 'git show --color=always % | less -R') << 'FZF-EOF'
@@ -460,7 +460,7 @@ function webm2gif() {
     if [ $# = 1 ]; then
 	fname_ext=$1
 	fname="${fname_ext%.*}"
-	ffmpeg -an -i $1 $fname.gif
+	ffmpeg -i $1 -pix_fmt rgb24 $fname.gif
     else
 	echo 'usage: webm2gif file.webm'
     fi
