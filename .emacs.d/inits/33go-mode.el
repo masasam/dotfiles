@@ -10,7 +10,4 @@
 	       (setq c-basic-offset 4)
 	       (setq indent-tabs-mode t)
 	       (local-set-key (kbd "M-.") 'godef-jump)
-	       (go-eldoc-setup)))
-
-  (substitute-key-definition 'go-import-add 'helm-go-package go-mode-map)
-  (autoload 'helm-go-package "helm-go-package"))
+	       (go-eldoc-setup))))
