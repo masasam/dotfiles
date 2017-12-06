@@ -4,7 +4,7 @@
 (setq counsel-tramp-docker-user "username")
 (setq counsel-tramp-docker-user '("username1" "username2" "username3" "username4"))
 
-;; helm-ghq run with counsel
+;; counsel-ghq
 (bind-key "C-x l" 'counsel-ghq)
 (bind-key "C-x C-l" 'counsel-ghq)
 
