@@ -63,7 +63,6 @@
 (depends-on "google-translate")
 (depends-on "goto-chg")
 (depends-on "helm")
-(depends-on "helm-c-yasnippet")
 (depends-on "helm-go-package")
 (depends-on "htmlize")
 (depends-on "hydra")
