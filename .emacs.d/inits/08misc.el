@@ -23,21 +23,20 @@
 
 
 ;; ediff
-(custom-set-variables
- '(ediff-window-setup-function 'ediff-setup-windows-plain)
- '(ediff-split-window-function 'split-window-horizontally)
- '(ediff-diff-options "-twB"))
+(setq
+ ediff-window-setup-function 'ediff-setup-windows-plain
+ ediff-split-window-function 'split-window-horizontally
+ ediff-diff-options "-twB")
 
 
 ;; anzu
 (global-anzu-mode +1)
 (global-set-key [remap query-replace] 'anzu-query-replace)
 (global-set-key [remap query-replace-regexp] 'anzu-query-replace-regexp)
-(custom-set-variables
- '(anzu-mode-lighter "")
- '(anzu-deactivate-region t)
- '(anzu-use-migemo nil)
- '(anzu-search-threshold 1000))
+(setq anzu-mode-lighter ""
+      anzu-deactivate-region t
+      anzu-use-migemo nil
+      anzu-search-threshold 1000)
 
 
 ;; volatile-highlights
