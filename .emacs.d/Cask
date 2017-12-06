@@ -65,7 +65,6 @@
 (depends-on "helm")
 (depends-on "helm-c-yasnippet")
 (depends-on "helm-descbinds")
-(depends-on "helm-directory")
 (depends-on "helm-ghq")
 (depends-on "helm-go-package")
 (depends-on "htmlize")
