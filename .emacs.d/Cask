@@ -119,7 +119,6 @@
 (depends-on "twig-mode")
 (depends-on "typescript-mode")
 (depends-on "undo-tree")
-(depends-on "use-package")
 (depends-on "virtualenvwrapper")
 (depends-on "visual-regexp")
 (depends-on "volatile-highlights")
