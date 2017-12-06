@@ -64,7 +64,6 @@
 (depends-on "google-translate")
 (depends-on "goto-chg")
 (depends-on "helm")
-(depends-on "helm-ag")
 (depends-on "helm-c-yasnippet")
 (depends-on "helm-chrome")
 (depends-on "helm-descbinds")
