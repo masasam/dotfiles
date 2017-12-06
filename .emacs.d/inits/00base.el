@@ -25,8 +25,6 @@
 ;; defalias list
 (defalias 'exit 'save-buffers-kill-emacs)
 (defalias 'my/keybind 'describe-personal-keybindings)
-(defalias 'my/allkeybind 'helm-descbinds)
-(defalias 'my/bookmark 'helm-chrome-bookmarks)
 (defalias 'my/github 'browse-at-remote)
 
 
