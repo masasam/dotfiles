@@ -9,7 +9,6 @@
 (depends-on "alchemist")
 (depends-on "ansible")
 (depends-on "ansible-doc")
-(depends-on "anything-tramp")
 (depends-on "anzu")
 (depends-on "auto-compile")
 (depends-on "auto-complete")
