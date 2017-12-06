@@ -70,7 +70,6 @@
 (depends-on "helm-ghq")
 (depends-on "helm-go-package")
 (depends-on "htmlize")
-(depends-on "httprepl")
 (depends-on "hydra")
 (depends-on "iflipb")
 (depends-on "indium")
