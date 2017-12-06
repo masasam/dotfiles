@@ -27,6 +27,7 @@
 (defalias 'my/keybind 'describe-personal-keybindings)
 (defalias 'my/allkeybind 'helm-descbinds)
 (defalias 'my/bookmark 'helm-chrome-bookmarks)
+(defalias 'my/github 'browse-at-remote)
 
 
 ;; server start for emacs-client
