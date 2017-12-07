@@ -1,4 +1,3 @@
-(add-hook 'python-mode-hook 'ggtag-setting)
 (add-hook 'php-mode-hook 'ggtag-setting)
 (add-hook 'enh-ruby-mode-hook 'ggtag-setting)
 (add-hook 'c-mode-common-hook 'ggtag-setting)
