@@ -93,8 +93,6 @@
 (depends-on "popwin")
 (depends-on "projectile")
 (depends-on "python-mode")
-(depends-on "py-autopep8")
-(depends-on "py-yapf")
 (depends-on "quickrun")
 (depends-on "racer")
 (depends-on "realgud")
