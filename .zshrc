@@ -484,6 +484,17 @@ function md2pdf() {
 }
 
 
+function md2docx() {
+    if [ $# = 1 ]; then
+	fname_ext=$1
+	fname="${fname_ext%.*}"
+	pandoc $1 -t docx -o $fname.docx
+    else
+	echo 'usage: md2docx file.md'
+    fi
+}
+
+
 function remove-exif() {
     if [ $# = 1 ]; then
 	jhead -purejpg $1
