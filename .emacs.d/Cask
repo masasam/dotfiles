@@ -103,6 +103,7 @@
 (depends-on "slime")
 (depends-on "smartparens")
 (depends-on "smartrep")
+(depends-on "smex")
 (depends-on "sql-indent")
 (depends-on "tern")
 (depends-on "tern-auto-complete")
