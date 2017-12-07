@@ -23,7 +23,6 @@
 (depends-on "company-irony")
 (depends-on "counsel")
 (depends-on "counsel-projectile")
-(depends-on "counsel-pydoc")
 (depends-on "dash")
 (depends-on "dashboard")
 (depends-on "direx")
