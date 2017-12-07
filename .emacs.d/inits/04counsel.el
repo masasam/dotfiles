@@ -23,3 +23,11 @@
 (setq ivy-use-virtual-buffers t)
 (require 'ivy-xref)
 (setq xref-show-xrefs-function #'ivy-xref-show-xrefs)
+(defun swiper-for-region ()
+  (interactive)
+  (swiper--ivy
+   (cl-remove-if-not
+    (lambda (x)
+      (string-match (buffer-substring
+		     (region-beginning) (region-end)) x))
+    (swiper--candidates))))
