@@ -147,6 +147,8 @@ pipinstall: ## Install python packages
 	pip install --user pip-review
 	pip install --user yapf
 	pip install --user pydoc_utils
+	pip install --user rope
+	pip install --user importmagic
 
 pipbackup: ## Backup python packages
 	mkdir -p ${PWD}/archlinux

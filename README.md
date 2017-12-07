@@ -411,6 +411,8 @@ Install what you put in yaourt
 	pip install --user pip-review
 	pip install --user yapf
 	pip install --user pydoc_utils
+	pip install --user rope
+	pip install --user importmagic
 
 #### golang yarn cargo gem
 
