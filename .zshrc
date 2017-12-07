@@ -488,7 +488,7 @@ function md2docx() {
     if [ $# = 1 ]; then
 	fname_ext=$1
 	fname="${fname_ext%.*}"
-	pandoc $1 -t docx -o $fname.docx
+	pandoc $1 -t docx -o $fname.docx --toc --highlight-style=zenburn
     else
 	echo 'usage: md2docx file.md'
     fi
