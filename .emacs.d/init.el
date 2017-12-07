@@ -27,6 +27,7 @@
 (custom-set-variables
  '(init-loader-show-log-after-init 'error-only))
 (init-loader-load)
+(setq custom-file (locate-user-emacs-file "custom.el"))
 
 (provide 'init)
 ;;; init.el ends here
