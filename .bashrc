@@ -18,7 +18,6 @@ export EDITOR='emacsclient'
 export XDG_CONFIG_HOME=$HOME/.config
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
-export RUST_SRC_PATH=~/Dropbox/emacs/rustc-1.14.0/src
 PATH="$HOME/.node_modules/bin:$PATH"
 export npm_config_prefix=~/.node_modules
 PATH="$HOME/.local/bin:$PATH"

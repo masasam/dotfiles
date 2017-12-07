@@ -220,6 +220,7 @@ alias makeinit='cd ${HOME}/src/github.com/masasam/dotfiles; make init; cd -'
 alias archupdate='yaourt -Syua; paccache -ruk0'
 alias archbackup='cd ${HOME}/src/github.com/masasam/dotfiles; make backup; cd -'
 alias soundrecord='arecord -t wav -f dat -q | lame -b 128 -m s - out.mp3'
+alias rust='cargo-script'
 
 
 # PATH
@@ -230,7 +231,6 @@ export EDITOR='emacsclient'
 export XDG_CONFIG_HOME=$HOME/.config
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
-export RUST_SRC_PATH=~/Dropbox/emacs/rustc-1.14.0/src
 PATH="$HOME/.node_modules/bin:$PATH"
 export npm_config_prefix=~/.node_modules
 PATH="$HOME/.local/bin:$PATH"

@@ -198,6 +198,7 @@ rustinstall: ## Install rust and rust packages
 	cargo install racer
 	cargo install cargo-update
 	cargo install cargo-script
+	cargo install cargo-edit
 
 rustupdate: ## Update rust packages
 	cargo install-update -a
