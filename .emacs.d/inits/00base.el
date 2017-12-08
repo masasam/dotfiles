@@ -23,7 +23,6 @@
 
 
 ;; defalias list
-(defalias 'exit 'save-buffers-kill-emacs)
 (defalias 'my/keybind 'describe-personal-keybindings)
 (defalias 'my/github 'browse-at-remote)
 
@@ -159,3 +158,13 @@
            (_ filename))
          args))
 (advice-add 'Info-find-node :around 'Info-find-node--info-ja)
+
+
+;; If the region is active, kill region
+;; If the region is inactive, delete the previous word
+(defun kill-region-or-backward-kill-word ()
+  (interactive)
+  (if (region-active-p)
+      (clipboard-kill-region (point) (mark))
+    (backward-kill-word 1)))
+(bind-key "C-w" 'kill-region-or-backward-kill-word)
