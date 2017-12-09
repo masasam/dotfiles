@@ -9,5 +9,6 @@
 ;; Use racer's supplementary support
 (add-hook 'racer-mode-hook (lambda ()
                              (company-mode-on)
+			     (auto-complete-mode -1)
                              (set (make-variable-buffer-local 'company-idle-delay) 0.1)
                              (set (make-variable-buffer-local 'company-minimum-prefix-length) 1)))

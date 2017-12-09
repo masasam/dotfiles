@@ -13,3 +13,6 @@
 (bind-key "C-p" 'company-select-previous company-search-map)
 (bind-key "<tab>" 'company-complete-common-or-cycle company-active-map)
 (bind-key "M-d" 'company-show-doc-buffer company-active-map)
+(company-quickhelp-mode 1)
+(set-face-background 'pos-tip-background-color "#2f4f4f")
+(set-face-foreground 'pos-tip-foreground-color "white")
