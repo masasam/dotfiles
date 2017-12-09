@@ -2,7 +2,6 @@
 (source melpa)
 (source org)
 
-(depends-on "ac-alchemist")
 (depends-on "ac-php")
 (depends-on "ac-slime")
 (depends-on "aggressive-indent")
