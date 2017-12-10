@@ -4,5 +4,4 @@
 (add-hook 'js2-mode-hook 'ggtag-setting)
 (add-hook 'js2-jsx-mode-hook 'ggtag-setting)
 (defun ggtag-setting ()
-  (ggtags-mode 1)
-  (add-to-list 'ac-sources 'ac-source-gtags))
+  (ggtags-mode 1))
