@@ -46,7 +46,6 @@
 (depends-on "flycheck-title")
 (depends-on "flyspell-correct")
 (depends-on "flyspell-correct-popup")
-(depends-on "fuzzy")
 (depends-on "ggtags")
 (depends-on "git-gutter")
 (depends-on "git-timemachine")

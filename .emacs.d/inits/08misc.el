@@ -4,7 +4,7 @@
 (bind-key "C-M-SPC" 'er/expand-region)
 
 
-;; biginend
+;; begin-end
 (beginend-global-mode)
 
 
