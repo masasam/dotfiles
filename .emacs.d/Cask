@@ -8,7 +8,6 @@
 (depends-on "ansible-doc")
 (depends-on "anzu")
 (depends-on "auto-compile")
-(depends-on "auto-virtualenvwrapper")
 (depends-on "beginend")
 (depends-on "bind-key")
 (depends-on "browse-at-remote")
