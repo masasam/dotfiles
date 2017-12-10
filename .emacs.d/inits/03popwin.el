@@ -2,9 +2,6 @@
 (require 'popwin)
 (popwin-mode 1)
 
-;; M-x dired-jump-other-window
-(push '(dired-mode :position top) popwin:special-display-config)
-
 ;; M-!
 (push "*Shell Command Output*" popwin:special-display-config)
 

@@ -22,7 +22,6 @@
 (depends-on "counsel-projectile")
 (depends-on "dash")
 (depends-on "dashboard")
-(depends-on "direx")
 (depends-on "docker")
 (depends-on "docker-tramp")
 (depends-on "dockerfile-mode")
