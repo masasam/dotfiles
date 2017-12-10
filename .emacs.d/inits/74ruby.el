@@ -6,5 +6,6 @@
 
 ;; robe
 (autoload 'robe-mode "robe" "Code navigation, documentation lookup and completion for Ruby" t nil)
-(autoload 'robe-ac-setup "robe-ac" "robe auto-complete" nil nil)
-(add-hook 'robe-mode-hook 'robe-ac-setup)
+
+(eval-after-load 'company
+  '(push 'company-robe company-backends))
