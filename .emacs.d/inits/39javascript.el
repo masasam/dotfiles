@@ -13,6 +13,4 @@
 	    (setq tern-command '("tern" "--no-port-file"))
             (tern-mode t)))
 
-(with-eval-after-load 'tern
-  (require 'tern-auto-complete)
-  (tern-ac-setup))
+(add-to-list 'company-backends 'company-tern)

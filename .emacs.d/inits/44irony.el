@@ -4,4 +4,3 @@
 (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
 (add-to-list 'company-backends 'company-irony)
 (add-hook 'irony-mode-hook #'irony-eldoc)
-(add-hook 'irony-mode-hook (lambda () (auto-complete-mode -1)))
