@@ -6,7 +6,6 @@
 (depends-on "alchemist")
 (depends-on "ansible")
 (depends-on "ansible-doc")
-(depends-on "anzu")
 (depends-on "auto-compile")
 (depends-on "beginend")
 (depends-on "bind-key")
