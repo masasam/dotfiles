@@ -16,6 +16,7 @@
 (depends-on "company-ansible")
 (depends-on "company-irony")
 (depends-on "company-php")
+(depends-on "company-statistics")
 (depends-on "company-tern")
 (depends-on "counsel")
 (depends-on "counsel-projectile")
