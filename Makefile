@@ -1,4 +1,5 @@
 init: ## Initial deploy dotfiles
+	ln -vsf ${PWD}/.lesskey   ${HOME}/.lesskey
 	ln -vsf ${PWD}/.zshrc   ${HOME}/.zshrc
 	ln -vsf ${PWD}/.vimrc   ${HOME}/.vimrc
 	ln -vsf ${PWD}/.bashrc   ${HOME}/.bashrc
@@ -34,6 +35,7 @@ init: ## Initial deploy dotfiles
 	ln -vsf ${PWD}/.config/nvim/installer.sh   ${HOME}/.config/nvim/installer.sh
 	test -L ${HOME}/.emacs.d || rm -rf ${HOME}/.emacs.d
 	ln -vsfn ${PWD}/.emacs.d   ${HOME}/.emacs.d
+	lesskey
 
 initdropbox: ## Initial deploy dotfiles using dropbox
 	mkdir -p ${HOME}/.config
