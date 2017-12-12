@@ -4,7 +4,3 @@
 # After putting the file in $HOME and executing 'lesskey' it becomes available
 l     right-scroll
 h     left-scroll
-^F    right-scroll
-^B    left-scroll
-^N    forw-line
-^P    back-line
