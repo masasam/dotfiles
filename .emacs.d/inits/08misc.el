@@ -110,6 +110,7 @@
 (with-eval-after-load 'flycheck
   (flycheck-title-mode))
 
+
 ;; flyspell-correct
 (require 'flyspell-correct-ivy)
 (define-key flyspell-mode-map (kbd "C-:") 'flyspell-correct-previous-word-generic)
