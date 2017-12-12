@@ -45,7 +45,7 @@
 (depends-on "flycheck-rust")
 (depends-on "flycheck-title")
 (depends-on "flyspell-correct")
-(depends-on "flyspell-correct-popup")
+(depends-on "flyspell-correct-ivy")
 (depends-on "ggtags")
 (depends-on "git-gutter")
 (depends-on "git-timemachine")

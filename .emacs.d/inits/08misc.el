@@ -111,8 +111,10 @@
   (flycheck-title-mode))
 
 ;; flyspell-correct
-(require 'flyspell-correct-popup)
-(define-key flyspell-mode-map (kbd "C-;") 'flyspell-correct-previous-word-generic)
+(require 'flyspell-correct-ivy)
+(define-key flyspell-mode-map (kbd "C-:") 'flyspell-correct-previous-word-generic)
+(add-hook 'git-commit-mode-hook 'flyspell-mode)
+(add-hook 'markdown-mode-hook 'flyspell-mode)
 
 
 ;; smartparens
