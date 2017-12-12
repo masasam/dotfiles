@@ -236,6 +236,7 @@ export npm_config_prefix=~/.node_modules
 PATH="$HOME/.local/bin:$PATH"
 export GTAGSCONF=/usr/share/gtags/gtags.conf
 export GTAGSLABEL=pygments
+export PAGER=less
 export LESS='-g -i -M -R -S -W -z-4 -x4'
 
 
