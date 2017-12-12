@@ -2,5 +2,9 @@
 # This means help must be accessed with H, not h.
 # If you need to scroll e.g. one char to the left, type 1h.
 # After putting the file in $HOME and executing 'lesskey' it becomes available
-l           right-scroll
-h           left-scroll
+l     right-scroll
+h     left-scroll
+^F    right-scroll
+^B    left-scroll
+^N    forw-line
+^P    back-line
