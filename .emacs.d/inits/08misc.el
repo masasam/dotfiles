@@ -113,7 +113,7 @@
 
 ;; flyspell-correct
 (require 'flyspell-correct-ivy)
-(define-key flyspell-mode-map (kbd "C-:") 'flyspell-correct-previous-word-generic)
+(define-key flyspell-mode-map (kbd "C-M-;") 'flyspell-correct-previous-word-generic)
 (add-hook 'git-commit-mode-hook 'flyspell-mode)
 (add-hook 'markdown-mode-hook 'flyspell-mode)
 
