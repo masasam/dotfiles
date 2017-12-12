@@ -320,6 +320,7 @@ haskell-tls
 haskell-transformers-base
 haskell-transformers-compat
 haskell-unix-compat
+haskell-unliftio-core
 haskell-unordered-containers
 haskell-utf8-string
 haskell-uuid-types
@@ -387,6 +388,7 @@ lcms2
 ldb
 ldns
 less
+lib32-glibc
 libabw
 libaio
 libarchive
@@ -467,6 +469,8 @@ liblangtag
 libldap
 liblouis
 liblqr
+libmagick
+libmagick6
 libmariadbclient
 libmm-glib
 libmms
@@ -889,6 +893,7 @@ tmux
 totem-plparser
 traceroute
 tracker
+tree
 tslib
 ttf-dejavu
 ttf-inconsolata
@@ -1013,5 +1018,6 @@ zlib
 zsh
 zsh-completions
 zsh-syntax-highlighting
+zstd
 zvbi
 zziplib
