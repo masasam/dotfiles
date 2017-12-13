@@ -416,13 +416,14 @@ Install what you put in yaourt
 
 #### golang yarn cargo gem
 
-	go get -u github.com/nsf/gocode
-	go get -u github.com/rogpeppe/godef
-	go get -u golang.org/x/tools/cmd/goimports
-	go get -u golang.org/x/tools/cmd/godoc
-	go get -u github.com/josharian/impl
-	go get -u github.com/jstemmer/gotags
-	go get -u github.com/golang/dep/cmd/dep
+	go get -u -v github.com/nsf/gocode
+	go get -u -v github.com/rogpeppe/godef
+	go get -u -v golang.org/x/tools/cmd/goimports
+	go get -u -v golang.org/x/tools/cmd/godoc
+	go get -u -v github.com/josharian/impl
+	go get -u -v github.com/jstemmer/gotags
+	go get -u -v github.com/golang/dep/cmd/dep
+	go get -u -v github.com/pressly/goose/cmd/goose
 	yarn global add npm
 	yarn global add tern
 	yarn global add jshint

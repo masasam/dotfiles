@@ -174,6 +174,7 @@ goinstall: ## Install go packages
 	go get -u -v github.com/josharian/impl
 	go get -u -v github.com/jstemmer/gotags
 	go get -u -v github.com/golang/dep/cmd/dep
+	go get -u -v github.com/pressly/goose/cmd/goose
 
 nodeinstall: ## Install node packages
 	mkdir -p ${HOME}/.node_modules
