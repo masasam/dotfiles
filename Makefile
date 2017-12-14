@@ -78,7 +78,6 @@ update: ## Update arch linux packages and save packages cache 3 generations
 aur: ## Install arch linux AUR packages using yaourt
 	yaourt chrome-gnome-shell-git
 	yaourt direnv
-	yaourt ghq
 	yaourt git-secrets
 	yaourt google-cloud-sdk
 	yaourt ibus-mozc
@@ -175,6 +174,7 @@ goinstall: ## Install go packages
 	go get -u -v github.com/jstemmer/gotags
 	go get -u -v github.com/golang/dep/cmd/dep
 	go get -u -v github.com/pressly/goose/cmd/goose
+	go get -u -v github.com/motemen/ghq
 
 nodeinstall: ## Install node packages
 	mkdir -p ${HOME}/.node_modules

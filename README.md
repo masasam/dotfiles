@@ -367,7 +367,6 @@ Install what you put in yaourt
 
 	yaourt chrome-gnome-shell-git
 	yaourt direnv
-	yaourt ghq
 	yaourt git-secrets
 	yaourt global
 	yaourt google-cloud-sdk
@@ -424,6 +423,7 @@ Install what you put in yaourt
 	go get -u -v github.com/jstemmer/gotags
 	go get -u -v github.com/golang/dep/cmd/dep
 	go get -u -v github.com/pressly/goose/cmd/goose
+	go get -u -v github.com/motemen/ghq
 	yarn global add npm
 	yarn global add tern
 	yarn global add jshint
