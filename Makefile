@@ -176,7 +176,6 @@ goinstall: ## Install go packages
 	go get -u -v github.com/golang/dep/cmd/dep
 	go get -u -v github.com/pressly/goose/cmd/goose
 	go get -u -v github.com/motemen/ghq
-	go get -u -v github.com/erroneousboat/slack-term
 
 nodeinstall: ## Install node packages
 	mkdir -p ${HOME}/.node_modules
@@ -249,8 +248,15 @@ powertopinit: ## Powertop initial setup (Warning take a long time)
 	sudo powertop --calibrate
 	sudo systemctl enable powertop
 
-gnupg: ## import gnupg secret-key
+gnupg: ## Import gnupg secret-key
 	gpg --allow-secret-key-import --import ~/Dropbox/passwd/privkey.asc
+
+terminal-slack: # Install and init terminal-slack
+	git clone https://github.com/evanyeung/terminal-slack.git
+	cd ${HOME}/src/github.com/evanyeung/terminal-slack
+	yarn install
+	sudo ln -vsf ${HOME}/Dropbox/slack/slack-emacs   /usr/local/bin/slack-emacs
+	sudo chmod a+x   /usr/local/bin/slack-emacs
 
 test: ## Test this Makefile using docker
 	docker build -t dotfiles ${PWD}
