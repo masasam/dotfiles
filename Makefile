@@ -247,9 +247,12 @@ powertopinit: ## Powertop initial setup (Warning take a long time)
 	sudo powertop --calibrate
 	sudo systemctl enable powertop
 
+gnupg: ## import gnupg secret-key
+	gpg --allow-secret-key-import --import ~/Dropbox/passwd/privkey.asc
+
 test: ## Test this Makefile using docker
 	docker build -t dotfiles ${PWD}
-	docker run -v /home/${USER}/Dropbox:/home/${USER}/Dropbox:cached --name makefiletest -d dotfiles
+	docker run -v /home/${USER}/Dropbox:${HOME}/Dropbox:cached --name makefiletest -d dotfiles
 	@echo "========== make install =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make install"
 	@echo "========== make init =========="
