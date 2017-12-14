@@ -1,6 +1,5 @@
 chrome-gnome-shell-git
 direnv
-ghq
 git-secrets
 global
 google-cloud-sdk

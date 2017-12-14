@@ -373,6 +373,7 @@ jpegoptim
 jq
 js
 js52
+json-c
 json-glib
 jsoncpp
 kbd
@@ -709,6 +710,7 @@ pango
 pangomm
 parallel
 parted
+pass
 patch
 pciutils
 pcmciautils
