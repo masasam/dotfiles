@@ -356,7 +356,7 @@ Install what enters with pacman
 	sudo pacman -S npm llvm llvm-libs lldb hdparm rxvt-unicode dnsmasq typescript php cscope
 	sudo pacman -S mariadb-clients postgresql-libs tig lsof fzf
 	sudo pacman -S debootstrap tcpdump chromium bashdb pdfgrep ack parallel
-	sudo pacman -S alsa-utils mlocate traceroute aws-cli hugo mpv jhead gpaste pkgstats
+	sudo pacman -S alsa-utils mlocate traceroute hugo mpv jhead gpaste pkgstats
 	sudo pacman -S nethogs optipng jpegoptim noto-fonts-emoji gauche screen ipcalc
 	sudo pacman -S debian-archive-keyring slack-desktop
 	sudo pacman -S mathjax strace valgrind phantomjs
@@ -412,7 +412,8 @@ Install what you put in yaourt
 	pip install --user pydoc_utils
 	pip install --user rope
 	pip install --user importmagic
-
+	pip install --user awscli
+	
 #### golang yarn cargo gem
 
 	go get -u -v github.com/nsf/gocode

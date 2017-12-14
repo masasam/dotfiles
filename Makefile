@@ -68,8 +68,8 @@ install: ## Install arch linux packages using pacman
 	zsh-syntax-highlighting xorg-apps shellcheck bash-completion mathjax expect \
 	dnsmasq cscope lsof postgresql-libs pdfgrep gnu-netcat urxvt-perls cmatrix \
 	curl docker-compose parallel alsa-utils mlocate traceroute jhead whois ruby \
-	noto-fonts-emoji gpaste nethogs optipng jpegoptim elixir geckodriver aws-cli \
-	gauche screen ipcalc slack-desktop tig mosh fzf tree
+	noto-fonts-emoji gpaste nethogs optipng jpegoptim elixir geckodriver ipcalc \
+	gauche screen slack-desktop tig mosh fzf tree
 	sudo pkgfile --update
 
 update: ## Update arch linux packages and save packages cache 3 generations
@@ -150,6 +150,7 @@ pipinstall: ## Install python packages
 	pip install --user pydoc_utils
 	pip install --user rope
 	pip install --user importmagic
+	pip install --user awscli
 
 pipbackup: ## Backup python packages
 	mkdir -p ${PWD}/archlinux
