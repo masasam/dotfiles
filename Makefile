@@ -251,7 +251,7 @@ powertopinit: ## Powertop initial setup (Warning take a long time)
 gnupg: ## Import gnupg secret-key
 	gpg --allow-secret-key-import --import ~/Dropbox/passwd/privkey.asc
 
-terminal-slack: # Install and init terminal-slack
+terminal-slack: ## Install and init terminal-slack
 	git clone https://github.com/evanyeung/terminal-slack.git
 	cd ${HOME}/src/github.com/evanyeung/terminal-slack
 	yarn install
