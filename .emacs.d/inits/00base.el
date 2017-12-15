@@ -23,7 +23,7 @@
 
 
 ;; defalias list
-(defalias 'my/keybind 'describe-personal-keybindings)
+(defalias 'my/keybind 'counsel-descbinds)
 (defalias 'my/github 'browse-at-remote)
 
 
