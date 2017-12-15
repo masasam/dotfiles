@@ -34,7 +34,7 @@
 
 ;; counsel-tramp
 (setq tramp-default-method "ssh")
-(defalias 'quit-tramp 'tramp-cleanup-all-buffers)
+(defalias 'exit-tramp 'tramp-cleanup-all-buffers)
 (define-key global-map (kbd "C-c s") 'counsel-tramp)
 
 
