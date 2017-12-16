@@ -1,3 +1,3 @@
 (elpy-enable)
+(elpy-use-ipython)
 (setq elpy-rpc-backend "jedi")
-(add-hook 'python-mode-hook (lambda () (auto-complete-mode -1)))

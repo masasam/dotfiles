@@ -67,7 +67,6 @@
 (depends-on "irony-eldoc")
 (depends-on "ivy-xref")
 (depends-on "japanese-holidays")
-(depends-on "jedi")
 (depends-on "jinja2-mode")
 (depends-on "js2-mode")
 (depends-on "json-mode")
