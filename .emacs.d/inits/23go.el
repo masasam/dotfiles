@@ -1,10 +1,11 @@
 ;; go-mode
 (with-eval-after-load 'go-mode
   (require 'go-projectile)
-  (require 'go-autocomplete)
+  (require 'company-go)
 
   (add-hook 'go-mode-hook
 	    '(lambda()
+	       (set (make-local-variable 'company-backends) '(company-go))
 	       (setq gofmt-command "goimports")
 	       (add-hook 'before-save-hook 'gofmt-before-save)
 	       (setq c-basic-offset 4)
