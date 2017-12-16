@@ -413,7 +413,7 @@ Install what you put in yaourt
 	pip install --user rope
 	pip install --user importmagic
 	pip install --user awscli
-	pip install --user tqdm
+	pip install --user progressbar2
 	
 #### golang yarn cargo gem
 
