@@ -1,7 +1,7 @@
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
 (setq enable-recursive-minibuffers t)
-(bind-key "C-s" 'swiper)
+(bind-key "C-s" 'swiper-for-region-or-swiper)
 (bind-key "C-;" 'ivy-switch-buffer)
 (bind-key "C-c r" 'ivy-resume)
 (bind-key "C-x C-c" 'counsel-M-x)
@@ -22,14 +22,16 @@
 (setq ivy-use-virtual-buffers t)
 (require 'ivy-xref)
 (setq xref-show-xrefs-function #'ivy-xref-show-xrefs)
-(defun swiper-for-region ()
+
+
+(defun swiper-for-region-or-swiper ()
+  "If the region is active, swiper-for-region.
+If the region is inactive, swiper."
   (interactive)
-  (swiper--ivy
-   (cl-remove-if-not
-    (lambda (x)
-      (string-match (buffer-substring
-		     (region-beginning) (region-end)) x))
-    (swiper--candidates))))
+  (if (region-active-p)
+      (swiper (buffer-substring
+	       (region-beginning) (region-end)))
+    (swiper)))
 
 
 ;; counsel-tramp
