@@ -361,7 +361,7 @@ Install what enters with pacman
 	sudo pacman -S debian-archive-keyring slack-desktop
 	sudo pacman -S mathjax strace valgrind phantomjs
 	sudo pacman -S python-pip tree
-	sudo pacman -S yarn geckodriver httpie w3m
+	sudo pacman -S yarn geckodriver httpie w3m mutt
 
 Install what you put in yaourt
 
