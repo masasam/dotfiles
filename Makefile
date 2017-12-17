@@ -158,6 +158,7 @@ pipinstall: ## Install python packages
 	pip install --user ranger-fm
 	pip install --user rainbowstream
 	pip install --user haxor-news
+	pip install --user rtv
 
 pipbackup: ## Backup python packages
 	mkdir -p ${PWD}/archlinux
