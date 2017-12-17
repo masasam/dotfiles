@@ -198,6 +198,7 @@ rubygems: ## Install rubygems packages
 	gem install --user-install jekyll
 	gem install --user-install pry
 	gem install --user-install github-markup
+	gem install --user-install tw
 
 rustinstall: ## Install rust and rust packages
 	mkdir -p ${HOME}/.cargo
