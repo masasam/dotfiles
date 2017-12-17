@@ -28,8 +28,6 @@ alternative_order text/plain text/html *
 set mailcap_path = ~/.mutt/mailcap
 auto_view text/html
 
-bind editor <Tab> complete-query
-bind editor ^T complete
 bind editor <space> noop
 
 set editor="emacsclient -a \"\" -t"
@@ -40,6 +38,14 @@ set alias_file = "~/.mutt/aliases"
 set sort_alias = alias
 set reverse_alias = yes
 source $alias_file
+
+bind index,pager B sidebar-toggle-visible
+set pager_index_lines=8
+
+## GooBook
+set query_command="goobook query '%s'"
+macro index,pager a "<pipe-message>goobook add<return>" "add sender to google contacts"
+bind editor <Tab> complete-query
 
 # make sure that you are using mutt linked against slang, not ncurses, or
 # suffer the consequences of weird color issues. use "mutt -v" to check this.
