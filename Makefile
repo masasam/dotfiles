@@ -69,7 +69,7 @@ install: ## Install arch linux packages using pacman
 	dnsmasq cscope lsof postgresql-libs pdfgrep gnu-netcat urxvt-perls cmatrix \
 	curl docker-compose parallel alsa-utils mlocate traceroute jhead whois ruby \
 	noto-fonts-emoji gpaste nethogs optipng jpegoptim elixir geckodriver ipcalc \
-	gauche screen slack-desktop tig mosh fzf tree httpie ranger
+	gauche screen slack-desktop tig mosh fzf tree httpie
 	sudo pkgfile --update
 
 update: ## Update arch linux packages and save packages cache 3 generations
@@ -152,6 +152,7 @@ pipinstall: ## Install python packages
 	pip install --user importmagic
 	pip install --user awscli
 	pip install --user progressbar2
+	pip install --user ranger-fm
 
 pipbackup: ## Backup python packages
 	mkdir -p ${PWD}/archlinux

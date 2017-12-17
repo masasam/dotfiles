@@ -361,7 +361,7 @@ Install what enters with pacman
 	sudo pacman -S debian-archive-keyring slack-desktop
 	sudo pacman -S mathjax strace valgrind phantomjs
 	sudo pacman -S python-pip tree
-	sudo pacman -S yarn geckodriver httpie ranger
+	sudo pacman -S yarn geckodriver httpie
 
 Install what you put in yaourt
 
@@ -414,6 +414,7 @@ Install what you put in yaourt
 	pip install --user importmagic
 	pip install --user awscli
 	pip install --user progressbar2
+	pip install --user ranger-fm
 	
 #### golang yarn cargo gem
 
