@@ -1,11 +1,6 @@
 set send_charset="iso-2022-jp:utf-8"
 
-set imap_user = "example@gmail.com"
-set imap_pass = "password"
-set smtp_url  = "smtp://example@smtp.gmail.com:587/"
-set smtp_pass = "password"
-set from      = "example@gmail.com"
-set realname  = "masasam"
+source ~/Dropbox/mutt/password.rc
 
 set folder = "imaps://imap.gmail.com:993"
 set spoolfile = "+INBOX"
@@ -45,7 +40,6 @@ set alias_file = "~/.mutt/aliases"
 set sort_alias = alias
 set reverse_alias = yes
 source $alias_file
-
 
 # make sure that you are using mutt linked against slang, not ncurses, or
 # suffer the consequences of weird color issues. use "mutt -v" to check this.

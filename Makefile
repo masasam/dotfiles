@@ -38,9 +38,12 @@ init: ## Initial deploy dotfiles
 	lesskey
 
 initdropbox: ## Initial deploy dotfiles using dropbox
-	ln -vsf ${HOME}/Dropbox/mutt/.muttrc   ${HOME}/.muttrc
-	test -L ${HOME}/.mutt || rm -rf ${HOME}/.mutt
-	ln -vsfn ${HOME}/Dropbox/mutt/.mutt   ${HOME}/.mutt
+	ln -vsf ${PWD}/.muttrc   ${HOME}/.muttrc
+	mkdir -p ${HOME}/.mutt
+	ln -vsf ${PWD}/.mutt/mailcap   ${HOME}/.mutt/mailcap
+	ln -vsf ${PWD}/.mutt/certificates   ${HOME}/.mutt/certificates
+	ln -vsf ${HOME}/Dropbox/mutt/aliases   ${HOME}/.mutt/aliases
+	ln -vsf ${HOME}/Dropbox/mutt/signature   ${HOME}/.mutt/signature
 	mkdir -p ${HOME}/.config
 	ln -vsf ${HOME}/Dropbox/zsh/hub   ${HOME}/.config/hub
 	mkdir -p ${HOME}/.docker
