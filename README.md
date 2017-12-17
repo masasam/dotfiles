@@ -415,6 +415,7 @@ Install what you put in yaourt
 	pip install --user awscli
 	pip install --user progressbar2
 	pip install --user ranger-fm
+	pip install --user rainbowstream
 	
 #### golang yarn cargo gem
 
