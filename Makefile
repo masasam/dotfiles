@@ -88,6 +88,7 @@ aur: ## Install arch linux AUR packages using yaourt
 	yaourt chrome-gnome-shell-git
 	yaourt direnv
 	yaourt git-secrets
+	yaourt goobook-git
 	yaourt google-cloud-sdk
 	yaourt ibus-mozc
 	yaourt man-pages-ja

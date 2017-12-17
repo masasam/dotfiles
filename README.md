@@ -370,6 +370,7 @@ Install what you put in yaourt
 	yaourt direnv
 	yaourt git-secrets
 	yaourt global
+	yaourt goobook-git
 	yaourt google-cloud-sdk
 	yaourt ibus-mozc
 	yaourt man-pages-ja
