@@ -34,7 +34,7 @@ bind editor <space> noop
 
 set editor="emacsclient -a \"\" -t"
 
-set new_mail_command="notify-send -u critical 'New Email' '%n new messages, %u unread.' &"
+set new_mail_command="notify-send --icon=mail-message-new 'New Email' '%n new messages, %u unread.' &"
 
 set alias_file = "~/.mutt/aliases"
 set sort_alias = alias
