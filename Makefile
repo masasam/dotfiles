@@ -50,6 +50,8 @@ initdropbox: ## Initial deploy dotfiles using dropbox
 	ln -vsf ${HOME}/Dropbox/docker/config.json   ${HOME}/.docker/config.json
 	test -L ${HOME}/.ssh || rm -rf ${HOME}/.ssh
 	ln -vsfn ${HOME}/Dropbox/ssh   ${HOME}/.ssh
+	test -L ${HOME}/.config/ranger || rm -rf ${HOME}/.config/ranger
+	ln -vsfn ${HOME}/Dropbox/ranger   ${HOME}/.config/ranger
 	mkdir -p ${HOME}/.local/share
 	test -L ${HOME}/.local/share/keyrings || rm -rf ${HOME}/.local/share/keyrings
 	ln -vsfn ${HOME}/Dropbox/passwd/keyrings   ${HOME}/.local/share/keyrings
