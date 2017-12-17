@@ -54,6 +54,7 @@ initdropbox: ## Initial deploy dotfiles using dropbox
 	ln -vsfn ${HOME}/Dropbox/sylpheed/.sylpheed-2.0   ${HOME}/.sylpheed-2.0
 	test -L ${HOME}/.mozc || rm -rf ${HOME}/.mozc
 	ln -vsfn ${HOME}/Dropbox/mozc/.mozc   ${HOME}/.mozc
+	ln -vsf ${HOME}/Dropbox/arch/.tw.yml   ${HOME}/.tw.yml
 	chmod 600   ${HOME}/.ssh/id_rsa
 
 install: ## Install arch linux packages using pacman
