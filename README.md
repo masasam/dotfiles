@@ -362,6 +362,7 @@ Install what enters with pacman
 	sudo pacman -S mathjax strace valgrind phantomjs
 	sudo pacman -S python-pip tree
 	sudo pacman -S yarn geckodriver httpie w3m neomutt
+	sudo pacman -S highlight lynx elinks mediainfo cpio lhasa lzop p7zip unace
 
 Install what you put in yaourt
 
