@@ -1,6 +1,8 @@
 (add-hook 'markdown-mode-hook
           '(lambda () (outline-minor-mode t)))
 
+
+;; pangu-spacing
 ;; Insert a space between full-width and half-width letters
 (setq pangu-spacing-chinese-before-english-regexp
       (rx (group-n 1 (category japanese))
@@ -13,8 +15,8 @@
 ;; use markdown-mode
 (add-hook 'markdown-mode-hook 'pangu-spacing-mode)
 
-;;gfm-mode
-(add-to-list 'auto-mode-alist (cons "\\README.md\\'" 'gfm-mode))
+
+;; markdown-preview like github
 (setq markdown-command "github-markup"
       markdown-command-needs-filename t
       markdown-content-type "application/xhtml+xml"
