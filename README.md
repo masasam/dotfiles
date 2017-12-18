@@ -360,7 +360,7 @@ Install what enters with pacman
 	sudo pacman -S nethogs optipng jpegoptim noto-fonts-emoji gauche screen ipcalc
 	sudo pacman -S debian-archive-keyring slack-desktop
 	sudo pacman -S mathjax strace valgrind phantomjs
-	sudo pacman -S python-pip tree
+	sudo pacman -S python-pip tree irssi
 	sudo pacman -S yarn geckodriver httpie w3m neomutt
 	sudo pacman -S highlight lynx elinks mediainfo cpio lhasa lzop p7zip unace
 
