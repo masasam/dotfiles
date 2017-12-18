@@ -44,6 +44,7 @@ initdropbox: ## Initial deploy dotfiles using dropbox
 	ln -vsf ${PWD}/.mutt/certificates   ${HOME}/.mutt/certificates
 	ln -vsf ${HOME}/Dropbox/mutt/aliases   ${HOME}/.mutt/aliases
 	ln -vsf ${HOME}/Dropbox/mutt/signature   ${HOME}/.mutt/signature
+	ln -vsf ${HOME}/Dropbox/mutt/.goobookrc   ${HOME}/.goobookrc
 	mkdir -p ${HOME}/.config
 	ln -vsf ${HOME}/Dropbox/zsh/hub   ${HOME}/.config/hub
 	mkdir -p ${HOME}/.docker

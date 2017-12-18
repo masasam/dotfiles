@@ -24,28 +24,35 @@ ignore "Authentication-Results:"
 ignore "DomainKey-Signature:"
 ignore "DKIM-Signature:"
 hdr_order Date From To Cc
+set pager_index_lines=8
+bind editor ^T complete
+bind editor <space> noop
+
+# mailcap
 alternative_order text/plain text/html *
 set mailcap_path = ~/.mutt/mailcap
 auto_view text/html
 
-bind editor <space> noop
-
+# emacs
 set editor="emacsclient -a \"\" -t"
 
+# notify-send
 set new_mail_command="notify-send --icon=mail-message-new 'New Email' '%n new messages, %u unread.' &"
 
+# alias
 set alias_file = "~/.mutt/aliases"
 set sort_alias = alias
 set reverse_alias = yes
 source $alias_file
 
-bind index,pager B sidebar-toggle-visible
-set pager_index_lines=8
-
 ## GooBook
 set query_command="goobook query '%s'"
 macro index,pager a "<pipe-message>goobook add<return>" "add sender to google contacts"
 bind editor <Tab> complete-query
+
+# pager
+set pager_context = 3
+unset markers
 
 # make sure that you are using mutt linked against slang, not ncurses, or
 # suffer the consequences of weird color issues. use "mutt -v" to check this.
