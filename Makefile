@@ -279,14 +279,18 @@ test: ## Test this Makefile using docker
 	docker exec makefiletest sh -c "cd ${PWD}; make install"
 	@echo "========== make init =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make init"
+	@echo "========== make initroot =========="
+	docker exec makefiletest sh -c "cd ${PWD}; make initroot"
 	@echo "========== make initdropbox =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make initdropbox"
-	@echo "========== make caskinstall =========="
-	docker exec makefiletest sh -c "cd ${PWD}; make caskinstall"
+	@echo "========== make emacsinit =========="
+	docker exec makefiletest sh -c "cd ${PWD}; make emacsinit"
 	@echo "========== make melpa =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make melpa"
 	@echo "========== make aur =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make aur"
+	@echo "========== make mozc =========="
+	docker exec makefiletest sh -c "cd ${PWD}; make mozc"
 	@echo "========== make pipinstall =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make pipinstall"
 	@echo "========== make goinstall =========="
@@ -305,8 +309,10 @@ testsimple: ## Test this Makefile using docker without Dropbox
 	docker exec makefiletest sh -c "cd ${PWD}; make install"
 	@echo "========== make init =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make init"
-	@echo "========== make caskinstall =========="
-	docker exec makefiletest sh -c "cd ${PWD}; make caskinstall"
+	@echo "========== make initroot =========="
+	docker exec makefiletest sh -c "cd ${PWD}; make initroot"
+	@echo "========== make emacsinit =========="
+	docker exec makefiletest sh -c "cd ${PWD}; make emacsinit"
 	@echo "========== make melpa =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make melpa"
 	@echo "========== make aur =========="
@@ -322,15 +328,17 @@ testsimple: ## Test this Makefile using docker without Dropbox
 	@echo "========== make rustinstall =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make rustinstall"
 
-allinstall: install initroot init initdropbox aur emacsinit melpa pipinstall goinstall nodeinstall rubygems rustinstall gnuglobal
+baseinstall: install init initroot initdropbox aur mozc emacsinit melpa pipinstall goinstall rubygems dockerinit mariadbinit psdinit rustinstall
 
-allinit: neoviminit dockerinit mariadbinit psdinit
+optioninstall: nodeinstall gnuglobal neoviminit
+
+allinstall: baseinstall optioninstall
 
 allupdate: update melpaupdate pipupdate rustupdate goinstall
 
 allbackup: backup pipbackup
 
-.PHONY: allinstall allinit allupdate allbackup
+.PHONY: baseinstall optioninstall allinstall allupdate allbackup
 
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
