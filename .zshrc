@@ -549,4 +549,4 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 # zsh-completions for aws
 source ~/.local/bin/aws_zsh_completer.sh
 # direnv
-eval "$(direnv hook zsh)"
+# eval "$(direnv hook zsh)"

@@ -86,23 +86,17 @@ update: ## Update arch linux packages and save packages cache 3 generations
 	yaourt -Syua; paccache -ruk0
 
 aur: ## Install arch linux AUR packages using yaourt
-	yaourt chrome-gnome-shell-git
-	yaourt direnv
 	yaourt git-secrets
 	yaourt goobook-git
 	yaourt ibus-mozc
-	yaourt kubernetes-bin
 	yaourt man-pages-ja
 	yaourt mozc
 	yaourt nkf
 	yaourt peek
 	yaourt profile-sync-daemon
-	yaourt quicklisp
 	yaourt screenkey
 	yaourt ttf-cica
 	yaourt ttf-myrica
-	yaourt ttf-ricty
-	yaourt yum
 
 caskinstall: ## Install emacs cask package manager
 	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
