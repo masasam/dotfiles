@@ -1,5 +1,6 @@
 init: ## Initial deploy dotfiles
 	ln -vsf ${PWD}/.lesskey   ${HOME}/.lesskey
+	lesskey
 	ln -vsf ${PWD}/.zshrc   ${HOME}/.zshrc
 	ln -vsf ${PWD}/.vimrc   ${HOME}/.vimrc
 	ln -vsf ${PWD}/.bashrc   ${HOME}/.bashrc
@@ -15,18 +16,10 @@ init: ## Initial deploy dotfiles
 	ln -vsf ${PWD}/.aspell.conf   ${HOME}/.aspell.conf
 	mkdir -p ${HOME}/.config
 	ln -vsf ${PWD}/.config/screenkey.json ${HOME}/.config/screenkey.json
-	mkdir -p ${HOME}/.config/psd
-	ln -vsf ${PWD}/.config/psd/psd.conf   ${HOME}/.config/psd/psd.conf
 	mkdir -p ${HOME}/.config/gtk-3.0
 	ln -vsf ${PWD}/.config/gtk-3.0/bookmarks   ${HOME}/.config/gtk-3.0/bookmarks
 	mkdir -p ${HOME}/.config/termite
 	ln -vsf ${PWD}/.config/termite/config   ${HOME}/.config/termite/config
-	mkdir -p ${HOME}/.config/nvim
-	ln -vsf ${PWD}/.config/nvim/init.vim   ${HOME}/.config/nvim/init.vim
-	ln -vsf ${PWD}/.config/nvim/installer.sh   ${HOME}/.config/nvim/installer.sh
-	test -L ${HOME}/.emacs.d || rm -rf ${HOME}/.emacs.d
-	ln -vsfn ${PWD}/.emacs.d   ${HOME}/.emacs.d
-	lesskey
 
 initroot: ## Initial deploy need root authority
 	sudo ln -vsf ${PWD}/etc/pacman.conf   /etc/pacman.conf
@@ -103,10 +96,10 @@ mozc: ## Install ibus-mozc
 	yaourt ibus-mozc
 	ibus-daemon -drx
 
-caskinstall: ## Install emacs cask package manager
+emacsinit: ## Install emacs packages from MELPA using cask package manager
 	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
-
-melpa: ## Install emacs packages from MELPA using cask package manager
+	test -L ${HOME}/.emacs.d || rm -rf ${HOME}/.emacs.d
+	ln -vsfn ${PWD}/.emacs.d   ${HOME}/.emacs.d
 	export PATH="$HOME/.cask/bin:$PATH"
 	cd ${HOME}/.emacs.d/; cask upgrade;cask install
 
@@ -239,7 +232,10 @@ recover: ## Recover arch linux packages from backup
 	sudo pacman -S --needed `cat ${PWD}/archlinux/pacmanlist`
 	yaourt -S --needed $(DOY) `cat ${PWD}/archlinux/yaourtlist`
 
-neoviminit: ## Init neovim dein
+neoviminit: ## Init neovim
+	mkdir -p ${HOME}/.config/nvim
+	ln -vsf ${PWD}/.config/nvim/init.vim   ${HOME}/.config/nvim/init.vim
+	ln -vsf ${PWD}/.config/nvim/installer.sh   ${HOME}/.config/nvim/installer.sh
 	bash ${HOME}/.config/nvim/installer.sh ${HOME}/.config/nvim
 
 dockerinit: ## Docker initial setup
@@ -257,6 +253,8 @@ mariadbinit: # Mariadb initial setup
 	mysql_secure_installation
 
 psdinit: ## Profile-Sync-Daemon initial setup
+	mkdir -p ${HOME}/.config/psd
+	ln -vsf ${PWD}/.config/psd/psd.conf   ${HOME}/.config/psd/psd.conf
 	echo "${USER} ALL=(ALL) NOPASSWD: /usr/bin/psd-overlay-helper" | sudo EDITOR='tee -a' visudo
 	systemctl --user enable psd.service
 
@@ -324,7 +322,7 @@ testsimple: ## Test this Makefile using docker without Dropbox
 	@echo "========== make rustinstall =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make rustinstall"
 
-allinstall: install init initdropbox aur caskinstall melpa pipinstall goinstall nodeinstall rubygems rustinstall gnuglobal
+allinstall: install initroot init initdropbox aur emacsinit melpa pipinstall goinstall nodeinstall rubygems rustinstall gnuglobal
 
 allinit: neoviminit dockerinit mariadbinit psdinit
 
