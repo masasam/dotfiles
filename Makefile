@@ -19,6 +19,16 @@ init: ## Initial deploy dotfiles
 	ln -vsf ${PWD}/.config/psd/psd.conf   ${HOME}/.config/psd/psd.conf
 	mkdir -p ${HOME}/.config/gtk-3.0
 	ln -vsf ${PWD}/.config/gtk-3.0/bookmarks   ${HOME}/.config/gtk-3.0/bookmarks
+	mkdir -p ${HOME}/.config/termite
+	ln -vsf ${PWD}/.config/termite/config   ${HOME}/.config/termite/config
+	mkdir -p ${HOME}/.config/nvim
+	ln -vsf ${PWD}/.config/nvim/init.vim   ${HOME}/.config/nvim/init.vim
+	ln -vsf ${PWD}/.config/nvim/installer.sh   ${HOME}/.config/nvim/installer.sh
+	test -L ${HOME}/.emacs.d || rm -rf ${HOME}/.emacs.d
+	ln -vsfn ${PWD}/.emacs.d   ${HOME}/.emacs.d
+	lesskey
+
+initroot: ## Initial deploy need root authority
 	sudo ln -vsf ${PWD}/etc/pacman.conf   /etc/pacman.conf
 	sudo ln -vsf ${PWD}/etc/dnsmasq/resolv.dnsmasq.conf   /etc/resolv.dnsmasq.conf
 	sudo ln -vsf ${PWD}/etc/dnsmasq/dnsmasq.conf   /etc/dnsmasq.conf
@@ -28,14 +38,6 @@ init: ## Initial deploy dotfiles
 	sudo ln -vsf ${PWD}/etc/NetworkManager/NetworkManager.conf /etc/NetworkManager/NetworkManager.conf
 	sudo mkdir -p /etc/libreoffice
 	sudo ln -vsf ${PWD}/etc/libreoffice/sofficerc /etc/libreoffice/sofficerc
-	mkdir -p ${HOME}/.config/termite
-	ln -vsf ${PWD}/.config/termite/config   ${HOME}/.config/termite/config
-	mkdir -p ${HOME}/.config/nvim
-	ln -vsf ${PWD}/.config/nvim/init.vim   ${HOME}/.config/nvim/init.vim
-	ln -vsf ${PWD}/.config/nvim/installer.sh   ${HOME}/.config/nvim/installer.sh
-	test -L ${HOME}/.emacs.d || rm -rf ${HOME}/.emacs.d
-	ln -vsfn ${PWD}/.emacs.d   ${HOME}/.emacs.d
-	lesskey
 
 initdropbox: ## Initial deploy dotfiles using dropbox
 	ln -vsf ${PWD}/.muttrc   ${HOME}/.muttrc
@@ -58,8 +60,6 @@ initdropbox: ## Initial deploy dotfiles using dropbox
 	ln -vsfn ${HOME}/Dropbox/passwd/keyrings   ${HOME}/.local/share/keyrings
 	test -L ${HOME}/.sylpheed-2.0 || rm -rf ${HOME}/.sylpheed-2.0
 	ln -vsfn ${HOME}/Dropbox/sylpheed/.sylpheed-2.0   ${HOME}/.sylpheed-2.0
-	test -L ${HOME}/.mozc || rm -rf ${HOME}/.mozc
-	ln -vsfn ${HOME}/Dropbox/mozc/.mozc   ${HOME}/.mozc
 	chmod 600   ${HOME}/.ssh/id_rsa
 
 install: ## Install arch linux packages using pacman
@@ -88,15 +88,20 @@ update: ## Update arch linux packages and save packages cache 3 generations
 aur: ## Install arch linux AUR packages using yaourt
 	yaourt git-secrets
 	yaourt goobook-git
-	yaourt ibus-mozc
 	yaourt man-pages-ja
-	yaourt mozc
 	yaourt nkf
 	yaourt peek
 	yaourt profile-sync-daemon
 	yaourt screenkey
 	yaourt ttf-cica
 	yaourt ttf-myrica
+
+mozc: ## Install ibus-mozc
+	test -L ${HOME}/.mozc || rm -rf ${HOME}/.mozc
+	ln -vsfn ${HOME}/Dropbox/mozc/.mozc   ${HOME}/.mozc
+	yaourt mozc
+	yaourt ibus-mozc
+	ibus-daemon -drx
 
 caskinstall: ## Install emacs cask package manager
 	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
