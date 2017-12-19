@@ -94,7 +94,6 @@ aur: ## Install arch linux AUR packages using yaourt
 	yaourt ibus-mozc
 	yaourt kubectl-bin
 	yaourt man-pages-ja
-	yaourt minikube
 	yaourt mozc
 	yaourt nkf
 	yaourt peek

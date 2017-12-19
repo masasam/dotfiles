@@ -375,7 +375,6 @@ Install what you put in yaourt
 	yaourt ibus-mozc
 	yaourt kubectl-bin
 	yaourt man-pages-ja
-	yaourt minikube
 	yaourt mozc
 	yaourt nkf
 	yaourt peek
