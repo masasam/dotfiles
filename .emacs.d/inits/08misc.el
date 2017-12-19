@@ -75,7 +75,8 @@
 
 ;; projectile
 (projectile-mode)
-(counsel-projectile-on)
+(counsel-projectile-mode)
+
 ;; How to clear cache (M-x projectile-invalidate-cache)
 (setq projectile-enable-caching t)
 ;; require ggtags
@@ -113,9 +114,7 @@
 
 ;; flyspell-correct
 (require 'flyspell-correct-ivy)
-(define-key flyspell-mode-map (kbd "C-M-;") 'flyspell-correct-previous-word-generic)
-(add-hook 'git-commit-mode-hook 'flyspell-mode)
-(add-hook 'markdown-mode-hook 'flyspell-mode)
+(define-key git-commit-mode-map (kbd "C-M-;") 'flyspell-correct-previous-word-generic)
 
 
 ;; smartparens
@@ -133,8 +132,6 @@
 (add-hook 'yaml-mode-hook
           (lambda ()
 	    (ansible 1)
-            (company-mode 1)
-	    (auto-complete-mode -1)
 	    (add-to-list 'company-backends 'company-ansible)))
 
 (setq ansible::vault-password-file "~/Dropbox/ansible/vault_pass")
