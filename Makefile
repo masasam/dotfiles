@@ -90,7 +90,6 @@ aur: ## Install arch linux AUR packages using yaourt
 	yaourt direnv
 	yaourt git-secrets
 	yaourt goobook-git
-	yaourt google-cloud-sdk
 	yaourt ibus-mozc
 	yaourt kubernetes-bin
 	yaourt man-pages-ja

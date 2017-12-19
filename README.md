@@ -371,7 +371,6 @@ Install what you put in yaourt
 	yaourt git-secrets
 	yaourt global
 	yaourt goobook-git
-	yaourt google-cloud-sdk
 	yaourt ibus-mozc
 	yaourt kubernetes-bin
 	yaourt man-pages-ja
