@@ -420,6 +420,7 @@ Install what you put in yaourt
 	pip install --user rainbowstream
 	pip install --user haxor-news
 	pip install --user rtv
+	pip install --user kube-shell
 	
 #### golang yarn cargo gem
 
