@@ -373,7 +373,7 @@ Install what you put in yaourt
 	yaourt goobook-git
 	yaourt google-cloud-sdk
 	yaourt ibus-mozc
-	yaourt kubectl-bin
+	yaourt kubernetes-bin
 	yaourt man-pages-ja
 	yaourt mozc
 	yaourt nkf

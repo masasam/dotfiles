@@ -92,7 +92,7 @@ aur: ## Install arch linux AUR packages using yaourt
 	yaourt goobook-git
 	yaourt google-cloud-sdk
 	yaourt ibus-mozc
-	yaourt kubectl-bin
+	yaourt kubernetes-bin
 	yaourt man-pages-ja
 	yaourt mozc
 	yaourt nkf
