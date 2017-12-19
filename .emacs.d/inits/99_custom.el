@@ -7,4 +7,5 @@
 (custom-set-faces '(cursor ((t (:background "#82c600"))))
 		  '(elscreen-tab-background-face ((t (:background "#37474f"))))
 		  '(elscreen-tab-current-screen-face ((t (:background "LightSkyBlue4" :foreground "white"))))
-		  '(elscreen-tab-other-screen-face ((t (:background "#37474f" :foreground "Gray50")))))
+		  '(elscreen-tab-other-screen-face ((t (:background "#37474f" :foreground "Gray50"))))
+		  '(helm-candidate-number ((t (:background "#1c1f26" :foreground "#ffffff")))))
