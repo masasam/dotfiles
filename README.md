@@ -439,7 +439,7 @@ Install what you put in yaourt
 	yarn global add eslint
 	yarn global add babel-eslint
 	yarn global add eslint-plugin-react
-	yarn global add casperjs
+	yarn global add mermaid-filter
 	cargo install cargo-script
 	gem install --user-install bundle
 	gem install --user-install jekyll
