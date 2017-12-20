@@ -8,10 +8,6 @@
   (exec-path-from-shell-initialize))
 
 
-;; Reduce GC to speed up (eat memory)
-(setq gc-cons-threshold (* 128 1024 1024))
-
-
 ;;; Faster rendering by not corresponding to right-to-left language
 (setq-default bidi-display-reordering nil)
 
