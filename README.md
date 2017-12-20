@@ -4,6 +4,8 @@
 
 ![emacs](https://raw.githubusercontent.com/masasam/image/image/emacs.png)
 
+![mutt](https://raw.githubusercontent.com/masasam/image/image/mutt.png)
+
 ## Let's build environment with Makefile
 
 This dotfiles is for Archlinux.
@@ -470,8 +472,6 @@ Install what you put in yaourt
 # Tweak Tool
 
 Detailed setting of gnome etc.
-
-![TweakTool](https://raw.githubusercontent.com/masasam/image/image/tweaktool.png)
 
 * Key theme
 
