@@ -81,8 +81,6 @@ update: ## Update arch linux packages and save packages cache 3 generations
 aur: ## Install arch linux AUR packages using yaourt
 	yaourt git-secrets
 	yaourt goobook-git
-	yaourt google-cloud-sdk
-	yaourt man-pages-ja
 	yaourt nkf
 	yaourt peek
 	yaourt profile-sync-daemon
@@ -265,6 +263,54 @@ powertopinit: ## Powertop initial setup (Warning take a long time)
 
 gnupg: ## Import gnupg secret-key
 	gpg --allow-secret-key-import --import ~/Dropbox/passwd/privkey.asc
+
+kubernetes: ## Init kubernetes 
+	yaourt google-cloud-sdk
+	sudo gcloud components update kubectl
+
+makecluster: ## Kubernetes cluster setup
+	gcloud container clusters create --num-nodes=2 my-cluster \
+	--zone us-central-a \
+	--machine-type g1-small \
+	--enable-autoscaling --min-nodes=2 --max-nodes=5
+
+dockerimage2gcr: ## Upload docker image to Google Container Registry
+	GCP_PROJECT=$(gcloud config get-value project)
+	docker build -t us.gcr.io/$GCP_PROJECT/myapp:1.0 ~/src/github.com/masasam/myapp
+	gcloud docker -- push us.gcr.io/$GCP_PROJECT/myapp:1.0
+	open https://console.cloud.google.com/gcr
+
+deploy2gke: ## Deploy myapp to kubernetes cluster
+	GCP_PROJECT=$(gcloud config get-value project)
+	kubectl run myapp-deploy \
+	--image=us.gcr.io/$GCP_PROJECT/myapp:1.0 \
+	--replicas=1 \
+	--port=3000 \
+	--limits=cpu=200m \
+	--command -- node app/server.js
+	kubectl get pod
+
+kubernetes2publish: ## Publish kubernetes service
+	kubectl expose deployment myapp-deploy --port=80 --target-port=3000 --type=LoadBalancer
+	watch kubectl get service
+
+kubernetes2scale: ## kubernetes scale 10 pod
+	kubectl scale deploy myapp-deploy --replicas=10
+	watch kubectl get pod
+
+kubernetes-rolling-pdate: ## Rolling Update kubernetes
+	GCP_PROJECT=$(gcloud config get-value project)
+	docker build -t us.gcr.io/$GCP_PROJECT/myapp:2.0 ~/src/github.com/masasam/myapp
+	gcloud docker -- push us.gcr.io/$GCP_PROJECT/myapp:2.0
+	kubectl set image deployment/myapp-deploy myapp-deploy=us.gcr.io/$GCP_PROJECT/myapp:2.0
+	watch kubectl get node
+
+kubernetes-rollout: ## Rollout version for kubernetes
+	kubectl rollout history deployment/myapp-deploy
+
+kubernetes-delete: ## Delete kubernetes cluster
+	kubectl delete deployment,service,pod --all
+	gcloud container clusters delete my-cluster
 
 terminal-slack: ## Install and init terminal-slack
 	git clone https://github.com/evanyeung/terminal-slack.git
