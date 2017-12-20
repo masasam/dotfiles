@@ -263,7 +263,7 @@ powertopinit: ## Powertop initial setup (Warning take a long time)
 	sudo systemctl enable powertop
 
 gnupg: ## Import gnupg secret-key
-	gpg --allow-secret-key-import --import ~/Dropbox/passwd/privkey.asc
+	gpg --allow-secret-key-import --import ${HOME}/Dropbox/passwd/privkey.asc
 
 kubernetes: ## Init kubernetes 
 	yaourt google-cloud-sdk
@@ -278,7 +278,7 @@ kubernetes-cluster: ## Kubernetes cluster setup
 
 kubernetes-image2gcr: ## Upload docker image to Google Container Registry
 	GCP_PROJECT=$(gcloud config get-value project)
-	docker build -t us.gcr.io/${GCP_PROJECT}/myapp:1.0 ~/src/github.com/masasam/myapp
+	docker build -t us.gcr.io/${GCP_PROJECT}/myapp:1.0 ${HOME}/src/github.com/masasam/myapp
 	gcloud docker -- push us.gcr.io/${GCP_PROJECT}/myapp:1.0
 	open https://console.cloud.google.com/gcr
 
@@ -302,7 +302,7 @@ kubernetes-scale: ## kubernetes scale 10 pod
 
 kubernetes-rolling-update: ## Rolling update for kubernetes
 	GCP_PROJECT=$(gcloud config get-value project)
-	docker build -t us.gcr.io/${GCP_PROJECT}/myapp:2.0 ~/src/github.com/masasam/myapp
+	docker build -t us.gcr.io/${GCP_PROJECT}/myapp:2.0 ${HOME}/src/github.com/masasam/myapp
 	gcloud docker -- push us.gcr.io/${GCP_PROJECT}/myapp:2.0
 	kubectl set image deployment/myapp-deploy myapp-deploy=us.gcr.io/${GCP_PROJECT}/myapp:2.0
 	watch kubectl get node
