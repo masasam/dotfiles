@@ -81,6 +81,7 @@ update: ## Update arch linux packages and save packages cache 3 generations
 aur: ## Install arch linux AUR packages using yaourt
 	yaourt git-secrets
 	yaourt goobook-git
+	yaourt google-cloud-sdk
 	yaourt man-pages-ja
 	yaourt nkf
 	yaourt peek
@@ -328,17 +329,13 @@ testsimple: ## Test this Makefile using docker without Dropbox
 	@echo "========== make rustinstall =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make rustinstall"
 
-baseinstall: install init initroot initdropbox aur mozc emacsinit melpa pipinstall goinstall rubygems dockerinit mariadbinit psdinit rustinstall
-
-optioninstall: nodeinstall gnuglobal neoviminit
-
-allinstall: baseinstall optioninstall
+allinstall: install init initroot initdropbox aur mozc emacsinit melpa pipinstall goinstall rubygems dockerinit mariadbinit psdinit rustinstall gnuglobal nodeinstall neoviminit
 
 allupdate: update melpaupdate pipupdate rustupdate goinstall
 
 allbackup: backup pipbackup
 
-.PHONY: baseinstall optioninstall allinstall allupdate allbackup
+.PHONY: allinstall allupdate allbackup
 
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
