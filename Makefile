@@ -267,20 +267,21 @@ gnupg: ## Import gnupg secret-key
 kubernetes: ## Init kubernetes 
 	yaourt google-cloud-sdk
 	sudo gcloud components update kubectl
+	gcloud init
 
-makecluster: ## Kubernetes cluster setup
+kubernetes-cluster: ## Kubernetes cluster setup
 	gcloud container clusters create --num-nodes=2 my-cluster \
 	--zone us-central-a \
 	--machine-type g1-small \
 	--enable-autoscaling --min-nodes=2 --max-nodes=5
 
-dockerimage2gcr: ## Upload docker image to Google Container Registry
+kubernetes-image2gcr: ## Upload docker image to Google Container Registry
 	GCP_PROJECT=$(gcloud config get-value project)
 	docker build -t us.gcr.io/$GCP_PROJECT/myapp:1.0 ~/src/github.com/masasam/myapp
 	gcloud docker -- push us.gcr.io/$GCP_PROJECT/myapp:1.0
 	open https://console.cloud.google.com/gcr
 
-deploy2gke: ## Deploy myapp to kubernetes cluster
+kubernetes-deploy: ## Deploy myapp to kubernetes cluster
 	GCP_PROJECT=$(gcloud config get-value project)
 	kubectl run myapp-deploy \
 	--image=us.gcr.io/$GCP_PROJECT/myapp:1.0 \
@@ -290,15 +291,15 @@ deploy2gke: ## Deploy myapp to kubernetes cluster
 	--command -- node app/server.js
 	kubectl get pod
 
-kubernetes2publish: ## Publish kubernetes service
+kubernetes-publish: ## Publish kubernetes service
 	kubectl expose deployment myapp-deploy --port=80 --target-port=3000 --type=LoadBalancer
 	watch kubectl get service
 
-kubernetes2scale: ## kubernetes scale 10 pod
+kubernetes-scale: ## kubernetes scale 10 pod
 	kubectl scale deploy myapp-deploy --replicas=10
 	watch kubectl get pod
 
-kubernetes-rolling-pdate: ## Rolling Update kubernetes
+kubernetes-rolling-update: ## Rolling update for kubernetes
 	GCP_PROJECT=$(gcloud config get-value project)
 	docker build -t us.gcr.io/$GCP_PROJECT/myapp:2.0 ~/src/github.com/masasam/myapp
 	gcloud docker -- push us.gcr.io/$GCP_PROJECT/myapp:2.0
