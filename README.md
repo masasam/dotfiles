@@ -62,10 +62,6 @@ You can install all with
 
 	make allinstall
 
-You can init all with
-
-	make allinit
-
 You can backup packages all with
 
 	make allbackup
@@ -173,12 +169,12 @@ Set the host name
 
     echo thinkpad > /etc/hostname
 
-Set the locale
-
 vi /etc/locale.gen
 
->en_US.UTF-8 UTF-8
->ja_JP.UTF-8 UTF-8
+	en_US.UTF-8 UTF-8
+	ja_JP.UTF-8 UTF-8
+
+Next execute
 
     locale-gen
 
@@ -189,6 +185,12 @@ Shell is in English environment
 This neighborhood will be UTF-8
 
     echo LANG=ja_JP.UTF-8 > /etc/locale.conf
+
+Time zone example
+
+	ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
+	ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
+	ln -sf /usr/share/zoneinfo/US/Pacific /etc/localtime
 
 Time adjustment
 
@@ -211,10 +213,10 @@ Set groups and permissions
     pacman -S vim
     visudo
 
->Defaults env_keep += “ HOME ”
->%wheel ALL=(ALL) ALL
+Uncomment comment out following
 
-Uncomment comment out
+	Defaults env_keep += “ HOME ”
+	%wheel ALL=(ALL) ALL
 
 Set boot loader
 
@@ -223,10 +225,6 @@ Set boot loader
     grub-mkconfig -o /boot/grub/grub.cfg
 
 #### Prepare drivers and Xorg Gnome wifi
-
-As bash complements work
-
-    pacman -S bash-completion
 
 Install drivers that match your environment
 
@@ -253,20 +251,6 @@ Enable graphical login with gdm
     pacman -S gdm
     systemctl enable gdm.service
 
-Install yaourt
-vim /etc/pacman.conf
-
-    [archlinuxfr]
-    SigLevel = Never
-    Server = http://repo.archlinux.fr/$arch
-
-Synchronize yaourt latest
-
-    sudo pacman -Syy
-    sudo pacman -S yaourt
-    sudo pacman --sync --refresh yaourt
-    yaourt -Syua
-
 Preparing the net environment
 
 After using NetworkManager, use it with wifi.
@@ -283,8 +267,27 @@ You can not wifi unless you turn off dhcpcd.
     LANG=C xdg-user-dirs-update --force
     sudo pacman -S zsh git vim
 
-Install dropbox and sync
+Install yaourt
+vim /etc/pacman.conf
 
+    [archlinuxfr]
+    SigLevel = Never
+    Server = http://repo.archlinux.fr/$arch
+
+or
+	
+	curl https://raw.githubusercontent.com/masasam/dotfiles/master/archlinux/archlinuxfr >> /etc/pacman.conf
+
+Synchronize yaourt latest
+
+    sudo pacman -Syy
+    sudo pacman -S yaourt
+    sudo pacman --sync --refresh yaourt
+    yaourt -Syua
+	
+Install dropbox and sync
+	
+	sudo pacman -S chromium
     sudo pacman -S dropbox
     sudo pacman -S nautilus-dropbox
 	dropbox
@@ -454,8 +457,6 @@ Install what you put in yaourt
 
 #### Trackpoint
 
-Install Thinkpad specific ones
-
 ~/.xinitrc
 
     tpset() { xinput set-prop "TPPS/2 IBM TrackPoint" "$@"; }
@@ -465,23 +466,6 @@ Install Thinkpad specific ones
     tpset "Evdev Wheel Emulation Timeout" 200
     tpset "Evdev Wheel Emulation Axes" 6 7 4 5
     tpset "Device Accel Constant Deceleration" 0.95
-
-sudo vim /etc/udev/rules.d/10-trackpoint.rules
-
-    ACTION=="add", SUBSYSTEM=="input", ATTR{name}=="TPPS/2 IBM TrackPoint", ATTR{device/sensitivity}="240"
-
-sudo vim /etc/X11/xorg.conf.d/20-thinkpad.conf
-
-    Section "InputClass"
-        Identifier	"Trackpoint Wheel Emulation"
-        MatchProduct	"TPPS/2 IBM TrackPoint"
-        MatchDevicePath	"/dev/input/event*"
-        Option		"EmulateWheel"		"true"
-        Option		"EmulateWheelButton"	"2"
-        Option		"Emulate3Buttons"	"false"
-        Option		"XAxisMapping"		"6 7"
-        Option		"YAxisMapping"		"4 5"
-    EndSection
 
 # Tweak Tool
 
@@ -619,19 +603,6 @@ Do the same DNS lookup twice on drill command.
 
 ![dnsmasq](https://raw.githubusercontent.com/masasam/image/image/dnsmasq.png)
 
-## Don't suspend even if closing the lid
-
-It does not suspend, because startup is fast
-
->/etc/systemd/logind.conf
-
-    #HandleLidSwitch=suspend
-    HandleLidSwitch=ignore
-
-Then restart the logind service
-
-    systemctl restart systemd-logind
-
 ## Activity
 
 ![activity](https://raw.githubusercontent.com/masasam/image/image/activity.png)
@@ -647,29 +618,6 @@ Activities> Settings> Keyboard> Shortcut
 >Ctrl-u
 
 If you make a mistake on the letters, erase all with Ctrl-u
-
-# Firefox
-
-#### Gnome Shell Extention
-
->Dash to Dock
->TopIcons Plus
->Easyscreencast
-
-#### stylish
-
-Use the following themes
-
-<https://userstyles.org/styles/23516/midnight-surfing-global-dark-style>
-
-Defaultfullzoomlevel to 125%
-
-# Chromium
-Change the default size to 125%
-
-<https://chrome.google.com/webstore/detail/change-colors/jbmkekhehjedonbhoikhhkmlapalklgn>
-
-Based on black screen with change-colors.
 
 # Mozc
 
@@ -698,45 +646,6 @@ Once mozc is set up
 And set the mozc setting to dropbox
 
 With this it will not have to be set again
-
-# Sylpheed
-
-Sylpheed on initial startup I will be asked for the Mail folder
-
-> ~/Dropbox/sylpheed/Mail
-
-When changing the Mail folder except when it is started for the first time
-
-Specify the Mail folder with.
-
-> vim ~/.sylpheed-2.0/folderlist.xml
-
-    <folder type="mh" name="Mailbox" path="/home/${USER}/Dropbox/sylpheed/Mail">
-
-Because it is a file format of 1 mail 1 file If you synchronize mail immediately with Dropbox There is no worry of data lost.
-
-#### Sylpheed configuration file
-
-Once the setting is finished Let's cast it to the dropbox and try not to do it again.
-
-    ln -sfn ~/Dropbox/sylpheed/.sylpheed-2.0 ~/.sylpheed-2.0
-
-Store it in the tray icon when minimized If you set it
-
-Alt - Tab
-
-It's okay if sylpheed does not come out
-
-### Setting font
-
-Set the following with gnome-tweak-tool
-
-Font
-
-- Window title  Cantarell 11
-- interface   Noto Sans CJK JP Regular 11
-- Document   Sans Regular 11
-- Equal width    Monospace Regular 11
 
 ## How to test Makefile
 
