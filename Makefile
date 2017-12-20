@@ -63,7 +63,7 @@ install: ## Install arch linux packages using pacman
 	gnome-keyring cups-pdf mcomix openssh firefox firefox-i18n-ja gimp strace \
 	otf-ipafont pkgfile baobab dconf-editor rsync nodejs debian-archive-keyring \
 	nmap poppler-data rtmpdump ffmpeg asciidoc sbcl docker aspell aspell-en ack \
-	gdb ripgrep hub wmctrl pwgen linux-docs ansible htop mariadb-clients tcpdump \
+	gdb ripgrep hub wmctrl pwgen linux-docs ansible htop tcpdump slack-desktop \
 	arch-install-scripts termite neovim pandoc jq sylpheed pkgstats python-pip \
 	texlive-langjapanese yarn texlive-latexextra ctags hdparm eog noto-fonts-cjk \
 	arc-gtk-theme networkmanager npm typescript chromium llvm llvm-libs lldb php \
@@ -71,8 +71,8 @@ install: ## Install arch linux packages using pacman
 	dnsmasq cscope lsof postgresql-libs pdfgrep gnu-netcat urxvt-perls cmatrix \
 	curl docker-compose parallel alsa-utils mlocate traceroute jhead whois ruby \
 	noto-fonts-emoji gpaste nethogs optipng jpegoptim elixir geckodriver ipcalc \
-	gauche screen slack-desktop tig mosh fzf tree httpie w3m neomutt highlight \
-	lynx elinks mediainfo cpio lhasa lzop p7zip unace irssi
+	gauche screen tig mosh fzf tree httpie w3m neomutt highlight mediainfo cpio \
+	lynx elinks lhasa lzop p7zip unace irssi
 	sudo pkgfile --update
 
 update: ## Update arch linux packages and save packages cache 3 generations
@@ -249,6 +249,7 @@ dockerinit: ## Docker initial setup
 	sudo systemctl start docker.service
 
 mariadbinit: # Mariadb initial setup
+	sudo pacman -S mariadb mariadb-clients
 	sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
 	sudo systemctl start mariadb.service
 	mysql_secure_installation
