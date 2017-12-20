@@ -79,6 +79,7 @@ update: ## Update arch linux packages and save packages cache 3 generations
 	yaourt -Syua; paccache -ruk0
 
 aur: ## Install arch linux AUR packages using yaourt
+	yaourt drone-cli
 	yaourt git-secrets
 	yaourt goobook-git
 	yaourt nkf

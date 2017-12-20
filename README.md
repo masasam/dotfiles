@@ -370,25 +370,19 @@ Install what enters with pacman
 	sudo pacman -S highlight lynx elinks mediainfo cpio lhasa lzop p7zip unace
 
 Install what you put in yaourt
-
-	yaourt chrome-gnome-shell-git
-	yaourt direnv
+	
+	yaourt drone-cli
 	yaourt git-secrets
 	yaourt global
 	yaourt goobook-git
 	yaourt ibus-mozc
-	yaourt kubernetes-bin
-	yaourt man-pages-ja
 	yaourt mozc
 	yaourt nkf
 	yaourt peek
 	yaourt profile-sync-daemon
-	yaourt quicklisp
 	yaourt screenkey
 	yaourt ttf-cica
 	yaourt ttf-myrica
-	yaourt ttf-ricty
-	yaourt yum
 
 ##### pip
 
