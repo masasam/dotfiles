@@ -250,6 +250,7 @@ mariadbinit: # Mariadb initial setup
 	sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
 	sudo systemctl start mariadb.service
 	mysql_secure_installation
+	mysql -u root -p < ${HOME}/Dropbox/mariadb/world.sql/data
 
 psdinit: ## Profile-Sync-Daemon initial setup
 	mkdir -p ${HOME}/.config/psd
