@@ -160,7 +160,6 @@ pipinstall: ## Install python packages
 	pip install --user rainbowstream
 	pip install --user haxor-news
 	pip install --user rtv
-	pip install --user kube-shell
 
 pipbackup: ## Backup python packages
 	mkdir -p ${PWD}/archlinux
