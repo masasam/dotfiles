@@ -278,14 +278,14 @@ kubernetes-cluster: ## Kubernetes cluster setup
 
 kubernetes-image2gcr: ## Upload docker image to Google Container Registry
 	GCP_PROJECT=$(gcloud config get-value project)
-	docker build -t us.gcr.io/$GCP_PROJECT/myapp:1.0 ~/src/github.com/masasam/myapp
-	gcloud docker -- push us.gcr.io/$GCP_PROJECT/myapp:1.0
+	docker build -t us.gcr.io/${GCP_PROJECT}/myapp:1.0 ~/src/github.com/masasam/myapp
+	gcloud docker -- push us.gcr.io/${GCP_PROJECT}/myapp:1.0
 	open https://console.cloud.google.com/gcr
 
 kubernetes-deploy: ## Deploy myapp to kubernetes cluster
 	GCP_PROJECT=$(gcloud config get-value project)
 	kubectl run myapp-deploy \
-	--image=us.gcr.io/$GCP_PROJECT/myapp:1.0 \
+	--image=us.gcr.io/${GCP_PROJECT}/myapp:1.0 \
 	--replicas=1 \
 	--port=3000 \
 	--limits=cpu=200m \
@@ -302,9 +302,9 @@ kubernetes-scale: ## kubernetes scale 10 pod
 
 kubernetes-rolling-update: ## Rolling update for kubernetes
 	GCP_PROJECT=$(gcloud config get-value project)
-	docker build -t us.gcr.io/$GCP_PROJECT/myapp:2.0 ~/src/github.com/masasam/myapp
-	gcloud docker -- push us.gcr.io/$GCP_PROJECT/myapp:2.0
-	kubectl set image deployment/myapp-deploy myapp-deploy=us.gcr.io/$GCP_PROJECT/myapp:2.0
+	docker build -t us.gcr.io/${GCP_PROJECT}/myapp:2.0 ~/src/github.com/masasam/myapp
+	gcloud docker -- push us.gcr.io/${GCP_PROJECT}/myapp:2.0
+	kubectl set image deployment/myapp-deploy myapp-deploy=us.gcr.io/${GCP_PROJECT}/myapp:2.0
 	watch kubectl get node
 
 kubernetes-rollout: ## Rollout version for kubernetes
