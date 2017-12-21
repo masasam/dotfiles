@@ -6,7 +6,3 @@
  shell-pop-window-size 30
  shell-pop-full-span t
  shell-pop-window-position "bottom")
-
-;; eshell
-(add-to-list 'eshell-command-aliases-list (list "ll" "ls -la"))
-(add-to-list 'eshell-command-aliases-list (list "la" "ls -A"))
