@@ -114,7 +114,7 @@
 
 ;; flyspell-correct
 (require 'flyspell-correct-ivy)
-(define-key git-commit-mode-map (kbd "C-M-;") 'flyspell-correct-previous-word-generic)
+(bind-key (kbd "C-M-;") 'flyspell-correct-previous-word-generic git-commit-mode-map)
 
 
 ;; smartparens
