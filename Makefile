@@ -86,7 +86,6 @@ aur: ## Install arch linux AUR packages using yaourt
 	yaourt peek
 	yaourt profile-sync-daemon
 	yaourt screenkey
-	yaourt ttf-cica
 
 mozc: ## Install ibus-mozc
 	test -L ${HOME}/.mozc || rm -rf ${HOME}/.mozc
@@ -94,6 +93,14 @@ mozc: ## Install ibus-mozc
 	yaourt mozc
 	yaourt ibus-mozc
 	ibus-daemon -drx
+
+ttf-cica: ## Install Cica font
+	cd ${HOME}/Dropbox/arch/Cica_v2.0.4/;\
+	sudo install -dm755 /usr/share/fonts/TTF;\
+	sudo install -m644 *.ttf /usr/share/fonts/TTF/;\
+	sudo install -d /usr/share/licenses/ttf-cica/;\
+	sudo install -Dm644 *.txt /usr/share/licenses/ttf-cica/;\
+	cd -
 
 emacsinit: ## Install emacs packages from MELPA using cask package manager
 	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python

@@ -383,7 +383,6 @@ Install what you put in yaourt
 	yaourt peek
 	yaourt profile-sync-daemon
 	yaourt screenkey
-	yaourt ttf-cica
 
 ##### pip
 
