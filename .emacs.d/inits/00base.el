@@ -13,8 +13,6 @@
 
 
 ;; font
-;;(add-to-list 'default-frame-alist '(font . "Ricty-15.5"))
-;;(add-to-list 'default-frame-alist '(font . "MyricaM-15.5"))
 (add-to-list 'default-frame-alist '(font . "Cica-15.5"))
 
 
