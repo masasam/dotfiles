@@ -42,8 +42,6 @@ initdropbox: ## Initial deploy dotfiles using dropbox
 	ln -vsf ${HOME}/Dropbox/mutt/.goobookrc   ${HOME}/.goobookrc
 	mkdir -p ${HOME}/.config
 	ln -vsf ${HOME}/Dropbox/zsh/hub   ${HOME}/.config/hub
-	mkdir -p ${HOME}/.docker
-	ln -vsf ${HOME}/Dropbox/docker/config.json   ${HOME}/.docker/config.json
 	test -L ${HOME}/.ssh || rm -rf ${HOME}/.ssh
 	ln -vsfn ${HOME}/Dropbox/ssh   ${HOME}/.ssh
 	test -L ${HOME}/.config/ranger || rm -rf ${HOME}/.config/ranger
@@ -239,11 +237,9 @@ neoviminit: ## Init neovim
 
 dockerinit: ## Docker initial setup
 	sudo usermod -aG docker ${USER}
+	mkdir -p ${HOME}/.docker
+	ln -vsf ${HOME}/Dropbox/docker/config.json   ${HOME}/.docker/config.json
 	sudo systemctl enable docker.service
-	sudo systemctl start docker.service
-	sudo systemctl stop docker.service
-	sudo systemctl disable docker.service
-	sudo ln -vsf ${PWD}/etc/docker/daemon.json   /etc/docker/daemon.json
 	sudo systemctl start docker.service
 
 mariadbinit: # Mariadb initial setup
