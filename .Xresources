@@ -24,11 +24,10 @@ URxvt.internalBorder:       3
 URxvt.lineSpace:            0
 
 !! Font
-URxvt.font:              xft:Ricty:size=14:antialiase=true
-URxvt.boldFont:          xft:Ricty:bold:size=14:antialiase=true
-URxvt.italicFont:        xft:Ricty:italic:size=14:antialiase=true
-URxvt.bolditalicFont:    xft:Ricty:bold:italic:size=14:antialiase=true
-! URxvt*letterSpace: -1
+URxvt.font:              xft:Cica:pixelsize=17.7:antialiase=true
+URxvt.boldFont:          xft:Cica:bold:pixelsize=17.7:antialiase=true
+URxvt.italicFont:        xft:Cica:italic:pixelsize=17.7:antialiase=true
+URxvt.bolditalicFont:    xft:Cica:bold:italic:pixelsize=17.7:antialiase=true
 
 !! Color Scheme
 URxvt.color0:               #073642
