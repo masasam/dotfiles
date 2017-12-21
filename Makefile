@@ -80,6 +80,8 @@ aur: ## Install arch linux AUR packages using yaourt
 	yaourt drone-cli
 	yaourt git-secrets
 	yaourt goobook-git
+	yaourt kubeadm-bin
+	yaourt kubelet-bin
 	yaourt nkf
 	yaourt peek
 	yaourt profile-sync-daemon

@@ -376,6 +376,8 @@ Install what you put in yaourt
 	yaourt global
 	yaourt goobook-git
 	yaourt ibus-mozc
+	yaourt kubeadm-bin
+	yaourt kubelet-bin
 	yaourt mozc
 	yaourt nkf
 	yaourt peek
