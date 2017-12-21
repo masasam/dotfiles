@@ -311,6 +311,25 @@ kubernetes-delete: ## Delete kubernetes cluster
 	kubectl delete deployment,service,pod --all
 	gcloud container clusters delete my-cluster
 
+kubernetes-getyaml: ## Get yaml from kubernetes server
+	kubectl get deployment/myapp-deploy -o yaml --export > deploy.yaml
+	kubectl get service/myapp-deploy -o yaml --export > service.yaml
+	cat service.yaml | sed -e "s/clusterIP/#clusterIP/" > service.yaml
+
+kubernetes-deploy-yaml: ## Deploy from yaml
+	kubectl create -f deploy.yaml
+	kubectl create -f service.yaml
+	kubectl get services
+
+kubernetes-rolling-update-yaml: ## Rolling-update from yaml
+	kubectl apply -f deploy.yaml
+	kubectl get pod
+
+kubernetes-delete-yaml: ## Delete kubernetes cluster from yaml
+	kubectl delete -f deploy.yaml
+	kubectl delete -f service.yaml
+	gcloud container clusters delete myapp-cluster
+
 terminal-slack: ## Install and init terminal-slack
 	git clone https://github.com/evanyeung/terminal-slack.git
 	cd ${HOME}/src/github.com/evanyeung/terminal-slack
