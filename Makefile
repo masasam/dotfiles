@@ -336,7 +336,7 @@ kubernetes-portforward-mariadb: ## Portforward for mariadb
 	kubectl port-forward mysql-podname 3306:3306
 
 kubernetes-mysql-dump: ## Kubernetes-portforward-mariadb next to command
-	mysqldump -u root -p -h 127.0.0.1 dbname > mysqldump
+	mysqldump -u root -p -h 127.0.0.1 dbname > mariadbdump
 
 kubernetes-portforward-postgres: ## Portforward for postgres
 	kubectl port-forward postgres-potname 5432:5432
