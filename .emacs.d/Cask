@@ -3,7 +3,6 @@
 (source org)
 
 (depends-on "aggressive-indent")
-(depends-on "alchemist")
 (depends-on "ansible")
 (depends-on "ansible-doc")
 (depends-on "auto-compile")
@@ -32,7 +31,6 @@
 (depends-on "editorconfig")
 (depends-on "eldoc-extension")
 (depends-on "elisp-slime-nav")
-(depends-on "elixir-mode")
 (depends-on "elpy")
 (depends-on "elscreen")
 (depends-on "enh-ruby-mode")
@@ -40,7 +38,6 @@
 (depends-on "expand-region")
 (depends-on "f")
 (depends-on "flycheck")
-(depends-on "flycheck-elixir")
 (depends-on "flycheck-irony")
 (depends-on "flycheck-package")
 (depends-on "flycheck-rust")
