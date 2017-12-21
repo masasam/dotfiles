@@ -87,7 +87,6 @@ aur: ## Install arch linux AUR packages using yaourt
 	yaourt profile-sync-daemon
 	yaourt screenkey
 	yaourt ttf-cica
-	yaourt ttf-myrica
 
 mozc: ## Install ibus-mozc
 	test -L ${HOME}/.mozc || rm -rf ${HOME}/.mozc
