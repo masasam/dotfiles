@@ -5,7 +5,10 @@ image/jpeg; eog %s
 image/png; eog %s
 image/gif; eog %s
 application/pdf; evince %s
+application/x-pdf; evince %s
 application/zip; file-roller %s
+application/gzip; file-roller %s
+application/x-rar-compressed; file-roller %s
 application/x-msexcel; xdg-open %s
 application/ms-exc; xdg-open %s
 application/excel; xdg-open %s
