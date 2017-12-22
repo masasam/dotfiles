@@ -4,7 +4,6 @@ init: ## Initial deploy dotfiles
 	ln -vsf ${PWD}/.zshrc   ${HOME}/.zshrc
 	ln -vsf ${PWD}/.vimrc   ${HOME}/.vimrc
 	ln -vsf ${PWD}/.bashrc   ${HOME}/.bashrc
-	ln -vsf ${PWD}/.gitconfig   ${HOME}/.gitconfig
 	ln -vsf ${PWD}/.gitignore   ${HOME}/.gitignore
 	ln -vsf ${PWD}/.npmrc   ${HOME}/.npmrc
 	ln -vsf ${PWD}/.myclirc   ${HOME}/.myclirc
@@ -33,6 +32,7 @@ initroot: ## Initial deploy need root authority
 	sudo ln -vsf ${PWD}/etc/libreoffice/sofficerc /etc/libreoffice/sofficerc
 
 initdropbox: ## Initial deploy dotfiles using dropbox
+	ln -vsf ${HOME}/Dropbox/zsh/.gitconfig   ${HOME}/.gitconfig
 	ln -vsf ${PWD}/.muttrc   ${HOME}/.muttrc
 	mkdir -p ${HOME}/.mutt
 	ln -vsf ${PWD}/.mutt/mailcap   ${HOME}/.mutt/mailcap
