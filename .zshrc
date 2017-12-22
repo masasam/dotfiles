@@ -221,6 +221,8 @@ alias archupdate='yaourt -Syua; paccache -ruk0'
 alias archbackup='cd ${HOME}/src/github.com/masasam/dotfiles; make backup; cd -'
 alias soundrecord='arecord -t wav -f dat -q | lame -b 128 -m s - out.mp3'
 alias rust='cargo-script'
+alias fontlist='fc-list | cut -d: -f1 | less'
+alias fontlistja='fc-list :lang=ja | cut -d: -f1 | less'
 
 
 # PATH
