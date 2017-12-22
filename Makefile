@@ -33,13 +33,6 @@ initroot: ## Initial deploy need root authority
 
 initdropbox: ## Initial deploy dotfiles using dropbox
 	ln -vsf ${HOME}/Dropbox/zsh/.gitconfig   ${HOME}/.gitconfig
-	ln -vsf ${PWD}/.muttrc   ${HOME}/.muttrc
-	mkdir -p ${HOME}/.mutt
-	ln -vsf ${PWD}/.mutt/mailcap   ${HOME}/.mutt/mailcap
-	ln -vsf ${PWD}/.mutt/certificates   ${HOME}/.mutt/certificates
-	ln -vsf ${HOME}/Dropbox/mutt/aliases   ${HOME}/.mutt/aliases
-	ln -vsf ${HOME}/Dropbox/mutt/signature   ${HOME}/.mutt/signature
-	ln -vsf ${HOME}/Dropbox/mutt/.goobookrc   ${HOME}/.goobookrc
 	mkdir -p ${HOME}/.config
 	ln -vsf ${HOME}/Dropbox/zsh/hub   ${HOME}/.config/hub
 	test -L ${HOME}/.ssh || rm -rf ${HOME}/.ssh
@@ -79,13 +72,23 @@ update: ## Update arch linux packages and save packages cache 3 generations
 aur: ## Install arch linux AUR packages using yaourt
 	yaourt drone-cli
 	yaourt git-secrets
-	yaourt goobook-git
 	yaourt kubeadm-bin
 	yaourt kubelet-bin
 	yaourt nkf
 	yaourt peek
 	yaourt profile-sync-daemon
 	yaourt screenkey
+
+neomutt: ## Init neomutt mail client
+	mkdir -p ${HOME}/.mutt
+	ln -vsf ${PWD}/.muttrc   ${HOME}/.muttrc
+	ln -vsf ${PWD}/.mutt/mailcap   ${HOME}/.mutt/mailcap
+	ln -vsf ${PWD}/.mutt/certificates   ${HOME}/.mutt/certificates
+	ln -vsf ${HOME}/Dropbox/mutt/aliases   ${HOME}/.mutt/aliases
+	ln -vsf ${HOME}/Dropbox/mutt/signature   ${HOME}/.mutt/signature
+	ln -vsf ${HOME}/Dropbox/mutt/.goobookrc   ${HOME}/.goobookrc
+	yaourt goobook-git
+	goobook authenticate
 
 mozc: ## Install ibus-mozc
 	test -L ${HOME}/.mozc || rm -rf ${HOME}/.mozc
@@ -102,7 +105,7 @@ ttf-cica: ## Install Cica font
 	sudo install -Dm644 *.txt /usr/share/licenses/ttf-cica/;\
 	cd -
 
-emacsinit: ## Install emacs packages from MELPA using cask package manager
+melpa: ## Install emacs packages from MELPA using cask package manager
 	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
 	test -L ${HOME}/.emacs.d || rm -rf ${HOME}/.emacs.d
 	ln -vsfn ${PWD}/.emacs.d   ${HOME}/.emacs.d
@@ -237,33 +240,33 @@ recover: ## Recover arch linux packages from backup
 	sudo pacman -S --needed `cat ${PWD}/archlinux/pacmanlist`
 	yaourt -S --needed $(DOY) `cat ${PWD}/archlinux/yaourtlist`
 
-neoviminit: ## Init neovim
+neovim: ## Init neovim
 	mkdir -p ${HOME}/.config/nvim
 	ln -vsf ${PWD}/.config/nvim/init.vim   ${HOME}/.config/nvim/init.vim
 	ln -vsf ${PWD}/.config/nvim/installer.sh   ${HOME}/.config/nvim/installer.sh
 	bash ${HOME}/.config/nvim/installer.sh ${HOME}/.config/nvim
 
-dockerinit: ## Docker initial setup
+docker: ## Docker initial setup
 	sudo usermod -aG docker ${USER}
 	mkdir -p ${HOME}/.docker
 	ln -vsf ${HOME}/Dropbox/docker/config.json   ${HOME}/.docker/config.json
 	sudo systemctl enable docker.service
 	sudo systemctl start docker.service
 
-mariadbinit: # Mariadb initial setup
+mariadb: # Mariadb initial setup
 	sudo pacman -S mariadb mariadb-clients
 	sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
 	sudo systemctl start mariadb.service
 	mysql_secure_installation
 	mysql -u root -p < ${HOME}/Dropbox/mariadb/world.sql/data
 
-psdinit: ## Profile-Sync-Daemon initial setup
+psd: ## Profile-Sync-Daemon initial setup
 	mkdir -p ${HOME}/.config/psd
 	ln -vsf ${PWD}/.config/psd/psd.conf   ${HOME}/.config/psd/psd.conf
 	echo "${USER} ALL=(ALL) NOPASSWD: /usr/bin/psd-overlay-helper" | sudo EDITOR='tee -a' visudo
 	systemctl --user enable psd.service
 
-powertopinit: ## Powertop initial setup (Warning take a long time)
+powertop: ## Powertop initial setup (Warning take a long time)
 	sudo powertop --calibrate
 	sudo systemctl enable powertop
 
@@ -368,8 +371,8 @@ test: ## Test this Makefile using docker
 	docker exec makefiletest sh -c "cd ${PWD}; make initroot"
 	@echo "========== make initdropbox =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make initdropbox"
-	@echo "========== make emacsinit =========="
-	docker exec makefiletest sh -c "cd ${PWD}; make emacsinit"
+	@echo "========== make neomutt =========="
+	docker exec makefiletest sh -c "cd ${PWD}; make neomutt"
 	@echo "========== make melpa =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make melpa"
 	@echo "========== make aur =========="
@@ -396,8 +399,8 @@ testsimple: ## Test this Makefile using docker without Dropbox
 	docker exec makefiletest sh -c "cd ${PWD}; make init"
 	@echo "========== make initroot =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make initroot"
-	@echo "========== make emacsinit =========="
-	docker exec makefiletest sh -c "cd ${PWD}; make emacsinit"
+	@echo "========== make neomutt =========="
+	docker exec makefiletest sh -c "cd ${PWD}; make neomutt"
 	@echo "========== make melpa =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make melpa"
 	@echo "========== make aur =========="
@@ -413,7 +416,7 @@ testsimple: ## Test this Makefile using docker without Dropbox
 	@echo "========== make rustinstall =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make rustinstall"
 
-allinstall: install init initroot initdropbox aur mozc emacsinit melpa pipinstall goinstall rubygems dockerinit mariadbinit psdinit rustinstall gnuglobal nodeinstall neoviminit
+allinstall: install init initroot initdropbox aur mozc melpa pipinstall goinstall neomutt rubygems docker mariadb psd rustinstall gnuglobal nodeinstall neovim
 
 allupdate: update melpaupdate pipupdate rustupdate goinstall
 
