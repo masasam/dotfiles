@@ -1,1 +1,16 @@
 text/html; w3m -I %{charset} -T text/html; copiousoutput;
+image/jpg; eog %s
+image/jpeg; eog %s
+image/png; eog %s
+image/gif; eog %s
+application/pdf; evince %s
+application/zip; file-roller %s
+application/x-msexcel; xdg-open %s
+application/ms-exc; xdg-open %s
+application/excel; xdg-open %s
+application/msexcel; xdg-open %s
+application/vnd.ms-exc; xdg-open %s
+application/vnd.ms-excel; xdg-open %s
+application/msword; xdg-open %s
+application/vnd.openxmlformats-officedocument.wordprocessingml.document; xdg-open %s
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet; xdg-open %s

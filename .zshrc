@@ -206,7 +206,6 @@ alias e='emacsclient'
 alias remacs='emacs -q -l ~/Dropbox/emacs/default.el'
 alias open='xdg-open'
 alias mysql="mysql --pager='less -S -n -i -F -X'"
-alias trackpointspeed='xinput --set-prop 10 "Device Accel Constant Deceleration"'
 alias caskupdate='rm -rf ${HOME}/Dropbox/emacs/cask/`ls -rt ${HOME}/Dropbox/emacs/cask | head -n 1`; tar cfz ${HOME}/Dropbox/emacs/cask/`date '+%Y%m%d%H%M%S'`.tar.gz -C ${HOME}/.emacs.d .cask; cd ${HOME}/.emacs.d/; cask upgrade; cask update; cd -'
 alias caskinstall='cd ${HOME}/.emacs.d/; cask upgrade; cask install; cd -'
 alias caskcleanup='rm -rf ${HOME}/.emacs.d/.cask; caskinstall'
