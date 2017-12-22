@@ -329,14 +329,17 @@ bindkey '^xr' ghq-remote-fzf
 
 
 function github-issue-fzf() {
-    hub issue | fzf-tmux -d --reverse --prompt="github issue > " | sed -e "s/\].*//" | xargs -Inum git checkout -b feature/num
+    hub issue | fzf-tmux -d --reverse --prompt="github issue > " | \
+	sed -e "s/\].*//" | xargs -Inum git checkout -b feature/num
 }
 zle -N github-issue-fzf
 bindkey '^x^i' github-issue-fzf
 
 
 function git-branch-fzf() {
-  local selected_branch=$(git for-each-ref --format='%(refname)' --sort=-committerdate refs/heads | perl -pne 's{^refs/heads/}{}' | fzf-tmux -d --reverse --query "$LBUFFER" --prompt="git branch > ")
+    local selected_branch=$(git for-each-ref --format='%(refname)' --sort=-committerdate refs/heads | \
+				perl -pne 's{^refs/heads/}{}' | \
+				fzf-tmux -d --reverse --query "$LBUFFER" --prompt="git branch > ")
   if [ -n "$selected_branch" ]; then
     BUFFER="git checkout ${selected_branch}"
     zle accept-line
@@ -394,7 +397,8 @@ bindkey '^xB' keybind-fzf
 
 function ansible-fzf() {
     local repositoryname='ansible-setup-server'
-    ghq root && cat ~/.config/hub | grep user && cd $(ghq root)/github.com/$(cat ~/.config/hub | grep user | awk '{print $3}')/${repositoryname}
+    ghq root && cat ~/.config/hub | grep user && \
+	cd $(ghq root)/github.com/$(cat ~/.config/hub | grep user | awk '{print $3}')/${repositoryname}
     if [ $? = 0 ]; then
 	local selected_yml=$(ls | grep .yml$ | fzf-tmux -d --reverse --prompt="Ansible > ")
 	if [ -n "$selected_yml" ]; then
@@ -419,7 +423,7 @@ function weather-fzf() {
 
 function gitlog-fzf() {
   git log --graph --color=always \
-      --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" |
+      --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" | \
   fzf-tmux -d --prompt="git log > " --ansi --no-sort --reverse --tiebreak=index --bind=ctrl-s:toggle-sort \
       --bind "ctrl-m:execute:
                 (grep -o '[a-f0-9]\{7\}' | head -1 |
@@ -439,7 +443,9 @@ function gitroot() {
 
 function github-new() {
     if [ $# = 1 ]; then
-	ghq root && cat ~/.config/hub | grep user && cd $(ghq root)/github.com/$(cat ~/.config/hub | grep user | awk '{print $3}') && mkdir $1
+	ghq root && cat ~/.config/hub | grep user \
+	    && cd $(ghq root)/github.com/$(cat ~/.config/hub \
+	    | grep user | awk '{print $3}') && mkdir $1
 	if [ $? = 0 ]; then
 	    cd $1
 	    git init .
@@ -543,11 +549,18 @@ function gitignore() {
 }
 
 
+function github-stars() {
+    if [ $# = 2 ]; then
+	open "https://github.com/search?q=language%3A$1+stars%3A%3E%3D$2&type=Repositories&ref=searchresults"
+    else
+	echo 'usage: githab-stars language stars'
+    fi
+}
+
+
 # zsh-syntax-highlighting(pacman -S zsh-syntax-highlighting)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # zsh-completions for google-cloud-sdk(yaourt google-cloud-sdk)
-#source /opt/google-cloud-sdk/completion.zsh.inc
+source /opt/google-cloud-sdk/completion.zsh.inc
 # zsh-completions for aws
 source ~/.local/bin/aws_zsh_completer.sh
-# direnv
-# eval "$(direnv hook zsh)"
