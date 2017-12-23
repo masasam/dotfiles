@@ -32,7 +32,6 @@
 (depends-on "eldoc-extension")
 (depends-on "elisp-slime-nav")
 (depends-on "elpy")
-(depends-on "elscreen")
 (depends-on "enh-ruby-mode")
 (depends-on "exec-path-from-shell")
 (depends-on "expand-region")
