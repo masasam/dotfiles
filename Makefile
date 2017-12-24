@@ -203,6 +203,7 @@ nodeinstall: ## Install node packages
 	yarn global add eslint
 	yarn global add babel-eslint
 	yarn global add eslint-plugin-react
+	yarn global add vue-language-server
 
 rubygems: ## Install rubygems packages
 	mkdir -p ${HOME}/.gem/
