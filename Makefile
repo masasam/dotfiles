@@ -72,8 +72,6 @@ update: ## Update arch linux packages and save packages cache 3 generations
 aur: ## Install arch linux AUR packages using yaourt
 	yaourt drone-cli
 	yaourt git-secrets
-	yaourt kubeadm-bin
-	yaourt kubelet-bin
 	yaourt nkf
 	yaourt peek
 	yaourt profile-sync-daemon
@@ -276,6 +274,8 @@ gnupg: ## Import gnupg secret-key
 
 kubernetes: ## Init kubernetes 
 	yaourt google-cloud-sdk
+	yaourt kubeadm-bin
+	yaourt kubelet-bin
 	sudo gcloud components update kubectl
 	gcloud init
 
@@ -417,7 +417,7 @@ testsimple: ## Test this Makefile using docker without Dropbox
 	@echo "========== make rustinstall =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make rustinstall"
 
-allinstall: install init initroot initdropbox aur mozc melpa pipinstall goinstall neomutt rubygems docker mariadb psd rustinstall gnuglobal nodeinstall neovim
+allinstall: install init initroot initdropbox aur mozc ttf-cica melpa pipinstall goinstall neomutt rubygems docker mariadb psd rustinstall gnuglobal nodeinstall neovim
 
 allupdate: update melpaupdate pipupdate rustupdate goinstall
 
