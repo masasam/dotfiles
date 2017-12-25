@@ -74,6 +74,7 @@
 (depends-on "package-lint")
 (depends-on "pangu-spacing")
 (depends-on "paredit")
+(depends-on "password-generator")
 (depends-on "pcre2el")
 (depends-on "php-mode")
 (depends-on "pkgbuild-mode")
