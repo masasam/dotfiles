@@ -438,6 +438,7 @@ Install what you put in yaourt
 	yarn global add babel-eslint
 	yarn global add eslint-plugin-react
 	yarn global add vue-language-server
+	yarn global add vue-cli
 	cargo install cargo-script
 	gem install --user-install bundle
 	gem install --user-install jekyll
