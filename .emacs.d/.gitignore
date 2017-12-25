@@ -1,5 +1,6 @@
 /*.elc
 /.cask
+/custom.el
 /.edbi-ds-history
 /abbrev_defs
 /ac-comphist.dat
