@@ -8,6 +8,6 @@
 (setq easy-jekyll-bloglist '(((easy-jekyll-basedir . "~/src/github.com/masasam/jekyll1/")
 			      (easy-jekyll-url . "http://example1.com")
 			      (easy-jekyll-sshdomain . "blogdomain")
-			      (easy-jekyll-root . "/home/jekyll"))
+			      (easy-jekyll-root . "/home/jekyll2"))
 			     ((easy-jekyll-basedir . "~/src/github.com/masasam/jekyll2/")
 			      (easy-jekyll-url . "http://example2.net"))))
