@@ -88,6 +88,10 @@ neomutt: ## Init neomutt mail client
 	yaourt goobook-git
 	goobook authenticate
 
+aws: ## Init aws cli
+	test -L ${HOME}/.aws || rm -rf ${HOME}/.aws
+	ln -vsfn ${HOME}/Dropbox/zsh/.aws   ${HOME}/.aws
+
 mozc: ## Install ibus-mozc
 	test -L ${HOME}/.mozc || rm -rf ${HOME}/.mozc
 	ln -vsfn ${HOME}/Dropbox/mozc/.mozc   ${HOME}/.mozc
