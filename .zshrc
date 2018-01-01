@@ -321,11 +321,17 @@ bindkey '^x^l' ghq-fzf
 bindkey '^xl' ghq-fzf
 
 
-function ghq-remote-fzf() {
-    hub browse $(ghq list | fzf-tmux -d --reverse --prompt="ghq remote > " | cut -d "/" -f 2,3)
+function ghq-delete () {
+  ghq list --full-path | fzf-tmux -d --reverse --prompt="github-delete > " | xargs -r rm -r
 }
-zle -N ghq-remote-fzf
-bindkey '^xr' ghq-remote-fzf
+zle -N ghq-delete
+bindkey '^xD' ghq-delete
+
+
+function ghs-import () {
+  [ "$#" -eq 0 ] && echo "Usage : ghs-import QUERY" && return 1
+  ghs "$@" | fzf-tmux -d --reverse | awk '{print $1}' | ghq import
+}
 
 
 function github-issue-fzf() {
