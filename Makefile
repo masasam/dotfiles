@@ -32,6 +32,7 @@ initroot: ## Initial deploy need root authority
 	sudo ln -vsf ${PWD}/etc/libreoffice/sofficerc /etc/libreoffice/sofficerc
 
 initdropbox: ## Initial deploy dotfiles using dropbox
+	sudo ln -vsf ${HOME}/Dropbox/arch/hosts   /etc/hosts
 	ln -vsf ${HOME}/Dropbox/zsh/.gitconfig   ${HOME}/.gitconfig
 	mkdir -p ${HOME}/.config
 	ln -vsf ${HOME}/Dropbox/zsh/hub   ${HOME}/.config/hub
