@@ -109,9 +109,6 @@
 (setq set-mark-command-repeat-pop t)
 
 
-;; Read elisp function source file
-(bind-key "C-x F" 'find-function)
-(bind-key "C-x V" 'find-variable)
 ;; emacs c source dir:
 (setq find-function-C-source-directory "~/Dropbox/emacs/emacs-25.3/src")
 
