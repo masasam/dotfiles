@@ -64,7 +64,7 @@ install: ## Install arch linux packages using pacman
 	curl docker-compose parallel alsa-utils mlocate traceroute jhead whois ruby \
 	noto-fonts-emoji gpaste nethogs optipng jpegoptim elixir geckodriver ipcalc \
 	gauche screen tig mosh fzf tree httpie w3m neomutt highlight mediainfo cpio \
-	lynx elinks lhasa lzop p7zip unace irssi
+	lynx elinks lhasa lzop p7zip unace irssi iperf
 	sudo pkgfile --update
 
 update: ## Update arch linux packages and save packages cache 3 generations
