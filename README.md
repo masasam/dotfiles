@@ -447,6 +447,7 @@ Install what you put in yaourt
 	gem install --user-install jekyll
 	gem install --user-install pry
 	gem install --user-install github-markup
+	gem install --user-install language_server
 
 #### cask install
 
