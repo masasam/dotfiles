@@ -217,7 +217,7 @@ rubygems: ## Install rubygems packages
 	mkdir -p ${HOME}/.gem/
 	gem install --user-install bundle
 	gem install --user-install jekyll
-	gem install --user-install pry
+	gem install --user-install pry pry-doc
 	gem install --user-install github-markup
 	gem install --user-install language_server
 
