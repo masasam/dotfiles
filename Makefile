@@ -211,6 +211,7 @@ nodeinstall: ## Install node packages
 	yarn global add vue-language-server
 	yarn global add vue-cli
 	yarn global add create-react-app
+	yarn global add prettier
 
 rubygems: ## Install rubygems packages
 	mkdir -p ${HOME}/.gem/
