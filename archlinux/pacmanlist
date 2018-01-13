@@ -12,7 +12,6 @@ automake
 baobab
 bash
 bash-completion
-bashdb
 binutils
 bison
 bzip2
@@ -83,6 +82,7 @@ hugo
 inetutils
 inkscape
 ipcalc
+iperf
 iproute2
 iputils
 irssi

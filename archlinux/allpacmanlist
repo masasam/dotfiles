@@ -11,6 +11,7 @@ arc-gtk-theme
 arch-install-scripts
 archlinux-keyring
 archlinux-wallpaper
+argon2
 asciidoc
 aspell
 aspell-en
@@ -27,7 +28,6 @@ babl
 baobab
 bash
 bash-completion
-bashdb
 bc
 binutils
 bison
@@ -353,6 +353,7 @@ inkscape
 inputproto
 intltool
 ipcalc
+iperf
 iproute2
 iptables
 iputils
