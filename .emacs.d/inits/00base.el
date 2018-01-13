@@ -163,15 +163,5 @@
 (advice-add 'Info-find-node :around 'Info-find-node--info-ja)
 
 
-;; If the region is active, kill region
-;; If the region is inactive, delete the previous word
-(defun kill-region-or-backward-kill-word ()
-  (interactive)
-  (if (region-active-p)
-      (clipboard-kill-region (point) (mark))
-    (backward-kill-word 1)))
-(bind-key "C-w" 'kill-region-or-backward-kill-word)
-
-
 ;; Mutt support.
 (setq auto-mode-alist (append '(("/tmp/mutt.*" . mail-mode)) auto-mode-alist))
