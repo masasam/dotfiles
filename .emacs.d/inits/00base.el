@@ -165,3 +165,13 @@
 
 ;; Mutt support.
 (setq auto-mode-alist (append '(("/tmp/mutt.*" . mail-mode)) auto-mode-alist))
+
+
+;; Color when emacs is not focused
+(defun my-out-focused-mode-line()
+  (set-face-background 'mode-line "MediumPurple4"))
+;; Color when emacs is focused
+(defun my-in-focused-mode-line()
+  (set-face-background 'mode-line "#1c1f26"))
+(add-hook 'focus-out-hook 'my-out-focused-mode-line)
+(add-hook 'focus-in-hook 'my-in-focused-mode-line)
