@@ -443,6 +443,7 @@ Install what you put in yaourt
 	yarn global add vue-cli
 	yarn global add create-react-app
 	yarn global add prettier
+	yarn global add firebase-tools
 	cargo install cargo-script
 	gem install --user-install bundle
 	gem install --user-install jekyll
