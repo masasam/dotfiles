@@ -89,6 +89,7 @@
 (depends-on "s")
 (depends-on "slime")
 (depends-on "slime-company")
+(depends-on "slim-mode")
 (depends-on "smartparens")
 (depends-on "smartrep")
 (depends-on "smex")
