@@ -84,11 +84,11 @@
 
 
 ;; ggtags
-(add-hook 'php-mode-hook 'ggtag-setting)
-(add-hook 'enh-ruby-mode-hook 'ggtag-setting)
-(add-hook 'c-mode-common-hook 'ggtag-setting)
-(add-hook 'js2-mode-hook 'ggtag-setting)
-(add-hook 'js2-jsx-mode-hook 'ggtag-setting)
+;; (add-hook 'php-mode-hook 'ggtag-setting)
+;; ;;(add-hook 'enh-ruby-mode-hook 'ggtag-setting)
+;; (add-hook 'c-mode-common-hook 'ggtag-setting)
+;; (add-hook 'js2-mode-hook 'ggtag-setting)
+;; (add-hook 'js2-jsx-mode-hook 'ggtag-setting)
 (defun ggtag-setting ()
   (ggtags-mode 1))
 
