@@ -579,6 +579,17 @@ function terminal-size() {
 }
 
 
+function gtagsgem() {
+    for i in `bundle show --paths`
+    do
+	pushd $i >/dev/null
+	echo "Creating tags for `basename $i`"
+	gtags --gtagslabel=pygments
+	popd >/dev/null
+    done
+} 
+
+
 # zsh-syntax-highlighting(pacman -S zsh-syntax-highlighting)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # zsh-completions for google-cloud-sdk(yaourt google-cloud-sdk)
