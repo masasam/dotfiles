@@ -221,6 +221,7 @@ rubygems: ## Install rubygems packages
 	gem install --user-install pry pry-doc
 	gem install --user-install github-markup
 	gem install --user-install language_server
+	gem install --user-install rubocop
 
 rustinstall: ## Install rust and rust packages
 	mkdir -p ${HOME}/.cargo

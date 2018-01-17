@@ -450,6 +450,7 @@ Install what you put in yaourt
 	gem install --user-install pry pry-doc
 	gem install --user-install github-markup
 	gem install --user-install language_server
+	gem install --user-install rubocop
 
 #### cask install
 
