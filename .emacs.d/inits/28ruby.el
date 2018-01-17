@@ -10,4 +10,5 @@
 (eval-after-load 'company
   '(push 'company-robe company-backends))
 
-(setq inf-ruby-default-implementation "pry")
+;;(setq inf-ruby-default-implementation "pry")
+
