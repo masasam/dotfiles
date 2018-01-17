@@ -89,6 +89,7 @@
 (depends-on "ruby-electric")
 (depends-on "rust-mode")
 (depends-on "s")
+(depends-on "scss-mode")
 (depends-on "slime")
 (depends-on "slime-company")
 (depends-on "slim-mode")
