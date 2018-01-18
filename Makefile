@@ -374,6 +374,9 @@ terminal-slack: ## Install and init terminal-slack
 	sudo ln -vsf ${HOME}/Dropbox/slack/slack-emacs   /usr/local/bin/slack-emacs
 	sudo chmod a+x   /usr/local/bin/slack-emacs
 
+zoom: ## Install zoom for web conference
+	sudo pacman -U ${HOME}/Dropbox/arch/zoom_x86_64.pkg.tar.xz
+
 test: ## Test this Makefile using docker
 	docker build -t dotfiles ${PWD}
 	docker run -v /home/${USER}/Dropbox:${HOME}/Dropbox:cached --name makefiletest -d dotfiles
