@@ -229,8 +229,8 @@ alias rg='bundle exec rails g'
 alias rd='bundle exec rails d'
 alias rr='bundle exec rails r'
 alias rk='bundle exec rake'
-alias gitmaster='git branch -u origin/master master'
-alias gitdevelop='git branch -u origin/develop master'
+alias gitmaster='git branch --set-upstream-to origin/master master'
+alias gitdevelop='git branch --set-upstream-to origin/develop master'
 
 
 # PATH
