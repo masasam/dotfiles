@@ -451,6 +451,7 @@ Install what you put in yaourt
 	gem install --user-install github-markup
 	gem install --user-install language_server
 	gem install --user-install rubocop
+	gem install --user-install rails -v 5.1.4
 
 #### cask install
 
