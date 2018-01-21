@@ -343,7 +343,6 @@ Install what enters with pacman
     sudo pacman -S cups-pdf
     sudo pacman -S eog
     sudo pacman -S mcomix
-    sudo pacman -S libreoffice-fresh-ja
     sudo pacman -S go pkgfile rsync elixir
 	sudo pacman -S nodejs whois nmap poppler-data
 	sudo pacman -S rtmpdump ffmpeg asciidoc sbcl

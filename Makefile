@@ -28,8 +28,6 @@ initroot: ## Initial deploy need root authority
 	sudo ln -vsf ${PWD}/etc/systemd/system/powertop.service   /etc/systemd/system/powertop.service
 	sudo mkdir -p /etc/NetworkManager
 	sudo ln -vsf ${PWD}/etc/NetworkManager/NetworkManager.conf /etc/NetworkManager/NetworkManager.conf
-	sudo mkdir -p /etc/libreoffice
-	sudo ln -vsf ${PWD}/etc/libreoffice/sofficerc /etc/libreoffice/sofficerc
 
 initdropbox: ## Initial deploy dotfiles using dropbox
 	sudo ln -vsf ${HOME}/Dropbox/arch/hosts   /etc/hosts
@@ -51,7 +49,7 @@ install: ## Install arch linux packages using pacman
 	sudo pacman -S go zsh git vim dropbox nautilus-dropbox tmux keychain bashdb \
 	zsh-completions gnome-tweak-tool xsel emacs evince unrar seahorse hugo mpv \
 	archlinux-wallpaper inkscape file-roller xclip atool debootstrap valgrind \
-	the_silver_searcher powertop cifs-utils gvfs gvfs-smb libreoffice-fresh-ja \
+	the_silver_searcher powertop cifs-utils gvfs gvfs-smb \
 	gnome-keyring cups-pdf mcomix openssh firefox firefox-i18n-ja gimp strace \
 	otf-ipafont pkgfile baobab dconf-editor rsync nodejs debian-archive-keyring \
 	nmap poppler-data rtmpdump ffmpeg asciidoc sbcl docker aspell aspell-en ack \
