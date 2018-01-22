@@ -16,6 +16,7 @@
 (bind-key "C-x U" 'counsel-unicode-char)
 (bind-key "C-c g" 'counsel-git-grep)
 (bind-key "C-c j" 'counsel-git)
+(bind-key "C-c C-j" 'counsel-git)
 (bind-key "C-c k" 'counsel-ag)
 (bind-key "C-c l" 'counsel-locate)
 (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
