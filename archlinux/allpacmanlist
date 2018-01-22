@@ -409,7 +409,6 @@ libcdio-paranoia
 libcdr
 libcroco
 libcups
-libcurl-compat
 libdaemon
 libdatrie
 libdc1394
@@ -821,7 +820,6 @@ shadow
 shared-color-targets
 shared-mime-info
 shellcheck
-slack-desktop
 slang
 slib
 smbclient

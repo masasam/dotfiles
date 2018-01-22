@@ -165,7 +165,6 @@ seahorse
 sed
 shadow
 shellcheck
-slack-desktop
 strace
 sudo
 sylpheed
