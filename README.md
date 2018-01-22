@@ -319,54 +319,32 @@ You can make install from here
 
 Install what enters with pacman
 
-    sudo pacman -S firefox  firefox-i18n-ja
-    sudo pacman -S otf-ipafont
-    sudo pacman -S openssh
-    sudo pacman -S sylpheed
-    sudo pacman -S zsh-completions
-    sudo pacman -S emacs
-    sudo pacman -S curl
-    sudo pacman -S tmux
-    sudo pacman -S keychain
-    sudo pacman -S gnome-tweak-tool
-    sudo pacman -S xsel
-    sudo pacman -S archlinux-wallpaper
-    sudo pacman -S evince inkscape gimp unrar
-    sudo pacman -S file-roller
-    sudo pacman -S xclip
-    sudo pacman -S atool
-    sudo pacman -S the_silver_searcher
-    sudo pacman -S powertop
-    sudo pacman -S cifs-utils
-    sudo pacman -S gvfs gvfs-smb
-    sudo pacman -S seahorse gnome-keyring
-    sudo pacman -S cups-pdf
-    sudo pacman -S eog
-    sudo pacman -S mcomix
-    sudo pacman -S go pkgfile rsync elixir
-	sudo pacman -S nodejs whois nmap poppler-data
-	sudo pacman -S rtmpdump ffmpeg asciidoc sbcl
-	sudo pacman -S aspell aspell-en httperf
-	sudo pacman -S gdb ripgrep hub wmctrl
-	sudo pacman -S linux-docs ansible pwgen
-	sudo pacman -S arch-install-scripts
-	sudo pacman -S htop
-	sudo pacman -S neovim
-	sudo pacman -S pandoc texlive-langjapanese texlive-latexextra ctags
-	sudo pacman -S rust cargo
-	sudo pacman -S noto-fonts-cjk arc-gtk-theme jq
+    sudo pacman -S firefox firefox-i18n-ja otf-ipafont
+    sudo pacman -S sylpheed emacs curl xsel openssh tmux
+    sudo pacman -S zsh-completions keychain gnome-tweak-tool
+    sudo pacman -S archlinux-wallpaper powertop gimp unrar
+    sudo pacman -S file-roller xclip atool evince inkscape
+    sudo pacman -S cifs-utils gvfs gvfs-smb eog lhasa lzop
+    sudo pacman -S seahorse gnome-keyring the_silver_searcher
+    sudo pacman -S cups-pdf htop neovim go pkgfile rsync elixir
+	sudo pacman -S nodejs whois nmap poppler-data rtmpdump ffmpeg 
+	sudo pacman -S aspell aspell-en httperf asciidoc sbcl
+	sudo pacman -S gdb ripgrep hub wmctrl gpaste pkgstats
+	sudo pacman -S linux-docs ansible pwgen gauche screen ipcalc
+	sudo pacman -S arch-install-scripts ctags ack parallel
+	sudo pacman -S pandoc texlive-langjapanese texlive-latexextra
+	sudo pacman -S rust cargo shellcheck php cscope typescript
+	sudo pacman -S noto-fonts-cjk arc-gtk-theme jq dnsmasq
 	sudo pacman -S docker docker-compose zsh-syntax-highlighting
-	sudo pacman -S shellcheck
-	sudo pacman -S npm llvm llvm-libs lldb hdparm rxvt-unicode dnsmasq typescript php cscope
+	sudo pacman -S npm llvm llvm-libs lldb hdparm rxvt-unicode 
 	sudo pacman -S mariadb-clients postgresql-libs tig lsof fzf
-	sudo pacman -S debootstrap tcpdump chromium bashdb pdfgrep ack parallel
-	sudo pacman -S alsa-utils mlocate traceroute hugo mpv jhead gpaste pkgstats
-	sudo pacman -S nethogs optipng jpegoptim noto-fonts-emoji gauche screen ipcalc
-	sudo pacman -S debian-archive-keyring
-	sudo pacman -S mathjax strace valgrind phantomjs
-	sudo pacman -S python-pip tree irssi
-	sudo pacman -S yarn geckodriver httpie w3m neomutt
-	sudo pacman -S highlight lynx elinks mediainfo cpio lhasa lzop p7zip unace iperf
+	sudo pacman -S debootstrap tcpdump chromium bashdb pdfgrep
+	sudo pacman -S alsa-utils mlocate traceroute hugo mpv jhead
+	sudo pacman -S nethogs optipng jpegoptim noto-fonts-emoji
+	sudo pacman -S debian-archive-keyring irssi tree python-pip
+	sudo pacman -S mathjax strace valgrind phantomjs p7zip unace
+	sudo pacman -S yarn geckodriver httpie w3m neomutt iperf
+	sudo pacman -S highlight lynx elinks mediainfo cpio
 
 Install what you put in yaourt
 	

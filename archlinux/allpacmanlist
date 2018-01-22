@@ -622,7 +622,6 @@ man-pages
 mariadb
 mariadb-clients
 mathjax
-mcomix
 mdadm
 mediainfo
 mesa
@@ -769,10 +768,8 @@ python2-ipaddress
 python2-jinja
 python2-markupsafe
 python2-oauth2client
-python2-olefile
 python2-packaging
 python2-paramiko
-python2-pillow
 python2-ply
 python2-pyasn1
 python2-pyasn1-modules

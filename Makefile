@@ -50,7 +50,7 @@ install: ## Install arch linux packages using pacman
 	zsh-completions gnome-tweak-tool xsel emacs evince unrar seahorse hugo mpv \
 	archlinux-wallpaper inkscape file-roller xclip atool debootstrap valgrind \
 	the_silver_searcher powertop cifs-utils elinks gvfs-smb unace irssi iperf \
-	gnome-keyring cups-pdf mcomix openssh firefox firefox-i18n-ja gimp strace \
+	gnome-keyring cups-pdf openssh firefox firefox-i18n-ja gimp strace lhasa \
 	otf-ipafont pkgfile baobab dconf-editor rsync nodejs debian-archive-keyring \
 	nmap poppler-data rtmpdump ffmpeg asciidoc sbcl docker aspell aspell-en ack \
 	gdb ripgrep hub wmctrl pwgen linux-docs ansible htop tcpdump gvfs p7zip lzop \
@@ -62,7 +62,7 @@ install: ## Install arch linux packages using pacman
 	curl docker-compose parallel alsa-utils mlocate traceroute jhead whois ruby \
 	noto-fonts-emoji gpaste nethogs optipng jpegoptim elixir geckodriver ipcalc \
 	gauche screen tig mosh fzf tree httpie w3m neomutt highlight mediainfo cpio \
-	lynx lhasa
+	lynx
 	sudo pkgfile --update
 
 update: ## Update arch linux packages and save packages cache 3 generations
