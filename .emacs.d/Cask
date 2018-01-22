@@ -73,7 +73,6 @@
 (depends-on "nginx-mode")
 (depends-on "org-plus-contrib")
 (depends-on "package-lint")
-(depends-on "pangu-spacing")
 (depends-on "paredit")
 (depends-on "password-generator")
 (depends-on "pcre2el")
