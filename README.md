@@ -362,7 +362,7 @@ Install what enters with pacman
 	sudo pacman -S debootstrap tcpdump chromium bashdb pdfgrep ack parallel
 	sudo pacman -S alsa-utils mlocate traceroute hugo mpv jhead gpaste pkgstats
 	sudo pacman -S nethogs optipng jpegoptim noto-fonts-emoji gauche screen ipcalc
-	sudo pacman -S debian-archive-keyring slack-desktop
+	sudo pacman -S debian-archive-keyring
 	sudo pacman -S mathjax strace valgrind phantomjs
 	sudo pacman -S python-pip tree irssi
 	sudo pacman -S yarn geckodriver httpie w3m neomutt
