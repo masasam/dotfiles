@@ -56,12 +56,9 @@
 ;; dired
 (with-eval-after-load 'dired
   (bind-key "e" 'wdired-change-to-wdired-mode dired-mode-map)
-  (defun my/dropbox ()
+  (defun kanban ()
     (interactive)
-    (find-file "~/Dropbox/"))
-  (defun my/downloads ()
-    (interactive)
-    (find-file "~/Downloads/"))
+    (find-file "~/Dropbox/kanban/doc.txt"))
   (defun my/githubimage ()
     (interactive)
     (find-file "~/Pictures/image/")))
