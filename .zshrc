@@ -433,7 +433,7 @@ bindkey '^x^a' ansible-fzf
 
 
 function weather-fzf() {
-    curl wttr.in/$(echo -e "Sapporo\nSendai\nTokyo\nYokohama\nKawasaki\nNagano\nNagoya\nKanazawa\nKyoto\nOsaka\nKobe\nOkayama-Shi\nHiroshima-Shi\nTakamatsu\nMatsuyama\nHakata" | fzf-tmux -d --reverse --prompt="Weather > ") | less -R
+    curl wttr.in/$(echo -e "Sapporo\nSendai\nTokyo\nYokohama\nKawasaki\nNagano\nNagoya\nKanazawa\nKyoto\nOsaka-shi\nKobe\nOkayama-Shi\nHiroshima-Shi\nTakamatsu\nMatsuyama\nHakata" | fzf-tmux -d --reverse --prompt="Weather > ") | less -R
 }
 
 
