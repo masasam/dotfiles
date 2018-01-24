@@ -7,6 +7,7 @@
 
 (add-hook 'emacs-lisp-mode-hook 'my/enable-trailing-mode)
 (add-hook 'python-mode-hook 'my/enable-trailing-mode)
+(add-hook 'enh-ruby-mode-hook 'my/enable-trailing-mode)
 (add-hook 'c-mode-hook 'my/enable-trailing-mode)
 (add-hook 'shell-mode-hook 'my/enable-trailing-mode)
 
