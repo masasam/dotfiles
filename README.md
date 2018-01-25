@@ -343,7 +343,7 @@ Install what enters with pacman
 	sudo pacman -S nethogs optipng jpegoptim noto-fonts-emoji
 	sudo pacman -S debian-archive-keyring irssi tree python-pip
 	sudo pacman -S mathjax strace valgrind phantomjs p7zip unace
-	sudo pacman -S yarn geckodriver httpie w3m neomutt iperf
+	sudo pacman -S yarn geckodriver w3m neomutt iperf
 	sudo pacman -S highlight lynx elinks mediainfo cpio
 
 Install what you put in yaourt
@@ -397,6 +397,7 @@ Install what you put in yaourt
 	pip install --user haxor-news
 	pip install --user rtv
 	pip install --user jupyterthemes
+	pip install --user httpie
 	
 #### golang yarn cargo gem
 
