@@ -211,6 +211,7 @@ nodeinstall: ## Install node packages
 	yarn global add create-react-app
 	yarn global add prettier
 	yarn global add firebase-tools
+	yarn global add heroku-cli
 
 rubygems: ## Install rubygems packages
 	mkdir -p ${HOME}/.gem/

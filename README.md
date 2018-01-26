@@ -422,6 +422,7 @@ Install what you put in yaourt
 	yarn global add create-react-app
 	yarn global add prettier
 	yarn global add firebase-tools
+	yarn global add heroku-cli
 	cargo install cargo-script
 	gem install --user-install bundle
 	gem install --user-install jekyll
