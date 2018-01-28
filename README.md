@@ -359,6 +359,8 @@ Install what you put in yaourt
 	yaourt nkf
 	yaourt peek
 	yaourt profile-sync-daemon
+	yaourt rbenv
+	yaourt ruby-build
 	yaourt screenkey
 
 ##### pip
