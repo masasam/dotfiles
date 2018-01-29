@@ -5,10 +5,11 @@ global
 goobook-git
 google-cloud-sdk
 ibus-mozc
-kubeadm-bin
 mozc
 nkf
 peek
 profile-sync-daemon
+rbenv
+ruby-build
 screenkey
 zoom
