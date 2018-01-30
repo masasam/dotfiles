@@ -217,6 +217,7 @@ nodeinstall: ## Install node packages
 
 rubygems: ## Install rubygems packages
 	mkdir -p ${HOME}/.gem/
+	gem install --user-install rdoc
 	gem install --user-install bundle
 	gem install --user-install jekyll
 	gem install --user-install pry pry-doc
