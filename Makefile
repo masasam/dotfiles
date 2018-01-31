@@ -172,6 +172,7 @@ pipinstall: ## Install python packages
 	pip install --user rtv
 	pip install --user jupyterthemes
 	pip install --user httpie
+	pip install --user trash-cli
 
 pipbackup: ## Backup python packages
 	mkdir -p ${PWD}/archlinux

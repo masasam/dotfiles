@@ -400,6 +400,7 @@ Install what you put in yaourt
 	pip install --user rtv
 	pip install --user jupyterthemes
 	pip install --user httpie
+	pip install --user trash-cli
 	
 #### golang yarn cargo gem
 
