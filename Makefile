@@ -61,7 +61,8 @@ install: ## Install arch linux packages using pacman
 	dnsmasq cscope lsof postgresql-libs pdfgrep gnu-netcat urxvt-perls cmatrix \
 	curl docker-compose parallel alsa-utils mlocate traceroute jhead whois ruby \
 	noto-fonts-emoji gpaste nethogs optipng jpegoptim elixir geckodriver ipcalc \
-	gauche screen tig mosh fzf tree w3m neomutt highlight mediainfo cpio lynx
+	gauche screen tig mosh fzf tree w3m neomutt highlight mediainfo cpio lynx \
+	libreoffice-fresh-ja
 	sudo pkgfile --update
 
 update: ## Update arch linux packages and save packages cache 3 generations
