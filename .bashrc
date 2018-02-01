@@ -25,8 +25,8 @@ export GTAGSCONF=/usr/share/gtags/gtags.conf
 export GTAGSLABEL=pygments
 export PAGER=less
 export LESS='-g -i -M -R -S -W -z-4 -x4'
-# export RBENV_ROOT="${HOME}/.rbenv"
-# if [ -d "${RBENV_ROOT}" ]; then
-#   export PATH="${RBENV_ROOT}/bin:${PATH}"
-#   eval "$(rbenv init -)"
-# fi
+export RBENV_ROOT="${HOME}/.rbenv"
+if [ -d "${RBENV_ROOT}" ]; then
+  export PATH="${RBENV_ROOT}/bin:${PATH}"
+  eval "$(rbenv init -)"
+fi
