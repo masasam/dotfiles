@@ -140,6 +140,17 @@
       (message default-directory))))
 
 
+;; ansible
+(defun my/ansible ()
+  "Turn on ansible."
+  (interactive)
+  (ansible 1)
+  (add-to-list 'company-backends 'company-ansible)
+  (setq ansible::vault-password-file "~/Dropbox/ansible/vault_pass")
+  (ansible-doc-mode 1))
+(add-hook 'ansible-hook 'ansible::auto-decrypt-encrypt)
+
+
 (defun my/active-modes ()
   "Give a message of which minor modes are enabled in the current buffer."
   (interactive)
