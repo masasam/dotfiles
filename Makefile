@@ -437,13 +437,15 @@ testsimple: ## Test this Makefile using docker without Dropbox
 	@echo "========== make rustinstall =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make rustinstall"
 
-allinstall: install init initroot initdropbox aur mozc ttf-cica melpa pipinstall goinstall neomutt rubygems docker mariadb psd rustinstall gnuglobal nodeinstall neovim
+allinit: init initroot initdropbox
+
+allinstall: install aur mozc ttf-cica melpa pipinstall goinstall neomutt rubygems docker mariadb psd rustinstall gnuglobal nodeinstall neovim
 
 allupdate: update melpaupdate pipupdate rustupdate goinstall
 
 allbackup: backup pipbackup
 
-.PHONY: allinstall allupdate allbackup
+.PHONY: allinstall allinit allupdate allbackup
 
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
