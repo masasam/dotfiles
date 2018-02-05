@@ -32,8 +32,6 @@ You can deploy dotfiles with.
 
     make init
 
-Keep Dropbox synchronized before doing make init.
-
 ### With Makefile, you will be able to recover your usual environment in 30 minutes
 
 ![make](https://raw.githubusercontent.com/masasam/image/image/make.png)
@@ -54,12 +52,16 @@ Please select your favorite one.
 
 If [Makefile](https://github.com/masasam/dotfiles/blob/master/Makefile) is completed, you should be able to restore in 30 minutes in either case.
 
-After Dropbox Sync
-
     make init
 
 Then dotfiles will be deployed and restored.
 
+You can deploy all with
+
+	make allinit
+
+Keep Dropbox synchronized before doing make allinit.
+	
 You can install all with
 
 	make allinstall
