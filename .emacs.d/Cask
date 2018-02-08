@@ -84,6 +84,7 @@
 (depends-on "python-mode")
 (depends-on "quickrun")
 (depends-on "racer")
+(depends-on "rbenv")
 (depends-on "realgud")
 (depends-on "realgud-byebug")
 (depends-on "robe")
