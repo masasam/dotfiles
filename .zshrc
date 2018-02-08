@@ -594,3 +594,5 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source /opt/google-cloud-sdk/completion.zsh.inc
 # zsh-completions for aws
 source ~/.local/bin/aws_zsh_completer.sh
+# password
+source ~/Dropbox/zsh/env.sh
