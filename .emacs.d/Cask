@@ -54,6 +54,7 @@
 (depends-on "google-this")
 (depends-on "google-translate")
 (depends-on "goto-chg")
+(depends-on "haml-mode")
 (depends-on "htmlize")
 (depends-on "iflipb")
 (depends-on "indium")
