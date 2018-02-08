@@ -417,6 +417,7 @@ Install what you put in yaourt
 	go get -u -v github.com/pressly/goose/cmd/goose
 	go get -u -v github.com/motemen/ghq
 	go get -u -v github.com/sonatard/ghs
+	go get -u -v github.com/kyoshidajp/ghkw
 	yarn global add npm
 	yarn global add tern
 	yarn global add jshint

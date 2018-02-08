@@ -200,6 +200,7 @@ goinstall: ## Install go packages
 	go get -u -v github.com/pressly/goose/cmd/goose
 	go get -u -v github.com/motemen/ghq
 	go get -u -v github.com/sonatard/ghs
+	go get -u -v github.com/kyoshidajp/ghkw
 
 nodeinstall: ## Install node packages
 	mkdir -p ${HOME}/.node_modules
