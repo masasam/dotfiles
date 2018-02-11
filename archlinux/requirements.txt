@@ -6,11 +6,11 @@ astroid==1.6.1
 attrs==17.4.0
 Automat==0.6.0
 autopep8==1.3.4
-awscli==1.14.35
+awscli==1.14.36
 backports.csv==1.0.5
 beautifulsoup4==4.6.0
 bleach==2.1.2
-botocore==1.8.39
+botocore==1.8.40
 cached-property==1.3.1
 cachetools==2.0.1
 certifi==2018.1.18
@@ -18,7 +18,7 @@ cffi==1.11.4
 chardet==3.0.4
 cli-helpers==1.0.1
 click==6.7
-colorama==0.3.7
+colorama==0.3.9
 configobj==5.0.6
 constantly==15.1.0
 cryptography==2.1.4
@@ -59,7 +59,7 @@ jupyter==1.0.0
 jupyter-client==5.2.2
 jupyter-console==5.2.0
 jupyter-core==4.4.0
-jupyterthemes==0.18.4
+jupyterthemes==0.18.5
 kitchen==1.2.5
 kubernetes==4.0.0
 lazy-object-proxy==1.3.1
@@ -119,7 +119,7 @@ PySocks==1.6.8
 pytest==3.4.0
 python-dateutil==2.6.1
 python-utils==2.2.0
-pytz==2017.3
+pytz==2018.3
 PyYAML==3.12
 pyzmq==16.0.4
 qtconsole==4.3.1
@@ -143,7 +143,7 @@ service-identity==17.0.0
 setproctitle==1.1.10
 simplegeneric==0.8.1
 six==1.11.0
-speedtest-cli==1.0.7
+speedtest-cli==2.0.0
 sqlparse==0.2.4
 stevedore==1.28.0
 structlog==18.1.0

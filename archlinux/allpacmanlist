@@ -64,7 +64,6 @@ cogl
 colord
 colord-gtk
 compface
-compositeproto
 coreutils
 cpio
 cracklib
@@ -76,7 +75,6 @@ cups-filters
 cups-pdf
 cups-pk-helper
 curl
-damageproto
 db
 dbus
 dbus-glib
@@ -90,7 +88,6 @@ dhcpcd
 diffutils
 djvulibre
 dmraid
-dmxproto
 dnsmasq
 dnssec-anchors
 docbook-xml
@@ -123,11 +120,9 @@ filesystem
 findutils
 firefox
 firefox-i18n-ja
-fixesproto
 flac
 flex
 fontconfig
-fontsproto
 freetype2
 fribidi
 fuse-common
@@ -349,7 +344,6 @@ imagemagick
 imlib2
 inetutils
 inkscape
-inputproto
 intltool
 ipcalc
 iperf
@@ -373,7 +367,6 @@ json-c
 json-glib
 jsoncpp
 kbd
-kbproto
 keychain
 keyutils
 kmod
@@ -811,15 +804,12 @@ python2-six
 python2-yaml
 qpdf
 qt5-base
-randrproto
 raptor
 rasqal
 re2
 readline
-recordproto
 redland
 reiserfsprogs
-renderproto
 rest
 rhash
 ripgrep
@@ -836,7 +826,6 @@ sbc
 sbcl
 schroedinger
 screen
-scrnsaverproto
 sdl
 sdl2
 seahorse
@@ -911,7 +900,6 @@ valgrind
 vamp-plugin-sdk
 vi
 vid.stab
-videoproto
 vim
 vim-runtime
 volume_key
@@ -941,13 +929,9 @@ xcb-util-wm
 xclip
 xdg-user-dirs
 xdg-utils
-xextproto
 xf86-input-libinput
 xf86-video-intel
-xf86dgaproto
-xf86vidmodeproto
 xfsprogs
-xineramaproto
 xkeyboard-config
 xmlsec
 xorg-bdftopcf
@@ -997,7 +981,7 @@ xorg-xvinfo
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
-xproto
+xorgproto
 xsel
 xvidcore
 xz
