@@ -30,3 +30,6 @@ if [ -d "${RBENV_ROOT}" ]; then
   export PATH="${RBENV_ROOT}/bin:${PATH}"
   eval "$(rbenv init -)"
 fi
+if [ -f ~/.Xresources ]; then
+    xrdb -merge ~/.Xresources
+fi
