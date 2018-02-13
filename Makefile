@@ -34,6 +34,8 @@ initdropbox: ## Initial deploy dotfiles using dropbox
 	sudo ln -vsf ${HOME}/Dropbox/arch/hosts   /etc/hosts
 	ln -vsf ${HOME}/Dropbox/zsh/.gitconfig   ${HOME}/.gitconfig
 	mkdir -p ${HOME}/.config
+	ln -vsf ${HOME}/Dropbox/zsh/.netrc   ${HOME}/.netrc
+	ln -vsf ${HOME}/Dropbox/zsh/.mycli-history   ${HOME}/.mycli-history
 	ln -vsf ${HOME}/Dropbox/zsh/hub   ${HOME}/.config/hub
 	test -L ${HOME}/.ssh || rm -rf ${HOME}/.ssh
 	ln -vsfn ${HOME}/Dropbox/ssh   ${HOME}/.ssh
