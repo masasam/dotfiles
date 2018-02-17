@@ -28,7 +28,7 @@ I never have to worry about setting my PC again.
 
 After make install
 
-You can deploy dotfiles with.
+You can deploy dotfiles with
 
     make init
 
@@ -42,7 +42,7 @@ Once after creating the environment
 
 Since the arch linux packages list that was installed at will be backed up to archlinux directry,
 
-you can recover the arch linux environment with.
+you can recover the arch linux environment with
 
 	make recover
 
@@ -109,7 +109,7 @@ Why Arch linux ?
 
   It is good because Arch linux unique problems are unlikely.
 
-- Arch linux is lightweight because there is no extra thing. After installing Emacs Terminal chromium and launching an image htop
+- Arch linux is lightweight because there is no extra thing.
 
 ![top](https://raw.githubusercontent.com/masasam/image/image/top.png)
 
@@ -319,7 +319,7 @@ You can make install from here
 
 ## Development environment install
 
-Install what enters with pacman
+#### Install using pacman
 
     sudo pacman -S firefox firefox-i18n-ja otf-ipafont
     sudo pacman -S sylpheed emacs curl xsel openssh tmux
@@ -347,10 +347,10 @@ Install what enters with pacman
 	sudo pacman -S mathjax strace valgrind phantomjs p7zip unace
 	sudo pacman -S yarn geckodriver w3m neomutt iperf 
 	sudo pacman -S highlight lynx elinks mediainfo cpio
-	sudo pacman -S libreoffice-fresh-ja
+	sudo pacman -S libreoffice-fresh-ja oath-toolkit
 
-Install what you put in yaourt
-	
+#### Install using yaourt
+
 	yaourt drone-cli
 	yaourt git-secrets
 	yaourt global
@@ -366,7 +366,7 @@ Install what you put in yaourt
 	yaourt ruby-build
 	yaourt screenkey
 
-##### pip
+##### Install using pip
 
 	pip install --user virtualenv
 	pip install --user virtualenvwrapper
@@ -404,8 +404,8 @@ Install what you put in yaourt
 	pip install --user jupyterthemes
 	pip install --user httpie
 	pip install --user trash-cli
-	
-#### golang yarn cargo gem
+
+#### Install using golang
 
 	go get -u -v github.com/nsf/gocode
 	go get -u -v github.com/rogpeppe/godef
@@ -418,6 +418,9 @@ Install what you put in yaourt
 	go get -u -v github.com/motemen/ghq
 	go get -u -v github.com/sonatard/ghs
 	go get -u -v github.com/kyoshidajp/ghkw
+
+#### Install using yarn
+
 	yarn global add npm
 	yarn global add tern
 	yarn global add jshint
@@ -430,7 +433,9 @@ Install what you put in yaourt
 	yarn global add prettier
 	yarn global add firebase-tools
 	yarn global add heroku-cli
-	cargo install cargo-script
+
+#### Install using gem
+
 	gem install --user-install rdoc
 	gem install --user-install bundle
 	gem install --user-install jekyll
@@ -439,25 +444,23 @@ Install what you put in yaourt
 	gem install --user-install language_server
 	gem install --user-install rubocop
 
-#### cask install
+#### Install using rust
+
+	curl -sSf https://sh.rustup.rs | sh
+	cargo install rustfmt
+	cargo install racer
+	cargo install cargo-update
+	cargo install cargo-script
+	cargo install cargo-edit
+	rustup component add rust-src
+
+#### Install using cask
 
     curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
     cd .emacs.d
     cask upgrade
     cask install
     cask update
-
-#### Trackpoint
-
-~/.xinitrc
-
-    tpset() { xinput set-prop "TPPS/2 IBM TrackPoint" "$@"; }
-
-    tpset "Evdev Wheel Emulation" 1
-    tpset "Evdev Wheel Emulation Button" 2
-    tpset "Evdev Wheel Emulation Timeout" 200
-    tpset "Evdev Wheel Emulation Axes" 6 7 4 5
-    tpset "Device Accel Constant Deceleration" 0.95
 
 # Tweak Tool
 
@@ -495,20 +498,6 @@ Terminal uses termite and urxvt see
 
 	.config/termite
 	.Xresources
-
-#### .bashrc
-
-If you customize zsh by making zsh the default shell It may not be possible to login and it may be very troubling.
-
-So when tmux starts up, write it in tmux.conf to start zsh.
-Keep the default shell bash.
-
-    alias tmuxstart='tmux new-session -A -s main'
-    export HISTCONTROL=erasedups
-
-When started with tmuxstart, if you have a tmux session, you use it.
-
-If you don't have a tmux session, tmux will start up in a new session.
 
 # Powertop
 
