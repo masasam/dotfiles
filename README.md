@@ -345,7 +345,7 @@ You can make install from here
 	sudo pacman -S nethogs optipng jpegoptim noto-fonts-emoji
 	sudo pacman -S debian-archive-keyring irssi tree python-pip
 	sudo pacman -S mathjax strace valgrind phantomjs p7zip unace
-	sudo pacman -S yarn geckodriver w3m neomutt iperf 
+	sudo pacman -S yarn geckodriver w3m neomutt iperf redis
 	sudo pacman -S highlight lynx elinks mediainfo cpio
 	sudo pacman -S libreoffice-fresh-ja oath-toolkit
 
