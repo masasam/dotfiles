@@ -218,6 +218,7 @@ harfbuzz
 harfbuzz-icu
 haskell-aeson
 haskell-aeson-pretty
+haskell-ansi-terminal
 haskell-asn1-encoding
 haskell-asn1-parse
 haskell-asn1-types
@@ -234,6 +235,7 @@ haskell-case-insensitive
 haskell-cereal
 haskell-cmark-gfm
 haskell-cmdargs
+haskell-colour
 haskell-conduit
 haskell-connection
 haskell-cookie
@@ -809,6 +811,7 @@ raptor
 rasqal
 re2
 readline
+redis
 redland
 reiserfsprogs
 rest

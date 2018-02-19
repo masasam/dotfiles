@@ -154,6 +154,7 @@ psmisc
 pwgen
 python-pip
 python2-pygments
+redis
 reiserfsprogs
 ripgrep
 rsync
