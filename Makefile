@@ -75,7 +75,6 @@ aur: ## Install arch linux AUR packages using yaourt
 	yaourt -S drone-cli
 	yaourt -S git-secrets
 	yaourt -S nkf
-	yaourt -S nodenv
 	yaourt -S peek
 	yaourt -S profile-sync-daemon
 	yaourt -S rbenv
@@ -221,6 +220,10 @@ nodeinstall: ## Install node packages
 	yarn global add prettier
 	yarn global add firebase-tools
 	yarn global add heroku-cli
+
+nodenv: ## Install nodenv node-build
+	yaourt -S nodenv
+	git clone https://github.com/nodenv/node-build.git ~/.nodenv/plugins/node-build
 
 rubygems: ## Install rubygems packages
 	mkdir -p ${HOME}/.gem/
