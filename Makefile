@@ -225,7 +225,6 @@ nodeinstall: ## Install node packages
 nodenv: ## Install nodenv node-build
 	yaourt -S nodenv
 	git clone https://github.com/nodenv/node-build.git ~/.nodenv/plugins/node-build
-	nodenv install 7.10.0
 
 rubygems: ## Install rubygems packages
 	mkdir -p ${HOME}/.gem/
