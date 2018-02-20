@@ -351,20 +351,21 @@ You can make install from here
 
 #### Install using yaourt
 
-	yaourt drone-cli
-	yaourt git-secrets
-	yaourt global
-	yaourt goobook-git
-	yaourt ibus-mozc
-	yaourt kubeadm-bin
-	yaourt kubelet-bin
-	yaourt mozc
-	yaourt nkf
-	yaourt peek
-	yaourt profile-sync-daemon
-	yaourt rbenv
-	yaourt ruby-build
-	yaourt screenkey
+	yaourt -S drone-cli
+	yaourt -S git-secrets
+	yaourt -S global
+	yaourt -S goobook-git
+	yaourt -S ibus-mozc
+	yaourt -S kubeadm-bin
+	yaourt -S kubelet-bin
+	yaourt -S mozc
+	yaourt -S nkf
+	yaourt -S nodenv
+	yaourt -S peek
+	yaourt -S profile-sync-daemon
+	yaourt -S rbenv
+	yaourt -S ruby-build
+	yaourt -S screenkey
 
 ##### Install using pip
 

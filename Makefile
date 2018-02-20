@@ -72,14 +72,15 @@ update: ## Update arch linux packages and save packages cache 3 generations
 	yaourt -Syua; paccache -ruk0
 
 aur: ## Install arch linux AUR packages using yaourt
-	yaourt drone-cli
-	yaourt git-secrets
-	yaourt nkf
-	yaourt peek
-	yaourt profile-sync-daemon
-	yaourt rbenv
-	yaourt ruby-build
-	yaourt screenkey
+	yaourt -S drone-cli
+	yaourt -S git-secrets
+	yaourt -S nkf
+	yaourt -S nodenv
+	yaourt -S peek
+	yaourt -S profile-sync-daemon
+	yaourt -S rbenv
+	yaourt -S ruby-build
+	yaourt -S screenkey
 
 neomutt: ## Init neomutt mail client
 	mkdir -p ${HOME}/.mutt
@@ -89,7 +90,7 @@ neomutt: ## Init neomutt mail client
 	ln -vsf ${HOME}/Dropbox/mutt/aliases   ${HOME}/.mutt/aliases
 	ln -vsf ${HOME}/Dropbox/mutt/signature   ${HOME}/.mutt/signature
 	ln -vsf ${HOME}/Dropbox/mutt/.goobookrc   ${HOME}/.goobookrc
-	yaourt goobook-git
+	yaourt -S goobook-git
 	goobook authenticate
 
 aws: ## Init aws cli
@@ -99,8 +100,8 @@ aws: ## Init aws cli
 mozc: ## Install ibus-mozc
 	test -L ${HOME}/.mozc || rm -rf ${HOME}/.mozc
 	ln -vsfn ${HOME}/Dropbox/mozc/.mozc   ${HOME}/.mozc
-	yaourt mozc
-	yaourt ibus-mozc
+	yaourt -S mozc
+	yaourt -S ibus-mozc
 	ibus-daemon -drx
 
 ttf-cica: ## Install Cica font
@@ -248,7 +249,7 @@ rustupdate: ## Update rust packages
 gnuglobal: ## Install gnu global
 	mkdir -p ${HOME}/.local
 	pip install --user pygments
-	yaourt global
+	yaourt -S global
 
 backup: ## Backup arch linux packages
 	mkdir -p ${PWD}/archlinux
@@ -294,9 +295,9 @@ gnupg: ## Import gnupg secret-key
 	gpg --allow-secret-key-import --import ${HOME}/Dropbox/passwd/privkey.asc
 
 kubernetes: ## Init kubernetes 
-	yaourt google-cloud-sdk
-	yaourt kubeadm-bin
-	yaourt kubelet-bin
+	yaourt -S google-cloud-sdk
+	yaourt -S kubeadm-bin
+	yaourt -S kubelet-bin
 	sudo gcloud components update kubectl
 	gcloud init
 
