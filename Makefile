@@ -220,10 +220,12 @@ nodeinstall: ## Install node packages
 	yarn global add prettier
 	yarn global add firebase-tools
 	yarn global add heroku-cli
+	yarn global add webpack
 
 nodenv: ## Install nodenv node-build
 	yaourt -S nodenv
 	git clone https://github.com/nodenv/node-build.git ~/.nodenv/plugins/node-build
+	nodenv install 7.10.0
 
 rubygems: ## Install rubygems packages
 	mkdir -p ${HOME}/.gem/

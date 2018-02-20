@@ -434,6 +434,7 @@ You can make install from here
 	yarn global add prettier
 	yarn global add firebase-tools
 	yarn global add heroku-cli
+	yarn global add webpack
 
 #### Install using gem
 
