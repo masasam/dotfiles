@@ -539,7 +539,7 @@ Chromium, firefox cache and profile is fast when it put on memory.
 
 As the frequency of synchronization to the disk decreases, it also has the effect of preventing consumption of the SSD.
 
->yaourt profile-sync-daemon
+>yaourt -S profile-sync-daemon
 
 visudo
 
