@@ -65,7 +65,7 @@ install: ## Install arch linux packages using pacman
 	curl docker-compose parallel alsa-utils mlocate traceroute jhead whois ruby \
 	noto-fonts-emoji gpaste nethogs optipng jpegoptim elixir geckodriver ipcalc \
 	gauche screen tig mosh fzf tree w3m neomutt highlight mediainfo cpio lynx \
-	libreoffice-fresh-ja oath-toolkit redis
+	libreoffice-fresh-ja oath-toolkit
 	sudo pkgfile --update
 
 update: ## Update arch linux packages and save packages cache 3 generations
@@ -285,6 +285,11 @@ mariadb: # Mariadb initial setup
 	sudo systemctl start mariadb.service
 	mysql_secure_installation
 	mysql -u root -p < ${HOME}/Dropbox/mariadb/world.sql/data
+
+redis: ## Redis inital setup
+	sudo pacman -S redis
+	sudo systemctl enable redis.service
+	sudo systemctl start redis.service
 
 psd: ## Profile-Sync-Daemon initial setup
 	mkdir -p ${HOME}/.config/psd
