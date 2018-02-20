@@ -454,7 +454,7 @@ testsimple: ## Test this Makefile using docker without Dropbox
 
 allinit: init initroot initdropbox
 
-allinstall: install aur mozc ttf-cica melpa pipinstall goinstall neomutt rubygems docker mariadb psd rustinstall gnuglobal nodeinstall neovim
+allinstall: install aur mozc ttf-cica melpa pipinstall goinstall neomutt rubygems docker mariadb psd rustinstall gnuglobal nodeinstall neovim redis nodenv
 
 allupdate: update melpaupdate pipupdate rustupdate goinstall
 
