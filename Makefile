@@ -57,7 +57,7 @@ install: ## Install arch linux packages using pacman
 	gnome-keyring cups-pdf openssh firefox firefox-i18n-ja gimp strace lhasa \
 	otf-ipafont pkgfile baobab dconf-editor rsync nodejs debian-archive-keyring \
 	nmap poppler-data rtmpdump ffmpeg asciidoc sbcl docker aspell aspell-en ack \
-	gdb ripgrep hub wmctrl pwgen linux-docs ansible htop tcpdump gvfs p7zip lzop \
+	gdb xorgproto wmctrl pwgen linux-docs ansible htop tcpdump gvfs p7zip lzop \
 	arch-install-scripts termite neovim pandoc jq sylpheed pkgstats python-pip \
 	texlive-langjapanese yarn texlive-latexextra ctags hdparm eog noto-fonts-cjk \
 	arc-gtk-theme networkmanager npm typescript chromium llvm llvm-libs lldb php \
@@ -66,7 +66,7 @@ install: ## Install arch linux packages using pacman
 	curl docker-compose parallel alsa-utils mlocate traceroute jhead whois ruby \
 	noto-fonts-emoji gpaste nethogs optipng jpegoptim elixir geckodriver ipcalc \
 	gauche screen tig mosh fzf tree w3m neomutt highlight mediainfo cpio lynx \
-	libreoffice-fresh-ja oath-toolkit imagemagick6 termite-terminfo xorgproto
+	libreoffice-fresh-ja oath-toolkit imagemagick6 termite-terminfo hub
 	sudo pkgfile --update
 
 update: ## Update arch linux packages and save packages cache 3 generations
