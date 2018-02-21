@@ -241,7 +241,6 @@ rustinstall: ## Install rust and rust packages
 	mkdir -p ${HOME}/.cargo
 	export PATH="$HOME/.cargo/bin:$PATH"
 	curl -sSf https://sh.rustup.rs | sh
-	cargo install rustfmt
 	cargo install racer
 	cargo install cargo-update
 	cargo install cargo-script
