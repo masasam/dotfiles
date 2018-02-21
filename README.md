@@ -405,6 +405,7 @@ You can make install from here
 	pip install --user jupyterthemes
 	pip install --user httpie
 	pip install --user trash-cli
+	pip install --user jupyterlab
 
 #### Install using golang
 
