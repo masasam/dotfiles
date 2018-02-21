@@ -245,6 +245,7 @@ rustinstall: ## Install rust and rust packages
 	cargo install cargo-update
 	cargo install cargo-script
 	cargo install cargo-edit
+	cargo install ripgrep
 	rustup component add rust-src
 
 rustupdate: ## Update rust packages
