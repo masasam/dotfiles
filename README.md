@@ -446,7 +446,6 @@ You can make install from here
 	gem install --user-install github-markup
 	gem install --user-install language_server
 	gem install --user-install rubocop
-	gem install --user-install mailcatcher
 
 #### Install using rust
 
