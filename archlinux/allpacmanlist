@@ -33,6 +33,7 @@ binutils
 bison
 bluez
 bluez-libs
+bookworm
 boost-libs
 bridge-utils
 btrfs-progs
@@ -187,6 +188,7 @@ gpaste
 gpgme
 gpm
 gptfdisk
+granite
 graphene
 graphite
 graphviz
