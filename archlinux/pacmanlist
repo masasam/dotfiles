@@ -47,6 +47,7 @@ filesystem
 findutils
 firefox
 firefox-i18n-ja
+flameshot
 flex
 fzf
 gauche
@@ -78,7 +79,7 @@ highlight
 htop
 hub
 hugo
-imagemagick6
+imagemagick
 inetutils
 inkscape
 ipcalc

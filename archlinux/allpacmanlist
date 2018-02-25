@@ -121,6 +121,7 @@ findutils
 firefox
 firefox-i18n-ja
 flac
+flameshot
 flex
 fontconfig
 freetype2
@@ -342,7 +343,7 @@ ibus
 icu
 ijs
 ilmbase
-imagemagick6
+imagemagick
 imlib2
 inetutils
 inkscape
