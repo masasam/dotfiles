@@ -1,6 +1,7 @@
 ack
 alsa-utils
 ansible
+ansible-lint
 arc-gtk-theme
 arch-install-scripts
 archlinux-wallpaper

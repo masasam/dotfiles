@@ -7,6 +7,7 @@ alsa-lib
 alsa-plugins
 alsa-utils
 ansible
+ansible-lint
 arc-gtk-theme
 arch-install-scripts
 archlinux-keyring
