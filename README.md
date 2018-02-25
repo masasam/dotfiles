@@ -420,6 +420,7 @@ You can make install from here
 	go get -u -v github.com/motemen/ghq
 	go get -u -v github.com/sonatard/ghs
 	go get -u -v github.com/kyoshidajp/ghkw
+	go get -u -v github.com/hashicorp/packer
 
 #### Install using yarn
 
