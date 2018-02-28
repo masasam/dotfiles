@@ -3,8 +3,6 @@
 (source org)
 
 (depends-on "aggressive-indent")
-(depends-on "ansible")
-(depends-on "ansible-doc")
 (depends-on "auto-compile")
 (depends-on "beginend")
 (depends-on "bind-key")
@@ -12,7 +10,6 @@
 (depends-on "cask")
 (depends-on "coffee-mode")
 (depends-on "company")
-(depends-on "company-ansible")
 (depends-on "company-irony")
 (depends-on "company-go")
 (depends-on "company-php")
