@@ -426,7 +426,7 @@ function ansible-fzf() {
     if [ $? = 0 ]; then
 	local selected_yml=$(ls | grep .yml$ | fzf-tmux -d --reverse --prompt="Ansible > ")
 	if [ -n "$selected_yml" ]; then
-	    ansible-playbook ${selected_yml}
+	    ansible-playbook --ask-vault-pass ${selected_yml}
 	    if [ $? = 0 ]; then
 		notify-send -u critical 'Ansible' 'Your playbook execution ended' -i utilities-terminal
 	    else
