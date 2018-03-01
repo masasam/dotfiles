@@ -42,6 +42,7 @@ emacs
 eog
 evince
 expect
+extundelete
 fakeroot
 file
 file-roller
@@ -102,6 +103,7 @@ libva-intel-driver
 licenses
 linux
 linux-docs
+linux-manpages
 lldb
 llvm
 logrotate
@@ -163,6 +165,7 @@ reiserfsprogs
 ripgrep
 rsync
 ruby
+ruby-rdoc
 rxvt-unicode
 s-nail
 sbcl

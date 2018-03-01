@@ -111,6 +111,7 @@ exempi
 exiv2
 expat
 expect
+extundelete
 faac
 faad2
 fakeroot
@@ -616,6 +617,7 @@ linux
 linux-api-headers
 linux-docs
 linux-firmware
+linux-manpages
 lldb
 llvm
 llvm-libs
@@ -826,6 +828,7 @@ rtkit
 rtmpdump
 rubberband
 ruby
+ruby-rdoc
 run-parts
 rxvt-unicode
 rxvt-unicode-terminfo
