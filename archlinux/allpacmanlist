@@ -98,7 +98,6 @@ docker
 docker-compose
 dosfstools
 double-conversion
-dropbox
 e2fsprogs
 elinks
 elixir

@@ -34,7 +34,6 @@ diffutils
 dnsmasq
 docker
 docker-compose
-dropbox
 e2fsprogs
 elinks
 elixir

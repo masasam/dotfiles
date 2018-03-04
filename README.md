@@ -292,7 +292,7 @@ Synchronize yaourt latest
 Install dropbox and sync
 	
 	sudo pacman -S chromium
-    sudo pacman -S dropbox
+    yaourt -S dropbox
     sudo pacman -S nautilus-dropbox
 	dropbox
 

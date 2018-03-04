@@ -50,7 +50,7 @@ initdropbox: ## Initial deploy dotfiles using dropbox
 	chmod 600   ${HOME}/.ssh/id_rsa
 
 install: ## Install arch linux packages using pacman
-	sudo pacman -S go zsh git vim dropbox nautilus-dropbox tmux keychain bashdb \
+	sudo pacman -S go zsh git vim nautilus-dropbox tmux keychain bashdb \
 	zsh-completions gnome-tweak-tool xsel emacs evince unrar seahorse hugo mpv \
 	archlinux-wallpaper inkscape file-roller xclip atool debootstrap valgrind \
 	the_silver_searcher powertop cifs-utils elinks gvfs-smb unace irssi iperf \
@@ -75,6 +75,7 @@ update: ## Update arch linux packages and save packages cache 3 generations
 
 aur: ## Install arch linux AUR packages using yaourt
 	yaourt -S drone-cli
+	yaourt -S dropbox
 	yaourt -S git-secrets
 	yaourt -S nkf
 	yaourt -S peek
