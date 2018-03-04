@@ -67,7 +67,7 @@ install: ## Install arch linux packages using pacman
 	noto-fonts-emoji gpaste nethogs optipng jpegoptim elixir geckodriver ipcalc \
 	gauche screen tig mosh fzf tree w3m neomutt highlight mediainfo cpio lynx \
 	libreoffice-fresh-ja oath-toolkit imagemagick termite-terminfo flameshot \
-	hub bookworm ansible-lint ruby-rdoc
+	hub bookworm ansible-lint ruby-rdoc fd
 	sudo pkgfile --update
 
 update: ## Update arch linux packages and save packages cache 3 generations
@@ -248,6 +248,7 @@ rustinstall: ## Install rust and rust packages
 	cargo install cargo-script
 	cargo install cargo-edit
 	cargo install ripgrep
+	cargo install exa
 	rustup component add rust-src
 
 rustupdate: ## Update rust packages

@@ -348,7 +348,7 @@ You can make install from here
 	sudo pacman -S yarn geckodriver w3m neomutt iperf redis
 	sudo pacman -S highlight lynx elinks mediainfo cpio flameshot
 	sudo pacman -S libreoffice-fresh-ja oath-toolkit imagemagick
-	sudo pacman -S bookworm ansible-lint ruby ruby-rdoc
+	sudo pacman -S bookworm ansible-lint ruby ruby-rdoc fd
 
 #### Install using yaourt
 
@@ -441,7 +441,6 @@ You can make install from here
 
 #### Install using gem
 
-	gem install --user-install rdoc
 	gem install --user-install bundle
 	gem install --user-install jekyll
 	gem install --user-install pry pry-doc
@@ -452,11 +451,12 @@ You can make install from here
 #### Install using rust
 
 	curl -sSf https://sh.rustup.rs | sh
-	cargo install rustfmt
 	cargo install racer
 	cargo install cargo-update
 	cargo install cargo-script
 	cargo install cargo-edit
+	cargo install ripgrep
+	cargo install exa
 	rustup component add rust-src
 
 #### Install using cask
