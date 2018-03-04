@@ -348,7 +348,7 @@ You can make install from here
 	sudo pacman -S yarn geckodriver w3m neomutt iperf redis
 	sudo pacman -S highlight lynx elinks mediainfo cpio flameshot
 	sudo pacman -S libreoffice-fresh-ja oath-toolkit imagemagick
-	sudo pacman -S bookworm ansible-lint ruby ruby-rdoc fd
+	sudo pacman -S bookworm ansible-lint ruby ruby-rdoc
 
 #### Install using yaourt
 
@@ -457,6 +457,9 @@ You can make install from here
 	cargo install cargo-edit
 	cargo install ripgrep
 	cargo install exa
+	cargo install fd-find
+	cargo install xsv
+	cargo install hyperfine
 	rustup component add rust-src
 
 #### Install using cask

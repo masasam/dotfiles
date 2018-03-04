@@ -98,7 +98,7 @@ pip-review==1.0
 pluggy==0.6.0
 ply==3.11
 pocket==0.3.6
-progressbar2==3.35.2
+progressbar2==3.36.0
 prompt-toolkit==1.0.15
 psycopg2==2.7.4
 psycopg2-binary==2.7.4
