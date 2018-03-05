@@ -22,7 +22,6 @@
 (bind-key "C-c l" 'counsel-locate)
 (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
 (setq ivy-use-virtual-buffers t)
-(require 'ivy-xref)
 (setq xref-show-xrefs-function #'ivy-xref-show-xrefs)
 
 
