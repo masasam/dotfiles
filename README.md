@@ -347,7 +347,7 @@ You can make install from here
 	sudo pacman -S mathjax strace valgrind phantomjs p7zip unace
 	sudo pacman -S yarn geckodriver w3m neomutt iperf redis
 	sudo pacman -S highlight lynx elinks mediainfo cpio flameshot
-	sudo pacman -S libreoffice-fresh-ja oath-toolkit imagemagick
+	sudo pacman -S oath-toolkit imagemagick
 	sudo pacman -S bookworm ansible-lint ruby ruby-rdoc
 
 #### Install using yaourt
