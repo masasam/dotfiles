@@ -434,6 +434,7 @@ You can make install from here
 	yarn global add vue-language-server
 	yarn global add vue-cli
 	yarn global add create-react-app
+	yarn global add create-component-app
 	yarn global add prettier
 	yarn global add firebase-tools
 	yarn global add heroku-cli
