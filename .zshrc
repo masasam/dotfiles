@@ -590,6 +590,12 @@ function terminal-size() {
 }
 
 
+function screenshot() {
+    sleep 5
+    flameshot gui
+}
+
+
 # zsh-syntax-highlighting(pacman -S zsh-syntax-highlighting)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # zsh-completions for google-cloud-sdk(yaourt google-cloud-sdk)
