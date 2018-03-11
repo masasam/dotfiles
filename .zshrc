@@ -210,6 +210,7 @@ alias caskupdate='rm -rf ${HOME}/Dropbox/emacs/cask/`ls -rt ${HOME}/Dropbox/emac
 alias caskinstall='cd ${HOME}/.emacs.d/; cask upgrade; cask install; cd -'
 alias caskcleanup='rm -rf ${HOME}/.emacs.d/.cask; caskinstall'
 alias goupdate='cd ${HOME}/src/github.com/masasam/dotfiles; make goinstall; cd -'
+alias rustupdate='rustup update'
 alias cargoupdate='cargo install-update -a'
 alias cargocleanup='rm -rf ${HOME}/.cargo/bin/*; cd ${HOME}/src/github.com/masasam/dotfiles; make rustinstall; cd -'
 alias gemcleanup='rm -fr ~/.gem; cd ~/src/github.com/masasam/dotfiles/; make rubygems'
