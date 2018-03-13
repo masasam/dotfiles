@@ -439,6 +439,7 @@ You can make install from here
 	yarn global add firebase-tools
 	yarn global add heroku-cli
 	yarn global add webpack
+	yarn global add gulp
 
 #### Install using gem
 

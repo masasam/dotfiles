@@ -227,6 +227,7 @@ nodeinstall: ## Install node packages
 	yarn global add firebase-tools
 	yarn global add heroku-cli
 	yarn global add webpack
+	yarn global add gulp
 
 nodenv: ## Install nodenv node-build
 	yaourt -S nodenv
