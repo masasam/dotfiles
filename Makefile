@@ -181,6 +181,7 @@ pipinstall: ## Install python packages
 	pip install --user httpie
 	pip install --user trash-cli
 	pip install --user jupyterlab
+	pip install --user cheat
 
 pipbackup: ## Backup python packages
 	mkdir -p ${PWD}/archlinux
@@ -229,6 +230,7 @@ nodeinstall: ## Install node packages
 	yarn global add heroku-cli
 	yarn global add webpack
 	yarn global add gulp
+	yarn global add tldr
 
 nodenv: ## Install nodenv node-build
 	yaourt -S nodenv

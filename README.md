@@ -407,6 +407,7 @@ You can make install from here
 	pip install --user httpie
 	pip install --user trash-cli
 	pip install --user jupyterlab
+	pip install --user cheat
 
 #### Install using golang
 
@@ -441,6 +442,7 @@ You can make install from here
 	yarn global add heroku-cli
 	yarn global add webpack
 	yarn global add gulp
+	yarn global add tldr
 
 #### Install using gem
 
