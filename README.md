@@ -408,6 +408,7 @@ You can make install from here
 	pip install --user trash-cli
 	pip install --user jupyterlab
 	pip install --user cheat
+	pip install --user faker
 
 #### Install using golang
 

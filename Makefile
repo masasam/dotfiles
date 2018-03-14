@@ -182,6 +182,7 @@ pipinstall: ## Install python packages
 	pip install --user trash-cli
 	pip install --user jupyterlab
 	pip install --user cheat
+	pip install --user faker
 
 pipbackup: ## Backup python packages
 	mkdir -p ${PWD}/archlinux
