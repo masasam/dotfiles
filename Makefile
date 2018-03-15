@@ -256,6 +256,7 @@ rails: ## Install rails at current directory
 	sed -i -e '$d' Gemfile
 	echo 'gem "rails"' >> Gemfile
 	bundle install --path=vendor/bundle
+	gitignore rails > .gitignore
 	bundle exec rails -v
 
 rustinstall: ## Install rust and rust packages
