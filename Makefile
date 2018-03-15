@@ -80,8 +80,6 @@ aur: ## Install arch linux AUR packages using yaourt
 	yaourt -S nkf
 	yaourt -S peek
 	yaourt -S profile-sync-daemon
-	yaourt -S rbenv
-	yaourt -S ruby-build
 	yaourt -S screenkey
 
 neomutt: ## Init neomutt mail client
@@ -245,6 +243,20 @@ rubygems: ## Install rubygems packages
 	gem install --user-install github-markup
 	gem install --user-install language_server
 	gem install --user-install rubocop
+
+rails: ## Install rails at current directory
+	yaourt -S rbenv
+	yaourt -S ruby-build
+	rbenv install 2.5.0
+	rbenv global 2.5.0
+	rbenv rehash
+	gem install bundler
+	rbenv local 2.5.0
+	bundle init
+	sed -i -e '$d' Gemfile
+	echo 'gem "rails"' >> Gemfile
+	bundle install --path=vendor/bundle
+	bundle exec rails -v
 
 rustinstall: ## Install rust and rust packages
 	mkdir -p ${HOME}/.cargo

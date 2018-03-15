@@ -213,6 +213,7 @@ gtkspell
 gts
 guile
 guile2.0
+gulp
 gvfs
 gvfs-smb
 gzip
@@ -420,6 +421,7 @@ libdvdread
 libedit
 libelf
 libepoxy
+libev
 libevdev
 libevent
 libexif
@@ -650,6 +652,7 @@ netctl
 nethogs
 nettle
 networkmanager
+nghttp2
 ninja
 nm-connection-editor
 nmap
