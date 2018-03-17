@@ -305,6 +305,13 @@ docker: ## Docker initial setup
 	sudo systemctl enable docker.service
 	sudo systemctl start docker.service
 
+postfix: ## Postfix initial setup
+	sudo pacman -S postfix cyrus-sasl
+	sudo systemctl enable postfix.service
+	sudo systemctl start postfix.service
+	sudo systemctl enable saslauthd.service
+	sudo systemctl start saslauthd.service
+
 mariadb: # Mariadb initial setup
 	sudo pacman -S mariadb mariadb-clients
 	sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
@@ -332,8 +339,6 @@ gnupg: ## Import gnupg secret-key
 
 kubernetes: ## Init kubernetes 
 	yaourt -S google-cloud-sdk
-	yaourt -S kubeadm-bin
-	yaourt -S kubelet-bin
 	sudo gcloud components update kubectl
 	gcloud init
 

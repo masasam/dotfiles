@@ -355,10 +355,9 @@ You can make install from here
 	yaourt -S drone-cli
 	yaourt -S git-secrets
 	yaourt -S global
+	yaourt -S google-cloud-sdk
 	yaourt -S goobook-git
 	yaourt -S ibus-mozc
-	yaourt -S kubeadm-bin
-	yaourt -S kubelet-bin
 	yaourt -S mozc
 	yaourt -S nkf
 	yaourt -S nodenv
