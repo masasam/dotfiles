@@ -14,15 +14,11 @@ call dein#begin('$XDG_CONFIG_HOME/nvim')
 call dein#add('Shougo/dein.vim')
 
 " Add or remove your plugins here:
-call dein#add('Shougo/neosnippet.vim')
-call dein#add('Shougo/neosnippet-snippets')
 call dein#add('Shougo/deoplete.nvim')
 call dein#add('Shougo/denite.nvim')
 call dein#add('airblade/vim-gitgutter')
 call dein#add('itchyny/lightline.vim')
 call dein#add('tpope/vim-fugitive')
-call dein#add('nanotech/jellybeans.vim')
-call dein#add('altercation/vim-colors-solarized')
 call dein#add('editorconfig/editorconfig-vim')
 call dein#add('Shougo/neomru.vim')
 call dein#add('Shougo/vimshell')
@@ -40,8 +36,6 @@ call dein#add('othree/yajs.vim')
 call dein#add('othree/es.next.syntax.vim')
 call dein#add('mxw/vim-jsx')
 call dein#add('ternjs/tern_for_vim')
-call dein#add('justmao945/vim-clang')
-call dein#add('critiqjo/lldb.nvim')
 call dein#add('thinca/vim-quickrun')
 
 " You can specify revision/branch/tag.
@@ -156,14 +150,6 @@ let g:lightline = {
       \ }
 
 
-" -- jellybeans theme ---------------------------------------------
-set background=dark
-try
-    colorscheme jellybeans
-catch
-endtry
-
-
 " -- Makefile -----------------------------------------------------
 let _curfile=expand("%:r")
 if _curfile == 'Makefile'
@@ -270,11 +256,6 @@ augroup Vimrc
   autocmd!
   autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx
 augroup END
-
-
-" -- vim-clang ---------------------------------------------------------
-let g:clang_c_options = '-std=c11'
-let g:clang_cpp_options = '-std=c++1z -stdlib=libc++ --pedantic-errors'
 
 
 " -- vim-quickrun ------------------------------------------------------
