@@ -302,11 +302,6 @@ docker: ## Docker initial setup
 	sudo systemctl enable docker.service
 	sudo systemctl start docker.service
 
-mongodb: ## Mongodb initial setup
-	sudo pacman -S mongodb mongodb-tools
-	sudo systemctl enable mongodb.service
-	sudo systemctl start mongodb.service
-
 mariadb: # Mariadb initial setup
 	sudo pacman -S mariadb mariadb-clients
 	sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
@@ -318,6 +313,17 @@ redis: ## Redis inital setup
 	sudo pacman -S redis
 	sudo systemctl enable redis.service
 	sudo systemctl start redis.service
+
+varnish: ## Varnish inital setup
+	sudo pacman -S varnish
+	sudo ln -vsf ${PWD}/etc/varnish/default.vcl   /etc/varnish/default.vcl
+	sudo systemctl enable varnish.service
+	sudo systemctl start varnish.service
+
+mongodb: ## Mongodb initial setup
+	sudo pacman -S mongodb mongodb-tools
+	sudo systemctl enable mongodb.service
+	sudo systemctl start mongodb.service
 
 psd: ## Profile-Sync-Daemon initial setup
 	mkdir -p ${HOME}/.config/psd
