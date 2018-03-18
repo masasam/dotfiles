@@ -302,12 +302,10 @@ docker: ## Docker initial setup
 	sudo systemctl enable docker.service
 	sudo systemctl start docker.service
 
-postfix: ## Postfix initial setup
-	sudo pacman -S postfix cyrus-sasl
-	sudo systemctl enable postfix.service
-	sudo systemctl start postfix.service
-	sudo systemctl enable saslauthd.service
-	sudo systemctl start saslauthd.service
+mongodb: ## Mongodb initial setup
+	sudo pacman -S mongodb mongodb-tools
+	sudo systemctl enable mongodb.service
+	sudo systemctl start mongodb.service
 
 mariadb: # Mariadb initial setup
 	sudo pacman -S mariadb mariadb-clients
