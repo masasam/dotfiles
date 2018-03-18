@@ -123,3 +123,9 @@
 (add-hook 'scheme-mode-hook 'turn-off-smartparens-mode)
 (add-hook 'slime-repl-mode-hook 'turn-off-smartparens-mode)
 
+
+;; Fill-Column-Indicator
+(setq fci-rule-column 80)
+(setq fci-rule-width 3)
+(setq fci-rule-color "sea green")
+
