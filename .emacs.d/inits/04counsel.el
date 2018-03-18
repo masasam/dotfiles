@@ -4,7 +4,7 @@
 (setq company-selection-wrap-around t)
 (bind-key "C-s" 'swiper-for-region-or-swiper)
 (bind-key "C-;" 'ivy-switch-buffer)
-(bind-key "C-c r" 'ivy-resume)
+(bind-key "C-x C-z" 'ivy-resume)
 (bind-key "C-x C-c" 'counsel-M-x)
 (bind-key "M-x" 'counsel-M-x)
 (bind-key "C-x C-f" 'counsel-find-file)

@@ -16,6 +16,9 @@
 
 (setq enh-ruby-add-encoding-comment-on-save nil)
 
-;; rspec
+;; rspec-mode
 (eval-after-load 'rspec-mode
   '(rspec-install-snippets))
+
+;; projectile rails
+(projectile-rails-global-mode)

@@ -79,6 +79,7 @@
 (depends-on "pkgbuild-mode")
 (depends-on "popwin")
 (depends-on "projectile")
+(depends-on "projectile-rails")
 (depends-on "python-mode")
 (depends-on "quickrun")
 (depends-on "racer")
