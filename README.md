@@ -505,7 +505,7 @@ Caps Lock is also a Ctrl
 
 # Terminal
 
-![terminal](https://raw.githubusercontent.com/masasam/image/image/terminal.png)
+![terminal](https://raw.githubusercontent.com/masasam/image/image/tmux.png)
 
 Terminal uses termite and urxvt see
 
