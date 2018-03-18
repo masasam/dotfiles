@@ -86,6 +86,7 @@
 (depends-on "realgud")
 (depends-on "realgud-byebug")
 (depends-on "robe")
+(depends-on "rspec-mode")
 (depends-on "ruby-electric")
 (depends-on "rust-mode")
 (depends-on "s")

@@ -16,3 +16,6 @@
 
 (setq enh-ruby-add-encoding-comment-on-save nil)
 
+;; rspec
+(eval-after-load 'rspec-mode
+  '(rspec-install-snippets))
