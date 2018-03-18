@@ -70,9 +70,6 @@ install: ## Install arch linux packages using pacman
 	hub bookworm
 	sudo pkgfile --update
 
-update: ## Update arch linux packages and save packages cache 3 generations
-	yaourt -Syua; paccache -ruk0
-
 aur: ## Install arch linux AUR packages using yaourt
 	yaourt -S drone-cli
 	yaourt -S dropbox
@@ -81,65 +78,6 @@ aur: ## Install arch linux AUR packages using yaourt
 	yaourt -S peek
 	yaourt -S profile-sync-daemon
 	yaourt -S screenkey
-
-neomutt: ## Init neomutt mail client
-	mkdir -p ${HOME}/.mutt
-	ln -vsf ${PWD}/.muttrc   ${HOME}/.muttrc
-	ln -vsf ${PWD}/.mutt/mailcap   ${HOME}/.mutt/mailcap
-	ln -vsf ${PWD}/.mutt/certificates   ${HOME}/.mutt/certificates
-	ln -vsf ${HOME}/Dropbox/mutt/aliases   ${HOME}/.mutt/aliases
-	ln -vsf ${HOME}/Dropbox/mutt/signature   ${HOME}/.mutt/signature
-	ln -vsf ${HOME}/Dropbox/mutt/.goobookrc   ${HOME}/.goobookrc
-	yaourt -S goobook-git
-	goobook authenticate
-
-aws: ## Init aws cli
-	test -L ${HOME}/.aws || rm -rf ${HOME}/.aws
-	ln -vsfn ${HOME}/Dropbox/zsh/.aws   ${HOME}/.aws
-
-mozc: ## Install ibus-mozc
-	test -L ${HOME}/.mozc || rm -rf ${HOME}/.mozc
-	ln -vsfn ${HOME}/Dropbox/mozc/.mozc   ${HOME}/.mozc
-	yaourt -S mozc
-	yaourt -S ibus-mozc
-	ibus-daemon -drx
-
-ttf-cica: ## Install Cica font
-	cd ${HOME}/Dropbox/arch/Cica_v2.1.0/;\
-	sudo install -dm755 /usr/share/fonts/TTF;\
-	sudo install -m644 *.ttf /usr/share/fonts/TTF/;\
-	sudo install -d /usr/share/licenses/ttf-cica/;\
-	sudo install -Dm644 *.txt /usr/share/licenses/ttf-cica/;\
-	cd -
-
-melpa: ## Install emacs packages from MELPA using cask package manager
-	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
-	test -L ${HOME}/.emacs.d || rm -rf ${HOME}/.emacs.d
-	ln -vsfn ${PWD}/.emacs.d   ${HOME}/.emacs.d
-	export PATH="$HOME/.cask/bin:$PATH"
-	cd ${HOME}/.emacs.d/; cask upgrade;cask install
-
-melpaupdate: ## Update emacs packages and backup 6 generations packages
-	export PATH="$HOME/.cask/bin:$PATH"
-	mkdir -p ${HOME}/Dropbox/emacs/cask
-	if [ `ls -rt ${HOME}/Dropbox/emacs/cask | head | wc -l` -gt 5 ];\
-	then \
-	rm -rf ${HOME}/Dropbox/emacs/cask/`ls -rt ${HOME}/Dropbox/emacs/cask \
-	| head -n 1`;\
-	tar cfz ${HOME}/Dropbox/emacs/cask/`date '+%Y%m%d%H%M%S'`.tar.gz -C ${HOME}/.emacs.d .cask;\
-	cd ${HOME}/.emacs.d/;\
-	cask upgrade;\
-	cask update;\
-	else \
-	tar cfz ${HOME}/Dropbox/emacs/cask/`date '+%Y%m%d%H%M%S'`.tar.gz -C ${HOME}/.emacs.d .cask;\
-	cd ${HOME}/.emacs.d/;\
-	cask upgrade;\
-	cask update;\
-	fi
-
-melpacleanup: ## Cleaninstall emacs packages (When emacs version up, always execute)
-	export PATH="$HOME/.cask/bin:$PATH"
-	rm -rf ${HOME}/.emacs.d/.cask; caskinstall
 
 pipinstall: ## Install python packages
 	mkdir -p ${HOME}/.local
@@ -276,6 +214,65 @@ rustinstall: ## Install rust and rust packages
 
 rustupdate: ## Update rust packages
 	cargo install-update -a
+
+neomutt: ## Init neomutt mail client
+	mkdir -p ${HOME}/.mutt
+	ln -vsf ${PWD}/.muttrc   ${HOME}/.muttrc
+	ln -vsf ${PWD}/.mutt/mailcap   ${HOME}/.mutt/mailcap
+	ln -vsf ${PWD}/.mutt/certificates   ${HOME}/.mutt/certificates
+	ln -vsf ${HOME}/Dropbox/mutt/aliases   ${HOME}/.mutt/aliases
+	ln -vsf ${HOME}/Dropbox/mutt/signature   ${HOME}/.mutt/signature
+	ln -vsf ${HOME}/Dropbox/mutt/.goobookrc   ${HOME}/.goobookrc
+	yaourt -S goobook-git
+	goobook authenticate
+
+aws: ## Init aws cli
+	test -L ${HOME}/.aws || rm -rf ${HOME}/.aws
+	ln -vsfn ${HOME}/Dropbox/zsh/.aws   ${HOME}/.aws
+
+mozc: ## Install ibus-mozc
+	test -L ${HOME}/.mozc || rm -rf ${HOME}/.mozc
+	ln -vsfn ${HOME}/Dropbox/mozc/.mozc   ${HOME}/.mozc
+	yaourt -S mozc
+	yaourt -S ibus-mozc
+	ibus-daemon -drx
+
+ttf-cica: ## Install Cica font
+	cd ${HOME}/Dropbox/arch/Cica_v3.0.0-rc1/;\
+	sudo install -dm755 /usr/share/fonts/TTF;\
+	sudo install -m644 *.ttf /usr/share/fonts/TTF/;\
+	sudo install -d /usr/share/licenses/ttf-cica/;\
+	sudo install -Dm644 *.txt /usr/share/licenses/ttf-cica/;\
+	cd -
+
+melpa: ## Install emacs packages from MELPA using cask package manager
+	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
+	test -L ${HOME}/.emacs.d || rm -rf ${HOME}/.emacs.d
+	ln -vsfn ${PWD}/.emacs.d   ${HOME}/.emacs.d
+	export PATH="$HOME/.cask/bin:$PATH"
+	cd ${HOME}/.emacs.d/; cask upgrade;cask install
+
+melpaupdate: ## Update emacs packages and backup 6 generations packages
+	export PATH="$HOME/.cask/bin:$PATH"
+	mkdir -p ${HOME}/Dropbox/emacs/cask
+	if [ `ls -rt ${HOME}/Dropbox/emacs/cask | head | wc -l` -gt 5 ];\
+	then \
+	rm -rf ${HOME}/Dropbox/emacs/cask/`ls -rt ${HOME}/Dropbox/emacs/cask \
+	| head -n 1`;\
+	tar cfz ${HOME}/Dropbox/emacs/cask/`date '+%Y%m%d%H%M%S'`.tar.gz -C ${HOME}/.emacs.d .cask;\
+	cd ${HOME}/.emacs.d/;\
+	cask upgrade;\
+	cask update;\
+	else \
+	tar cfz ${HOME}/Dropbox/emacs/cask/`date '+%Y%m%d%H%M%S'`.tar.gz -C ${HOME}/.emacs.d .cask;\
+	cd ${HOME}/.emacs.d/;\
+	cask upgrade;\
+	cask update;\
+	fi
+
+melpacleanup: ## Cleaninstall emacs packages (When emacs version up, always execute)
+	export PATH="$HOME/.cask/bin:$PATH"
+	rm -rf ${HOME}/.emacs.d/.cask; caskinstall
 
 gnuglobal: ## Install gnu global
 	mkdir -p ${HOME}/.local
@@ -482,6 +479,9 @@ testsimple: ## Test this Makefile using docker without Dropbox
 	docker exec makefiletest sh -c "cd ${PWD}; make rubygems"
 	@echo "========== make rustinstall =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make rustinstall"
+
+update: ## Update arch linux packages and save packages cache 3 generations
+	yaourt -Syua; paccache -ruk0
 
 allinit: init initroot initdropbox
 
