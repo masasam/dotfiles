@@ -196,6 +196,7 @@ urxvt-perls
 usbutils
 util-linux
 valgrind
+varnish
 vi
 vim
 w3m
