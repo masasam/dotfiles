@@ -21,10 +21,8 @@ call dein#add('itchyny/lightline.vim')
 call dein#add('tpope/vim-fugitive')
 call dein#add('editorconfig/editorconfig-vim')
 call dein#add('Shougo/neomru.vim')
-call dein#add('Shougo/vimshell')
 call dein#add('bronson/vim-trailing-whitespace')
 call dein#add('junegunn/vim-easy-align')
-call dein#add('jreybert/vimagit')
 call dein#add('osyo-manga/vim-anzu')
 call dein#add('Jagua/vim-denite-ghq')
 call dein#add('neomake/neomake')
@@ -37,9 +35,6 @@ call dein#add('othree/es.next.syntax.vim')
 call dein#add('mxw/vim-jsx')
 call dein#add('ternjs/tern_for_vim')
 call dein#add('thinca/vim-quickrun')
-
-" You can specify revision/branch/tag.
-"call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
 
 " Required:
 call dein#end()

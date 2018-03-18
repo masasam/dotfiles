@@ -23,7 +23,7 @@ set ruler
 set showcmd
 set hidden
 set history=2000
-set paste
+inoremap <silent> jj <esc>
 set sh=zsh
 set laststatus=2
 set statusline=%F%m%=[%p%%]\ (%l,%c)\ %{'['.(&fenc!=''?&fenc:&enc).']\ ['.&fileformat.']'}
