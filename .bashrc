@@ -34,3 +34,7 @@ eval "$(nodenv init -)"
 function urxvt-setup (){
    xrdb -merge $HOME/.Xresources
 }
+
+# keychain config
+/usr/bin/keychain $HOME/.ssh/id_rsa
+source $HOME/.keychain/thinkpad-sh
