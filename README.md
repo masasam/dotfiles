@@ -369,6 +369,7 @@ You can make install from here
 
 ##### Install using pip
 
+	pip install --user --upgrade pip
 	pip install --user virtualenv
 	pip install --user virtualenvwrapper
 	pip install --user seaborn

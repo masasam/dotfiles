@@ -81,7 +81,7 @@ mycli==1.16.0
 nbconvert==5.3.1
 nbformat==4.4.0
 neovim==0.2.4
-notebook==5.4.0
+notebook==5.4.1
 numpy==1.14.2
 oauth2client==4.1.2
 oauthlib==2.0.6
@@ -161,7 +161,7 @@ terminaltables==3.1.0
 testpath==0.3.1
 text-unidecode==1.2
 texttable==1.2.1
-tornado==5.0
+tornado==5.0.1
 traitlets==4.3.2
 trash-cli==0.17.1.14
 Twisted==17.9.0

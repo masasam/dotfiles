@@ -81,6 +81,7 @@ aur: ## Install arch linux AUR packages using yaourt
 
 pipinstall: ## Install python packages
 	mkdir -p ${HOME}/.local
+	pip install --user --upgrade pip
 	pip install --user virtualenv
 	pip install --user virtualenvwrapper
 	pip install --user seaborn
