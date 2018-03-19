@@ -216,6 +216,9 @@ rustinstall: ## Install rust and rust packages
 rustupdate: ## Update rust packages
 	cargo install-update -a
 
+tmux: ## Install tmux plugins
+	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 neomutt: ## Init neomutt mail client
 	mkdir -p ${HOME}/.mutt
 	ln -vsf ${PWD}/.muttrc   ${HOME}/.muttrc
