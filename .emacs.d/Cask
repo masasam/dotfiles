@@ -27,7 +27,6 @@
 (depends-on "easy-hugo")
 (depends-on "easy-jekyll")
 (depends-on "editorconfig")
-(depends-on "eldoc-extension")
 (depends-on "elisp-slime-nav")
 (depends-on "elpy")
 (depends-on "enh-ruby-mode")
