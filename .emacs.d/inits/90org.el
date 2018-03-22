@@ -35,6 +35,8 @@
 (setq org-capture-templates
       '(("t" "Todo" entry (file+headline "~/Dropbox/emacs/org/daily-projects.org" "Tasks")
 	 "* TODO %? %i %a")
+	("m" "Memo" entry (file+headline "~/Dropbox/emacs/org/memo.org" "Memo")
+	 "* %? %U %i")
         ("n" "Note" entry (file+headline "~/Dropbox/emacs/org/notes.org" "Notes")
 	 "* %? %U %i")
 	("i" "interrupted task" entry
@@ -46,6 +48,10 @@
 (defun notes ()
   (interactive)
   (find-file "~/Dropbox/emacs/org/notes.org"))
+
+(defun memo ()
+  (interactive)
+  (find-file "~/Dropbox/emacs/org/memo.org"))
 
 (defun inbox ()
   (interactive)
