@@ -65,6 +65,7 @@ cogl
 colord
 colord-gtk
 compface
+compiler-rt
 coreutils
 cpio
 cracklib
