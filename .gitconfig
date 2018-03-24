@@ -29,7 +29,7 @@
 	editor = emacsclient
 	pager = less
 	excludesfile = ~/.gitignore
-
+	commentchar = ^
 [push]
 	default = upstream
 [pager]
