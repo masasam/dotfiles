@@ -19,7 +19,7 @@ chardet==3.0.4
 cheat==2.2.3
 cli-helpers==1.0.1
 click==6.7
-colorama==0.3.7
+colorama==0.3.9
 configobj==5.0.6
 constantly==15.1.0
 cryptography==2.2.1
@@ -126,7 +126,7 @@ pyOpenSSL==17.5.0
 pyparsing==2.2.0
 PySocks==1.6.8
 pytest==3.5.0
-python-dateutil==2.6.1
+python-dateutil==2.7.0
 python-utils==2.3.0
 pytz==2018.3
 PyYAML==3.12
