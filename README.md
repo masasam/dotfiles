@@ -479,13 +479,15 @@ You can make install from here
     cask install
     cask update
 
-# Keybinds
+# dconf setting
 
 	dconf write /org/gnome/desktop/input-sources/xkb-options \'ctrl:swapcaps\'
 
 	dconf write /org/gnome/desktop/interface/gtk-key-theme \'Emacs\'
 
 	dconf write /org/gnome/desktop/interface/gtk-theme \'Arc-Dark\'
+
+	dconf write /org/gnome/desktop/interface/clock-show-date \'True\'
 
 # Terminal
 
