@@ -198,6 +198,7 @@ rails: ## Install rails at current directory
 	bundle exec rails -v
 
 rustinstall: ## Install rust and rust packages
+	sudo pacman -S cmake
 	mkdir -p ${HOME}/.cargo
 	export PATH="$HOME/.cargo/bin:$PATH"
 	curl -sSf https://sh.rustup.rs | sh

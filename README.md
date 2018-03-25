@@ -458,6 +458,7 @@ You can make install from here
 
 #### Install using rust
 
+	sudo pacman -S cmake
 	curl -sSf https://sh.rustup.rs | sh
 	cargo install racer
 	cargo install cargo-update
