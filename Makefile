@@ -168,29 +168,23 @@ nodenv: ## Install nodenv node-build
 	yaourt -S nodenv
 	git clone https://github.com/nodenv/node-build.git ~/.nodenv/plugins/node-build
 
-rubygems: ## Install rubygems packages
-	mkdir -p ${HOME}/.gem/
-	gem install --user-install bundler
-	gem install --user-install jekyll
-	gem install --user-install pry pry-doc
-	gem install --user-install github-markup
-	gem install --user-install language_server
-	gem install --user-install rubocop
-
-rails: ## Install rails at current directory
+rails: ## Create rails app
 	yaourt -S rbenv
 	yaourt -S ruby-build
 	rbenv install 2.5.0
 	rbenv global 2.5.0
 	rbenv rehash
 	gem install bundler
+	gem install rails -v 5.2.0.rc2
+	cd ~/src/github.com/masasam
+	rails new railsapp --webpack=react --database=mysql --skip-test
+	cd railsapp
 	rbenv local 2.5.0
-	bundle init
-	sed -i -e '$d' Gemfile
-	echo 'gem "rails"' >> Gemfile
-	bundle install --path=vendor/bundle
-	gitignore rails > .gitignore
-	bundle exec rails -v
+	bundle install --path vendor/bundle
+	yarn install
+	bundle exec rake db:create
+	bundle exec rake db:migrate
+	bundle exec rails server
 
 rustinstall: ## Install rust and rust packages
 	sudo pacman -S cmake
@@ -454,8 +448,6 @@ test: ## Test this Makefile using docker
 	docker exec makefiletest sh -c "cd ${PWD}; make goinstall"
 	@echo "========== make nodeinstall =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make nodeinstall"
-	@echo "========== make rubygems =========="
-	docker exec makefiletest sh -c "cd ${PWD}; make rubygems"
 	@echo "========== make rustinstall =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make rustinstall"
 
@@ -480,8 +472,6 @@ testsimple: ## Test this Makefile using docker without Dropbox
 	docker exec makefiletest sh -c "cd ${PWD}; make goinstall"
 	@echo "========== make nodeinstall =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make nodeinstall"
-	@echo "========== make rubygems =========="
-	docker exec makefiletest sh -c "cd ${PWD}; make rubygems"
 	@echo "========== make rustinstall =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make rustinstall"
 
@@ -490,7 +480,7 @@ update: ## Update arch linux packages and save packages cache 3 generations
 
 allinit: init initroot initdropbox
 
-allinstall: install aur mozc ttf-cica melpa pipinstall goinstall neomutt rubygems docker mariadb psd rustinstall gnuglobal nodeinstall neovim redis nodenv
+allinstall: ttf-cica install pipinstall goinstall melpa rustinstall nodeinstall aur mozc neomutt docker mariadb psd neovim redis nodenv
 
 allupdate: update melpaupdate pipupdate rustupdate goinstall
 
