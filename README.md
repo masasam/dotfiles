@@ -427,7 +427,6 @@ You can make install from here
 	go get -u -v github.com/sonatard/ghs
 	go get -u -v github.com/kyoshidajp/ghkw
 	go get -u -v github.com/hashicorp/packer
-	go get -u -v github.com/heppu/gkill
 
 #### Install using yarn
 
