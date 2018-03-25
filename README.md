@@ -234,15 +234,13 @@ Install drivers that match your environment
 
     lspci | grep VGA
     pacman -S xf86-video-intel libva-intel-driver
-    pacman -S xorg-server xorg-apps xorg-xinit xorg-xclock
+    pacman -S xorg-server xorg-apps
 
 Gnome can be put as small as necessary
 
     pacman -S gnome-backgrounds
 	pacman -S gnome-control-center
 	pacman -S gnome-keyring
-	pacman -S gnome-shell-extensions
-	pacman -S gnome-tweak-tool
 	pacman -S nautilus
 
 Terminal uses termite and urxvt
@@ -263,13 +261,15 @@ You can not wifi unless you turn off dhcpcd.
     sudo pacman -S networkmanager
     systemctl disable dhcpcd.service
     systemctl enable NetworkManager.service
+    otf-ipafont
     reboot
 
 #### Login with ${USER} to arrange home directory
 
     sudo pacman -S xdg-user-dirs
     LANG=C xdg-user-dirs-update --force
-    sudo pacman -S zsh git vim
+    sudo pacman -S zsh git
+    sudo pacman -S chromium
 
 Install yaourt
 vim /etc/pacman.conf
@@ -290,8 +290,7 @@ Synchronize yaourt latest
     yaourt -Syua
 	
 Install dropbox and sync
-	
-	sudo pacman -S chromium
+
     yaourt -S dropbox
     sudo pacman -S nautilus-dropbox
 	dropbox
@@ -321,7 +320,7 @@ You can make install from here
 
 #### Install using pacman
 
-    sudo pacman -S firefox firefox-i18n-ja otf-ipafont
+    sudo pacman -S firefox firefox-i18n-ja
     sudo pacman -S sylpheed emacs curl xsel openssh tmux
     sudo pacman -S zsh-completions keychain gnome-tweak-tool
     sudo pacman -S archlinux-wallpaper powertop gimp unrar
