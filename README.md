@@ -487,6 +487,8 @@ Detailed setting of gnome etc.
 
 dconf editor  /org/gnome/desktop/input-sources/xkb-options ['ctrl:swapcaps']
 
+dconf write /org/gnome/desktop/interface/gtk-key-theme  \'Emacs\'
+
 * Power supply
 
     When AC power is connected Blank.
