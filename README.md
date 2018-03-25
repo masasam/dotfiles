@@ -261,7 +261,7 @@ You can not wifi unless you turn off dhcpcd.
     sudo pacman -S networkmanager
     systemctl disable dhcpcd.service
     systemctl enable NetworkManager.service
-    otf-ipafont
+    sudo pacman -S otf-ipafont
     reboot
 
 #### Login with ${USER} to arrange home directory
