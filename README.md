@@ -485,17 +485,7 @@ Detailed setting of gnome etc.
 
 * Ctrl key position
 
->Use Caps Lock as Ctrl
-
-* Key sequence for terminating X server
-
->Ctrl Alt Backspace
-
-* Caps Lock behavior
-
-Caps Lock is also a Ctrl
-
-* Fix workspace to 1
+dconf editor  /org/gnome/desktop/input-sources/xkb-options ['ctrl:swapcaps']
 
 * Power supply
 
