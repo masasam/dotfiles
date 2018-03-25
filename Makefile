@@ -15,14 +15,12 @@ init: ## Initial deploy dotfiles
 	ln -vsf ${PWD}/.aspell.conf   ${HOME}/.aspell.conf
 	mkdir -p ${HOME}/.config
 	ln -vsf ${PWD}/.config/screenkey.json ${HOME}/.config/screenkey.json
-	mkdir -p ${HOME}/.config/gtk-3.0
-	ln -vsf ${PWD}/.config/gtk-3.0/bookmarks   ${HOME}/.config/gtk-3.0/bookmarks
 	mkdir -p ${HOME}/.config/termite
 	ln -vsf ${PWD}/.config/termite/config   ${HOME}/.config/termite/config
 
 initroot: ## Initial deploy need root authority
 	sudo ln -vsf ${PWD}/etc/pacman.conf   /etc/pacman.conf
-	sudo ln -vsf ${PWD}/etc/mysql/my.cnf   /etc/mysql/my.cnf
+	#sudo ln -vsf ${PWD}/etc/mysql/my.cnf   /etc/mysql/my.cnf
 	sudo ln -vsf ${PWD}/etc/dnsmasq/resolv.dnsmasq.conf   /etc/resolv.dnsmasq.conf
 	sudo ln -vsf ${PWD}/etc/dnsmasq/dnsmasq.conf   /etc/dnsmasq.conf
 	sudo ln -vsf ${PWD}/etc/sysctl.d/40-max-user-watches.conf   /etc/sysctl.d/40-max-user-watches.conf
@@ -50,23 +48,23 @@ initdropbox: ## Initial deploy dotfiles using dropbox
 	chmod 600   ${HOME}/.ssh/id_rsa
 
 install: ## Install arch linux packages using pacman
-	sudo pacman -S go zsh git vim nautilus-dropbox tmux keychain bashdb \
+	sudo pacman -S go zsh git vim tmux keychain \
 	zsh-completions gnome-tweak-tool xsel emacs evince unrar seahorse hugo mpv \
-	archlinux-wallpaper inkscape file-roller xclip atool debootstrap valgrind \
-	the_silver_searcher powertop cifs-utils elinks gvfs-smb unace irssi iperf \
-	gnome-keyring cups-pdf openssh firefox firefox-i18n-ja gimp strace lhasa \
-	otf-ipafont pkgfile baobab dconf-editor rsync nodejs debian-archive-keyring \
-	nmap poppler-data rtmpdump ffmpeg asciidoc sbcl docker aspell aspell-en ack \
-	gdb xorgproto wmctrl pwgen linux-docs ansible htop tcpdump gvfs p7zip lzop \
+	inkscape file-roller xclip atool debootstrap valgrind \
+	the_silver_searcher powertop cifs-utils elinks gvfs-smb unace iperf \
+	cups-pdf openssh firefox firefox-i18n-ja gimp strace lhasa \
+	pkgfile baobab dconf-editor rsync nodejs debian-archive-keyring \
+	nmap poppler-data ffmpeg asciidoc sbcl docker aspell aspell-en \
+	gdb wmctrl pwgen linux-docs htop tcpdump gvfs p7zip lzop \
 	arch-install-scripts termite neovim pandoc jq sylpheed pkgstats python-pip \
 	texlive-langjapanese yarn texlive-latexextra ctags hdparm eog noto-fonts-cjk \
-	arc-gtk-theme networkmanager npm typescript chromium llvm llvm-libs lldb php \
-	zsh-syntax-highlighting xorg-apps shellcheck bash-completion mathjax expect \
+	arc-gtk-theme npm typescript chromium llvm llvm-libs lldb php \
+	zsh-syntax-highlighting shellcheck bash-completion mathjax expect \
 	dnsmasq cscope lsof postgresql-libs pdfgrep gnu-netcat urxvt-perls cmatrix \
-	curl docker-compose parallel alsa-utils mlocate traceroute jhead whois ruby \
+	curl parallel alsa-utils mlocate traceroute jhead whois ruby \
 	noto-fonts-emoji gpaste nethogs optipng jpegoptim elixir geckodriver ipcalc \
 	gauche screen tig mosh fzf tree w3m neomutt highlight mediainfo cpio lynx \
-	oath-toolkit imagemagick termite-terminfo flameshot ansible-lint ruby-rdoc \
+	oath-toolkit imagemagick flameshot ruby-rdoc \
 	hub bookworm
 	sudo pkgfile --update
 
@@ -83,6 +81,9 @@ pipinstall: ## Install python packages
 	mkdir -p ${HOME}/.local
 	pip install --user --upgrade pip
 	pip install --user virtualenv
+	pip install --user ansible
+	pip install --user ansible-lint
+	pip install --user docker-compose
 	pip install --user virtualenvwrapper
 	pip install --user seaborn
 	pip install --user ipywidgets
