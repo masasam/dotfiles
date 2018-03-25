@@ -239,7 +239,7 @@ Install drivers that match your environment
 Gnome can be put as small as necessary
 
     pacman -S gnome-backgrounds
-	pacman -S gnome-control-center
+        pacman -S gnome-control-center
 	pacman -S gnome-keyring
 	pacman -S nautilus
 
@@ -299,7 +299,7 @@ Preparing dotfiles
 
     mkdir -p ~/src/github.com/masasam
     cd src/github.com/masasam
-	git clone git@github.com:masasam/dotfiles.git
+	git clone https://github.com/masasam/dotfiles.git
 	cd dotfiles
 	make install
 	make init
