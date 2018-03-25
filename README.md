@@ -479,27 +479,13 @@ You can make install from here
     cask install
     cask update
 
-# Tweak Tool
+# Keybinds
 
-Detailed setting of gnome etc.
+	dconf write /org/gnome/desktop/input-sources/xkb-options \'ctrl:swapcaps\'
 
-* Key theme
+	dconf write /org/gnome/desktop/interface/gtk-key-theme \'Emacs\'
 
->Emacs
-
-* Ctrl key position
-
-dconf editor  /org/gnome/desktop/input-sources/xkb-options ['ctrl:swapcaps']
-
-dconf write /org/gnome/desktop/interface/gtk-key-theme  \'Emacs\'
-
-dconf write /org/gnome/desktop/interface/gtk-theme 'Arc-Dark'
-
-* Power supply
-
-    When AC power is connected Blank.
-
-    Don't suspend on lid close.
+	dconf write /org/gnome/desktop/interface/gtk-theme \'Arc-Dark\'
 
 # Terminal
 
