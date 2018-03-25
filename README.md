@@ -239,7 +239,7 @@ Install drivers that match your environment
 Gnome can be put as small as necessary
 
     pacman -S gnome-backgrounds
-        pacman -S gnome-control-center
+	pacman -S gnome-control-center
 	pacman -S gnome-keyring
 	pacman -S nautilus
 
@@ -262,6 +262,7 @@ You can not wifi unless you turn off dhcpcd.
     systemctl disable dhcpcd.service
     systemctl enable NetworkManager.service
     sudo pacman -S otf-ipafont
+	exit
     reboot
 
 #### Login with ${USER} to arrange home directory
@@ -322,32 +323,32 @@ You can make install from here
 
     sudo pacman -S firefox firefox-i18n-ja
     sudo pacman -S sylpheed emacs curl xsel openssh tmux
-    sudo pacman -S zsh-completions keychain gnome-tweak-tool
-    sudo pacman -S archlinux-wallpaper powertop gimp unrar
+    sudo pacman -S zsh-completions keychain
+    sudo pacman -S powertop gimp unrar
     sudo pacman -S file-roller xclip atool evince inkscape
     sudo pacman -S cifs-utils gvfs gvfs-smb eog lhasa lzop
-    sudo pacman -S seahorse gnome-keyring the_silver_searcher
+    sudo pacman -S seahorse the_silver_searcher
     sudo pacman -S cups-pdf htop neovim go pkgfile rsync elixir
-	sudo pacman -S nodejs whois nmap poppler-data rtmpdump ffmpeg 
+	sudo pacman -S nodejs whois nmap poppler-data ffmpeg 
 	sudo pacman -S aspell aspell-en httperf asciidoc sbcl
-	sudo pacman -S gdb ripgrep hub wmctrl gpaste pkgstats
-	sudo pacman -S linux-docs ansible pwgen gauche screen ipcalc
-	sudo pacman -S arch-install-scripts ctags ack parallel
+	sudo pacman -S gdb hub wmctrl gpaste pkgstats
+	sudo pacman -S linux-docs pwgen gauche screen ipcalc
+	sudo pacman -S arch-install-scripts ctags parallel
 	sudo pacman -S pandoc texlive-langjapanese texlive-latexextra
-	sudo pacman -S rust cargo shellcheck php cscope typescript
+	sudo pacman -S shellcheck php cscope typescript
 	sudo pacman -S noto-fonts-cjk arc-gtk-theme jq dnsmasq
-	sudo pacman -S docker docker-compose zsh-syntax-highlighting
+	sudo pacman -S docker zsh-syntax-highlighting
 	sudo pacman -S npm llvm llvm-libs lldb hdparm rxvt-unicode 
 	sudo pacman -S mariadb-clients postgresql-libs tig lsof fzf
-	sudo pacman -S debootstrap tcpdump chromium bashdb pdfgrep
+	sudo pacman -S debootstrap tcpdump pdfgrep
 	sudo pacman -S alsa-utils mlocate traceroute hugo mpv jhead
 	sudo pacman -S nethogs optipng jpegoptim noto-fonts-emoji
-	sudo pacman -S debian-archive-keyring irssi tree python-pip
+	sudo pacman -S debian-archive-keyring tree python-pip
 	sudo pacman -S mathjax strace valgrind phantomjs p7zip unace
 	sudo pacman -S yarn geckodriver w3m neomutt iperf redis
 	sudo pacman -S highlight lynx elinks mediainfo cpio flameshot
 	sudo pacman -S oath-toolkit imagemagick
-	sudo pacman -S bookworm ansible-lint ruby ruby-rdoc
+	sudo pacman -S bookworm ruby ruby-rdoc
 
 #### Install using yaourt
 
@@ -370,6 +371,9 @@ You can make install from here
 
 	pip install --user --upgrade pip
 	pip install --user virtualenv
+	pip install --user ansible
+	pip install --user ansible-lint
+	pip install --user docker-compose
 	pip install --user virtualenvwrapper
 	pip install --user seaborn
 	pip install --user ipywidgets
