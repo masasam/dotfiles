@@ -20,7 +20,6 @@ init: ## Initial deploy dotfiles
 
 initroot: ## Initial deploy need root authority
 	sudo ln -vsf ${PWD}/etc/pacman.conf   /etc/pacman.conf
-	#sudo ln -vsf ${PWD}/etc/mysql/my.cnf   /etc/mysql/my.cnf
 	sudo ln -vsf ${PWD}/etc/dnsmasq/resolv.dnsmasq.conf   /etc/resolv.dnsmasq.conf
 	sudo ln -vsf ${PWD}/etc/dnsmasq/dnsmasq.conf   /etc/dnsmasq.conf
 	sudo ln -vsf ${PWD}/etc/sysctl.d/40-max-user-watches.conf   /etc/sysctl.d/40-max-user-watches.conf
@@ -309,6 +308,7 @@ docker: ## Docker initial setup
 
 mariadb: # Mariadb initial setup
 	sudo pacman -S mariadb mariadb-clients
+	sudo ln -vsf ${PWD}/etc/mysql/my.cnf   /etc/mysql/my.cnf
 	sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
 	sudo systemctl start mariadb.service
 	mysql_secure_installation
