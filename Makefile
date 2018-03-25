@@ -47,33 +47,28 @@ initdropbox: ## Initial deploy dotfiles using dropbox
 	chmod 600   ${HOME}/.ssh/id_rsa
 
 install: ## Install arch linux packages using pacman
-	sudo pacman -S go zsh git vim tmux keychain \
-	zsh-completions gnome-tweak-tool xsel emacs evince unrar seahorse hugo mpv \
-	inkscape file-roller xclip atool debootstrap valgrind \
-	the_silver_searcher powertop cifs-utils elinks gvfs-smb unace iperf \
-	cups-pdf openssh firefox firefox-i18n-ja gimp strace lhasa \
-	pkgfile baobab dconf-editor rsync nodejs debian-archive-keyring \
-	nmap poppler-data ffmpeg asciidoc sbcl docker aspell aspell-en \
-	gdb wmctrl pwgen linux-docs htop tcpdump gvfs p7zip lzop \
+	sudo pacman -S go zsh git vim tmux keychain evince unrar seahorse hugo mpv \
+	zsh-completions gnome-tweak-tool xsel emacs gvfs-smb unace iperf valgrind \
+	inkscape file-roller xclip atool debootstrap oath-toolkit imagemagick lynx \
+	the_silver_searcher powertop cifs-utils elinks flameshot ruby-rdoc ipcalc \
+	cups-pdf openssh firefox firefox-i18n-ja gimp strace lhasa hub bookworm tig \
+	pkgfile baobab dconf-editor rsync nodejs debian-archive-keyring gauche cpio \
+	nmap poppler-data ffmpeg asciidoc sbcl docker aspell aspell-en screen mosh \
+	gdb wmctrl pwgen linux-docs htop tcpdump gvfs p7zip lzop fzf gpaste optipng \
 	arch-install-scripts termite neovim pandoc jq sylpheed pkgstats python-pip \
 	texlive-langjapanese yarn texlive-latexextra ctags hdparm eog noto-fonts-cjk \
-	arc-gtk-theme npm typescript chromium llvm llvm-libs lldb php \
-	zsh-syntax-highlighting shellcheck bash-completion mathjax expect \
-	dnsmasq cscope lsof postgresql-libs pdfgrep gnu-netcat urxvt-perls cmatrix \
-	curl parallel alsa-utils mlocate traceroute jhead whois ruby \
-	noto-fonts-emoji gpaste nethogs optipng jpegoptim elixir geckodriver ipcalc \
-	gauche screen tig mosh fzf tree w3m neomutt highlight mediainfo cpio lynx \
-	oath-toolkit imagemagick flameshot ruby-rdoc \
-	hub bookworm
+	arc-gtk-theme npm typescript chromium llvm llvm-libs lldb php tree w3m neomutt \
+	zsh-syntax-highlighting shellcheck bash-completion mathjax expect elixir lsof \
+	dnsmasq cscope postgresql-libs pdfgrep gnu-netcat urxvt-perls cmatrix jpegoptim \
+	curl parallel alsa-utils mlocate traceroute jhead whois ruby noto-fonts-emoji \
+	nethogs geckodriver highlight mediainfo
 	sudo pkgfile --update
 
 aur: ## Install arch linux AUR packages using yaourt
 	yaourt -S drone-cli
-	yaourt -S dropbox
 	yaourt -S git-secrets
 	yaourt -S nkf
 	yaourt -S peek
-	yaourt -S profile-sync-daemon
 	yaourt -S screenkey
 
 pipinstall: ## Install python packages
@@ -331,6 +326,7 @@ mongodb: ## Mongodb initial setup
 	sudo systemctl start mongodb.service
 
 psd: ## Profile-Sync-Daemon initial setup
+	yaourt -S profile-sync-daemon
 	mkdir -p ${HOME}/.config/psd
 	ln -vsf ${PWD}/.config/psd/psd.conf   ${HOME}/.config/psd/psd.conf
 	echo "${USER} ALL=(ALL) NOPASSWD: /usr/bin/psd-overlay-helper" | sudo EDITOR='tee -a' visudo
