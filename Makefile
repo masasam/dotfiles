@@ -166,24 +166,31 @@ nodenv: ## Install nodenv node-build
 	yaourt -S nodenv
 	git clone https://github.com/nodenv/node-build.git ${HOME}/.nodenv/plugins/node-build
 
-rails: ## Create rails app
+rbenv: ## Install rvenv ruby-build
 	yaourt -S rbenv
 	yaourt -S ruby-build
 	rbenv install 2.5.0
-	rbenv global 2.5.0
-	rbenv rehash
-	gem install bundler
-	gem install rails -v 5.2.0.rc2
-	cd ${HOME}/src/github.com/masasam
-	rails new railsapp --webpack=react --database=mysql --skip-test
-	cd railsapp
-	rbenv local 2.5.0
-	bundle install --path vendor/bundle
-	yarn install
-	bundle exec rake db:create
-	bundle exec rake db:migrate
-	bundle exec rails server
-	cd -; cd -
+
+rails: ## Create rails app
+	export RBENV_ROOT="${HOME}/.rbenv";\
+	if [ -d "${RBENV_ROOT}" ]; then \
+	  export PATH="${RBENV_ROOT}/bin:${PATH}";\
+	  eval "$(rbenv init -)";\
+	fi;\
+	rbenv global 2.5.0;\
+	rbenv rehash;\
+	mkdir -p ${HOME}/src/github.com/masasam/myapp;\
+	cd ${HOME}/src/github.com/masasam/myapp;\
+	rbenv local 2.5.0;\
+	bundle init;\
+	echo "gem 'rails', '~> 5.2.0.rc2'" >> Gemfile;\
+	bundle install --path vendor/bundle;\
+	bundle exec rails new -B --webpack=react --database=mysql --skip-test .;\
+	bundle install;\
+	bundle exec rails webpacker:install;\
+	bundle exec rake db:create;\
+	bundle exec rake db:migrate;\
+	cd -
 
 rustinstall: ## Install rust and rust packages
 	sudo pacman -S cmake
@@ -299,6 +306,7 @@ mariadb: # Mariadb initial setup
 	sudo pacman -S mariadb mariadb-clients
 	sudo ln -vsf ${PWD}/etc/mysql/my.cnf   /etc/mysql/my.cnf
 	sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
+	sudo systemctl enable mariadb.service
 	sudo systemctl start mariadb.service
 	mysql_secure_installation
 	mysql -u root -p < ${HOME}/Dropbox/mariadb/world.sql/data
