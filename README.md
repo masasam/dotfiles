@@ -318,6 +318,8 @@ Preparing dotfiles
 
 #### ctrl key
 
+        sudo pacman -S dconf-editor
+
 	dconf write /org/gnome/desktop/input-sources/xkb-options \'ctrl:swapcaps\'
 
 	dconf write /org/gnome/desktop/interface/gtk-key-theme \'Emacs\'
@@ -362,10 +364,10 @@ You can make install from here
 	sudo pacman -S bookworm ruby ruby-rdoc
 
 # dconf setting
+	
+	dconf-editor /org/gnome/desktop/interface/gtk-theme 'Arc-Dark'
 
-	dconf write /org/gnome/desktop/interface/gtk-theme \'Arc-Dark\'
-
-	dconf write /org/gnome/desktop/interface/clock-show-date \'True\'
+	dconf-editor /org/gnome/desktop/interface/clock-show-date 'True'
 
 ## Activity
 
