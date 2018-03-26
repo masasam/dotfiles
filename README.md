@@ -309,7 +309,11 @@ Preparing dotfiles
 	cd ~/Pictures
 	git clone -b image git@github.com:masasam/image.git
 
- ※ When git cloning with ssh, it is necessary to put the public key first in .ssh
+#### ctrl key
+
+	dconf write /org/gnome/desktop/input-sources/xkb-options \'ctrl:swapcaps\'
+
+	dconf write /org/gnome/desktop/interface/gtk-key-theme \'Emacs\'
 
 --------------------------------------
 
@@ -489,10 +493,6 @@ Create rails app
     cask update
 
 # dconf setting
-
-	dconf write /org/gnome/desktop/input-sources/xkb-options \'ctrl:swapcaps\'
-
-	dconf write /org/gnome/desktop/interface/gtk-key-theme \'Emacs\'
 
 	dconf write /org/gnome/desktop/interface/gtk-theme \'Arc-Dark\'
 
