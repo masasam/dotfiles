@@ -258,11 +258,11 @@ Preparing the net environment
 After using NetworkManager, use it with wifi.
 You can not wifi unless you turn off dhcpcd.
 
-    sudo pacman -S networkmanager
+    pacman -S networkmanager
     systemctl disable dhcpcd.service
     systemctl enable NetworkManager.service
-    sudo pacman -S otf-ipafont
-	exit
+    pacman -S otf-ipafont
+    exit
     reboot
 
 #### Login with ${USER} to arrange home directory
