@@ -48,7 +48,7 @@ initdropbox: ## Initial deploy dotfiles using dropbox
 
 install: ## Install arch linux packages using pacman
 	sudo pacman -S go zsh git vim tmux keychain evince unrar seahorse hugo mpv \
-	zsh-completions gnome-tweak-tool xsel emacs gvfs-smb unace iperf valgrind \
+	zsh-completions xsel emacs gvfs-smb unace iperf valgrind \
 	inkscape file-roller xclip atool debootstrap oath-toolkit imagemagick lynx \
 	the_silver_searcher powertop cifs-utils elinks flameshot ruby-rdoc ipcalc \
 	cups-pdf openssh firefox firefox-i18n-ja gimp strace lhasa hub bookworm tig \
