@@ -113,6 +113,7 @@ pipinstall: ## Install python packages
 	pip install --user jupyterlab
 	pip install --user cheat
 	pip install --user faker
+	pip install --user pygments
 
 pipbackup: ## Backup python packages
 	mkdir -p ${PWD}/archlinux
@@ -243,6 +244,7 @@ melpa: ## Install emacs packages from MELPA using cask package manager
 	ln -vsfn ${PWD}/.emacs.d   ${HOME}/.emacs.d
 	export PATH="$HOME/.cask/bin:$PATH"
 	cd ${HOME}/.emacs.d/; cask upgrade;cask install
+	cd -
 
 melpaupdate: ## Update emacs packages and backup 6 generations packages
 	export PATH="$HOME/.cask/bin:$PATH"
@@ -268,7 +270,6 @@ melpacleanup: ## Cleaninstall emacs packages (When emacs version up, always exec
 
 gnuglobal: ## Install gnu global
 	mkdir -p ${HOME}/.local
-	pip install --user pygments
 	yaourt -S global
 
 backup: ## Backup arch linux packages
