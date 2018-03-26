@@ -13,11 +13,6 @@
 (global-set-key [(control ?,)] 'goto-last-change-reverse)
 
 
-;; undo-tree
-(require 'undo-tree)
-(global-undo-tree-mode t)
-
-
 ;; editorconfig
 (editorconfig-mode 1)
 
