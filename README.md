@@ -453,23 +453,17 @@ You can make install from here
 
 Create rails app
 
-	export RBENV_ROOT="${HOME}/.rbenv";\
-	if [ -d "${RBENV_ROOT}" ]; then \
-	  export PATH="${RBENV_ROOT}/bin:${PATH}";\
-	  eval "$(rbenv init -)";\
-	fi;\
-	rbenv global 2.5.0;\
-	rbenv rehash;\
-	mkdir -p ${HOME}/src/github.com/masasam/myapp;\
-	cd ${HOME}/src/github.com/masasam/myapp;\
-	rbenv local 2.5.0;\
-	bundle init;\
-	echo "gem 'rails', '~> 5.2.0.rc2'" >> Gemfile;\
-	bundle install --path vendor/bundle;\
-	bundle exec rails new -B --webpack=react --database=mysql --skip-test .;\
-	bundle install;\
-	bundle exec rails webpacker:install;\
-	cd -
+	rbenv global 2.5.0
+	rbenv rehash
+	mkdir -p ${HOME}/src/github.com/masasam/myapp
+	cd ${HOME}/src/github.com/masasam/myapp
+	rbenv local 2.5.0
+	bundle init
+	echo "gem 'rails', '~> 5.2.0.rc2'" >> Gemfile
+	bundle install --path vendor/bundle
+	bundle exec rails new -B --webpack=react --database=mysql --skip-test .
+	bundle install
+	bundle exec rails webpacker:install
 
 #### Install using rust
 
