@@ -185,6 +185,7 @@ rails: ## Create rails app
 	bundle exec rake db:create
 	bundle exec rake db:migrate
 	bundle exec rails server
+	cd -
 
 rustinstall: ## Install rust and rust packages
 	sudo pacman -S cmake
@@ -412,13 +413,6 @@ kubernetes-portforward-postgres: ## Portforward for postgres
 
 kubernetes-postgres-dmup: ## Kubernetes-portforward-postgres next to command
 	pg_dump -U root -h localhost dbname > pgdump
-
-terminal-slack: ## Install and init terminal-slack
-	git clone https://github.com/evanyeung/terminal-slack.git
-	cd ${HOME}/src/github.com/evanyeung/terminal-slack
-	yarn install
-	sudo ln -vsf ${HOME}/Dropbox/slack/slack-emacs   /usr/local/bin/slack-emacs
-	sudo chmod a+x   /usr/local/bin/slack-emacs
 
 zoom: ## Install zoom for web conference
 	sudo pacman -U ${HOME}/Dropbox/arch/zoom_x86_64.pkg.tar.xz
