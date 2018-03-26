@@ -445,7 +445,6 @@ If you make a mistake on the letters, erase all with Ctrl-u
 	go get -u -v github.com/josharian/impl
 	go get -u -v github.com/jstemmer/gotags
 	go get -u -v github.com/golang/dep/cmd/dep
-	go get -u -v github.com/pressly/goose/cmd/goose
 	go get -u -v github.com/motemen/ghq
 	go get -u -v github.com/sonatard/ghs
 	go get -u -v github.com/kyoshidajp/ghkw
@@ -466,9 +465,6 @@ If you make a mistake on the letters, erase all with Ctrl-u
 	yarn global add prettier
 	yarn global add firebase-tools
 	yarn global add heroku-cli
-	yarn global add webpack
-	yarn global add gulp
-	yarn global add tldr
 
 #### rbenv rails
 
@@ -476,7 +472,7 @@ If you make a mistake on the letters, erase all with Ctrl-u
 	yaourt -S ruby-build
 	rbenv install 2.5.0
 
-Create rails app
+#### Create rails app
 
 	rbenv global 2.5.0
 	rbenv rehash
