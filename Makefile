@@ -106,8 +106,6 @@ pipinstall: ## Install python packages
 	pip install --user awscli
 	pip install --user progressbar2
 	pip install --user ranger-fm
-	pip install --user rainbowstream
-	pip install --user haxor-news
 	pip install --user rtv
 	pip install --user jupyterthemes
 	pip install --user httpie
