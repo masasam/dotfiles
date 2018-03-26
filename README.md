@@ -151,6 +151,13 @@ Format and mount with ext4
     mkfs.ext4 /dev/sda2
     mount /dev/sda2 /mnt
 
+Connect internet with wifi
+
+    ip link
+    rfkill list
+    rfkill unblock 0
+    wifi-menu wlp0s29f7u1
+
 vi /etc/pacman.d/mirrorlist
 
     Server = http://ftp.jaist.ac.jp/pub/Linux/ArchLinux/$repo/os/$arch
