@@ -1,10 +1,6 @@
-ack
 alsa-utils
-ansible
-ansible-lint
 arc-gtk-theme
 arch-install-scripts
-archlinux-wallpaper
 asciidoc
 aspell-en
 atool
@@ -18,6 +14,7 @@ bison
 bookworm
 bzip2
 chromium
+cmake
 cmatrix
 coreutils
 cpio
@@ -33,7 +30,6 @@ dhcpcd
 diffutils
 dnsmasq
 docker
-docker-compose
 e2fsprogs
 elinks
 elixir
@@ -41,7 +37,6 @@ emacs
 eog
 evince
 expect
-extundelete
 fakeroot
 file
 file-roller
@@ -66,8 +61,7 @@ glibc
 gnome-backgrounds
 gnome-control-center
 gnome-keyring
-gnome-shell-extensions
-gnome-tweak-tool
+gnome-tweaks
 gnu-netcat
 go
 gpaste
@@ -88,7 +82,6 @@ ipcalc
 iperf
 iproute2
 iputils
-irssi
 jfsutils
 jhead
 jpegoptim
@@ -101,7 +94,6 @@ libva-intel-driver
 licenses
 linux
 linux-docs
-linux-manpages
 lldb
 llvm
 logrotate
@@ -122,6 +114,7 @@ mlocate
 mosh
 mpv
 nano
+nautilus
 nautilus-dropbox
 neomutt
 neovim
@@ -134,7 +127,6 @@ noto-fonts-cjk
 noto-fonts-emoji
 npm
 oath-toolkit
-openssh
 optipng
 otf-ipafont
 p7zip
@@ -157,10 +149,8 @@ procps-ng
 psmisc
 pwgen
 python-pip
-python2-pygments
 redis
 reiserfsprogs
-ripgrep
 rsync
 ruby
 ruby-rdoc
@@ -196,11 +186,9 @@ urxvt-perls
 usbutils
 util-linux
 valgrind
-varnish
 vi
 vim
 w3m
-wget
 which
 whois
 wmctrl
@@ -208,15 +196,17 @@ xclip
 xdg-user-dirs
 xf86-video-intel
 xfsprogs
+xorg-bdftopcf
 xorg-iceauth
 xorg-luit
+xorg-mkfontdir
+xorg-mkfontscale
 xorg-server
 xorg-sessreg
 xorg-smproxy
 xorg-x11perf
 xorg-xauth
 xorg-xbacklight
-xorg-xclock
 xorg-xcmsdb
 xorg-xcursorgen
 xorg-xdpyinfo
@@ -224,7 +214,6 @@ xorg-xdriinfo
 xorg-xev
 xorg-xgamma
 xorg-xhost
-xorg-xinit
 xorg-xinput
 xorg-xkbevd
 xorg-xkbutils
