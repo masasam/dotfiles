@@ -166,7 +166,7 @@ nodeinstall: ## Install node packages
 
 nodenv: ## Install nodenv node-build
 	yaourt -S nodenv
-	git clone https://github.com/nodenv/node-build.git ~/.nodenv/plugins/node-build
+	git clone https://github.com/nodenv/node-build.git ${HOME}/.nodenv/plugins/node-build
 
 rails: ## Create rails app
 	yaourt -S rbenv
@@ -176,7 +176,7 @@ rails: ## Create rails app
 	rbenv rehash
 	gem install bundler
 	gem install rails -v 5.2.0.rc2
-	cd ~/src/github.com/masasam
+	cd ${HOME}/src/github.com/masasam
 	rails new railsapp --webpack=react --database=mysql --skip-test
 	cd railsapp
 	rbenv local 2.5.0
@@ -185,7 +185,7 @@ rails: ## Create rails app
 	bundle exec rake db:create
 	bundle exec rake db:migrate
 	bundle exec rails server
-	cd -
+	cd -; cd -
 
 rustinstall: ## Install rust and rust packages
 	sudo pacman -S cmake
@@ -207,7 +207,7 @@ rustupdate: ## Update rust packages
 	cargo install-update -a
 
 tmux: ## Install tmux plugins
-	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+	git clone https://github.com/tmux-plugins/tpm ${HOME}/.tmux/plugins/tpm
 
 neomutt: ## Init neomutt mail client
 	mkdir -p ${HOME}/.mutt
