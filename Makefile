@@ -322,13 +322,6 @@ mongodb: ## Mongodb initial setup
 	sudo systemctl enable mongodb.service
 	sudo systemctl start mongodb.service
 
-psd: ## Profile-Sync-Daemon initial setup
-	yaourt -S profile-sync-daemon
-	mkdir -p ${HOME}/.config/psd
-	ln -vsf ${PWD}/.config/psd/psd.conf   ${HOME}/.config/psd/psd.conf
-	echo "${USER} ALL=(ALL) NOPASSWD: /usr/bin/psd-overlay-helper" | sudo EDITOR='tee -a' visudo
-	systemctl --user enable psd.service
-
 powertop: ## Powertop initial setup (Warning take a long time)
 	sudo powertop --calibrate
 	sudo systemctl enable powertop
@@ -476,7 +469,7 @@ update: ## Update arch linux packages and save packages cache 3 generations
 
 allinit: init initroot initdropbox
 
-allinstall: ttf-cica install pipinstall goinstall melpa rustinstall nodeinstall aur mozc neomutt docker mariadb psd neovim redis nodenv
+allinstall: ttf-cica install pipinstall goinstall melpa rustinstall nodeinstall aur mozc neomutt docker mariadb neovim redis
 
 allupdate: update melpaupdate pipupdate rustupdate goinstall
 
