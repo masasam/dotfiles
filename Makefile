@@ -188,8 +188,6 @@ rails: ## Create rails app
 	bundle exec rails new -B --webpack=react --database=mysql --skip-test .;\
 	bundle install;\
 	bundle exec rails webpacker:install;\
-	bundle exec rake db:create;\
-	bundle exec rake db:migrate;\
 	cd -
 
 rustinstall: ## Install rust and rust packages

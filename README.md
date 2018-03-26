@@ -403,8 +403,6 @@ You can make install from here
 	pip install --user awscli
 	pip install --user progressbar2
 	pip install --user ranger-fm
-	pip install --user rainbowstream
-	pip install --user haxor-news
 	pip install --user rtv
 	pip install --user jupyterthemes
 	pip install --user httpie
@@ -447,14 +445,31 @@ You can make install from here
 	yarn global add gulp
 	yarn global add tldr
 
-#### Install using gem
+#### rbenv rails
 
-	gem install --user-install bundle
-	gem install --user-install jekyll
-	gem install --user-install pry pry-doc
-	gem install --user-install github-markup
-	gem install --user-install language_server
-	gem install --user-install rubocop
+	yaourt -S rbenv
+	yaourt -S ruby-build
+	rbenv install 2.5.0
+
+Create rails app
+
+	export RBENV_ROOT="${HOME}/.rbenv";\
+	if [ -d "${RBENV_ROOT}" ]; then \
+	  export PATH="${RBENV_ROOT}/bin:${PATH}";\
+	  eval "$(rbenv init -)";\
+	fi;\
+	rbenv global 2.5.0;\
+	rbenv rehash;\
+	mkdir -p ${HOME}/src/github.com/masasam/myapp;\
+	cd ${HOME}/src/github.com/masasam/myapp;\
+	rbenv local 2.5.0;\
+	bundle init;\
+	echo "gem 'rails', '~> 5.2.0.rc2'" >> Gemfile;\
+	bundle install --path vendor/bundle;\
+	bundle exec rails new -B --webpack=react --database=mysql --skip-test .;\
+	bundle install;\
+	bundle exec rails webpacker:install;\
+	cd -
 
 #### Install using rust
 
