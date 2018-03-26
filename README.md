@@ -32,7 +32,7 @@ You can deploy dotfiles with
 
     make init
 
-### With Makefile, you will be able to recover your usual environment in 30 minutes
+### With Makefile, you will be able to recover your usual environment in 1hour
 
 ![make](https://raw.githubusercontent.com/masasam/image/image/make.png)
 
@@ -235,7 +235,7 @@ Set boot loader
     grub-install --recheck /dev/sda
     grub-mkconfig -o /boot/grub/grub.cfg
 
-#### Prepare drivers and Xorg Gnome wifi
+#### Prepare drivers and Xorg Gnome
 
 Install drivers that match your environment
 
