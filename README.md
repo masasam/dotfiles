@@ -354,6 +354,28 @@ You can make install from here
 	sudo pacman -S oath-toolkit imagemagick
 	sudo pacman -S bookworm ruby ruby-rdoc
 
+# dconf setting
+
+	dconf write /org/gnome/desktop/interface/gtk-theme \'Arc-Dark\'
+
+	dconf write /org/gnome/desktop/interface/clock-show-date \'True\'
+
+## Activity
+
+![activity](https://raw.githubusercontent.com/masasam/image/image/activity.png)
+
+Activities> Settings> Search
+
+Turn it all off
+
+Activities> Settings> Keyboard> Shortcut
+
+>Display System - Activity screen [Alt + Space]
+
+>Ctrl-u
+
+If you make a mistake on the letters, erase all with Ctrl-u
+
 #### Install using yaourt
 
 	yaourt -S drone-cli
@@ -366,7 +388,6 @@ You can make install from here
 	yaourt -S nkf
 	yaourt -S nodenv
 	yaourt -S peek
-	yaourt -S profile-sync-daemon
 	yaourt -S rbenv
 	yaourt -S ruby-build
 	yaourt -S screenkey
@@ -492,12 +513,6 @@ Create rails app
     cask install
     cask update
 
-# dconf setting
-
-	dconf write /org/gnome/desktop/interface/gtk-theme \'Arc-Dark\'
-
-	dconf write /org/gnome/desktop/interface/clock-show-date \'True\'
-
 # Terminal
 
 ![terminal](https://raw.githubusercontent.com/masasam/image/image/tmux.png)
@@ -539,38 +554,6 @@ sudo vim /etc/systemd/system/powertop.service
 
 Succeed if all of this tab is Good
 
-# Profile-Sync-Daemon
-
-Chromium, firefox cache and profile is fast when it put on memory.
-
-As the frequency of synchronization to the disk decreases, it also has the effect of preventing consumption of the SSD.
-
->yaourt -S profile-sync-daemon
-
-visudo
-
-    ${USER} ALL=(ALL) NOPASSWD: /usr/bin/psd-overlay-helper
-
->psd p
-
-vim ~/.config/psd/psd.conf
-
-    USE_OVERLAYFS="yes"
-    BROWSERS="chromium firefox"
-
->psd p
-
-#### To automatically start psd
-
->systemctl --user enable psd.service
->reboot
-
-Check if it is moving
-
-After restart
-
->systemctl --user status psd
-
 # Enable DNS cache
 
 Install dnsmasq
@@ -589,22 +572,6 @@ When restarting NetworkManager, dnsmasq is set to be automatically usable.
 Do the same DNS lookup twice on drill command.
 
 ![dnsmasq](https://raw.githubusercontent.com/masasam/image/image/dnsmasq.png)
-
-## Activity
-
-![activity](https://raw.githubusercontent.com/masasam/image/image/activity.png)
-
-Activities> Settings> Search
-
-Turn it all off
-
-Activities> Settings> Keyboard> Shortcut
-
->Display System - Activity screen [Alt + Space]
-
->Ctrl-u
-
-If you make a mistake on the letters, erase all with Ctrl-u
 
 # Mozc
 
