@@ -63,6 +63,7 @@
 (depends-on "jinja2-mode")
 (depends-on "js2-mode")
 (depends-on "json-mode")
+(depends-on "lispy")
 (depends-on "macrostep")
 (depends-on "magit")
 (depends-on "markdown-mode")
