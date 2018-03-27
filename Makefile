@@ -193,17 +193,16 @@ rails: ## Create rails app
 rustinstall: ## Install rust and rust packages
 	sudo pacman -S cmake
 	mkdir -p ${HOME}/.cargo
-	export PATH="$HOME/.cargo/bin:$PATH";\
-	curl -sSf https://sh.rustup.rs | sh;\
-	cargo install racer;\
-	cargo install cargo-update;\
-	cargo install cargo-script;\
-	cargo install cargo-edit;\
-	cargo install ripgrep;\
-	cargo install exa;\
-	cargo install fd-find;\
-	cargo install xsv;\
-	cargo install hyperfine;\
+	curl -sSf https://sh.rustup.rs | sh
+	cargo install racer
+	cargo install cargo-update
+	cargo install cargo-script
+	cargo install cargo-edit
+	cargo install ripgrep
+	cargo install exa
+	cargo install fd-find
+	cargo install xsv
+	cargo install hyperfine
 	rustup component add rust-src
 
 rustupdate: ## Update rust packages
