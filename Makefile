@@ -10,17 +10,9 @@ init: ## Initial deploy dotfiles
 	ln -vsf ${PWD}/.tern-config   ${HOME}/.tern-config
 	ln -vsf ${PWD}/.tmux.conf   ${HOME}/.tmux.conf
 	ln -vsf ${PWD}/.screenrc   ${HOME}/.screenrc
-	ln -vsf ${PWD}/.xinitrc   ${HOME}/.xinitrc
-	ln -vsf ${PWD}/.Xresources   ${HOME}/.Xresources
 	ln -vsf ${PWD}/.aspell.conf   ${HOME}/.aspell.conf
 	mkdir -p ${HOME}/.config
 	ln -vsf ${PWD}/.config/screenkey.json ${HOME}/.config/screenkey.json
-	mkdir -p ${HOME}/.config/termite
-	ln -vsf ${PWD}/.config/termite/config   ${HOME}/.config/termite/config
-	mkdir -p ${HOME}/.mlterm
-	ln -vsf ${PWD}/.mlterm/main   ${HOME}/.mlterm/main
-	ln -vsf ${PWD}/.mlterm/color   ${HOME}/.mlterm/color
-	ln -vsf ${PWD}/.mlterm/aafont   ${HOME}/.mlterm/aafont
 
 initroot: ## Initial deploy need root authority
 	sudo ln -vsf ${PWD}/etc/pacman.conf   /etc/pacman.conf
@@ -59,13 +51,12 @@ install: ## Install arch linux packages using pacman
 	pkgfile baobab dconf-editor rsync nodejs debian-archive-keyring gauche cpio \
 	nmap poppler-data ffmpeg asciidoc sbcl docker aspell aspell-en screen mosh \
 	gdb wmctrl pwgen linux-docs htop tcpdump gvfs p7zip lzop fzf gpaste optipng \
-	arch-install-scripts termite neovim pandoc jq sylpheed pkgstats python-pip \
+	arch-install-scripts pandoc jq sylpheed pkgstats python-pip ruby highlight  \
 	texlive-langjapanese yarn texlive-latexextra ctags hdparm eog noto-fonts-cjk \
 	arc-gtk-theme npm typescript chromium llvm llvm-libs lldb php tree w3m neomutt \
 	zsh-syntax-highlighting shellcheck bash-completion mathjax expect elixir lsof \
-	dnsmasq cscope postgresql-libs pdfgrep gnu-netcat urxvt-perls cmatrix jpegoptim \
-	curl parallel alsa-utils mlocate traceroute jhead whois geckodriver nethogs \
-	ruby highlight mediainfo
+	dnsmasq cscope postgresql-libs pdfgrep gnu-netcat cmatrix jpegoptim mediainfo \
+	curl parallel alsa-utils mlocate traceroute jhead whois geckodriver nethogs
 	sudo pkgfile --update
 
 aur: ## Install arch linux AUR packages using yaourt
@@ -223,6 +214,23 @@ neomutt: ## Init neomutt mail client
 	yaourt -S goobook-git
 	goobook authenticate
 
+urxvt: ## Init urxvt terminal
+	sudo pacman -S urxvt-perls
+	ln -vsf ${PWD}/.xinitrc   ${HOME}/.xinitrc
+	ln -vsf ${PWD}/.Xresources   ${HOME}/.Xresources
+
+mlterm: ## Init mlterm terminal
+	yaourt -S mlterm
+	mkdir -p ${HOME}/.mlterm
+	ln -vsf ${PWD}/.mlterm/main   ${HOME}/.mlterm/main
+	ln -vsf ${PWD}/.mlterm/color   ${HOME}/.mlterm/color
+	ln -vsf ${PWD}/.mlterm/aafont   ${HOME}/.mlterm/aafont
+
+termite: ## Init termite terminal
+	sudo pacman -S termite
+	mkdir -p ${HOME}/.config/termite
+	ln -vsf ${PWD}/.config/termite/config   ${HOME}/.config/termite/config
+
 aws: ## Init aws cli
 	test -L ${HOME}/.aws || rm -rf ${HOME}/.aws
 	ln -vsfn ${HOME}/Dropbox/zsh/.aws   ${HOME}/.aws
@@ -288,6 +296,7 @@ recover: ## Recover arch linux packages from backup
 	yaourt -S --needed $(DOY) `cat ${PWD}/archlinux/yaourtlist`
 
 neovim: ## Init neovim
+	sudo pacman -S neovim
 	mkdir -p ${HOME}/.config/nvim
 	ln -vsf ${PWD}/.config/nvim/init.vim   ${HOME}/.config/nvim/init.vim
 	ln -vsf ${PWD}/.config/nvim/installer.sh   ${HOME}/.config/nvim/installer.sh
