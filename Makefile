@@ -128,7 +128,7 @@ pipupdate: ## Update python packages
 goinstall: ## Install go packages
 	mkdir -p ${HOME}/{bin,src}
 	export GOPATH=${HOME};\
-	export PATH="$PATH:$GOPATH/bin";\
+	export PATH="/usr/bin:${HOME}/bin";\
 	go get -u -v github.com/nsf/gocode;\
 	go get -u -v github.com/rogpeppe/godef;\
 	go get -u -v golang.org/x/tools/cmd/goimports;\
