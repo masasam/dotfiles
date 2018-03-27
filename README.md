@@ -312,6 +312,9 @@ Preparing dotfiles
 	make install
 	make init
 
+	# after set-url git
+	git remote set-url origin git@github.com:masasam/dotfiles.git
+
 	# Below is for posting images of github
 	cd ~/Pictures
 	git clone -b image git@github.com:masasam/image.git
