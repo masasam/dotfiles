@@ -468,7 +468,7 @@ update: ## Update arch linux packages and save packages cache 3 generations
 
 allinit: init initroot initdropbox
 
-allinstall: ttf-cica install pipinstall goinstall melpa rustinstall nodeinstall aur mozc neomutt docker mariadb neovim redis
+allinstall: ttf-cica install pipinstall goinstall melpa aur mozc neomutt docker mariadb neovim redis rustinstall nodeinstall
 
 allupdate: update melpaupdate pipupdate rustupdate goinstall
 
