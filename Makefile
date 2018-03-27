@@ -55,8 +55,8 @@ install: ## Install arch linux packages using pacman
 	texlive-langjapanese yarn texlive-latexextra ctags hdparm eog noto-fonts-cjk \
 	arc-gtk-theme npm typescript chromium llvm llvm-libs lldb php tree w3m neomutt \
 	zsh-syntax-highlighting shellcheck bash-completion mathjax expect elixir lsof \
-	dnsmasq cscope postgresql-libs pdfgrep gnu-netcat cmatrix jpegoptim mediainfo \
-	curl parallel alsa-utils mlocate traceroute jhead whois geckodriver nethogs
+	dnsmasq cscope postgresql-libs pdfgrep gnu-netcat cmatrix jpegoptim nethogs \
+	curl parallel alsa-utils mlocate traceroute jhead whois geckodriver
 	sudo pkgfile --update
 
 aur: ## Install arch linux AUR packages using yaourt
@@ -165,6 +165,7 @@ rbenv: ## Install rvenv ruby-build
 	yaourt -S rbenv
 	yaourt -S ruby-build
 	rbenv install 2.5.0
+	gem install bundle
 
 rails: ## Create rails app
 	export RBENV_ROOT="${HOME}/.rbenv";\
@@ -216,7 +217,7 @@ neomutt: ## Init neomutt mail client
 
 urxvt: ## Init urxvt terminal
 	sudo pacman -S urxvt-perls
-	ln -vsf ${PWD}/.xinitrc   ${HOME}/.xinitrc
+	#ln -vsf ${PWD}/.xinitrc   ${HOME}/.xinitrc
 	ln -vsf ${PWD}/.Xresources   ${HOME}/.Xresources
 
 mlterm: ## Init mlterm terminal
