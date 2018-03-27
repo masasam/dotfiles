@@ -153,10 +153,10 @@ Format and mount with ext4
 
 Connect internet with wifi
 
-    ip link
-    rfkill list
-    rfkill unblock 0
-    wifi-menu wlp0s29f7u1
+	ip link
+	rfkill list
+	rfkill unblock 0
+	wifi-menu wlp0s29f7u1
 
 vi /etc/pacman.d/mirrorlist
 
@@ -231,21 +231,21 @@ Uncomment comment out following
 
 Set boot loader
 
-    pacman -S grub
-    grub-install --recheck /dev/sda
-    grub-mkconfig -o /boot/grub/grub.cfg
+	pacman -S grub
+	grub-install --recheck /dev/sda
+	grub-mkconfig -o /boot/grub/grub.cfg
 
 #### Prepare drivers and Xorg Gnome
 
 Install drivers that match your environment
 
-    lspci | grep VGA
-    pacman -S xf86-video-intel libva-intel-driver
-    pacman -S xorg-server xorg-apps
+	lspci | grep VGA
+	pacman -S xf86-video-intel libva-intel-driver
+	pacman -S xorg-server xorg-apps
 
 Gnome can be put as small as necessary
 
-    pacman -S gnome-backgrounds
+	pacman -S gnome-backgrounds
 	pacman -S gnome-control-center
 	pacman -S gnome-keyring
 	pacman -S nautilus
@@ -257,27 +257,27 @@ Terminal uses termite and urxvt
 
 Enable graphical login with gdm
 
-    pacman -S gdm
-    systemctl enable gdm.service
+	pacman -S gdm
+	systemctl enable gdm.service
 
 Preparing the net environment
 
 After using NetworkManager, use it with wifi.
 You can not wifi unless you turn off dhcpcd.
 
-    pacman -S networkmanager
-    systemctl disable dhcpcd.service
-    systemctl enable NetworkManager.service
-    pacman -S otf-ipafont
-    exit
-    reboot
+	pacman -S networkmanager
+	systemctl disable dhcpcd.service
+	systemctl enable NetworkManager.service
+	pacman -S otf-ipafont
+	exit
+	reboot
 
 #### Login with ${USER} to arrange home directory
 
-    sudo pacman -S xdg-user-dirs
-    LANG=C xdg-user-dirs-update --force
-    sudo pacman -S zsh git
-    sudo pacman -S chromium
+	sudo pacman -S xdg-user-dirs
+	LANG=C xdg-user-dirs-update --force
+	sudo pacman -S zsh git
+	sudo pacman -S chromium
 
 Install yaourt
 vim /etc/pacman.conf
@@ -292,15 +292,15 @@ or
 
 Synchronize yaourt latest
 
-    sudo pacman -Syy
-    sudo pacman -S yaourt
-    sudo pacman --sync --refresh yaourt
-    yaourt -Syua
+	sudo pacman -Syy
+	sudo pacman -S yaourt
+	sudo pacman --sync --refresh yaourt
+	yaourt -Syua
 	
 Install dropbox and sync
 
-    yaourt -S dropbox
-    sudo pacman -S nautilus-dropbox
+	yaourt -S dropbox
+	sudo pacman -S nautilus-dropbox
 	dropbox
 
 Preparing dotfiles
@@ -316,13 +316,19 @@ Preparing dotfiles
 	cd ~/Pictures
 	git clone -b image git@github.com:masasam/image.git
 
-#### ctrl key
+### dconf setting
 
-        sudo pacman -S dconf-editor
+    sudo pacman -S dconf-editor
 
-	dconf write /org/gnome/desktop/input-sources/xkb-options \'ctrl:swapcaps\'
+	dconf-editor /org/gnome/desktop/input-sources/xkb-options 'ctrl:swapcaps'
 
-	dconf write /org/gnome/desktop/interface/gtk-key-theme \'Emacs\'
+	dconf-editor /org/gnome/desktop/interface/gtk-key-theme 'Emacs'
+
+	dconf-editor /org/gnome/desktop/interface/enable-animations 'False'
+	
+	dconf-editor /org/gnome/desktop/interface/gtk-theme 'Arc-Dark'
+
+	dconf-editor /org/gnome/desktop/interface/clock-show-date 'True'
 
 --------------------------------------
 
@@ -362,12 +368,6 @@ You can make install from here
 	sudo pacman -S highlight lynx elinks mediainfo cpio flameshot
 	sudo pacman -S oath-toolkit imagemagick
 	sudo pacman -S bookworm ruby ruby-rdoc
-
-# dconf setting
-	
-	dconf-editor /org/gnome/desktop/interface/gtk-theme 'Arc-Dark'
-
-	dconf-editor /org/gnome/desktop/interface/clock-show-date 'True'
 
 ## Activity
 
