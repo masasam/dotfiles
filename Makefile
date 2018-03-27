@@ -126,40 +126,40 @@ pipupdate: ## Update python packages
 	pip-review --user | cut -d = -f 1 | xargs pip install -U --user
 
 goinstall: ## Install go packages
-	export GOPATH=${HOME}
-	export PATH="$PATH:$GOPATH/bin"
 	mkdir -p ${HOME}/{bin,src}
-	go get -u -v github.com/nsf/gocode
-	go get -u -v github.com/rogpeppe/godef
-	go get -u -v golang.org/x/tools/cmd/goimports
-	go get -u -v golang.org/x/tools/cmd/godoc
-	go get -u -v github.com/josharian/impl
-	go get -u -v github.com/jstemmer/gotags
-	go get -u -v github.com/golang/dep/cmd/dep
-	go get -u -v github.com/pressly/goose/cmd/goose
-	go get -u -v github.com/motemen/ghq
-	go get -u -v github.com/sonatard/ghs
-	go get -u -v github.com/kyoshidajp/ghkw
+	export GOPATH=${HOME};\
+	export PATH="$PATH:$GOPATH/bin";\
+	go get -u -v github.com/nsf/gocode;\
+	go get -u -v github.com/rogpeppe/godef;\
+	go get -u -v golang.org/x/tools/cmd/goimports;\
+	go get -u -v golang.org/x/tools/cmd/godoc;\
+	go get -u -v github.com/josharian/impl;\
+	go get -u -v github.com/jstemmer/gotags;\
+	go get -u -v github.com/golang/dep/cmd/dep;\
+	go get -u -v github.com/pressly/goose/cmd/goose;\
+	go get -u -v github.com/motemen/ghq;\
+	go get -u -v github.com/sonatard/ghs;\
+	go get -u -v github.com/kyoshidajp/ghkw;\
 	go get -u -v github.com/hashicorp/packer
 
 nodeinstall: ## Install node packages
 	mkdir -p ${HOME}/.node_modules
-	export npm_config_prefix=${HOME}/.node_modules
-	yarn global add npm
-	yarn global add tern
-	yarn global add jshint
-	yarn global add eslint
-	yarn global add babel-eslint
-	yarn global add eslint-plugin-react
-	yarn global add vue-language-server
-	yarn global add vue-cli
-	yarn global add create-react-app
-	yarn global add create-component-app
-	yarn global add prettier
-	yarn global add firebase-tools
-	yarn global add heroku-cli
-	yarn global add webpack
-	yarn global add gulp
+	export npm_config_prefix=${HOME}/.node_modules;\
+	yarn global add npm;\
+	yarn global add tern;\
+	yarn global add jshint;\
+	yarn global add eslint;\
+	yarn global add babel-eslint;\
+	yarn global add eslint-plugin-react;\
+	yarn global add vue-language-server;\
+	yarn global add vue-cli;\
+	yarn global add create-react-app;\
+	yarn global add create-component-app;\
+	yarn global add prettier;\
+	yarn global add firebase-tools;\
+	yarn global add heroku-cli;\
+	yarn global add webpack;\
+	yarn global add gulp;\
 	yarn global add tldr
 
 nodenv: ## Install nodenv node-build
@@ -193,17 +193,17 @@ rails: ## Create rails app
 rustinstall: ## Install rust and rust packages
 	sudo pacman -S cmake
 	mkdir -p ${HOME}/.cargo
-	export PATH="$HOME/.cargo/bin:$PATH"
-	curl -sSf https://sh.rustup.rs | sh
-	cargo install racer
-	cargo install cargo-update
-	cargo install cargo-script
-	cargo install cargo-edit
-	cargo install ripgrep
-	cargo install exa
-	cargo install fd-find
-	cargo install xsv
-	cargo install hyperfine
+	export PATH="$HOME/.cargo/bin:$PATH";\
+	curl -sSf https://sh.rustup.rs | sh;\
+	cargo install racer;\
+	cargo install cargo-update;\
+	cargo install cargo-script;\
+	cargo install cargo-edit;\
+	cargo install ripgrep;\
+	cargo install exa;\
+	cargo install fd-find;\
+	cargo install xsv;\
+	cargo install hyperfine;\
 	rustup component add rust-src
 
 rustupdate: ## Update rust packages
@@ -243,13 +243,13 @@ melpa: ## Install emacs packages from MELPA using cask package manager
 	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
 	test -L ${HOME}/.emacs.d || rm -rf ${HOME}/.emacs.d
 	ln -vsfn ${PWD}/.emacs.d   ${HOME}/.emacs.d
-	export PATH="$HOME/.cask/bin:$PATH"
+	export PATH="$HOME/.cask/bin:$PATH";\
 	cd ${HOME}/.emacs.d/; cask upgrade;cask install
 	cd -
 
 melpaupdate: ## Update emacs packages and backup 6 generations packages
-	export PATH="$HOME/.cask/bin:$PATH"
 	mkdir -p ${HOME}/Dropbox/emacs/cask
+	export PATH="$HOME/.cask/bin:$PATH";\
 	if [ `ls -rt ${HOME}/Dropbox/emacs/cask | head | wc -l` -gt 5 ];\
 	then \
 	rm -rf ${HOME}/Dropbox/emacs/cask/`ls -rt ${HOME}/Dropbox/emacs/cask \
@@ -266,7 +266,7 @@ melpaupdate: ## Update emacs packages and backup 6 generations packages
 	fi
 
 melpacleanup: ## Cleaninstall emacs packages (When emacs version up, always execute)
-	export PATH="$HOME/.cask/bin:$PATH"
+	export PATH="$HOME/.cask/bin:$PATH";\
 	rm -rf ${HOME}/.emacs.d/.cask; caskinstall
 
 gnuglobal: ## Install gnu global
