@@ -172,7 +172,6 @@ gnome-session
 gnome-settings-daemon
 gnome-shell
 gnome-themes-extra
-gnome-tweaks
 gnu-netcat
 gnupg
 gnustep-base
@@ -861,7 +860,7 @@ vim
 vim-runtime
 volume_key
 vte-common
-vte3-ng
+vte3
 vulkan-icd-loader
 w3m
 wavpack

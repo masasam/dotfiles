@@ -48,7 +48,7 @@ initdropbox: ## Initial deploy dotfiles using dropbox
 
 install: ## Install arch linux packages using pacman
 	sudo pacman -S go zsh git vim tmux keychain evince unrar seahorse hugo mpv \
-	zsh-completions xsel emacs gvfs-smb unace iperf valgrind \
+	zsh-completions xsel emacs gvfs-smb unace iperf valgrind noto-fonts-emoji \
 	inkscape file-roller xclip atool debootstrap oath-toolkit imagemagick lynx \
 	the_silver_searcher powertop cifs-utils elinks flameshot ruby-rdoc ipcalc \
 	cups-pdf openssh firefox firefox-i18n-ja gimp strace lhasa hub bookworm tig \
@@ -60,8 +60,8 @@ install: ## Install arch linux packages using pacman
 	arc-gtk-theme npm typescript chromium llvm llvm-libs lldb php tree w3m neomutt \
 	zsh-syntax-highlighting shellcheck bash-completion mathjax expect elixir lsof \
 	dnsmasq cscope postgresql-libs pdfgrep gnu-netcat urxvt-perls cmatrix jpegoptim \
-	curl parallel alsa-utils mlocate traceroute jhead whois ruby noto-fonts-emoji \
-	nethogs geckodriver highlight mediainfo
+	curl parallel alsa-utils mlocate traceroute jhead whois geckodriver nethogs \
+	ruby highlight mediainfo
 	sudo pkgfile --update
 
 aur: ## Install arch linux AUR packages using yaourt
