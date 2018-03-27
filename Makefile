@@ -238,7 +238,6 @@ aws: ## Init aws cli
 mozc: ## Install ibus-mozc
 	test -L ${HOME}/.mozc || rm -rf ${HOME}/.mozc
 	ln -vsfn ${HOME}/Dropbox/mozc/.mozc   ${HOME}/.mozc
-	yaourt -S mozc
 	yaourt -S ibus-mozc
 	ibus-daemon -drx
 
