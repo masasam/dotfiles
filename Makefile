@@ -17,6 +17,10 @@ init: ## Initial deploy dotfiles
 	ln -vsf ${PWD}/.config/screenkey.json ${HOME}/.config/screenkey.json
 	mkdir -p ${HOME}/.config/termite
 	ln -vsf ${PWD}/.config/termite/config   ${HOME}/.config/termite/config
+	mkdir -p ${HOME}/.mlterm
+	ln -vsf ${PWD}/.mlterm/main   ${HOME}/.mlterm/main
+	ln -vsf ${PWD}/.mlterm/color   ${HOME}/.mlterm/color
+	ln -vsf ${PWD}/.mlterm/aafont   ${HOME}/.mlterm/aafont
 
 initroot: ## Initial deploy need root authority
 	sudo ln -vsf ${PWD}/etc/pacman.conf   /etc/pacman.conf
