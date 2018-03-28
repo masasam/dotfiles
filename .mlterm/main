@@ -23,3 +23,5 @@ fg_color = white
 bg_color = #002b36
 tabsize = 4
 box_drawing_font = decsp
+icon_name = mlterm
+icon_path = /usr/share/icons/Adwaita/48x48/apps/utilities-terminal.png
