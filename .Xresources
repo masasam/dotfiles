@@ -56,3 +56,39 @@ URxvt.keysym.C-V: perl:clipboard:paste
 URxvt.url-launcher: /usr/bin/chromium
 URxvt.matcher.button: 1
 URxvt.url-select.underline: true
+
+
+!!
+!! xterm
+!!
+
+XTerm*geometry:		   159x43
+XTerm*termName:        	   xterm-256color
+XTerm*utf8:		   1
+XTerm*locale:		   true
+XTerm*selectToClipboard:   true
+XTerm*cjkWidth:		   true
+XTerm*saveLines:	   2000
+xterm*faceName: 	   Cica:size=15:style=Regular:antialias=false
+xterm*faceNameDoublesize:  WenQuanYi Bitmap Song
+xterm*faceSize: 	   8
+xterm*borderWidth: 	   0
+!! Color Scheme
+xterm*color0:              #073642
+xterm*color1:              #dc322f
+xterm*color2:              #859900
+xterm*color3:              #b58900
+xterm*color4:              #268bd2
+xterm*color5:              #d33682
+xterm*color6:              #2aa198
+xterm*color7:              #eee8d5
+xterm*color8:              #002b36
+xterm*color9:              #cb4b16
+xterm*color10:             #586e75
+xterm*color11:             #657b83
+xterm*color12:             #839496
+xterm*color13:             #6c71c4
+xterm*color14:             #93a1a1
+xterm*color15:             #fdf6e3
+xterm*foreground:          #dcdccc
+xterm*background:          #002b36
