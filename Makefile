@@ -212,8 +212,8 @@ neomutt: ## Init neomutt mail client
 	yaourt -S goobook-git
 	goobook authenticate
 
-urxvt: ## Init urxvt terminal
-	sudo pacman -S urxvt-perls
+urxvt: ## Init rxvt-unicode terminal
+	sudo pacman -S rxvt-unicode urxvt-perls
 	ln -vsf ${PWD}/.Xresources   ${HOME}/.Xresources
 
 xterm: ## Init xterm terminal
