@@ -21,3 +21,5 @@ not_use_unicode_font = true
 scrollbar_mode = false
 fg_color = white
 bg_color = #002b36
+tabsize = 4
+box_drawing_font = decsp

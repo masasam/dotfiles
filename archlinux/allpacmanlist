@@ -95,7 +95,6 @@ docker
 dosfstools
 double-conversion
 e2fsprogs
-elinks
 elixir
 emacs
 enchant
@@ -588,7 +587,6 @@ lm_sensors
 logrotate
 lsof
 lua
-lua51
 lua52
 lua52-bitop
 lua52-expat
@@ -825,7 +823,6 @@ tmux
 totem-plparser
 traceroute
 tracker
-tre
 tree
 tslib
 ttf-dejavu
