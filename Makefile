@@ -220,6 +220,7 @@ xterm: ## Init xterm terminal
 	sudo pacman -S xterm
 	ln -vsf ${PWD}/.Xresources   ${HOME}/.Xresources
 	sudo ln -vsf ${PWD}/usr/share/applications/xterm.desktop   /usr/share/applications/xterm.desktop
+	sudo ln -vsf ${PWD}/usr/share/applications/uxterm.desktop   /usr/share/applications/uxterm.desktop
 
 mlterm: ## Init mlterm terminal
 	yaourt -S mlterm
@@ -229,6 +230,7 @@ mlterm: ## Init mlterm terminal
 	ln -vsf ${PWD}/.mlterm/aafont   ${HOME}/.mlterm/aafont
 	ln -vsf ${PWD}/.mlterm/key   ${HOME}/.mlterm/key
 	sudo ln -vsf ${PWD}/usr/share/applications/mlterm.desktop   /usr/share/applications/mlterm.desktop
+	sudo ln -vsf ${PWD}/usr/share/applications/mlclient.desktop   /usr/share/applications/mlclient.desktop
 
 termite: ## Init termite terminal
 	sudo pacman -S termite
