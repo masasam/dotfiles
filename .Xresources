@@ -20,7 +20,7 @@ URxvt.cursorColor:          #657b83
 URxvt.cursorUnderline:      false
 URxvt.saveLines:            10000
 URxvt.fading:               30
-URxvt.internalBorder:       3
+URxvt.internalBorder:       5
 URxvt.lineSpace:            0
 
 !! Font

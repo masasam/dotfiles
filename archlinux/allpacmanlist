@@ -449,7 +449,6 @@ liblqr
 libmagick
 libmagick6
 libmariadbclient
-libmediainfo
 libmm-glib
 libmms
 libmng
@@ -576,7 +575,6 @@ libxvmc
 libxxf86dga
 libxxf86vm
 libyaml
-libzen
 libzip
 licenses
 linux
@@ -614,7 +612,6 @@ mariadb
 mariadb-clients
 mathjax
 mdadm
-mediainfo
 mesa
 minizip
 mjpegtools
@@ -815,8 +812,6 @@ tcl
 tcpdump
 tdb
 telepathy-glib
-termite
-termite-terminfo
 tevent
 texinfo
 texlive-bin

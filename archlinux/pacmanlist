@@ -107,7 +107,6 @@ mariadb
 mariadb-clients
 mathjax
 mdadm
-mediainfo
 mlocate
 mosh
 mpv
@@ -168,7 +167,6 @@ systemd
 systemd-sysvcompat
 tar
 tcpdump
-termite
 texinfo
 texlive-langjapanese
 texlive-latexextra
