@@ -11,6 +11,7 @@ set hidden
 set showmatch
 set expandtab
 set tabstop=4
+set noswapfile
 set shiftwidth=4
 set smartindent
 set ignorecase
