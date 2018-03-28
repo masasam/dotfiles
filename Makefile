@@ -122,39 +122,36 @@ pipupdate: ## Update python packages
 
 goinstall: ## Install go packages
 	mkdir -p ${HOME}/{bin,src}
-	export GOPATH=${HOME};\
-	export PATH="/usr/bin:${HOME}/bin";\
-	go get -u -v github.com/nsf/gocode;\
-	go get -u -v github.com/rogpeppe/godef;\
-	go get -u -v golang.org/x/tools/cmd/goimports;\
-	go get -u -v golang.org/x/tools/cmd/godoc;\
-	go get -u -v github.com/josharian/impl;\
-	go get -u -v github.com/jstemmer/gotags;\
-	go get -u -v github.com/golang/dep/cmd/dep;\
-	go get -u -v github.com/pressly/goose/cmd/goose;\
-	go get -u -v github.com/motemen/ghq;\
-	go get -u -v github.com/sonatard/ghs;\
-	go get -u -v github.com/kyoshidajp/ghkw;\
+	go get -u -v github.com/nsf/gocode
+	go get -u -v github.com/rogpeppe/godef
+	go get -u -v golang.org/x/tools/cmd/goimports
+	go get -u -v golang.org/x/tools/cmd/godoc
+	go get -u -v github.com/josharian/impl
+	go get -u -v github.com/jstemmer/gotags
+	go get -u -v github.com/golang/dep/cmd/dep
+	go get -u -v github.com/pressly/goose/cmd/goose
+	go get -u -v github.com/motemen/ghq
+	go get -u -v github.com/sonatard/ghs
+	go get -u -v github.com/kyoshidajp/ghkw
 	go get -u -v github.com/hashicorp/packer
 
 nodeinstall: ## Install node packages
 	mkdir -p ${HOME}/.node_modules
-	export npm_config_prefix=${HOME}/.node_modules;\
-	yarn global add npm;\
-	yarn global add tern;\
-	yarn global add jshint;\
-	yarn global add eslint;\
-	yarn global add babel-eslint;\
-	yarn global add eslint-plugin-react;\
-	yarn global add vue-language-server;\
-	yarn global add vue-cli;\
-	yarn global add create-react-app;\
-	yarn global add create-component-app;\
-	yarn global add prettier;\
-	yarn global add firebase-tools;\
-	yarn global add heroku-cli;\
-	yarn global add webpack;\
-	yarn global add gulp;\
+	yarn global add npm
+	yarn global add tern
+	yarn global add jshint
+	yarn global add eslint
+	yarn global add babel-eslint
+	yarn global add eslint-plugin-react
+	yarn global add vue-language-server
+	yarn global add vue-cli
+	yarn global add create-react-app
+	yarn global add create-component-app
+	yarn global add prettier
+	yarn global add firebase-tools
+	yarn global add heroku-cli
+	yarn global add webpack
+	yarn global add gulp
 	yarn global add tldr
 
 nodenv: ## Install nodenv node-build
@@ -217,7 +214,6 @@ neomutt: ## Init neomutt mail client
 
 urxvt: ## Init urxvt terminal
 	sudo pacman -S urxvt-perls
-	#ln -vsf ${PWD}/.xinitrc   ${HOME}/.xinitrc
 	ln -vsf ${PWD}/.Xresources   ${HOME}/.Xresources
 
 mlterm: ## Init mlterm terminal
