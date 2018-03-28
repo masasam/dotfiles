@@ -21,7 +21,6 @@ initroot: ## Initial deploy need root authority
 	sudo ln -vsf ${PWD}/etc/sysctl.d/40-max-user-watches.conf   /etc/sysctl.d/40-max-user-watches.conf
 	sudo ln -vsf ${PWD}/etc/systemd/logind.conf   /etc/systemd/logind.conf
 	sudo ln -vsf ${PWD}/etc/systemd/system/powertop.service   /etc/systemd/system/powertop.service
-	sudo ln -vsf ${PWD}/usr/share/applications/mlterm.desktop   /usr/share/applications/mlterm.desktop
 	sudo mkdir -p /etc/NetworkManager
 	sudo ln -vsf ${PWD}/etc/NetworkManager/NetworkManager.conf /etc/NetworkManager/NetworkManager.conf
 
@@ -217,6 +216,11 @@ urxvt: ## Init urxvt terminal
 	sudo pacman -S urxvt-perls
 	ln -vsf ${PWD}/.Xresources   ${HOME}/.Xresources
 
+xterm: ## Init xterm terminal
+	sudo pacman -S xterm
+	ln -vsf ${PWD}/.Xresources   ${HOME}/.Xresources
+	sudo ln -vsf ${PWD}/usr/share/applications/xterm.desktop   /usr/share/applications/xterm.desktop
+
 mlterm: ## Init mlterm terminal
 	yaourt -S mlterm
 	mkdir -p ${HOME}/.mlterm
@@ -224,6 +228,7 @@ mlterm: ## Init mlterm terminal
 	ln -vsf ${PWD}/.mlterm/color   ${HOME}/.mlterm/color
 	ln -vsf ${PWD}/.mlterm/aafont   ${HOME}/.mlterm/aafont
 	ln -vsf ${PWD}/.mlterm/key   ${HOME}/.mlterm/key
+	sudo ln -vsf ${PWD}/usr/share/applications/mlterm.desktop   /usr/share/applications/mlterm.desktop
 
 termite: ## Init termite terminal
 	sudo pacman -S termite
