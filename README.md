@@ -252,10 +252,11 @@ Gnome can be put as small as necessary
 	pacman -S gnome-keyring
 	pacman -S nautilus
 
-Terminal uses termite and urxvt
+Terminal uses urxvt and mlterm and termite
 
-	sudo pacman -S termite termite-terminfo
 	sudo pacman -S rxvt-unicode
+	yaourt -S mlterm
+	sudo pacman -S termite
 
 Enable graphical login with gdm
 
