@@ -328,6 +328,9 @@ redis: ## Redis inital setup
 	sudo systemctl enable redis.service
 	sudo systemctl start redis.service
 
+zoom: ## Install zoom for web conference
+	sudo pacman -U ${HOME}/Dropbox/arch/zoom_x86_64.pkg.tar.xz
+
 varnish: ## Varnish inital setup
 	sudo pacman -S varnish
 	sudo ln -vsf ${PWD}/etc/varnish/default.vcl   /etc/varnish/default.vcl
@@ -425,9 +428,6 @@ kubernetes-portforward-postgres: ## Portforward for postgres
 
 kubernetes-postgres-dmup: ## Kubernetes-portforward-postgres next to command
 	pg_dump -U root -h localhost dbname > pgdump
-
-zoom: ## Install zoom for web conference
-	sudo pacman -U ${HOME}/Dropbox/arch/zoom_x86_64.pkg.tar.xz
 
 test: ## Test this Makefile using docker
 	docker build -t dotfiles ${PWD}
