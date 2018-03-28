@@ -14,7 +14,7 @@ call dein#begin('$XDG_CONFIG_HOME/nvim')
 call dein#add('Shougo/dein.vim')
 
 " Add or remove your plugins here:
-call dein#add('Shougo/deoplete.nvim')
+"call dein#add('Shougo/deoplete.nvim')
 call dein#add('Shougo/denite.nvim')
 call dein#add('airblade/vim-gitgutter')
 call dein#add('itchyny/lightline.vim')

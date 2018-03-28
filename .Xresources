@@ -22,6 +22,7 @@ URxvt.saveLines:            10000
 URxvt.fading:               30
 URxvt.internalBorder:       5
 URxvt.lineSpace:            0
+URxvt.letterSpace:  	    0
 
 !! Font
 URxvt.font:              xft:Cica:pixelsize=19.5:antialiase=true
