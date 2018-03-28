@@ -222,6 +222,7 @@ mlterm: ## Init mlterm terminal
 	ln -vsf ${PWD}/.mlterm/main   ${HOME}/.mlterm/main
 	ln -vsf ${PWD}/.mlterm/color   ${HOME}/.mlterm/color
 	ln -vsf ${PWD}/.mlterm/aafont   ${HOME}/.mlterm/aafont
+	ln -vsf ${PWD}/.mlterm/key   ${HOME}/.mlterm/key
 
 termite: ## Init termite terminal
 	sudo pacman -S termite
