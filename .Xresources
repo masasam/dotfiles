@@ -69,9 +69,12 @@ XTerm*locale:		   true
 XTerm*selectToClipboard:   true
 XTerm*cjkWidth:		   true
 XTerm*saveLines:	   2000
-xterm*faceName: 	   Cica:size=15:style=Regular:antialias=false
-xterm*faceNameDoublesize:  WenQuanYi Bitmap Song
-xterm*faceSize: 	   8
+XTerm*lineSpace:            0
+XTerm*letter_space:	    0
+xterm*faceName: 	   Cica:size=15.3:style=Regular:antialias=false
+xterm*faceNameDoublesize:  Cica:size=15.3:style=Regular:antialias=false
+xterm*xftAntialias:  	   true
+xterm*faceSize: 	   15.3
 xterm*borderWidth: 	   0
 !! Color Scheme
 xterm*color0:              #073642
