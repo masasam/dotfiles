@@ -63,7 +63,7 @@ URxvt.url-select.underline:	true
 !!
 
 xterm*VT100.translations:  #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
-XTerm*geometry:		   104x36
+XTerm*geometry:		   104x37
 XTerm*termName:        	   xterm-256color
 XTerm*utf8:		   1
 XTerm*locale:		   true
