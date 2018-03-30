@@ -31,6 +31,6 @@ if [ -d "${RBENV_ROOT}" ]; then
   eval "$(rbenv init -)"
 fi
 function urxvt-setup (){
-   xrdb -merge $HOME/.Xresources
+    xrdb -merge $HOME/.Xresources
+    exit
 }
-
