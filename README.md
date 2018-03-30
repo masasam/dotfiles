@@ -277,7 +277,7 @@ You can not wifi unless you turn off dhcpcd.
 	sudo pacman -S xdg-user-dirs
 	LANG=C xdg-user-dirs-update --force
 	sudo pacman -S zsh git
-	sudo pacman -S chromium
+	sudo pacman -S noto-fonts-cjk chromium
 
 Install yaourt
 vim /etc/pacman.conf
