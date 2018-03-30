@@ -1,3 +1,6 @@
+export PATH := ${HOME}/.local/bin:${HOME}/.node_modules/bin:${HOME}/.cargo/bin:${HOME}/.cask/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:${HOME}/bin
+export GOPATH := ${HOME}
+
 init: ## Initial deploy dotfiles
 	ln -vsf ${PWD}/.lesskey   ${HOME}/.lesskey
 	lesskey
@@ -482,6 +485,12 @@ testsimple: ## Test this Makefile using docker without Dropbox
 	docker exec makefiletest sh -c "cd ${PWD}; make nodeinstall"
 	@echo "========== make rustinstall =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make rustinstall"
+
+testpath: # Echo PATH
+	PATH=$$PATH
+	@echo $$PATH
+	GOPATH=$$GOPATH
+	@echo $$GOPATH
 
 update: ## Update arch linux packages and save packages cache 3 generations
 	yaourt -Syua; paccache -ruk0
