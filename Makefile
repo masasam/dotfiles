@@ -92,17 +92,6 @@ pipinstall: ## Install python packages
 	pip install --user cheat
 	pip install --user faker
 
-pipbackup: ## Backup python packages
-	mkdir -p ${PWD}/archlinux
-	pip freeze > ${PWD}/archlinux/requirements.txt
-
-piprecover: ## Recover python packages
-	mkdir -p ${PWD}/archlinux
-	pip install --user -r ${PWD}/archlinux/requirements.txt
-
-pipupdate: ## Update python packages
-	pip-review --user | cut -d = -f 1 | xargs pip install -U --user
-
 goinstall: ## Install go packages
 	mkdir -p ${HOME}/{bin,src}
 	go get -u -v github.com/nsf/gocode
@@ -137,35 +126,6 @@ nodeinstall: ## Install node packages
 	yarn global add gulp
 	yarn global add tldr
 
-nodenv: ## Install nodenv node-build
-	yaourt -S nodenv
-	git clone https://github.com/nodenv/node-build.git ${HOME}/.nodenv/plugins/node-build
-
-rbenv: ## Install rvenv ruby-build
-	yaourt -S rbenv
-	yaourt -S ruby-build
-	rbenv install 2.5.0
-	gem install bundle
-
-rails: ## Create rails app
-	export RBENV_ROOT="${HOME}/.rbenv";\
-	if [ -d "${RBENV_ROOT}" ]; then \
-	  export PATH="${RBENV_ROOT}/bin:${PATH}";\
-	  eval "$(rbenv init -)";\
-	fi;\
-	rbenv global 2.5.0;\
-	rbenv rehash;\
-	mkdir -p ${HOME}/src/github.com/masasam/myapp;\
-	cd ${HOME}/src/github.com/masasam/myapp;\
-	rbenv local 2.5.0;\
-	bundle init;\
-	echo "gem 'rails', '~> 5.2.0.rc2'" >> Gemfile;\
-	bundle install --path vendor/bundle;\
-	bundle exec rails new -B --webpack=react --database=mysql --skip-test .;\
-	bundle install;\
-	bundle exec rails webpacker:install;\
-	cd -
-
 rustinstall: ## Install rust and rust packages
 	sudo pacman -S cmake
 	mkdir -p ${HOME}/.cargo
@@ -180,9 +140,6 @@ rustinstall: ## Install rust and rust packages
 	cargo install xsv
 	cargo install hyperfine
 	rustup component add rust-src
-
-rustupdate: ## Update rust packages
-	cargo install-update -a
 
 neomutt: ## Init neomutt mail client
 	mkdir -p ${HOME}/.mutt
@@ -247,31 +204,8 @@ melpa: ## Install emacs packages from MELPA using cask package manager
 	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
 	test -L ${HOME}/.emacs.d || rm -rf ${HOME}/.emacs.d
 	ln -vsfn ${PWD}/.emacs.d   ${HOME}/.emacs.d
-	export PATH="$HOME/.cask/bin:$PATH";\
 	cd ${HOME}/.emacs.d/; cask upgrade;cask install
 	cd -
-
-melpaupdate: ## Update emacs packages and backup 6 generations packages
-	mkdir -p ${HOME}/Dropbox/emacs/cask
-	export PATH="$HOME/.cask/bin:$PATH";\
-	if [ `ls -rt ${HOME}/Dropbox/emacs/cask | head | wc -l` -gt 5 ];\
-	then \
-	rm -rf ${HOME}/Dropbox/emacs/cask/`ls -rt ${HOME}/Dropbox/emacs/cask \
-	| head -n 1`;\
-	tar cfz ${HOME}/Dropbox/emacs/cask/`date '+%Y%m%d%H%M%S'`.tar.gz -C ${HOME}/.emacs.d .cask;\
-	cd ${HOME}/.emacs.d/;\
-	cask upgrade;\
-	cask update;\
-	else \
-	tar cfz ${HOME}/Dropbox/emacs/cask/`date '+%Y%m%d%H%M%S'`.tar.gz -C ${HOME}/.emacs.d .cask;\
-	cd ${HOME}/.emacs.d/;\
-	cask upgrade;\
-	cask update;\
-	fi
-
-melpacleanup: ## Cleaninstall emacs packages (When emacs version up, always execute)
-	export PATH="$HOME/.cask/bin:$PATH";\
-	rm -rf ${HOME}/.emacs.d/.cask; caskinstall
 
 docker: ## Docker initial setup
 	sudo usermod -aG docker ${USER}
@@ -294,6 +228,31 @@ redis: ## Redis inital setup
 	sudo pacman -S redis
 	sudo systemctl enable redis.service
 	sudo systemctl start redis.service
+
+rbenv: ## Install rvenv ruby-build
+	yaourt -S rbenv
+	yaourt -S ruby-build
+	rbenv install 2.5.0
+	gem install bundle
+
+rails: ## Create rails app
+	export RBENV_ROOT="${HOME}/.rbenv";\
+	if [ -d "${RBENV_ROOT}" ]; then \
+	  export PATH="${RBENV_ROOT}/bin:${PATH}";\
+	  eval "$(rbenv init -)";\
+	fi;\
+	rbenv global 2.5.0;\
+	rbenv rehash;\
+	mkdir -p ${HOME}/src/github.com/masasam/myapp;\
+	cd ${HOME}/src/github.com/masasam/myapp;\
+	rbenv local 2.5.0;\
+	bundle init;\
+	echo "gem 'rails', '~> 5.2.0.rc2'" >> Gemfile;\
+	bundle install --path vendor/bundle;\
+	bundle exec rails new -B --webpack=react --database=mysql --skip-test .;\
+	bundle install;\
+	bundle exec rails webpacker:install;\
+	cd -
 
 zoom: ## Install zoom for web conference
 	sudo pacman -U ${HOME}/Dropbox/arch/zoom_x86_64.pkg.tar.xz
@@ -436,6 +395,46 @@ kubernetes-portforward-postgres: ## Portforward for postgres
 kubernetes-postgres-dmup: ## Kubernetes-portforward-postgres next to command
 	pg_dump -U root -h localhost dbname > pgdump
 
+melpaupdate: ## Update emacs packages and backup 6 generations packages
+	mkdir -p ${HOME}/Dropbox/emacs/cask
+	export PATH="$HOME/.cask/bin:$PATH";\
+	if [ `ls -rt ${HOME}/Dropbox/emacs/cask | head | wc -l` -gt 5 ];\
+	then \
+	rm -rf ${HOME}/Dropbox/emacs/cask/`ls -rt ${HOME}/Dropbox/emacs/cask \
+	| head -n 1`;\
+	tar cfz ${HOME}/Dropbox/emacs/cask/`date '+%Y%m%d%H%M%S'`.tar.gz -C ${HOME}/.emacs.d .cask;\
+	cd ${HOME}/.emacs.d/;\
+	cask upgrade;\
+	cask update;\
+	else \
+	tar cfz ${HOME}/Dropbox/emacs/cask/`date '+%Y%m%d%H%M%S'`.tar.gz -C ${HOME}/.emacs.d .cask;\
+	cd ${HOME}/.emacs.d/;\
+	cask upgrade;\
+	cask update;\
+	fi
+
+melpacleanup: ## Cleaninstall emacs packages (When emacs version up, always execute)
+	export PATH="$HOME/.cask/bin:$PATH";\
+	rm -rf ${HOME}/.emacs.d/.cask; caskinstall
+
+pipbackup: ## Backup python packages
+	mkdir -p ${PWD}/archlinux
+	pip freeze > ${PWD}/archlinux/requirements.txt
+
+piprecover: ## Recover python packages
+	mkdir -p ${PWD}/archlinux
+	pip install --user -r ${PWD}/archlinux/requirements.txt
+
+pipupdate: ## Update python packages
+	pip-review --user | cut -d = -f 1 | xargs pip install -U --user
+
+rustupdate: ## Update rust packages
+	cargo install-update -a
+
+nodenv: ## Install nodenv node-build
+	yaourt -S nodenv
+	git clone https://github.com/nodenv/node-build.git ${HOME}/.nodenv/plugins/node-build
+
 test: ## Test this Makefile using docker
 	docker build -t dotfiles ${PWD}
 	docker run -v /home/${USER}/Dropbox:${HOME}/Dropbox:cached --name makefiletest -d dotfiles
@@ -495,7 +494,7 @@ update: ## Update arch linux packages and save packages cache 3 generations
 
 allinit: init initdropbox
 
-allinstall: ttf-cica install pipinstall goinstall melpa aur mozc neomutt docker mariadb neovim redis rustinstall nodeinstall screenkey
+allinstall: ttf-cica install pipinstall goinstall melpa aur mozc neomutt docker mariadb neovim redis rustinstall nodeinstall screenkey dnsmasq
 
 allupdate: update melpaupdate pipupdate rustupdate goinstall
 
