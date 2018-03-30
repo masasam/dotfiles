@@ -46,15 +46,9 @@ install: ## Install arch linux packages using pacman
 	texlive-langjapanese yarn texlive-latexextra ctags hdparm eog noto-fonts-cjk \
 	arc-gtk-theme npm typescript chromium llvm llvm-libs lldb php tree w3m neomutt \
 	zsh-syntax-highlighting shellcheck bash-completion mathjax expect elixir lsof \
-	cscope postgresql-libs pdfgrep gnu-netcat cmatrix jpegoptim nethogs \
-	curl parallel alsa-utils mlocate jhead whois geckodriver
+	cscope postgresql-libs pdfgrep gnu-netcat cmatrix jpegoptim nethogs alsa-utils \
+	curl parallel mlocate jhead whois geckodriver
 	sudo pkgfile --update
-
-aur: ## Install arch linux AUR packages using yaourt
-	yaourt -S drone-cli
-	yaourt -S git-secrets
-	yaourt -S nkf
-	yaourt -S peek
 
 pipinstall: ## Install python packages
 	mkdir -p ${HOME}/.local
@@ -279,33 +273,6 @@ melpacleanup: ## Cleaninstall emacs packages (When emacs version up, always exec
 	export PATH="$HOME/.cask/bin:$PATH";\
 	rm -rf ${HOME}/.emacs.d/.cask; caskinstall
 
-screenkey: ## Init screenkey
-	yaourt -S screenkey
-	mkdir -p ${HOME}/.config
-	ln -vsf ${PWD}/.config/screenkey.json ${HOME}/.config/screenkey.json
-
-gnuglobal: ## Install gnu global
-	mkdir -p ${HOME}/.local
-	pip install --user pygments
-	yaourt -S global
-
-backup: ## Backup arch linux packages
-	mkdir -p ${PWD}/archlinux
-	pacman -Qqen > ${PWD}/archlinux/pacmanlist
-	pacman -Qnq > ${PWD}/archlinux/allpacmanlist
-	pacman -Qqem > ${PWD}/archlinux/yaourtlist
-
-recover: ## Recover arch linux packages from backup
-	sudo pacman -S --needed `cat ${PWD}/archlinux/pacmanlist`
-	yaourt -S --needed $(DOY) `cat ${PWD}/archlinux/yaourtlist`
-
-neovim: ## Init neovim
-	sudo pacman -S neovim
-	mkdir -p ${HOME}/.config/nvim
-	ln -vsf ${PWD}/.config/nvim/init.vim   ${HOME}/.config/nvim/init.vim
-	ln -vsf ${PWD}/.config/nvim/installer.sh   ${HOME}/.config/nvim/installer.sh
-	bash ${HOME}/.config/nvim/installer.sh ${HOME}/.config/nvim
-
 docker: ## Docker initial setup
 	sudo usermod -aG docker ${USER}
 	mkdir -p ${HOME}/.docker
@@ -330,6 +297,39 @@ redis: ## Redis inital setup
 
 zoom: ## Install zoom for web conference
 	sudo pacman -U ${HOME}/Dropbox/arch/zoom_x86_64.pkg.tar.xz
+
+screenkey: ## Init screenkey
+	yaourt -S screenkey
+	mkdir -p ${HOME}/.config
+	ln -vsf ${PWD}/.config/screenkey.json ${HOME}/.config/screenkey.json
+
+aur: ## Install arch linux AUR packages using yaourt
+	yaourt -S drone-cli
+	yaourt -S git-secrets
+	yaourt -S nkf
+	yaourt -S peek
+
+gnuglobal: ## Install gnu global
+	mkdir -p ${HOME}/.local
+	pip install --user pygments
+	yaourt -S global
+
+backup: ## Backup arch linux packages
+	mkdir -p ${PWD}/archlinux
+	pacman -Qqen > ${PWD}/archlinux/pacmanlist
+	pacman -Qnq > ${PWD}/archlinux/allpacmanlist
+	pacman -Qqem > ${PWD}/archlinux/yaourtlist
+
+recover: ## Recover arch linux packages from backup
+	sudo pacman -S --needed `cat ${PWD}/archlinux/pacmanlist`
+	yaourt -S --needed $(DOY) `cat ${PWD}/archlinux/yaourtlist`
+
+neovim: ## Init neovim
+	sudo pacman -S neovim
+	mkdir -p ${HOME}/.config/nvim
+	ln -vsf ${PWD}/.config/nvim/init.vim   ${HOME}/.config/nvim/init.vim
+	ln -vsf ${PWD}/.config/nvim/installer.sh   ${HOME}/.config/nvim/installer.sh
+	bash ${HOME}/.config/nvim/installer.sh ${HOME}/.config/nvim
 
 varnish: ## Varnish inital setup
 	sudo pacman -S varnish
@@ -443,8 +443,6 @@ test: ## Test this Makefile using docker
 	docker exec makefiletest sh -c "cd ${PWD}; make install"
 	@echo "========== make init =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make init"
-	@echo "========== make initroot =========="
-	docker exec makefiletest sh -c "cd ${PWD}; make initroot"
 	@echo "========== make initdropbox =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make initdropbox"
 	@echo "========== make neomutt =========="
@@ -471,8 +469,6 @@ testsimple: ## Test this Makefile using docker without Dropbox
 	docker exec makefiletest sh -c "cd ${PWD}; make install"
 	@echo "========== make init =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make init"
-	@echo "========== make initroot =========="
-	docker exec makefiletest sh -c "cd ${PWD}; make initroot"
 	@echo "========== make neomutt =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make neomutt"
 	@echo "========== make melpa =========="
@@ -497,7 +493,7 @@ testpath: # Echo PATH
 update: ## Update arch linux packages and save packages cache 3 generations
 	yaourt -Syua; paccache -ruk0
 
-allinit: init initroot initdropbox
+allinit: init initdropbox
 
 allinstall: ttf-cica install pipinstall goinstall melpa aur mozc neomutt docker mariadb neovim redis rustinstall nodeinstall screenkey
 
