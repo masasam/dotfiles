@@ -14,18 +14,6 @@ init: ## Initial deploy dotfiles
 	ln -vsf ${PWD}/.tmux.conf   ${HOME}/.tmux.conf
 	ln -vsf ${PWD}/.screenrc   ${HOME}/.screenrc
 	ln -vsf ${PWD}/.aspell.conf   ${HOME}/.aspell.conf
-	mkdir -p ${HOME}/.config
-	ln -vsf ${PWD}/.config/screenkey.json ${HOME}/.config/screenkey.json
-
-initroot: ## Initial deploy need root authority
-	sudo ln -vsf ${PWD}/etc/pacman.conf   /etc/pacman.conf
-	sudo ln -vsf ${PWD}/etc/dnsmasq/resolv.dnsmasq.conf   /etc/resolv.dnsmasq.conf
-	sudo ln -vsf ${PWD}/etc/dnsmasq/dnsmasq.conf   /etc/dnsmasq.conf
-	sudo ln -vsf ${PWD}/etc/sysctl.d/40-max-user-watches.conf   /etc/sysctl.d/40-max-user-watches.conf
-	sudo ln -vsf ${PWD}/etc/systemd/logind.conf   /etc/systemd/logind.conf
-	sudo ln -vsf ${PWD}/etc/systemd/system/powertop.service   /etc/systemd/system/powertop.service
-	sudo mkdir -p /etc/NetworkManager
-	sudo ln -vsf ${PWD}/etc/NetworkManager/NetworkManager.conf /etc/NetworkManager/NetworkManager.conf
 
 initdropbox: ## Initial deploy dotfiles using dropbox
 	sudo ln -vsf ${HOME}/Dropbox/arch/hosts   /etc/hosts
@@ -49,7 +37,7 @@ install: ## Install arch linux packages using pacman
 	sudo pacman -S go zsh git vim tmux keychain evince unrar seahorse hugo mpv \
 	zsh-completions xsel emacs gvfs-smb unace iperf valgrind noto-fonts-emoji \
 	inkscape file-roller xclip atool debootstrap oath-toolkit imagemagick lynx \
-	the_silver_searcher powertop cifs-utils elinks flameshot ruby-rdoc ipcalc \
+	the_silver_searcher cifs-utils elinks flameshot ruby-rdoc ipcalc traceroute \
 	cups-pdf openssh firefox firefox-i18n-ja gimp strace lhasa hub bookworm tig \
 	pkgfile baobab dconf-editor rsync nodejs debian-archive-keyring gauche cpio \
 	nmap poppler-data ffmpeg asciidoc sbcl docker aspell aspell-en screen mosh \
@@ -58,8 +46,8 @@ install: ## Install arch linux packages using pacman
 	texlive-langjapanese yarn texlive-latexextra ctags hdparm eog noto-fonts-cjk \
 	arc-gtk-theme npm typescript chromium llvm llvm-libs lldb php tree w3m neomutt \
 	zsh-syntax-highlighting shellcheck bash-completion mathjax expect elixir lsof \
-	dnsmasq cscope postgresql-libs pdfgrep gnu-netcat cmatrix jpegoptim nethogs \
-	curl parallel alsa-utils mlocate traceroute jhead whois geckodriver
+	cscope postgresql-libs pdfgrep gnu-netcat cmatrix jpegoptim nethogs \
+	curl parallel alsa-utils mlocate jhead whois geckodriver
 	sudo pkgfile --update
 
 aur: ## Install arch linux AUR packages using yaourt
@@ -67,7 +55,6 @@ aur: ## Install arch linux AUR packages using yaourt
 	yaourt -S git-secrets
 	yaourt -S nkf
 	yaourt -S peek
-	yaourt -S screenkey
 
 pipinstall: ## Install python packages
 	mkdir -p ${HOME}/.local
@@ -101,7 +88,6 @@ pipinstall: ## Install python packages
 	pip install --user pydoc_utils
 	pip install --user rope
 	pip install --user importmagic
-	pip install --user awscli
 	pip install --user progressbar2
 	pip install --user ranger-fm
 	pip install --user rtv
@@ -242,9 +228,12 @@ termite: ## Init termite terminal
 	mkdir -p ${HOME}/.config/termite
 	ln -vsf ${PWD}/.config/termite/config   ${HOME}/.config/termite/config
 
-aws: ## Init aws cli
-	test -L ${HOME}/.aws || rm -rf ${HOME}/.aws
-	ln -vsfn ${HOME}/Dropbox/zsh/.aws   ${HOME}/.aws
+dnsmasq: ## Init dnsmasq
+	sudo pacman -S dnsmasq
+	sudo ln -vsf ${PWD}/etc/dnsmasq/resolv.dnsmasq.conf   /etc/resolv.dnsmasq.conf
+	sudo ln -vsf ${PWD}/etc/dnsmasq/dnsmasq.conf   /etc/dnsmasq.conf
+	sudo mkdir -p /etc/NetworkManager
+	sudo ln -vsf ${PWD}/etc/NetworkManager/NetworkManager.conf /etc/NetworkManager/NetworkManager.conf
 
 mozc: ## Install ibus-mozc
 	test -L ${HOME}/.mozc || rm -rf ${HOME}/.mozc
@@ -290,6 +279,11 @@ melpacleanup: ## Cleaninstall emacs packages (When emacs version up, always exec
 	export PATH="$HOME/.cask/bin:$PATH";\
 	rm -rf ${HOME}/.emacs.d/.cask; caskinstall
 
+screenkey: ## Init screenkey
+	yaourt -S screenkey
+	mkdir -p ${HOME}/.config
+	ln -vsf ${PWD}/.config/screenkey.json ${HOME}/.config/screenkey.json
+
 gnuglobal: ## Install gnu global
 	mkdir -p ${HOME}/.local
 	pip install --user pygments
@@ -320,6 +314,7 @@ docker: ## Docker initial setup
 	sudo systemctl start docker.service
 
 mariadb: # Mariadb initial setup
+	sudo ln -vsf ${PWD}/etc/sysctl.d/40-max-user-watches.conf   /etc/sysctl.d/40-max-user-watches.conf
 	sudo pacman -S mariadb mariadb-clients
 	sudo ln -vsf ${PWD}/etc/mysql/my.cnf   /etc/mysql/my.cnf
 	sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
@@ -348,11 +343,18 @@ mongodb: ## Mongodb initial setup
 	sudo systemctl start mongodb.service
 
 powertop: ## Powertop initial setup (Warning take a long time)
+	sudo pacman -S powertop
+	sudo ln -vsf ${PWD}/etc/systemd/system/powertop.service   /etc/systemd/system/powertop.service
 	sudo powertop --calibrate
 	sudo systemctl enable powertop
 
 gnupg: ## Import gnupg secret-key
 	gpg --allow-secret-key-import --import ${HOME}/Dropbox/passwd/privkey.asc
+
+aws: ## Init aws cli
+	pip install --user awscli
+	test -L ${HOME}/.aws || rm -rf ${HOME}/.aws
+	ln -vsfn ${HOME}/Dropbox/zsh/.aws   ${HOME}/.aws
 
 kubernetes: ## Init kubernetes 
 	yaourt -S google-cloud-sdk
@@ -497,7 +499,7 @@ update: ## Update arch linux packages and save packages cache 3 generations
 
 allinit: init initroot initdropbox
 
-allinstall: ttf-cica install pipinstall goinstall melpa aur mozc neomutt docker mariadb neovim redis rustinstall nodeinstall
+allinstall: ttf-cica install pipinstall goinstall melpa aur mozc neomutt docker mariadb neovim redis rustinstall nodeinstall screenkey
 
 allupdate: update melpaupdate pipupdate rustupdate goinstall
 
