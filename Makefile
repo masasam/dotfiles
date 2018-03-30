@@ -53,44 +53,44 @@ install: ## Install arch linux packages using pacman
 pipinstall: ## Install python packages
 	mkdir -p ${HOME}/.local
 	pip install --user --upgrade pip
-	pip install --user virtualenv
 	pip install --user ansible
-	pip install --user ansible-lint
-	pip install --user docker-compose
-	pip install --user virtualenvwrapper
-	pip install --user seaborn
-	pip install --user ipywidgets
-	pip install --user scikit-learn
-	pip install --user scipy
-	pip install --user pandas
-	pip install --user matplotlib
-	pip install --user jupyter
-	pip install --user neovim
-	pip install --user pylint
-	pip install --user jedi
-	pip install --user autopep8
-	pip install --user flake8
-	pip install --user pyflakes
-	pip install --user speedtest-cli
-	pip install --user selenium
 	pip install --user ansible-container
-	pip install --user scrapy
+	pip install --user ansible-lint
+	pip install --user autopep8
+	pip install --user cheat
+	pip install --user docker-compose
+	pip install --user faker
+	pip install --user flake8
+	pip install --user httpie
+	pip install --user importmagic
+	pip install --user ipywidgets
+	pip install --user jedi
+	pip install --user jupyter
+	pip install --user jupyterlab
+	pip install --user jupyterthemes
+	pip install --user matplotlib
 	pip install --user mycli
+	pip install --user neovim
+	pip install --user pandas
 	pip install --user pgcli
 	pip install --user pip-review
-	pip install --user yapf
-	pip install --user pydoc_utils
-	pip install --user rope
-	pip install --user importmagic
 	pip install --user progressbar2
+	pip install --user pydoc_utils
+	pip install --user pyflakes
+	pip install --user pylint
 	pip install --user ranger-fm
+	pip install --user rope
 	pip install --user rtv
-	pip install --user jupyterthemes
-	pip install --user httpie
+	pip install --user scikit-learn
+	pip install --user scipy
+	pip install --user scrapy
+	pip install --user seaborn
+	pip install --user selenium
+	pip install --user speedtest-cli
 	pip install --user trash-cli
-	pip install --user jupyterlab
-	pip install --user cheat
-	pip install --user faker
+	pip install --user virtualenv
+	pip install --user virtualenvwrapper
+	pip install --user yapf
 
 goinstall: ## Install go packages
 	mkdir -p ${HOME}/{bin,src}
@@ -109,36 +109,36 @@ goinstall: ## Install go packages
 
 nodeinstall: ## Install node packages
 	mkdir -p ${HOME}/.node_modules
-	yarn global add npm
-	yarn global add tern
-	yarn global add jshint
-	yarn global add eslint
 	yarn global add babel-eslint
-	yarn global add eslint-plugin-react
-	yarn global add vue-language-server
-	yarn global add vue-cli
-	yarn global add create-react-app
 	yarn global add create-component-app
-	yarn global add prettier
+	yarn global add create-react-app
+	yarn global add eslint
+	yarn global add eslint-plugin-react
 	yarn global add firebase-tools
-	yarn global add heroku-cli
-	yarn global add webpack
 	yarn global add gulp
+	yarn global add heroku-cli
+	yarn global add jshint
+	yarn global add npm
+	yarn global add prettier
+	yarn global add tern
 	yarn global add tldr
+	yarn global add vue-cli
+	yarn global add vue-language-server
+	yarn global add webpack
 
 rustinstall: ## Install rust and rust packages
 	sudo pacman -S cmake
 	mkdir -p ${HOME}/.cargo
 	curl -sSf https://sh.rustup.rs | sh
-	cargo install racer
-	cargo install cargo-update
-	cargo install cargo-script
 	cargo install cargo-edit
-	cargo install ripgrep
+	cargo install cargo-script
+	cargo install cargo-update
 	cargo install exa
 	cargo install fd-find
-	cargo install xsv
 	cargo install hyperfine
+	cargo install racer
+	cargo install ripgrep
+	cargo install xsv
 	rustup component add rust-src
 
 neomutt: ## Init neomutt mail client
