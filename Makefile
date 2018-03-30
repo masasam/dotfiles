@@ -271,6 +271,12 @@ aur: ## Install arch linux AUR packages using yaourt
 suspend: ## Don't suspend when laptop's lid close
 	sudo ln -vsf ${PWD}/etc/systemd/logind.conf   /etc/systemd/logind.conf
 
+desktop: ## Off desktop entry
+	sudo ln -vsf ${PWD}/usr/share/applications/vim.desktop   /usr/share/applications/vim.desktop
+	sudo ln -vsf ${PWD}/usr/share/applications/avahi-discover.desktop   /usr/share/applications/avahi-discover.desktop
+	sudo ln -vsf ${PWD}/usr/share/applications/bvnc.desktop   /usr/share/applications/bvnc.desktop
+	sudo ln -vsf ${PWD}/usr/share/applications/bssh.desktop   /usr/share/applications/bssh.desktop
+
 gnuglobal: ## Install gnu global
 	mkdir -p ${HOME}/.local
 	pip install --user pygments
@@ -293,9 +299,6 @@ neovim: ## Init neovim
 	ln -vsf ${PWD}/.config/nvim/installer.sh   ${HOME}/.config/nvim/installer.sh
 	bash ${HOME}/.config/nvim/installer.sh ${HOME}/.config/nvim
 	sudo ln -vsf ${PWD}/usr/share/applications/nvim.desktop   /usr/share/applications/nvim.desktop
-
-vim: ## Off vim desktop
-	sudo ln -vsf ${PWD}/usr/share/applications/vim.desktop   /usr/share/applications/vim.desktop
 
 varnish: ## Varnish inital setup
 	sudo pacman -S varnish
