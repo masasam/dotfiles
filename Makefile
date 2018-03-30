@@ -321,6 +321,7 @@ gnupg: ## Import gnupg secret-key
 	gpg --allow-secret-key-import --import ${HOME}/Dropbox/passwd/privkey.asc
 
 aws: ## Init aws cli
+	mkdir -p ${HOME}/.local
 	pip install --user awscli
 	test -L ${HOME}/.aws || rm -rf ${HOME}/.aws
 	ln -vsfn ${HOME}/Dropbox/zsh/.aws   ${HOME}/.aws
