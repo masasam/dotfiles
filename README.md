@@ -32,8 +32,6 @@ You can deploy dotfiles with
 
     make init
 
-First of all, please run make init and restart terminal.
-
 ### With Makefile, you will be able to recover your usual environment in 1hour
 
 ![make](https://raw.githubusercontent.com/masasam/image/image/make.png)
