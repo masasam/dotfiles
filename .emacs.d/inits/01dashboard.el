@@ -8,4 +8,5 @@
   ;; Set the banner
   (setq dashboard-startup-banner "~/src/github.com/masasam/dotfiles/.emacs.d/emacs.png")
   (dashboard-setup-startup-hook)
-  (setq dashboard-items '((recents  . 15))))
+  (setq dashboard-page-separator "\n\f\f\n")
+  (setq dashboard-items '((recents . 15))))
