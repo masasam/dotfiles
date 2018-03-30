@@ -215,6 +215,8 @@ neomutt: ## Init neomutt mail client
 urxvt: ## Init rxvt-unicode terminal
 	sudo pacman -S rxvt-unicode urxvt-perls
 	ln -vsf ${PWD}/.Xresources   ${HOME}/.Xresources
+	sudo ln -vsf ${PWD}/usr/share/applications/urxvtc.desktop   /usr/share/applications/urxvtc.desktop
+	sudo ln -vsf ${PWD}/usr/share/applications/urxvt-tabbed.desktop   /usr/share/applications/urxvt-tabbed.desktop
 
 xterm: ## Init xterm terminal
 	sudo pacman -S xterm

@@ -30,14 +30,14 @@
 # sale, use or other dealings in this Software without prior written
 # authorization.
 # -----------------------------------------------------------------------------
-[Desktop Entry]
-Name=UXTerm
-#GenericName=Terminal
-Comment=standard terminal emulator for the X window system
-Exec=uxterm
-Terminal=false
-Type=Application
-Encoding=UTF-8
-Icon=/usr/share/icons/Adwaita/512x512/apps/utilities-terminal.png
-Categories=System;TerminalEmulator;
-Keywords=shell;prompt;command;commandline;cmd;
+# [Desktop Entry]
+# Name=UXTerm
+# #GenericName=Terminal
+# Comment=standard terminal emulator for the X window system
+# Exec=uxterm
+# Terminal=false
+# Type=Application
+# Encoding=UTF-8
+# Icon=/usr/share/icons/Adwaita/512x512/apps/utilities-terminal.png
+# Categories=System;TerminalEmulator;
+# Keywords=shell;prompt;command;commandline;cmd;
