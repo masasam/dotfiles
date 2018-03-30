@@ -268,6 +268,9 @@ aur: ## Install arch linux AUR packages using yaourt
 	yaourt -S nkf
 	yaourt -S peek
 
+suspend: ## Don't suspend when laptop's lid close
+	sudo ln -vsf ${PWD}/etc/systemd/logind.conf   /etc/systemd/logind.conf
+
 gnuglobal: ## Install gnu global
 	mkdir -p ${HOME}/.local
 	pip install --user pygments
