@@ -292,6 +292,10 @@ neovim: ## Init neovim
 	ln -vsf ${PWD}/.config/nvim/init.vim   ${HOME}/.config/nvim/init.vim
 	ln -vsf ${PWD}/.config/nvim/installer.sh   ${HOME}/.config/nvim/installer.sh
 	bash ${HOME}/.config/nvim/installer.sh ${HOME}/.config/nvim
+	sudo ln -vsf ${PWD}/usr/share/applications/nvim.desktop   /usr/share/applications/nvim.desktop
+
+vim: ## Off vim desktop
+	sudo ln -vsf ${PWD}/usr/share/applications/vim.desktop   /usr/share/applications/vim.desktop
 
 varnish: ## Varnish inital setup
 	sudo pacman -S varnish
