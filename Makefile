@@ -397,7 +397,6 @@ kubernetes-postgres-dmup: ## Kubernetes-portforward-postgres next to command
 
 melpaupdate: ## Update emacs packages and backup 6 generations packages
 	mkdir -p ${HOME}/Dropbox/emacs/cask
-	export PATH="$HOME/.cask/bin:$PATH";\
 	if [ `ls -rt ${HOME}/Dropbox/emacs/cask | head | wc -l` -gt 5 ];\
 	then \
 	rm -rf ${HOME}/Dropbox/emacs/cask/`ls -rt ${HOME}/Dropbox/emacs/cask \
@@ -414,7 +413,6 @@ melpaupdate: ## Update emacs packages and backup 6 generations packages
 	fi
 
 melpacleanup: ## Cleaninstall emacs packages (When emacs version up, always execute)
-	export PATH="$HOME/.cask/bin:$PATH";\
 	rm -rf ${HOME}/.emacs.d/.cask; caskinstall
 
 pipbackup: ## Backup python packages
