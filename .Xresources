@@ -50,32 +50,33 @@ URxvt.foreground:           #dcdccc
 URxvt.background:           #002b36
 
 ! misc
-URxvt.perl-ext-common:  default,clipboard,matcher
-URxvt.keysym.C-C: perl:clipboard:copy
-URxvt.keysym.C-V: perl:clipboard:paste
-URxvt.url-launcher: /usr/bin/chromium
-URxvt.matcher.button: 1
-URxvt.url-select.underline: true
+URxvt.perl-ext-common:		default,clipboard,matcher
+URxvt.keysym.C-C:		perl:clipboard:copy
+URxvt.keysym.C-V:		perl:clipboard:paste
+URxvt.url-launcher:		/usr/bin/chromium
+URxvt.matcher.button:		1
+URxvt.url-select.underline:	true
 
 
 !!
 !! xterm
 !!
 
-xterm*VT100.translations: #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
-XTerm*geometry:		   159x43
+xterm*VT100.translations:  #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
+XTerm*geometry:		   96x43
 XTerm*termName:        	   xterm-256color
 XTerm*utf8:		   1
 XTerm*locale:		   true
 XTerm*selectToClipboard:   true
 XTerm*cjkWidth:		   true
 XTerm*saveLines:	   2000
-XTerm*lineSpace:            0
-XTerm*letter_space:	    0
+XTerm*lineSpace:           0
+XTerm*letter_space:	   0
 xterm*faceName: 	   Cica:size=14:style=Regular:antialias=true
 xterm*faceNameDoublesize:  Cica:size=14:style=Regular:antialias=true
 xterm*faceSize: 	   14
 xterm*borderWidth: 	   0
+
 !! Color Scheme
 xterm*color0:              #073642
 xterm*color1:              #dc322f
