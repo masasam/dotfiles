@@ -18,8 +18,7 @@ URxvt.scrollBar:  	    false
 URxvt.cursorBlink:          true
 URxvt.cursorColor:          #657b83
 URxvt.cursorUnderline:      false
-URxvt.saveLines:            10000
-URxvt.internalBorder:       5
+URxvt.saveLines:            3000
 URxvt.lineSpace:            0
 URxvt.letterSpace:  	    0
 
