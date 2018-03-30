@@ -11,7 +11,8 @@ Xft.rgba:       rgb
 Xft.hinting:    true
 Xft.hintstyle:  hintslight
 Xft.lcdfilter:  lcddefault
-URxvt*imLocale:  en_US.UTF-8
+URxvt*imLocale: en_US.UTF-8
+URxvt*iso14755:	false
 
 URxvt.geometry:             159x43
 URxvt.scrollBar:  	    false
@@ -61,6 +62,7 @@ URxvt.url-select.underline: true
 !! xterm
 !!
 
+xterm*VT100.translations: #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
 XTerm*geometry:		   159x43
 XTerm*termName:        	   xterm-256color
 XTerm*utf8:		   1
