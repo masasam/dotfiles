@@ -43,10 +43,6 @@
 (bind-key "C-x C-k" 'kill-buffer)
 
 
-;; switch-to-buffer
-(bind-key "M-o" 'iflipb-next-buffer)
-(bind-key "M-O" 'iflipb-previous-buffer)
-
 ;; minibuffer-local-completion-mpa
 (bind-key "C-w" 'backward-kill-word minibuffer-local-completion-map)
 

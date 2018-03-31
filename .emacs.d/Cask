@@ -54,7 +54,7 @@
 (depends-on "goto-chg")
 (depends-on "haml-mode")
 (depends-on "htmlize")
-(depends-on "iflipb")
+(depends-on "hydra")
 (depends-on "indium")
 (depends-on "inf-ruby")
 (depends-on "init-loader")

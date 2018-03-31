@@ -1,0 +1,21 @@
+(defun other-window-or-split ()
+  (interactive)
+  (when (one-window-p)
+    (split-window-horizontally))
+  (other-window 1))
+
+
+(defhydra hydra-git-gutter (ctl-x-map "" :pre (widen))
+  "page"
+  ("0" delete-window "delete")
+  ("x" delete-window "delete")
+  ("1" delete-other-windows "delete other")
+  ("2" split-window-below "split-h")
+  ("3" split-window-right "split-v")
+  ("," shrink-window-horizontally "enlarge")
+  ("." enlarge-window-horizontally "enlarge")
+  ("+" shrink-window "shrink")
+  ("-" enlarge-window "enlarge")
+  ("o" other-window-or-split "split")
+  ("n" git-gutter:next-hunk "next-hunk")
+  ("p" git-gutter:previous-hunk "prev-hunk"))
