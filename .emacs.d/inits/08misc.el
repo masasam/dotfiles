@@ -4,6 +4,10 @@
 (bind-key "C-M-SPC" 'er/expand-region)
 
 
+;; avy
+(bind-key "C-r" 'avy-goto-char)
+
+
 ;; back-button
 (back-button-mode 1)
 

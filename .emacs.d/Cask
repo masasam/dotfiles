@@ -4,6 +4,7 @@
 
 (depends-on "aggressive-indent")
 (depends-on "auto-compile")
+(depends-on "avy")
 (depends-on "back-button")
 (depends-on "beginend")
 (depends-on "bind-key")
