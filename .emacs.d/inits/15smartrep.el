@@ -15,3 +15,5 @@
   (when (one-window-p)
     (split-window-horizontally))
   (other-window 1))
+
+(setq smartrep-mode-line-active-bg "#2f4f4f")
