@@ -96,6 +96,7 @@
 (depends-on "smartparens")
 (depends-on "smartrep")
 (depends-on "smex")
+(depends-on "swiper")
 (depends-on "tern")
 (depends-on "tide")
 (depends-on "toml-mode")
