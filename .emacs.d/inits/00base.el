@@ -169,7 +169,7 @@
 
 ;; Color when emacs is not focused
 (defun my-out-focused-mode-line()
-  (set-face-background 'mode-line "MediumPurple4"))
+  (set-face-background 'mode-line "#2f4f4f"))
 ;; Color when emacs is focused
 (defun my-in-focused-mode-line()
   (set-face-background 'mode-line "#1c1f26"))
