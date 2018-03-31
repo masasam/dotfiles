@@ -4,6 +4,10 @@
 (bind-key "C-M-SPC" 'er/expand-region)
 
 
+;; back-button
+(back-button-mode 1)
+
+
 ;; begin-end
 (beginend-global-mode)
 
