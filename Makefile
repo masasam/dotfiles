@@ -43,11 +43,11 @@ install: ## Install arch linux packages using pacman
 	nmap poppler-data ffmpeg asciidoc sbcl docker aspell aspell-en screen mosh \
 	gdb wmctrl pwgen linux-docs htop tcpdump gvfs p7zip lzop fzf gpaste optipng \
 	arch-install-scripts pandoc jq sylpheed pkgstats python-pip ruby highlight  \
-	texlive-langjapanese yarn texlive-latexextra ctags hdparm eog noto-fonts-cjk \
-	arc-gtk-theme npm typescript chromium llvm llvm-libs lldb php tree w3m neomutt \
+	texlive-langjapanese yarn texlive-latexextra ctags hdparm eog curl parallel \
+	arc-gtk-theme npm typescript llvm llvm-libs lldb php tree w3m neomutt whois \
 	zsh-syntax-highlighting shellcheck bash-completion mathjax expect elixir lsof \
 	cscope postgresql-libs pdfgrep gnu-netcat cmatrix jpegoptim nethogs alsa-utils \
-	curl parallel mlocate jhead whois geckodriver
+	mlocate jhead geckodriver
 	sudo pkgfile --update
 
 pipinstall: ## Install python packages
@@ -316,6 +316,10 @@ powertop: ## Powertop initial setup (Warning take a long time)
 	sudo ln -vsf ${PWD}/etc/systemd/system/powertop.service   /etc/systemd/system/powertop.service
 	sudo powertop --calibrate
 	sudo systemctl enable powertop
+
+chromium:
+	sudo pacman -S noto-fonts noto-fonts-cjk
+	sudo pacman -S chromium
 
 gnupg: ## Import gnupg secret-key
 	gpg --allow-secret-key-import --import ${HOME}/Dropbox/passwd/privkey.asc
