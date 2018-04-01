@@ -332,8 +332,17 @@ psd: ## Profile-Sync-Daemon initial setup
 	systemctl --user enable psd.service
 
 emacs-devel: # Install development version of emacs
-	cd ${HOME}/src/github.com/masasam
-	git clone -b emacs-26 git@github.com:emacs-mirror/emacs.git
+	cd ${HOME}/src/github.com/masasam;\
+	git clone -b emacs-26 git@github.com:emacs-mirror/emacs.git;\
+	cd emacs;\
+	./autogen.sh;\
+	./configure;\
+	make;\
+	sudo make install;\
+	rm -rf ${HOME}/.emacs.d/.cask
+	cd ${HOME}/.emacs.d/;\
+	cask upgrade;\
+	cask install
 
 kubernetes: ## Init kubernetes 
 	yaourt -S google-cloud-sdk
@@ -446,7 +455,10 @@ melpaupdate: ## Update emacs packages and backup 6 generations packages
 	fi
 
 melpacleanup: ## Cleaninstall emacs packages (When emacs version up, always execute)
-	rm -rf ${HOME}/.emacs.d/.cask; caskinstall
+	rm -rf ${HOME}/.emacs.d/.cask
+	cd ${HOME}/.emacs.d/;\
+	cask upgrade;\
+	cask install
 
 pipbackup: ## Backup python packages
 	mkdir -p ${PWD}/archlinux
