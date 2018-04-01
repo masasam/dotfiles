@@ -1,4 +1,4 @@
-;;; init.el --- myinit.el
+;;; init.el --- init.el
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)
@@ -22,7 +22,10 @@
     ;; For important compatibility libraries like cl-lib
     (add-to-list 'package-archives '("gnu" . (concat proto "://elpa.gnu.org/packages/")))))
 (package-initialize)
-(package-refresh-contents)
+
+;; When emacs for the first time execute only, automatic package install
+(unless (file-directory-p "~/.emacs.d/elpa")
+  (package-refresh-contents))
 
 ;; package
 (package-install 'aggressive-indent)
@@ -133,13 +136,12 @@
 (package-install 'yasnippet)
 (package-install 'yasnippet-snippets)
 
+;; auto-compile
 (setq load-prefer-newer t)
-(require 'auto-compile)
 (auto-compile-on-load-mode)
 (auto-compile-on-save-mode)
 
 ;; init-loader
-(require 'init-loader)
 (custom-set-variables
  '(init-loader-show-log-after-init 'error-only))
 (init-loader-load)
