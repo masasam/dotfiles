@@ -325,6 +325,10 @@ kubernetes: ## Init kubernetes
 	sudo gcloud components update kubectl
 	gcloud init
 
+nodenv: ## Install nodenv node-build
+	yaourt -S nodenv
+	git clone https://github.com/nodenv/node-build.git ${HOME}/.nodenv/plugins/node-build
+
 kubernetes-cluster: ## Kubernetes cluster setup
 	gcloud container clusters create --num-nodes=2 my-cluster \
 	--zone us-central-a \
@@ -446,10 +450,6 @@ pipupdate: ## Update python packages
 
 rustupdate: ## Update rust packages
 	cargo install-update -a
-
-nodenv: ## Install nodenv node-build
-	yaourt -S nodenv
-	git clone https://github.com/nodenv/node-build.git ${HOME}/.nodenv/plugins/node-build
 
 test: ## Test this Makefile using docker
 	docker build -t dotfiles ${PWD}
