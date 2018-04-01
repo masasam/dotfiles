@@ -25,10 +25,6 @@ call dein#add('bronson/vim-trailing-whitespace')
 call dein#add('junegunn/vim-easy-align')
 call dein#add('osyo-manga/vim-anzu')
 call dein#add('neomake/neomake')
-call dein#add('fatih/vim-go')
-call dein#add('zchee/deoplete-go', {'build': 'make'})
-call dein#add('davidhalter/jedi-vim')
-call dein#add('tell-k/vim-autopep8')
 call dein#add('thinca/vim-quickrun')
 
 " Required:
@@ -60,12 +56,6 @@ let g:deoplete#enable_smart_case = 1
 filetype plugin indent on
 " If completing candidate is present, it is fixed, otherwise line feed
 inoremap <expr><CR> pumvisible() ? deoplete#close_popup() : "<CR>"
-
-
-" -- deoplete-go -----------------------------------------------
-let g:deoplete#sources#go#align_class = 1
-let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
-let g:deoplete#sources#go#package_dot = 1
 
 
 " -- global ----------------------------------------------------
@@ -204,24 +194,6 @@ nnoremap <esc>^[ <esc>^[
 
 " -- neomake/neomake --------------------------------------------------
 autocmd! BufWritePost * Neomake
-
-
-" -- vim-go -----------------------------------------------------------
-let g:go_fmt_command = 'goimports'
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_operators = 1
-let g:go_term_enabled = 1
-let g:go_highlight_build_constraints = 1
-let g:go_gocode_unimported_packages = 1
-autocmd FileType go nmap <leader>gb <Plug>(go-build)
-autocmd FileType go nmap <leader>gt <Plug>(go-test)
-autocmd FileType go nmap <Leader>ds <Plug>(go-def-split)
-autocmd FileType go nmap <Leader>dv <Plug>(go-def-vertical)
-autocmd FileType go nmap <Leader>dt <Plug>(go-def-tab)
-autocmd FileType go nmap <Leader>gd <Plug>(go-doc)
-autocmd FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
 
 
 " -- vim-quickrun ------------------------------------------------------
