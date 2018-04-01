@@ -208,6 +208,7 @@ alias open='xdg-open'
 alias mysql="mysql --pager='less -S -n -i -F -X'"
 alias caskupdate='rm -rf ${HOME}/Dropbox/emacs/cask/`ls -rt ${HOME}/Dropbox/emacs/cask | head -n 1`; tar cfz ${HOME}/Dropbox/emacs/cask/`date '+%Y%m%d%H%M%S'`.tar.gz -C ${HOME}/.emacs.d .cask; cd ${HOME}/.emacs.d/; cask upgrade; cask update; cd -'
 alias melpabackup='rm -rf ${HOME}/Dropbox/emacs/elpa/`ls -rt ${HOME}/Dropbox/emacs/elpa | head -n 1`; tar cfz ${HOME}/Dropbox/emacs/elpa/`date '+%Y%m%d%H%M%S'`.tar.gz -C ${HOME}/.emacs.d elpa; cd -'
+alias melpacleanup='rm -rf ${HOME}/.emacs.d/elpa'
 alias caskinstall='cd ${HOME}/.emacs.d/; cask upgrade; cask install; cd -'
 alias caskcleanup='rm -rf ${HOME}/.emacs.d/.cask; caskinstall'
 alias goupdate='cd ${HOME}/src/github.com/masasam/dotfiles; make goinstall; cd -'
