@@ -32,7 +32,7 @@ You can deploy dotfiles with
 
     make init
 
-### With Makefile, you will be able to recover your usual environment in 1hour
+### With Makefile, you will be able to recover your usual environment in 1 hour
 
 ![make](https://raw.githubusercontent.com/masasam/image/image/make.png)
 
@@ -50,7 +50,7 @@ You can do 'make recover' or 'make install' for the second and subsequent builds
 
 Please select your favorite one.
 
-If [Makefile](https://github.com/masasam/dotfiles/blob/master/Makefile) is completed, you should be able to restore in 30 minutes in either case.
+If [Makefile](https://github.com/masasam/dotfiles/blob/master/Makefile) is completed, you should be able to restore in 1 hour in either case.
 
     make init
 
@@ -99,7 +99,7 @@ Why Arch linux ?
 
 - Unless your PC breaks, arch linux is a rolling release so you don't have to reinstall it.
 
-  Even if it gets broken, I made a [Makefile](https://github.com/masasam/dotfiles/blob/master/Makefile) so I can return in half an hour and it's unbeatable.
+  Even if it gets broken, I made a [Makefile](https://github.com/masasam/dotfiles/blob/master/Makefile) so I can return in 1 hour and it's unbeatable.
 
 - Arch linux is good because it is difficult for my PC's development environment to be old packages.
 
