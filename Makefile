@@ -232,7 +232,7 @@ redis: ## Redis inital setup
 rbenv: ## Install rvenv ruby-build
 	yaourt -S rbenv
 	yaourt -S ruby-build
-	rbenv install 2.5.0
+	rbenv install 2.5.1
 	gem install bundle
 
 rails: ## Create rails app
@@ -241,11 +241,11 @@ rails: ## Create rails app
 	  export PATH="${RBENV_ROOT}/bin:${PATH}";\
 	  eval "$(rbenv init -)";\
 	fi;\
-	rbenv global 2.5.0;\
+	rbenv global 2.5.1;\
 	rbenv rehash;\
 	mkdir -p ${HOME}/src/github.com/masasam/myapp;\
 	cd ${HOME}/src/github.com/masasam/myapp;\
-	rbenv local 2.5.0;\
+	rbenv local 2.5.1;\
 	bundle init;\
 	echo "gem 'rails', '~> 5.2.0.rc2'" >> Gemfile;\
 	bundle install --path vendor/bundle;\
