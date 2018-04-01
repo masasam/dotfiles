@@ -324,6 +324,13 @@ nodenv: ## Install nodenv node-build
 	yaourt -S nodenv
 	git clone https://github.com/nodenv/node-build.git ${HOME}/.nodenv/plugins/node-build
 
+psd: ## Profile-Sync-Daemon initial setup
+	yaourt -S profile-sync-daemon
+	mkdir -p ${HOME}/.config/psd
+	ln -vsf ${PWD}/.config/psd/psd.conf   ${HOME}/.config/psd/psd.conf
+	echo "${USER} ALL=(ALL) NOPASSWD: /usr/bin/psd-overlay-helper" | sudo EDITOR='tee -a' visudo
+	systemctl --user enable psd.service
+
 emacs-devel: # Install development version of emacs
 	cd ${HOME}/src/github.com/masasam
 	git clone -b emacs-26 git@github.com:emacs-mirror/emacs.git
