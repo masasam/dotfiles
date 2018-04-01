@@ -320,14 +320,18 @@ gnuglobal: ## Install gnu global
 	pip install --user pygments
 	yaourt -S global
 
+nodenv: ## Install nodenv node-build
+	yaourt -S nodenv
+	git clone https://github.com/nodenv/node-build.git ${HOME}/.nodenv/plugins/node-build
+
+emacs-devel: # Install development version of emacs
+	cd ${HOME}/src/github.com/masasam
+	git clone -b emacs-26 git@github.com:emacs-mirror/emacs.git
+
 kubernetes: ## Init kubernetes 
 	yaourt -S google-cloud-sdk
 	sudo gcloud components update kubectl
 	gcloud init
-
-nodenv: ## Install nodenv node-build
-	yaourt -S nodenv
-	git clone https://github.com/nodenv/node-build.git ${HOME}/.nodenv/plugins/node-build
 
 kubernetes-cluster: ## Kubernetes cluster setup
 	gcloud container clusters create --num-nodes=2 my-cluster \

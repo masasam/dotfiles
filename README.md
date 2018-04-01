@@ -158,11 +158,11 @@ Connect internet with wifi
 	rfkill unblock 0
 	wifi-menu wlp0s29f7u1
 
-vi /etc/pacman.d/mirrorlist
-
-    Server = http://ftp.jaist.ac.jp/pub/Linux/ArchLinux/$repo/os/$arch
-
 Make sure the earliest mirror is selected.
+
+Write the closest mirror on the top.
+
+	vi /etc/pacman.d/mirrorlist
 
 Install bese bese-devel of arch
 
@@ -277,7 +277,7 @@ You can not wifi unless you turn off dhcpcd.
 	sudo pacman -S xdg-user-dirs
 	LANG=C xdg-user-dirs-update --force
 	sudo pacman -S zsh git
-	sudo pacman -S noto-fonts-cjk chromium
+	sudo pacman -S noto-fonts noto-fonts-cjk chromium
 
 Install yaourt
 vim /etc/pacman.conf
@@ -285,10 +285,6 @@ vim /etc/pacman.conf
     [archlinuxfr]
     SigLevel = Never
     Server = http://repo.archlinux.fr/$arch
-
-or
-	
-	curl https://raw.githubusercontent.com/masasam/dotfiles/master/archlinux/archlinuxfr >> /etc/pacman.conf
 
 Synchronize yaourt latest
 
