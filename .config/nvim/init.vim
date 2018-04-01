@@ -14,18 +14,15 @@ call dein#begin('$XDG_CONFIG_HOME/nvim')
 call dein#add('Shougo/dein.vim')
 
 " Add or remove your plugins here:
-"call dein#add('Shougo/deoplete.nvim')
 call dein#add('Shougo/denite.nvim')
 call dein#add('airblade/vim-gitgutter')
-call dein#add('itchyny/lightline.vim')
-call dein#add('tpope/vim-fugitive')
 call dein#add('editorconfig/editorconfig-vim')
 call dein#add('Shougo/neomru.vim')
 call dein#add('bronson/vim-trailing-whitespace')
 call dein#add('junegunn/vim-easy-align')
-call dein#add('osyo-manga/vim-anzu')
 call dein#add('neomake/neomake')
 call dein#add('thinca/vim-quickrun')
+call dein#add('itchyny/lightline.vim')
 
 " Required:
 call dein#end()
@@ -40,22 +37,6 @@ if dein#check_install()
 endif
 
 "End dein Scripts-------------------------
-
-
-" -- deoplete.nvim ---------------------------------------------
-set runtimepath+=$XDG_CONFIG_HOME/nvim/repos/github.com/Shougo/deoplete.nvim
-set completeopt+=noinsert,noselect
-set completeopt-=preview
-
-hi Pmenu    gui=NONE    guifg=#c5c8c6 guibg=#373b41
-hi PmenuSel gui=reverse guifg=#c5c8c6 guibg=#373b41
-
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#enable_smart_case = 1
-
-filetype plugin indent on
-" If completing candidate is present, it is fixed, otherwise line feed
-inoremap <expr><CR> pumvisible() ? deoplete#close_popup() : "<CR>"
 
 
 " -- global ----------------------------------------------------
@@ -105,31 +86,6 @@ set dictionary=/usr/share/dict/cracklib-small
 set rtp^=/usr/share/vim/vimfiles/
 
 
-" -- lightline ---------------------------------------------
-let g:lightline = {
-      \ 'colorscheme': 'powerline',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'fugitive', 'readonly', 'filename', 'modified', 'anzu' ] ]
-      \ },
-      \ 'component': {
-      \   'readonly': '%{&filetype=="help"?"":&readonly?" ":""}',
-      \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
-      \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
-      \ },
-      \ 'component_visible_condition': {
-      \   'readonly': '(&filetype!="help"&& &readonly)',
-      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
-      \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
-      \ },
-      \ 'component_function': {
-      \   'anzu': 'anzu#search_status'
-      \ },
-      \ 'separator': { 'left': ' ', 'right': ' ' },
-      \ 'subseparator': { 'left': ' ', 'right': ' ' }
-      \ }
-
-
 " -- Makefile -----------------------------------------------------
 let _curfile=expand("%:r")
 if _curfile == 'Makefile'
@@ -172,19 +128,6 @@ vnoremap <silent> <Enter> :EasyAlign<cr>
 
 " Binding Esc in insert mode to jj -----------------------------------
 inoremap <silent> jj <ESC>
-
-
-" -- vim-anzu ---------------------------------------------------------
-nmap n <Plug>(anzu-n)
-nmap N <Plug>(anzu-N)
-nmap * <Plug>(anzu-star)
-nmap # <Plug>(anzu-sharp)
-augroup vim-anzu
-" When there is no key input for a fixed time, when you move the window, when you move the tab
-" Delete display of search hit count
-    autocmd!
-    autocmd CursorHold,CursorHoldI,WinLeave,TabLeave * call anzu#clear_search_status()
-augroup END
 
 
 " -- Erase the search highlight with esc ------------------------------
