@@ -24,16 +24,11 @@ call dein#add('Shougo/neomru.vim')
 call dein#add('bronson/vim-trailing-whitespace')
 call dein#add('junegunn/vim-easy-align')
 call dein#add('osyo-manga/vim-anzu')
-call dein#add('Jagua/vim-denite-ghq')
 call dein#add('neomake/neomake')
 call dein#add('fatih/vim-go')
 call dein#add('zchee/deoplete-go', {'build': 'make'})
 call dein#add('davidhalter/jedi-vim')
 call dein#add('tell-k/vim-autopep8')
-call dein#add('othree/yajs.vim')
-call dein#add('othree/es.next.syntax.vim')
-call dein#add('mxw/vim-jsx')
-call dein#add('ternjs/tern_for_vim')
 call dein#add('thinca/vim-quickrun')
 
 " Required:
@@ -172,8 +167,6 @@ nnoremap <silent> [denite]b :<C-u>Denite<Space>buffer<CR>
 nnoremap <silent> [denite]f :<C-u>Denite<Space>file_rec<CR>
 nnoremap <silent> [denite]g :<C-u>Denite grep<CR>
 nnoremap <silent> [denite]l :<C-u>Denite<Space>line<CR>
-nnoremap <C-x>l :<C-u>Denite ghq<CR>
-nnoremap <C-x><C-l> :<C-u>Denite ghq<CR>
 
 
 " -- vim-gitgutter -----------------------------------------------------
@@ -229,16 +222,6 @@ autocmd FileType go nmap <Leader>dv <Plug>(go-def-vertical)
 autocmd FileType go nmap <Leader>dt <Plug>(go-def-tab)
 autocmd FileType go nmap <Leader>gd <Plug>(go-doc)
 autocmd FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
-
-
-" -- vim-jsx -----------------------------------------------------------
-let g:jsx_ext_required = 1        " Read when the file type is jsx
-let g:jsx_pragma_required = 0     " Pragmas that start with @ do not load
-
-augroup Vimrc
-  autocmd!
-  autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx
-augroup END
 
 
 " -- vim-quickrun ------------------------------------------------------
