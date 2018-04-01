@@ -277,20 +277,11 @@ desktop: ## Off desktop entry
 	sudo ln -vsf ${PWD}/usr/share/applications/bvnc.desktop   /usr/share/applications/bvnc.desktop
 	sudo ln -vsf ${PWD}/usr/share/applications/bssh.desktop   /usr/share/applications/bssh.desktop
 
-gnuglobal: ## Install gnu global
+aws: ## Init aws cli
 	mkdir -p ${HOME}/.local
-	pip install --user pygments
-	yaourt -S global
-
-backup: ## Backup arch linux packages
-	mkdir -p ${PWD}/archlinux
-	pacman -Qqen > ${PWD}/archlinux/pacmanlist
-	pacman -Qnq > ${PWD}/archlinux/allpacmanlist
-	pacman -Qqem > ${PWD}/archlinux/yaourtlist
-
-recover: ## Recover arch linux packages from backup
-	sudo pacman -S --needed `cat ${PWD}/archlinux/pacmanlist`
-	yaourt -S --needed $(DOY) `cat ${PWD}/archlinux/yaourtlist`
+	pip install --user awscli
+	test -L ${HOME}/.aws || rm -rf ${HOME}/.aws
+	ln -vsfn ${HOME}/Dropbox/zsh/.aws   ${HOME}/.aws
 
 neovim: ## Init neovim
 	sudo pacman -S neovim
@@ -317,18 +308,17 @@ powertop: ## Powertop initial setup (Warning take a long time)
 	sudo powertop --calibrate
 	sudo systemctl enable powertop
 
-chromium:
+chromium: ## Install chromium and noto-fonts
 	sudo pacman -S noto-fonts noto-fonts-cjk
 	sudo pacman -S chromium
 
 gnupg: ## Import gnupg secret-key
 	gpg --allow-secret-key-import --import ${HOME}/Dropbox/passwd/privkey.asc
 
-aws: ## Init aws cli
+gnuglobal: ## Install gnu global
 	mkdir -p ${HOME}/.local
-	pip install --user awscli
-	test -L ${HOME}/.aws || rm -rf ${HOME}/.aws
-	ln -vsfn ${HOME}/Dropbox/zsh/.aws   ${HOME}/.aws
+	pip install --user pygments
+	yaourt -S global
 
 kubernetes: ## Init kubernetes 
 	yaourt -S google-cloud-sdk
@@ -409,6 +399,19 @@ kubernetes-portforward-postgres: ## Portforward for postgres
 
 kubernetes-postgres-dmup: ## Kubernetes-portforward-postgres next to command
 	pg_dump -U root -h localhost dbname > pgdump
+
+backup: ## Backup arch linux packages
+	mkdir -p ${PWD}/archlinux
+	pacman -Qqen > ${PWD}/archlinux/pacmanlist
+	pacman -Qnq > ${PWD}/archlinux/allpacmanlist
+	pacman -Qqem > ${PWD}/archlinux/yaourtlist
+
+update: ## Update arch linux packages and save packages cache 3 generations
+	yaourt -Syua; paccache -ruk0
+
+recover: ## Recover arch linux packages from backup
+	sudo pacman -S --needed `cat ${PWD}/archlinux/pacmanlist`
+	yaourt -S --needed $(DOY) `cat ${PWD}/archlinux/yaourtlist`
 
 melpaupdate: ## Update emacs packages and backup 6 generations packages
 	mkdir -p ${HOME}/Dropbox/emacs/cask
@@ -501,9 +504,6 @@ testpath: # Echo PATH
 	@echo $$PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
-
-update: ## Update arch linux packages and save packages cache 3 generations
-	yaourt -Syua; paccache -ruk0
 
 allinit: init initdropbox
 
