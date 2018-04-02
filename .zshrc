@@ -206,11 +206,8 @@ alias e='emacsclient'
 alias remacs='emacs -q -l ~/Dropbox/emacs/default.el'
 alias open='xdg-open'
 alias mysql="mysql --pager='less -S -n -i -F -X'"
-alias caskupdate='rm -rf ${HOME}/Dropbox/emacs/cask/`ls -rt ${HOME}/Dropbox/emacs/cask | head -n 1`; tar cfz ${HOME}/Dropbox/emacs/cask/`date '+%Y%m%d%H%M%S'`.tar.gz -C ${HOME}/.emacs.d .cask; cd ${HOME}/.emacs.d/; cask upgrade; cask update; cd -'
 alias melpabackup='rm -rf ${HOME}/Dropbox/emacs/elpa/`ls -rt ${HOME}/Dropbox/emacs/elpa | head -n 1`; tar cfz ${HOME}/Dropbox/emacs/elpa/`date '+%Y%m%d%H%M%S'`.tar.gz -C ${HOME}/.emacs.d elpa; cd -'
 alias melpacleanup='rm -rf ${HOME}/.emacs.d/elpa'
-alias caskinstall='cd ${HOME}/.emacs.d/; cask upgrade; cask install; cd -'
-alias caskcleanup='rm -rf ${HOME}/.emacs.d/.cask; caskinstall'
 alias goupdate='cd ${HOME}/src/github.com/masasam/dotfiles; make goinstall; cd -'
 alias rustupdate='rustup update'
 alias cargoupdate='cargo install-update -a'
@@ -235,7 +232,6 @@ alias gitdevelop='git branch --set-upstream-to origin/develop master'
 # PATH
 export GOPATH=$HOME
 export PATH="$PATH:$GOPATH/bin"
-export PATH="$HOME/.cask/bin:$PATH"
 export EDITOR='emacsclient'
 export XDG_CONFIG_HOME=$HOME/.config
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
