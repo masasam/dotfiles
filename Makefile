@@ -1,4 +1,4 @@
-export PATH := ${HOME}/.local/bin:${HOME}/.node_modules/bin:${HOME}/.cargo/bin:${HOME}/.cask/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/bin/core_perl:${HOME}/bin
+export PATH := ${HOME}/.local/bin:${HOME}/.node_modules/bin:${HOME}/.cargo/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/bin/core_perl:${HOME}/bin
 export GOPATH := ${HOME}
 
 init: ## Initial deploy dotfiles
@@ -200,13 +200,6 @@ ttf-cica: ## Install Cica font
 	sudo install -Dm644 *.txt /usr/share/licenses/ttf-cica/;\
 	cd -
 
-melpa: ## Install emacs packages from MELPA using cask package manager
-	curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
-	test -L ${HOME}/.emacs.d || rm -rf ${HOME}/.emacs.d
-	ln -vsfn ${PWD}/.emacs.d   ${HOME}/.emacs.d
-	cd ${HOME}/.emacs.d/; cask upgrade;cask install
-	cd -
-
 docker: ## Docker initial setup
 	sudo usermod -aG docker ${USER}
 	mkdir -p ${HOME}/.docker
@@ -339,10 +332,7 @@ emacs-devel: # Install development version of emacs
 	./configure;\
 	make;\
 	sudo make install;\
-	rm -rf ${HOME}/.emacs.d/.cask
-	cd ${HOME}/.emacs.d/;\
-	cask upgrade;\
-	cask install
+	rm -rf ${HOME}/.emacs.d/elpa
 
 kubernetes: ## Init kubernetes 
 	yaourt -S google-cloud-sdk
@@ -437,29 +427,6 @@ recover: ## Recover arch linux packages from backup
 	sudo pacman -S --needed `cat ${PWD}/archlinux/pacmanlist`
 	yaourt -S --needed $(DOY) `cat ${PWD}/archlinux/yaourtlist`
 
-melpaupdate: ## Update emacs packages and backup 6 generations packages
-	mkdir -p ${HOME}/Dropbox/emacs/cask
-	if [ `ls -rt ${HOME}/Dropbox/emacs/cask | head | wc -l` -gt 5 ];\
-	then \
-	rm -rf ${HOME}/Dropbox/emacs/cask/`ls -rt ${HOME}/Dropbox/emacs/cask \
-	| head -n 1`;\
-	tar cfz ${HOME}/Dropbox/emacs/cask/`date '+%Y%m%d%H%M%S'`.tar.gz -C ${HOME}/.emacs.d .cask;\
-	cd ${HOME}/.emacs.d/;\
-	cask upgrade;\
-	cask update;\
-	else \
-	tar cfz ${HOME}/Dropbox/emacs/cask/`date '+%Y%m%d%H%M%S'`.tar.gz -C ${HOME}/.emacs.d .cask;\
-	cd ${HOME}/.emacs.d/;\
-	cask upgrade;\
-	cask update;\
-	fi
-
-melpacleanup: ## Cleaninstall emacs packages (When emacs version up, always execute)
-	rm -rf ${HOME}/.emacs.d/.cask
-	cd ${HOME}/.emacs.d/;\
-	cask upgrade;\
-	cask install
-
 pipbackup: ## Backup python packages
 	mkdir -p ${PWD}/archlinux
 	pip freeze > ${PWD}/archlinux/requirements.txt
@@ -485,8 +452,6 @@ test: ## Test this Makefile using docker
 	docker exec makefiletest sh -c "cd ${PWD}; make initdropbox"
 	@echo "========== make neomutt =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make neomutt"
-	@echo "========== make melpa =========="
-	docker exec makefiletest sh -c "cd ${PWD}; make melpa"
 	@echo "========== make aur =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make aur"
 	@echo "========== make mozc =========="
@@ -509,8 +474,6 @@ testsimple: ## Test this Makefile using docker without Dropbox
 	docker exec makefiletest sh -c "cd ${PWD}; make init"
 	@echo "========== make neomutt =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make neomutt"
-	@echo "========== make melpa =========="
-	docker exec makefiletest sh -c "cd ${PWD}; make melpa"
 	@echo "========== make aur =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make aur"
 	@echo "========== make pipinstall =========="
@@ -530,9 +493,9 @@ testpath: # Echo PATH
 
 allinit: init initdropbox
 
-allinstall: ttf-cica install pipinstall goinstall melpa aur mozc neomutt docker mariadb neovim redis rustinstall nodeinstall screenkey dnsmasq
+allinstall: ttf-cica install pipinstall goinstall aur mozc neomutt docker mariadb neovim redis rustinstall nodeinstall screenkey dnsmasq
 
-allupdate: update melpaupdate pipupdate rustupdate goinstall
+allupdate: update pipupdate rustupdate goinstall
 
 allbackup: backup pipbackup
 
