@@ -509,14 +509,6 @@ If you make a mistake on the letters, erase all with Ctrl-u
 	cargo install hyperfine
 	rustup component add rust-src
 
-#### Install using cask
-
-    curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
-    cd .emacs.d
-    cask upgrade
-    cask install
-    cask update
-
 # Terminal
 
 ![terminal](https://raw.githubusercontent.com/masasam/image/image/tmux.png)
