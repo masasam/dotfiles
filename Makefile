@@ -24,14 +24,10 @@ initdropbox: ## Initial deploy dotfiles using dropbox
 	ln -vsf ${HOME}/Dropbox/zsh/hub   ${HOME}/.config/hub
 	test -L ${HOME}/.ssh || rm -rf ${HOME}/.ssh
 	ln -vsfn ${HOME}/Dropbox/ssh   ${HOME}/.ssh
-	test -L ${HOME}/.config/ranger || rm -rf ${HOME}/.config/ranger
-	ln -vsfn ${HOME}/Dropbox/ranger   ${HOME}/.config/ranger
+	chmod 600   ${HOME}/.ssh/id_rsa
 	mkdir -p ${HOME}/.local/share
 	test -L ${HOME}/.local/share/keyrings || rm -rf ${HOME}/.local/share/keyrings
 	ln -vsfn ${HOME}/Dropbox/passwd/keyrings   ${HOME}/.local/share/keyrings
-	test -L ${HOME}/.sylpheed-2.0 || rm -rf ${HOME}/.sylpheed-2.0
-	ln -vsfn ${HOME}/Dropbox/sylpheed/.sylpheed-2.0   ${HOME}/.sylpheed-2.0
-	chmod 600   ${HOME}/.ssh/id_rsa
 
 install: ## Install arch linux packages using pacman
 	sudo pacman -S go zsh git vim tmux keychain evince unrar seahorse hugo mpv \
@@ -42,12 +38,12 @@ install: ## Install arch linux packages using pacman
 	pkgfile baobab dconf-editor rsync nodejs debian-archive-keyring gauche cpio \
 	nmap poppler-data ffmpeg asciidoc sbcl docker aspell aspell-en screen mosh \
 	gdb wmctrl pwgen linux-docs htop tcpdump gvfs p7zip lzop fzf gpaste optipng \
-	arch-install-scripts pandoc jq sylpheed pkgstats python-pip ruby highlight  \
+	arch-install-scripts pandoc jq pkgstats python-pip ruby highlight alsa-utils \
 	texlive-langjapanese yarn texlive-latexextra ctags hdparm eog curl parallel \
 	arc-gtk-theme npm typescript llvm llvm-libs lldb php tree w3m neomutt whois \
 	zsh-syntax-highlighting shellcheck bash-completion mathjax expect elixir lsof \
-	cscope postgresql-libs pdfgrep gnu-netcat cmatrix jpegoptim nethogs alsa-utils \
-	mlocate jhead geckodriver
+	cscope postgresql-libs pdfgrep gnu-netcat cmatrix jpegoptim nethogs mlocate \
+	jhead geckodriver
 	sudo pkgfile --update
 
 pipinstall: ## Install python packages
@@ -78,7 +74,6 @@ pipinstall: ## Install python packages
 	pip install --user pydoc_utils
 	pip install --user pyflakes
 	pip install --user pylint
-	pip install --user ranger-fm
 	pip install --user rope
 	pip install --user rtv
 	pip install --user scikit-learn
@@ -275,6 +270,17 @@ aws: ## Init aws cli
 	pip install --user awscli
 	test -L ${HOME}/.aws || rm -rf ${HOME}/.aws
 	ln -vsfn ${HOME}/Dropbox/zsh/.aws   ${HOME}/.aws
+
+sylpheed: ## Init sylpheed
+	sudo pacman -S sylpheed
+	test -L ${HOME}/.sylpheed-2.0 || rm -rf ${HOME}/.sylpheed-2.0
+	ln -vsfn ${HOME}/Dropbox/sylpheed/.sylpheed-2.0   ${HOME}/.sylpheed-2.0
+
+ranger: ## Init ranger
+	mkdir -p ${HOME}/.local
+	pip install --user ranger-fm
+	test -L ${HOME}/.config/ranger || rm -rf ${HOME}/.config/ranger
+	ln -vsfn ${HOME}/Dropbox/ranger   ${HOME}/.config/ranger
 
 neovim: ## Init neovim
 	sudo pacman -S neovim
