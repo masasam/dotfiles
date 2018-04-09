@@ -95,6 +95,7 @@ docker
 dosfstools
 double-conversion
 e2fsprogs
+elinks
 elixir
 emacs
 enchant
@@ -119,7 +120,6 @@ firefox-i18n-ja
 flac
 flameshot
 flex
-flite
 fontconfig
 freetype2
 fribidi
@@ -395,7 +395,6 @@ libcddb
 libcdio
 libcdio-paranoia
 libcdr
-libcloudproviders
 libcroco
 libcups
 libdaemon
@@ -587,6 +586,7 @@ lm_sensors
 logrotate
 lsof
 lua
+lua51
 lua52
 lua52-bitop
 lua52-expat
@@ -640,6 +640,7 @@ networkmanager
 ninja
 nm-connection-editor
 nmap
+node-gyp
 nodejs
 notmuch-runtime
 noto-fonts
@@ -685,6 +686,8 @@ perl
 perl-error
 perl-file-which
 perl-io-tty
+perl-mailtools
+perl-timedate
 perl-xml-parser
 php
 pinentry
@@ -700,7 +703,6 @@ poppler-glib
 popt
 postgresql-libs
 potrace
-powertop
 procps-ng
 protobuf
 psmisc
@@ -754,6 +756,13 @@ python2-simplejson
 python2-six
 qpdf
 qt5-base
+qt5-declarative
+qt5-location
+qt5-quickcontrols2
+qt5-svg
+qt5-webchannel
+qt5-webengine
+qt5-xmlpatterns
 re2
 readline
 redis
@@ -823,6 +832,7 @@ tmux
 totem-plparser
 traceroute
 tracker
+tre
 tree
 tslib
 ttf-dejavu
@@ -869,6 +879,7 @@ woff2
 wpa_supplicant
 x265
 xapian-core
+xbitmaps
 xcb-proto
 xcb-util
 xcb-util-image
@@ -928,6 +939,7 @@ xorg-xwininfo
 xorg-xwud
 xorgproto
 xsel
+xterm
 xvidcore
 xz
 yajl

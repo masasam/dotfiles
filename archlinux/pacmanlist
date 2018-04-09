@@ -14,6 +14,7 @@ bison
 bookworm
 bzip2
 chromium
+cmake
 cmatrix
 coreutils
 cpio
@@ -30,6 +31,7 @@ diffutils
 dnsmasq
 docker
 e2fsprogs
+elinks
 elixir
 emacs
 eog
@@ -119,6 +121,7 @@ nethogs
 networkmanager
 nmap
 nodejs
+noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
 npm
@@ -140,7 +143,6 @@ pkgfile
 pkgstats
 poppler-data
 postgresql-libs
-powertop
 procps-ng
 psmisc
 pwgen
@@ -227,7 +229,7 @@ xorg-xvinfo
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
-xsel
+xterm
 yaourt
 yarn
 zsh
