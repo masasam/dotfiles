@@ -329,6 +329,8 @@ Preparing dotfiles
 
 	dconf-editor /org/gnome/desktop/interface/clock-show-date 'True'
 
+	dconf-editor /org/gnome/settings-daemon/plugins/color/night-light-temperature '5500'
+
 --------------------------------------
 
 You can make install from here
