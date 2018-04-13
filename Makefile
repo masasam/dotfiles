@@ -235,7 +235,7 @@ rails: ## Create rails app
 	cd ${HOME}/src/github.com/masasam/myapp;\
 	rbenv local 2.5.1;\
 	bundle init;\
-	echo "gem 'rails', '~> 5.2.0.rc2'" >> Gemfile;\
+	echo "gem 'rails', '~> 5.2.0'" >> Gemfile;\
 	bundle install --path vendor/bundle;\
 	bundle exec rails new -B --webpack=react --database=mysql --skip-test .;\
 	bundle install;\
