@@ -35,7 +35,7 @@ dockerpty==0.4.1
 docopt==0.6.2
 docutils==0.14
 entrypoints==0.2.3
-Faker==0.8.12
+Faker==0.8.13
 flake8==3.5.0
 greenlet==0.4.13
 html5lib==1.0.1
@@ -48,7 +48,7 @@ incremental==17.5.0
 ipykernel==4.8.2
 ipython==6.3.1
 ipython-genutils==0.2.0
-ipywidgets==7.2.0
+ipywidgets==7.2.1
 isort==4.3.4
 jedi==0.11.1
 Jinja2==2.10
@@ -85,14 +85,14 @@ pandocfilters==1.4.2
 paramiko==2.4.1
 parsel==1.4.0
 parso==0.1.1
-pbr==4.0.1
+pbr==4.0.2
 pexpect==4.4.0
 pgcli==1.9.1
 pgspecial==1.10.0
 pickleshare==0.7.4
 pip-review==1.0
 ply==3.11
-progressbar2==3.37.0
+progressbar2==3.37.1
 prompt-toolkit==1.0.15
 psycopg2==2.7.4
 psycopg2-binary==2.7.4
@@ -145,7 +145,7 @@ terminado==0.8.1
 terminaltables==3.1.0
 testpath==0.3.1
 text-unidecode==1.2
-texttable==0.9.1
+texttable==1.2.1
 tornado==5.0.2
 traitlets==4.3.2
 trash-cli==0.17.1.14
@@ -158,7 +158,7 @@ w3lib==1.19.0
 wcwidth==0.1.7
 webencodings==0.5.1
 websocket-client==0.47.0
-widgetsnbextension==3.2.0
+widgetsnbextension==3.2.1
 wrapt==1.10.11
 yapf==0.21.0
 zope.interface==4.4.3
