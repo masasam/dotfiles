@@ -14,10 +14,10 @@ call dein#begin('$XDG_CONFIG_HOME/nvim')
 call dein#add('Shougo/dein.vim')
 
 " Add or remove your plugins here:
-call dein#add('Shougo/denite.nvim')
+call dein#add('junegunn/fzf')
+call dein#add('junegunn/fzf.vim')
 call dein#add('airblade/vim-gitgutter')
 call dein#add('editorconfig/editorconfig-vim')
-call dein#add('Shougo/neomru.vim')
 call dein#add('bronson/vim-trailing-whitespace')
 call dein#add('junegunn/vim-easy-align')
 call dein#add('neomake/neomake')
@@ -91,28 +91,6 @@ let _curfile=expand("%:r")
 if _curfile == 'Makefile'
   set noexpandtab
 endif
-
-
-" -- grep ---------------------------------------------------------
-" Change file_rec command.
-call denite#custom#var('file_rec', 'command',
-\ ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
-
-call denite#custom#var('file_rec', 'command', ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
-call denite#custom#var('grep', 'command', ['ag'])
-call denite#custom#var('grep', 'recursive_opts', [])
-call denite#custom#var('grep', 'default_opts', ['--follow', '--no-group', '--no-color'])
-
-
-" -- Denite.nvim ----------------------------------------------------
-"prefix key
-nmap <Space> [denite]
-nnoremap <silent> [denite]r :<C-u>Denite<Space>buffer file_mru<CR>
-nnoremap <silent> [denite]d :<C-u>Denite<Space>directory_rec<CR>
-nnoremap <silent> [denite]b :<C-u>Denite<Space>buffer<CR>
-nnoremap <silent> [denite]f :<C-u>Denite<Space>file_rec<CR>
-nnoremap <silent> [denite]g :<C-u>Denite grep<CR>
-nnoremap <silent> [denite]l :<C-u>Denite<Space>line<CR>
 
 
 " -- vim-gitgutter -----------------------------------------------------
