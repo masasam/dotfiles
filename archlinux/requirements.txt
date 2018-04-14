@@ -86,7 +86,7 @@ paramiko==2.4.1
 parsel==1.4.0
 parso==0.1.1
 pbr==4.0.2
-pexpect==4.4.0
+pexpect==4.5.0
 pgcli==1.9.1
 pgspecial==1.10.0
 pickleshare==0.7.4

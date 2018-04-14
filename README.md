@@ -462,35 +462,39 @@ If you make a mistake on the letters, erase all with Ctrl-u
 
 #### Install using yarn
 
-	yarn global add npm
-	yarn global add tern
-	yarn global add jshint
-	yarn global add eslint
 	yarn global add babel-eslint
-	yarn global add eslint-plugin-react
-	yarn global add vue-language-server
-	yarn global add vue-cli
-	yarn global add create-react-app
 	yarn global add create-component-app
-	yarn global add prettier
+	yarn global add create-react-app
+	yarn global add eslint
+	yarn global add eslint-plugin-react
 	yarn global add firebase-tools
+	yarn global add gulp
 	yarn global add heroku-cli
+	yarn global add jshint
+	yarn global add ngrok
+	yarn global add npm
+	yarn global add prettier
+	yarn global add tern
+	yarn global add tldr
+	yarn global add vue-cli
+	yarn global add vue-language-server
+	yarn global add webpack
 
 #### rbenv rails
 
 	yaourt -S rbenv
 	yaourt -S ruby-build
-	rbenv install 2.5.0
+	rbenv install 2.5.1
 
 #### Create rails app
 
-	rbenv global 2.5.0
+	rbenv global 2.5.1
 	rbenv rehash
 	mkdir -p ${HOME}/src/github.com/masasam/myapp
 	cd ${HOME}/src/github.com/masasam/myapp
-	rbenv local 2.5.0
+	rbenv local 2.5.1
 	bundle init
-	echo "gem 'rails', '~> 5.2.0.rc2'" >> Gemfile
+	echo "gem 'rails', '~> 5.2.0'" >> Gemfile
 	bundle install --path vendor/bundle
 	bundle exec rails new -B --webpack=react --database=mysql --skip-test .
 	bundle install
