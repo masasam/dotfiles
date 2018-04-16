@@ -151,6 +151,7 @@ neomutt: ## Init neomutt mail client
 urxvt: ## Init rxvt-unicode terminal
 	sudo pacman -S rxvt-unicode urxvt-perls
 	ln -vsf ${PWD}/.Xresources   ${HOME}/.Xresources
+	sudo ln -vsf ${PWD}/usr/share/applications/urxvt.desktop   /usr/share/applications/urxvt.desktop
 	sudo ln -vsf ${PWD}/usr/share/applications/urxvtc.desktop   /usr/share/applications/urxvtc.desktop
 	sudo ln -vsf ${PWD}/usr/share/applications/urxvt-tabbed.desktop   /usr/share/applications/urxvt-tabbed.desktop
 
@@ -179,6 +180,7 @@ tym: ## Init tym terminal
 	yaourt -S tym
 	mkdir -p ${HOME}/.config/tym
 	ln -vsf ${PWD}/.config/tym/config.lua   ${HOME}/.config/tym/config.lua
+	sudo ln -vsf ${PWD}/usr/share/applications/tym.desktop   /usr/share/applications/tym.desktop
 
 dnsmasq: ## Init dnsmasq
 	sudo pacman -S dnsmasq
