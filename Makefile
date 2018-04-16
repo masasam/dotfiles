@@ -175,6 +175,11 @@ termite: ## Init termite terminal
 	mkdir -p ${HOME}/.config/termite
 	ln -vsf ${PWD}/.config/termite/config   ${HOME}/.config/termite/config
 
+tym: ## Init tym terminal
+	yaourt -S tym
+	mkdir -p ${HOME}/.config/tym
+	ln -vsf ${PWD}/.config/tym/config.lua   ${HOME}/.config/tym/config.lua
+
 dnsmasq: ## Init dnsmasq
 	sudo pacman -S dnsmasq
 	sudo ln -vsf ${PWD}/etc/dnsmasq/resolv.dnsmasq.conf   /etc/resolv.dnsmasq.conf
