@@ -355,7 +355,6 @@ jfsutils
 jhead
 jpegoptim
 jq
-js
 js52
 json-c
 json-glib
@@ -819,6 +818,8 @@ tcl
 tcpdump
 tdb
 telepathy-glib
+termite
+termite-terminfo
 tevent
 texinfo
 texlive-bin
