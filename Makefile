@@ -464,7 +464,7 @@ pipupdate: ## Update python packages
 rustupdate: ## Update rust packages
 	cargo install-update -a
 
-test: ## Test this Makefile using docker
+test: ## Test this Makefile with docker
 	docker build -t dotfiles ${PWD}
 	docker run -v /home/${USER}/Dropbox:${HOME}/Dropbox:cached --name makefiletest -d dotfiles
 	@echo "========== make install =========="
@@ -488,7 +488,7 @@ test: ## Test this Makefile using docker
 	@echo "========== make rustinstall =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make rustinstall"
 
-testsimple: ## Test this Makefile using docker without Dropbox
+testsimple: ## Test this Makefile with docker without Dropbox
 	docker build -t dotfiles ${PWD}
 	docker run --name makefiletest -d dotfiles
 	@echo "========== make install =========="
