@@ -2,6 +2,8 @@ export PATH := ${HOME}/.local/bin:${HOME}/.node_modules/bin:${HOME}/.cargo/bin:/
 export GOPATH := ${HOME}
 
 init: ## Initial deploy dotfiles
+	test -L ${HOME}/.emacs.d || rm -rf ${HOME}/.emacs.d
+	ln -vsfn ${PWD}/.emacs.d   ${HOME}/.emacs.d
 	ln -vsf ${PWD}/.lesskey   ${HOME}/.lesskey
 	lesskey
 	ln -vsf ${PWD}/.zshrc   ${HOME}/.zshrc
