@@ -191,6 +191,7 @@ w3m
 which
 whois
 wmctrl
+x11-ssh-askpass
 xclip
 xdg-user-dirs
 xf86-video-intel

@@ -43,7 +43,7 @@ install: ## Install arch linux packages using pacman
 	arc-gtk-theme npm typescript llvm llvm-libs lldb php tree w3m neomutt whois \
 	zsh-syntax-highlighting shellcheck bash-completion mathjax expect elixir lsof \
 	cscope postgresql-libs pdfgrep gnu-netcat cmatrix jpegoptim nethogs mlocate \
-	jhead geckodriver
+	jhead geckodriver x11-ssh-askpass libreoffice-fresh-ja
 	sudo pkgfile --update
 
 pipinstall: ## Install python packages

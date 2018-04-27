@@ -909,6 +909,7 @@ wildmidi
 wmctrl
 woff2
 wpa_supplicant
+x11-ssh-askpass
 x265
 xapian-core
 xbitmaps
