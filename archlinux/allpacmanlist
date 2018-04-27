@@ -53,6 +53,7 @@ chromaprint
 chromium
 cifs-utils
 clang
+clucene
 clutter
 clutter-gst
 clutter-gtk
@@ -126,6 +127,7 @@ fribidi
 fuse-common
 fuse2
 fzf
+gamin
 gauche
 gawk
 gc
@@ -150,6 +152,7 @@ giflib
 gimp
 git
 gjs
+glew
 glib-networking
 glib2
 glib2-docs
@@ -372,6 +375,7 @@ ldb
 ldns
 less
 lhasa
+libabw
 libaio
 libarchive
 libass
@@ -394,6 +398,7 @@ libcddb
 libcdio
 libcdio-paranoia
 libcdr
+libcmis
 libcroco
 libcups
 libdaemon
@@ -405,15 +410,20 @@ libdrm
 libdv
 libdvdnav
 libdvdread
+libe-book
 libedit
 libelf
 libepoxy
+libepubgen
+libetonyek
 libevdev
 libevent
 libexif
+libexttextcat
 libfdk-aac
 libffi
 libfontenc
+libfreehand
 libgcrypt
 libgdm
 libgee
@@ -437,9 +447,11 @@ libidn2
 libiec61883
 libimobiledevice
 libinput
+libixion
 libjpeg-turbo
 libkeybinder3
 libksba
+liblangtag
 libldap
 liblouis
 liblqr
@@ -455,6 +467,8 @@ libmp4v2
 libmpc
 libmpcdec
 libmpeg2
+libmspub
+libmwaw
 libnautilus-extension
 libndp
 libnetfilter_conntrack
@@ -467,11 +481,15 @@ libnl
 libnm
 libnm-glib
 libnotify
+libnsl
 liboauth
+libodfgen
 libofa
 libogg
 libomxil-bellagio
+liborcus
 libotf
+libpagemaker
 libpaper
 libpcap
 libpciaccess
@@ -486,8 +504,11 @@ libpulse
 libpwquality
 libquvi
 libquvi-scripts
+libqxp
 libraqm
 libraw1394
+libreoffice-fresh
+libreoffice-fresh-ja
 librevenge
 librsvg
 libsamplerate
@@ -507,6 +528,7 @@ libspiro
 libsrtp
 libssh
 libssh2
+libstaroffice
 libstemmer
 libsynctex
 libsystemd
@@ -517,6 +539,7 @@ libthai
 libtheora
 libtiff
 libtirpc
+libtommath
 libtool
 libunistring
 libunwind
@@ -528,6 +551,7 @@ libuv
 libva
 libva-intel-driver
 libvdpau
+libvisio
 libvisual
 libvoikko
 libvorbis
@@ -538,6 +562,8 @@ libwbclient
 libwebp
 libwmf
 libwpd
+libwpg
+libwps
 libx11
 libx264
 libxau
@@ -573,6 +599,7 @@ libxxf86dga
 libxxf86vm
 libyaml
 libzip
+libzmf
 licenses
 linux
 linux-api-headers
@@ -583,6 +610,7 @@ llvm
 llvm-libs
 lm_sensors
 logrotate
+lpsolve
 lsof
 lua
 lua51
@@ -762,9 +790,12 @@ qt5-svg
 qt5-webchannel
 qt5-webengine
 qt5-xmlpatterns
+raptor
+rasqal
 re2
 readline
 redis
+redland
 reiserfsprogs
 rest
 rhash
