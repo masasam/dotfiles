@@ -269,11 +269,18 @@ aur: ## Install arch linux AUR packages using yaourt
 suspend: ## Don't suspend when laptop's lid close
 	sudo ln -vsf ${PWD}/etc/systemd/logind.conf   /etc/systemd/logind.conf
 
-desktop: ## Off desktop entry
+desktop: ## Update desktop entry
 	sudo ln -vsf ${PWD}/usr/share/applications/vim.desktop   /usr/share/applications/vim.desktop
 	sudo ln -vsf ${PWD}/usr/share/applications/avahi-discover.desktop   /usr/share/applications/avahi-discover.desktop
 	sudo ln -vsf ${PWD}/usr/share/applications/bvnc.desktop   /usr/share/applications/bvnc.desktop
 	sudo ln -vsf ${PWD}/usr/share/applications/bssh.desktop   /usr/share/applications/bssh.desktop
+	sudo ln -vsf ${PWD}/usr/share/applications/xterm.desktop   /usr/share/applications/xterm.desktop
+	sudo ln -vsf ${PWD}/usr/share/applications/uxterm.desktop   /usr/share/applications/uxterm.desktop
+	sudo ln -vsf ${PWD}/usr/share/applications/mlterm.desktop   /usr/share/applications/mlterm.desktop
+	sudo ln -vsf ${PWD}/usr/share/applications/mlclient.desktop   /usr/share/applications/mlclient.desktop
+	sudo ln -vsf ${PWD}/usr/share/applications/urxvt.desktop   /usr/share/applications/urxvt.desktop
+	sudo ln -vsf ${PWD}/usr/share/applications/urxvtc.desktop   /usr/share/applications/urxvtc.desktop
+	sudo ln -vsf ${PWD}/usr/share/applications/urxvt-tabbed.desktop   /usr/share/applications/urxvt-tabbed.desktop
 
 aws: ## Init aws cli
 	mkdir -p ${HOME}/.local
