@@ -29,7 +29,7 @@ cssselect==1.0.3
 cycler==0.10.0
 decorator==4.3.0
 docker==3.3.0
-docker-compose==1.21.0
+docker-compose==1.21.1
 docker-pycreds==0.2.3
 dockerpty==0.4.1
 docopt==0.6.2
@@ -58,7 +58,7 @@ jupyter==1.0.0
 jupyter-client==5.2.3
 jupyter-console==5.2.0
 jupyter-core==4.4.0
-jupyterlab==0.32.0
+jupyterlab==0.32.1
 jupyterlab-launcher==0.10.5
 jupyterthemes==0.19.1
 kitchen==1.2.5
@@ -145,7 +145,7 @@ terminado==0.8.1
 terminaltables==3.1.0
 testpath==0.3.1
 text-unidecode==1.2
-texttable==1.2.1
+texttable==0.9.1
 tornado==5.0.2
 traitlets==4.3.2
 trash-cli==0.17.1.14

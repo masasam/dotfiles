@@ -281,6 +281,7 @@ desktop: ## Update desktop entry
 	sudo ln -vsf ${PWD}/usr/share/applications/urxvt.desktop   /usr/share/applications/urxvt.desktop
 	sudo ln -vsf ${PWD}/usr/share/applications/urxvtc.desktop   /usr/share/applications/urxvtc.desktop
 	sudo ln -vsf ${PWD}/usr/share/applications/urxvt-tabbed.desktop   /usr/share/applications/urxvt-tabbed.desktop
+	sudo ln -vsf ${PWD}/usr/share/applications/nvim.desktop   /usr/share/applications/nvim.desktop
 
 aws: ## Init aws cli
 	mkdir -p ${HOME}/.local
