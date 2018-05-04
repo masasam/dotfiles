@@ -6,6 +6,7 @@ ibus-mozc
 mlterm
 mozc
 nkf
+nodenv
 peek
 rbenv
 ruby-build
