@@ -21,7 +21,7 @@ chardet==3.0.4
 cheat==2.2.3
 cli-helpers==1.0.2
 click==6.7
-colorama==0.3.7
+colorama==0.3.9
 configobj==5.0.6
 constantly==15.1.0
 cryptography==2.2.2
