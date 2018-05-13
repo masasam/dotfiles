@@ -35,7 +35,6 @@
 (package-install 'beginend)
 (package-install 'bind-key)
 (package-install 'browse-at-remote)
-(package-install 'cask)
 (package-install 'coffee-mode)
 (package-install 'company)
 (package-install 'company-irony)

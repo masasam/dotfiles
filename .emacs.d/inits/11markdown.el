@@ -2,6 +2,28 @@
           '(lambda () (outline-minor-mode t)))
 
 
+(defun md2pdf ()
+  "Generate pdf from markdown."
+  (interactive)
+  (shell-command-to-string
+   (concat "pandoc "
+	   (buffer-file-name (current-buffer))
+	   " -o "
+	   (file-name-sans-extension (buffer-file-name (current-buffer)))
+	   ".pdf -V mainfont=IPAPGothic -V fontsize=16pt --pdf-engine=lualatex")))
+
+
+(defun md2docx ()
+  "Generate docx from markdown."
+  (interactive)
+  (shell-command-to-string
+   (concat "pandoc "
+	   (buffer-file-name (current-buffer))
+	   " -t docx -o "
+	   (file-name-sans-extension (buffer-file-name (current-buffer)))
+	   ".docx -V mainfont=IPAPGothic -V fontsize=16pt --toc --highlight-style=zenburn")))
+
+
 ;; markdown-preview like github
 (setq markdown-command "github-markup"
       markdown-command-needs-filename t
