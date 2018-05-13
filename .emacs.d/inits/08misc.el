@@ -63,6 +63,14 @@
   (defun kanban ()
     (interactive)
     (find-file "~/Dropbox/kanban/doc.txt"))
+  (defun kanban-rename ()
+    (interactive)
+    (buffer-file-name "~/Dropbox/kanban/doc.txt")
+    (rename-file "~/Dropbox/kanban/doc.txt"
+		 (expand-file-name
+		  (read-from-minibuffer "Rename: " `(".txt" . 1) nil nil nil)
+		  "~/Dropbox/kanban")
+		 1))
   (defun my/githubimage ()
     (interactive)
     (find-file "~/Pictures/image/")))

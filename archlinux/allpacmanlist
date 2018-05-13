@@ -293,6 +293,7 @@ haskell-scientific
 haskell-semigroups
 haskell-sha
 haskell-skylighting
+haskell-skylighting-core
 haskell-socks
 haskell-split
 haskell-stm
