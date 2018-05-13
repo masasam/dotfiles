@@ -505,7 +505,7 @@ function md2pdf() {
     if [ $# = 1 ]; then
 	fname_ext=$1
 	fname="${fname_ext%.*}"
-	pandoc $1 -o $fname.pdf --pdf-engine=lualatex
+	pandoc $1 -o $fname.pdf -V mainfont="Cica" --pdf-engine=lualatex
     else
 	echo 'usage: md2pdf file.md'
     fi
@@ -516,7 +516,7 @@ function md2docx() {
     if [ $# = 1 ]; then
 	fname_ext=$1
 	fname="${fname_ext%.*}"
-	pandoc $1 -t docx -o $fname.docx --toc --highlight-style=zenburn
+	pandoc $1 -t docx -o $fname.docx -V mainfont="Cica" --toc --highlight-style=zenburn
     else
 	echo 'usage: md2docx file.md'
     fi
