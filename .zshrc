@@ -505,7 +505,7 @@ function md2pdf() {
     if [ $# = 1 ]; then
 	fname_ext=$1
 	fname="${fname_ext%.*}"
-	pandoc $1 -o $fname.pdf -V documentclass=ltjarticle --pdf-engine=lualatex
+	pandoc $1 -o $fname.pdf --pdf-engine=lualatex
     else
 	echo 'usage: md2pdf file.md'
     fi
