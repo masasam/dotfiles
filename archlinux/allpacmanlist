@@ -142,7 +142,7 @@ gdbm
 gdk-pixbuf2
 gdm
 geckodriver
-gegl02
+gegl
 geoclue2
 geocode-glib
 gettext
@@ -470,6 +470,7 @@ libmpcdec
 libmpeg2
 libmspub
 libmwaw
+libmypaint
 libnautilus-extension
 libndp
 libnetfilter_conntrack
@@ -653,6 +654,7 @@ mpv
 msgpack-c
 mtdev
 mutter
+mypaint-brushes
 nano
 nautilus
 nautilus-dropbox
