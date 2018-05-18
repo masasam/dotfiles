@@ -3,7 +3,7 @@
 
 
 (defun md2pdf ()
-  "Generate pdf from markdown."
+  "Generate pdf from currently open markdown."
   (interactive)
   (shell-command-to-string
    (concat "pandoc "
@@ -14,7 +14,7 @@
 
 
 (defun md2docx ()
-  "Generate docx from markdown."
+  "Generate docx from currently open markdown."
   (interactive)
   (shell-command-to-string
    (concat "pandoc "
