@@ -5,23 +5,33 @@
 (defun md2pdf ()
   "Generate pdf from currently open markdown."
   (interactive)
-  (shell-command-to-string
-   (concat "pandoc "
-	   (buffer-file-name (current-buffer))
-	   " -o "
-	   (file-name-sans-extension (buffer-file-name (current-buffer)))
-	   ".pdf -V mainfont=IPAPGothic -V fontsize=16pt --pdf-engine=lualatex")))
+  (let ((filename (buffer-file-name (current-buffer))))
+    (shell-command-to-string
+     (concat "pandoc "
+	     filename
+	     " -o "
+	     (file-name-sans-extension filename)
+	     ".pdf -V mainfont=IPAPGothic -V fontsize=16pt --pdf-engine=lualatex"))
+    (shell-command-to-string
+     (concat "xdg-open "
+	     (file-name-sans-extension filename)
+	     ".pdf"))))
 
 
 (defun md2docx ()
   "Generate docx from currently open markdown."
   (interactive)
-  (shell-command-to-string
-   (concat "pandoc "
-	   (buffer-file-name (current-buffer))
-	   " -t docx -o "
-	   (file-name-sans-extension (buffer-file-name (current-buffer)))
-	   ".docx -V mainfont=IPAPGothic -V fontsize=16pt --toc --highlight-style=zenburn")))
+  (let ((filename (buffer-file-name (current-buffer))))
+    (shell-command-to-string
+     (concat "pandoc "
+	     filename
+	     " -t docx -o "
+	     (file-name-sans-extension filename)
+	     ".docx -V mainfont=IPAPGothic -V fontsize=16pt --toc --highlight-style=zenburn"))
+    (shell-command-to-string
+     (concat "xdg-open "
+	     (file-name-sans-extension filename)
+	     ".docx"))))
 
 
 ;; markdown-preview like github
