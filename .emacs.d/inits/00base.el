@@ -171,3 +171,15 @@
   (set-face-background 'mode-line "#1c1f26"))
 (add-hook 'focus-out-hook 'my-out-focused-mode-line)
 (add-hook 'focus-in-hook 'my-in-focused-mode-line)
+
+
+(defun trash-list ()
+  "Show trash-list."
+  (interactive)
+  (find-file "~/.local/share/Trash/files"))
+
+
+(defun trash-empty ()
+  "Make trash empty."
+  (interactive)
+  (shell-command-to-string "trash-empty"))
