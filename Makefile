@@ -115,6 +115,7 @@ nodeinstall: ## Install node packages
 	yarn global add gulp
 	yarn global add heroku-cli
 	yarn global add jshint
+	yarn global add logo.svg
 	yarn global add ngrok
 	yarn global add npm
 	yarn global add prettier

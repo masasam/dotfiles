@@ -471,6 +471,7 @@ If you make a mistake on the letters, erase all with Ctrl-u
 	yarn global add gulp
 	yarn global add heroku-cli
 	yarn global add jshint
+	yarn global add logo.svg
 	yarn global add ngrok
 	yarn global add npm
 	yarn global add prettier
