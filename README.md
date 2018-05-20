@@ -401,6 +401,7 @@ If you make a mistake on the letters, erase all with Ctrl-u
 	yaourt -S rbenv
 	yaourt -S ruby-build
 	yaourt -S screenkey
+	yaourt -S yay
 
 ##### Install using pip
 

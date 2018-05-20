@@ -103,7 +103,7 @@ pycodestyle==2.4.0
 pycparser==2.18
 PyDispatcher==2.0.5
 pydoc-utils==1.0.1
-pyflakes==1.6.0
+pyflakes==2.0.0
 Pygments==2.2.0
 pygobject==3.28.2
 pylint==1.9.1

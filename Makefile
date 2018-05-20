@@ -266,6 +266,7 @@ aur: ## Install arch linux AUR packages using yaourt
 	yaourt -S git-secrets
 	yaourt -S nkf
 	yaourt -S peek
+	yaourt -S yay
 
 suspend: ## Don't suspend when laptop's lid close
 	sudo ln -vsf ${PWD}/etc/systemd/logind.conf   /etc/systemd/logind.conf
