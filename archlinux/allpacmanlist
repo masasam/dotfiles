@@ -224,6 +224,7 @@ haskell-asn1-types
 haskell-async
 haskell-attoparsec
 haskell-base-compat
+haskell-base-orphans
 haskell-base64-bytestring
 haskell-basement
 haskell-blaze-builder
