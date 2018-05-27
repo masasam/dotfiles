@@ -8,12 +8,13 @@ astroid==1.6.4
 attrs==18.1.0
 Automat==0.6.0
 autopep8==1.3.5
-awscli==1.15.27
+awscli==1.15.28
 backcall==0.1.0
 bcrypt==3.1.4
 beautifulsoup4==4.6.0
 bleach==2.1.3
-botocore==1.10.27
+botocore==1.10.28
+btrfsutil==1.0.0
 cached-property==1.4.2
 certifi==2018.4.16
 cffi==1.11.5
@@ -92,7 +93,7 @@ pgspecial==1.11.0
 pickleshare==0.7.4
 pip-review==1.0
 ply==3.11
-progressbar2==3.37.1
+progressbar2==3.38.0
 prompt-toolkit==1.0.15
 psycopg2==2.7.4
 psycopg2-binary==2.7.4
@@ -157,7 +158,7 @@ virtualenvwrapper==4.8.2
 w3lib==1.19.0
 wcwidth==0.1.7
 webencodings==0.5.1
-websocket-client==0.47.0
+websocket-client==0.48.0
 widgetsnbextension==3.2.1
 wrapt==1.10.11
 yapf==0.22.0
