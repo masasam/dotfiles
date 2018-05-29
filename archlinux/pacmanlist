@@ -131,6 +131,7 @@ optipng
 otf-ipafont
 p7zip
 pacman
+pacman-contrib
 pandoc
 parallel
 patch

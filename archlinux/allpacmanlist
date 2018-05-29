@@ -701,6 +701,7 @@ p11-kit
 p7zip
 package-query
 pacman
+pacman-contrib
 pacman-mirrorlist
 pam
 pambase
