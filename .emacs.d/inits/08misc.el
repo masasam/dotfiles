@@ -48,10 +48,6 @@
 (setq reb-re-syntax 'pcre)
 
 
-;; docker-tramp
-(require 'docker-tramp-compat)
-
-
 ;; dumb-jump
 (dumb-jump-mode)
 (setq dumb-jump-selector 'ivy)
