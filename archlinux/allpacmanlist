@@ -699,7 +699,6 @@ orc
 otf-ipafont
 p11-kit
 p7zip
-package-query
 pacman
 pacman-contrib
 pacman-mirrorlist
@@ -983,7 +982,6 @@ xterm
 xvidcore
 xz
 yajl
-yaourt
 yarn
 zenity
 zeromq
