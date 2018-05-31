@@ -1,5 +1,3 @@
-(add-to-list 'load-path "~/Dropbox/emacs/setting/")
-(require 'setting)
 ;; theme
 (load-theme 'material t)
 ;; Change part of theme to your liking.
