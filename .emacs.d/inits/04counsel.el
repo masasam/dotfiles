@@ -45,6 +45,6 @@ If the region is inactive, swiper."
 				      (editorconfig-mode 1)))
 
 
-;; counsel-ghq
+;; counsel-projectile
 (bind-key "C-x l" 'counsel-projectile-switch-project)
 (bind-key "C-x C-l" 'counsel-projectile-switch-project)
