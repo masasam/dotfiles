@@ -56,6 +56,9 @@
 ;; dired
 (with-eval-after-load 'dired
   (bind-key "e" 'wdired-change-to-wdired-mode dired-mode-map)
+  (defun my/password ()
+    (interactive)
+    (find-file "~/Dropbox/passwd/pass.gpg"))
   (defun kanban ()
     (interactive)
     (find-file "~/Dropbox/kanban/doc.txt"))
