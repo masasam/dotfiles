@@ -90,6 +90,7 @@
 (package-install 'jinja2-mode)
 (package-install 'js2-mode)
 (package-install 'json-mode)
+(package-install 'keychain-environment)
 (package-install 'lispy)
 (package-install 'macrostep)
 (package-install 'magit)
