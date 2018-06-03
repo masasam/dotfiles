@@ -140,7 +140,7 @@ pcmciautils
 pdfgrep
 perl
 php
-pkg-config
+pkgconf
 pkgfile
 pkgstats
 poppler-data
