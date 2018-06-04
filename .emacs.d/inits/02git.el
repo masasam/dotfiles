@@ -4,5 +4,9 @@
 (bind-key "C-x G" 'magit-blame)
 
 
+;; keychain-environment
+(keychain-refresh-environment)
+
+
 ;; git-gutter
 (global-git-gutter-mode t)
