@@ -149,6 +149,7 @@ procps-ng
 psmisc
 pwgen
 python-pip
+python-prompt_toolkit
 redis
 reiserfsprogs
 rsync

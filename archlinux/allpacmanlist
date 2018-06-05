@@ -28,6 +28,7 @@ bash-completion
 bc
 binutils
 bison
+blas
 bluez
 bluez-libs
 bookworm
@@ -345,6 +346,7 @@ imagemagick
 imlib2
 inetutils
 inkscape
+intel-tbb
 intltool
 ipcalc
 iperf
@@ -372,10 +374,12 @@ kmod
 krb5
 ladspa
 lame
+lapack
 lcms
 lcms2
 ldb
 ldns
+lensfun
 less
 lhasa
 libabw
@@ -510,6 +514,7 @@ libquvi
 libquvi-scripts
 libqxp
 libraqm
+libraw
 libraw1394
 libreoffice-fresh
 libreoffice-fresh-ja
@@ -642,6 +647,7 @@ mariadb-clients
 mathjax
 mdadm
 mesa
+metis
 minizip
 mjpegtools
 mkinitcpio
@@ -766,6 +772,7 @@ python-msgpack
 python-packaging
 python-pip
 python-progress
+python-prompt_toolkit
 python-pygments
 python-pyparsing
 python-pytoml
@@ -774,6 +781,7 @@ python-retrying
 python-setuptools
 python-six
 python-urllib3
+python-wcwidth
 python-webencodings
 python2
 python2-appdirs
@@ -858,6 +866,7 @@ srt
 startup-notification
 strace
 sudo
+suitesparse
 sylpheed
 sysfsutils
 systemd
