@@ -216,7 +216,7 @@ alias yarnupdate='yarn global upgrade'
 alias pipbackup='cd ${HOME}/src/github.com/masasam/dotfiles; make pipbackup; cd -'
 alias pipupdate='cd ${HOME}/src/github.com/masasam/dotfiles; make pipupdate; cd -'
 alias pipcheck='pip-review --user'
-alias archupdate='yaourt -Syua; paccache -ruk0'
+alias archupdate='yay -Syu; paccache -ruk0'
 alias archbackup='cd ${HOME}/src/github.com/masasam/dotfiles; make backup; cd -'
 alias soundrecord='arecord -t wav -f dat -q | lame -b 128 -m s - out.mp3'
 alias rust='cargo-script'
@@ -588,7 +588,7 @@ function terminal-size() {
 
 # zsh-syntax-highlighting(pacman -S zsh-syntax-highlighting)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# zsh-completions for google-cloud-sdk(yaourt google-cloud-sdk)
+# zsh-completions for google-cloud-sdk(yay google-cloud-sdk)
 #source /opt/google-cloud-sdk/completion.zsh.inc
 # zsh-completions for aws
 source ~/.local/bin/aws_zsh_completer.sh
