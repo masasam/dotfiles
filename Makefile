@@ -266,6 +266,7 @@ aur: ## Install arch linux AUR packages using yay
 	yay -S git-secrets
 	yay -S nkf
 	yay -S peek
+	yay -S yaourt
 	yay -S yay
 
 suspend: ## Don't suspend when laptop's lid close
@@ -444,7 +445,7 @@ backup: ## Backup arch linux packages
 	mkdir -p ${PWD}/archlinux
 	pacman -Qqen > ${PWD}/archlinux/pacmanlist
 	pacman -Qnq > ${PWD}/archlinux/allpacmanlist
-	pacman -Qqem > ${PWD}/archlinux/yaourtlist
+	pacman -Qqem > ${PWD}/archlinux/yaylist
 
 update: ## Update arch linux packages and save packages cache 3 generations
 	yay -Syua; paccache -ruk0
