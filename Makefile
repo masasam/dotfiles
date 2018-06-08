@@ -148,7 +148,7 @@ neomutt: ## Init neomutt mail client
 	ln -vsf ${HOME}/Dropbox/mutt/aliases   ${HOME}/.mutt/aliases
 	ln -vsf ${HOME}/Dropbox/mutt/signature   ${HOME}/.mutt/signature
 	ln -vsf ${HOME}/Dropbox/mutt/.goobookrc   ${HOME}/.goobookrc
-	yaourt -S goobook-git
+	yay -S goobook-git
 	goobook authenticate
 
 urxvt: ## Init rxvt-unicode terminal
@@ -165,7 +165,7 @@ xterm: ## Init xterm terminal
 	sudo ln -vsf ${PWD}/usr/share/applications/uxterm.desktop   /usr/share/applications/uxterm.desktop
 
 mlterm: ## Init mlterm terminal
-	yaourt -S mlterm
+	yay -S mlterm
 	mkdir -p ${HOME}/.mlterm
 	ln -vsf ${PWD}/.mlterm/main   ${HOME}/.mlterm/main
 	ln -vsf ${PWD}/.mlterm/color   ${HOME}/.mlterm/color
@@ -180,7 +180,7 @@ termite: ## Init termite terminal
 	ln -vsf ${PWD}/.config/termite/config   ${HOME}/.config/termite/config
 
 tym: ## Init tym terminal
-	yaourt -S tym
+	yay -S tym
 	mkdir -p ${HOME}/.config/tym
 	ln -vsf ${PWD}/.config/tym/config.lua   ${HOME}/.config/tym/config.lua
 	sudo ln -vsf ${PWD}/usr/share/applications/tym.desktop   /usr/share/applications/tym.desktop
@@ -195,7 +195,7 @@ dnsmasq: ## Init dnsmasq
 mozc: ## Install ibus-mozc
 	test -L ${HOME}/.mozc || rm -rf ${HOME}/.mozc
 	ln -vsfn ${HOME}/Dropbox/mozc/.mozc   ${HOME}/.mozc
-	yaourt -S ibus-mozc
+	yay -S ibus-mozc
 	ibus-daemon -drx
 
 ttf-cica: ## Install Cica font
@@ -229,8 +229,8 @@ redis: ## Redis inital setup
 	sudo systemctl start redis.service
 
 rbenv: ## Install rvenv ruby-build
-	yaourt -S rbenv
-	yaourt -S ruby-build
+	yay -S rbenv
+	yay -S ruby-build
 	rbenv install 2.5.1
 	gem install bundle
 
@@ -257,16 +257,16 @@ zoom: ## Install zoom for web conference
 	sudo pacman -U ${HOME}/Dropbox/arch/zoom_x86_64.pkg.tar.xz
 
 screenkey: ## Init screenkey
-	yaourt -S screenkey
+	yay -S screenkey
 	mkdir -p ${HOME}/.config
 	ln -vsf ${PWD}/.config/screenkey.json ${HOME}/.config/screenkey.json
 
-aur: ## Install arch linux AUR packages using yaourt
-	yaourt -S drone-cli
-	yaourt -S git-secrets
-	yaourt -S nkf
-	yaourt -S peek
-	yaourt -S yay
+aur: ## Install arch linux AUR packages using yay
+	yay -S drone-cli
+	yay -S git-secrets
+	yay -S nkf
+	yay -S peek
+	yay -S yay
 
 suspend: ## Don't suspend when laptop's lid close
 	sudo ln -vsf ${PWD}/etc/systemd/logind.conf   /etc/systemd/logind.conf
@@ -337,14 +337,14 @@ gnupg: ## Import gnupg secret-key
 gnuglobal: ## Install gnu global
 	mkdir -p ${HOME}/.local
 	pip install --user pygments
-	yaourt -S global
+	yay -S global
 
 nodenv: ## Install nodenv node-build
-	yaourt -S nodenv
+	yay -S nodenv
 	git clone https://github.com/nodenv/node-build.git ${HOME}/.nodenv/plugins/node-build
 
 psd: ## Profile-Sync-Daemon initial setup
-	yaourt -S profile-sync-daemon
+	yay -S profile-sync-daemon
 	mkdir -p ${HOME}/.config/psd
 	ln -vsf ${PWD}/.config/psd/psd.conf   ${HOME}/.config/psd/psd.conf
 	echo "${USER} ALL=(ALL) NOPASSWD: /usr/bin/psd-overlay-helper" | sudo EDITOR='tee -a' visudo
@@ -361,7 +361,7 @@ emacs-devel: # Install development version of emacs
 	rm -rf ${HOME}/.emacs.d/elpa
 
 kubernetes: ## Init kubernetes 
-	yaourt -S google-cloud-sdk
+	yay -S google-cloud-sdk
 	sudo gcloud components update kubectl
 	gcloud init
 
@@ -447,11 +447,7 @@ backup: ## Backup arch linux packages
 	pacman -Qqem > ${PWD}/archlinux/yaourtlist
 
 update: ## Update arch linux packages and save packages cache 3 generations
-	yaourt -Syua; paccache -ruk0
-
-recover: ## Recover arch linux packages from backup
-	sudo pacman -S --needed `cat ${PWD}/archlinux/pacmanlist`
-	yaourt -S --needed $(DOY) `cat ${PWD}/archlinux/yaourtlist`
+	yay -Syua; paccache -ruk0
 
 pipbackup: ## Backup python packages
 	mkdir -p ${PWD}/archlinux

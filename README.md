@@ -42,14 +42,6 @@ Once after creating the environment
 
 Since the arch linux packages list that was installed at will be backed up to archlinux directry,
 
-you can recover the arch linux environment with
-
-	make recover
-
-You can do 'make recover' or 'make install' for the second and subsequent builds.
-
-Please select your favorite one.
-
 If [Makefile](https://github.com/masasam/dotfiles/blob/master/Makefile) is completed, you should be able to restore in 1 hour in either case.
 
     make init
@@ -279,23 +271,17 @@ You can not wifi unless you turn off dhcpcd.
 	sudo pacman -S zsh git
 	sudo pacman -S noto-fonts noto-fonts-cjk chromium
 
-Install yaourt
-vim /etc/pacman.conf
+Install yay
 
-    [archlinuxfr]
-    SigLevel = Never
-    Server = http://repo.archlinux.fr/$arch
+	mkdir -p ~/src/github.com/aur
+	cd src/github.com/aur
+	git clone https://aur.archlinux.org/yay.git
+	cd yay
+	makepkg -si
 
-Synchronize yaourt latest
-
-	sudo pacman -Syy
-	sudo pacman -S yaourt
-	sudo pacman --sync --refresh yaourt
-	yaourt -Syua
-	
 Install dropbox and sync
 
-	yaourt -S dropbox
+	yay -S dropbox
 	sudo pacman -S nautilus-dropbox
 	dropbox
 
@@ -386,22 +372,22 @@ Activities> Settings> Keyboard> Shortcut
 
 If you make a mistake on the letters, erase all with Ctrl-u
 
-#### Install using yaourt
+#### Install using yay
 
-	yaourt -S drone-cli
-	yaourt -S git-secrets
-	yaourt -S global
-	yaourt -S google-cloud-sdk
-	yaourt -S goobook-git
-	yaourt -S ibus-mozc
-	yaourt -S mozc
-	yaourt -S nkf
-	yaourt -S nodenv
-	yaourt -S peek
-	yaourt -S rbenv
-	yaourt -S ruby-build
-	yaourt -S screenkey
-	yaourt -S yay
+	yay -S drone-cli
+	yay -S git-secrets
+	yay -S global
+	yay -S google-cloud-sdk
+	yay -S goobook-git
+	yay -S ibus-mozc
+	yay -S mozc
+	yay -S nkf
+	yay -S nodenv
+	yay -S peek
+	yay -S rbenv
+	yay -S ruby-build
+	yay -S screenkey
+	yay -S yay
 
 ##### Install using pip
 
@@ -484,8 +470,8 @@ If you make a mistake on the letters, erase all with Ctrl-u
 
 #### rbenv rails
 
-	yaourt -S rbenv
-	yaourt -S ruby-build
+	yay -S rbenv
+	yay -S ruby-build
 	rbenv install 2.5.1
 
 #### Create rails app
