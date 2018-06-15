@@ -465,6 +465,9 @@ pipupdate: ## Update python packages
 rustupdate: ## Update rust packages
 	cargo install-update -a
 
+yarnupdate: ## Update yarn packages
+	yarn global upgrade
+
 test: ## Test this Makefile with docker
 	docker build -t dotfiles ${PWD}
 	docker run -v /home/${USER}/Dropbox:${HOME}/Dropbox:cached --name makefiletest -d dotfiles
@@ -519,7 +522,7 @@ allinit: init initdropbox
 
 allinstall: ttf-cica install pipinstall goinstall aur mozc neomutt docker mariadb neovim redis rustinstall nodeinstall screenkey dnsmasq
 
-allupdate: update pipupdate rustupdate goinstall
+allupdate: update pipupdate rustupdate goinstall yarnupdate
 
 allbackup: backup pipbackup
 
