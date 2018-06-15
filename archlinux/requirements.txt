@@ -16,7 +16,7 @@ bleach==2.1.3
 botocore==1.10.39
 btrfsutil==1.0.0
 CacheControl==0.12.5
-cached-property==1.4.2
+cached-property==1.4.3
 certifi==2018.4.16
 cffi==1.11.5
 chardet==3.0.4
@@ -41,6 +41,7 @@ docutils==0.14
 entrypoints==0.2.3
 Faker==0.8.15
 flake8==3.5.0
+gif-for-cli==1.0.1
 greenlet==0.4.13
 html5lib==1.0.1
 httpie==0.9.9
@@ -96,6 +97,7 @@ pexpect==4.6.0
 pgcli==1.9.1
 pgspecial==1.11.0
 pickleshare==0.7.4
+Pillow==5.1.0
 pip-review==1.0
 ply==3.11
 progress==1.3
@@ -169,5 +171,6 @@ webencodings==0.5.1
 websocket-client==0.48.0
 widgetsnbextension==3.2.1
 wrapt==1.10.11
+x256==0.0.3
 yapf==0.22.0
 zope.interface==4.5.0
