@@ -270,9 +270,6 @@ aur: ## Install arch linux AUR packages using yay
 	yay -S yaourt
 	yay -S yay
 
-suspend: ## Don't suspend when laptop's lid close
-	sudo ln -vsf ${PWD}/etc/systemd/logind.conf   /etc/systemd/logind.conf
-
 desktop: ## Update desktop entry
 	sudo ln -vsf ${PWD}/usr/share/applications/vim.desktop   /usr/share/applications/vim.desktop
 	sudo ln -vsf ${PWD}/usr/share/applications/avahi-discover.desktop   /usr/share/applications/avahi-discover.desktop
@@ -297,6 +294,17 @@ sylpheed: ## Init sylpheed
 	sudo pacman -S sylpheed
 	test -L ${HOME}/.sylpheed-2.0 || rm -rf ${HOME}/.sylpheed-2.0
 	ln -vsfn ${HOME}/Dropbox/sylpheed/.sylpheed-2.0   ${HOME}/.sylpheed-2.0
+
+psd: ## Profile-Sync-Daemon initial setup
+	yay -S profile-sync-daemon
+	mkdir -p ${HOME}/.config/psd
+	ln -vsf ${PWD}/.config/psd/psd.conf   ${HOME}/.config/psd/psd.conf
+	echo "${USER} ALL=(ALL) NOPASSWD: /usr/bin/psd-overlay-helper" | sudo EDITOR='tee -a' visudo
+	systemctl --user enable psd.service
+
+chromium: ## Install chromium and noto-fonts
+	sudo pacman -S noto-fonts noto-fonts-cjk
+	sudo pacman -S chromium
 
 ranger: ## Init ranger
 	mkdir -p ${HOME}/.local
@@ -329,13 +337,6 @@ powertop: ## Powertop initial setup (Warning take a long time)
 	sudo powertop --calibrate
 	sudo systemctl enable powertop
 
-chromium: ## Install chromium and noto-fonts
-	sudo pacman -S noto-fonts noto-fonts-cjk
-	sudo pacman -S chromium
-
-gnupg: ## Import gnupg secret-key
-	gpg --allow-secret-key-import --import ${HOME}/Dropbox/passwd/privkey.asc
-
 gnuglobal: ## Install gnu global
 	mkdir -p ${HOME}/.local
 	pip install --user pygments
@@ -344,13 +345,6 @@ gnuglobal: ## Install gnu global
 nodenv: ## Install nodenv node-build
 	yay -S nodenv
 	git clone https://github.com/nodenv/node-build.git ${HOME}/.nodenv/plugins/node-build
-
-psd: ## Profile-Sync-Daemon initial setup
-	yay -S profile-sync-daemon
-	mkdir -p ${HOME}/.config/psd
-	ln -vsf ${PWD}/.config/psd/psd.conf   ${HOME}/.config/psd/psd.conf
-	echo "${USER} ALL=(ALL) NOPASSWD: /usr/bin/psd-overlay-helper" | sudo EDITOR='tee -a' visudo
-	systemctl --user enable psd.service
 
 emacs-devel: # Install development version of emacs
 	cd ${HOME}/src/github.com/masasam;\
@@ -520,7 +514,7 @@ testpath: # Echo PATH
 
 allinit: init initdropbox
 
-allinstall: ttf-cica install pipinstall goinstall aur mozc neomutt docker mariadb neovim redis rustinstall nodeinstall screenkey dnsmasq
+allinstall: ttf-cica install pipinstall goinstall aur mozc neomutt docker mariadb redis rustinstall nodeinstall screenkey dnsmasq
 
 allupdate: update pipupdate rustupdate goinstall yarnupdate
 
