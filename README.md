@@ -282,7 +282,7 @@ Install yay
 Install dropbox and sync
 
 	yay -S dropbox
-	sudo pacman -S nautilus-dropbox
+	yay -S nautilus-dropbox
 	dropbox
 
 Preparing dotfiles
