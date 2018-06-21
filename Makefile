@@ -514,7 +514,7 @@ testpath: # Echo PATH
 
 allinit: init initdropbox
 
-allinstall: ttf-cica install pipinstall goinstall aur mozc neomutt docker mariadb redis rustinstall nodeinstall screenkey dnsmasq
+allinstall: ttf-cica install pipinstall goinstall aur mozc neomutt docker mariadb redis rbenv rustinstall nodeinstall screenkey dnsmasq desktop
 
 allupdate: update pipupdate rustupdate goinstall yarnupdate
 
