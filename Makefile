@@ -53,7 +53,6 @@ pipinstall: ## Install python packages
 	mkdir -p ${HOME}/.local
 	pip install --user --upgrade pip
 	pip install --user ansible
-	pip install --user ansible-container
 	pip install --user ansible-lint
 	pip install --user autopep8
 	pip install --user cheat
