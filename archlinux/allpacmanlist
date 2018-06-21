@@ -46,7 +46,6 @@ ca-certificates-utils
 cairo
 cairomm
 cantarell-fonts
-caribou
 cdparanoia
 celt
 cheese
@@ -156,7 +155,6 @@ gjs
 glew
 glib-networking
 glib2
-glib2-docs
 glibc
 glibmm
 glu
@@ -188,7 +186,6 @@ gptfdisk
 granite
 graphene
 graphite
-graphviz
 grep
 grilo
 groff
@@ -202,13 +199,11 @@ gst-plugins-base
 gst-plugins-base-libs
 gst-plugins-good
 gstreamer
-gtk-doc
 gtk-update-icon-cache
 gtk2
 gtk3
 gtkmm
 gtkspell
-gts
 guile
 guile2.0
 gvfs
@@ -225,7 +220,6 @@ haskell-asn1-types
 haskell-async
 haskell-attoparsec
 haskell-base-compat
-haskell-base-orphans
 haskell-base64-bytestring
 haskell-basement
 haskell-blaze-builder
@@ -266,15 +260,11 @@ haskell-hxt-charproperties
 haskell-hxt-regex-xmlschema
 haskell-hxt-unicode
 haskell-integer-logarithms
-haskell-json
 haskell-juicypixels
 haskell-lexer
-haskell-lifted-base
 haskell-math-functions
 haskell-memory
 haskell-mime-types
-haskell-mmorph
-haskell-monad-control
 haskell-mono-traversable
 haskell-mwc-random
 haskell-network
@@ -308,7 +298,6 @@ haskell-tf-random
 haskell-th-abstraction
 haskell-time-locale-compat
 haskell-tls
-haskell-transformers-base
 haskell-transformers-compat
 haskell-unliftio-core
 haskell-unordered-containers
@@ -542,7 +531,6 @@ libsynctex
 libsystemd
 libtasn1
 libteam
-libtermkey
 libthai
 libtheora
 libtiff
@@ -564,7 +552,6 @@ libvisual
 libvoikko
 libvorbis
 libvpx
-libvterm
 libwacom
 libwbclient
 libwebp
@@ -628,7 +615,6 @@ lua52-expat
 lua52-lpeg
 lua52-luajson
 lua52-socket
-luajit
 lvm2
 lynx
 lz4
@@ -658,7 +644,6 @@ mozilla-common
 mpfr
 mpg123
 mpv
-msgpack-c
 mtdev
 mutter
 mypaint-brushes
@@ -669,7 +654,6 @@ ncurses
 ndctl
 neomutt
 neon
-neovim
 netctl
 nethogs
 nettle
@@ -751,9 +735,7 @@ pygobject-devel
 pygobject2-devel
 pygtk
 python
-python-anytree
 python-appdirs
-python-atspi
 python-cachecontrol
 python-chardet
 python-colorama
@@ -765,7 +747,6 @@ python-gobject
 python-html5lib
 python-idna
 python-lockfile
-python-lxml
 python-msgpack
 python-packaging
 python-pip
@@ -788,7 +769,6 @@ python2-cairo
 python2-cffi
 python2-cryptography
 python2-dbus
-python2-distutils-extra
 python2-enum34
 python2-gdata
 python2-gobject
@@ -821,7 +801,6 @@ raptor
 rasqal
 re2
 readline
-redis
 redland
 reiserfsprogs
 rest
@@ -855,7 +834,6 @@ smbclient
 snappy
 sound-theme-freedesktop
 soundtouch
-source-highlight
 spandsp
 speex
 speexdsp
@@ -897,14 +875,12 @@ tree
 tslib
 ttf-dejavu
 twolame
-txt2man
 typescript
 tzdata
 uchardet
 udisks2
 unace
 unarchiver
-unibilium
 unrar
 unzip
 upower
@@ -913,7 +889,6 @@ usbmuxd
 usbutils
 util-linux
 v4l-utils
-vala
 valgrind
 vamp-plugin-sdk
 vi

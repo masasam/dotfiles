@@ -62,7 +62,6 @@ gnome-backgrounds
 gnome-control-center
 gnome-keyring
 gnu-netcat
-go
 gpaste
 grep
 groff
@@ -115,7 +114,6 @@ mpv
 nano
 nautilus
 neomutt
-neovim
 netctl
 nethogs
 networkmanager
@@ -149,7 +147,6 @@ psmisc
 pwgen
 python-pip
 python-prompt_toolkit
-redis
 reiserfsprogs
 rsync
 ruby
@@ -204,6 +201,7 @@ xorg-mkfontdir
 xorg-mkfontscale
 xorg-server
 xorg-sessreg
+xorg-setxkbmap
 xorg-smproxy
 xorg-x11perf
 xorg-xauth
@@ -216,6 +214,7 @@ xorg-xev
 xorg-xgamma
 xorg-xhost
 xorg-xinput
+xorg-xkbcomp
 xorg-xkbevd
 xorg-xkbutils
 xorg-xkill
@@ -233,6 +232,7 @@ xorg-xvinfo
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
+xsel
 xterm
 yarn
 zsh
