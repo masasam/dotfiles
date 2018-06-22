@@ -400,6 +400,7 @@ libdaemon
 libdatrie
 libdc1394
 libdca
+libde265
 libdmx
 libdrm
 libdv
@@ -433,6 +434,7 @@ libgudev
 libgusb
 libgweather
 libgxps
+libheif
 libibus
 libical
 libice
@@ -604,6 +606,7 @@ lldb
 llvm
 llvm-libs
 lm_sensors
+lmdb
 logrotate
 lpsolve
 lsof
