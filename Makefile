@@ -114,6 +114,7 @@ nodeinstall: ## Install node packages
 	yarn global add eslint-plugin-react
 	yarn global add firebase-tools
 	yarn global add gulp
+	yarn global add	gulp-cli
 	yarn global add heroku-cli
 	yarn global add jshint
 	yarn global add logo.svg
