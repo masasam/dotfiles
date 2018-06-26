@@ -133,7 +133,6 @@ pandoc
 parallel
 patch
 pciutils
-pcmciautils
 pdfgrep
 perl
 php

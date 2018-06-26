@@ -323,6 +323,7 @@ http-parser
 hub
 hugo
 hunspell
+hunspell-en_US
 hwids
 hyphen
 iana-etc
@@ -702,7 +703,6 @@ parallel
 parted
 patch
 pciutils
-pcmciautils
 pcre
 pcre2
 pdfgrep
