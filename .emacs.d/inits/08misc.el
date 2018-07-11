@@ -64,7 +64,7 @@
     (find-file "~/Dropbox/kanban/doc.txt"))
   (defun kanban-rename ()
     (interactive)
-    (buffer-file-name "~/Dropbox/kanban/doc.txt")
+    ;; (buffer-file-name "~/Dropbox/kanban/doc.txt")
     (rename-file "~/Dropbox/kanban/doc.txt"
 		 (expand-file-name
 		  (read-from-minibuffer "Rename: " `(".txt" . 1) nil nil nil)
