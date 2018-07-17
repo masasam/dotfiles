@@ -87,7 +87,7 @@ Don't forget to make dropbox 2 factor authentication.
 
 # ArchLinux install
 
-Why Arch linux ?
+Why Arch linux?
 
 - Unless your PC breaks, arch linux is a rolling release so you don't have to reinstall it.
 
