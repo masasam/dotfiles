@@ -252,6 +252,7 @@ haskell-hashable
 haskell-hourglass
 haskell-hslua
 haskell-hslua-module-text
+haskell-hsyaml
 haskell-http
 haskell-http-client
 haskell-http-client-tls
