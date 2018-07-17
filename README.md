@@ -417,7 +417,6 @@ If you make a mistake on the letters, erase all with Ctrl-u
 	pip install --user scrapy
 	pip install --user mycli
 	pip install --user pgcli
-	pip install --user pip-review
 	pip install --user yapf
 	pip install --user pydoc_utils
 	pip install --user rope

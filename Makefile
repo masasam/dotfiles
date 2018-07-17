@@ -72,7 +72,6 @@ pipinstall: ## Install python packages
 	pip install --user neovim
 	pip install --user pandas
 	pip install --user pgcli
-	pip install --user pip-review
 	pip install --user progressbar2
 	pip install --user pydoc_utils
 	pip install --user pyflakes
@@ -457,7 +456,7 @@ piprecover: ## Recover python packages
 	pip install --user -r ${PWD}/archlinux/requirements.txt
 
 pipupdate: ## Update python packages
-	pip list -o --user | cut -d" " -f 1 | tail -n +3 | xargs pip install -U --user
+	pip list -o | cut -d" " -f 1 | tail -n +3 | xargs pip install -U --user
 
 rustupdate: ## Update rust packages
 	cargo install-update -a
