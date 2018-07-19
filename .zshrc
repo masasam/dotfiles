@@ -586,6 +586,16 @@ function terminal-size() {
 }
 
 
+function optimize-jpg() {
+    if [ $# = 1 ]; then
+	fname_ext=$1
+	fname="${fname_ext%.*}"
+	convert $1 -sampling-factor 4:2:0 -strip -quality 85 -interlace JPEG -colorspace sRGB ${fname}_converted.jpg
+    else
+	echo 'usage: optimize-jpg sample.jpg'
+    fi
+}
+
 # zsh-syntax-highlighting(pacman -S zsh-syntax-highlighting)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # zsh-completions for google-cloud-sdk(yay google-cloud-sdk)
