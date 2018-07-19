@@ -596,6 +596,7 @@ function optimize-jpg() {
     fi
 }
 
+
 function optimize-png() {
     if [ $# = 1 ]; then
 	fname_ext=$1
@@ -605,6 +606,7 @@ function optimize-png() {
 	echo 'usage: optimize-png sample.png'
     fi
 }
+
 
 # zsh-syntax-highlighting(pacman -S zsh-syntax-highlighting)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
