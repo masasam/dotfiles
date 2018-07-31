@@ -51,6 +51,7 @@ install: ## Install arch linux packages using pacman
 
 pipinstall: ## Install python packages
 	mkdir -p ${HOME}/.local
+	python ${PWD}/get-pip.py --user
 	pip install --user --upgrade pip
 	pip install --user ansible
 	pip install --user ansible-lint

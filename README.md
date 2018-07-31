@@ -391,6 +391,7 @@ If you make a mistake on the letters, erase all with Ctrl-u
 
 ##### Install using pip
 
+	python get-pip.py --user
 	pip install --user --upgrade pip
 	pip install --user virtualenv
 	pip install --user ansible
