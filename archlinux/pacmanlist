@@ -144,7 +144,6 @@ postgresql-libs
 procps-ng
 psmisc
 pwgen
-python-pip
 python-prompt_toolkit
 reiserfsprogs
 rsync
