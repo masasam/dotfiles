@@ -40,13 +40,13 @@ install: ## Install arch linux packages using pacman
 	pkgfile baobab dconf-editor rsync nodejs debian-archive-keyring gauche cpio \
 	nmap poppler-data ffmpeg asciidoc sbcl docker aspell aspell-en screen mosh \
 	gdb wmctrl pwgen linux-docs htop tcpdump gvfs p7zip lzop fzf gpaste optipng \
-	arch-install-scripts pandoc jq pkgstats python-pip ruby highlight alsa-utils \
+	arch-install-scripts pandoc jq pkgstats ruby highlight alsa-utils geckodriver \
 	texlive-langjapanese yarn texlive-latexextra ctags hdparm eog curl parallel \
 	arc-gtk-theme npm typescript llvm llvm-libs lldb php tree w3m neomutt whois \
 	zsh-syntax-highlighting shellcheck bash-completion mathjax expect elixir lsof \
 	cscope postgresql-libs pdfgrep gnu-netcat cmatrix jpegoptim nethogs mlocate \
-	jhead geckodriver x11-ssh-askpass libreoffice-fresh-ja python-prompt_toolkit \
-	pacman-contrib
+	pacman-contrib x11-ssh-askpass libreoffice-fresh-ja python-prompt_toolkit \
+	jhead
 	sudo pkgfile --update
 
 pipinstall: ## Install python packages
