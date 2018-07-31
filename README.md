@@ -349,7 +349,7 @@ You can make install from here
 	sudo pacman -S debootstrap tcpdump pdfgrep
 	sudo pacman -S alsa-utils mlocate traceroute hugo mpv jhead
 	sudo pacman -S nethogs optipng jpegoptim noto-fonts-emoji
-	sudo pacman -S debian-archive-keyring tree python-pip
+	sudo pacman -S debian-archive-keyring tree
 	sudo pacman -S mathjax strace valgrind phantomjs p7zip unace
 	sudo pacman -S yarn geckodriver w3m neomutt iperf redis
 	sudo pacman -S highlight lynx elinks mediainfo cpio flameshot
@@ -391,6 +391,8 @@ If you make a mistake on the letters, erase all with Ctrl-u
 
 ##### Install using pip
 
+	mkdir -p ${HOME}/.local
+	curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 	python get-pip.py --user
 	pip install --user --upgrade pip
 	pip install --user virtualenv
