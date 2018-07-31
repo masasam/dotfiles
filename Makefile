@@ -51,6 +51,7 @@ install: ## Install arch linux packages using pacman
 
 pipinstall: ## Install python packages
 	mkdir -p ${HOME}/.local
+	curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 	python ${PWD}/get-pip.py --user
 	pip install --user --upgrade pip
 	pip install --user ansible
