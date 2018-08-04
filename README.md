@@ -437,6 +437,7 @@ If you make a mistake on the letters, erase all with Ctrl-u
 
 #### Install using golang
 
+	mkdir -p ${HOME}/{bin,src}
 	go get -u -v github.com/nsf/gocode
 	go get -u -v github.com/rogpeppe/godef
 	go get -u -v golang.org/x/tools/cmd/goimports
@@ -452,6 +453,7 @@ If you make a mistake on the letters, erase all with Ctrl-u
 
 #### Install using yarn
 
+	mkdir -p ${HOME}/.node_modules
 	yarn global add babel-eslint
 	yarn global add cloc
 	yarn global add create-component-app
@@ -495,6 +497,7 @@ If you make a mistake on the letters, erase all with Ctrl-u
 #### Install using rust
 
 	sudo pacman -S cmake
+	mkdir -p ${HOME}/.cargo
 	curl -sSf https://sh.rustup.rs | sh
 	cargo install racer
 	cargo install cargo-update
