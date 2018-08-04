@@ -448,6 +448,7 @@ If you make a mistake on the letters, erase all with Ctrl-u
 	go get -u -v github.com/sonatard/ghs
 	go get -u -v github.com/kyoshidajp/ghkw
 	go get -u -v github.com/hashicorp/packer
+	go get -u -v github.com/simeji/jid/cmd/jid
 
 #### Install using yarn
 

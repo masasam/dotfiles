@@ -105,6 +105,7 @@ goinstall: ## Install go packages
 	go get -u -v github.com/sonatard/ghs
 	go get -u -v github.com/kyoshidajp/ghkw
 	go get -u -v github.com/hashicorp/packer
+	go get -u -v github.com/simeji/jid/cmd/jid
 
 nodeinstall: ## Install node packages
 	mkdir -p ${HOME}/.node_modules
