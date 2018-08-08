@@ -111,7 +111,7 @@ https://www.archlinux.org/releng/releases/
 
 Create USB installation media.
 
-    dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx && sync
+	dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx status=progress oflag=sync
 
 ![baobao](https://raw.githubusercontent.com/masasam/image/image/baobao.png)
 
