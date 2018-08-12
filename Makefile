@@ -459,7 +459,7 @@ piprecover: ## Recover python packages
 	pip install --user -r ${PWD}/archlinux/requirements.txt
 
 pipupdate: ## Update python packages
-	pip list -o | cut -d" " -f 1 | tail -n +3 | xargs pip install -U --user
+	pip list --user | cut -d" " -f 1 | tail -n +3 | xargs pip install -U --user
 
 rustupdate: ## Update rust packages
 	cargo install-update -a
