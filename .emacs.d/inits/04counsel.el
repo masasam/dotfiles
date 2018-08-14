@@ -46,5 +46,27 @@ If the region is inactive, swiper."
 
 
 ;; counsel-projectile
-(bind-key "C-x l" 'counsel-projectile-switch-project)
-(bind-key "C-x C-l" 'counsel-projectile-switch-project)
+;; (bind-key "C-x l" 'counsel-projectile-switch-project)
+;; (bind-key "C-x C-l" 'counsel-projectile-switch-project)
+
+
+(defun counsel-ghq--list-candidates ()
+  (with-temp-buffer
+    (unless (zerop (apply #'call-process
+			  "ghq" nil t nil
+			  '("list" "--full-path")))
+      (error "Failed: Can't get ghq list candidates"))
+    (let ((paths))
+      (goto-char (point-min))
+      (while (not (eobp))
+	(push (buffer-substring-no-properties
+	       (line-beginning-position) (line-end-position)) paths)
+        (forward-line 1))
+      (reverse paths))))
+
+(defun counsel-ghq ()
+  (interactive)
+  (counsel-find-file (ivy-read "ghq list: " (counsel-ghq--list-candidates))))
+
+(bind-key "C-x l" 'counsel-ghq)
+(bind-key "C-x C-l" 'counsel-ghq)
