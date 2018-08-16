@@ -363,6 +363,7 @@ keychain
 keyutils
 kmod
 krb5
+l-smash
 ladspa
 lame
 lapack
@@ -565,7 +566,6 @@ libwpd
 libwpg
 libwps
 libx11
-libx264
 libxau
 libxaw
 libxcb
@@ -902,6 +902,7 @@ wmctrl
 woff2
 wpa_supplicant
 x11-ssh-askpass
+x264
 x265
 xapian-core
 xbitmaps
