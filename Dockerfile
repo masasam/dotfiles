@@ -29,14 +29,11 @@ RUN echo "root:${PASSWORD}" | chpasswd
 RUN echo "${USERNAME}:${PASSWORD}" | chpasswd
 RUN echo '%wheel ALL=(ALL) ALL' | sudo EDITOR='tee -a' visudo
 
-RUN echo -e '[archlinuxfr]\nSigLevel = Never\nServer = http://repo.archlinux.fr/$arch\n' >> /etc/pacman.conf
 RUN pacman -Syy
-RUN pacman -S yaourt --noconfirm
-RUN pacman --sync --refresh --noconfirm yaourt
-RUN yaourt -Syua --noconfirm
 RUN pacman -S xdg-user-dirs --noconfirm
 RUN pacman -S git --noconfirm
 
 RUN su - ${USERNAME}
 RUN LANG=C xdg-user-dirs-update --force
+RUN mkdir -p /home/${USERNAME}/src/github.com && cd /home/${USERNAME}/src/github.com && git clone https://aur.archlinux.org/yay.git && cd /home/${USERNAME}/src/github.com/yay && makepkg -si
 RUN mkdir -p /home/${USERNAME}/src/github.com/masasam && cd /home/${USERNAME}/src/github.com/masasam && git clone git://github.com/masasam/dotfiles
