@@ -274,8 +274,8 @@ You can not wifi unless you turn off dhcpcd.
 
 Install yay
 
-	mkdir -p ~/src/github.com/aur
-	cd src/github.com/aur
+	mkdir -p ~/src/github.com
+	cd src/github.com
 	git clone https://aur.archlinux.org/yay.git
 	cd yay
 	makepkg -si
