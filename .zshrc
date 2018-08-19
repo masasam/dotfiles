@@ -215,7 +215,6 @@ alias cargocleanup='rm -rf ${HOME}/.cargo/bin/*; cd ${HOME}/src/github.com/masas
 alias yarnupdate='yarn global upgrade'
 alias pipbackup='cd ${HOME}/src/github.com/masasam/dotfiles; make pipbackup; cd -'
 alias pipupdate='cd ${HOME}/src/github.com/masasam/dotfiles; make pipupdate; cd -'
-alias pipcheck='pip-review --user'
 alias archupdate='yay -Syu; paccache -ruk0'
 alias archbackup='cd ${HOME}/src/github.com/masasam/dotfiles; make backup; cd -'
 alias soundrecord='arecord -t wav -f dat -q | lame -b 128 -m s - out.mp3'
