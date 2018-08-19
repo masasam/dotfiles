@@ -118,7 +118,7 @@ python-utils==2.3.0
 pytz==2018.5
 PyYAML==3.13
 pyzmq==17.1.2
-qtconsole==4.4.0
+qtconsole==4.4.1
 queuelib==1.5.0
 requests==2.19.1
 rope==0.11.0
@@ -156,7 +156,7 @@ virtualenvwrapper==4.8.2
 w3lib==1.19.0
 wcwidth==0.1.7
 webencodings==0.5.1
-websocket-client==0.50.0
+websocket-client==0.51.0
 widgetsnbextension==3.4.0
 wrapt==1.10.11
 x256==0.0.3
