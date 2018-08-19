@@ -45,11 +45,6 @@ If the region is inactive, swiper."
 				      (editorconfig-mode 1)))
 
 
-;; counsel-projectile
-;; (bind-key "C-x l" 'counsel-projectile-switch-project)
-;; (bind-key "C-x C-l" 'counsel-projectile-switch-project)
-
-
 (defun counsel-ghq--list-candidates ()
   (with-temp-buffer
     (unless (zerop (apply #'call-process
@@ -69,4 +64,4 @@ If the region is inactive, swiper."
   (counsel-find-file (ivy-read "ghq list: " (counsel-ghq--list-candidates))))
 
 (bind-key "C-x l" 'counsel-ghq)
-(bind-key "C-x C-l" 'counsel-ghq)
+(bind-key "C-x C-l" 'counsel-projectile-switch-project)
