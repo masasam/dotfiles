@@ -241,6 +241,9 @@ rbenv: ## Install rvenv ruby-build
 	rbenv install 2.5.1
 	gem install bundle
 
+jekyll: ## Install jekyll
+	gem install bundler jekyll
+
 rails: ## Create rails app
 	export RBENV_ROOT="${HOME}/.rbenv";\
 	if [ -d "${RBENV_ROOT}" ]; then \
