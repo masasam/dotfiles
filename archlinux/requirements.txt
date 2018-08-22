@@ -6,12 +6,12 @@ astroid==2.0.4
 attrs==18.1.0
 Automat==0.7.0
 autopep8==1.3.5
-awscli==1.15.83
+awscli==1.15.84
 backcall==0.1.0
 bcrypt==3.1.4
 beautifulsoup4==4.6.3
 bleach==2.1.4
-botocore==1.10.82
+botocore==1.10.83
 btrfsutil==1.0.0
 cached-property==1.4.3
 certifi==2018.8.13
