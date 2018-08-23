@@ -41,7 +41,6 @@ bubblewrap
 bzip2
 c-ares
 ca-certificates
-ca-certificates-cacert
 ca-certificates-mozilla
 ca-certificates-utils
 cairo
