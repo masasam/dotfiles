@@ -375,6 +375,7 @@ If you make a mistake on the letters, erase all with Ctrl-u
 
 #### Install using yay
 
+	yay -S discord
 	yay -S drone-cli
 	yay -S git-secrets
 	yay -S global

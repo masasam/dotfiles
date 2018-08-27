@@ -272,6 +272,7 @@ screenkey: ## Init screenkey
 	ln -vsf ${PWD}/.config/screenkey.json ${HOME}/.config/screenkey.json
 
 aur: ## Install arch linux AUR packages using yay
+	yay -S discord
 	yay -S drone-cli
 	yay -S git-secrets
 	yay -S nkf
