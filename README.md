@@ -22,7 +22,7 @@ Easy to build development environment with
 
     make install
 
-I never have to worry about setting my PC again.
+I never have to worry about setting my laptop again.
 
 ### Deploying dotfiles can be done in a moment
 
@@ -89,11 +89,11 @@ Don't forget to make dropbox 2 factor authentication.
 
 Why Arch linux?
 
-- Unless your PC breaks, arch linux is a rolling release so you don't have to reinstall it.
+- Unless your laptop breaks, arch linux is a rolling release so you don't have to reinstall it.
 
   Even if it gets broken, I made a [Makefile](https://github.com/masasam/dotfiles/blob/master/Makefile) so I can return in 1 hour and it's unbeatable.
 
-- Arch linux is good because it is difficult for my PC's development environment to be old packages.
+- Arch linux is good because it is difficult for my development environment to be old packages.
 
 - I like customization but if customization is done too much, it is not good because it can not receive the benefit of the community. Since Archlinux is unsuitable for excessive customization, it is fit to me.
 
