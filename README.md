@@ -8,7 +8,7 @@
 
 ## Let's build environment with Makefile
 
-This dotfiles is for Archlinux.
+This dotfiles is for Arch linux.
 
 Since there is no such as a distribution without make,
 
@@ -40,7 +40,7 @@ Once after creating the environment
 
     make backup
 
-Since the arch linux packages list that was installed at will be backed up to archlinux directry,
+Since the arch linux packages list that was installed at will be backed up to Arch linux directry,
 
 If [Makefile](https://github.com/masasam/dotfiles/blob/master/Makefile) is completed, you should be able to restore in 1 hour in either case.
 
@@ -85,7 +85,7 @@ You can update packages all with
 
 Don't forget to make dropbox 2 factor authentication.
 
-# ArchLinux install
+# Arch Linux install
 
 Why Arch linux?
 
@@ -95,7 +95,7 @@ Why Arch linux?
 
 - Arch linux is good because it is difficult for my development environment to be old packages.
 
-- I like customization but if customization is done too much, it is not good because it can not receive the benefit of the community. Since Archlinux is unsuitable for excessive customization, it is fit to me.
+- I like customization but if customization is done too much, it is not good because it can not receive the benefit of the community. Since Arch linux is unsuitable for excessive customization, it is fit to me.
 
   In principle the package of Arch linux is a policy to build from the source of vanilla (Vanilla means that it does not apply its own patch for arch linux)
 
