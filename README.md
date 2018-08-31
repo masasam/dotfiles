@@ -354,7 +354,7 @@ You can make install from here
 	sudo pacman -S mathjax strace valgrind phantomjs p7zip unace
 	sudo pacman -S yarn geckodriver w3m neomutt iperf redis
 	sudo pacman -S highlight lynx elinks mediainfo cpio flameshot
-	sudo pacman -S oath-toolkit imagemagick
+	sudo pacman -S oath-toolkit imagemagick peek
 	sudo pacman -S bookworm ruby ruby-rdoc pacman-contrib
 
 ## Activity
@@ -385,7 +385,6 @@ If you make a mistake on the letters, erase all with Ctrl-u
 	yay -S mozc
 	yay -S nkf
 	yay -S nodenv
-	yay -S peek
 	yay -S rbenv
 	yay -S ruby-build
 	yay -S screenkey
