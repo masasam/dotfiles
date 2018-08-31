@@ -709,6 +709,7 @@ pciutils
 pcre
 pcre2
 pdfgrep
+peek
 perl
 perl-error
 perl-file-which

@@ -134,6 +134,7 @@ parallel
 patch
 pciutils
 pdfgrep
+peek
 perl
 php
 pkgconf
