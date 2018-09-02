@@ -23,6 +23,8 @@
 (bind-key "C-c l" 'counsel-locate)
 (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
 (setq xref-show-xrefs-function #'ivy-xref-show-xrefs)
+(setq counsel-yank-pop-separator
+      "\n------------------------------------------------------------\n")
 
 
 (defun swiper-for-region-or-swiper ()
