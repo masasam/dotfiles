@@ -87,6 +87,7 @@
 (package-install 'irony)
 (package-install 'irony-eldoc)
 (package-install 'ivy-xref)
+(package-install 'ivy-yasnippet)
 (package-install 'jinja2-mode)
 (package-install 'js2-mode)
 (package-install 'json-mode)
