@@ -1,0 +1,30 @@
+;;;; Emacs Bookmark Format Version 1 ;;;; -*- coding: utf-8-emacs -*- 
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("work"
+ (filename . "~/Dropbox/work/")
+ (front-context-string)
+ (rear-context-string . " 9月  3 11:16 ..\n")
+ (position . 129))
+("password.gpg"
+ (filename . "~/Dropbox/passwd/password.gpg")
+ (front-context-string . "ansible\nsupersup")
+ (rear-context-string)
+ (position . 1))
+("kanban"
+ (filename . "~/Dropbox/kanban/kanban")
+ (front-context-string)
+ (rear-context-string)
+ (position . 1))
+("Dropbox"
+ (filename . "~/Dropbox/")
+ (front-context-string . ".dropbox\n  drwxr")
+ (rear-context-string . "32  6月 21 13:39 ")
+ (position . 172))
+(".emacs.d"
+ (filename . "~/src/github.com/masasam/dotfiles/.emacs.d/")
+ (front-context-string . "inits\n  -rw-r--r")
+ (rear-context-string . "96  9月  2 15:12 ")
+ (position . 778))
+)
