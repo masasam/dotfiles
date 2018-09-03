@@ -26,15 +26,15 @@
 
 (defun my/password ()
   (interactive)
-  (find-file "~/Dropbox/passwd/pass.gpg"))
+  (find-file "~/Dropbox/passwd/password.gpg"))
 
 (defun kanban ()
   (interactive)
-  (find-file "~/Dropbox/kanban/doc.txt"))
+  (find-file "~/Dropbox/kanban/kanban"))
 
 (defun kanban-rename ()
   (interactive)
-  (rename-file "~/Dropbox/kanban/doc.txt"
+  (rename-file "~/Dropbox/kanban/kanban"
 	       (expand-file-name
 		(read-from-minibuffer "Rename: " `(".txt" . 1) nil nil nil)
 		"~/Dropbox/kanban")
