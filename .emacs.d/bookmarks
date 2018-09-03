@@ -2,7 +2,22 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("work"
+(("memo.org"
+ (filename . "~/Dropbox/emacs/org/memo.org")
+ (front-context-string . "* Notes\n** 矩形選択 ")
+ (rear-context-string)
+ (position . 1))
+("idea.org"
+ (filename . "~/Dropbox/emacs/org/idea.org")
+ (front-context-string . "* Memo\n** idea [")
+ (rear-context-string)
+ (position . 1))
+("org-capture-last-stored"
+ (filename . "~/Dropbox/emacs/org/notes.org")
+ (front-context-string . "** emacs bookmar")
+ (rear-context-string . "rt puma.service\n")
+ (position . 34749))
+("work"
  (filename . "~/Dropbox/work/")
  (front-context-string)
  (rear-context-string . " 9月  3 11:16 ..\n")

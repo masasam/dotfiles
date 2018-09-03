@@ -5,19 +5,10 @@
 (bind-key "C-c c" 'org-capture)
 
 (setq org-capture-templates
-      '(("m" "Memo" entry (file+headline "~/Dropbox/emacs/org/memo.org" "Memo")
+      '(("i" "Idea" entry (file+headline "~/Dropbox/emacs/org/idea.org" "Memo")
 	 "* %? %U %i")
-	("n" "Note" entry (file+headline "~/Dropbox/emacs/org/notes.org" "Notes")
+	("m" "Memo" entry (file+headline "~/Dropbox/emacs/org/memo.org" "Notes")
 	 "* %? %U %i")))
-
-;; Open org-note
-(defun notes ()
-  (interactive)
-  (find-file "~/Dropbox/emacs/org/notes.org"))
-
-(defun memo ()
-  (interactive)
-  (find-file "~/Dropbox/emacs/org/memo.org"))
 
 (smartrep-define-key org-mode-map "C-c"
   '(("C-n" . org-next-visible-heading)
