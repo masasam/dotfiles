@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("memo.org"
+(("password.gpg"
+ (filename . "~/Dropbox/passwd/password.gpg")
+ (front-context-string . "#password\n\nansib")
+ (rear-context-string)
+ (position . 1))
+("memo.org"
  (filename . "~/Dropbox/emacs/org/memo.org")
  (front-context-string . "* Notes\n** 矩形選択 ")
  (rear-context-string)
@@ -22,11 +27,6 @@
  (front-context-string)
  (rear-context-string . " 9月  3 11:16 ..\n")
  (position . 129))
-("password.gpg"
- (filename . "~/Dropbox/passwd/password.gpg")
- (front-context-string . "ansible\nsupersup")
- (rear-context-string)
- (position . 1))
 ("kanban"
  (filename . "~/Dropbox/kanban/kanban")
  (front-context-string)
