@@ -5,9 +5,9 @@
 (bind-key "C-c c" 'org-capture)
 
 (setq org-capture-templates
-      '(("i" "Idea" entry (file+headline "~/Dropbox/emacs/org/idea.org" "Memo")
+      '(("i" "Idea" entry (file+headline "~/Dropbox/emacs/org/idea.org" "Idea")
 	 "* %? %U %i")
-	("m" "Memo" entry (file+headline "~/Dropbox/emacs/org/memo.org" "Notes")
+	("m" "Memo" entry (file+headline "~/Dropbox/emacs/org/memo.org" "Memo")
 	 "* %? %U %i")))
 
 (smartrep-define-key org-mode-map "C-c"
