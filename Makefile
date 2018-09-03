@@ -9,7 +9,6 @@ init: ## Initial deploy dotfiles
 	ln -vsf ${PWD}/.zshrc   ${HOME}/.zshrc
 	ln -vsf ${PWD}/.vimrc   ${HOME}/.vimrc
 	ln -vsf ${PWD}/.bashrc   ${HOME}/.bashrc
-	ln -vsf ${PWD}/.gitignore   ${HOME}/.gitignore
 	ln -vsf ${PWD}/.npmrc   ${HOME}/.npmrc
 	ln -vsf ${PWD}/.myclirc   ${HOME}/.myclirc
 	ln -vsf ${PWD}/.tern-config   ${HOME}/.tern-config
