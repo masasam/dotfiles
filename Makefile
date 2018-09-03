@@ -451,7 +451,7 @@ backup: ## Backup arch linux packages
 	pacman -Qqem > ${PWD}/archlinux/yaylist
 
 update: ## Update arch linux packages and save packages cache 3 generations
-	yay -Syua; paccache -ruk0
+	yay -Syu; paccache -ruk0
 
 pipbackup: ## Backup python packages
 	mkdir -p ${PWD}/archlinux
