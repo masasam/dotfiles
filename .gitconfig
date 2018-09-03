@@ -22,7 +22,6 @@
 	precommit = diff --cached --diff-algorithm=minimal -w
 	unmerged = diff --name-only --diff-filter=U
 	remotes = remote -v
-	undo = "!f() { \\\n    git reset --hard $(git rev-parse --abbrev-ref HEAD)@{${1-1}}; \\\n}; f"
 [gui]
 	fontui = -family helvetica -size 9 -weight bold -slant roman -underline 0 -overstrike 0
 	fontdiff = -family Courier -size 12 -weight bold -slant roman -underline 0 -overstrike 0
