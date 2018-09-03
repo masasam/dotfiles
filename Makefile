@@ -16,10 +16,10 @@ init: ## Initial deploy dotfiles
 	ln -vsf ${PWD}/.tmux.conf   ${HOME}/.tmux.conf
 	ln -vsf ${PWD}/.screenrc   ${HOME}/.screenrc
 	ln -vsf ${PWD}/.aspell.conf   ${HOME}/.aspell.conf
+	ln -vsf ${PWD}/.gitconfig   ${HOME}/.gitconfig
 
 initdropbox: ## Initial deploy dotfiles using dropbox
 	sudo ln -vsf ${HOME}/Dropbox/arch/hosts   /etc/hosts
-	ln -vsf ${HOME}/Dropbox/zsh/.gitconfig   ${HOME}/.gitconfig
 	mkdir -p ${HOME}/.config
 	ln -vsf ${HOME}/Dropbox/zsh/.netrc   ${HOME}/.netrc
 	ln -vsf ${HOME}/Dropbox/zsh/.mycli-history   ${HOME}/.mycli-history
