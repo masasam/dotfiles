@@ -38,7 +38,7 @@ entrypoints==0.2.3
 Faker==0.9.0
 flake8==3.5.0
 gif-for-cli==1.1.1
-greenlet==0.4.14
+greenlet==0.4.15
 html5lib==1.0.1
 httpie==0.9.9
 humanize==0.5.1
@@ -59,7 +59,7 @@ jupyter==1.0.0
 jupyter-client==5.2.3
 jupyter-console==5.2.0
 jupyter-core==4.4.0
-jupyterlab==0.34.7
+jupyterlab==0.34.8
 jupyterlab-launcher==0.13.1
 jupyterthemes==0.19.6
 kitchen==1.2.5
