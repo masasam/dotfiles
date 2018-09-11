@@ -355,7 +355,7 @@ You can make install from here
 	sudo pacman -S yarn geckodriver w3m neomutt iperf redis
 	sudo pacman -S highlight lynx elinks mediainfo cpio flameshot
 	sudo pacman -S oath-toolkit imagemagick peek
-	sudo pacman -S bookworm ruby ruby-rdoc pacman-contrib
+	sudo pacman -S bookworm ruby ruby-rdoc pacman-contrib ncdu
 
 ## Activity
 
