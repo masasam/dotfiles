@@ -69,7 +69,7 @@ lensfun==0.3.2
 lesscpy==0.13.0
 lit==0.6.0
 louis==3.6.0
-lxml==4.2.4
+lxml==4.2.5
 MarkupSafe==1.0
 matplotlib==2.2.3
 mccabe==0.6.1
