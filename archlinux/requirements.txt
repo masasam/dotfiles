@@ -6,12 +6,12 @@ astroid==2.0.4
 attrs==18.2.0
 Automat==0.7.0
 autopep8==1.4
-awscli==1.16.10
+awscli==1.16.11
 backcall==0.1.0
 bcrypt==3.1.4
 beautifulsoup4==4.6.3
 bleach==2.1.4
-botocore==1.12.0
+botocore==1.12.1
 btrfsutil==1.0.0
 cached-property==1.5.1
 certifi==2018.8.24
@@ -59,7 +59,7 @@ jupyter==1.0.0
 jupyter-client==5.2.3
 jupyter-console==5.2.0
 jupyter-core==4.4.0
-jupyterlab==0.34.8
+jupyterlab==0.34.9
 jupyterlab-launcher==0.13.1
 jupyterthemes==0.19.6
 kitchen==1.2.5
