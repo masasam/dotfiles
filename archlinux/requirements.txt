@@ -49,7 +49,7 @@ incremental==17.5.0
 ipykernel==4.9.0
 ipython==6.5.0
 ipython-genutils==0.2.0
-ipywidgets==7.4.1
+ipywidgets==7.4.2
 isort==4.3.4
 jedi==0.12.1
 Jinja2==2.10
@@ -68,7 +68,7 @@ lazy-object-proxy==1.3.1
 lensfun==0.3.2
 lesscpy==0.13.0
 lit==0.6.0
-louis==3.6.0
+louis==3.7.0
 lxml==4.2.5
 MarkupSafe==1.0
 matplotlib==2.2.3
@@ -158,7 +158,7 @@ w3lib==1.19.0
 wcwidth==0.1.7
 webencodings==0.5.1
 websocket-client==0.53.0
-widgetsnbextension==3.4.1
+widgetsnbextension==3.4.2
 wrapt==1.10.11
 x256==0.0.3
 yapf==0.24.0
