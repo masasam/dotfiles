@@ -19,6 +19,7 @@ atk
 atkmm
 atool
 attr
+audit
 autoconf
 automake
 avahi
@@ -482,6 +483,8 @@ libnice
 libnl
 libnm
 libnm-glib
+libnm-gtk
+libnma
 libnotify
 libnsl
 libnumbertext

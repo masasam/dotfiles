@@ -10,6 +10,7 @@ nkf
 pcmciautils
 profile-sync-daemon
 rbenv
+rtags
 ruby-build
 screenkey
 yaourt
