@@ -270,13 +270,16 @@ screenkey: ## Init screenkey
 	mkdir -p ${HOME}/.config
 	ln -vsf ${PWD}/.config/screenkey.json ${HOME}/.config/screenkey.json
 
+yay: ## Install yay at yay
+	yay -S yay
+
 aur: ## Install arch linux AUR packages using yay
 	yay -S discord
 	yay -S drone-cli
 	yay -S git-secrets
 	yay -S nkf
+	yay -S rtags
 	yay -S yaourt
-	yay -S yay
 
 desktop: ## Update desktop entry
 	sudo ln -vsf ${PWD}/usr/share/applications/vim.desktop   /usr/share/applications/vim.desktop

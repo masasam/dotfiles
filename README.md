@@ -386,6 +386,7 @@ If you make a mistake on the letters, erase all with Ctrl-u
 	yay -S nkf
 	yay -S nodenv
 	yay -S rbenv
+	yay -S rtags
 	yay -S ruby-build
 	yay -S screenkey
 	yay -S yay
