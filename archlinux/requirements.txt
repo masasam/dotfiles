@@ -123,7 +123,7 @@ qtconsole==4.4.1
 queuelib==1.5.0
 requests==2.19.1
 rope==0.11.0
-rsa==3.4.2
+rsa==4.0
 rtv==1.24.0
 s3transfer==0.1.13
 scikit-learn==0.19.2
@@ -146,7 +146,7 @@ terminaltables==3.1.0
 testpath==0.3.1
 text-unidecode==1.2
 texttable==1.4.0
-tornado==5.1
+tornado==5.1.1
 traitlets==4.3.2
 trash-cli==0.17.1.14
 Twisted==18.7.0
