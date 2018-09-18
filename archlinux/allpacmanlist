@@ -196,6 +196,7 @@ gsettings-desktop-schemas
 gsfonts
 gsl
 gsm
+gspell
 gst-plugins-bad
 gst-plugins-base
 gst-plugins-base-libs
@@ -356,6 +357,7 @@ jhead
 jpegoptim
 jq
 js52
+js60
 json-c
 json-glib
 jsoncpp
@@ -364,6 +366,7 @@ keychain
 keyutils
 kmod
 krb5
+kyotocabinet
 l-smash
 ladspa
 lame
