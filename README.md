@@ -44,19 +44,19 @@ Since the arch linux packages list that was installed at will be backed up to Ar
 
 If [Makefile](https://github.com/masasam/dotfiles/blob/master/Makefile) is completed, you should be able to restore in 1 hour in either case.
 
-    make init
+### Commands for allinstall allinit
 
-Then dotfiles will be deployed and restored.
+You can install all with
+
+	make allinstall
+
+You can install everything written after allinstall:
 
 You can deploy all with
 
 	make allinit
 
 Keep Dropbox synchronized before doing make allinit.
-	
-You can install all with
-
-	make allinstall
 
 You can backup packages all with
 
