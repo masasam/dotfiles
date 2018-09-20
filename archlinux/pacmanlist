@@ -161,6 +161,7 @@ shadow
 shellcheck
 strace
 sudo
+sxiv
 sylpheed
 sysfsutils
 systemd

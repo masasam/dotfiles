@@ -840,6 +840,7 @@ startup-notification
 strace
 sudo
 suitesparse
+sxiv
 sylpheed
 sysfsutils
 systemd
