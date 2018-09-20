@@ -262,6 +262,11 @@ rails: ## Create rails app
 	bundle exec rails webpacker:install;\
 	cd -
 
+sxiv: ## Init sxiv
+	mkdir -p ~/.config/sxiv/exec
+	ln -vsf ${PWD}/.config/sxiv/exec/image-info   ${HOME}/.config/sxiv/exec/image-info
+	chmod +x ${HOME}/.config/sxiv/exec/image-info
+
 zoom: ## Install zoom for web conference
 	sudo pacman -U ${HOME}/Dropbox/arch/zoom_x86_64.pkg.tar.xz
 
