@@ -350,7 +350,7 @@ You can make install from here
 	sudo pacman -S debootstrap tcpdump pdfgrep
 	sudo pacman -S alsa-utils mlocate traceroute hugo mpv jhead
 	sudo pacman -S nethogs optipng jpegoptim noto-fonts-emoji
-	sudo pacman -S debian-archive-keyring tree
+	sudo pacman -S debian-archive-keyring tree rclone
 	sudo pacman -S mathjax strace valgrind phantomjs p7zip unace
 	sudo pacman -S yarn geckodriver w3m neomutt iperf redis
 	sudo pacman -S highlight lynx elinks mediainfo cpio flameshot
