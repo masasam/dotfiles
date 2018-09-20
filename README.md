@@ -356,6 +356,7 @@ You can make install from here
 	sudo pacman -S highlight lynx elinks mediainfo cpio flameshot
 	sudo pacman -S oath-toolkit imagemagick peek
 	sudo pacman -S bookworm ruby ruby-rdoc pacman-contrib ncdu
+	sudo pacman -S sxiv
 
 ## Activity
 
