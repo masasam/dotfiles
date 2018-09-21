@@ -61,6 +61,7 @@ glibc
 gnome-backgrounds
 gnome-control-center
 gnome-keyring
+gnome-screenshot
 gnu-netcat
 gpaste
 grep
@@ -147,6 +148,7 @@ procps-ng
 psmisc
 pwgen
 python-prompt_toolkit
+rclone
 reiserfsprogs
 rsync
 ruby

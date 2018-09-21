@@ -171,6 +171,7 @@ gnome-control-center
 gnome-desktop
 gnome-keyring
 gnome-online-accounts
+gnome-screenshot
 gnome-session
 gnome-settings-daemon
 gnome-shell
@@ -796,6 +797,7 @@ qt5-webengine
 qt5-xmlpatterns
 raptor
 rasqal
+rclone
 re2
 readline
 redland
