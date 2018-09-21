@@ -19,9 +19,9 @@
  (position . 1))
 ("org-capture-last-stored"
  (filename . "~/Dropbox/emacs/org/memo.org")
- (front-context-string . "** base [2018-09")
- (rear-context-string . " r m bookmark登録\n")
- (position . 34825))
+ (front-context-string . "** base-devel [2")
+ (rear-context-string . "which	\nxfsprogs\n")
+ (position . 35249))
 ("work"
  (filename . "~/Dropbox/work/")
  (front-context-string)
