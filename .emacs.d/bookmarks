@@ -18,10 +18,10 @@
  (rear-context-string)
  (position . 1))
 ("org-capture-last-stored"
- (filename . "~/Dropbox/emacs/org/notes.org")
- (front-context-string . "** emacs bookmar")
- (rear-context-string . "rt puma.service\n")
- (position . 34749))
+ (filename . "~/Dropbox/emacs/org/memo.org")
+ (front-context-string . "** base [2018-09")
+ (rear-context-string . " r m bookmark登録\n")
+ (position . 34825))
 ("work"
  (filename . "~/Dropbox/work/")
  (front-context-string)
