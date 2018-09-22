@@ -161,6 +161,7 @@ seahorse
 sed
 shadow
 shellcheck
+sshfs
 strace
 sudo
 sxiv

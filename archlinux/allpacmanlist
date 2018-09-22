@@ -128,6 +128,7 @@ freetype2
 fribidi
 fuse-common
 fuse2
+fuse3
 fzf
 gamin
 gauche
@@ -838,6 +839,7 @@ speex
 speexdsp
 sqlite
 srt
+sshfs
 startup-notification
 strace
 sudo
