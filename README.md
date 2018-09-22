@@ -347,7 +347,7 @@ You can make install from here
 	sudo pacman -S docker zsh-syntax-highlighting
 	sudo pacman -S npm llvm llvm-libs lldb hdparm rxvt-unicode 
 	sudo pacman -S mariadb-clients postgresql-libs tig lsof fzf
-	sudo pacman -S debootstrap tcpdump pdfgrep
+	sudo pacman -S debootstrap tcpdump pdfgrep sshfs
 	sudo pacman -S alsa-utils mlocate traceroute hugo mpv jhead
 	sudo pacman -S nethogs optipng jpegoptim noto-fonts-emoji
 	sudo pacman -S debian-archive-keyring tree rclone
