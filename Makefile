@@ -23,6 +23,7 @@ initdropbox: ## Initial deploy dotfiles using dropbox
 	ln -vsf ${HOME}/Dropbox/zsh/.netrc   ${HOME}/.netrc
 	ln -vsf ${HOME}/Dropbox/zsh/.mycli-history   ${HOME}/.mycli-history
 	ln -vsf ${HOME}/Dropbox/zsh/hub   ${HOME}/.config/hub
+	ln -vsf ${HOME}/Dropbox/zsh/rclone.conf   ${HOME}/.config/rclone/rclone.conf
 	test -L ${HOME}/.ssh || rm -rf ${HOME}/.ssh
 	ln -vsfn ${HOME}/Dropbox/ssh   ${HOME}/.ssh
 	chmod 600   ${HOME}/.ssh/id_rsa
