@@ -460,6 +460,7 @@ If you make a mistake on the letters, erase all with Ctrl-u
 	yarn global add babel-eslint
 	yarn global add cloc
 	yarn global add create-component-app
+	yarn global add create-nuxt-app
 	yarn global add create-react-app
 	yarn global add eslint
 	yarn global add eslint-plugin-react
