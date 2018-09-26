@@ -28,7 +28,8 @@
 	    (define-key view-mode-map "3" 'other-window-or-split-horizontally)
 	    (define-key view-mode-map "/" 'swiper-for-region-or-swiper)
 	    (define-key view-mode-map "\n" nil)
-	    (define-key view-mode-map "\r" nil)))
+	    (define-key view-mode-map "\r" nil)
+	    (define-key view-mode-map "?" 'hydra-view-mode/body)))
 
 ;; key-chord
 (setq key-chord-two-keys-delay 0.04)

@@ -19,3 +19,38 @@
   ("o" other-window-or-split "split")
   ("n" git-gutter:next-hunk "next-hunk")
   ("p" git-gutter:previous-hunk "prev-hunk"))
+
+
+;; hydra-view-mode
+(defhydra hydra-view-mode (:hint nil :exit t)
+  "
+^View-mode
+
+_j_: next-line   _k_: previous-line    _h_: one line    _l_: forward-char  _i_: view-mode
+_g_: beginning-of-buffer   _G_: end-of-buffer  _a_: beginning-of-line   _e_: end-of-line
+_b_: delete-window   _x_: delite-window   _0_: delete-window   _1_: delete-other-windows
+_n_: scroll-up-command   _p_: scroll-down-command
+_2_: other-window-or-split
+_/_: swiper-for-region-or-swiper  _f_: View-scroll-line-forward
+_3_: other-window-or-split-horizon  _o_:  other-window-or-split
+"
+  ("j" 'next-line)
+  ("k" 'previous-line)
+  ("h" 'backward-char)
+  ("l" 'forward-char)
+  ("i" 'view-mode)
+  ("g" 'beginning-of-buffer)
+  ("G" 'end-of-buffer)
+  ("e" 'end-of-line)
+  ("a" 'beginning-of-line)
+  ("n" 'scroll-up-command)
+  ("p" 'scroll-down-command)
+  ("o" 'other-window-or-split)
+  ("f" 'View-scroll-line-forward)
+  ("b" 'View-scroll-line-backward)
+  ("x" 'delete-window)
+  ("0" 'delete-window)
+  ("1" 'delete-other-windows)
+  ("2" 'other-window-or-split)
+  ("3" 'other-window-or-split-horizontally)
+  ("/" 'swiper-for-region-or-swiper))
