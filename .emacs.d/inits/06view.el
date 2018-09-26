@@ -10,6 +10,7 @@
 	    (define-key view-mode-map "k" 'previous-line)
 	    (define-key view-mode-map "h" 'backward-char)
 	    (define-key view-mode-map "l" 'forward-char)
+	    (define-key view-mode-map "i" 'view-mode)
 	    (define-key view-mode-map "g" 'beginning-of-buffer)
 	    (define-key view-mode-map "G" 'end-of-buffer)
 	    (define-key view-mode-map "e" 'end-of-line)
@@ -22,6 +23,7 @@
 	    (define-key view-mode-map "1" 'delete-other-windows)
 	    (define-key view-mode-map "2" 'other-window-or-split)
 	    (define-key view-mode-map "3" 'other-window-or-split-horizontally)
+	    (define-key view-mode-map "/" 'swiper-for-region-or-swiper)
 	    (define-key view-mode-map "\n" nil)
 	    (define-key view-mode-map "\r" nil)))
 
