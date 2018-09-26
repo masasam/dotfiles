@@ -1,3 +1,9 @@
+(defun other-window-or-split-horizontally ()
+  (interactive)
+  (when (one-window-p)
+    (split-window-horizontally))
+  (other-window 1))
+
 (add-hook 'view-mode-hook
           (lambda ()
             (define-key view-mode-map "n" 'next-line)
@@ -14,9 +20,12 @@
 	    (define-key view-mode-map "f" 'scroll-up-command)
 	    (define-key view-mode-map "V" 'scroll-down-command)
 	    (define-key view-mode-map "b" 'scroll-down-command)
+	    (define-key view-mode-map "o" 'other-window-or-split)
+	    (define-key view-mode-map "x" 'other-window)
+	    (define-key view-mode-map "0" 'delete-window)
 	    (define-key view-mode-map "1" 'delete-other-windows)
 	    (define-key view-mode-map "2" 'other-window-or-split)
-	    (define-key view-mode-map "3" 'split-window-horizontally)
+	    (define-key view-mode-map "3" 'other-window-or-split-horizontally)
             (define-key view-mode-map "\n" nil)
             (define-key view-mode-map "\r" nil)))
 
