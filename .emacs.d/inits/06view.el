@@ -7,6 +7,7 @@
 ;; To prevent emacs pinky, reading the source code in view-mode decrease the frequency of pressing ctrl key
 (add-hook 'view-mode-hook
 	  (lambda ()
+	    (define-key view-mode-map "c" 'View-kill-and-leave)
 	    (define-key view-mode-map "j" 'next-line)
 	    (define-key view-mode-map "k" 'previous-line)
 	    (define-key view-mode-map "h" 'backward-char)
