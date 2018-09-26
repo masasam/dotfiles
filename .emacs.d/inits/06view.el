@@ -4,7 +4,7 @@
     (split-window-horizontally))
   (other-window 1))
 
-;; To prevent emacs pinky, read the source code in view-mode and I use vim keybind
+;; To prevent emacs pinky, reading the source code in view-mode decrease the frequency of pressing ctrl key
 (add-hook 'view-mode-hook
 	  (lambda ()
 	    (define-key view-mode-map "j" 'next-line)
