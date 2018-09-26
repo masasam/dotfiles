@@ -6,12 +6,12 @@ astroid==2.0.4
 attrs==18.2.0
 Automat==0.7.0
 autopep8==1.4
-awscli==1.16.19
+awscli==1.16.21
 backcall==0.1.0
 bcrypt==3.1.4
 beautifulsoup4==4.6.3
 bleach==2.1.4
-botocore==1.12.9
+botocore==1.12.11
 btrfsutil==1.0.0
 cached-property==1.5.1
 certifi==2018.8.24
@@ -19,7 +19,7 @@ cffi==1.11.5
 chardet==3.0.4
 cheat==2.2.3
 cli-helpers==1.0.2
-click==6.7
+Click==7.0
 colorama==0.3.9
 configobj==5.0.6
 constantly==15.1.0
@@ -89,9 +89,9 @@ parsel==1.5.0
 parso==0.3.1
 pbr==4.2.0
 pexpect==4.6.0
-pgcli==1.10.3
+pgcli==1.11.0
 pgspecial==1.11.2
-pickleshare==0.7.4
+pickleshare==0.7.5
 Pillow==5.2.0
 ply==3.11
 progressbar2==3.38.0
