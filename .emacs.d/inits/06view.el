@@ -29,7 +29,7 @@
 	    (define-key view-mode-map "\n" nil)
 	    (define-key view-mode-map "\r" nil)))
 
+;; key-chord
 (setq key-chord-two-keys-delay 0.04)
-(setq key-chord-one-key-delay 0.15)
 (key-chord-mode 1)
 (key-chord-define-global "jk" 'view-mode)
