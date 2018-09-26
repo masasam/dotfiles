@@ -21,6 +21,8 @@
 	    (define-key view-mode-map "o" 'other-window-or-split)
 	    (define-key view-mode-map "x" 'delete-window)
 	    (define-key view-mode-map "0" 'delete-window)
+	    (define-key view-mode-map "f" 'View-scroll-line-forward)
+	    (define-key view-mode-map "b" 'View-scroll-line-backward)
 	    (define-key view-mode-map "1" 'delete-other-windows)
 	    (define-key view-mode-map "2" 'other-window-or-split)
 	    (define-key view-mode-map "3" 'other-window-or-split-horizontally)
