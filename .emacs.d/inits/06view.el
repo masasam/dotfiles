@@ -21,7 +21,7 @@
 	    (define-key view-mode-map "V" 'scroll-down-command)
 	    (define-key view-mode-map "b" 'scroll-down-command)
 	    (define-key view-mode-map "o" 'other-window-or-split)
-	    (define-key view-mode-map "x" 'other-window)
+	    (define-key view-mode-map "x" 'delete-window)
 	    (define-key view-mode-map "0" 'delete-window)
 	    (define-key view-mode-map "1" 'delete-other-windows)
 	    (define-key view-mode-map "2" 'other-window-or-split)
