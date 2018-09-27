@@ -62,3 +62,10 @@ _d_: View-scroll-half-page-forward  _c_: View-kill-and-leave   _=_: what-line
   ("2" 'other-window-or-split)
   ("3" 'other-window-or-split-horizontally)
   ("/" 'swiper-for-region-or-swiper))
+
+
+(defhydra hydra-zoom (global-map "<f2>")
+  "zoom"
+  ("g" text-scale-increase "in")
+  ("l" text-scale-decrease "out")
+  ("r" (text-scale-set 0) "reset"))
