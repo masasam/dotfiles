@@ -328,7 +328,7 @@ You can make install from here
 
 #### Install using pacman
 
-    sudo pacman -S firefox firefox-i18n-ja
+    sudo pacman -S firefox firefox-i18n-ja fping
     sudo pacman -S sylpheed emacs curl xsel openssh tmux
     sudo pacman -S zsh-completions keychain
     sudo pacman -S powertop gimp unrar gnome-screenshot
