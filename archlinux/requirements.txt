@@ -6,12 +6,12 @@ astroid==2.0.4
 attrs==18.2.0
 Automat==0.7.0
 autopep8==1.4
-awscli==1.16.22
+awscli==1.16.23
 backcall==0.1.0
 bcrypt==3.1.4
 beautifulsoup4==4.6.3
 bleach==2.1.4
-botocore==1.12.12
+botocore==1.12.13
 btrfsutil==1.0.0
 cached-property==1.5.1
 certifi==2018.8.24
@@ -46,8 +46,8 @@ hyperlink==18.0.0
 idna==2.7
 importmagic==0.1.7
 incremental==17.5.0
-ipykernel==4.9.0
-ipython==6.5.0
+ipykernel==5.0.0
+ipython==7.0.1
 ipython-genutils==0.2.0
 ipywidgets==7.4.2
 isort==4.3.4
@@ -96,7 +96,7 @@ Pillow==5.2.0
 ply==3.11
 progressbar2==3.38.0
 prometheus-client==0.3.1
-prompt-toolkit==1.0.15
+prompt-toolkit==2.0.4
 psycopg2==2.7.5
 ptyprocess==0.6.0
 pyasn1==0.4.4
@@ -143,7 +143,7 @@ tabulate==0.8.2
 team==1.0
 terminado==0.8.1
 terminaltables==3.1.0
-testpath==0.3.1
+testpath==0.4.1
 text-unidecode==1.2
 texttable==1.4.0
 tornado==5.1.1
