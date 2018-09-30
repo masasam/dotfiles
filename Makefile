@@ -149,6 +149,7 @@ rustinstall: ## Install rust and rust packages
 	cargo install cargo-edit
 	cargo install cargo-script
 	cargo install cargo-update
+	cargo install evcxr_repl
 	cargo install exa
 	cargo install fd-find
 	cargo install hyperfine
