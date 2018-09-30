@@ -509,7 +509,6 @@ If you make a mistake on the letters, erase all with Ctrl-u
 	cargo install cargo-script
 	cargo install cargo-edit
 	cargo install ripgrep
-	cargo install evcxr_repl
 	cargo install exa
 	cargo install fd-find
 	cargo install xsv
