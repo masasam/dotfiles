@@ -318,6 +318,10 @@ aws: ## Init aws cli
 	test -L ${HOME}/.aws || rm -rf ${HOME}/.aws
 	ln -vsfn ${HOME}/Dropbox/zsh/.aws   ${HOME}/.aws
 
+roswell: ## Install ros and lem
+	yay -S roswell
+	ros install cxxxr/lem
+
 sylpheed: ## Init sylpheed
 	sudo pacman -S sylpheed
 	test -L ${HOME}/.sylpheed-2.0 || rm -rf ${HOME}/.sylpheed-2.0
