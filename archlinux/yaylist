@@ -10,6 +10,7 @@ nkf
 pcmciautils
 profile-sync-daemon
 rbenv
+roswell
 rtags
 ruby-build
 screenkey
