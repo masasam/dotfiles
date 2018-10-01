@@ -8,6 +8,8 @@
       '(("i" "Idea" entry (file+headline "~/Dropbox/emacs/org/idea.org" "Idea")
 	 "* %? %U %i")
 	("m" "Memo" entry (file+headline "~/Dropbox/emacs/org/memo.org" "Memo")
+	 "* %? %U %i")
+	("s" "Story" entry (file+headline "~/Dropbox/emacs/org/story.org" "Story")
 	 "* %? %U %i")))
 
 (smartrep-define-key org-mode-map "C-c"
