@@ -75,7 +75,7 @@ matplotlib==3.0.0
 mccabe==0.6.1
 mistune==0.8.3
 msgpack==0.5.6
-mycli==1.17.0
+mycli==1.18.0
 nbconvert==5.4.0
 nbformat==4.4.0
 neovim==0.2.6
@@ -96,7 +96,7 @@ Pillow==5.2.0
 ply==3.11
 progressbar2==3.38.0
 prometheus-client==0.3.1
-prompt-toolkit==2.0.4
+prompt-toolkit==2.0.5
 psycopg2==2.7.5
 ptyprocess==0.6.0
 pyasn1==0.4.4
