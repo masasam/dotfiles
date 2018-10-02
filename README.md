@@ -330,7 +330,7 @@ You can make install from here
 
     sudo pacman -S firefox firefox-i18n-ja fping
     sudo pacman -S sylpheed emacs curl xsel openssh tmux
-    sudo pacman -S zsh-completions keychain
+    sudo pacman -S zsh-completions keychain syncthing
     sudo pacman -S powertop gimp unrar gnome-screenshot
     sudo pacman -S file-roller xclip atool evince inkscape
     sudo pacman -S cifs-utils gvfs gvfs-smb eog lhasa lzop

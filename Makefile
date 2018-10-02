@@ -56,7 +56,7 @@ install: ## Install arch linux packages using pacman
 	zsh-syntax-highlighting shellcheck bash-completion mathjax expect elixir lsof \
 	cscope postgresql-libs pdfgrep gnu-netcat cmatrix jpegoptim nethogs mlocate \
 	pacman-contrib x11-ssh-askpass libreoffice-fresh-ja python-prompt_toolkit \
-	jhead peek ncdu sxiv gnome-screenshot rclone sshfs fping
+	jhead peek ncdu sxiv gnome-screenshot rclone sshfs fping syncthing
 	sudo pkgfile --update
 
 pipinstall: ## Install python packages
