@@ -22,11 +22,6 @@
  (front-context-string . "* Memo\n** idea [")
  (rear-context-string)
  (position . 1))
-("org-capture-last-stored"
- (filename . "~/Dropbox/emacs/org/story.org")
- (front-context-string . "** twitter [2018")
- (rear-context-string)
- (position . 9))
 ("work"
  (filename . "~/Dropbox/work/")
  (front-context-string)

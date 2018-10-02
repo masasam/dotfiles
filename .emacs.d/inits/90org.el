@@ -1,6 +1,7 @@
 (require 'org)
 
 (setq org-directory "~/Dropbox/emacs")
+(setq org-capture-bookmark nil)
 (bind-key "C-c a" 'org-agenda)
 (bind-key "C-c c" 'org-capture)
 
