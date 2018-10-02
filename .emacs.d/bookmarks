@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("story"
+(("memo"
+ (filename . "~/Dropbox/emacs/org/memo.org")
+ (front-context-string . "* Memo\n** macro ")
+ (rear-context-string)
+ (position . 1))
+("story"
  (filename . "~/Dropbox/emacs/org/story.org")
  (front-context-string . "* Story\n** twitt")
  (rear-context-string)
@@ -10,11 +15,6 @@
 ("password"
  (filename . "~/Dropbox/passwd/password.gpg")
  (front-context-string . "#password\n\nansib")
- (rear-context-string)
- (position . 1))
-("memo"
- (filename . "~/Dropbox/emacs/org/memo.org")
- (front-context-string . "* Notes\n** 矩形選択 ")
  (rear-context-string)
  (position . 1))
 ("idea"
