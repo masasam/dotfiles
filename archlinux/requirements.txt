@@ -51,7 +51,7 @@ ipython==7.0.1
 ipython-genutils==0.2.0
 ipywidgets==7.4.2
 isort==4.3.4
-jedi==0.13.0
+jedi==0.13.1
 Jinja2==2.10
 jmespath==0.9.3
 jsonschema==2.6.0
@@ -143,7 +143,7 @@ tabulate==0.8.2
 team==1.0
 terminado==0.8.1
 terminaltables==3.1.0
-testpath==0.4.1
+testpath==0.4.2
 text-unidecode==1.2
 texttable==1.4.0
 tornado==5.1.1
