@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("memo"
+(("org"
+ (filename . "~/Dropbox/emacs/org/")
+ (front-context-string . ".git\n  -rw-r--r-")
+ (rear-context-string . "96 10月  3 13:29 ")
+ (position . 179))
+("memo"
  (filename . "~/Dropbox/emacs/org/memo.org")
  (front-context-string . "* Memo\n** macro ")
  (rear-context-string)
