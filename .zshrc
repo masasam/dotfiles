@@ -204,7 +204,7 @@ alias df='df -h'
 alias free='free -h'
 alias iv='sxiv'
 alias e='emacsclient'
-alias remacs='emacs -q -l ~/.emacs.d/server.el'
+alias remacs='emacs -q -l ~/.emacs.d/default.el'
 alias open='xdg-open'
 alias mysql="mysql --pager='less -S -n -i -F -X'"
 alias melpabackup='rm -rf ${HOME}/Dropbox/emacs/elpa/`ls -rt ${HOME}/Dropbox/emacs/elpa | head -n 1`; tar cfz ${HOME}/Dropbox/emacs/elpa/`date '+%Y%m%d%H%M%S'`.tar.gz -C ${HOME}/.emacs.d elpa; cd -'
