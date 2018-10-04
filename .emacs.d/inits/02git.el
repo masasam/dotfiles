@@ -10,3 +10,4 @@
 
 ;; git-gutter
 (global-git-gutter-mode t)
+(bind-key "C-x v =" 'git-gutter:popup-hunk)
