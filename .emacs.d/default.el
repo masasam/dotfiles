@@ -2,6 +2,7 @@
 ;;; Commentary:
 
 ;; This will start with remacs at shell with minimal emacs.
+;; alias remacs='emacs -q -l ~/.emacs.d/default.el'
 ;; Use when test of package and my emacs do not start.
 
 ;;; Code:
