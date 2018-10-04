@@ -17,6 +17,12 @@
 (add-to-list 'company-backends 'company-tern)
 
 
+;; xref-js2
+(define-key js2-mode-map (kbd "M-.") nil)
+(add-hook 'js2-mode-hook (lambda ()
+			   (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t)))
+
+
 ;; typescript
 (add-hook 'typescript-mode-hook
           (lambda ()

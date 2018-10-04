@@ -135,6 +135,7 @@
 (package-install 'volatile-highlights)
 (package-install 'web-mode)
 (package-install 'which-key)
+(package-install 'xref-js2)
 (package-install 'yaml-mode)
 (package-install 'yasnippet)
 (package-install 'yasnippet-snippets)
