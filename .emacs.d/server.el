@@ -93,6 +93,11 @@
 (setq set-mark-command-repeat-pop t)
 
 
+;; Assign ibuffer to C-x b and C-x C-b
+(define-key global-map (kbd "C-x b") 'ibuffer)
+(define-key global-map (kbd "C-x C-b") 'ibuffer)
+
+
 ;; Read elisp function source file
 (define-key global-map (kbd "C-x F") 'find-function)
 (define-key global-map (kbd "C-x V") 'find-variable)
