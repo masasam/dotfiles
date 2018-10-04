@@ -43,6 +43,11 @@
 (bind-key "C-x C-k" 'kill-buffer)
 
 
+;; Assign ibuffer to C-x b and C-x C-b
+(bind-key "C-x C-b" 'ibuffer)
+(bind-key "C-x b" 'ibuffer)
+
+
 ;; minibuffer-local-completion-mpa
 (bind-key "C-w" 'backward-kill-word minibuffer-local-completion-map)
 
