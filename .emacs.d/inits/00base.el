@@ -43,7 +43,7 @@
 (bind-key "C-x C-k" 'kill-buffer)
 
 
-;; Assign ibuffer to C-x b and C-x C-b
+;; Assign ibuffer to C-x C-b
 (bind-key "C-x C-b" 'ibuffer)
 
 
