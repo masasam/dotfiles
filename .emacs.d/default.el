@@ -1,5 +1,9 @@
 ;;; default.el --- default.el
 ;;; Commentary:
+
+;; This will start with remacs at shell with minimal emacs.
+;; Use when test of package and my emacs do not start.
+
 ;;; Code:
 (package-initialize)
 
