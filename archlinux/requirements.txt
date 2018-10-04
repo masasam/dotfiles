@@ -6,12 +6,12 @@ astroid==2.0.4
 attrs==18.2.0
 Automat==0.7.0
 autopep8==1.4
-awscli==1.16.25
+awscli==1.16.26
 backcall==0.1.0
 bcrypt==3.1.4
 beautifulsoup4==4.6.3
-bleach==2.1.4
-botocore==1.12.15
+bleach==3.0.0
+botocore==1.12.16
 btrfsutil==1.0.0
 cached-property==1.5.1
 certifi==2018.8.24
@@ -57,7 +57,7 @@ jmespath==0.9.3
 jsonschema==2.6.0
 jupyter==1.0.0
 jupyter-client==5.2.3
-jupyter-console==5.2.0
+jupyter-console==6.0.0
 jupyter-core==4.4.0
 jupyterlab==0.34.12
 jupyterlab-launcher==0.13.1
@@ -87,7 +87,7 @@ pandocfilters==1.4.2
 paramiko==2.4.2
 parsel==1.5.0
 parso==0.3.1
-pbr==4.2.0
+pbr==4.3.0
 pexpect==4.6.0
 pgcli==2.0.0
 pgspecial==1.11.2
@@ -95,7 +95,7 @@ pickleshare==0.7.5
 Pillow==5.3.0
 ply==3.11
 progressbar2==3.38.0
-prometheus-client==0.3.1
+prometheus-client==0.4.0
 prompt-toolkit==2.0.5
 psycopg2==2.7.5
 ptyprocess==0.6.0
