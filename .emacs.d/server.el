@@ -3,14 +3,22 @@
 ;;; Code:
 (package-initialize)
 
+(menu-bar-mode 0)
+(tool-bar-mode 0)
+(scroll-bar-mode 0)
 (setq inhibit-splash-screen t)
 (setq inhibit-startup-message t)
+(set-frame-parameter nil 'fullscreen 'maximized)
 
 (load-theme 'misterioso t)
 
 ;; Save the file specified code with basic utf-8 if it exists
 (set-language-environment "Japanese")
 (prefer-coding-system 'utf-8)
+
+
+;; font
+(add-to-list 'default-frame-alist '(font . "Cica-15.5"))
 
 
 ;;; Faster rendering by not corresponding to right-to-left language
@@ -93,8 +101,7 @@
 (setq set-mark-command-repeat-pop t)
 
 
-;; Assign ibuffer to C-x b and C-x C-b
-(define-key global-map (kbd "C-x b") 'ibuffer)
+;; Assign ibuffer to C-x C-b
 (define-key global-map (kbd "C-x C-b") 'ibuffer)
 
 
