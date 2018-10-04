@@ -123,7 +123,6 @@
 (package-install 'slime-company)
 (package-install 'slim-mode)
 (package-install 'smartparens)
-(package-install 'smartrep)
 (package-install 'smex)
 (package-install 'swiper)
 (package-install 'tern)
