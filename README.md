@@ -434,6 +434,7 @@ If you make a mistake on the letters, erase all with Ctrl-u
 	pip install --user jupyterthemes
 	pip install --user httpie
 	pip install --user trash-cli
+	pip install --user truffleHog
 	pip install --user jupyterlab
 	pip install --user cheat
 	pip install --user faker

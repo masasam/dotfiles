@@ -97,6 +97,7 @@ pipinstall: ## Install python packages
 	pip install --user selenium
 	pip install --user speedtest-cli
 	pip install --user trash-cli
+	pip install --user truffleHog
 	pip install --user virtualenv
 	pip install --user virtualenvwrapper
 	pip install --user yapf
