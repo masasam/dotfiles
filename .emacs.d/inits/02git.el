@@ -11,3 +11,5 @@
 ;; git-gutter
 (global-git-gutter-mode t)
 (bind-key "C-x v =" 'git-gutter:popup-hunk)
+(bind-key "C-x v s" 'git-gutter:stage-hunk)
+(bind-key "C-x v r" 'git-gutter:revert-hunk)
