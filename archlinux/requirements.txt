@@ -1,4 +1,4 @@
-ansible==2.6.5
+ansible==2.7.0
 ansible-lint==3.4.23
 appdirs==1.4.3
 asn1crypto==0.24.0
@@ -6,12 +6,12 @@ astroid==2.0.4
 attrs==18.2.0
 Automat==0.7.0
 autopep8==1.4
-awscli==1.16.26
+awscli==1.16.27
 backcall==0.1.0
 bcrypt==3.1.4
 beautifulsoup4==4.6.3
 bleach==3.0.0
-botocore==1.12.16
+botocore==1.12.17
 btrfsutil==1.0.0
 cached-property==1.5.1
 certifi==2018.8.24
@@ -38,6 +38,8 @@ entrypoints==0.2.3
 Faker==0.9.1
 flake8==3.5.0
 gif-for-cli==1.1.1
+gitdb2==2.0.4
+GitPython==2.1.11
 greenlet==0.4.15
 html5lib==1.0.1
 httpie==0.9.9
@@ -136,6 +138,7 @@ service-identity==17.0.0
 setproctitle==1.1.10
 simplegeneric==0.8.1
 six==1.11.0
+smmap2==2.0.4
 speedtest-cli==2.0.2
 sqlparse==0.2.4
 stevedore==1.29.0
@@ -149,6 +152,8 @@ texttable==1.4.0
 tornado==5.1.1
 traitlets==4.3.2
 trash-cli==0.17.1.14
+truffleHog==2.0.97
+truffleHogRegexes==0.0.6
 Twisted==18.7.0
 urllib3==1.23
 virtualenv==16.0.0
