@@ -1,9 +1,9 @@
-;;; default.el --- default.el
+;;; test.el --- test.el
 ;;; Commentary:
 
-;; This will start with typing remacs at shell with minimal emacs.
+;; This will start with typing testemacs at shell with minimal emacs.
 ;; Write below at .zshrc or .bashrc.
-;; alias remacs='emacs -q -l ~/.emacs.d/default.el'
+;; alias testemacs='emacs -q -l ~/.emacs.d/test.el'
 ;; Use when test of package and my emacs don't start.
 
 ;;; Code:
