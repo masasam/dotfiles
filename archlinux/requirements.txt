@@ -6,12 +6,12 @@ astroid==2.0.4
 attrs==18.2.0
 Automat==0.7.0
 autopep8==1.4
-awscli==1.16.27
+awscli==1.16.28
 backcall==0.1.0
 bcrypt==3.1.4
 beautifulsoup4==4.6.3
 bleach==3.0.0
-botocore==1.12.17
+botocore==1.12.18
 btrfsutil==1.0.0
 cached-property==1.5.1
 certifi==2018.8.24
@@ -61,8 +61,9 @@ jupyter==1.0.0
 jupyter-client==5.2.3
 jupyter-console==6.0.0
 jupyter-core==4.4.0
-jupyterlab==0.34.12
+jupyterlab==0.35.0
 jupyterlab-launcher==0.13.1
+jupyterlab-server==0.2.0
 jupyterthemes==0.19.6
 kitchen==1.2.5
 kiwisolver==1.0.1
@@ -83,7 +84,7 @@ nbformat==4.4.0
 neovim==0.2.6
 notebook==5.7.0
 numpy==1.15.2
-packaging==17.1
+packaging==18.0
 pandas==0.23.4
 pandocfilters==1.4.2
 paramiko==2.4.2
