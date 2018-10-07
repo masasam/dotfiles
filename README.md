@@ -9,11 +9,9 @@
 ## Let's build environment with Makefile
 
 This dotfiles is for Arch linux.
-
 Since there is no such as a distribution without make,
-
-if you make [Makefile](https://github.com/masasam/dotfiles/blob/master/Makefile) you can correspond to any distribution.
-
+if you make [Makefile](https://github.com/masasam/dotfiles/blob/master/Makefile),
+you can correspond to any distribution.
 Let's make a [Makefile](https://github.com/masasam/dotfiles/blob/master/Makefile) immediately.
 
 ### With Makefile, such a good thing
@@ -26,9 +24,7 @@ I never have to worry about setting my laptop again.
 
 ### Deploying dotfiles can be done in a moment
 
-After make install
-
-You can deploy dotfiles with
+After make install you can deploy dotfiles with this command
 
     make init
 
@@ -36,35 +32,32 @@ You can deploy dotfiles with
 
 ![make](https://raw.githubusercontent.com/masasam/image/image/make.png)
 
-Once after creating the environment
+Once after creating the environment you type the following command and your environment backuped
 
     make backup
 
 Since the arch linux packages list that was installed at will be backed up to Arch linux directry,
-
 If [Makefile](https://github.com/masasam/dotfiles/blob/master/Makefile) is completed, you should be able to restore in 1 hour in either case.
 
 ### Commands for allinstall allinit
 
-You can install all with
-
 	make allinstall
 
+You can install all with this command.
 You can install everything written after allinstall:
-
-You can deploy all with
 
 	make allinit
 
+You can deploy all with this command.
 Keep Dropbox synchronized before doing make allinit.
-
-You can backup packages all with
 
 	make allbackup
 
-You can update packages all with
+You can backup packages all with this command.
 
 	make allupdate
+
+You can update packages all with this command.
 
 #### Criteria of things managed by Dropbox
 
@@ -80,7 +73,6 @@ You can update packages all with
 - To protect data
 
    Sylpheed configuration file and mail data.
-
    As mail arrives, it will be synchronized to dropbox so you don't have to think about backup.
 
 Don't forget to make dropbox 2 factor authentication.
@@ -90,15 +82,12 @@ Don't forget to make dropbox 2 factor authentication.
 Why Arch linux?
 
 - Unless your laptop breaks, arch linux is a rolling release so you don't have to reinstall it.
-
   Even if it gets broken, I made a [Makefile](https://github.com/masasam/dotfiles/blob/master/Makefile) so I can return in 1 hour and it's unbeatable.
 
 - Arch linux is good because it is difficult for my development environment to be old packages.
 
 - I like customization but if customization is done too much, it is not good because it can not receive the benefit of the community. Since Arch linux is unsuitable for excessive customization, it is fit to me.
-
   In principle the package of Arch linux is a policy to build from the source of vanilla (Vanilla means that it does not apply its own patch for arch linux)
-
   It is good because Arch linux unique problems are unlikely.
 
 - Arch linux is lightweight because there is no extra thing.
@@ -152,7 +141,6 @@ Connect internet with wifi
 	wifi-menu wlp0s29f7u1
 
 Make sure the earliest mirror is selected.
-
 Write the closest mirror on the top.
 
 	vi /etc/pacman.d/mirrorlist
@@ -254,9 +242,6 @@ Enable graphical login with gdm
 	systemctl enable gdm.service
 
 Preparing the net environment
-
-After using NetworkManager, use it with wifi.
-You can not wifi unless you turn off dhcpcd.
 
 	pacman -S networkmanager
 	systemctl disable dhcpcd.service
@@ -529,8 +514,6 @@ Terminal uses termite and urxvt see
 
 Reduce power consumption to save energy.
 
-Don't send power to unused system bus.
-
 >sudo pacman -S powertop
 
 Since it becomes invalid when restarting, It will set the following.
@@ -572,8 +555,6 @@ When restarting NetworkManager, dnsmasq is set to be automatically usable.
 
 	sudo systemctl restart NetworkManager
 
-Do the same DNS lookup twice on drill command.
-
 ![dnsmasq](https://raw.githubusercontent.com/masasam/image/image/dnsmasq.png)
 
 # Mozc
@@ -581,12 +562,9 @@ Do the same DNS lookup twice on drill command.
 ibus-mozc
 
 Make input sources mozc only for region and language.
-
-Because it is a US keyboard Japanese conversion is control + space
-
-Since I am wearing emacs, I use mozc with shift + Space
-
-Key setting is based on Kotoeri ← closest to emacs key binding
+Because I use a US keyboard Japanese conversion is control + space.
+Since I am useing emacs, I use mozc with shift + Space.
+Key setting is based on Kotoeri (closest to emacs key binding).
 
 >「Input before conversion」「Shift+Space」「Disable IME」
 >「Converting」「Shift+Space」「Disable IME」
@@ -600,9 +578,8 @@ Once mozc is set up
 
     ln -sfn ~/Dropbox/mozc/.mozc ~/.mozc
 
-And set the mozc setting to dropbox
-
-With this it will not have to be set again
+And set the mozc setting to dropbox.
+With this it will not have to be set again.
 
 ## How to test Makefile
 
