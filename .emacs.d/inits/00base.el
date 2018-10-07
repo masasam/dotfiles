@@ -1,3 +1,10 @@
+;; theme
+(load-theme 'material t)
+;; Change part of theme to your liking.
+;; Investigate by changing 'M-x list-faces-display'
+(custom-set-faces '(cursor ((t (:background "#82c600")))))
+
+
 ;; Save the file specified code with basic utf-8 if it exists
 (set-language-environment "Japanese")
 (prefer-coding-system 'utf-8)
@@ -6,6 +13,7 @@
 ;; exec-path-from-shell
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
+(setq exec-path-from-shell-check-startup-files nil)
 
 
 ;;; Faster rendering by not corresponding to right-to-left language
