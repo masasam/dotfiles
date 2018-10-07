@@ -505,10 +505,7 @@ If you make a mistake on the letters, erase all with Ctrl-u
 
 ![terminal](https://raw.githubusercontent.com/masasam/image/image/tmux.png)
 
-Terminal uses termite and urxvt see
-
-	.config/termite
-	.Xresources
+Terminal uses urxvt
 
 # Powertop
 
@@ -564,7 +561,7 @@ ibus-mozc
 Make input sources mozc only for region and language.
 Because I use a US keyboard Japanese conversion is control + space.
 Since I am useing emacs, I use mozc with shift + Space.
-Key setting is based on Kotoeri (closest to emacs key binding).
+My key setting is based on Kotoeri (closest to emacs key binding).
 
 >「Input before conversion」「Shift+Space」「Disable IME」
 >「Converting」「Shift+Space」「Disable IME」
