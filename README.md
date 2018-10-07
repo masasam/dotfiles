@@ -357,7 +357,7 @@ Activities> Settings> Keyboard> Shortcut
 
 >Ctrl-u
 
-If you make a mistake on the letters, erase all with Ctrl-u
+If you make a mistake on the keyboard, erase all with Ctrl-u
 
 #### Install using yay
 
