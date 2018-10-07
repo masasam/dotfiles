@@ -16,7 +16,7 @@ Let's make a [Makefile](https://github.com/masasam/dotfiles/blob/master/Makefile
 
 ### With Makefile, such a good thing
 
-Easy to build development environment with
+Easy to build development environment with this command.
 
     make install
 
@@ -24,7 +24,7 @@ I never have to worry about setting my laptop again.
 
 ### Deploying dotfiles can be done in a moment
 
-After make install you can deploy dotfiles with this command
+After make install you can deploy dotfiles with this command.
 
     make init
 
@@ -32,19 +32,19 @@ After make install you can deploy dotfiles with this command
 
 ![make](https://raw.githubusercontent.com/masasam/image/image/make.png)
 
-Once after creating the environment you type the following command and your environment backuped
+Once after creating the environment you type the following command and your environment is backuped.
 
     make backup
 
 Since the arch linux packages list that was installed at will be backed up to Arch linux directry,
-If [Makefile](https://github.com/masasam/dotfiles/blob/master/Makefile) is completed, you should be able to restore in 1 hour in either case.
+If [Makefile](https://github.com/masasam/dotfiles/blob/master/Makefile) is completed, you should be able to restore in 1 hour.
 
 ### Commands for allinstall allinit
 
 	make allinstall
 
 You can install all with this command.
-You can install everything written after allinstall:
+You can install everything written after allinstall at Makefile.
 
 	make allinit
 
@@ -70,9 +70,9 @@ You can update packages all with this command.
     .zsh_history
 	.mozc
 
-- To protect data
+- Those that can not be opened but need to protect data
 
-   Sylpheed configuration file and mail data.
+   Sylpheed configuration file and mail data etc.
    As mail arrives, it will be synchronized to dropbox so you don't have to think about backup.
 
 Don't forget to make dropbox 2 factor authentication.
