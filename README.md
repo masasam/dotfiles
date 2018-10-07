@@ -289,15 +289,10 @@ Preparing dotfiles
     sudo pacman -S dconf-editor
 
 	dconf-editor /org/gnome/desktop/input-sources/xkb-options 'ctrl:swapcaps'
-
 	dconf-editor /org/gnome/desktop/interface/gtk-key-theme 'Emacs'
-
 	dconf-editor /org/gnome/desktop/interface/enable-animations 'False'
-	
 	dconf-editor /org/gnome/desktop/interface/gtk-theme 'Arc-Dark'
-
 	dconf-editor /org/gnome/desktop/interface/clock-show-date 'True'
-
 	dconf-editor /org/gnome/settings-daemon/plugins/color/night-light-temperature '5500'
 
 --------------------------------------
