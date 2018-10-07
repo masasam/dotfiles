@@ -32,12 +32,9 @@ After make install you can deploy dotfiles with this command.
 
 ![make](https://raw.githubusercontent.com/masasam/image/image/make.png)
 
-Once after creating the environment you type the following command and your environment is backuped.
-
     make backup
 
-Since the arch linux packages list that was installed at will be backed up to Arch linux directry,
-If [Makefile](https://github.com/masasam/dotfiles/blob/master/Makefile) is completed, you should be able to restore in 1 hour.
+The ArchLinux package list installed by this command is backed up in the archlinux directory.
 
 ### Commands for allinstall allinit
 
