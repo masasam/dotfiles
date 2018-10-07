@@ -41,7 +41,7 @@ The ArchLinux package list installed by this command is backed up in the archlin
 	make allinstall
 
 You can install all with this command.
-You can install everything written after allinstall at Makefile.
+You can install anything written after allinstall in the makefile.
 
 	make allinit
 
