@@ -138,6 +138,7 @@
 (package-install 'yaml-mode)
 (package-install 'yasnippet)
 (package-install 'yasnippet-snippets)
+(package-install 'zeal-at-point)
 
 ;; auto-compile
 (setq load-prefer-newer t)
