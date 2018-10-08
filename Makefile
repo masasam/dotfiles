@@ -276,9 +276,15 @@ rails: ## Create rails app
 	cd -
 
 sxiv: ## Init sxiv
-	mkdir -p ~/.config/sxiv/exec
+	mkdir -p ${HOME}/.config/sxiv/exec
 	ln -vsf ${PWD}/.config/sxiv/exec/image-info   ${HOME}/.config/sxiv/exec/image-info
 	chmod +x ${HOME}/.config/sxiv/exec/image-info
+
+zeal: ## Deploy zeal config and docsets
+	mkdir -p ${HOME}/.local/share
+	mkdir -p ${HOME}/.config/Zeal
+	ln -vsf ${PWD}/.config/Zeal/Zeal.conf   ${HOME}/.config/Zeal/Zeal.conf
+	ln -vsfn ${HOME}/Dropbox/Zeal   ${HOME}/.local/share/Zeal
 
 zoom: ## Install zoom for web conference
 	sudo pacman -U ${HOME}/Dropbox/arch/zoom_x86_64.pkg.tar.xz
@@ -288,7 +294,7 @@ screenkey: ## Init screenkey
 	mkdir -p ${HOME}/.config
 	ln -vsf ${PWD}/.config/screenkey.json ${HOME}/.config/screenkey.json
 
-yay: ## Install yay at yay
+yay: ## Install yay using yay
 	yay -S yay
 
 aur: ## Install arch linux AUR packages using yay
