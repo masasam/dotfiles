@@ -304,6 +304,7 @@ aur: ## Install arch linux AUR packages using yay
 	yay -S git-secrets
 	yay -S nkf
 	yay -S rtags
+	yay -S sequeler-git
 	yay -S yaourt
 
 desktop: ## Update desktop entry

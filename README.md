@@ -367,6 +367,7 @@ If you make a mistake on the keyboard, erase all with Ctrl-u
 	yay -S rtags
 	yay -S ruby-build
 	yay -S screenkey
+	yay -S sequeler-git
 	yay -S yay
 
 ##### Install using pip

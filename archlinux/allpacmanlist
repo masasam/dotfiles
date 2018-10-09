@@ -159,6 +159,7 @@ gjs
 glew
 glib-networking
 glib2
+glib2-docs
 glibc
 glibmm
 glu
@@ -184,6 +185,7 @@ gnustep-base
 gnutls
 go
 gobject-introspection-runtime
+goocanvas
 gpaste
 gpgme
 gpm
@@ -191,6 +193,7 @@ gptfdisk
 granite
 graphene
 graphite
+graphviz
 grep
 grilo
 groff
@@ -205,11 +208,14 @@ gst-plugins-base
 gst-plugins-base-libs
 gst-plugins-good
 gstreamer
+gtk-doc
 gtk-update-icon-cache
 gtk2
 gtk3
 gtkmm
+gtksourceview3
 gtkspell
+gts
 guile
 guile2.0
 gvfs
@@ -431,6 +437,9 @@ libffi
 libfontenc
 libfreehand
 libgcrypt
+libgda
+libgda-mysql
+libgda-postgres
 libgdm
 libgee
 libgexiv2
@@ -647,6 +656,7 @@ mariadb-clients
 mathjax
 mdadm
 mesa
+meson
 metis
 minizip
 mjpegtools
@@ -752,10 +762,12 @@ pygobject-devel
 pygobject2-devel
 pygtk
 python
+python-anytree
 python-appdirs
 python-dbus
 python-dbus-common
 python-gobject
+python-lxml
 python-packaging
 python-prompt_toolkit
 python-pygments
@@ -839,6 +851,7 @@ smbclient
 snappy
 sound-theme-freedesktop
 soundtouch
+source-highlight
 spandsp
 speex
 speexdsp
@@ -898,6 +911,7 @@ usbmuxd
 usbutils
 util-linux
 v4l-utils
+vala
 valgrind
 vamp-plugin-sdk
 vi
