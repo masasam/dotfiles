@@ -163,6 +163,7 @@ sed
 shadow
 shellcheck
 sshfs
+sshuttle
 strace
 sudo
 sxiv

@@ -670,6 +670,7 @@ ncurses
 ndctl
 neomutt
 neon
+net-tools
 netctl
 nethogs
 nettle
@@ -844,6 +845,7 @@ speexdsp
 sqlite
 srt
 sshfs
+sshuttle
 startup-notification
 strace
 sudo
