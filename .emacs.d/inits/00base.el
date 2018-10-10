@@ -55,6 +55,9 @@
 (bind-key "C-x C-b" 'ibuffer)
 
 
+;; Set bookmark file name
+(setq bookmark-file "~/Dropbox/emacs/bookmarks")
+
 ;; minibuffer-local-completion-mpa
 (bind-key "C-w" 'backward-kill-word minibuffer-local-completion-map)
 
