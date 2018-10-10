@@ -1,5 +1,6 @@
 ansible==2.7.0
 ansible-lint==3.4.23
+anytree==2.4.3
 appdirs==1.4.3
 asn1crypto==0.24.0
 astroid==2.0.4
@@ -10,7 +11,7 @@ awscli==1.16.29
 backcall==0.1.0
 bcrypt==3.1.4
 beautifulsoup4==4.6.3
-bleach==3.0.0
+bleach==3.0.1
 botocore==1.12.19
 btrfsutil==1.0.0
 cached-property==1.5.1
@@ -48,7 +49,7 @@ hyperlink==18.0.0
 idna==2.7
 importmagic==0.1.7
 incremental==17.5.0
-ipykernel==5.0.0
+ipykernel==5.1.0
 ipython==7.0.1
 ipython-genutils==0.2.0
 ipywidgets==7.4.2
@@ -76,6 +77,7 @@ lxml==4.2.5
 MarkupSafe==1.0
 matplotlib==3.0.0
 mccabe==0.6.1
+meson==0.48.0
 mistune==0.8.3
 msgpack==0.5.6
 mycli==1.18.0
@@ -98,7 +100,7 @@ pickleshare==0.7.5
 Pillow==5.3.0
 ply==3.11
 progressbar2==3.38.0
-prometheus-client==0.4.0
+prometheus-client==0.4.1
 prompt-toolkit==2.0.5
 psycopg2==2.7.5
 ptyprocess==0.6.0
@@ -142,6 +144,7 @@ six==1.11.0
 smmap2==2.0.4
 speedtest-cli==2.0.2
 sqlparse==0.2.4
+sshuttle==0.78.4
 stevedore==1.29.0
 tabulate==0.8.2
 team==1.0
