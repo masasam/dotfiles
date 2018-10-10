@@ -3,6 +3,7 @@
 (setq org-directory "~/Dropbox/emacs/org")
 (setq org-log-done 'time)
 (setq org-use-speed-commands t)
+(setq org-src-fontify-natively t)
 (setq org-agenda-files '("~/Dropbox/emacs/org/task.org"))
 
 (bind-key "C-c a" 'org-agenda)
