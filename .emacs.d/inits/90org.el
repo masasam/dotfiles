@@ -4,7 +4,7 @@
 (setq org-log-done 'time)
 (setq org-use-speed-commands t)
 (setq org-agenda-files '("~/Dropbox/emacs/org/task.org"))
-(setq org-capture-bookmark nil)
+
 (bind-key "C-c a" 'org-agenda)
 (bind-key "C-c c" 'org-capture)
 
