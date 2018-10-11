@@ -5,8 +5,7 @@
 
 
 ;; avy
-(bind-key "C-r" 'avy-goto-char)
-(bind-key "C-'" 'avy-goto-char-2)
+(bind-key "C-r" 'avy-goto-char-2)
 
 
 ;; back-button
