@@ -19,7 +19,9 @@
 	("f" "Future Task" entry (file+headline "~/Dropbox/emacs/org/future_task.org" "Future Task")
 	 "** TODO %? \n")
 	("t" "Task" entry (file+headline "~/Dropbox/emacs/org/task.org" "Task")
-	 "** TODO %? \n   SCHEDULED: %^t \n")))
+	 "** TODO %? \n   SCHEDULED: %^t \n")
+	("p" "Priority task" entry (file "~/Dropbox/emacs/org/priority_task.org")
+         "* %?\n" :clock-in t :clock-resume t)))
 
 (setq org-refile-targets
       (quote (("~/Dropbox/emacs/org/task.org" :level . 1)
