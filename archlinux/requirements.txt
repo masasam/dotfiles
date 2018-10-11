@@ -7,12 +7,12 @@ astroid==2.0.4
 attrs==18.2.0
 Automat==0.7.0
 autopep8==1.4
-awscli==1.16.29
+awscli==1.16.30
 backcall==0.1.0
 bcrypt==3.1.4
 beautifulsoup4==4.6.3
 bleach==3.0.1
-botocore==1.12.19
+botocore==1.12.20
 btrfsutil==1.0.0
 cached-property==1.5.1
 certifi==2018.8.24
@@ -21,7 +21,7 @@ chardet==3.0.4
 cheat==2.2.3
 cli-helpers==1.0.2
 Click==7.0
-colorama==0.3.9
+colorama==0.4.0
 configobj==5.0.6
 constantly==15.1.0
 cryptography==2.3.1
