@@ -149,6 +149,8 @@ procps-ng
 psmisc
 pwgen
 python-prompt_toolkit
+qt5-styleplugins
+qt5ct
 rclone
 reiserfsprogs
 rsync
