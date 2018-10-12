@@ -56,8 +56,7 @@ install: ## Install arch linux packages using pacman
 	zsh-syntax-highlighting shellcheck bash-completion mathjax expect elixir lsof \
 	cscope postgresql-libs pdfgrep gnu-netcat cmatrix jpegoptim nethogs mlocate \
 	pacman-contrib x11-ssh-askpass libreoffice-fresh-ja python-prompt_toolkit \
-	jhead peek ncdu sxiv gnome-screenshot rclone sshfs fping syncthing sshuttle \
-	zeal
+	jhead peek ncdu sxiv gnome-screenshot rclone sshfs fping syncthing sshuttle
 	sudo pkgfile --update
 
 pipinstall: ## Install python packages
@@ -282,6 +281,8 @@ sxiv: ## Init sxiv
 	chmod +x ${HOME}/.config/sxiv/exec/image-info
 
 zeal: ## Deploy zeal config and docsets
+	sudo pacman -S zeal qt5-styleplugins qt5ct
+	sudo ln -vsf ${PWD}/etc/environment   /etc/environment
 	mkdir -p ${HOME}/.local/share
 	mkdir -p ${HOME}/.config/Zeal
 	ln -vsf ${PWD}/.config/Zeal/Zeal.conf   ${HOME}/.config/Zeal/Zeal.conf
