@@ -286,6 +286,7 @@ zeal: ## Deploy zeal config and docsets
 	mkdir -p ${HOME}/.local/share
 	mkdir -p ${HOME}/.config/Zeal
 	ln -vsf ${PWD}/.config/Zeal/Zeal.conf   ${HOME}/.config/Zeal/Zeal.conf
+	test -L ${HOME}/.local/share/Zeal || rm -rf ${HOME}/.local/share/Zeal
 	ln -vsfn ${HOME}/Dropbox/Zeal   ${HOME}/.local/share/Zeal
 
 zoom: ## Install zoom for web conference
