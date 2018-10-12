@@ -574,7 +574,7 @@ function github-stars() {
     if [ $# = 2 ]; then
 	open "https://github.com/search?q=language%3A$1+stars%3A%3E%3D$2&type=Repositories&ref=searchresults"
     else
-	echo 'usage: githab-stars language stars'
+	echo 'usage: github-stars language stars'
     fi
 }
 
