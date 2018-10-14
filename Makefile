@@ -33,13 +33,13 @@ initdropbox: ## Initial deploy dotfiles using dropbox
 	ln -vsfn ${HOME}/Dropbox/passwd/keyrings   ${HOME}/.local/share/keyrings
 
 base: ## Install base and base-devel package
-	sudo pacman -S bash bzip2 coreutils cryptsetup device-mapper dhcpcd diffutils e2fsprogs \
+	sudo pacman -S bash bzip2 coreutils cryptsetup device-mapper dhcpcd mdadm \
 	file filesystem findutils gawk gcc-libs gettext glibc grep gzip inetutils \
 	iproute2 iputils jfsutils less licenses linux logrotate lvm2 man-db sudo \
-	mdadm nano netctl pacman pciutils perl procps-ng psmisc reiserfsprogs s-nail \
-	sed shadow sysfsutils systemd-sysvcompat tar texinfo usbutils util-linux vi \
+	nano netctl pacman pciutils perl procps-ng psmisc reiserfsprogs s-nail vi \
+	make shadow sysfsutils systemd-sysvcompat tar texinfo usbutils util-linux \
 	which xfsprogs autoconf automake binutils bison fakeroot flex gcc groff m4 \
-	libtool make patch pkgconf systemd man-pages
+	libtool patch pkgconf systemd man-pages diffutils e2fsprogs sed
 
 install: ## Install arch linux packages using pacman
 	sudo pacman -S go zsh git vim tmux keychain evince unrar seahorse hugo mpv \
