@@ -4,7 +4,6 @@
 (setq enable-recursive-minibuffers t)
 (setq company-selection-wrap-around t)
 (bind-key "C-s" 'swiper-for-region-or-swiper)
-(bind-key "C-S" 'swiper-all)
 (bind-key "C-;" 'ivy-switch-buffer)
 (bind-key "C-x C-z" 'ivy-resume)
 (bind-key "C-x C-c" 'counsel-M-x)
