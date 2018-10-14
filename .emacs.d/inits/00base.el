@@ -26,7 +26,7 @@
 
 ;; defalias list
 (defalias 'my/keybind 'counsel-descbinds)
-(defalias 'my/github 'browse-at-remote)
+(defalias 'my/github-show 'browse-at-remote)
 
 
 ;; server start for emacs-client
