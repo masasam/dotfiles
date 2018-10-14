@@ -7,12 +7,12 @@ astroid==2.0.4
 attrs==18.2.0
 Automat==0.7.0
 autopep8==1.4
-awscli==1.16.32
+awscli==1.16.33
 backcall==0.1.0
 bcrypt==3.1.4
 beautifulsoup4==4.6.3
 bleach==3.0.2
-botocore==1.12.22
+botocore==1.12.23
 btrfsutil==1.0.0
 cached-property==1.5.1
 certifi==2018.8.24
@@ -39,7 +39,7 @@ entrypoints==0.2.3
 Faker==0.9.2
 flake8==3.5.0
 gif-for-cli==1.1.1
-gitdb2==2.0.4
+gitdb2==2.0.5
 GitPython==2.1.11
 greenlet==0.4.15
 html5lib==1.0.1
@@ -62,7 +62,7 @@ jupyter==1.0.0
 jupyter-client==5.2.3
 jupyter-console==6.0.0
 jupyter-core==4.4.0
-jupyterlab==0.35.0
+jupyterlab==0.35.1
 jupyterlab-launcher==0.13.1
 jupyterlab-server==0.2.0
 jupyterthemes==0.19.6
@@ -141,7 +141,7 @@ service-identity==17.0.0
 setproctitle==1.1.10
 simplegeneric==0.8.1
 six==1.11.0
-smmap2==2.0.4
+smmap2==2.0.5
 speedtest-cli==2.0.2
 sqlparse==0.2.4
 sshuttle==0.78.4
