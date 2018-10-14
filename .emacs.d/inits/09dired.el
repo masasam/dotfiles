@@ -24,13 +24,6 @@
 		      (set-window-configuration wnd))))
       (error "no more than 2 files should be marked"))))
 
-(defun my/password ()
-  (interactive)
-  (find-file "~/Dropbox/passwd/password.gpg"))
-
-(defun kanban ()
-  (interactive)
-  (find-file "~/Dropbox/kanban/kanban"))
 
 (defun kanban-rename ()
   (interactive)
@@ -39,11 +32,3 @@
 		(read-from-minibuffer "Rename: " `(".txt" . 1) nil nil nil)
 		"~/Dropbox/kanban")
 	       1))
-
-(defun work-folder ()
-  (interactive)
-  (find-file "~/Documents/work"))
-
-(defun my/githubimage ()
-  (interactive)
-  (find-file "~/Pictures/image/"))
