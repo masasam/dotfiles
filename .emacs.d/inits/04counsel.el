@@ -39,7 +39,7 @@ If the region is inactive, swiper."
 
 ;; counsel-tramp
 (setq tramp-default-method "ssh")
-(define-key global-map (kbd "C-c s") 'counsel-tramp)
+(bind-key "C-c s" 'counsel-tramp)
 (add-hook 'counsel-tramp-pre-command-hook '(lambda () (global-aggressive-indent-mode 0)
 					     (projectile-mode 0)
 					     (editorconfig-mode 0)))
