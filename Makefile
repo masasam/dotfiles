@@ -33,7 +33,7 @@ initdropbox: ## Initial deploy dotfiles using dropbox
 	ln -vsfn ${HOME}/Dropbox/passwd/keyrings   ${HOME}/.local/share/keyrings
 
 base: ## Install base and base-devel package
-	bash bzip2 coreutils cryptsetup device-mapper dhcpcd diffutils e2fsprogs \
+	sudo pacman -S bash bzip2 coreutils cryptsetup device-mapper dhcpcd diffutils e2fsprogs \
 	file filesystem findutils gawk gcc-libs gettext glibc grep gzip inetutils \
 	iproute2 iputils jfsutils less licenses linux logrotate lvm2 man-db sudo \
 	mdadm nano netctl pacman pciutils perl procps-ng psmisc reiserfsprogs s-nail \
