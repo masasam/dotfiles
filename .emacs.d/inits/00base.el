@@ -28,6 +28,7 @@
 (defalias 'my/keybind 'counsel-descbinds)
 (defalias 'my/github-show 'browse-at-remote)
 (defalias 'my/line-show 'fci-mode)
+(defalias 'my/kukei-mode 'rectangle-mark-mode)
 
 
 ;; server start for emacs-client
