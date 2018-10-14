@@ -47,7 +47,7 @@ install: ## Install arch linux packages using pacman
 	inkscape file-roller xclip atool debootstrap oath-toolkit imagemagick lynx \
 	the_silver_searcher cifs-utils elinks flameshot ruby-rdoc ipcalc traceroute \
 	cups-pdf openssh firefox firefox-i18n-ja gimp strace lhasa hub bookworm tig \
-	pkgfile baobab dconf-editor rsync nodejs debian-archive-keyring gauche cpio \
+	pkgfile dconf-editor rsync nodejs debian-archive-keyring gauche cpio \
 	nmap poppler-data ffmpeg asciidoc sbcl docker aspell aspell-en screen mosh \
 	gdb wmctrl pwgen linux-docs htop tcpdump gvfs p7zip lzop fzf gpaste optipng \
 	arch-install-scripts pandoc jq pkgstats ruby highlight alsa-utils geckodriver \
