@@ -47,7 +47,7 @@ install: ## Install arch linux packages using pacman
 	inkscape file-roller xclip atool debootstrap oath-toolkit imagemagick lynx \
 	the_silver_searcher cifs-utils elinks flameshot ruby-rdoc ipcalc traceroute \
 	cups-pdf openssh firefox firefox-i18n-ja gimp strace lhasa hub bookworm tig \
-	pkgfile dconf-editor rsync nodejs debian-archive-keyring gauche cpio \
+	pkgfile dconf-editor rsync nodejs debian-archive-keyring gauche cpio rclone \
 	nmap poppler-data ffmpeg asciidoc sbcl docker aspell aspell-en screen mosh \
 	gdb wmctrl pwgen linux-docs htop tcpdump gvfs p7zip lzop fzf gpaste optipng \
 	arch-install-scripts pandoc jq pkgstats ruby highlight alsa-utils geckodriver \
@@ -56,8 +56,7 @@ install: ## Install arch linux packages using pacman
 	zsh-syntax-highlighting shellcheck bash-completion mathjax expect elixir lsof \
 	cscope postgresql-libs pdfgrep gnu-netcat cmatrix jpegoptim nethogs mlocate \
 	pacman-contrib x11-ssh-askpass libreoffice-fresh-ja python-prompt_toolkit \
-	jhead peek ncdu sxiv gnome-screenshot rclone sshfs fping syncthing sshuttle \
-	xdotool
+	jhead peek ncdu sxiv gnome-screenshot sshfs fping syncthing sshuttle xdotool
 	sudo pkgfile --update
 
 pipinstall: ## Install python packages
