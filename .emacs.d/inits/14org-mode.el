@@ -18,7 +18,7 @@
 	 "* %? %U %i")
 	("s" "Story" entry (file+headline "~/Dropbox/emacs/org/story.org" "Story")
 	 "* %? %U %i")
-	("f" "Future Task" entry (file+headline "~/Dropbox/emacs/org/future_task.org" "Future Task")
+	("f" "Future Task" entry (file+headline "~/Dropbox/emacs/org/task_future.org" "Future Task")
 	 "** TODO %? \n")
 	("t" "Task" entry (file+headline "~/Dropbox/emacs/org/task.org" "Task")
 	 "** TODO %? \n   SCHEDULED: %^t \n")
@@ -28,7 +28,8 @@
 (setq org-refile-targets
       (quote (("~/Dropbox/emacs/org/archives.org" :level . 1)
 	      ("~/Dropbox/emacs/org/remember.org" :level . 1)
-	      ("~/Dropbox/emacs/org/memo.org" :level . 1))))
+	      ("~/Dropbox/emacs/org/memo.org" :level . 1)
+	      ("~/Dropbox/emacs/org/task.org" :level . 1))))
 
 (smartrep-define-key org-mode-map "C-c"
   '(("C-n" . org-next-visible-heading)
