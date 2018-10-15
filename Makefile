@@ -175,6 +175,10 @@ urxvt: ## Init rxvt-unicode terminal
 	sudo ln -vsf ${PWD}/usr/share/applications/urxvt.desktop   /usr/share/applications/urxvt.desktop
 	sudo ln -vsf ${PWD}/usr/share/applications/urxvtc.desktop   /usr/share/applications/urxvtc.desktop
 	sudo ln -vsf ${PWD}/usr/share/applications/urxvt-tabbed.desktop   /usr/share/applications/urxvt-tabbed.desktop
+	mkdir -p ${HOME}/.config/autostart
+	chmod a+x ${PWD}/.auto_start.sh
+	ln -vsf ${PWD}/.auto_start.sh   ${HOME}/.auto_start.sh
+	ln -vsf ${PWD}/.config/autostart/autostart.desktop   ${HOME}/.config/autostart
 
 xterm: ## Init xterm terminal
 	sudo pacman -S xterm
