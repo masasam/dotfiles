@@ -609,6 +609,15 @@ function optimize-png() {
 }
 
 
+function clip-file() {
+    if [ $# = 1 ]; then
+	cat $1 | xsel -bi
+    else
+	echo 'usage: copy-contents file'
+    fi
+}
+
+
 # zsh-syntax-highlighting(pacman -S zsh-syntax-highlighting)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # zsh-completions for google-cloud-sdk(yay google-cloud-sdk)
