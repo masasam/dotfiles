@@ -12,6 +12,8 @@
 (setq org-capture-templates
       '(("i" "Idea" entry (file+headline "~/Dropbox/emacs/org/idea.org" "Idea")
 	 "* %? %U %i")
+	("r" "Remember" entry (file+headline "~/Dropbox/emacs/org/remember.org" "Remember")
+	 "* %? %U %i")
 	("m" "Memo" entry (file+headline "~/Dropbox/emacs/org/memo.org" "Memo")
 	 "* %? %U %i")
 	("s" "Story" entry (file+headline "~/Dropbox/emacs/org/story.org" "Story")
@@ -24,8 +26,9 @@
          "* %?\n" :clock-in t :clock-resume t)))
 
 (setq org-refile-targets
-      (quote (("~/Dropbox/emacs/org/task.org" :level . 1)
-              ("~/Dropbox/emacs/org/future_task.org" :level . 1))))
+      (quote (("~/Dropbox/emacs/org/archives.org" :level . 1)
+	      ("~/Dropbox/emacs/org/remember.org" :level . 1)
+	      ("~/Dropbox/emacs/org/memo.org" :level . 1))))
 
 (smartrep-define-key org-mode-map "C-c"
   '(("C-n" . org-next-visible-heading)
