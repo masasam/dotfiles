@@ -1,5 +1,5 @@
 ansible==2.7.0
-ansible-lint==3.4.23
+ansible-lint==3.5.0
 anytree==2.4.3
 appdirs==1.4.3
 asn1crypto==0.24.0
