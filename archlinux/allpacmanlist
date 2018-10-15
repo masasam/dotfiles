@@ -950,6 +950,7 @@ xcb-util-wm
 xclip
 xdg-user-dirs
 xdg-utils
+xdotool
 xf86-input-libinput
 xf86-video-intel
 xfsprogs

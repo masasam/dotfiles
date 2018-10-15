@@ -200,6 +200,7 @@ wmctrl
 x11-ssh-askpass
 xclip
 xdg-user-dirs
+xdotool
 xf86-video-intel
 xfsprogs
 xorg-bdftopcf
