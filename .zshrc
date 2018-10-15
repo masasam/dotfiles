@@ -613,7 +613,7 @@ function clip-file() {
     if [ $# = 1 ]; then
 	cat $1 | xsel -bi
     else
-	echo 'usage: copy-contents file'
+	echo 'usage: clip-file file'
     fi
 }
 
