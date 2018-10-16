@@ -327,6 +327,10 @@ desktop: ## Update desktop entry
 	sudo ln -vsf ${PWD}/usr/share/applications/urxvt-tabbed.desktop   /usr/share/applications/urxvt-tabbed.desktop
 	sudo ln -vsf ${PWD}/usr/share/applications/nvim.desktop   /usr/share/applications/nvim.desktop
 
+toggle: ## Prepare command that toggle between emacs and chromium
+	sudo ln -vsf ${PWD}/usr/share/applications/toggle.desktop   /usr/share/applications/toggle.desktop
+	sudo cp .toggle.sh /usr/local/bin/toggle
+
 aws: ## Init aws cli
 	mkdir -p ${HOME}/.local
 	pip install --user awscli
