@@ -329,7 +329,7 @@ desktop: ## Update desktop entry
 
 toggle: ## Prepare command that toggle between emacs and chromium
 	sudo ln -vsf ${PWD}/usr/share/applications/toggle.desktop   /usr/share/applications/toggle.desktop
-	sudo cp .toggle.sh /usr/local/bin/toggle
+	sudo cp ${PWD}/.toggle.sh /usr/local/bin/toggle
 
 aws: ## Init aws cli
 	mkdir -p ${HOME}/.local
