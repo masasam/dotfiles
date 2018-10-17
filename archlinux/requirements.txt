@@ -6,7 +6,7 @@ asn1crypto==0.24.0
 astroid==2.0.4
 attrs==18.2.0
 Automat==0.7.0
-autopep8==1.4
+autopep8==1.4.1
 awscli==1.16.35
 backcall==0.1.0
 bcrypt==3.1.4
@@ -62,7 +62,7 @@ jupyter==1.0.0
 jupyter-client==5.2.3
 jupyter-console==6.0.0
 jupyter-core==4.4.0
-jupyterlab==0.35.1
+jupyterlab==0.35.2
 jupyterlab-launcher==0.13.1
 jupyterlab-server==0.2.0
 jupyterthemes==0.19.6
