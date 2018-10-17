@@ -1,12 +1,12 @@
 #!/bin/bash
 
 current_window=$(xdotool getwindowfocus)
-browser_window=$(xdotool search --name --onlyvisible "Chromium")
 emacs_window=$(xdotool search --name --onlyvisible "Emacs")
+browser_window=$(xdotool search --name --onlyvisible "Chromium")
 
-if test $current_window -eq $browser_window
+if test $current_window -eq $emacs_window
 then
-  xdotool windowactivate $emacs_window
-else
   xdotool windowactivate $browser_window
+else
+  xdotool windowactivate $emacs_window
 fi
