@@ -58,7 +58,8 @@ If the region is inactive, swiper."
       (goto-char (point-min))
       (while (not (eobp))
 	(push (buffer-substring-no-properties
-	       (line-beginning-position) (line-end-position)) paths)
+	       (line-beginning-position) (line-end-position))
+	      paths)
         (forward-line 1))
       (reverse paths))))
 
