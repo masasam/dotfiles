@@ -58,6 +58,7 @@
 (package-install 'elisp-slime-nav)
 (package-install 'elpy)
 (package-install 'enh-ruby-mode)
+(package-install 'espy)
 (package-install 'exec-path-from-shell)
 (package-install 'expand-region)
 (package-install 'f)

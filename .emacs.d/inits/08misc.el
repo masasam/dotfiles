@@ -118,3 +118,8 @@
 (setq fci-rule-width 3)
 (setq fci-rule-color "sea green")
 
+
+;; espy
+(defalias 'my/get-pass 'espy-get-pass)
+(defalias 'my/get-user 'espy-get-user)
+(setq espy-password-file "~/Dropbox/passwd/password.gpg")
