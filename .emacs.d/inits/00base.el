@@ -31,6 +31,12 @@
 (defalias 'my/kukei-mark-mode 'rectangle-mark-mode)
 
 
+;; espy
+(defalias 'my/get-pass 'espy-get-pass)
+(defalias 'my/get-user 'espy-get-user)
+(setq espy-password-file "~/Dropbox/passwd/password.gpg")
+
+
 ;; server start for emacs-client
 (require 'server)
 (unless (server-running-p)
