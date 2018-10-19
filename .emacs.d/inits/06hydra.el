@@ -25,8 +25,6 @@
    "move"
    ("n" next-line)
    ("p" previous-line)
-   ("j" next-line)
-   ("k" previous-line)
    ("f" forward-char)
    ("b" backward-char)
    ("a" beginning-of-line)
