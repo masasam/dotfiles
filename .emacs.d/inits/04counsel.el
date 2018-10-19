@@ -32,14 +32,8 @@
 If the region is inactive, swiper."
   (interactive)
   (if (region-active-p)
-      (if (transient-mark-mode)
-	  (progn
-	    (transient-mark-mode 0)
-	    (swiper (buffer-substring
-		     (region-beginning) (region-end)))
-	    (transient-mark-mode t))
-	(swiper (buffer-substring
-		 (region-beginning) (region-end))))
+      (swiper (buffer-substring
+	       (region-beginning) (region-end)))
     (swiper))
   (keyboard-quit))
 
