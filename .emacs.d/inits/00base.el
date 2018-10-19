@@ -33,14 +33,14 @@
 
 ;; espy
 (defalias 'my/get-pass 'espy-get-pass)
-(defalias 'my/get-pass2 'espy-get-pass2)
+(defalias 'my/get-second-pass 'espy-get-second-pass)
 (defalias 'my/get-user 'espy-get-user)
 (setq espy-password-file "~/Dropbox/passwd/password.gpg")
-(require 'espy)
-(defun espy-get-pass2 ()
-  "Prompts user for password2 to copy to killring."
-  (interactive)
-  (kill-new (espy-get-content "Get password2: " "pass2:")))
+;; (require 'espy)
+;; (defun espy-get-second-pass ()
+;;   "Prompts user for second password to copy to killring."
+;;   (interactive)
+;;   (kill-new (espy-get-content "Get password2: " "pass2:")))
 
 ;; server start for emacs-client
 (require 'server)
