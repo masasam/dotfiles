@@ -32,15 +32,14 @@
    ("v" scroll-up-command)
    ("V" scroll-down-command)
    ("l" recenter-top-bottom)
+   ("s" swiper-for-region-or-swiper)
    ("0" delete-window)
    ("x" delete-window)
    ("1" delete-other-windows)
    ("2" split-window-below)
    ("3" split-window-right)
    ("o" other-window-or-split)
-   ("SPC" set-mark-command)
-   ("/" swiper-for-region-or-swiper)
-   ("q" nil)))
+   ("SPC" set-mark-command)))
 
 
 (defhydra hydra-git-gutter (ctl-x-map "" :pre (widen))
