@@ -38,9 +38,9 @@
    ("2" split-window-below)
    ("3" split-window-right)
    ("o" other-window-or-split)
-   ("q" nil)
    ("SPC" set-mark-command)
-   ("/" swiper-for-region-or-swiper)))
+   ("/" swiper-for-region-or-swiper)
+   ("q" nil)))
 
 
 (defhydra hydra-git-gutter (ctl-x-map "" :pre (widen))
