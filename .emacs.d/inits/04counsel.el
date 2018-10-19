@@ -37,7 +37,7 @@ If the region is inactive, swiper."
 	    (transient-mark-mode 0)
 	    (swiper (buffer-substring
 		     (region-beginning) (region-end)))
-	    (transient-mark-mode 1))
+	    (transient-mark-mode t))
 	(swiper (buffer-substring
 		 (region-beginning) (region-end))))
     (swiper))
