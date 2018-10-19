@@ -31,10 +31,12 @@
   "If the region is active, swiper-for-region.
 If the region is inactive, swiper."
   (interactive)
+  (transient-mark-mode 0)
   (if (region-active-p)
       (swiper (buffer-substring
 	       (region-beginning) (region-end)))
-    (swiper)))
+    (swiper))
+  (transient-mark-mode 1))
 
 
 ;; counsel-tramp
