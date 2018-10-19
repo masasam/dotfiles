@@ -41,6 +41,7 @@
    ("3" split-window-right)
    ("o" other-window-or-split)
    ("q" nil)
+   ("SPC" set-mark-command)
    ("/" swiper-for-region-or-swiper)))
 
 
