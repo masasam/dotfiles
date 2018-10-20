@@ -39,6 +39,8 @@
    ("2" split-window-below)
    ("3" split-window-right)
    ("o" other-window-or-split)
+   ("<" beginning-of-buffer)
+   (">" end-of-buffer)
    ("SPC" set-mark-command)))
 
 
