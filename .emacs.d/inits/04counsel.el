@@ -32,8 +32,9 @@
 If the region is inactive, swiper."
   (interactive)
   (if (region-active-p)
-      (swiper (buffer-substring
-	       (region-beginning) (region-end)))
+      (progn (setq mark-active nil)
+	     (swiper (buffer-substring
+		      (region-beginning) (region-end))))
     (swiper))
   (keyboard-quit))
 
