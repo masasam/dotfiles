@@ -34,7 +34,7 @@
 ;; espy
 (defalias 'my/get-user 'espy-get-user)
 (defalias 'my/get-pass 'espy-get-pass)
-(setq espy-password-file "~/Dropbox/passwd/password.gpg")
+(setq espy-password-file "~/Dropbox/passwd/password.org.gpg")
 
 
 ;; server start for emacs-client
@@ -206,3 +206,10 @@
   "Make trash empty."
   (interactive)
   (shell-command-to-string "trash-empty"))
+
+
+(defun my/markdown-indent ()
+  (interactive)
+  (insert "    ")
+  (forward-line)
+  (beginning-of-line))
