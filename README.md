@@ -561,6 +561,7 @@ My key setting is based on Kotoeri (closest to emacs key binding).
 >「Direct input」「Shift+Space」「Enable IME」
 >「No input character」「Shift+Space」「Disable IME」
 >Delete other Shift-space entangled shortcuts.
+>「Converting」cansel Ctrl-g
 
 reboot
 
