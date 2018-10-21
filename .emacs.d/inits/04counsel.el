@@ -35,8 +35,7 @@ If the region is inactive, swiper."
       (progn (setq mark-active nil)
 	     (swiper (buffer-substring
 		      (region-beginning) (region-end))))
-    (swiper))
-  (keyboard-quit))
+    (swiper)))
 
 
 ;; counsel-tramp
