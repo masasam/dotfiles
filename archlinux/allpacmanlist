@@ -274,6 +274,7 @@ haskell-hxt-unicode
 haskell-integer-logarithms
 haskell-juicypixels
 haskell-lexer
+haskell-libyaml
 haskell-math-functions
 haskell-memory
 haskell-mime-types
