@@ -77,7 +77,7 @@ lxml==4.2.5
 MarkupSafe==1.0
 matplotlib==3.0.0
 mccabe==0.6.1
-meson==0.48.0
+meson==0.48.1
 mistune==0.8.4
 msgpack==0.5.6
 mycli==1.18.0
