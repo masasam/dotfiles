@@ -5,16 +5,22 @@
   (interactive)
   (if (region-active-p)
       (progn (setq mark-active nil)
-	     (if (string-match
-		  (format "\\`[%s]+\\'" "[:ascii:]")
-		  (buffer-substring (region-beginning) (region-end)))
+	     (if (string-match (format "\\`[%s]+\\'" "[:ascii:]")
+			       (buffer-substring (region-beginning) (region-end)))
 		 (browse-url (concat "https://translate.google.com/?source=gtx#en/ja/"
 				     (buffer-substring
 				      (region-beginning) (region-end))))
 	       (browse-url (concat "https://translate.google.com/?source=gtx#ja/en/"
 				   (buffer-substring
 				    (region-beginning) (region-end))))))
-    (browse-url "https://translate.google.com/?source=gtx#en/ja/")))
+    (let ((string (read-string "Google Translate: ")))
+      (if (string-match
+	   (format "\\`[%s]+\\'" "[:ascii:]")
+	   string)
+	  (browse-url
+	   (concat "https://translate.google.com/?source=gtx#en/ja/" string))
+	(browse-url
+	 (concat "https://translate.google.com/?source=gtx#ja/en/" string))))))
 
 
 (defun chromium-calendar ()
