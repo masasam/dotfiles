@@ -1,12 +1,19 @@
 (bind-key "C-c t" 'chromium-translate)
+
 (defun chromium-translate ()
   "Open google translate with chromium."
   (interactive)
   (if (region-active-p)
       (progn (setq mark-active nil)
-	     (browse-url (concat "https://translate.google.com/?source=gtx#en/ja/"
-				 (buffer-substring
-				  (region-beginning) (region-end)))))
+	     (if (string-match
+		  (format "\\`[%s]+\\'" "[:ascii:]")
+		  (buffer-substring (region-beginning) (region-end)))
+		 (browse-url (concat "https://translate.google.com/?source=gtx#en/ja/"
+				     (buffer-substring
+				      (region-beginning) (region-end))))
+	       (browse-url (concat "https://translate.google.com/?source=gtx#ja/en/"
+				   (buffer-substring
+				    (region-beginning) (region-end))))))
     (browse-url "https://translate.google.com/?source=gtx#en/ja/")))
 
 
