@@ -206,10 +206,3 @@
   "Make trash empty."
   (interactive)
   (shell-command-to-string "trash-empty"))
-
-
-(defun my/markdown-indent ()
-  (interactive)
-  (insert "    ")
-  (forward-line)
-  (beginning-of-line))
