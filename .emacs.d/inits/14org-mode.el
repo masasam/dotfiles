@@ -10,7 +10,9 @@
 (bind-key "C-c c" 'org-capture)
 
 (setq org-capture-templates
-      '(("i" "Idea" entry (file+headline "~/Dropbox/emacs/org/idea.org" "Idea")
+      '(("e" "Experiment" entry (file+headline "~/Dropbox/emacs/org/experiment.org" "Experiment")
+	 "* %? %U %i\n")
+	("i" "Idea" entry (file+headline "~/Dropbox/emacs/org/idea.org" "Idea")
 	 "* %? %U %i")
 	("r" "Remember" entry (file+headline "~/Dropbox/emacs/org/remember.org" "Remember")
 	 "* %? %U %i")
