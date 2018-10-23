@@ -35,7 +35,7 @@
 
 
 ;; markdown-preview like github
-(setq markdown-command "github-markup"
+(setq markdown-command "pandoc"
       markdown-command-needs-filename t
       markdown-content-type "application/xhtml+xml"
       markdown-css-paths '("https://cdn.jsdelivr.net/npm/github-markdown-css/github-markdown.min.css"
