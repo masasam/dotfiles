@@ -618,6 +618,16 @@ function clip-file() {
 }
 
 
+functin screenshot-window-delay() {
+    if [ $# = 1 ]; then
+	gnome-screenshot --window --delay=$1
+	notify-send 'Screenshot' 'Done' -i camera-photo
+    else
+	echo 'usage: screenshot-window-delay 5'
+    fi
+}
+
+
 # zsh-syntax-highlighting(pacman -S zsh-syntax-highlighting)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # zsh-completions for google-cloud-sdk(yay google-cloud-sdk)
