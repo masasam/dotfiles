@@ -32,10 +32,3 @@
 	      ("~/Dropbox/emacs/org/remember.org" :level . 1)
 	      ("~/Dropbox/emacs/org/memo.org" :level . 1)
 	      ("~/Dropbox/emacs/org/task.org" :level . 1))))
-
-(smartrep-define-key org-mode-map "C-c"
-  '(("C-n" . org-next-visible-heading)
-    ("C-p" . org-previous-visible-heading)
-    ("C-u" . outline-up-heading)
-    ("C-f" . org-forward-heading-same-level)
-    ("C-b" . org-backward-heading-same-level)))
