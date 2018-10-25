@@ -1,6 +1,22 @@
 (require 'google-translate)
 (require 'google-translate-default-ui)
 
+(bind-key "C-c t" 'google-translate-enja-or-jaen)
+
+(defvar toggle-translate-flg nil
+  "Toggle flg.")
+
+(defun toggle-translate ()
+  "Toggle translate function."
+  (interactive)
+  (if toggle-translate-flg
+      (progn
+	(bind-key "C-c t" 'google-translate-enja-or-jaen)
+	(setq toggle-translate-flg nil))
+    (progn
+      (bind-key "C-c t" 'chromium-translate)
+      (setq toggle-translate-flg t))))
+
 (defun google-translate-enja-or-jaen (&optional string)
   "Translate words in region or current position. Can also specify query with C-u"
   (interactive)
@@ -22,4 +38,4 @@
      string)))
 
 (push "*Google Translate*" popwin:special-display-config)
-;; (bind-key "C-c t" 'google-translate-enja-or-jaen)
+

@@ -1,5 +1,3 @@
-(bind-key "C-c t" 'chromium-translate)
-
 (defun chromium-translate ()
   "Open google translate with chromium."
   (interactive)
