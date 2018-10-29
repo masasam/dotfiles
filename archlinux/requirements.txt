@@ -68,7 +68,7 @@ jupyter==1.0.0
 jupyter-client==5.2.3
 jupyter-console==6.0.0
 jupyter-core==4.4.0
-jupyterlab==0.35.2
+jupyterlab==0.35.3
 jupyterlab-launcher==0.13.1
 jupyterlab-server==0.2.0
 jupyterthemes==0.19.6
@@ -128,7 +128,7 @@ pyOpenSSL==18.0.0
 pyparsing==2.2.2
 python-dateutil==2.7.5
 python-utils==2.3.0
-pytz==2018.6
+pytz==2018.7
 PyYAML==3.13
 pyzmq==17.1.2
 qtconsole==4.4.2
