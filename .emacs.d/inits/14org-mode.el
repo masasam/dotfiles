@@ -1,6 +1,5 @@
 (require 'org)
 
-(setq org-directory "~/Dropbox/emacs/org")
 (setq org-log-done 'time)
 (setq org-use-speed-commands t)
 (setq org-src-fontify-natively t)
