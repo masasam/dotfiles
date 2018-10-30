@@ -5,6 +5,7 @@
 (setq org-use-speed-commands t)
 (setq org-src-fontify-natively t)
 (setq org-agenda-files '("~/Dropbox/emacs/org/task.org"))
+(setq calendar-holidays nil)
 
 (bind-key "C-c a" 'org-agenda)
 (bind-key "C-c c" 'org-capture)
