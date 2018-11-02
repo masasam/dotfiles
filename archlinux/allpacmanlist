@@ -32,6 +32,7 @@ bison
 blas
 bluez
 bluez-libs
+bolt
 bookworm
 boost-libs
 bridge-utils
