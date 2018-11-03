@@ -7,12 +7,12 @@ astroid==2.0.4
 attrs==18.2.0
 Automat==0.7.0
 autopep8==1.4.2
-awscli==1.16.46
+awscli==1.16.47
 backcall==0.1.0
 bcrypt==3.1.4
 beautifulsoup4==4.6.3
 bleach==3.0.2
-botocore==1.12.36
+botocore==1.12.37
 btrfsutil==1.0.0
 cached-property==1.5.1
 cachetools==2.1.0
@@ -48,7 +48,7 @@ google-auth==1.5.1
 google-auth-httplib2==0.0.3
 greenlet==0.4.15
 html5lib==1.0.1
-httpie==0.9.9
+httpie==1.0.0
 httplib2==0.11.3
 humanize==0.5.1
 hyperlink==18.0.0
@@ -160,7 +160,7 @@ terminado==0.8.1
 terminaltables==3.1.0
 testpath==0.4.2
 text-unidecode==1.2
-texttable==1.4.0
+texttable==1.5.0
 tornado==5.1.1
 traitlets==4.3.2
 trash-cli==0.17.1.14
@@ -168,7 +168,7 @@ truffleHog==2.0.97
 truffleHogRegexes==0.0.6
 Twisted==18.9.0
 uritemplate==3.0.0
-urllib3==1.24
+urllib3==1.24.1
 virtualenv==16.1.0
 virtualenv-clone==0.4.0
 virtualenvwrapper==4.8.2
