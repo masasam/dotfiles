@@ -157,11 +157,13 @@ sshuttle==0.78.4
 stevedore==1.30.0
 tabulate==0.8.2
 team==1.0
+termcolor==1.1.0
 terminado==0.8.1
 terminaltables==3.1.0
 testpath==0.4.2
 text-unidecode==1.2
 texttable==1.5.0
+tldr==0.4.4
 tornado==5.1.1
 traitlets==4.3.2
 trash-cli==0.17.1.14
