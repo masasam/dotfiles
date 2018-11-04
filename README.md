@@ -376,46 +376,47 @@ If you make a mistake on the keyboard, erase all with Ctrl-u
 	curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 	python get-pip.py --user
 	pip install --user --upgrade pip
-	pip install --user virtualenv
 	pip install --user ansible
+	pip install --user ansible-container
 	pip install --user ansible-lint
-	pip install --user docker-compose
-	pip install --user virtualenvwrapper
-	pip install --user seaborn
-	pip install --user ipywidgets
-	pip install --user scikit-learn
-	pip install --user scipy
-	pip install --user pandas
-	pip install --user matplotlib
-	pip install --user jupyter
-	pip install --user neovim
-	pip install --user pylint
-	pip install --user jedi
 	pip install --user autopep8
+	pip install --user awscli
+	pip install --user cheat
+	pip install --user docker-compose
+	pip install --user faker
 	pip install --user flake8
+	pip install --user graph-cli
+	pip install --user httpie
+	pip install --user importmagic
+	pip install --user ipywidgets
+	pip install --user jedi
+	pip install --user jupyter
+	pip install --user jupyterlab
+	pip install --user jupyterthemes
+	pip install --user matplotlib
+	pip install --user mycli
+	pip install --user neovim
+	pip install --user pandas
+	pip install --user pgcli
+	pip install --user progressbar2
+	pip install --user pydoc_utils
 	pip install --user pyflakes
 	pip install --user pygments
-	pip install --user speedtest-cli
-	pip install --user selenium
-	pip install --user ansible-container
-	pip install --user scrapy
-	pip install --user mycli
-	pip install --user pgcli
-	pip install --user yapf
-	pip install --user pydoc_utils
-	pip install --user rope
-	pip install --user importmagic
-	pip install --user awscli
-	pip install --user progressbar2
+	pip install --user pylint
 	pip install --user ranger-fm
+	pip install --user rope
 	pip install --user rtv
-	pip install --user jupyterthemes
-	pip install --user httpie
+	pip install --user scikit-learn
+	pip install --user scipy
+	pip install --user scrapy
+	pip install --user seaborn
+	pip install --user selenium
+	pip install --user speedtest-cli
 	pip install --user trash-cli
 	pip install --user truffleHog
-	pip install --user jupyterlab
-	pip install --user cheat
-	pip install --user faker
+	pip install --user virtualenv
+	pip install --user virtualenvwrapper
+	pip install --user yapf
 
 #### Install using golang
 

@@ -72,6 +72,7 @@ pipinstall: ## Install python packages
 	pip install --user faker
 	pip install --user flake8
 	pip install --user gif-for-cli
+	pip install --user graph-cli
 	pip install --user httpie
 	pip install --user importmagic
 	pip install --user ipywidgets
