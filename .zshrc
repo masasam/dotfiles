@@ -618,7 +618,7 @@ function clip-file() {
 }
 
 
-functin screenshot-window-delay() {
+function screenshot-window-delay() {
     if [ $# = 1 ]; then
 	gnome-screenshot --window --delay=$1
 	notify-send 'Screenshot' 'Done' -i camera-photo
@@ -627,6 +627,14 @@ functin screenshot-window-delay() {
     fi
 }
 
+
+function quickman() {
+    if [ $# = 1 ]; then
+	unbuffer tldr $1 |less
+    else
+	echo 'usage: quickman $1'
+    fi
+}
 
 # zsh-syntax-highlighting(pacman -S zsh-syntax-highlighting)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
