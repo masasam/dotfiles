@@ -46,6 +46,7 @@ goobook==3.0.1.dev0
 google-api-python-client==1.7.4
 google-auth==1.5.1
 google-auth-httplib2==0.0.3
+graph-cli==0.0.9
 greenlet==0.4.15
 html5lib==1.0.1
 httpie==1.0.0
