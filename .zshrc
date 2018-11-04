@@ -630,7 +630,7 @@ function screenshot-window-delay() {
 
 function quickman() {
     if [ $# = 1 ]; then
-	unbuffer tldr $1 |less
+	unbuffer tldr $1 | less
     else
 	echo 'usage: quickman $1'
     fi
