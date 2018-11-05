@@ -51,6 +51,7 @@ If there are two or more windows, it will go to another window."
    ("<" beginning-of-buffer)
    (">" end-of-buffer)
    ("SPC" set-mark-command)
+   ("g" keyboard-quit)
    ("S" window-swap-states)
    ("j" git-gutter:next-hunk)
    ("k" git-gutter:previous-hunk)))
