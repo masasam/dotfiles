@@ -50,20 +50,21 @@ If there are two or more windows, it will go to another window."
    ("o" other-window-or-split)
    ("<" beginning-of-buffer)
    (">" end-of-buffer)
-   ("SPC" set-mark-command)))
+   ("SPC" set-mark-command)
+   ("S" window-swap-states)
+   ("j" git-gutter:next-hunk)
+   ("k" git-gutter:previous-hunk)))
 
 
-(defhydra hydra-git-gutter (ctl-x-map "" :pre (widen))
+(defhydra hydra-window (ctl-x-map "" :pre (widen))
   "page"
   ("0" delete-window)
   ("x" delete-window)
   ("1" delete-other-windows)
   ("2" split-window-below)
   ("3" split-window-right)
-  ("o" other-window-or-split "other-or-split")
-  ("s" window-swap-states "swap-window")
-  ("n" git-gutter:next-hunk "next-hunk")
-  ("p" git-gutter:previous-hunk "prev-hunk"))
+  ("o" other-window-or-split)
+  ("S" window-swap-states))
 
 
 (defhydra hydra-zoom (global-map "<f2>")
