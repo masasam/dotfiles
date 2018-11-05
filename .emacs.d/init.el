@@ -81,6 +81,7 @@
 (package-install 'google-this)
 (package-install 'google-translate)
 (package-install 'goto-chg)
+(package-install 'hackernews)
 (package-install 'haml-mode)
 (package-install 'htmlize)
 (package-install 'hydra)
