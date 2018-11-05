@@ -11,7 +11,10 @@
 
 (setq org-capture-templates
       '(("e" "Experiment" entry (file+headline "~/Dropbox/emacs/org/experiment.org" "Experiment")
-	 "* %? %U %i\n")
+	 "* %? %U %i\n
+#+BEGIN_SRC elisp
+
+#+END_SRC")
 	("i" "Idea" entry (file+headline "~/Dropbox/emacs/org/idea.org" "Idea")
 	 "* %? %U %i")
 	("r" "Remember" entry (file+headline "~/Dropbox/emacs/org/remember.org" "Remember")
