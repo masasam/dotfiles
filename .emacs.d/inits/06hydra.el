@@ -1,4 +1,11 @@
+;;; 06hydra.el --- 06hydra.el
+;;; Commentary:
+;;; Code:
+;;(setq debug-on-error t)
+
 (defun other-window-or-split ()
+  "If there is one window, open another window.
+If there are two or more windows, it will go to another window."
   (interactive)
   (when (one-window-p)
     (split-window-vertically))
@@ -6,6 +13,8 @@
 
 
 (defun other-window-or-split-horizontally ()
+  "If there is one window, open another window.
+If there are two or more windows, it will go to another window."
   (interactive)
   (when (one-window-p)
     (split-window-horizontally))
@@ -61,3 +70,5 @@
   ("g" text-scale-increase "in")
   ("l" text-scale-decrease "out")
   ("r" (text-scale-set 0) "reset"))
+
+;;; 06hydra.el ends here

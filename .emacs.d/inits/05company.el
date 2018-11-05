@@ -1,3 +1,8 @@
+;;; 05company.el --- 05company.el
+;;; Commentary:
+;;; Code:
+;;(setq debug-on-error t)
+
 (require 'company)
 
 ;; general
@@ -14,3 +19,5 @@
 (bind-key "M-d" 'company-show-doc-buffer company-active-map)
 (add-hook 'after-init-hook 'global-company-mode)
 (add-hook 'after-init-hook 'company-statistics-mode)
+
+;;; 05company.el ends here
