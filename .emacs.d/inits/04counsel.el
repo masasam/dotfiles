@@ -1,3 +1,8 @@
+;;; 04counsel.el --- 04counsel.el
+;;; Commentary:
+;;; Code:
+;;(setq debug-on-error t)
+
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
 (setq ivy-use-selectable-prompt t)
@@ -70,3 +75,5 @@ If the region is inactive, swiper."
 
 (bind-key "C-x l" 'counsel-ghq)
 (bind-key "C-x C-l" 'counsel-projectile-switch-project)
+
+;;; 04counsel.el ends here

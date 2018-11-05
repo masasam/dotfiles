@@ -1,3 +1,8 @@
+;;; base.el --- base.el
+;;; Commentary:
+;;; Code:
+;;(setq debug-on-error t)
+
 ;; theme
 (load-theme 'material t)
 ;; Change part of theme to your liking.
@@ -206,3 +211,5 @@
   "Make trash empty."
   (interactive)
   (shell-command-to-string "trash-empty"))
+
+;;; 00base.el ends here

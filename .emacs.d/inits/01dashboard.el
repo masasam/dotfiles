@@ -1,3 +1,8 @@
+;;; 01dashboard.el --- 01dashboard.el
+;;; Commentary:
+;;; Code:
+;;(setq debug-on-error t)
+
 (when (window-system)
   ;; Hide splash at start
   (setq inhibit-startup-message t)
@@ -11,3 +16,5 @@
   (global-page-break-lines-mode)
   (setq dashboard-page-separator "\n\f\f\n")
   (setq dashboard-items '((recents . 14))))
+
+;;; 01dashboard.el ends here

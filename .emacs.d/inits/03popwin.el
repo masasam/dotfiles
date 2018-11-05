@@ -1,3 +1,8 @@
+;;; 03popwin.el --- 03popwin.el
+;;; Commentary:
+;;; Code:
+;;(setq debug-on-error t)
+
 ;; popwin
 (require 'popwin)
 (popwin-mode 1)
@@ -21,3 +26,5 @@
 ;; vc
 (push "*vc-diff*" popwin:special-display-config)
 (push "*vc-change-log*" popwin:special-display-config)
+
+;;; 03popwin.el ends here

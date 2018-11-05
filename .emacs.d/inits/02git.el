@@ -1,3 +1,8 @@
+;;; 02git.el --- 02git.el
+;;; Commentary:
+;;; Code:
+;;(setq debug-on-error t)
+
 ;; magit
 (autoload 'magit-status "magit" nil t)
 (bind-key "C-x g" 'magit-status)
@@ -13,3 +18,5 @@
 (bind-key "C-x v =" 'git-gutter:popup-hunk)
 (bind-key "C-x v s" 'git-gutter:stage-hunk)
 (bind-key "C-x v r" 'git-gutter:revert-hunk)
+
+;;; 02git.el ends here
