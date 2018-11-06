@@ -13,7 +13,7 @@ If there are two or more windows, it will go to another window."
 
 
 (defun other-window-or-split-horizontally ()
-  "If there is one window, open another window.
+  "If there is one window, open split window horizontally.
 If there are two or more windows, it will go to another window."
   (interactive)
   (when (one-window-p)
