@@ -132,7 +132,7 @@ python-utils==2.3.0
 pytz==2018.7
 PyYAML==3.13
 pyzmq==17.1.2
-qtconsole==4.4.2
+qtconsole==4.4.3
 queuelib==1.5.0
 requests==2.20.1
 rope==0.11.0
