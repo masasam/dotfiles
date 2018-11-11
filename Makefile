@@ -157,6 +157,7 @@ rustinstall: ## Install rust and rust packages
 	cargo install hyperfine
 	cargo install racer
 	cargo install ripgrep
+	cargo install tztail
 	cargo install xsv
 	rustup component add rust-src
 
