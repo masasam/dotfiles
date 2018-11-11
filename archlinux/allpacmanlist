@@ -66,6 +66,7 @@ colord
 colord-gtk
 compface
 compiler-rt
+containerd
 coreutils
 cpio
 cracklib
@@ -234,6 +235,7 @@ haskell-attoparsec
 haskell-base-compat
 haskell-base64-bytestring
 haskell-basement
+haskell-bitarray
 haskell-blaze-builder
 haskell-blaze-html
 haskell-blaze-markup
@@ -313,6 +315,7 @@ haskell-th-abstraction
 haskell-time-locale-compat
 haskell-tls
 haskell-transformers-compat
+haskell-unicode-transforms
 haskell-unliftio-core
 haskell-unordered-containers
 haskell-utf8-string
@@ -851,6 +854,7 @@ ruby
 ruby-rdoc
 rubygems
 run-parts
+runc
 rxvt-unicode
 rxvt-unicode-terminfo
 s-nail

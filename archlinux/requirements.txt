@@ -82,9 +82,9 @@ lit==0.7.0
 louis==3.7.0
 lxml==4.2.5
 MarkupSafe==1.1.0
-matplotlib==3.0.1
+matplotlib==3.0.2
 mccabe==0.6.1
-meson==0.48.1
+meson==0.48.2
 mistune==0.8.4
 msgpack==0.5.6
 mycli==1.18.2
@@ -110,7 +110,7 @@ ply==3.11
 progressbar2==3.38.0
 prometheus-client==0.4.2
 prompt-toolkit==2.0.7
-psycopg2==2.7.6
+psycopg2==2.7.6.1
 ptyprocess==0.6.0
 pyasn1==0.4.4
 pyasn1-modules==0.2.2
