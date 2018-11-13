@@ -6,7 +6,7 @@ asn1crypto==0.24.0
 astroid==2.0.4
 attrs==18.2.0
 Automat==0.7.0
-autopep8==1.4.2
+autopep8==1.4.3
 awscli==1.16.52
 backcall==0.1.0
 bcrypt==3.1.4
@@ -25,7 +25,7 @@ Click==7.0
 colorama==0.4.0
 configobj==5.0.6
 constantly==15.1.0
-cryptography==2.3.1
+cryptography==2.4.1
 cssselect==1.0.3
 cycler==0.10.0
 decorator==4.3.0
@@ -120,7 +120,7 @@ PyDispatcher==2.0.5
 pydoc-utils==1.0.1
 pyflakes==2.0.0
 Pygments==2.2.0
-PyGObject==3.30.1
+PyGObject==3.30.2
 PyHamcrest==1.9.0
 pylint==2.1.1
 PyMySQL==0.9.2
