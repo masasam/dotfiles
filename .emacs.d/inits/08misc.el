@@ -16,11 +16,6 @@
 (beginend-global-mode)
 
 
-;; goto-chg
-(global-set-key [(control ?.)] 'goto-last-change)
-(global-set-key [(control ?,)] 'goto-last-change-reverse)
-
-
 ;; editorconfig
 (editorconfig-mode 1)
 (setq editorconfig-get-properties-function
