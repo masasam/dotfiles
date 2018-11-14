@@ -116,7 +116,24 @@
 ;; Use the X11 clipboard
 (setq select-enable-clipboard  t)
 (bind-key "M-w" 'clipboard-kill-ring-save)
-(bind-key "C-w" 'clipboard-kill-region)
+(bind-key "C-w" 'my/clipboard-kill-region)
+(bind-key "C-x C-x" 'my/exchange-point-and-mark)
+
+
+(defun my/clipboard-kill-region ()
+  "If the region is active, `clipboard-kill-region'.
+If the region is inactive, `backward-kill-word'."
+  (interactive)
+  (if (region-active-p)
+      (clipboard-kill-region (region-beginning) (region-end))
+    (backward-kill-word 1)))
+
+
+(defun my/exchange-point-and-mark ()
+  "No mark active `exchange-point-and-mark'."
+  (interactive)
+  (exchange-point-and-mark)
+  (setq mark-active nil))
 
 
 ;; Brace the corresponding parentheses
@@ -145,23 +162,17 @@
 (require 'generic-x)
 
 
-(defun my/exchange-point-and-mark ()
-  "No mark active `exchange-point-and-mark`."
-  (interactive)
-  (exchange-point-and-mark)
-  (setq mark-active nil))
-(bind-key "C-x C-x" 'my/exchange-point-and-mark)
-
-
-;; mytimer
 (defun my/timer(n)
+  "Timer after N minites."
   (interactive "nMinute:")
   (run-at-time (* n 60) nil #'_mytimer))
 (defun _mytimer()
+  "Timer function."
   (shell-command-to-string "notify-send -u critical 'Emacs' 'It is time' -i utilities-terminal"))
 
 
 (defun my/copy-path ()
+  "Return the currently open file name or directory name."
   (interactive)
   (if buffer-file-name
       (progn
@@ -187,6 +198,7 @@
 ;; M-x info-emacs-manual(C-h r)
 (add-to-list 'Info-directory-list "~/.emacs.d/info/")
 (defun Info-find-node--info-ja (orig-fn filename &rest args)
+  "Info as ORIG-FN FILENAME ARGS."
   (apply orig-fn
          (pcase filename
            ("emacs" "emacs-ja")
@@ -199,11 +211,11 @@
 (setq auto-mode-alist (append '(("/tmp/mutt.*" . mail-mode)) auto-mode-alist))
 
 
-;; Color when emacs is not focused
 (defun my-out-focused-mode-line()
+  "Color when focus is out."
   (set-face-background 'mode-line "#2f4f4f"))
-;; Color when emacs is focused
 (defun my-in-focused-mode-line()
+  "Color when focus is in."
   (set-face-background 'mode-line "#1c1f26"))
 (add-hook 'focus-out-hook 'my-out-focused-mode-line)
 (add-hook 'focus-in-hook 'my-in-focused-mode-line)
