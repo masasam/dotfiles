@@ -117,3 +117,7 @@
 (setq fci-rule-column 80)
 (setq fci-rule-width 3)
 (setq fci-rule-color "sea green")
+
+
+;; alarm-clock
+(setq alarm-clock-sound-file "~/Dropbox/emacs/alarm.mp3")

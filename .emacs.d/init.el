@@ -30,6 +30,7 @@
 
 ;; package
 (package-install 'aggressive-indent)
+(package-install 'alarm-clock)
 (package-install 'auto-compile)
 (package-install 'avy)
 (package-install 'back-button)
