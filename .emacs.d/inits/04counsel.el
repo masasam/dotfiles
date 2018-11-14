@@ -55,6 +55,7 @@ If the region is inactive, swiper."
 
 
 (defun counsel-ghq--list-candidates ()
+  "Candidates list for counsel-ghq."
   (with-temp-buffer
     (unless (zerop (apply #'call-process
 			  "ghq" nil t nil
