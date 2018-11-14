@@ -100,9 +100,6 @@
 ;; Save history of minibuffer
 (savehist-mode 1)
 
-;; Make "yes or no" "y or n"
-(fset 'yes-or-no-p 'y-or-n-p)
-
 ;; Turn off warning sound screen flash
 (setq visible-bell nil)
 ;; All warning sounds and flash are invalid (note that the warning sound does not sound completely)
