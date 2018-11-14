@@ -70,6 +70,7 @@ If the region is inactive, swiper."
       (reverse paths))))
 
 (defun counsel-ghq ()
+  "Counsel interface for ghq."
   (interactive)
   (counsel-find-file (ivy-read "ghq list: " (counsel-ghq--list-candidates))))
 
