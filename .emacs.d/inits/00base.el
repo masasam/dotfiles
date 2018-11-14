@@ -145,6 +145,14 @@
 (require 'generic-x)
 
 
+(defun my/exchange-point-and-mark ()
+  "No mark active `exchange-point-and-mark`."
+  (interactive)
+  (exchange-point-and-mark)
+  (setq mark-active nil))
+(bind-key "C-x C-x" 'my/exchange-point-and-mark)
+
+
 ;; mytimer
 (defun my/timer(n)
   (interactive "nMinute:")
