@@ -22,7 +22,7 @@ If there are two or more windows, it will go to another window."
 
 
 ;; key-chord
-(setq key-chord-two-keys-delay 0.04)
+(setq key-chord-two-keys-delay 0.1)
 (key-chord-mode 1)
 (bind-key "C-'" 'hydra-move/body)
 
