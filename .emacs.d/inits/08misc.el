@@ -116,3 +116,4 @@
 
 ;; alarm-clock
 (setq alarm-clock-sound-file "~/Dropbox/emacs/alarm.mp3")
+(define-key alarm-clock-mode-map "d" 'alarm-clock-kill)
