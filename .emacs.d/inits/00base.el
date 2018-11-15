@@ -159,15 +159,6 @@ If the region is inactive, `backward-kill-word'."
 (require 'generic-x)
 
 
-(defun my/timer(n)
-  "Timer after N minites."
-  (interactive "nMinute:")
-  (run-at-time (* n 60) nil #'_mytimer))
-(defun _mytimer()
-  "Timer function."
-  (shell-command-to-string "notify-send -u critical 'Emacs' 'It is time' -i utilities-terminal"))
-
-
 (defun my/copy-path ()
   "Return the currently open file name or directory name."
   (interactive)
