@@ -76,6 +76,7 @@
 ;; (add-hook 'js2-mode-hook 'ggtag-setting)
 ;; (add-hook 'js2-jsx-mode-hook 'ggtag-setting)
 (defun ggtag-setting ()
+  "Setup ggtag."
   (ggtags-mode 1))
 
 

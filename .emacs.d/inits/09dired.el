@@ -9,7 +9,7 @@
   (bind-key "e" 'my-dired-ediff-files dired-mode-map))
 
 (defun my-dired-ediff-files ()
-  "Start ediff with a file marked with dired-mode."
+  "Start ediff with a file marked with `dired-mode'."
   (interactive)
   (let ((files (dired-get-marked-files))
         (wnd (current-window-configuration)))
@@ -31,6 +31,7 @@
 
 
 (defun kanban-rename ()
+  "Rotate kanban file."
   (interactive)
   (rename-file "~/Dropbox/kanban/kanban"
 	       (expand-file-name
