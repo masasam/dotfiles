@@ -1,3 +1,8 @@
+;;; 26javascript.el --- 26javascript.el
+;;; Commentary:
+;;; Code:
+;;(setq debug-on-error t)
+
 (autoload 'js2-mode "js2-mode" nil t)
 (add-to-list 'auto-mode-alist '("\.js$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\.jsx$" . js2-jsx-mode))
@@ -44,3 +49,5 @@
   '(progn
      (define-key coffee-mode-map [(meta r)] 'coffee-compile-buffer)
      (define-key coffee-mode-map (kbd "C-j") 'coffee-newline-and-indent)))
+
+;;; 26javascript.el ends here

@@ -1,3 +1,8 @@
+;;; 23go.el --- 23go.el
+;;; Commentary:
+;;; Code:
+;;(setq debug-on-error t)
+
 ;; go-mode
 (with-eval-after-load 'go-mode
   (require 'go-projectile)
@@ -12,3 +17,5 @@
 	       (setq indent-tabs-mode t)
 	       (local-set-key (kbd "M-.") 'godef-jump)
 	       (go-eldoc-setup))))
+
+;;; 23go.el ends here

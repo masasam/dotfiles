@@ -1,3 +1,8 @@
+;;; 24rust.el --- 24rust.el
+;;; Commentary:
+;;; Code:
+;;(setq debug-on-error t)
+
 (with-eval-after-load 'rust-mode
   (setq-default rust-format-on-save t))
 ;; Launch racer and flycheck when editing rust files
@@ -11,3 +16,5 @@
                              (company-mode-on)
                              (set (make-variable-buffer-local 'company-idle-delay) 0.1)
                              (set (make-variable-buffer-local 'company-minimum-prefix-length) 1)))
+
+;;; 24rust.el ends here

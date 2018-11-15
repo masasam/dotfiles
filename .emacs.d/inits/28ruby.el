@@ -1,3 +1,8 @@
+;;; 28ruby.el --- 28ruby.el
+;;; Commentary:
+;;; Code:
+;;(setq debug-on-error t)
+
 (require 'rbenv)
 (setq rbenv-installation-dir "/home/masa/.rbenv")
 (global-rbenv-mode)
@@ -22,3 +27,5 @@
 
 ;; projectile rails
 (projectile-rails-global-mode)
+
+;;; 28ruby.el ends here
