@@ -183,7 +183,7 @@ If the region is inactive, `backward-kill-word'."
     (message "Active modes are %s" active-modes)))
 
 
-;; M-x info-emacs-manual(C-h r)
+;; M-x info-emacs-manual
 (add-to-list 'Info-directory-list "~/.emacs.d/info/")
 (defun Info-find-node--info-ja (orig-fn filename &rest args)
   "Info as ORIG-FN FILENAME ARGS."
