@@ -1,3 +1,8 @@
+;;; 17whitespace.el --- 17whitespace.el
+;;; Commentary:
+;;; Code:
+;;(setq debug-on-error t)
+
 ;; Highlight the space at the end of the line
 (setq-default show-trailing-whitespace nil)
 
@@ -12,8 +17,8 @@
 (add-hook 'shell-mode-hook 'my/enable-trailing-mode)
 
 
-;; Remove contiguous line breaks at end of line + end of file
 (defun my/cleanup-for-spaces ()
+  "Remove contiguous line breaks at end of line + end of file."
   (interactive)
   (delete-trailing-whitespace)
   (save-excursion
@@ -21,3 +26,5 @@
       (widen)
       (goto-char (point-max))
       (delete-blank-lines))))
+
+;;; 17whitespace.el ends here

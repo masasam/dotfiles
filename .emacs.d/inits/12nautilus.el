@@ -1,3 +1,8 @@
+;;; 12nautilus.el --- 12nautilus.el
+;;; Commentary:
+;;; Code:
+;;(setq debug-on-error t)
+
 (defun nautilus-dropbox ()
   "Open dropbox directry with nautilus."
   (interactive)
@@ -32,3 +37,5 @@
   "Open pictures directry with nautilus."
   (interactive)
   (shell-command "xdg-open ~/Pictures"))
+
+;;; 12nautilus.el ends here

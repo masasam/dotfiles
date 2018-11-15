@@ -1,3 +1,8 @@
+;;; 08misc.el --- 08misc.el
+;;; Commentary:
+;;; Code:
+;;(setq debug-on-error t)
+
 ;; expand-region
 (require 'expand-region)
 (push 'er/mark-outside-pairs er/try-expand-list)
@@ -123,3 +128,5 @@
 (which-key-mode 1)
 ;; C-x c-h and erase it (call with '?')
 (setq which-key-use-C-h-commands nil)
+
+;;; 08misc.el ends here

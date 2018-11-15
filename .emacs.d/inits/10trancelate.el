@@ -1,3 +1,8 @@
+;;; 10trancelate.el --- 10trancelate.el
+;;; Commentary:
+;;; Code:
+;;(setq debug-on-error t)
+
 (require 'google-translate)
 (require 'google-translate-default-ui)
 
@@ -46,3 +51,5 @@
 
 
 (push "*Google Translate*" popwin:special-display-config)
+
+;;; 10trancelate.el ends here

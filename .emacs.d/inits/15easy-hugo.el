@@ -1,3 +1,8 @@
+;;; 15easy-hugo.el --- 15easy-hugo.el
+;;; Commentary:
+;;; Code:
+;;(setq debug-on-error t)
+
 (setq easy-hugo-url "https://solist.work/blog")
 (setq easy-hugo-basedir "~/src/github.com/masasam/solistblog/")
 (setq easy-hugo-postdir "content/posts")
@@ -18,3 +23,5 @@
 			    (easy-hugo-postdir . "content/post")
 			    (easy-hugo-sshdomain . "blogdomain")
 			    (easy-hugo-root . "/home/ppap/"))))
+
+;;; 15easy-hugo.el ends here

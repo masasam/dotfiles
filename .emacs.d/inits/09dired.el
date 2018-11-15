@@ -1,3 +1,8 @@
+;;; 09dired.el --- 09dired.el
+;;; Commentary:
+;;; Code:
+;;(setq debug-on-error t)
+
 ;; dired
 (with-eval-after-load 'dired
   (bind-key "E" 'wdired-change-to-wdired-mode dired-mode-map)
@@ -32,3 +37,5 @@
 		(read-from-minibuffer "Rename: " `(".txt" . 1) nil nil nil)
 		"~/Dropbox/kanban")
 	       1))
+
+;;; 09dired.el ends here

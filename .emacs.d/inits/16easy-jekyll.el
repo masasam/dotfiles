@@ -1,3 +1,8 @@
+;;; 16easy-jekyll.el --- 16easy-jekyll.el
+;;; Commentary:
+;;; Code:
+;;(setq debug-on-error t)
+
 (setq easy-jekyll-basedir "~/src/github.com/masasam/PPAP2/")
 (setq easy-jekyll-url "http://example.org")
 (setq easy-jekyll-sshdomain "blogdomain")
@@ -12,3 +17,5 @@
 			      (easy-jekyll-google-cloud-storage-bucket-name . "masa-storage"))
 			     ((easy-jekyll-basedir . "~/src/github.com/masasam/jekyll2/")
 			      (easy-jekyll-url . "http://example2.net"))))
+
+;;; 16easy-jekyll.el ends here

@@ -1,3 +1,8 @@
+;;; 13chromium.el --- 13chromium.el
+;;; Commentary:
+;;; Code:
+;;(setq debug-on-error t)
+
 (defun chromium-translate ()
   "Open google translate with chromium."
   (interactive)
@@ -73,3 +78,5 @@
   "Open twitter with chromium."
   (interactive)
   (browse-url "https://twitter.com"))
+
+;;; 13chromium.el ends here

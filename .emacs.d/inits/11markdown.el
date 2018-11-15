@@ -1,3 +1,8 @@
+;;; 11markdown.el --- 11markdown.el
+;;; Commentary:
+;;; Code:
+;;(setq debug-on-error t)
+
 (add-hook 'markdown-mode-hook
           '(lambda () (outline-minor-mode t)))
 
@@ -62,3 +67,5 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 ")
+
+;;; 11markdown.el ends here
