@@ -27,4 +27,7 @@
 (push "*vc-diff*" popwin:special-display-config)
 (push "*vc-change-log*" popwin:special-display-config)
 
+;; google-translate
+(push "*Google Translate*" popwin:special-display-config)
+
 ;;; 03popwin.el ends here

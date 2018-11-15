@@ -27,7 +27,7 @@
                     (lambda ()
 		      (setq ediff-after-quit-hook-internal nil)
 		      (set-window-configuration wnd))))
-      (error "no more than 2 files should be marked"))))
+      (error "No more than 2 files should be marked"))))
 
 
 (defun kanban-rename ()

@@ -49,7 +49,4 @@
 	 "ja" "en"
 	 string)))))
 
-
-(push "*Google Translate*" popwin:special-display-config)
-
 ;;; 10trancelate.el ends here
