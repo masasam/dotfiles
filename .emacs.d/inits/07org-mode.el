@@ -1,3 +1,8 @@
+;;; 07org-mode.el --- 07org-mode.el
+;;; Commentary:
+;;; Code:
+;;(setq debug-on-error t)
+
 (require 'org)
 
 (setq org-log-done 'time)
@@ -35,3 +40,5 @@
 	      ("~/Dropbox/emacs/org/remember.org" :level . 1)
 	      ("~/Dropbox/emacs/org/memo.org" :level . 1)
 	      ("~/Dropbox/emacs/org/task.org" :level . 1))))
+
+;;; 07org-mode.el ends here
