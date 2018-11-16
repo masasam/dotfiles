@@ -40,7 +40,6 @@ zshaddhistory() {
        && ${cmd} != uname
        && ${cmd} != md5sum
        && ${cmd} != pacman
-       && ${cmd} != mytimer
        && ${cmd} != traceroute
        && ${cmd} != speedtest-cli
     ]]
@@ -531,20 +530,6 @@ function remove-exif() {
     else
 	echo 'usage: remove-exif file.jpg'
     fi
-}
-
-
-function mytimer() {
-    if [ $# = 1 ]; then
-	_mytimer $1 &
-    else
-	echo 'usage: mytimer minute'
-    fi
-}
-function _mytimer() {
-    NUM=`expr 60 \* $1`
-    sleep $NUM
-    notify-send -u critical 'Terminal' 'It is time' -i utilities-terminal
 }
 
 
