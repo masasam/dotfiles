@@ -305,6 +305,13 @@ zle -N select-history
 bindkey '^r' select-history
 
 
+function select-history-skim() {
+  BUFFER=$(history -n -r 1 | sk-tmux -d --reverse --no-sort +m --query "$LBUFFER" --prompt="History > ")
+  CURSOR=$#BUFFER
+}
+zle -N select-history-skim
+
+
 function rails-routes() {
   BUFFER=$(bin/rails routes | fzf-tmux -d --reverse --no-sort +m --query "$LBUFFER" --prompt="rails routes > ")
   CURSOR=$#BUFFER
@@ -335,6 +342,17 @@ function ghq-fzf() {
 zle -N ghq-fzf
 bindkey '^x^l' ghq-fzf
 bindkey '^xl' ghq-fzf
+
+
+function ghq-skim() {
+  local selected_dir=$(ghq list | sk-tmux -d --reverse --query="$LBUFFER" --prompt="ghq list > ")
+  if [ -n "$selected_dir" ]; then
+    BUFFER="cd $(ghq root)/${selected_dir}"
+    zle accept-line
+  fi
+  zle reset-prompt
+}
+zle -N ghq-skim
 
 
 function ghq-delete () {
