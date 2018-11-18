@@ -37,8 +37,6 @@
 
 
 ;; espy
-(defalias 'my/get-user 'espy-get-user)
-(defalias 'my/get-pass 'espy-get-pass)
 (setq espy-password-file "~/Dropbox/passwd/password.org.gpg")
 
 
@@ -115,6 +113,9 @@
 (bind-key "M-w" 'clipboard-kill-ring-save)
 (bind-key "C-w" 'my/clipboard-kill-region)
 (bind-key "C-x C-x" 'my/exchange-point-and-mark)
+(bind-key "M-c" 'my/capitalize-word)
+(bind-key "M-l" 'my/downcase-word)
+(bind-key "M-u" 'my/upcase-word)
 
 
 (defun my/clipboard-kill-region ()
@@ -131,6 +132,24 @@ If the region is inactive, `backward-kill-word'."
   (interactive)
   (exchange-point-and-mark)
   (setq mark-active nil))
+
+
+(defun my/upcase-word (arg)
+  "Convert previous word (or ARG words) to upper case."
+  (interactive "p")
+  (upcase-word (- arg)))
+
+
+(defun my/downcase-word (arg)
+  "Convert previous word (or ARG words) to down case."
+  (interactive "p")
+  (downcase-word (- arg)))
+
+
+(defun my/capitalize-word (arg)
+  "Convert previous word (or ARG words) to capitalize."
+  (interactive "p")
+  (capitalize-word (- arg)))
 
 
 ;; Brace the corresponding parentheses
