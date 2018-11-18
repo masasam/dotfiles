@@ -342,6 +342,10 @@ aws: ## Init aws cli
 	test -L ${HOME}/.aws || rm -rf ${HOME}/.aws
 	ln -vsfn ${HOME}/Dropbox/zsh/.aws   ${HOME}/.aws
 
+sk-tmux: ## Init sk-tmux
+	chmod a+x /home/masa/Dropbox/zsh/sk-tmux
+	sudo ln -vsf ${HOME}/Dropbox/zsh/sk-tmux   /usr/local/bin/sk-tmux
+
 roswell: ## Install ros and lem
 	yay -S roswell
 	ros install cxxxr/lem
