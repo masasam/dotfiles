@@ -485,15 +485,17 @@ If you make a mistake on the keyboard, erase all with Ctrl-u
 	sudo pacman -S cmake
 	mkdir -p ${HOME}/.cargo
 	curl -sSf https://sh.rustup.rs | sh
-	cargo install racer
-	cargo install cargo-update
-	cargo install cargo-script
 	cargo install cargo-edit
-	cargo install ripgrep
+	cargo install cargo-script
+	cargo install cargo-update
 	cargo install exa
 	cargo install fd-find
-	cargo install xsv
 	cargo install hyperfine
+	cargo install racer
+	cargo install ripgrep
+	cargo install skim
+	cargo install tztail
+	cargo install xsv
 	rustup component add rust-src
 
 # Terminal
