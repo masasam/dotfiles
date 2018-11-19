@@ -15,6 +15,7 @@
 (bind-key "C-n" 'company-select-next company-search-map)
 (bind-key "C-p" 'company-select-previous company-search-map)
 (bind-key "<tab>" 'company-complete-common-or-cycle company-active-map)
+(bind-key "<backtab>" 'company-select-previous company-active-map)
 (bind-key "C-i" 'company-complete-selection company-active-map)
 (bind-key "M-d" 'company-show-doc-buffer company-active-map)
 (add-hook 'after-init-hook 'global-company-mode)
