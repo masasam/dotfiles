@@ -25,7 +25,7 @@
 (bind-key "C-c C-f" 'counsel-git)
 (bind-key "C-c C-y" 'ivy-yasnippet)
 (bind-key "C-c k" 'counsel-ag)
-(bind-key "C-c K" 'counsel-rg)
+(bind-key "C-c C-k" 'counsel-rg)
 (bind-key "C-c l" 'counsel-locate)
 (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
 (setq xref-show-xrefs-function #'ivy-xref-show-xrefs)
