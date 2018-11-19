@@ -50,6 +50,7 @@
 (package-install 'csv-mode)
 (package-install 'dash)
 (package-install 'dashboard)
+(package-install 'diminish)
 (package-install 'docker)
 (package-install 'docker-tramp)
 (package-install 'dockerfile-mode)
