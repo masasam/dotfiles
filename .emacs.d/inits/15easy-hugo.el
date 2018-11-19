@@ -24,4 +24,7 @@
 			    (easy-hugo-sshdomain . "blogdomain")
 			    (easy-hugo-root . "/home/ppap/"))))
 
+;; Local Variables:
+;; byte-compile-warnings: (not free-vars)
+;; End:
 ;;; 15easy-hugo.el ends here

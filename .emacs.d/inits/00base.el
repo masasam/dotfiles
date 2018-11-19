@@ -239,4 +239,7 @@ If the region is inactive, `backward-kill-word'."
   (interactive)
   (shell-command-to-string "trash-empty"))
 
+;; Local Variables:
+;; byte-compile-warnings: (not free-vars)
+;; End:
 ;;; 00base.el ends here

@@ -18,4 +18,7 @@
 			     ((easy-jekyll-basedir . "~/src/github.com/masasam/jekyll2/")
 			      (easy-jekyll-url . "http://example2.net"))))
 
+;; Local Variables:
+;; byte-compile-warnings: (not free-vars)
+;; End:
 ;;; 16easy-jekyll.el ends here

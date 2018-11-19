@@ -68,4 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 ")
 
+;; Local Variables:
+;; byte-compile-warnings: (not free-vars)
+;; End:
 ;;; 11markdown.el ends here

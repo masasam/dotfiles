@@ -17,4 +17,7 @@
   (setq dashboard-page-separator "\n\f\f\n")
   (setq dashboard-items '((recents . 14))))
 
+;; Local Variables:
+;; byte-compile-warnings: (not free-vars)
+;; End:
 ;;; 01dashboard.el ends here

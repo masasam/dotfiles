@@ -77,4 +77,7 @@ If the region is inactive, swiper."
 (bind-key "C-x l" 'counsel-ghq)
 (bind-key "C-x C-l" 'counsel-projectile-switch-project)
 
+;; Local Variables:
+;; byte-compile-warnings: (not free-vars)
+;; End:
 ;;; 04counsel.el ends here

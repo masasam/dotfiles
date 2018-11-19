@@ -74,4 +74,7 @@ If there are two or more windows, it will go to another window."
   ("l" text-scale-decrease "out")
   ("r" (text-scale-set 0) "reset"))
 
+;; Local Variables:
+;; byte-compile-warnings: (not free-vars)
+;; End:
 ;;; 06hydra.el ends here

@@ -130,4 +130,7 @@
 ;; C-x c-h and erase it (call with '?')
 (setq which-key-use-C-h-commands nil)
 
+;; Local Variables:
+;; byte-compile-warnings: (not free-vars)
+;; End:
 ;;; 08misc.el ends here

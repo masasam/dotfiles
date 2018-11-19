@@ -28,4 +28,7 @@
 ;; projectile rails
 (projectile-rails-global-mode)
 
+;; Local Variables:
+;; byte-compile-warnings: (not free-vars)
+;; End:
 ;;; 28ruby.el ends here

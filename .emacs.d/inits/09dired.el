@@ -39,4 +39,7 @@
 		"~/Dropbox/kanban")
 	       1))
 
+;; Local Variables:
+;; byte-compile-warnings: (not free-vars)
+;; End:
 ;;; 09dired.el ends here

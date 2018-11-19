@@ -10,4 +10,7 @@
 ;; slime-company
 (slime-setup '(slime-fancy slime-company))
 
+;; Local Variables:
+;; byte-compile-warnings: (not free-vars)
+;; End:
 ;;; 25lisp.el ends here

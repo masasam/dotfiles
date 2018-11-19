@@ -26,4 +26,7 @@
                 (local-set-key (kbd "M-@") 'rtags-find-references)
                 (local-set-key (kbd "M-,") 'rtags-location-stack-back)))))
 
+;; Local Variables:
+;; byte-compile-warnings: (not free-vars)
+;; End:
 ;;; 22irony.el ends here

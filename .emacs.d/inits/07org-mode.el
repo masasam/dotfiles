@@ -41,4 +41,7 @@
 	      ("~/Dropbox/emacs/org/memo.org" :level . 1)
 	      ("~/Dropbox/emacs/org/task.org" :level . 1))))
 
+;; Local Variables:
+;; byte-compile-warnings: (not free-vars)
+;; End:
 ;;; 07org-mode.el ends here

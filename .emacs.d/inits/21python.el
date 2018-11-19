@@ -6,4 +6,7 @@
 (elpy-enable)
 (setq elpy-rpc-backend "jedi")
 
+;; Local Variables:
+;; byte-compile-warnings: (not free-vars)
+;; End:
 ;;; 21python.el ends here
