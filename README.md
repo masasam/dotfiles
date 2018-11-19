@@ -445,6 +445,7 @@ If you make a mistake on the keyboard, erase all with Ctrl-u
 	yarn global add create-nuxt-app
 	yarn global add create-react-app
 	yarn global add eslint
+	yarn global add eslint-cli
 	yarn global add eslint-plugin-react
 	yarn global add firebase-tools
 	yarn global add fx
