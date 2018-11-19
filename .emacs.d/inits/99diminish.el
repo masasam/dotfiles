@@ -15,6 +15,7 @@
 (diminish 'flycheck-mode)
 (diminish 'git-gutter-mode)
 (diminish 'ivy-mode)
+(diminish 'outline-minor-mode)
 (diminish 'page-break-lines-mode)
 (diminish 'projectile-mode)
 (diminish 'projectile-rails-mode)
