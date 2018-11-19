@@ -45,6 +45,7 @@
 (package-install 'company-statistics)
 (package-install 'company-tern)
 (package-install 'counsel)
+(package-install 'counsel-css)
 (package-install 'counsel-projectile)
 (package-install 'counsel-tramp)
 (package-install 'csv-mode)
