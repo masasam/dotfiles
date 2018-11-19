@@ -1,10 +1,9 @@
-;;; 14diminish.el --- 14diminish.el
+;;; 99diminish.el --- 99diminish.el
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)
 
 (diminish 'abbrev-mode)
-(diminish 'aggressive-indent-mode)
 (diminish 'auto-revert-mode)
 (diminish 'back-button-mode)
 (diminish 'beginend-global-mode)
@@ -16,11 +15,10 @@
 (diminish 'flycheck-mode)
 (diminish 'git-gutter-mode)
 (diminish 'ivy-mode)
-(diminish 'lispy-mode)
 (diminish 'page-break-lines-mode)
 (diminish 'projectile-mode)
 (diminish 'projectile-rails-mode)
 (diminish 'smartparens-mode)
 (diminish 'volatile-highlights-mode)
 
-;;; 14diminish.el ends here
+;;; 99diminish.el ends here
