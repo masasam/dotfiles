@@ -4,6 +4,8 @@
 ;;(setq debug-on-error t)
 
 (diminish 'abbrev-mode)
+(diminish 'aggressive-indent-mode)
+(diminish 'auto-revert-mode)
 (diminish 'back-button-mode)
 (diminish 'beginend-global-mode)
 (diminish 'beginend-magit-status-mode)
