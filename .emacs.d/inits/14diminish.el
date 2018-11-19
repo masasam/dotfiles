@@ -6,6 +6,8 @@
 (diminish 'abbrev-mode)
 (diminish 'back-button-mode)
 (diminish 'beginend-global-mode)
+(diminish 'beginend-magit-status-mode)
+(diminish 'beginend-prodigy-mode)
 (diminish 'beginend-prog-mode)
 (diminish 'editorconfig-mode)
 (diminish 'elisp-slime-nav-mode)
