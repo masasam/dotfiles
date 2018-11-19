@@ -123,6 +123,7 @@
 (package-install 'rspec-mode)
 (package-install 'rust-mode)
 (package-install 's)
+(package-install 'scss-mode)
 (package-install 'slime)
 (package-install 'slime-company)
 (package-install 'slim-mode)

@@ -264,8 +264,8 @@ rbenv: ## Install rvenv ruby-build
 	rbenv install 2.5.1
 	gem install bundle
 
-jekyll: ## Install jekyll
-	gem install bundler jekyll
+rubygem: ## Install rubygem package
+	gem install bundler jekyll sass
 
 rails: ## Create rails app
 	export RBENV_ROOT="${HOME}/.rbenv";\
@@ -576,7 +576,7 @@ testpath: # Echo PATH
 
 allinit: init initdropbox
 
-allinstall: ttf-cica install init initdropbox pipinstall goinstall aur mozc neomutt docker mariadb redis rbenv rustinstall nodeinstall screenkey dnsmasq desktop chromium jekyll sxiv zeal zoom toggle sylpheed
+allinstall: ttf-cica install init initdropbox pipinstall goinstall aur mozc neomutt docker mariadb redis rbenv rustinstall nodeinstall screenkey dnsmasq desktop chromium sxiv zeal zoom toggle sylpheed rubygem
 
 allupdate: update pipupdate rustupdate goinstall yarnupdate
 
