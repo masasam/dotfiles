@@ -158,10 +158,6 @@ If the region is inactive, `backward-kill-word'."
 (setq show-paren-style 'parenthesis)
 
 
-;; Dired files deleted by trash
-(setq delete-by-moving-to-trash t)
-
-
 ;; Continue hitting C-SPC and go back to past marks ...C-u C-SPC C-SPC
 (setq set-mark-command-repeat-pop t)
 

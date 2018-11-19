@@ -3,6 +3,11 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
+;; Dired files deleted by trash and no ask recursive
+(setq delete-by-moving-to-trash t
+      dired-recursive-copies 'always
+      dired-recursive-deletes 'always)
+
 ;; dired
 (with-eval-after-load 'dired
   (bind-key "E" 'wdired-change-to-wdired-mode dired-mode-map)
