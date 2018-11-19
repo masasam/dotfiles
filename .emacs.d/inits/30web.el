@@ -24,8 +24,7 @@
   (setq web-mode-enable-auto-pairing t)
   (setq web-mode-enable-css-colorization t)
   (setq web-mode-enable-heredoc-fontification t)
-  (setq web-mode-enable-current-column-highlight t)
-  (setq web-mode-tag-auto-close-style 2))
+  (setq web-mode-enable-current-column-highlight t))
 (add-hook 'web-mode-hook  'my-web-mode-hook)
 
 ;; Local Variables:
