@@ -97,6 +97,7 @@
 
 ;; Save history of minibuffer
 (savehist-mode 1)
+(setq recentf-auto-cleanup 'never)
 
 ;; Turn off warning sound screen flash
 (setq visible-bell nil)
