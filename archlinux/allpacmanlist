@@ -163,6 +163,7 @@ glib2
 glib2-docs
 glibc
 glibmm
+glslang
 glu
 gmime
 gmime3
@@ -866,6 +867,7 @@ sdl2
 seahorse
 sed
 semver
+shaderc
 shadow
 shared-color-targets
 shared-mime-info
@@ -880,6 +882,7 @@ source-highlight
 spandsp
 speex
 speexdsp
+spirv-tools
 sqlite
 srt
 sshfs
