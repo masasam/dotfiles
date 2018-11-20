@@ -78,6 +78,24 @@ If the region is inactive, swiper."
 (bind-key "C-x l" 'counsel-ghq)
 (bind-key "C-x C-l" 'counsel-projectile-switch-project)
 
+
+(defun my/ivy-dired-recent-dirs ()
+  "Present a list of recently used directories and open the selected one in dired."
+  (interactive)
+  (let ((recent-dirs
+         (delete-dups
+          (mapcar (lambda (file)
+                    (if (file-directory-p file) file (file-name-directory file)))
+                  recentf-list))))
+    (let ((dir (ivy-read "Directory: "
+                         recent-dirs
+                         :re-builder #'ivy--regex
+                         :sort nil
+                         :initial-input nil)))
+      (dired dir))))
+
+(bind-key "C-x C-d" 'my/ivy-dired-recent-dirs)
+
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:
