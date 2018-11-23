@@ -905,6 +905,8 @@ tcl
 tcpdump
 tdb
 telepathy-glib
+termite
+termite-terminfo
 tevent
 texinfo
 texlive-bin
