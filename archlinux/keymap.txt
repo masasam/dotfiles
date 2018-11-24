@@ -12,7 +12,7 @@ Composition	Ctrl g	Cancel
 Composition	Ctrl h	Backspace
 Composition	Ctrl j	DisplayAsHiragana
 Composition	Ctrl k	DisplayAsFullKatakana
-Composition	Ctrl l	DisplayAsFullAlphanumeric
+Composition	Ctrl l	ConvertToHalfAlphanumeric
 Composition	Ctrl Left	MoveCursorToBeginning
 Composition	Ctrl m	Commit
 Composition	Ctrl m	Commit
@@ -60,7 +60,7 @@ Conversion	Ctrl h	Cancel
 Conversion	Ctrl i	SegmentWidthShrink
 Conversion	Ctrl j	DisplayAsHiragana
 Conversion	Ctrl k	DisplayAsFullKatakana
-Conversion	Ctrl l	DisplayAsFullAlphanumeric
+Conversion	Ctrl l	DisplayAsHalfAlphanumeric
 Conversion	Ctrl Left	SegmentFocusFirst
 Conversion	Ctrl m	Commit
 Conversion	Ctrl n	ConvertNext
@@ -74,7 +74,7 @@ Conversion	Ctrl x	ConvertNext
 Conversion	Down	ConvertNext
 Conversion	End	SegmentFocusLast
 Conversion	Enter	Commit
-Conversion	ESC	Cancel
+Conversion	Ctrl g	Cancel
 Conversion	F10	DisplayAsHalfAlphanumeric
 Conversion	F6	DisplayAsHiragana
 Conversion	F7	DisplayAsFullKatakana
@@ -101,6 +101,7 @@ Conversion	Right	SegmentFocusRight
 Conversion	Shift Down	ConvertNextPage
 Conversion	Shift Left	SegmentWidthShrink
 Conversion	Shift Right	SegmentWidthExpand
+Conversion	Shift Space	ConvertPrev
 Conversion	Shift Tab	ConvertPrev
 Conversion	Shift Up	ConvertPrevPage
 Conversion	Space	ConvertNext
