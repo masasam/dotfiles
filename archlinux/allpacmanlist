@@ -805,6 +805,7 @@ python2-cairo
 python2-cffi
 python2-cryptography
 python2-dbus
+python2-docutils
 python2-enum34
 python2-gdata
 python2-gobject
