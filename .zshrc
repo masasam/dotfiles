@@ -603,6 +603,17 @@ function optimize-jpg() {
 }
 
 
+function blog-jpg() {
+    if [ $# = 1 ]; then
+	fname_ext=$1
+	fname="${fname_ext%.*}"
+	convert $1 -resize 600x zzz_${fname}.jpg
+    else
+	echo 'usage: blog-jpg sample.jpg'
+    fi
+}
+
+
 function optimize-png() {
     if [ $# = 1 ]; then
 	fname_ext=$1
