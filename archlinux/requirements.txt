@@ -1,4 +1,4 @@
-ansible==2.7.2
+ansible==2.7.3
 ansible-lint==3.5.1
 anytree==2.4.3
 appdirs==1.4.3
@@ -7,16 +7,16 @@ astroid==2.1.0
 attrs==18.2.0
 Automat==0.7.0
 autopep8==1.4.3
-awscli==1.16.64
+awscli==1.16.66
 backcall==0.1.0
 bcrypt==3.1.4
 beautifulsoup4==4.6.3
 bleach==3.0.2
-botocore==1.12.54
+botocore==1.12.56
 btrfsutil==1.0.0
 cached-property==1.5.1
 cachetools==3.0.0
-certifi==2018.10.15
+certifi==2018.11.29
 cffi==1.11.5
 chardet==3.0.4
 cheat==2.3.1
@@ -31,8 +31,8 @@ cycler==0.10.0
 decorator==4.3.0
 defusedxml==0.5.0
 docker==3.6.0
-docker-compose==1.23.1
-docker-pycreds==0.3.0
+docker-compose==1.23.2
+docker-pycreds==0.4.0
 dockerpty==0.4.1
 docopt==0.6.2
 docutils==0.14
