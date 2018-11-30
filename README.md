@@ -333,7 +333,7 @@ You can make install from here
 	sudo pacman -S highlight lynx elinks mediainfo cpio flameshot
 	sudo pacman -S oath-toolkit imagemagick peek sshuttle
 	sudo pacman -S bookworm ruby ruby-rdoc pacman-contrib ncdu
-	sudo pacman -S sxiv nnn
+	sudo pacman -S sxiv nnn php-fpm nginx
 
 ## Activity
 
