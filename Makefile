@@ -413,6 +413,7 @@ wordpress: ## Deploy wordpress
 	sudo pacman -S nginx php-fpm php-gd
 	mkdir -p ${HOME}/src/github.com/masasam
 	sudo ln -vsf ${PWD}/etc/nginx/nginx.conf   /etc/nginx/nginx.conf
+	sudo ln -vsfn /var/www    ${HOME}/src/github.com/masasam/wordpress
 	wget https://ja.wordpress.org/wordpress-latest-ja.tar.gz
 	tar zxvf wordpress-latest-ja.tar.gz
 	test -f	wordpress-latest-ja.tar.gz && rm -fr wordpress-latest-ja.tar.gz
