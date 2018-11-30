@@ -410,14 +410,13 @@ nodenv: ## Install nodenv node-build
 	git clone https://github.com/nodenv/node-build.git ${HOME}/.nodenv/plugins/node-build
 
 wordpress: ## Deploy wordpress
-	mkdir -p ${HOME}/src/github.com/masasam
 	sudo pacman -S nginx php-fpm php-gd
-	sudo ln -vsf ${PWD}/etc/php/php-fpm.d/www.conf   /etc/php/php-fpm.d/www.conf
+	mkdir -p ${HOME}/src/github.com/masasam
 	sudo ln -vsf ${PWD}/etc/nginx/nginx.conf   /etc/nginx/nginx.conf
 	wget https://ja.wordpress.org/wordpress-latest-ja.tar.gz
 	tar zxvf wordpress-latest-ja.tar.gz
-	test -f	wordpress-latest-ja.tar.gz && rm wordpress-latest-ja.tar.gz
-	test -d ${HOME}/src/github.com/masasam/wordpress/wp-admin || mv wordpress ${HOME}/src/github.com/masasam/
+	test -f	wordpress-latest-ja.tar.gz && rm -fr wordpress-latest-ja.tar.gz
+	test -d /var/www/wp-admin || sudo mv wordpress /var/www
 	echo 'create database wp' | mysql -u root
 	echo "grant all privileges on wp.* to wp@localhost identified by 'password';FLUSH PRIVILEGES;" | mysql -u root
 
