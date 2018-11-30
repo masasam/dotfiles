@@ -410,9 +410,10 @@ nodenv: ## Install nodenv node-build
 	git clone https://github.com/nodenv/node-build.git ${HOME}/.nodenv/plugins/node-build
 
 wordpress: ## Deploy wordpress
-	sudo pacman -S nginx php-fpm php-gd
+	sudo pacman -S nginx php-fpm
 	mkdir -p ${HOME}/src/github.com/masasam
 	sudo ln -vsf ${PWD}/etc/nginx/nginx.conf   /etc/nginx/nginx.conf
+	sudo ln -vsf ${PWD}/etc/php/php.ini   /etc/php/php.ini
 	wget https://ja.wordpress.org/wordpress-latest-ja.tar.gz
 	tar zxvf wordpress-latest-ja.tar.gz
 	test -f	wordpress-latest-ja.tar.gz && rm -fr wordpress-latest-ja.tar.gz
