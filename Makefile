@@ -57,7 +57,7 @@ install: ## Install arch linux packages using pacman
 	cscope postgresql-libs pdfgrep gnu-netcat cmatrix jpegoptim nethogs mlocate \
 	pacman-contrib x11-ssh-askpass libreoffice-fresh-ja python-prompt_toolkit \
 	jhead peek ncdu sxiv gnome-screenshot sshfs fping syncthing sshuttle gnupg \
-	xdotool nnn php-fpm nginx
+	xdotool nnn
 	sudo pkgfile --update
 
 pipinstall: ## Install python packages
@@ -408,6 +408,17 @@ gnuglobal: ## Install gnu global
 nodenv: ## Install nodenv node-build
 	yay -S nodenv
 	git clone https://github.com/nodenv/node-build.git ${HOME}/.nodenv/plugins/node-build
+
+wordpress: ## Deploy wordpress
+	mkdir -p ${HOME}/src/github.com/masasam
+	sudo pacman -S nginx php-fpm php-gd
+	wget https://ja.wordpress.org/wordpress-latest-ja.tar.gz
+	tar zxvf wordpress-latest-ja.tar.gz
+	rm wordpress-latest-ja.tar.gz
+	mv wordpress ${HOME}/src/github.com/masasam/
+	echo 'create database wp' | mysql -u root
+	echo "grant all privileges on wp.* to wp@localhost identified by 'password';FLUSH PRIVILEGES;" | mysql -u root
+	sudo ln -vsf ${PWD}/etc/php/php-fpm.d/www.conf   /etc/php/php-fpm.d/www.conf
 
 emacs-devel: # Install development version of emacs
 	cd ${HOME}/src/github.com/masasam;\
