@@ -4,7 +4,7 @@
 ;;(setq debug-on-error t)
 
 (setq easy-jekyll-basedir "~/src/github.com/masasam/PPAP2/")
-(setq easy-jekyll-url "http://example.org")
+(setq easy-jekyll-url "https://easy-jekyll.firebaseapp.com/")
 (setq easy-jekyll-sshdomain "blogdomain")
 (setq easy-jekyll-root "/home/jekyll/")
 (setq easy-jekyll-previewtime "300")
