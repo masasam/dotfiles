@@ -19,7 +19,7 @@
 			    (easy-hugo-sshdomain . "blogdomain")
 			    (easy-hugo-root . "/home/solist/"))
 			   ((easy-hugo-basedir . "~/src/github.com/masasam/PPAP/")
-			    (easy-hugo-url . "https://example.com")
+			    (easy-hugo-url . "https://easy-hugo.firebaseapp.com")
 			    (easy-hugo-postdir . "content/post")
 			    (easy-hugo-sshdomain . "blogdomain")
 			    (easy-hugo-root . "/home/ppap/"))))
