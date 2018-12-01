@@ -150,6 +150,8 @@ geckodriver
 gegl
 geoclue2
 geocode-glib
+geoip
+geoip-database
 gettext
 ghc-libs
 ghostscript
@@ -690,6 +692,7 @@ netctl
 nethogs
 nettle
 networkmanager
+nginx
 ninja
 nm-connection-editor
 nmap
@@ -744,6 +747,7 @@ perl-mailtools
 perl-timedate
 perl-xml-parser
 php
+php-fpm
 pinentry
 pipewire
 pixman

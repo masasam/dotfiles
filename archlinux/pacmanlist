@@ -119,6 +119,7 @@ neomutt
 netctl
 nethogs
 networkmanager
+nginx
 nmap
 nnn
 nodejs
@@ -140,6 +141,7 @@ pdfgrep
 peek
 perl
 php
+php-fpm
 pkgconf
 pkgfile
 pkgstats

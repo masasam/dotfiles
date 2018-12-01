@@ -1,4 +1,4 @@
-ansible==2.7.3
+ansible==2.7.4
 ansible-lint==3.5.1
 anytree==2.4.3
 appdirs==1.4.3
@@ -7,12 +7,12 @@ astroid==2.1.0
 attrs==18.2.0
 Automat==0.7.0
 autopep8==1.4.3
-awscli==1.16.66
+awscli==1.16.67
 backcall==0.1.0
 bcrypt==3.1.4
 beautifulsoup4==4.6.3
 bleach==3.0.2
-botocore==1.12.56
+botocore==1.12.57
 btrfsutil==1.0.0
 cached-property==1.5.1
 cachetools==3.0.0
@@ -57,7 +57,7 @@ idna==2.7
 importmagic==0.1.7
 incremental==17.5.0
 ipykernel==5.1.0
-ipython==7.1.1
+ipython==7.2.0
 ipython-genutils==0.2.0
 ipywidgets==7.4.2
 isort==4.3.4
@@ -86,7 +86,7 @@ matplotlib==3.0.2
 mccabe==0.6.1
 meson==0.48.2
 mistune==0.8.4
-msgpack==0.5.6
+msgpack==0.6.0
 mycli==1.19.0
 nbconvert==5.4.0
 nbformat==4.4.0
@@ -120,7 +120,7 @@ PyDispatcher==2.0.5
 pydoc-utils==1.0.1
 pyflakes==2.0.0
 Pygments==2.3.0
-PyGObject==3.30.3
+PyGObject==3.30.4
 PyHamcrest==1.9.0
 pylint==2.2.2
 PyMySQL==0.9.2
