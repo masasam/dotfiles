@@ -266,7 +266,7 @@ rbenv: ## Install rvenv ruby-build
 	gem install bundle
 
 rubygem: ## Install rubygem package
-	gem install bundler jekyll sass
+	gem install bundler jekyll sass solargraph
 
 rails: ## Create rails app
 	export RBENV_ROOT="${HOME}/.rbenv";\
