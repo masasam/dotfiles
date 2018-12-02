@@ -5,10 +5,7 @@
 
 (setq easy-jekyll-basedir "~/src/github.com/masasam/PPAP2/")
 (setq easy-jekyll-url "https://easy-jekyll.firebaseapp.com/")
-(setq easy-jekyll-sshdomain "blogdomain")
-(setq easy-jekyll-root "/home/jekyll/")
 (setq easy-jekyll-previewtime "300")
-(setq easy-jekyll-amazon-s3-bucket-name "masasam")
 ;;(define-key global-map (kbd "C-c C-j") 'easy-jekyll)
 (setq easy-jekyll-bloglist '(((easy-jekyll-basedir . "~/src/github.com/masasam/jekyll1/")
 			      (easy-jekyll-url . "http://example1.com")

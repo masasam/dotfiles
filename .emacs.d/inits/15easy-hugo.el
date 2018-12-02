@@ -20,9 +20,7 @@
 			    (easy-hugo-root . "/home/solist/"))
 			   ((easy-hugo-basedir . "~/src/github.com/masasam/PPAP/")
 			    (easy-hugo-url . "https://easy-hugo.firebaseapp.com")
-			    (easy-hugo-postdir . "content/post")
-			    (easy-hugo-sshdomain . "blogdomain")
-			    (easy-hugo-root . "/home/ppap/"))))
+			    (easy-hugo-postdir . "content/post"))))
 
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
