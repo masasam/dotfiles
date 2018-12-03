@@ -132,7 +132,6 @@ nodeinstall: ## Install node packages
 	yarn global add eslint
 	yarn global add eslint-cli
 	yarn global add eslint-plugin-react
-	npm install -g firebase-tools 
 	yarn global add fx
 	yarn global add gulp
 	yarn global add	gulp-cli
@@ -140,7 +139,6 @@ nodeinstall: ## Install node packages
 	yarn global add indium
 	yarn global add jshint
 	yarn global add logo.svg
-	yarn global add netlify-cli
 	yarn global add ngrok
 	yarn global add npm
 	yarn global add prettier
@@ -148,6 +146,8 @@ nodeinstall: ## Install node packages
 	yarn global add vue-cli
 	yarn global add vue-language-server
 	yarn global add webpack
+	npm install -g firebase-tools
+	npm install -g netlify-cli
 
 rustinstall: ## Install rust and rust packages
 	sudo pacman -S cmake
