@@ -420,6 +420,7 @@ wordpress: ## Deploy wordpress
 	test -d /var/www/wp-admin || sudo mv wordpress /var/www
 	chmod -R 777 /var/www/wp-content
 	sudo ln -vsfn /var/www    ${HOME}/src/github.com/masasam/wordpress
+	sudo chown http:http /var/www/wp-admin/includes/file.php  
 	echo 'create database wp' | mysql -u root
 	echo "grant all privileges on wp.* to wp@localhost identified by 'password';FLUSH PRIVILEGES;" | mysql -u root
 
