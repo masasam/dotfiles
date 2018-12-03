@@ -132,7 +132,7 @@ nodeinstall: ## Install node packages
 	yarn global add eslint
 	yarn global add eslint-cli
 	yarn global add eslint-plugin-react
-	yarn global add firebase-tools
+	npm install -g firebase-tools 
 	yarn global add fx
 	yarn global add gulp
 	yarn global add	gulp-cli
