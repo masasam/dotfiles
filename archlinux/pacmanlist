@@ -179,6 +179,7 @@ systemd-sysvcompat
 tar
 tcpdump
 termite
+terraform
 texinfo
 texlive-langjapanese
 texlive-latexextra
