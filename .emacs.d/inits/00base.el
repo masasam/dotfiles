@@ -214,16 +214,6 @@ If the region is inactive, `backward-kill-word'."
 (setq auto-mode-alist (append '(("/tmp/mutt.*" . mail-mode)) auto-mode-alist))
 
 
-(defun my-out-focused-mode-line()
-  "Color when focus is out."
-  (set-face-background 'mode-line "#2f4f4f"))
-(defun my-in-focused-mode-line()
-  "Color when focus is in."
-  (set-face-background 'mode-line "#1c1f26"))
-(add-hook 'focus-out-hook 'my-out-focused-mode-line)
-(add-hook 'focus-in-hook 'my-in-focused-mode-line)
-
-
 (defun trash-list ()
   "Show trash-list."
   (interactive)
