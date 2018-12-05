@@ -7,12 +7,12 @@ astroid==2.1.0
 attrs==18.2.0
 Automat==0.7.0
 autopep8==1.4.3
-awscli==1.16.68
+awscli==1.16.69
 backcall==0.1.0
 bcrypt==3.1.4
 beautifulsoup4==4.6.3
 bleach==3.0.2
-botocore==1.12.58
+botocore==1.12.59
 btrfsutil==1.0.0
 cached-property==1.5.1
 cachetools==3.0.0
@@ -53,7 +53,7 @@ httpie==1.0.2
 httplib2==0.12.0
 humanize==0.5.1
 hyperlink==18.0.0
-idna==2.7
+idna==2.8
 importmagic==0.1.7
 incremental==17.5.0
 ipykernel==5.1.0
