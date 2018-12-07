@@ -7,12 +7,12 @@ astroid==2.1.0
 attrs==18.2.0
 Automat==0.7.0
 autopep8==1.4.3
-awscli==1.16.70
+awscli==1.16.71
 backcall==0.1.0
 bcrypt==3.1.4
 beautifulsoup4==4.6.3
 bleach==3.0.2
-botocore==1.12.60
+botocore==1.12.61
 btrfsutil==1.0.0
 cached-property==1.5.1
 cachetools==3.0.0
@@ -108,7 +108,7 @@ pickleshare==0.7.5
 Pillow==5.3.0
 ply==3.11
 progressbar2==3.38.0
-prometheus-client==0.4.2
+prometheus-client==0.5.0
 prompt-toolkit==2.0.7
 psycopg2==2.7.6.1
 ptyprocess==0.6.0
