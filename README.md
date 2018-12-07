@@ -451,7 +451,7 @@ If you make a mistake on the keyboard, erase all with Ctrl-u
 	yarn global add firebase-tools
 	yarn global add fx
 	yarn global add gulp
-	yarn global add heroku-cli
+	yarn global add heroku
 	yarn global add indium
 	yarn global add jshint
 	yarn global add logo.svg
