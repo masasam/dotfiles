@@ -135,6 +135,7 @@ PyYAML==3.13
 pyzmq==17.1.2
 qtconsole==4.4.3
 queuelib==1.5.0
+redis==3.0.1
 requests==2.20.1
 rope==0.11.0
 rsa==4.0
