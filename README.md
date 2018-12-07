@@ -404,6 +404,7 @@ If you make a mistake on the keyboard, erase all with Ctrl-u
 	pip install --user pygments
 	pip install --user pylint
 	pip install --user ranger-fm
+	pip install --user redis
 	pip install --user rope
 	pip install --user rtv
 	pip install --user scikit-learn

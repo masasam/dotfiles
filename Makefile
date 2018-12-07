@@ -90,6 +90,7 @@ pipinstall: ## Install python packages
 	pip install --user pydoc_utils
 	pip install --user pyflakes
 	pip install --user pylint
+	pip install --user redis
 	pip install --user rope
 	pip install --user rtv
 	pip install --user scikit-learn
