@@ -57,7 +57,7 @@ install: ## Install arch linux packages using pacman
 	cscope postgresql-libs pdfgrep gnu-netcat cmatrix jpegoptim nethogs mlocate \
 	pacman-contrib x11-ssh-askpass libreoffice-fresh-ja python-prompt_toolkit \
 	jhead peek ncdu sxiv gnome-screenshot sshfs fping syncthing terraform gnupg \
-	xdotool nnn sshuttle
+	xdotool nnn sshuttle packer
 	sudo pkgfile --update
 
 pipinstall: ## Install python packages
@@ -119,7 +119,6 @@ goinstall: ## Install go packages
 	go get -u -v github.com/motemen/ghq
 	go get -u -v github.com/sonatard/ghs
 	go get -u -v github.com/kyoshidajp/ghkw
-	go get -u -v github.com/hashicorp/packer
 	go get -u -v github.com/simeji/jid/cmd/jid
 	go get -u -v github.com/dinedal/textql...
 
