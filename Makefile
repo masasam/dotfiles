@@ -24,6 +24,7 @@ initdropbox: ## Initial deploy dotfiles using dropbox
 	ln -vsf ${HOME}/Dropbox/zsh/.mycli-history   ${HOME}/.mycli-history
 	ln -vsf ${HOME}/Dropbox/zsh/hub   ${HOME}/.config/hub
 	chmod 600   ${HOME}/Dropbox/zsh/rclone.conf
+	mkdir -p ${HOME}/.config/rclone
 	ln -vsf ${HOME}/Dropbox/zsh/rclone.conf   ${HOME}/.config/rclone/rclone.conf
 	test -L ${HOME}/.ssh || rm -rf ${HOME}/.ssh
 	ln -vsfn ${HOME}/Dropbox/ssh   ${HOME}/.ssh
