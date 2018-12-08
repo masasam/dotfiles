@@ -252,7 +252,6 @@ mariadb: # Mariadb initial setup
 	sudo systemctl enable mariadb.service
 	sudo systemctl start mariadb.service
 	mysql_secure_installation
-	mysqladmin password -u root -p
 	mysql -u root -p < ${HOME}/Dropbox/mariadb/world.sql/data
 
 redis: ## Redis inital setup
