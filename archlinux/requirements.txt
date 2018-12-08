@@ -42,13 +42,12 @@ flake8==3.6.0
 gif-for-cli==1.1.1
 gitdb2==2.0.5
 GitPython==2.1.11
-goobook==3.0.1.dev0
+goobook==3.2.dev0
 google-api-python-client==1.7.4
 google-auth==1.6.1
 google-auth-httplib2==0.0.3
 graph-cli==0.1.1
 greenlet==0.4.15
-html5lib==1.0.1
 httpie==1.0.2
 httplib2==0.12.0
 humanize==0.5.1
@@ -70,7 +69,6 @@ jupyter-client==5.2.3
 jupyter-console==6.0.0
 jupyter-core==4.4.0
 jupyterlab==0.35.4
-jupyterlab-launcher==0.13.1
 jupyterlab-server==0.2.0
 jupyterthemes==0.20.0
 kitchen==1.2.5
@@ -78,13 +76,12 @@ kiwisolver==1.0.1
 lazy-object-proxy==1.3.1
 lensfun==0.3.2
 lesscpy==0.13.0
-lit==0.7.0
+lit==0.7.0.dev0
 louis==3.7.0
 lxml==4.2.5
 MarkupSafe==1.1.0
 matplotlib==3.0.2
 mccabe==0.6.1
-meson==0.48.2
 mistune==0.8.4
 msgpack==0.6.0
 mycli==1.19.0
@@ -149,7 +146,6 @@ selenium==3.141.0
 Send2Trash==1.5.0
 service-identity==18.1.0
 setproctitle==1.1.10
-simplegeneric==0.8.1
 simplejson==3.16.1
 six==1.11.0
 smmap2==2.0.5
