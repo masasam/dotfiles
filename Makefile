@@ -436,8 +436,10 @@ emacs-devel: # Install development version of emacs
 	sudo make install;\
 	rm -rf ${HOME}/.emacs.d/elpa
 
-kubernetes: ## Init kubernetes 
+google-cloud: # Install SDK
 	yay -S google-cloud-sdk
+
+kubernetes: ## Init kubernetes 
 	sudo gcloud components update kubectl
 	gcloud init
 
@@ -592,13 +594,15 @@ testpath: # Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: install init initdropbox ttf-cica dnsmasq pipinstall goinstall aur mozc neomutt docker mariadb redis nodeinstall desktop chromium sxiv zeal zoom toggle sylpheed screenkey rubygem rbenv rustinstall
+allinstall: install init initdropbox ttf-cica dnsmasq pipinstall goinstall aur mozc neomutt docker mariadb redis nodeinstall desktop chromium sxiv zeal zoom toggle sylpheed google-cloud aws
+
+nextinstall: screenkey rubygem rbenv rustinstall
 
 allupdate: update pipupdate rustupdate goinstall yarnupdate
 
 allbackup: backup pipbackup
 
-.PHONY: allinstall allupdate allbackup
+.PHONY: allinstall allupdate allbackup nextinstall
 
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
