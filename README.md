@@ -319,7 +319,7 @@ You can make install from here
 	sudo pacman -S linux-docs pwgen gauche screen ipcalc
 	sudo pacman -S arch-install-scripts ctags parallel
 	sudo pacman -S pandoc texlive-langjapanese texlive-latexextra
-	sudo pacman -S shellcheck php cscope typescript
+	sudo pacman -S shellcheck php cscope typescript packer
 	sudo pacman -S noto-fonts-cjk arc-gtk-theme jq dnsmasq
 	sudo pacman -S docker zsh-syntax-highlighting terraform
 	sudo pacman -S npm llvm llvm-libs lldb hdparm rxvt-unicode 
@@ -433,7 +433,6 @@ If you make a mistake on the keyboard, erase all with Ctrl-u
 	go get -u -v github.com/motemen/ghq
 	go get -u -v github.com/sonatard/ghs
 	go get -u -v github.com/kyoshidajp/ghkw
-	go get -u -v github.com/hashicorp/packer
 	go get -u -v github.com/simeji/jid/cmd/jid
 	go get -u -v github.com/dinedal/textql...
 
