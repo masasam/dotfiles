@@ -314,13 +314,15 @@ yay: ## Install yay using yay
 	yay -S yay
 
 aur: ## Install arch linux AUR packages using yay
-	yay -S discord
-	yay -S drone-cli
 	yay -S git-secrets
-	yay -S nkf
-	yay -S rtags
 	yay -S sequeler-git
 	yay -S yaourt
+
+aurplus: ## Install arch linux AUR packages using yay
+	yay -S discord
+	yay -S drone-cli
+	yay -S nkf
+	yay -S rtags
 
 desktop: ## Update desktop entry
 	sudo ln -vsf ${PWD}/usr/share/applications/vim.desktop   /usr/share/applications/vim.desktop
@@ -427,7 +429,7 @@ wordpress: ## Deploy wordpress
 
 emacs-devel: # Install development version of emacs
 	cd ${HOME}/src/github.com/masasam;\
-	git clone -b emacs-26 git@github.com:emacs-mirror/emacs.git;\
+	git clone -b emacs-27 git@github.com:emacs-mirror/emacs.git;\
 	cd emacs;\
 	./autogen.sh;\
 	./configure;\
@@ -591,15 +593,13 @@ testpath: # Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinit: init initdropbox
-
-allinstall: ttf-cica install init initdropbox pipinstall goinstall aur mozc neomutt docker mariadb redis rbenv rustinstall nodeinstall screenkey dnsmasq desktop chromium sxiv zeal zoom toggle sylpheed rubygem
+allinstall: install init initdropbox ttf-cica dnsmasq pipinstall goinstall aur mozc neomutt docker mariadb redis nodeinstall desktop chromium sxiv zeal zoom toggle sylpheed screenkey rubygem rbenv rustinstall
 
 allupdate: update pipupdate rustupdate goinstall yarnupdate
 
 allbackup: backup pipbackup
 
-.PHONY: allinit allinstall allupdate allbackup
+.PHONY: allinstall allupdate allbackup
 
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
