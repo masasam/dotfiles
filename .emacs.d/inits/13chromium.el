@@ -79,4 +79,14 @@
   (interactive)
   (browse-url "https://twitter.com"))
 
+(defun chromium-rails ()
+  "Open rails development server with chromium."
+  (interactive)
+  (browse-url "http://localhost:3000"))
+
+(defun chromium-localhost ()
+  "Open django development server with chromium."
+  (interactive)
+  (browse-url "http://localhost:8000"))
+
 ;;; 13chromium.el ends here
