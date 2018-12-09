@@ -594,7 +594,7 @@ testpath: # Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: install init initdropbox urxvt xterm termite ttf-cica dnsmasq pipinstall goinstall aur mozc neomutt docker mariadb redis nodeinstall desktop sxiv zeal zoom toggle sylpheed google-cloud aws
+allinstall: install init initdropbox urxvt xterm termite ttf-cica dnsmasq pipinstall goinstall aur mozc neomutt docker mariadb redis nodeinstall desktop sxiv zeal zoom toggle sylpheed google-cloud aws yay psd
 
 nextinstall: chromium screenkey rubygem rbenv rustinstall
 
