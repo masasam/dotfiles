@@ -13,7 +13,6 @@ bison
 bookworm
 bzip2
 chromium
-cmake
 cmatrix
 coreutils
 cpio
@@ -94,6 +93,7 @@ libva-intel-driver
 licenses
 linux
 linux-docs
+linux-firmware
 lldb
 llvm
 logrotate
@@ -119,7 +119,6 @@ neomutt
 netctl
 nethogs
 networkmanager
-nginx
 nmap
 nnn
 nodejs
@@ -142,7 +141,6 @@ pdfgrep
 peek
 perl
 php
-php-fpm
 pkgconf
 pkgfile
 pkgstats
@@ -155,6 +153,7 @@ python-prompt_toolkit
 qt5-styleplugins
 qt5ct
 rclone
+redis
 reiserfsprogs
 rsync
 ruby
@@ -215,7 +214,6 @@ xorg-mkfontdir
 xorg-mkfontscale
 xorg-server
 xorg-sessreg
-xorg-setxkbmap
 xorg-smproxy
 xorg-x11perf
 xorg-xauth
@@ -228,7 +226,6 @@ xorg-xev
 xorg-xgamma
 xorg-xhost
 xorg-xinput
-xorg-xkbcomp
 xorg-xkbevd
 xorg-xkbutils
 xorg-xkill
@@ -246,7 +243,6 @@ xorg-xvinfo
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
-xsel
 xterm
 yarn
 zeal
