@@ -268,6 +268,14 @@ rbenv: ## Install rvenv ruby-build
 rubygem: ## Install rubygem package
 	gem install bundler jekyll sass solargraph
 
+django: ## Install Django app
+	mkdir -p ${HOME}/src/github.com/masasam/mydjango;\
+	cd ${HOME}/src/github.com/masasam/mydjango;\
+	python3 -m venv venv;\
+	source venv/bin/activate;\
+	pip install --upgrade pip;\
+	pip install Django;\
+
 rails: ## Create rails app
 	export RBENV_ROOT="${HOME}/.rbenv";\
 	if [ -d "${RBENV_ROOT}" ]; then \
