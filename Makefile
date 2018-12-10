@@ -271,10 +271,11 @@ rubygem: ## Install rubygem package
 django: ## Install Django
 	mkdir -p ${HOME}/src/github.com/masasam/mydjango;\
 	cd ${HOME}/src/github.com/masasam/mydjango;\
-	python3 -m venv venv;\
+	virtualenv venv;\
 	source venv/bin/activate;\
 	pip install --upgrade pip;\
 	pip install Django;\
+	pip install jedi flake8 importmagic autopep8 yapf;\
 
 rails: ## Create rails
 	export RBENV_ROOT="${HOME}/.rbenv";\
