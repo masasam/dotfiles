@@ -77,7 +77,7 @@ lazy-object-proxy==1.3.1
 lensfun==0.3.2
 lesscpy==0.13.0
 lit==0.7.0.dev0
-louis==3.7.0
+louis==3.8.0
 lxml==4.2.5
 MarkupSafe==1.1.0
 matplotlib==3.0.2
