@@ -311,7 +311,7 @@ You can make install from here
     sudo pacman -S cups-pdf htop neovim go pkgfile rsync elixir
 	sudo pacman -S nodejs whois nmap poppler-data ffmpeg 
 	sudo pacman -S aspell aspell-en httperf asciidoc sbcl
-	sudo pacman -S gdb hub wmctrl gpaste pkgstats
+	sudo pacman -S gdb hub wmctrl gpaste pkgstats ripgrep
 	sudo pacman -S linux-docs pwgen gauche screen ipcalc
 	sudo pacman -S arch-install-scripts ctags parallel
 	sudo pacman -S pandoc texlive-langjapanese texlive-latexextra
