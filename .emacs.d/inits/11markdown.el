@@ -3,6 +3,8 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
+(setq markdown-fontify-code-blocks-natively t)
+
 (add-hook 'markdown-mode-hook
           '(lambda () (outline-minor-mode t)))
 
