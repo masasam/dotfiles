@@ -87,6 +87,7 @@ pipinstall: ## Install python packages
 	pip install --user neovim
 	pip install --user pandas
 	pip install --user pgcli
+	pip install --user pipenv
 	pip install --user progressbar2
 	pip install --user pydoc_utils
 	pip install --user pyflakes
@@ -275,7 +276,7 @@ django: ## Install Django
 	source venv/bin/activate;\
 	pip install --upgrade pip;\
 	pip install Django;\
-	pip install jedi flake8 importmagic autopep8 yapf;\
+	pip install 'python-language-server[all]'
 
 rails: ## Create rails
 	export RBENV_ROOT="${HOME}/.rbenv";\

@@ -394,6 +394,7 @@ If you make a mistake on the keyboard, erase all with Ctrl-u
 	pip install --user neovim
 	pip install --user pandas
 	pip install --user pgcli
+	pip install --user pipenv
 	pip install --user progressbar2
 	pip install --user pydoc_utils
 	pip install --user pyflakes
