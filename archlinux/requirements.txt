@@ -7,12 +7,12 @@ astroid==2.1.0
 attrs==18.2.0
 Automat==0.7.0
 autopep8==1.4.3
-awscli==1.16.72
+awscli==1.16.74
 backcall==0.1.0
-bcrypt==3.1.4
+bcrypt==3.1.5
 beautifulsoup4==4.6.3
 bleach==3.0.2
-botocore==1.12.62
+botocore==1.12.64
 btrfsutil==1.0.0
 cached-property==1.5.1
 cachetools==3.0.0
@@ -37,7 +37,7 @@ dockerpty==0.4.1
 docopt==0.6.2
 docutils==0.14
 entrypoints==0.2.3
-Faker==1.0.0
+Faker==1.0.1
 flake8==3.6.0
 future==0.17.1
 gif-for-cli==1.1.1
@@ -104,6 +104,7 @@ pgcli==2.0.1
 pgspecial==1.11.4
 pickleshare==0.7.5
 Pillow==5.3.0
+pipenv==2018.11.26
 pluggy==0.8.0
 ply==3.11
 progressbar2==3.38.0
