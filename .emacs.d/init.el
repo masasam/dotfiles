@@ -38,6 +38,7 @@
 (package-install 'bind-key)
 (package-install 'browse-at-remote)
 (package-install 'coffee-mode)
+(package-install 'color-identifiers-mode)
 (package-install 'company)
 (package-install 'company-irony)
 (package-install 'company-go)

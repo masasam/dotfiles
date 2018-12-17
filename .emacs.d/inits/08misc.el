@@ -130,6 +130,11 @@
 ;; C-x c-h and erase it (call with '?')
 (setq which-key-use-C-h-commands nil)
 
+
+;; color-identifiers-mode
+(add-hook 'after-init-hook 'global-color-identifiers-mode)
+
+
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:
