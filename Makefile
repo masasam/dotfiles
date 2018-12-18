@@ -110,6 +110,7 @@ pipinstall: ## Install python packages
 
 goinstall: ## Install go packages
 	mkdir -p ${HOME}/{bin,src}
+	go get -u -v  github.com/sourcegraph/go-langserver
 	go get -u -v github.com/nsf/gocode
 	go get -u -v github.com/rogpeppe/godef
 	go get -u -v golang.org/x/tools/cmd/goimports
