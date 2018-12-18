@@ -451,6 +451,7 @@ If you make a mistake on the keyboard, erase all with Ctrl-u
 	yarn global add gulp
 	yarn global add heroku
 	yarn global add indium
+	yarn global add javascript-typescript-langserver
 	yarn global add jshint
 	yarn global add logo.svg
 	yarn global add netlify-cli

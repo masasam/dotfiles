@@ -141,6 +141,7 @@ nodeinstall: ## Install node packages
 	yarn global add	gulp-cli
 	yarn global add heroku
 	yarn global add indium
+	yarn global add javascript-typescript-langserver
 	yarn global add jshint
 	yarn global add logo.svg
 	yarn global add ngrok
