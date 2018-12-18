@@ -127,6 +127,7 @@ goinstall: ## Install go packages
 nodeinstall: ## Install node packages
 	mkdir -p ${HOME}/.node_modules
 	yarn global add babel-eslint
+	yarn global add bash-language-server
 	yarn global add cloc
 	yarn global add create-component-app
 	yarn global add create-nuxt-app
