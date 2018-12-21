@@ -3,9 +3,11 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
-(elpy-enable)
-(setq elpy-rpc-backend "jedi")
+(add-hook 'python-mode-hook 'eglot-ensure)
 
+(add-to-list 'eglot-server-programs
+             `(python-mode . ("pyls" "-v" "--tcp" "--host"
+                              "localhost" "--port" :autoport))))
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:
