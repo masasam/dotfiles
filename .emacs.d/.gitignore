@@ -32,3 +32,4 @@
 /projectile.cache
 /.python-environments/
 /irony/
+forge-database.sqlite
