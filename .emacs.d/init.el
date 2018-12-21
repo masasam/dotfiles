@@ -77,6 +77,7 @@
 (package-install 'flycheck-title)
 (package-install 'flyspell-correct)
 (package-install 'flyspell-correct-ivy)
+(package-install 'forge)
 (package-install 'ggtags)
 (package-install 'git-gutter)
 (package-install 'git-timemachine)
