@@ -64,7 +64,6 @@
 (package-install 'edit-indirect)
 (package-install 'eglot)
 (package-install 'elisp-slime-nav)
-(package-install 'elpy)
 (package-install 'enh-ruby-mode)
 (package-install 'espy)
 (package-install 'exec-path-from-shell)
