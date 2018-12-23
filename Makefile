@@ -278,11 +278,11 @@ rubygem: ## Install rubygem package
 django: ## Install Django
 	mkdir -p ${HOME}/src/github.com/masasam/mydjango;\
 	cd ${HOME}/src/github.com/masasam/mydjango;\
-	virtualenv venv;\
-	source venv/bin/activate;\
+	virtualenv env;\
+	source env/bin/activate;\
 	pip install --upgrade pip;\
 	pip install Django;\
-	pip install 'python-language-server[all]'
+	pip install python-language-server
 
 rails: ## Create rails
 	export RBENV_ROOT="${HOME}/.rbenv";\
