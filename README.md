@@ -421,13 +421,7 @@ If you make a mistake on the keyboard, erase all with Ctrl-u
 #### Install using golang
 
 	mkdir -p ${HOME}/{bin,src}
-	go get -u -v  github.com/sourcegraph/go-langserver
-	go get -u -v github.com/nsf/gocode
-	go get -u -v github.com/rogpeppe/godef
-	go get -u -v golang.org/x/tools/cmd/goimports
-	go get -u -v golang.org/x/tools/cmd/godoc
-	go get -u -v github.com/josharian/impl
-	go get -u -v github.com/jstemmer/gotags
+	go get -u -v github.com/sourcegraph/go-langserver
 	go get -u -v github.com/golang/dep/cmd/dep
 	go get -u -v github.com/motemen/ghq
 	go get -u -v github.com/sonatard/ghs
