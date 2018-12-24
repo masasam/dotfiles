@@ -260,6 +260,9 @@ redis: ## Redis inital setup
 	sudo systemctl enable redis.service
 	sudo systemctl start redis.service
 
+ccls: ## Install c,c++ language server
+	yay -S ccls
+
 rbenv: ## Install rvenv ruby-build
 	yay -S rbenv
 	yay -S ruby-build
