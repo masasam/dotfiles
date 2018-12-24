@@ -58,6 +58,7 @@ clucene
 clutter
 clutter-gst
 clutter-gtk
+cmake
 cmark-gfm
 cmatrix
 cogl
@@ -358,6 +359,7 @@ js52
 js60
 json-c
 json-glib
+jsoncpp
 kbd
 keychain
 keyutils
@@ -809,6 +811,7 @@ redis
 redland
 reiserfsprogs
 rest
+rhash
 ripgrep
 rsync
 rtkit
