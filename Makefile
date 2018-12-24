@@ -161,12 +161,10 @@ rustinstall: ## Install rust and rust packages
 	cargo install exa
 	cargo install fd-find
 	cargo install hyperfine
-	cargo install racer
-	cargo install ripgrep
 	cargo install skim
 	cargo install tztail
 	cargo install xsv
-	rustup component add rust-src
+	rustup component add rls-preview rust-analysis rust-src
 
 neomutt: ## Init neomutt mail client
 	mkdir -p ${HOME}/.mutt
