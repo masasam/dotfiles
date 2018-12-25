@@ -5,9 +5,14 @@
 
 (autoload 'js2-mode "js2-mode" nil t)
 (add-to-list 'auto-mode-alist '("\.js$" . js2-mode))
-(add-to-list 'auto-mode-alist '("\.jsx$" . js2-jsx-mode))
-(require 'flycheck)
-(flycheck-add-mode 'javascript-eslint 'js2-jsx-mode)
+
+(add-hook 'js2-mode 'eglot-ensure)
+(add-hook 'rjsx-mode 'eglot-ensure)
+(add-hook 'rjsx-mode-hook
+          (lambda ()
+            (setq indent-tabs-mode nil)
+            (setq js-indent-level 2)
+            (setq js2-strict-missing-semi-warning nil)))
 
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
