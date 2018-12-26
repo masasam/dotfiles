@@ -3,7 +3,14 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
+;; for slack
 (load "~/Dropbox/emacs/secret.el")
+(setq slack-buffer-emojify t)
+(add-hook 'after-init-hook #'global-emojify-mode)
+(setq slack-prefer-current-team t)
+(setq alert-default-style 'libnotify)
+(setq alert-fade-time 10)
+
 
 ;; expand-region
 (require 'expand-region)
