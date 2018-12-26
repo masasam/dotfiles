@@ -114,6 +114,7 @@
 (package-install 'rspec-mode)
 (package-install 'rustic)
 (package-install 'scss-mode)
+(package-install 'slack)
 (package-install 'slime)
 (package-install 'slime-company)
 (package-install 'slim-mode)
