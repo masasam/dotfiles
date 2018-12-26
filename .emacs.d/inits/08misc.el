@@ -100,6 +100,7 @@
 ;; flyspell-correct
 (require 'flyspell-correct-ivy)
 (define-key flyspell-mode-map (kbd "C-M-;") #'flyspell-correct-previous-word-generic)
+(add-hook 'prog-mode-hook 'flyspell-mode)
 
 
 ;; smartparens
