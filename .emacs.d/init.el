@@ -121,6 +121,7 @@
 (package-install 'smartparens)
 (package-install 'smex)
 (package-install 'swiper)
+(package-install 'tldr)
 (package-install 'toml-mode)
 (package-install 'typescript-mode)
 (package-install 'visual-regexp)
