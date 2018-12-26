@@ -53,6 +53,7 @@
 (package-install 'docker-tramp)
 (package-install 'dockerfile-mode)
 (package-install 'dumb-jump)
+(package-install 'eacl)
 (package-install 'easy-hugo)
 (package-install 'easy-jekyll)
 (package-install 'editorconfig)
