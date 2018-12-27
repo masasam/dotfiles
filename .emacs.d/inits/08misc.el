@@ -9,6 +9,7 @@
 (add-hook 'after-init-hook #'global-emojify-mode)
 (setq slack-prefer-current-team t)
 (setq alert-default-style 'libnotify)
+(setq slack-buffer-function #'switch-to-buffer)
 (setq alert-fade-time 10)
 
 
@@ -109,7 +110,9 @@
 ;; flyspell-correct
 (require 'flyspell-correct-ivy)
 (define-key flyspell-mode-map (kbd "C-M-;") #'flyspell-correct-previous-word-generic)
+(define-key flyspell-mode-map (kbd "C-;") #'ivy-switch-buffer)
 (add-hook 'prog-mode-hook 'flyspell-mode)
+(add-hook 'text-mode-hook 'flyspell-mode)
 
 
 ;; smartparens
