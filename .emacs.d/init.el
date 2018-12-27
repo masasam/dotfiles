@@ -102,6 +102,7 @@
 (package-install 'pcre2el)
 (package-install 'php-mode)
 (package-install 'pkgbuild-mode)
+(package-install 'pocket-reader)
 (package-install 'popwin)
 (package-install 'projectile)
 (package-install 'projectile-rails)
