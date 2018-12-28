@@ -72,6 +72,9 @@
 ;; minibuffer-local-completion-mpa
 (bind-key "C-w" 'backward-kill-word minibuffer-local-completion-map)
 
+;; xref-find-references key
+(bind-key "M-/" 'xref-find-references)
+
 ;; When the mouse cursor is close to the text cursor, the mouse hangs away
 (if (display-mouse-p) (mouse-avoidance-mode 'exile))
 
