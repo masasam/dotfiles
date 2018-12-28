@@ -76,6 +76,7 @@
 (package-install 'git-gutter)
 (package-install 'git-timemachine)
 (package-install 'go-mode)
+(package-install 'google-c-style)
 (package-install 'google-this)
 (package-install 'google-translate)
 (package-install 'hackernews)
