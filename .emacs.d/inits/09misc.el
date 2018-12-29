@@ -1,10 +1,9 @@
-;;; 08misc.el --- 08misc.el
+;;; 09misc.el --- 09misc.el
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)
 
-;; for slack
-(load "~/Dropbox/emacs/secret.el")
+;; slack
 (setq slack-buffer-emojify t)
 (add-hook 'after-init-hook #'global-emojify-mode)
 (setq slack-prefer-current-team t)
@@ -151,4 +150,4 @@
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:
-;;; 08misc.el ends here
+;;; 09misc.el ends here

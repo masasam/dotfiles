@@ -1,4 +1,4 @@
-;;; 09dired.el --- 09dired.el
+;;; 17dired.el --- 17dired.el
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)
@@ -47,4 +47,4 @@
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:
-;;; 09dired.el ends here
+;;; 17dired.el ends here
