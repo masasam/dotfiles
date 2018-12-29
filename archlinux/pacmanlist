@@ -1,3 +1,4 @@
+adapta-gtk-theme
 alsa-utils
 arc-gtk-theme
 arch-install-scripts
@@ -33,6 +34,7 @@ elinks
 elixir
 emacs
 eog
+espeak
 evince
 expect
 fakeroot
@@ -61,6 +63,7 @@ gnome-backgrounds
 gnome-control-center
 gnome-keyring
 gnome-screenshot
+gnome-tweaks
 gnu-netcat
 gpaste
 grep

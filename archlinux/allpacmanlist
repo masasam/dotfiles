@@ -1,6 +1,7 @@
 aalib
 accountsservice
 acl
+adapta-gtk-theme
 adwaita-icon-theme
 alsa-lib
 alsa-plugins
@@ -105,6 +106,7 @@ emacs
 enchant
 eog
 erlang-nox
+espeak
 evince
 exempi
 exiv2
@@ -179,6 +181,7 @@ gnome-session
 gnome-settings-daemon
 gnome-shell
 gnome-themes-extra
+gnome-tweaks
 gnu-netcat
 gnupg
 gnustep-base
@@ -738,6 +741,7 @@ poppler
 poppler-data
 poppler-glib
 popt
+portaudio
 postgresql-libs
 potrace
 procps-ng
