@@ -768,6 +768,7 @@ python-idna
 python-lxml
 python-oauth2client
 python-packaging
+python-pillow
 python-ply
 python-prompt_toolkit
 python-pyasn1
@@ -855,6 +856,7 @@ sshfs
 sshuttle
 startup-notification
 strace
+stunnel
 sudo
 suitesparse
 sxiv
@@ -912,6 +914,7 @@ vi
 vid.stab
 vim
 vim-runtime
+vimiv
 volume_key
 vte-common
 vte3

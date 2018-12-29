@@ -170,6 +170,7 @@ shellcheck
 sshfs
 sshuttle
 strace
+stunnel
 sudo
 sxiv
 sylpheed
@@ -198,6 +199,7 @@ util-linux
 valgrind
 vi
 vim
+vimiv
 w3m
 which
 whois
