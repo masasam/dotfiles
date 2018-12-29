@@ -307,7 +307,7 @@ You can make install from here
     sudo pacman -S powertop gimp unrar gnome-screenshot
     sudo pacman -S file-roller xclip atool evince inkscape
     sudo pacman -S cifs-utils gvfs gvfs-smb eog lhasa lzop
-    sudo pacman -S seahorse the_silver_searcher zeal
+    sudo pacman -S seahorse the_silver_searcher zeal vimiv
     sudo pacman -S cups-pdf htop neovim go pkgfile rsync elixir
 	sudo pacman -S nodejs whois nmap poppler-data ffmpeg 
 	sudo pacman -S aspell aspell-en httperf asciidoc sbcl
