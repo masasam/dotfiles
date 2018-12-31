@@ -260,6 +260,16 @@ redis: ## Redis inital setup
 	sudo systemctl enable redis.service
 	sudo systemctl start redis.service
 
+mew: ## Install mew as mail reader
+	cd ~/src;\
+	wget https://www.mew.org/Release/mew-6.8.tar.gz;\
+	tar zxvf mew-6.8.tar.gz;\
+	test -f	mew-6.8.tar.gz && rm -fr mew-6.8.tar.gz;\
+	cd mew-6.8;\
+	./configure;\
+	make;\
+	sudo make install;\
+
 ccls: ## Install c,c++ language server
 	yay -S ccls
 
