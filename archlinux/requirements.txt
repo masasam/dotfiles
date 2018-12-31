@@ -47,7 +47,7 @@ gitdb2==2.0.5
 GitPython==2.1.11
 goobook==3.2.dev0
 google-api-python-client==1.7.7
-google-auth==1.6.1
+google-auth==1.6.2
 google-auth-httplib2==0.0.3
 graph-cli==0.1.1
 greenlet==0.4.15
@@ -114,8 +114,8 @@ prometheus-client==0.5.0
 prompt-toolkit==2.0.7
 psycopg2==2.7.6.1
 ptyprocess==0.6.0
-pyasn1==0.4.4
-pyasn1-modules==0.2.2
+pyasn1==0.4.5
+pyasn1-modules==0.2.3
 pycodestyle==2.4.0
 pycparser==2.19
 PyDispatcher==2.0.5
