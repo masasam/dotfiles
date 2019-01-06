@@ -80,6 +80,7 @@ lazy-object-proxy==1.3.1
 lensfun==0.3.2
 lesscpy==0.13.0
 lit==0.7.1.dev0
+litecli==1.0.0
 louis==3.8.0
 lxml==4.3.0
 MarkupSafe==1.1.0
