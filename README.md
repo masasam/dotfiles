@@ -390,6 +390,7 @@ If you make a mistake on the keyboard, erase all with Ctrl-u
 	pip install --user jupyter
 	pip install --user jupyterlab
 	pip install --user jupyterthemes
+	pip install --user litecli
 	pip install --user matplotlib
 	pip install --user mycli
 	pip install --user neovim
