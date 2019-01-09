@@ -7,12 +7,12 @@ astroid==2.1.0
 attrs==18.2.0
 Automat==0.7.0
 autopep8==1.4.3
-awscli==1.16.84
+awscli==1.16.85
 backcall==0.1.0
 bcrypt==3.1.5
 beautifulsoup4==4.7.1
 bleach==3.0.2
-botocore==1.12.74
+botocore==1.12.75
 btrfsutil==1.1.0
 cached-property==1.5.1
 cachetools==3.0.0
@@ -38,7 +38,7 @@ docker-pycreds==0.4.0
 dockerpty==0.4.1
 docopt==0.6.2
 docutils==0.14
-entrypoints==0.2.3
+entrypoints==0.3
 Faker==1.0.1
 flake8==3.6.0
 future==0.17.1
@@ -135,10 +135,10 @@ pyOpenSSL==18.0.0
 pyparsing==2.3.0
 python-dateutil==2.7.5
 python-etcd==0.4.5
-python-jsonrpc-server==0.0.2
-python-language-server==0.21.4
+python-jsonrpc-server==0.1.0
+python-language-server==0.21.5
 python-utils==2.3.0
-pytz==2018.7
+pytz==2018.9
 PyYAML==3.13
 pyzmq==17.1.2
 qtconsole==4.4.3
