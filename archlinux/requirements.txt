@@ -7,12 +7,12 @@ astroid==2.1.0
 attrs==18.2.0
 Automat==0.7.0
 autopep8==1.4.3
-awscli==1.16.86
+awscli==1.16.88
 backcall==0.1.0
 bcrypt==3.1.5
 beautifulsoup4==4.7.1
 bleach==3.1.0
-botocore==1.12.76
+botocore==1.12.78
 btrfsutil==1.1.0
 cached-property==1.5.1
 cachetools==3.0.0
@@ -32,7 +32,7 @@ decorator==4.3.0
 defusedxml==0.5.0
 Django==2.1.5
 dnspython==1.16.0
-docker==3.6.0
+docker==3.7.0
 docker-compose==1.23.2
 docker-pycreds==0.4.0
 dockerpty==0.4.1
@@ -161,7 +161,7 @@ simplejson==3.16.1
 six==1.12.0
 smmap2==2.0.5
 snowballstemmer==1.2.1
-soupsieve==1.6.2
+soupsieve==1.7
 speedtest-cli==2.0.2
 sqlparse==0.2.4
 sshuttle==0.78.4
@@ -187,12 +187,12 @@ vimiv==0.9.1
 virtualenv==16.2.0
 virtualenv-clone==0.4.0
 virtualenvwrapper==4.8.2
-w3lib==1.19.0
+w3lib==1.20.0
 wcwidth==0.1.7
 webencodings==0.5.1
 websocket-client==0.54.0
 widgetsnbextension==3.4.2
-wrapt==1.10.11
+wrapt==1.11.0
 x256==0.0.3
 yapf==0.25.0
 zope.interface==4.6.0
