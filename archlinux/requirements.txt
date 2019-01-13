@@ -161,7 +161,7 @@ simplejson==3.16.1
 six==1.12.0
 smmap2==2.0.5
 snowballstemmer==1.2.1
-soupsieve==1.7
+soupsieve==1.7.1
 speedtest-cli==2.0.2
 sqlparse==0.2.4
 sshuttle==0.78.4
