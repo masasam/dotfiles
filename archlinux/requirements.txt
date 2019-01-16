@@ -135,7 +135,7 @@ pyOpenSSL==18.0.0
 pyparsing==2.3.1
 python-dateutil==2.7.5
 python-etcd==0.4.5
-python-jsonrpc-server==0.1.0
+python-jsonrpc-server==0.1.1
 python-language-server==0.21.5
 python-utils==2.3.0
 pytz==2018.9
