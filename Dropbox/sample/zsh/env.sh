@@ -1,0 +1,1 @@
+export DATABASE_PASSWORD=''
