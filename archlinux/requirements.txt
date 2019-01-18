@@ -1,4 +1,4 @@
-ansible==2.7.5
+ansible==2.7.6
 ansible-lint==4.0.1
 anytree==2.4.3
 appdirs==1.4.3
@@ -7,12 +7,12 @@ astroid==2.1.0
 attrs==18.2.0
 Automat==0.7.0
 autopep8==1.4.3
-awscli==1.16.90
+awscli==1.16.91
 backcall==0.1.0
 bcrypt==3.1.6
 beautifulsoup4==4.7.1
 bleach==3.1.0
-botocore==1.12.80
+botocore==1.12.81
 btrfsutil==1.1.0
 cached-property==1.5.1
 cachetools==3.0.0
@@ -173,7 +173,7 @@ terminado==0.8.1
 terminaltables==3.1.0
 testpath==0.4.2
 text-unidecode==1.2
-texttable==1.5.0
+texttable==1.6.0
 tldr==0.4.4
 tornado==5.1.1
 traitlets==4.3.2
@@ -185,7 +185,7 @@ uritemplate==3.0.0
 urllib3==1.24.1
 vimiv==0.9.1
 virtualenv==16.2.0
-virtualenv-clone==0.4.0
+virtualenv-clone==0.5.0
 virtualenvwrapper==4.8.2
 w3lib==1.20.0
 wcwidth==0.1.7
