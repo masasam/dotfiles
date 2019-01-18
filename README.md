@@ -392,6 +392,7 @@ If you make a mistake on the keyboard, erase all with Ctrl-u
 	pip install --user jupyterthemes
 	pip install --user litecli
 	pip install --user matplotlib
+	pip install --user mps-youtube
 	pip install --user mycli
 	pip install --user neovim
 	pip install --user pandas
@@ -419,6 +420,7 @@ If you make a mistake on the keyboard, erase all with Ctrl-u
 	pip install --user virtualenv
 	pip install --user virtualenvwrapper
 	pip install --user yapf
+	pip install --user youtube-dl
 
 #### Install using golang
 

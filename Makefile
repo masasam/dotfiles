@@ -86,6 +86,7 @@ pipinstall: ## Install python packages
 	pip install --user jupyterthemes
 	pip install --user litecli
 	pip install --user matplotlib
+	pip install --user mps-youtube
 	pip install --user mycli
 	pip install --user neovim
 	pip install --user pandas
@@ -111,6 +112,7 @@ pipinstall: ## Install python packages
 	pip install --user virtualenv
 	pip install --user virtualenvwrapper
 	pip install --user yapf
+	pip install --user youtube-dl
 
 goinstall: ## Install go packages
 	mkdir -p ${HOME}/{bin,src}
