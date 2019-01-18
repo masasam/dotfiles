@@ -467,7 +467,6 @@ liblouis
 liblqr
 libmagick
 libmagick6
-libmariadbclient
 libmm-glib
 libmms
 libmng
@@ -647,6 +646,7 @@ man-db
 man-pages
 mariadb
 mariadb-clients
+mariadb-libs
 mathjax
 mdadm
 mesa
