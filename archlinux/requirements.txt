@@ -7,12 +7,12 @@ astroid==2.1.0
 attrs==18.2.0
 Automat==0.7.0
 autopep8==1.4.3
-awscli==1.16.91
+awscli==1.16.92
 backcall==0.1.0
 bcrypt==3.1.6
 beautifulsoup4==4.7.1
 bleach==3.1.0
-botocore==1.12.81
+botocore==1.12.82
 btrfsutil==1.1.0
 cached-property==1.5.1
 cachetools==3.0.0
@@ -49,7 +49,7 @@ goobook==3.2.dev0
 google-api-python-client==1.7.7
 google-auth==1.6.2
 google-auth-httplib2==0.0.3
-graph-cli==0.1.1
+graph-cli==0.1.2
 greenlet==0.4.15
 httpie==1.0.2
 httplib2==0.12.0
@@ -163,7 +163,7 @@ simplejson==3.16.1
 six==1.12.0
 smmap2==2.0.5
 snowballstemmer==1.2.1
-soupsieve==1.7.1
+soupsieve==1.7.2
 speedtest-cli==2.0.2
 sqlparse==0.2.4
 sshuttle==0.78.4
