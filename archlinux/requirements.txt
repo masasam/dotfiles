@@ -194,7 +194,7 @@ wcwidth==0.1.7
 webencodings==0.5.1
 websocket-client==0.54.0
 widgetsnbextension==3.4.2
-wrapt==1.11.0
+wrapt==1.11.1
 x256==0.0.3
 yapf==0.25.0
 youtube-dl==2019.1.17
