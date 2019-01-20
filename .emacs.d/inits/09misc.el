@@ -18,6 +18,10 @@
 (bind-key "C-M-SPC" 'er/expand-region)
 
 
+;; smart-jump
+(smart-jump-setup-default-registers)
+
+
 ;; avy
 (bind-key "C-r" 'avy-goto-char-2)
 

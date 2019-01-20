@@ -122,6 +122,7 @@
 (package-install 'slime-company)
 (package-install 'slim-mode)
 (package-install 'smartparens)
+(package-install 'smart-jump)
 (package-install 'smex)
 (package-install 'swiper)
 (package-install 'tldr)
