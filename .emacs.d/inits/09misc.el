@@ -18,10 +18,6 @@
 (bind-key "C-M-SPC" 'er/expand-region)
 
 
-;; smart-jump
-(smart-jump-setup-default-registers)
-
-
 ;; avy
 (bind-key "C-r" 'avy-goto-char-2)
 
@@ -64,6 +60,10 @@
 ;; dumb-jump
 (dumb-jump-mode)
 (setq dumb-jump-selector 'ivy)
+
+
+;; smart-jump
+(smart-jump-setup-default-registers)
 
 
 ;; yesnippet
