@@ -414,6 +414,7 @@ If you make a mistake on the keyboard, erase all with Ctrl-u
 	pip install --user seaborn
 	pip install --user selenium
 	pip install --user speedtest-cli
+	pip install --user streamlink
 	pip install --user tldr
 	pip install --user trash-cli
 	pip install --user truffleHog
