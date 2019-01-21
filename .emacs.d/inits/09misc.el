@@ -3,6 +3,12 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
+;; prescient
+(ivy-prescient-mode 1)
+(company-prescient-mode 1)
+(prescient-persist-mode 1)
+
+
 ;; slack
 (setq slack-buffer-emojify t)
 (add-hook 'after-init-hook #'global-emojify-mode)
