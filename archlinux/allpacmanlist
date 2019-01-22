@@ -206,6 +206,7 @@ gsfonts
 gsl
 gsm
 gspell
+gssdp
 gst-plugins-bad
 gst-plugins-base
 gst-plugins-base-libs
@@ -221,6 +222,8 @@ gtkspell
 gts
 guile
 guile2.0
+gupnp
+gupnp-igd
 gvfs
 gvfs-smb
 gzip
@@ -258,6 +261,7 @@ haskell-data-default-instances-old-locale
 haskell-digest
 haskell-dlist
 haskell-doctemplates
+haskell-erf
 haskell-exceptions
 haskell-glob
 haskell-haddock-library
