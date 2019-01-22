@@ -11,6 +11,7 @@
 	     (setq c-basic-offset 4)
 	     (setq indent-tabs-mode t)))
 
-(add-to-list 'eglot-server-programs '(go-mode . ("go-langserver" "-gocodecompletion")))
+(with-eval-after-load 'eglot
+  (add-to-list 'eglot-server-programs '(go-mode . ("go-langserver" "-gocodecompletion"))))
 
 ;;; 23go.el ends here
