@@ -115,7 +115,7 @@ pipinstall: ## Install python packages
 
 goinstall: ## Install go packages
 	mkdir -p ${HOME}/{bin,src}
-	go get -u -v golang.org/x/tools/cmd/golsp
+	go get -u -v golang.org/x/tools/cmd/gopls
 	go get -u -v github.com/sourcegraph/go-langserver
 	go get -u -v github.com/golang/dep/cmd/dep
 	go get -u -v github.com/pressly/goose/cmd/goose
