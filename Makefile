@@ -277,6 +277,9 @@ mew: ## Install mew as mail reader
 ccls: ## Install c,c++ language server
 	yay -S ccls
 
+bingo: ## Install golang language server
+	yay -S bingo
+
 mpsyt: ## Install and deploy mps-youtube
 	pip install --user mps-youtube
 	pip install --user youtube-dl

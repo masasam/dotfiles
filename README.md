@@ -349,6 +349,7 @@ If you make a mistake on the keyboard, erase all with Ctrl-u
 
 #### Install using yay
 
+	yay -S bingo
 	yay -S discord
 	yay -S drone-cli
 	yay -S git-secrets
