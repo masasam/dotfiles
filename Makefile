@@ -255,7 +255,7 @@ podman: ## Podman initial setup
 	sudo systemctl enable io.podman.service
 	sudo systemctl start io.podman.service
 
-mariadb: # Mariadb initial setup
+mariadb: ## Mariadb initial setup
 	sudo ln -vsf ${PWD}/etc/sysctl.d/40-max-user-watches.conf   /etc/sysctl.d/40-max-user-watches.conf
 	sudo pacman -S mariadb mariadb-clients
 	sudo ln -vsf ${PWD}/etc/mysql/my.cnf   /etc/mysql/my.cnf
@@ -469,7 +469,7 @@ wordpress: ## Deploy wordpress
 	echo 'create database wp' | mysql -u root
 	echo "grant all privileges on wp.* to wp@localhost identified by 'password';FLUSH PRIVILEGES;" | mysql -u root
 
-emacs-devel: # Install development version of emacs
+emacs-devel: ## Install development version of emacs
 	cd ${HOME}/src/github.com/masasam;\
 	git clone -b emacs-27 git@github.com:emacs-mirror/emacs.git;\
 	cd emacs;\
@@ -479,7 +479,7 @@ emacs-devel: # Install development version of emacs
 	sudo make install;\
 	rm -rf ${HOME}/.emacs.d/elpa
 
-google-cloud: # Install SDK
+google-cloud: ## Install SDK
 	yay -S google-cloud-sdk
 
 kubernetes: ## Init kubernetes 
@@ -631,7 +631,7 @@ testsimple: ## Test this Makefile with docker without Dropbox
 	@echo "========== make rustinstall =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make rustinstall"
 
-testpath: # Echo PATH
+testpath: ## Echo PATH
 	PATH=$$PATH
 	@echo $$PATH
 	GOPATH=$$GOPATH
