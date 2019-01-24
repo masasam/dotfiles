@@ -147,6 +147,7 @@ php
 pkgconf
 pkgfile
 pkgstats
+podman
 poppler-data
 postgresql-libs
 procps-ng

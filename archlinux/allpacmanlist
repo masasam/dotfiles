@@ -62,11 +62,13 @@ clutter-gtk
 cmake
 cmark-gfm
 cmatrix
+cni-plugins
 cogl
 colord
 colord-gtk
 compface
 compiler-rt
+conmon
 containerd
 coreutils
 cpio
@@ -708,6 +710,7 @@ openssl-1.0
 optipng
 opus
 orc
+ostree
 otf-ipafont
 p11-kit
 p7zip
@@ -741,6 +744,7 @@ pixman
 pkgconf
 pkgfile
 pkgstats
+podman
 polkit
 poppler
 poppler-data
@@ -848,8 +852,10 @@ shadow
 shared-color-targets
 shared-mime-info
 shellcheck
+skopeo
 slang
 slib
+slirp4netns
 smbclient
 snappy
 sound-theme-freedesktop
