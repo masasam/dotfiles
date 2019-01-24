@@ -60,7 +60,7 @@ install: ## Install arch linux packages using pacman
 	pacman-contrib x11-ssh-askpass libreoffice-fresh-ja python-prompt_toolkit \
 	jhead peek ncdu sxiv gnome-screenshot sshfs fping syncthing terraform gnupg \
 	xdotool sshuttle packer ripgrep stunnel vimiv adapta-gtk-theme gnome-tweaks \
-	nnn podman
+	nnn
 	sudo pkgfile --update
 
 pipinstall: ## Install python packages
@@ -249,6 +249,11 @@ docker: ## Docker initial setup
 	ln -vsf ${HOME}/Dropbox/docker/config.json   ${HOME}/.docker/config.json
 	sudo systemctl enable docker.service
 	sudo systemctl start docker.service
+
+podman: ## Podman initial setup
+	sudo pacman -S podman
+	sudo systemctl enable io.podman.service
+	sudo systemctl start io.podman.service
 
 mariadb: # Mariadb initial setup
 	sudo ln -vsf ${PWD}/etc/sysctl.d/40-max-user-watches.conf   /etc/sysctl.d/40-max-user-watches.conf
