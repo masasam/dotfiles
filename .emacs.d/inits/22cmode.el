@@ -3,7 +3,6 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
-(add-hook 'sh-mode-hook 'eglot-ensure)
 (add-hook 'c-mode-hook 'eglot-ensure)
 (add-hook 'c++-mode-hook 'eglot-ensure)
 
