@@ -28,7 +28,7 @@ constantly==15.1.0
 cryptography==2.5
 cssselect==1.0.3
 cycler==0.10.0
-decorator==4.3.0
+decorator==4.3.2
 defusedxml==0.5.0
 Django==2.1.5
 dnspython==1.16.0
@@ -128,7 +128,7 @@ pycryptodome==3.7.3
 PyDispatcher==2.0.5
 pydoc-utils==1.0.1
 pydocstyle==3.0.0
-pyflakes==2.0.0
+pyflakes==2.1.0
 Pygments==2.3.1
 PyGObject==3.30.4
 PyHamcrest==1.9.0
@@ -174,7 +174,7 @@ sqlparse==0.2.4
 sshuttle==0.78.4
 stevedore==1.30.0
 streamlink==0.14.2
-tabulate==0.8.2
+tabulate==0.8.3
 team==1.0
 termcolor==1.1.0
 terminado==0.8.1
