@@ -93,6 +93,7 @@
 (package-install 'js2-mode)
 (package-install 'json-mode)
 (package-install 'json-navigator)
+(package-install 'keycast)
 (package-install 'keychain-environment)
 (package-install 'key-chord)
 (package-install 'lispy)
