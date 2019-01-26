@@ -17,6 +17,12 @@ init: ## Initial deploy dotfiles
 	ln -vsf ${PWD}/.aspell.conf   ${HOME}/.aspell.conf
 	ln -vsf ${PWD}/.gitconfig   ${HOME}/.gitconfig
 
+rclone: ## Init rclone
+	sudo pacman -S rclone
+	chmod 600   ${HOME}/Dropbox/zsh/rclone/rclone.conf
+	test -L ${HOME}/.config/rclone || rm -rf ${HOME}/.config/rclone
+	ln -vsfn ${HOME}/Dropbox/zsh/rclone   ${HOME}/.config/rclone
+
 initdropbox: ## Initial deploy dotfiles using dropbox
 	sudo ln -vsf ${HOME}/Dropbox/arch/hosts   /etc/hosts
 	mkdir -p ${HOME}/.config
@@ -24,9 +30,6 @@ initdropbox: ## Initial deploy dotfiles using dropbox
 	ln -vsf ${HOME}/Dropbox/zsh/.authinfo   ${HOME}/.authinfo
 	ln -vsf ${HOME}/Dropbox/zsh/.mycli-history   ${HOME}/.mycli-history
 	ln -vsf ${HOME}/Dropbox/zsh/hub   ${HOME}/.config/hub
-	chmod 600   ${HOME}/Dropbox/zsh/rclone.conf
-	mkdir -p ${HOME}/.config/rclone
-	ln -vsf ${HOME}/Dropbox/zsh/rclone.conf   ${HOME}/.config/rclone/rclone.conf
 	test -L ${HOME}/.ssh || rm -rf ${HOME}/.ssh
 	ln -vsfn ${HOME}/Dropbox/ssh   ${HOME}/.ssh
 	chmod 600   ${HOME}/.ssh/id_rsa
@@ -49,7 +52,7 @@ install: ## Install arch linux packages using pacman
 	inkscape file-roller xclip atool debootstrap oath-toolkit imagemagick lynx \
 	the_silver_searcher cifs-utils elinks flameshot ruby-rdoc ipcalc traceroute \
 	cups-pdf openssh firefox firefox-i18n-ja gimp strace lhasa hub bookworm tig \
-	pkgfile dconf-editor rsync nodejs debian-archive-keyring gauche cpio rclone \
+	pkgfile dconf-editor rsync nodejs debian-archive-keyring gauche cpio nnn \
 	nmap poppler-data ffmpeg asciidoc sbcl docker aspell aspell-en screen mosh \
 	gdb wmctrl pwgen linux-docs htop tcpdump gvfs p7zip lzop fzf gpaste optipng \
 	arch-install-scripts pandoc jq pkgstats ruby highlight alsa-utils geckodriver \
@@ -59,8 +62,7 @@ install: ## Install arch linux packages using pacman
 	cscope postgresql-libs pdfgrep gnu-netcat cmatrix jpegoptim nethogs mlocate \
 	pacman-contrib x11-ssh-askpass libreoffice-fresh-ja python-prompt_toolkit \
 	jhead peek ncdu sxiv gnome-screenshot sshfs fping syncthing terraform gnupg \
-	xdotool sshuttle packer ripgrep stunnel vimiv adapta-gtk-theme gnome-tweaks \
-	nnn
+	xdotool sshuttle packer ripgrep stunnel vimiv adapta-gtk-theme gnome-tweaks
 	sudo pkgfile --update
 
 pipinstall: ## Install python packages
