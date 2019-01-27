@@ -3,6 +3,12 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
+(defun nautilus-open ()
+  "Open current directry with nautilus."
+  (interactive)
+  (shell-command (concat "xdg-open " default-directory)))
+
+
 (defun nautilus-dropbox ()
   "Open dropbox directry with nautilus."
   (interactive)
