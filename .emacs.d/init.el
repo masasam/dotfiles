@@ -85,6 +85,7 @@
 (package-install 'haml-mode)
 (package-install 'htmlize)
 (package-install 'hydra)
+(package-install 'imenu-anywhere)
 (package-install 'indium)
 (package-install 'init-loader)
 (package-install 'ivy-xref)
