@@ -19,7 +19,7 @@ cachetools==3.0.0
 certifi==2018.11.29
 cffi==1.11.5
 chardet==3.0.4
-cheat==2.3.1
+cheat==2.4.0
 cli-helpers==1.1.0
 Click==7.0
 colorama==0.4.1
@@ -203,5 +203,5 @@ widgetsnbextension==3.4.2
 wrapt==1.11.1
 x256==0.0.3
 yapf==0.25.0
-youtube-dl==2019.1.24
+youtube-dl==2019.1.27
 zope.interface==4.6.0
