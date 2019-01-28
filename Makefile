@@ -282,6 +282,11 @@ mew: ## Install mew as mail reader
 	make;\
 	sudo make install;\
 
+dingo: ## Install dingo Google DNS over HTTPS
+	sudo pacman -S dingo
+	sudo systemctl enable dingo.service
+	sudo systemctl start dingo.service
+
 ccls: ## Install c,c++ language server
 	yay -S ccls
 
