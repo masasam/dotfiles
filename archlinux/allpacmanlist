@@ -92,6 +92,7 @@ desktop-file-utils
 device-mapper
 dhcpcd
 diffutils
+dingo
 djvulibre
 dmraid
 dnsmasq

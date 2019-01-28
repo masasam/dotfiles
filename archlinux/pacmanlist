@@ -27,6 +27,7 @@ debootstrap
 device-mapper
 dhcpcd
 diffutils
+dingo
 dnsmasq
 docker
 e2fsprogs
