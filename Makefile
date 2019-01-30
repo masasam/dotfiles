@@ -17,12 +17,6 @@ init: ## Initial deploy dotfiles
 	ln -vsf ${PWD}/.aspell.conf   ${HOME}/.aspell.conf
 	ln -vsf ${PWD}/.gitconfig   ${HOME}/.gitconfig
 
-rclone: ## Init rclone
-	sudo pacman -S rclone
-	chmod 600   ${HOME}/Dropbox/zsh/rclone/rclone.conf
-	test -L ${HOME}/.config/rclone || rm -rf ${HOME}/.config/rclone
-	ln -vsfn ${HOME}/Dropbox/zsh/rclone   ${HOME}/.config/rclone
-
 initdropbox: ## Initial deploy dotfiles using dropbox
 	sudo ln -vsf ${HOME}/Dropbox/arch/hosts   /etc/hosts
 	mkdir -p ${HOME}/.config
@@ -223,6 +217,12 @@ tym: ## Init tym terminal
 	mkdir -p ${HOME}/.config/tym
 	ln -vsf ${PWD}/.config/tym/config.lua   ${HOME}/.config/tym/config.lua
 	sudo ln -vsf ${PWD}/usr/share/applications/tym.desktop   /usr/share/applications/tym.desktop
+
+rclone: ## Init rclone
+	sudo pacman -S rclone
+	chmod 600   ${HOME}/Dropbox/zsh/rclone/rclone.conf
+	test -L ${HOME}/.config/rclone || rm -rf ${HOME}/.config/rclone
+	ln -vsfn ${HOME}/Dropbox/zsh/rclone   ${HOME}/.config/rclone
 
 dnsmasq: ## Init dnsmasq
 	sudo pacman -S dnsmasq
