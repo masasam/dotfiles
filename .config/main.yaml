@@ -6,6 +6,6 @@ windows:
   options:
     main-pane-height: 10
   panes:
-    -
-    -
+    - clear
+    - clear
     -
