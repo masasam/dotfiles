@@ -153,7 +153,7 @@ gdk-pixbuf2
 gdm
 geckodriver
 gegl
-geoclue2
+geoclue
 geocode-glib
 gettext
 ghc-libs
