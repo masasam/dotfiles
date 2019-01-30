@@ -109,6 +109,7 @@ pipinstall: ## Install python packages
 	pip install --user speedtest-cli
 	pip install --user streamlink
 	pip install --user tldr
+	pip install --user tmuxp
 	pip install --user trash-cli
 	pip install --user truffleHog
 	pip install --user virtualenv
