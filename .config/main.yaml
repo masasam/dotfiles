@@ -1,0 +1,11 @@
+session_name: main
+start_directory: '~'
+windows:
+- window_name: develop
+  layout: main-horizontal
+  options:
+    main-pane-height: 10
+  panes:
+    -
+    -
+    -

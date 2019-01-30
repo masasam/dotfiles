@@ -109,7 +109,6 @@ pipinstall: ## Install python packages
 	pip install --user speedtest-cli
 	pip install --user streamlink
 	pip install --user tldr
-	pip install --user tmuxp
 	pip install --user trash-cli
 	pip install --user truffleHog
 	pip install --user virtualenv
@@ -397,6 +396,10 @@ aws: ## Init aws cli
 	pip install --user awscli
 	test -L ${HOME}/.aws || rm -rf ${HOME}/.aws
 	ln -vsfn ${HOME}/Dropbox/zsh/.aws   ${HOME}/.aws
+
+tmuxp: ## Install tmuxp
+	pip install --user tmuxp
+	sudo ln -vsf ${PWD}/.config/main.yaml   ${HOME}/.config/main.yaml
 
 sk-tmux: ## Init sk-tmux
 	chmod a+x /home/masa/Dropbox/zsh/sk-tmux
