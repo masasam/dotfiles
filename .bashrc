@@ -10,6 +10,7 @@ alias remacs='emacs -q -l ~/Dropbox/emacs/default.el'
 PS1='[\u@\h \W]\$ '
 alias screenstart='screen -D -RR'
 alias tmuxstart='tmux new-session -A -s main'
+alias tmuxdev='tmuxp load main'
 export HISTCONTROL=ignoredups
 export GOPATH=$HOME
 export PATH="$PATH:$GOPATH/bin"
