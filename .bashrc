@@ -11,6 +11,7 @@ PS1='[\u@\h \W]\$ '
 alias screenstart='screen -D -RR'
 alias tmuxstart='tmux new-session -A -s main'
 alias tmuxdev='tmuxp load main'
+alias urxvtsetup='xrdb -merge $HOME/.Xresources;exit'
 export HISTCONTROL=ignoredups
 export GOPATH=$HOME
 export PATH="$PATH:$GOPATH/bin"
@@ -30,7 +31,3 @@ if [ -d "${RBENV_ROOT}" ]; then
   export PATH="${RBENV_ROOT}/bin:${PATH}"
   eval "$(rbenv init -)"
 fi
-function urxvt-setup (){
-    xrdb -merge $HOME/.Xresources
-    exit
-}
