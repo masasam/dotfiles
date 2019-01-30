@@ -398,6 +398,7 @@ aws: ## Init aws cli
 	ln -vsfn ${HOME}/Dropbox/zsh/.aws   ${HOME}/.aws
 
 tmuxp: ## Install tmuxp
+	mkdir -p ${HOME}/.local
 	pip install --user tmuxp
 	sudo ln -vsf ${PWD}/.config/main.yaml   ${HOME}/.config/main.yaml
 
