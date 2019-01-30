@@ -77,11 +77,13 @@ jupyter-core==4.4.0
 jupyterlab==0.35.4
 jupyterlab-server==0.2.0
 jupyterthemes==0.20.0
+kaptan==0.5.11
 kitchen==1.2.5
 kiwisolver==1.0.1
 lazy-object-proxy==1.3.1
 lensfun==0.3.2
 lesscpy==0.13.0
+libtmux==0.8.1
 lit==0.7.1.dev0
 litecli==1.0.0
 louis==3.8.0
@@ -183,6 +185,7 @@ testpath==0.4.2
 text-unidecode==1.2
 texttable==1.6.0
 tldr==0.4.4
+tmuxp==1.5.0
 tornado==5.1.1
 traitlets==4.3.2
 trash-cli==0.17.1.14
