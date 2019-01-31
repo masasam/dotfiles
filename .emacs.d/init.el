@@ -29,6 +29,7 @@
   (package-refresh-contents))
 
 ;; package
+(package-install 'ag)
 (package-install 'aggressive-indent)
 (package-install 'alarm-clock)
 (package-install 'auto-compile)
@@ -137,6 +138,7 @@
 (package-install 'volatile-highlights)
 (package-install 'web-mode)
 (package-install 'which-key)
+(package-install 'wgrep-ag)
 (package-install 'yaml-mode)
 (package-install 'yasnippet)
 (package-install 'yasnippet-snippets)
