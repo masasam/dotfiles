@@ -119,6 +119,7 @@
 (package-install 'rbenv)
 (package-install 'realgud)
 (package-install 'realgud-byebug)
+(package-install 'rg)
 (package-install 'rjsx-mode)
 (package-install 'rspec-mode)
 (package-install 'rustic)
