@@ -31,6 +31,7 @@
 (setq counsel-yank-pop-separator
       "\n------------------------------------------------------------\n")
 
+(setq swiper-include-line-number-in-search t)
 
 (defun swiper-for-region-or-swiper ()
   "If the region is active, swiper-for-region.
