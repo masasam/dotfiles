@@ -69,6 +69,7 @@
 (package-install 'exec-path-from-shell)
 (package-install 'expand-region)
 (package-install 'fill-column-indicator)
+(package-install 'find-file-in-project)
 (package-install 'flycheck)
 (package-install 'flycheck-package)
 (package-install 'flycheck-title)
