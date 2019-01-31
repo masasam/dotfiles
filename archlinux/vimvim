@@ -1,0 +1,20 @@
+unmapAll
+map j scrollDown
+map k  scrollUp
+map h goBack
+map l goForward
+map i enterInsertMode
+map I focusInput
+map H goUp
+map : goToRoot
+map ; LinkHints.activateMode
+map . nextTab
+map , previousTab
+map > moveTabRight
+map < moveTabLeft
+map r Vomnibar.activate
+map / enterFindMode
+map n performFind
+map N performBackwardsFind
+map gg scrollToTop
+map G scrollToBottom
