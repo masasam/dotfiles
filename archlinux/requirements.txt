@@ -1,6 +1,6 @@
 ansible==2.7.6
 ansible-lint==4.0.1
-anytree==2.4.3
+anytree==2.5.0
 appdirs==1.4.3
 asn1crypto==0.24.0
 astroid==2.1.0
@@ -40,7 +40,7 @@ docopt==0.6.2
 docutils==0.14
 entrypoints==0.3
 Faker==1.0.2
-flake8==3.7.3
+flake8==3.7.4
 future==0.17.1
 gif-for-cli==1.1.1
 gitdb2==2.0.5
