@@ -1,1 +1,4 @@
 get-pip.py
+.htaccess
+vendor
+cache
