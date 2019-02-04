@@ -1,5 +1,6 @@
 export PATH := ${HOME}/.local/bin:${HOME}/.node_modules/bin:${HOME}/.cargo/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/bin/core_perl:${HOME}/bin
 export GOPATH := ${HOME}
+export COMPOSER_HOME := ${HOME}/src/github.com/masasam/dotfiles
 
 init: ## Initial deploy dotfiles
 	test -L ${HOME}/.emacs.d || rm -rf ${HOME}/.emacs.d
@@ -292,6 +293,10 @@ ccls: ## Install c,c++ language server
 
 bingo: ## Install golang language server
 	yay -S bingo
+
+php-language-server: ## Install php language-server 
+	sudo pacman -S composer
+	composer require felixfbecker/language-server 
 
 mpsyt: ## Install and deploy mps-youtube
 	pip install --user mps-youtube
