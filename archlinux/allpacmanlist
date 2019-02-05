@@ -68,6 +68,7 @@ colord
 colord-gtk
 compface
 compiler-rt
+composer
 conmon
 containerd
 coreutils
@@ -432,6 +433,7 @@ libevdev
 libevent
 libexif
 libexttextcat
+libfbclient
 libfdk-aac
 libffi
 libfontenc
