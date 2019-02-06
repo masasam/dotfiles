@@ -655,6 +655,16 @@ function quickman() {
     fi
 }
 
+
+function fetch-pull-request() {
+    echo "Please input pull request number"
+    read NUM
+    echo "Please input branch"
+    read BRANCH
+    git fetch origin pull/${NUM}/head:${BRANCH}
+}
+
+
 # zsh-syntax-highlighting(pacman -S zsh-syntax-highlighting)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # zsh-completions for google-cloud-sdk(yay google-cloud-sdk)
