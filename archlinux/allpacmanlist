@@ -499,7 +499,6 @@ libnice
 libnl
 libnm
 libnm-glib
-libnm-gtk
 libnma
 libnotify
 libnsl

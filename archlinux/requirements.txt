@@ -7,12 +7,12 @@ astroid==2.1.0
 attrs==18.2.0
 Automat==0.7.0
 autopep8==1.4.3
-awscli==1.16.98
+awscli==1.16.99
 backcall==0.1.0
 bcrypt==3.1.6
 beautifulsoup4==4.7.1
 bleach==3.1.0
-botocore==1.12.88
+botocore==1.12.89
 btrfsutil==1.1.0
 cached-property==1.5.1
 cachetools==3.1.0
@@ -157,7 +157,7 @@ requests==2.21.0
 rope==0.11.0
 rsa==4.0
 rtv==1.25.0
-s3transfer==0.1.13
+s3transfer==0.2.0
 scikit-learn==0.20.2
 scipy==1.2.0
 Scrapy==1.6.0
@@ -173,7 +173,7 @@ snowballstemmer==1.2.1
 soupsieve==1.7.3
 speedtest-cli==2.0.2
 sqlparse==0.2.4
-sshuttle==0.78.4
+sshuttle==0.78.5
 stevedore==1.30.0
 streamlink==1.0.0
 tabulate==0.8.3
@@ -206,5 +206,5 @@ widgetsnbextension==3.4.2
 wrapt==1.11.1
 x256==0.0.3
 yapf==0.25.0
-youtube-dl==2019.1.30.1
+youtube-dl==2019.2.8
 zope.interface==4.6.0
