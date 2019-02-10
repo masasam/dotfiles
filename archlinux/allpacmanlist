@@ -283,6 +283,7 @@ haskell-hxt-charproperties
 haskell-hxt-regex-xmlschema
 haskell-hxt-unicode
 haskell-integer-logarithms
+haskell-ipynb
 haskell-juicypixels
 haskell-lexer
 haskell-memory
