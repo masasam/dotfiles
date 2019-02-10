@@ -87,7 +87,7 @@ libtmux==0.8.1
 lit==0.7.1.dev0
 litecli==1.0.0
 louis==3.8.0
-lxml==4.3.0
+lxml==4.3.1
 MarkupSafe==1.1.0
 matplotlib==3.0.2
 mccabe==0.6.1
@@ -95,7 +95,7 @@ mistune==0.8.4
 mps-youtube==0.2.8
 msgpack==0.6.1
 mycli==1.19.0
-nbconvert==5.4.0
+nbconvert==5.4.1
 nbformat==4.4.0
 neovim==0.3.1
 notebook==5.7.4
@@ -195,9 +195,9 @@ Twisted==18.9.0
 uritemplate==3.0.0
 urllib3==1.24.1
 vimiv==0.9.1
-virtualenv==16.3.0
+virtualenv==16.4.0
 virtualenv-clone==0.5.1
-virtualenvwrapper==4.8.2
+virtualenvwrapper==4.8.4
 w3lib==1.20.0
 wcwidth==0.1.7
 webencodings==0.5.1
@@ -205,6 +205,6 @@ websocket-client==0.54.0
 widgetsnbextension==3.4.2
 wrapt==1.11.1
 x256==0.0.3
-yapf==0.25.0
+yapf==0.26.0
 youtube-dl==2019.2.8
 zope.interface==4.6.0
