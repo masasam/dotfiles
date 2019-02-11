@@ -62,7 +62,6 @@
 (package-install 'editorconfig-generate)
 (package-install 'edit-indirect)
 (package-install 'eglot)
-(package-install 'ein)
 (package-install 'elisp-slime-nav)
 (package-install 'enh-ruby-mode)
 (package-install 'espy)
