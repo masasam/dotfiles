@@ -1,6 +1,6 @@
 ansible==2.7.7
-ansible-lint==4.0.1
-anytree==2.5.0
+ansible-lint==4.1.0
+anytree==2.6.0
 appdirs==1.4.3
 asn1crypto==0.24.0
 astroid==2.1.0
@@ -30,7 +30,7 @@ cssselect==1.0.3
 cycler==0.10.0
 decorator==4.3.2
 defusedxml==0.5.0
-Django==2.1.5
+Django==2.1.7
 dnspython==1.16.0
 docker==3.7.0
 docker-compose==1.23.2
@@ -154,9 +154,10 @@ qtconsole==4.4.3
 queuelib==1.5.0
 redis==3.1.0
 requests==2.21.0
-rope==0.11.0
+rope==0.12.0
 rsa==4.0
 rtv==1.25.0
+ruamel.yaml==0.15.87
 s3transfer==0.2.0
 scikit-learn==0.20.2
 scipy==1.2.1
