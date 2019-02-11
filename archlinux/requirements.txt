@@ -46,7 +46,7 @@ gif-for-cli==1.1.1
 gitdb2==2.0.5
 GitPython==2.1.11
 goobook==3.2.dev0
-google-api-python-client==1.7.7
+google-api-python-client==1.7.8
 google-auth==1.6.2
 google-auth-httplib2==0.0.3
 graph-cli==0.1.2
