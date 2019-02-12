@@ -46,6 +46,7 @@ filesystem
 findutils
 firefox
 firefox-i18n-ja
+firejail
 flameshot
 flex
 fping

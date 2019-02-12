@@ -57,7 +57,8 @@ install: ## Install arch linux packages using pacman
 	cscope postgresql-libs pdfgrep gnu-netcat cmatrix jpegoptim nethogs mlocate \
 	pacman-contrib x11-ssh-askpass libreoffice-fresh-ja python-prompt_toolkit \
 	jhead peek ncdu sxiv gnome-screenshot sshfs fping syncthing terraform gnupg \
-	xdotool sshuttle packer ripgrep stunnel vimiv adapta-gtk-theme gnome-tweaks
+	xdotool sshuttle packer ripgrep stunnel vimiv adapta-gtk-theme gnome-tweaks \
+	firejail
 	sudo pkgfile --update
 
 pipinstall: ## Install python packages
