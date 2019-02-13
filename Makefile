@@ -122,7 +122,7 @@ goinstall: ## Install go packages
 	go get -u -v github.com/kyoshidajp/ghkw
 	go get -u -v github.com/simeji/jid/cmd/jid
 	go get -u -v github.com/jmhodges/jsonpp
-	go get -u -v github.com/dinedal/textql...
+	go get -u -v github.com/mithrandie/csvq
 
 nodeinstall: ## Install node packages
 	mkdir -p ${HOME}/.node_modules

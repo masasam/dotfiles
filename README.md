@@ -437,7 +437,7 @@ If you make a mistake on the keyboard, erase all with Ctrl-u
 	go get -u -v github.com/kyoshidajp/ghkw
 	go get -u -v github.com/simeji/jid/cmd/jid
 	go get -u -v github.com/jmhodges/jsonpp
-	go get -u -v github.com/dinedal/textql...
+	go get -u -v github.com/mithrandie/csvq
 
 #### Install using yarn
 
