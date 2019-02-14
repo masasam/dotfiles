@@ -555,7 +555,6 @@ libssh2
 libstaroffice
 libstemmer
 libsynctex
-libsystemd
 libtasn1
 libteam
 libthai
@@ -883,6 +882,7 @@ sylpheed
 syncthing
 sysfsutils
 systemd
+systemd-libs
 systemd-sysvcompat
 t1lib
 taglib
