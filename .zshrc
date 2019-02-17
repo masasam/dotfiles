@@ -425,8 +425,7 @@ bindkey '^x^p' ps-fzf
 
 
 function gcloud-fzf() {
-    target=$(echo $(gcloud config configurations list | sed -e '1d' | fzf-tmux -d --reverse --prompt="gcloud > ") | awk '{print $1}')
-    gcloud config configurations activate ${target}
+    gcloud config configurations activate $(echo $(gcloud config configurations list | sed -e '1d' | fzf-tmux -d --reverse --prompt="gcloud > ") | awk '{print $1}')
     gcloud config configurations list
 }
 
