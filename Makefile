@@ -259,6 +259,9 @@ podman: ## Podman initial setup
 	sudo systemctl enable io.podman.service
 	sudo systemctl start io.podman.service
 
+circle-ci-cli: ## Install circle ci cli
+	curl -fLSs https://circle.ci/cli | sudo bash
+
 mariadb: ## Mariadb initial setup
 	sudo ln -vsf ${PWD}/etc/sysctl.d/40-max-user-watches.conf   /etc/sysctl.d/40-max-user-watches.conf
 	sudo pacman -S mariadb mariadb-clients
