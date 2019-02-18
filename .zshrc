@@ -674,14 +674,13 @@ function fetch-pull-request() {
 # zsh-syntax-highlighting(pacman -S zsh-syntax-highlighting)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # zsh-completions for google-cloud-sdk(yay google-cloud-sdk)
-# source /opt/google-cloud-sdk/completion.zsh.inc
 # zsh-completions for aws
 source ~/.local/bin/aws_zsh_completer.sh
 # password
 source ~/Dropbox/zsh/env.sh
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/masa/src/google-cloud-sdk/path.zsh.inc' ]; then . '/home/masa/src/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/home/masa/bin/google-cloud-sdk/path.zsh.inc' ]; then . '/home/masa/bin/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/home/masa/src/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/masa/src/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/home/masa/bin/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/masa/bin/google-cloud-sdk/completion.zsh.inc'; fi
