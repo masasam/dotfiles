@@ -503,12 +503,10 @@ emacs-devel: ## Install development version of emacs
 	rm -rf ${HOME}/.emacs.d/elpa
 
 google-cloud: ## Install SDK and setting
-	yay -S google-cloud-sdk
+	curl https://sdk.cloud.google.com | bash
 	test -L ${HOME}/.config/gcloud || rm -rf ${HOME}/.config/gcloud
 	ln -vsfn ${HOME}/Dropbox/zsh/gcloud   ${HOME}/.config/gcloud
-
-kubernetes: ## Init kubernetes 
-	sudo gcloud components update kubectl
+	gcloud components install kubectl
 	gcloud init
 
 kubernetes-cluster: ## Kubernetes cluster setup
