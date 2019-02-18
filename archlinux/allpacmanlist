@@ -668,6 +668,7 @@ mlocate
 mobile-broadband-provider-info
 mosh
 mozilla-common
+mpdecimal
 mpfr
 mpg123
 mpv
@@ -904,6 +905,7 @@ texlive-latexextra
 the_silver_searcher
 thin-provisioning-tools
 tig
+tk
 tmux
 totem-plparser
 traceroute
