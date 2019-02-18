@@ -276,7 +276,7 @@ mariadb: ## Mariadb initial setup
 
 postgresql: ## Postgresql initial setup
 	sudo pacman -S postgresql
-	sudo -u postgres initdb --locale $LANG -E UTF8 -D '/var/lib/postgres/data';\
+	sudo -u postgres initdb --locale $LANG -E UTF8 -D '/var/lib/postgres/data'
 	sudo systemctl enable postgresql.service
 	sudo systemctl start postgresql.service
 
