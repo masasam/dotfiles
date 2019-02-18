@@ -152,6 +152,7 @@ pkgfile
 pkgstats
 podman
 poppler-data
+postgresql
 postgresql-libs
 procps-ng
 psmisc

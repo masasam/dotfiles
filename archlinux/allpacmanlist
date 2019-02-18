@@ -754,6 +754,7 @@ poppler-data
 poppler-glib
 popt
 portaudio
+postgresql
 postgresql-libs
 potrace
 procps-ng
