@@ -276,9 +276,13 @@ mariadb: ## Mariadb initial setup
 
 postgresql: ## Postgresql initial setup
 	sudo pacman -S postgresql
+	cd /home;\
 	sudo -u postgres initdb --locale $LANG -E UTF8 -D '/var/lib/postgres/data'
 	sudo systemctl enable postgresql.service
 	sudo systemctl start postgresql.service
+	cd /home;\
+	sudo -u postgres createuser --interactive
+	createdb mydb
 
 redis: ## Redis inital setup
 	sudo pacman -S redis
