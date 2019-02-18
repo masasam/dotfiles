@@ -387,6 +387,7 @@ yay: ## Install yay using yay
 aur: ## Install arch linux AUR packages using yay
 	yay -S git-secrets
 	yay -S pencil
+	yay -S python36
 	yay -S sequeler-git
 	yay -S yaourt
 
