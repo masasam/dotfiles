@@ -673,7 +673,6 @@ function fetch-pull-request() {
 
 # zsh-syntax-highlighting(pacman -S zsh-syntax-highlighting)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# zsh-completions for google-cloud-sdk(yay google-cloud-sdk)
 # zsh-completions for aws
 source ~/.local/bin/aws_zsh_completer.sh
 # password
