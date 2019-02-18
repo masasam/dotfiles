@@ -274,6 +274,13 @@ mariadb: ## Mariadb initial setup
 	mysql_secure_installation
 	mysql -u root -p < ${HOME}/Dropbox/mariadb/world.sql/data
 
+postgresql: ## Postgresql initial setup
+	sudo pacman -S postgresql
+	sudo -u postgres -i;\
+	initdb --locale $LANG -E UTF8 -D '/var/lib/postgres/data';\
+	sudo systemctl enable postgresql.service
+	sudo systemctl start postgresql.service
+
 redis: ## Redis inital setup
 	sudo pacman -S redis
 	sudo systemctl enable redis.service
