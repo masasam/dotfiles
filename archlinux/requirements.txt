@@ -7,12 +7,12 @@ astroid==2.1.0
 attrs==18.2.0
 Automat==0.7.0
 autopep8==1.4.3
-awscli==1.16.106
+awscli==1.16.107
 backcall==0.1.0
 bcrypt==3.1.6
 beautifulsoup4==4.7.1
 bleach==3.1.0
-botocore==1.12.96
+botocore==1.12.97
 btrfsutil==1.1.0
 cached-property==1.5.1
 cachetools==3.1.0
@@ -40,7 +40,7 @@ docopt==0.6.2
 docutils==0.14
 entrypoints==0.3
 Faker==1.0.2
-flake8==3.7.5
+flake8==3.7.6
 future==0.17.1
 gif-for-cli==1.1.1
 gitdb2==2.0.5
@@ -121,6 +121,7 @@ progressbar2==3.39.2
 prometheus-client==0.5.0
 prompt-toolkit==2.0.8
 psycopg2==2.7.7
+psycopg2-binary==2.7.7
 ptyprocess==0.6.0
 pwquality==1.4.0
 pyasn1==0.4.5
@@ -187,7 +188,7 @@ testpath==0.4.2
 text-unidecode==1.2
 texttable==1.6.1
 tldr==0.4.4
-tmuxp==1.5.0
+tmuxp==1.5.1
 tornado==5.1.1
 traitlets==4.3.2
 trash-cli==0.17.1.14
