@@ -95,7 +95,7 @@
 
 
 (defun chromium-django-admin ()
-  "Open django development server with chromium."
+  "Open django development admin server with chromium."
   (interactive)
   (browse-url "http://localhost:8000/admin/"))
 
