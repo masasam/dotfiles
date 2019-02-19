@@ -226,8 +226,8 @@ alias rust='cargo-script'
 alias fontlist='fc-list | cut -d: -f1 | less'
 alias fontlistja='fc-list :lang=ja | cut -d: -f1 | less'
 alias jupytertheme='jt -t chesterish -T -f roboto -fs 9 -tf merriserif -tfs 11 -nf ptsans -nfs 11 -dfs 8 -ofs 8'
-alias gitmaster='git branch --set-upstream-to origin/master master'
-alias gitdevelop='git branch --set-upstream-to origin/develop master'
+alias gitupstrem2master='git branch --set-upstream-to origin/master master'
+alias gitupstrem2develop='git branch --set-upstream-to origin/develop master'
 
 
 # PATH
