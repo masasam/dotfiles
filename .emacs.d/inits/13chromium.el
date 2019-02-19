@@ -88,9 +88,15 @@
   (browse-url "http://localhost:3000"))
 
 
-(defun chromium-localhost ()
+(defun chromium-django ()
   "Open django development server with chromium."
   (interactive)
   (browse-url "http://localhost:8000"))
+
+
+(defun chromium-django-admin ()
+  "Open django development server with chromium."
+  (interactive)
+  (browse-url "http://localhost:8000/admin/"))
 
 ;;; 13chromium.el ends here
