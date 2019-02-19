@@ -220,6 +220,7 @@ alias pipbackup='cd ${HOME}/src/github.com/masasam/dotfiles; make pipbackup; cd 
 alias pipupdate='pip list --user | cut -d" " -f 1 | tail -n +3 | xargs pip install -U --user'
 alias archupdate='yay -Syu; paccache -ruk0'
 alias archbackup='cd ${HOME}/src/github.com/masasam/dotfiles; make backup; cd -'
+alias gcpupdate='gcloud components update'
 alias soundrecord='arecord -t wav -f dat -q | lame -b 128 -m s - out.mp3'
 alias rust='cargo-script'
 alias fontlist='fc-list | cut -d: -f1 | less'
