@@ -281,7 +281,7 @@ function dired() {
 
 
 ## Chdir to the ``default-directory'' of currently opened in Emacs buffer.
-function cde () {
+function cde() {
     EMACS_CWD=`emacsclient -e "
      (expand-file-name
       (with-current-buffer
@@ -358,16 +358,16 @@ function ghq-skim() {
 zle -N ghq-skim
 
 
-function ghq-delete () {
-  ghq list --full-path | fzf-tmux -d --reverse --prompt="github-delete > " | xargs -r rm -r
+function ghq-delete() {
+    ghq list --full-path | fzf-tmux -d --reverse --prompt="github-delete > " | xargs -r rm -r
 }
 zle -N ghq-delete
 bindkey '^xD' ghq-delete
 
 
-function ghs-import () {
-  [ "$#" -eq 0 ] && echo "Usage : ghs-import QUERY" && return 1
-  ghs "$@" | fzf-tmux -d --reverse | awk '{print $1}' | ghq import
+function ghs-import() {
+    [ "$#" -eq 0 ] && echo "Usage : ghs-import QUERY" && return 1
+    ghs "$@" | fzf-tmux -d --reverse | awk '{print $1}' | ghq import
 }
 
 
