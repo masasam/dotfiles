@@ -14,6 +14,13 @@
             (setq js-indent-level 2)
             (setq js2-strict-missing-semi-warning nil)))
 
+;; vue
+(eval-after-load 'vue-mode
+  '(add-hook 'vue-mode-hook #'add-node-modules-path))
+(flycheck-add-mode 'javascript-eslint 'vue-mode)
+(flycheck-add-mode 'javascript-eslint 'vue-html-mode)
+(flycheck-add-mode 'javascript-eslint 'css-mode)
+
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:
