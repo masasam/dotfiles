@@ -29,6 +29,7 @@
   (package-refresh-contents))
 
 ;; package
+(package-install 'add-node-modules-path)
 (package-install 'ag)
 (package-install 'aggressive-indent)
 (package-install 'alarm-clock)
