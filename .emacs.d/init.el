@@ -137,6 +137,7 @@
 (package-install 'typescript-mode)
 (package-install 'visual-regexp)
 (package-install 'volatile-highlights)
+(package-install 'vue-mode)
 (package-install 'web-mode)
 (package-install 'which-key)
 (package-install 'wgrep-ag)
