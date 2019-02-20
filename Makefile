@@ -136,7 +136,9 @@ nodeinstall: ## Install node packages
 	yarn global add create-react-app
 	yarn global add eslint
 	yarn global add eslint-cli
+	yarn global add eslint-config-vue
 	yarn global add eslint-plugin-react
+	yarn global add eslint-plugin-vue@next
 	yarn global add firebase-tools
 	yarn global add fx
 	yarn global add gulp
