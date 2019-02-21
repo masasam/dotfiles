@@ -154,6 +154,7 @@ nodeinstall: ## Install node packages
 	yarn global add ngrok
 	yarn global add npm
 	yarn global add prettier
+	yarn global add parcel-bundler
 	yarn global add tern
 	yarn global add vscode-css-languageserver-bin
 	yarn global add vue-cli
