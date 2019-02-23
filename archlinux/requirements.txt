@@ -7,12 +7,12 @@ astroid==2.1.0
 attrs==18.2.0
 Automat==0.7.0
 autopep8==1.4.3
-awscli==1.16.110
+awscli==1.16.111
 backcall==0.1.0
 bcrypt==3.1.6
 beautifulsoup4==4.7.1
 bleach==3.1.0
-botocore==1.12.100
+botocore==1.12.101
 btrfsutil==1.1.0
 cached-property==1.5.1
 cachetools==3.1.0
@@ -52,7 +52,7 @@ google-auth-httplib2==0.0.3
 graph-cli==0.1.2
 greenlet==0.4.15
 httpie==1.0.2
-httplib2==0.12.0
+httplib2==0.12.1
 humanize==0.5.1
 hyperlink==18.0.0
 idna==2.8
@@ -198,7 +198,7 @@ Twisted==18.9.0
 uritemplate==3.0.0
 urllib3==1.24.1
 vimiv==0.9.1
-virtualenv==16.4.0
+virtualenv==16.4.1
 virtualenv-clone==0.5.1
 virtualenvwrapper==4.8.4
 w3lib==1.20.0
