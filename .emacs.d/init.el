@@ -83,7 +83,6 @@
 (package-install 'google-c-style)
 (package-install 'google-this)
 (package-install 'google-translate)
-(package-install 'hackernews)
 (package-install 'haml-mode)
 (package-install 'htmlize)
 (package-install 'hydra)
