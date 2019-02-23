@@ -99,4 +99,10 @@
   (interactive)
   (browse-url "http://localhost:8000/admin/"))
 
+
+(defun chromium-local ()
+  "Open development page with chromium."
+  (interactive)
+  (browse-url "file:///home/masa/src/github.com/masasam/vue/index.html"))
+
 ;;; 13chromium.el ends here
