@@ -24,14 +24,14 @@ If there are two or more windows, it will go to another window."
 ;; key-chord
 (setq key-chord-two-keys-delay 0.1)
 (key-chord-mode 1)
-(bind-key "C-'" 'hydra-move/body)
+(bind-key "C-'" 'hydra-pinky/body)
 
 
 (key-chord-define-global
  "jk"
- (defhydra hydra-move
+ (defhydra hydra-pinky
    ()
-   "move"
+   "pinky"
    ("n" next-line)
    ("p" previous-line)
    ("f" forward-char)
@@ -40,22 +40,22 @@ If there are two or more windows, it will go to another window."
    ("e" move-end-of-line)
    ("v" scroll-up-command)
    ("V" scroll-down-command)
+   ("g" keyboard-quit)
+   ("j" git-gutter:next-hunk)
+   ("k" git-gutter:previous-hunk)
+   ("o" other-window-or-split)
    ("l" recenter-top-bottom)
    ("s" swiper-for-region-or-swiper)
+   ("S" window-swap-states)
+   ("q" kill-buffer)
    ("0" delete-window)
    ("x" delete-window)
    ("1" delete-other-windows)
    ("2" split-window-below)
    ("3" split-window-right)
-   ("o" other-window-or-split)
    ("<" beginning-of-buffer)
    (">" end-of-buffer)
-   ("SPC" set-mark-command)
-   ("g" keyboard-quit)
-   ("S" window-swap-states)
-   ("j" git-gutter:next-hunk)
-   ("k" git-gutter:previous-hunk)
-   ("K" kill-buffer)))
+   ("SPC" set-mark-command)))
 
 
 (defhydra hydra-window (ctl-x-map "" :pre (widen))
