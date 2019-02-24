@@ -30,7 +30,7 @@ If there are two or more windows, it will go to another window."
 (key-chord-define-global
  "jk"
  (defhydra hydra-move
-   (:body-pre)
+   ()
    "move"
    ("n" next-line)
    ("p" previous-line)
@@ -54,7 +54,8 @@ If there are two or more windows, it will go to another window."
    ("g" keyboard-quit)
    ("S" window-swap-states)
    ("j" git-gutter:next-hunk)
-   ("k" git-gutter:previous-hunk)))
+   ("k" git-gutter:previous-hunk)
+   ("K" kill-buffer)))
 
 
 (defhydra hydra-window (ctl-x-map "" :pre (widen))
