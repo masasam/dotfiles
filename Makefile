@@ -238,7 +238,7 @@ dnsmasq: ## Init dnsmasq
 	sudo mkdir -p /etc/NetworkManager
 	sudo ln -vsf ${PWD}/etc/NetworkManager/NetworkManager.conf /etc/NetworkManager/NetworkManager.conf
 
-mozc: ## Install ibus-mozc
+google-mozc: ## Install ibus-mozc
 	test -L ${HOME}/.mozc || rm -rf ${HOME}/.mozc
 	ln -vsfn ${HOME}/Dropbox/mozc/.mozc   ${HOME}/.mozc
 	yay -S ibus-mozc
@@ -282,7 +282,7 @@ mariadb: ## Mariadb initial setup
 postgresql: ## Postgresql initial setup
 	sudo pacman -S postgresql
 	cd /home;\
-	sudo -u postgres initdb --locale $LANG -E UTF8 -D '/var/lib/postgres/data'
+	sudo -u postgres initdb --locale ja_JP.UTF-8 -E UTF8 -D '/var/lib/postgres/data'
 	sudo systemctl enable postgresql.service
 	sudo systemctl start postgresql.service
 	cd /home;\
@@ -323,6 +323,7 @@ mpsyt: ## Install and deploy mps-youtube
 	pip install --user mps-youtube
 	pip install --user youtube-dl
 	test -L ${HOME}/.config/mps-youtube/playlists || rm -rf ${HOME}/.config/mps-youtube/playlists
+	mkdir -p ${HOME}/.config/mps-youtube
 	ln -vsfn ${HOME}/Dropbox/zsh/mps-youtube/playlists   ${HOME}/.config/mps-youtube/playlists
 
 rbenv: ## Install rvenv ruby-build
@@ -390,7 +391,6 @@ yay: ## Install yay using yay
 aur: ## Install arch linux AUR packages using yay
 	yay -S git-secrets
 	yay -S nvm
-	yay -S pencil
 	yay -S python36
 	yay -S sequeler-git
 	yay -S yaourt
@@ -399,6 +399,7 @@ aurplus: ## Install arch linux AUR packages using yay
 	yay -S discord
 	yay -S drone-cli
 	yay -S nkf
+	yay -S pencil
 	yay -S rtags
 
 desktop: ## Update desktop entry
@@ -641,7 +642,7 @@ test: ## Test this Makefile with docker
 	@echo "========== make aur =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make aur"
 	@echo "========== make mozc =========="
-	docker exec makefiletest sh -c "cd ${PWD}; make mozc"
+	docker exec makefiletest sh -c "cd ${PWD}; make google-mozc"
 	@echo "========== make pipinstall =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make pipinstall"
 	@echo "========== make goinstall =========="
@@ -677,7 +678,7 @@ testpath: ## Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: install init initdropbox urxvt xterm termite ttf-cica dnsmasq pipinstall goinstall aur mozc neomutt docker mariadb redis nodeinstall desktop sxiv zeal zoom toggle sylpheed google-cloud aws yay psd mpsyt
+allinstall: install init initdropbox urxvt xterm termite ttf-cica dnsmasq pipinstall goinstall aur google-mozc neomutt docker postgresql redis nodeinstall desktop zeal zoom toggle sylpheed google-cloud aws yay psd mpsyt
 
 nextinstall: chromium screenkey rubygem rbenv rustinstall
 
