@@ -49,4 +49,7 @@
 	 "ja" "en"
 	 string)))))
 
+(defun google-translate--get-b-d1 ()
+  (list 427110 1469889687))
+
 ;;; 10trancelate.el ends here
