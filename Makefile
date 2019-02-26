@@ -525,7 +525,6 @@ google-cloud: ## Install SDK and setting
 	test -L ${HOME}/.config/gcloud || rm -rf ${HOME}/.config/gcloud
 	ln -vsfn ${HOME}/Dropbox/zsh/gcloud   ${HOME}/.config/gcloud
 	gcloud components install kubectl
-	gcloud init
 
 kubernetes-cluster: ## Kubernetes cluster setup
 	gcloud container clusters create --num-nodes=2 my-cluster \
@@ -678,7 +677,7 @@ testpath: ## Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: install init initdropbox urxvt xterm termite ttf-cica dnsmasq pipinstall goinstall aur google-mozc neomutt docker postgresql redis nodeinstall desktop zeal zoom toggle sylpheed google-cloud aws yay psd mpsyt rclone
+allinstall: install init initdropbox urxvt xterm termite ttf-cica dnsmasq pipinstall goinstall aur google-mozc neomutt docker postgresql redis nodeinstall desktop zeal zoom toggle sylpheed google-cloud aws yay psd mpsyt rclone tmuxp
 
 nextinstall: chromium screenkey rubygem rbenv rustinstall
 
