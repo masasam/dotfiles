@@ -59,17 +59,13 @@ clucene
 clutter
 clutter-gst
 clutter-gtk
-cmake
 cmark-gfm
 cmatrix
-cni-plugins
 cogl
 colord
 colord-gtk
 compface
 compiler-rt
-composer
-conmon
 containerd
 coreutils
 cpio
@@ -93,7 +89,6 @@ desktop-file-utils
 device-mapper
 dhcpcd
 diffutils
-dingo
 djvulibre
 dmraid
 dnsmasq
@@ -110,7 +105,6 @@ emacs
 enchant
 eog
 erlang-nox
-espeak
 evince
 exempi
 exiv2
@@ -353,6 +347,7 @@ imlib2
 inetutils
 inkscape
 intel-tbb
+intltool
 ipcalc
 iperf
 iproute2
@@ -372,7 +367,6 @@ js52
 js60
 json-c
 json-glib
-jsoncpp
 kbd
 keychain
 keyutils
@@ -653,8 +647,6 @@ mailcap
 make
 man-db
 man-pages
-mariadb
-mariadb-clients
 mariadb-libs
 mathjax
 mdadm
@@ -668,7 +660,6 @@ mlocate
 mobile-broadband-provider-info
 mosh
 mozilla-common
-mpdecimal
 mpfr
 mpg123
 mpv
@@ -714,7 +705,6 @@ openssl-1.0
 optipng
 opus
 orc
-ostree
 otf-ipafont
 p11-kit
 p7zip
@@ -741,6 +731,7 @@ perl-file-which
 perl-io-tty
 perl-mailtools
 perl-timedate
+perl-xml-parser
 php
 pinentry
 pipewire
@@ -748,13 +739,11 @@ pixman
 pkgconf
 pkgfile
 pkgstats
-podman
 polkit
 poppler
 poppler-data
 poppler-glib
 popt
-portaudio
 postgresql
 postgresql-libs
 potrace
@@ -777,6 +766,7 @@ python-cffi
 python-cryptography
 python-dbus
 python-dbus-common
+python-docutils
 python-gobject
 python-google-api-python-client
 python-google-auth
@@ -811,15 +801,12 @@ qpdf
 qt5-base
 qt5-declarative
 qt5-location
-qt5-quickcontrols2
 qt5-sensors
 qt5-styleplugins
 qt5-svg
 qt5-webchannel
-qt5-webengine
 qt5-webkit
 qt5-x11extras
-qt5-xmlpatterns
 qt5ct
 raptor
 rasqal
@@ -830,7 +817,6 @@ redis
 redland
 reiserfsprogs
 rest
-rhash
 ripgrep
 rsync
 rtkit
@@ -857,10 +843,8 @@ shadow
 shared-color-targets
 shared-mime-info
 shellcheck
-skopeo
 slang
 slib
-slirp4netns
 smbclient
 snappy
 sound-theme-freedesktop
@@ -905,7 +889,6 @@ texlive-latexextra
 the_silver_searcher
 thin-provisioning-tools
 tig
-tk
 tmux
 totem-plparser
 traceroute

@@ -15,7 +15,6 @@ bookworm
 bzip2
 chromium
 cmatrix
-composer
 coreutils
 cpio
 cryptsetup
@@ -28,7 +27,6 @@ debootstrap
 device-mapper
 dhcpcd
 diffutils
-dingo
 dnsmasq
 docker
 e2fsprogs
@@ -36,7 +34,6 @@ elinks
 elixir
 emacs
 eog
-espeak
 evince
 expect
 fakeroot
@@ -72,6 +69,7 @@ gpaste
 grep
 groff
 grub
+gtk2
 gvfs-smb
 gzip
 hdparm
@@ -93,6 +91,7 @@ jq
 keychain
 less
 lhasa
+libglade
 libreoffice-fresh-ja
 libtool
 libva-intel-driver
@@ -111,8 +110,6 @@ m4
 make
 man-db
 man-pages
-mariadb
-mariadb-clients
 mathjax
 mdadm
 mlocate
@@ -150,14 +147,19 @@ php
 pkgconf
 pkgfile
 pkgstats
-podman
 poppler-data
 postgresql
 postgresql-libs
 procps-ng
 psmisc
 pwgen
+pygobject2-devel
+pygtk
+python
+python-docutils
 python-prompt_toolkit
+python2-cairo
+python2-gobject2
 qt5-styleplugins
 qt5ct
 rclone
