@@ -479,7 +479,7 @@ If you make a mistake on the keyboard, erase all with Ctrl-u
 	test -L ${HOME}/.config/gcloud || rm -rf ${HOME}/.config/gcloud
 	ln -vsfn ${HOME}/Dropbox/zsh/gcloud   ${HOME}/.config/gcloud
 	gcloud components install kubectl
-	yay -S kubernetes-helm
+	yay -S kubernetes-helm-bin
 	
 #### rbenv rails
 
