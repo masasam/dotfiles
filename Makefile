@@ -525,6 +525,7 @@ google-cloud: ## Install SDK and setting
 	test -L ${HOME}/.config/gcloud || rm -rf ${HOME}/.config/gcloud
 	ln -vsfn ${HOME}/Dropbox/zsh/gcloud   ${HOME}/.config/gcloud
 	gcloud components install kubectl
+	yay -S kubernetes-helm
 
 kubernetes-cluster: ## Kubernetes cluster setup
 	gcloud container clusters create --num-nodes=2 my-cluster \
