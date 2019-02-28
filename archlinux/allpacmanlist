@@ -164,6 +164,7 @@ glib2
 glib2-docs
 glibc
 glibmm
+glide
 glslang
 glu
 gmime
@@ -847,6 +848,7 @@ slang
 slib
 smbclient
 snappy
+socat
 sound-theme-freedesktop
 soundtouch
 source-highlight
