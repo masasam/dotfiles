@@ -324,13 +324,13 @@ You can make install from here
 	sudo pacman -S alsa-utils mlocate traceroute hugo mpv jhead
 	sudo pacman -S nethogs optipng jpegoptim noto-fonts-emoji
 	sudo pacman -S debian-archive-keyring tree rclone gnome-tweaks
-	sudo pacman -S mathjax strace valgrind phantomjs p7zip unace
+	sudo pacman -S mathjax strace valgrind p7zip unace postgresql
 	sudo pacman -S yarn geckodriver w3m neomutt iperf redis
 	sudo pacman -S highlight lynx elinks mediainfo cpio flameshot
 	sudo pacman -S oath-toolkit imagemagick peek sshuttle
 	sudo pacman -S bookworm ruby ruby-rdoc pacman-contrib ncdu
 	sudo pacman -S sxiv nnn php-fpm nginx adapta-gtk-theme
-	sudo pacman -S podman firejail postgresql
+	sudo pacman -S podman firejail
 
 ## Activity
 
