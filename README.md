@@ -355,7 +355,6 @@ If you make a mistake on the keyboard, erase all with Ctrl-u
 	yay -S drone-cli
 	yay -S git-secrets
 	yay -S global
-	yay -S google-cloud-sdk
 	yay -S goobook-git
 	yay -S ibus-mozc
 	yay -S mozc
