@@ -480,6 +480,7 @@ If you make a mistake on the keyboard, erase all with Ctrl-u
 	ln -vsfn ${HOME}/Dropbox/zsh/gcloud   ${HOME}/.config/gcloud
 	gcloud components install kubectl
 	yay -S kubernetes-helm-bin
+	yay -S stern-bin
 	
 #### rbenv rails
 

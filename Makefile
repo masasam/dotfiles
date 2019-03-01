@@ -526,6 +526,7 @@ google-cloud: ## Install SDK and setting
 	ln -vsfn ${HOME}/Dropbox/zsh/gcloud   ${HOME}/.config/gcloud
 	gcloud components install kubectl
 	yay -S kubernetes-helm
+	yay -S stern-bin
 
 kubernetes-cluster: ## Kubernetes cluster setup
 	gcloud container clusters create --num-nodes=2 my-cluster \
