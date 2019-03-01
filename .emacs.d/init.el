@@ -98,6 +98,7 @@
 (package-install 'keycast)
 (package-install 'keychain-environment)
 (package-install 'key-chord)
+(package-install 'kubernetes)
 (package-install 'lispy)
 (package-install 'macrostep)
 (package-install 'magit)
