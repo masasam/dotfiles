@@ -10,7 +10,6 @@
 
 ;; dired
 (with-eval-after-load 'dired
-  (bind-key "E" 'wdired-change-to-wdired-mode dired-mode-map)
   (bind-key "e" 'my-dired-ediff-files dired-mode-map))
 
 (defun my-dired-ediff-files ()
