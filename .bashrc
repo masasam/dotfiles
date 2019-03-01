@@ -32,3 +32,5 @@ if [ -d "${RBENV_ROOT}" ]; then
   export PATH="${RBENV_ROOT}/bin:${PATH}"
   eval "$(rbenv init -)"
 fi
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/masa/bin/google-cloud-sdk/path.bash.inc' ]; then . '/home/masa/bin/google-cloud-sdk/path.bash.inc'; fi
