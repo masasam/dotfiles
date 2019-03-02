@@ -7,12 +7,12 @@ astroid==2.2.0
 attrs==18.2.0
 Automat==0.7.0
 autopep8==1.4.3
-awscli==1.16.115
+awscli==1.16.116
 backcall==0.1.0
 bcrypt==3.1.6
 beautifulsoup4==4.7.1
 bleach==3.1.0
-botocore==1.12.105
+botocore==1.12.106
 btrfsutil==1.1.0
 cached-property==1.5.1
 cachetools==3.1.0
@@ -67,7 +67,7 @@ isort==4.3.9
 jedi==0.13.3
 Jinja2==2.10
 jmespath==0.9.4
-jsonschema==3.0.0
+jsonschema==3.0.1
 jupyter==1.0.0
 jupyter-client==5.2.4
 jupyter-console==6.0.0
@@ -87,7 +87,7 @@ litecli==1.0.0
 louis==3.8.0
 lxml==4.3.2
 MarkupSafe==1.1.1
-matplotlib==3.0.2
+matplotlib==3.0.3
 mccabe==0.6.1
 mistune==0.8.4
 mps-youtube==0.2.8
@@ -157,7 +157,7 @@ rsa==4.0
 rtv==1.25.1
 ruamel.yaml==0.15.89
 s3transfer==0.2.0
-scikit-learn==0.20.2
+scikit-learn==0.20.3
 scipy==1.2.1
 Scrapy==1.6.0
 seaborn==0.9.0
@@ -184,7 +184,7 @@ text-unidecode==1.2
 texttable==1.6.1
 tldr==0.4.4
 tmuxp==1.5.1
-tornado==5.1.1
+tornado==6.0
 traitlets==4.3.2
 trash-cli==0.17.1.14
 truffleHog==2.0.98
