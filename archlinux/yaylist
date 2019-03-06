@@ -9,6 +9,7 @@ nvm
 profile-sync-daemon
 python36
 sequeler-git
+stern-bin
 yaourt
 yay
 zoom
