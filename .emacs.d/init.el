@@ -131,6 +131,7 @@
 (package-install 'smartparens)
 (package-install 'smart-jump)
 (package-install 'swiper)
+(package-install 'terraform-mode)
 (package-install 'tldr)
 (package-install 'toml-mode)
 (package-install 'tree-mode)
