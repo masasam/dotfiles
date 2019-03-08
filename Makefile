@@ -393,6 +393,7 @@ aur: ## Install arch linux AUR packages using yay
 	yay -S nvm
 	yay -S python36
 	yay -S sequeler-git
+	yay -S slack-desktop-dark
 	yay -S yaourt
 
 aurplus: ## Install arch linux AUR packages using yay
