@@ -410,6 +410,7 @@ libcdr
 libcmis
 libcroco
 libcups
+libcurl-compat
 libdaemon
 libdatrie
 libdc1394
