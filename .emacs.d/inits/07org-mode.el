@@ -10,7 +10,7 @@
 (setq org-src-fontify-natively t)
 (setq org-agenda-files '("~/Dropbox/emacs/org/task.org"))
 (setq calendar-holidays nil)
-(setq org-clock-clocked-in-display)
+(setq org-clock-clocked-in-display 'frame-title)
 
 (bind-key "C-c a" 'org-agenda)
 (bind-key "C-c c" 'org-capture)
