@@ -125,6 +125,7 @@ goinstall: ## Install go packages
 	go get -u -v github.com/jmhodges/jsonpp
 	go get -u -v github.com/mithrandie/csvq
 	go get -u -v github.com/TakesxiSximada/unmake
+	go get -u -v github.com/achiku/planter
 
 nodeinstall: ## Install node packages
 	mkdir -p ${HOME}/.node_modules
