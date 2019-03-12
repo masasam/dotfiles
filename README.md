@@ -382,6 +382,7 @@ If you make a mistake on the keyboard, erase all with Ctrl-u
 	pip install --user awscli
 	pip install --user cheat
 	pip install --user docker-compose
+	pip install --user eralchemy
 	pip install --user faker
 	pip install --user flake8
 	pip install --user graph-cli

@@ -71,6 +71,7 @@ pipinstall: ## Install python packages
 	pip install --user autopep8
 	pip install --user cheat
 	pip install --user docker-compose
+	pip install --user eralchemy
 	pip install --user faker
 	pip install --user flake8
 	pip install --user gif-for-cli
