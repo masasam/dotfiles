@@ -348,7 +348,6 @@ imlib2
 inetutils
 inkscape
 intel-tbb
-intltool
 ipcalc
 iperf
 iproute2
@@ -733,7 +732,6 @@ perl-file-which
 perl-io-tty
 perl-mailtools
 perl-timedate
-perl-xml-parser
 php
 pinentry
 pipewire
