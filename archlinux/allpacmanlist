@@ -206,6 +206,7 @@ gsettings-desktop-schemas
 gsfonts
 gsl
 gsm
+gsound
 gspell
 gssdp
 gst-plugins-bad
@@ -224,6 +225,7 @@ gts
 guile
 guile2.0
 gupnp
+gupnp-dlna
 gupnp-igd
 gvfs
 gvfs-smb
@@ -408,6 +410,7 @@ libcdio-paranoia
 libcdr
 libcmis
 libcroco
+libcue
 libcups
 libcurl-compat
 libdaemon
@@ -447,11 +450,14 @@ libglvnd
 libgme
 libgnomekbd
 libgpg-error
+libgrss
+libgsf
 libgtop
 libgudev
 libgusb
 libgweather
 libgxps
+libhandy
 libheif
 libibus
 libical
@@ -463,6 +469,7 @@ libiec61883
 libimagequant
 libimobiledevice
 libinput
+libiptcdata
 libixion
 libjpeg-turbo
 libkeybinder3
@@ -506,6 +513,7 @@ libofa
 libogg
 libomxil-bellagio
 liborcus
+libosinfo
 libotf
 libpagemaker
 libpaper
@@ -706,6 +714,7 @@ openssl-1.0
 optipng
 opus
 orc
+osinfo-db
 otf-ipafont
 p11-kit
 p7zip
@@ -894,6 +903,7 @@ tmux
 totem-plparser
 traceroute
 tracker
+tracker-miners
 tre
 tree
 tslib

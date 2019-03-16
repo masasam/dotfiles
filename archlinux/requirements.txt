@@ -28,7 +28,7 @@ constantly==15.1.0
 cryptography==2.6.1
 cssselect==1.0.3
 cycler==0.10.0
-decorator==4.3.2
+decorator==4.4.0
 defusedxml==0.5.0
 docker==3.7.0
 docker-compose==1.23.2
@@ -132,7 +132,7 @@ PyDispatcher==2.0.5
 pydoc-utils==1.0.1
 pyflakes==2.1.1
 Pygments==2.3.1
-PyGObject==3.30.4
+PyGObject==3.32.0
 pygraphviz==1.5
 PyHamcrest==1.9.0
 pylint==2.3.1
@@ -152,7 +152,7 @@ PyYAML==5.1
 pyzmq==18.0.1
 qtconsole==4.4.3
 queuelib==1.5.0
-redis==3.2.0
+redis==3.2.1
 requests==2.21.0
 rope==0.12.0
 rsa==4.0
