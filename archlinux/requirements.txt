@@ -7,12 +7,12 @@ astroid==2.2.5
 attrs==19.1.0
 Automat==0.7.0
 autopep8==1.4.3
-awscli==1.16.126
+awscli==1.16.127
 backcall==0.1.0
 bcrypt==3.1.6
 beautifulsoup4==4.7.1
 bleach==3.1.0
-botocore==1.12.116
+botocore==1.12.117
 btrfsutil==1.1.0
 cached-property==1.5.1
 cachetools==3.1.0
@@ -62,7 +62,7 @@ ipython==7.3.0
 ipython-genutils==0.2.0
 ipywidgets==7.4.2
 iso-639==0.4.5
-iso3166==0.9
+iso3166==1.0
 isodate==0.6.0
 isort==4.3.15
 jedi==0.13.3
