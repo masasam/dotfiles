@@ -7,12 +7,12 @@ astroid==2.2.5
 attrs==19.1.0
 Automat==0.7.0
 autopep8==1.4.3
-awscli==1.16.128
+awscli==1.16.129
 backcall==0.1.0
 bcrypt==3.1.6
 beautifulsoup4==4.7.1
 bleach==3.1.0
-botocore==1.12.118
+botocore==1.12.119
 btrfsutil==1.1.0
 cached-property==1.5.1
 cachetools==3.1.0
@@ -58,7 +58,7 @@ idna==2.8
 importmagic==0.1.7
 incremental==17.5.0
 ipykernel==5.1.0
-ipython==7.3.0
+ipython==7.4.0
 ipython-genutils==0.2.0
 ipywidgets==7.4.2
 iso-639==0.4.5
@@ -203,7 +203,7 @@ virtualenvwrapper==4.8.4
 w3lib==1.20.0
 wcwidth==0.1.7
 webencodings==0.5.1
-websocket-client==0.55.0
+websocket-client==0.56.0
 widgetsnbextension==3.4.2
 wrapt==1.11.1
 x256==0.0.3
