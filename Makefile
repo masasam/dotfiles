@@ -24,6 +24,8 @@ initdropbox: ## Initial deploy dotfiles using dropbox
 	ln -vsf ${HOME}/Dropbox/zsh/.netrc   ${HOME}/.netrc
 	ln -vsf ${HOME}/Dropbox/zsh/.authinfo   ${HOME}/.authinfo
 	ln -vsf ${HOME}/Dropbox/zsh/.mycli-history   ${HOME}/.mycli-history
+	test -L ${HOME}/.config/pgcli || rm -rf ${HOME}/.config/pgcli
+	ln -vsfn ${HOME}/Dropbox/zsh/pgcli   ${HOME}/.config/pgcli
 	ln -vsf ${HOME}/Dropbox/zsh/hub   ${HOME}/.config/hub
 	test -L ${HOME}/.ssh || rm -rf ${HOME}/.ssh
 	ln -vsfn ${HOME}/Dropbox/ssh   ${HOME}/.ssh
