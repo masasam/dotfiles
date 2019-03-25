@@ -688,3 +688,5 @@ if [ -f '/home/masa/bin/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/ma
 # kubectl completions
 source <(kubectl completion zsh)
 source <(stern --completion=zsh)
+# nvm
+source /usr/share/nvm/init-nvm.sh
