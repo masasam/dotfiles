@@ -16,7 +16,7 @@
 (bind-key "C-x C-f" 'counsel-find-file)
 (bind-key "M-y" 'counsel-yank-pop)
 (bind-key "C-x m" 'counsel-mark-ring)
-(bind-key "C-x F" 'counsel-describe-function)
+(bind-key "C-x F" 'find-file-in-project)
 (bind-key "C-x V" 'counsel-describe-variable)
 (bind-key "C-x L" 'counsel-find-library)
 (bind-key "C-x I" 'counsel-info-lookup-symbol)
