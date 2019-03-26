@@ -238,7 +238,7 @@ export XDG_CONFIG_HOME=$HOME/.config
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 PATH="$HOME/.node_modules/bin:$PATH"
-export npm_config_prefix=~/.node_modules
+unset npm_config_prefix 
 PATH="$HOME/.local/bin:$PATH"
 export COMPOSER_HOME=${HOME}/src/github.com/masasam/dotfiles
 export PATH=$PATH:$HOME/.roswell/bin
