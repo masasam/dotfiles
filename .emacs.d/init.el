@@ -51,6 +51,7 @@
 (package-install 'daemons)
 (package-install 'dash)
 (package-install 'dashboard)
+(package-install 'deadgrep)
 (package-install 'diminish)
 (package-install 'docker)
 (package-install 'docker-tramp)
