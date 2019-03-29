@@ -160,6 +160,7 @@ python-docutils
 python-prompt_toolkit
 python2-cairo
 python2-gobject2
+qt5-styleplugins
 qt5ct
 rclone
 redis
