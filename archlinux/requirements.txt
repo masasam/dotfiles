@@ -7,12 +7,12 @@ astroid==2.2.5
 attrs==19.1.0
 Automat==0.7.0
 autopep8==1.4.3
-awscli==1.16.133
+awscli==1.16.134
 backcall==0.1.0
 bcrypt==3.1.6
 beautifulsoup4==4.7.1
 bleach==3.1.0
-botocore==1.12.123
+botocore==1.12.124
 btrfsutil==1.1.0
 cached-property==1.5.1
 cachetools==3.1.0
@@ -32,8 +32,8 @@ decorator==4.4.0
 defusedxml==0.5.0
 Django==2.1.7
 djangorestframework==3.9.2
-docker==3.7.1
-docker-compose==1.23.2
+docker==3.7.2
+docker-compose==1.24.0
 docker-pycreds==0.4.0
 dockerpty==0.4.1
 docopt==0.6.2
@@ -99,7 +99,7 @@ mycli==1.19.0
 nbconvert==5.4.1
 nbformat==4.4.0
 neovim==0.3.1
-notebook==5.7.6
+notebook==5.7.7
 numpy==1.16.2
 oauth2client==4.1.3
 packaging==19.0
@@ -147,7 +147,7 @@ pyrsistent==0.14.11
 PySocks==1.6.8
 python-dateutil==2.8.0
 python-jsonrpc-server==0.1.2
-python-language-server==0.26.0
+python-language-server==0.26.1
 python-utils==2.3.0
 pytz==2018.9
 PyYAML==5.1
@@ -182,7 +182,7 @@ streamlink==1.0.0
 tabulate==0.8.3
 team==1.0
 termcolor==1.1.0
-terminado==0.8.1
+terminado==0.8.2
 terminaltables==3.1.0
 testpath==0.4.2
 text-unidecode==1.2
