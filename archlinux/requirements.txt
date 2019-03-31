@@ -85,7 +85,7 @@ lazy-object-proxy==1.3.1
 lensfun==0.3.2
 lesscpy==0.13.0
 libtmux==0.8.1
-lit==0.7.1.dev0
+lit==0.8.0.dev0
 litecli==1.0.0
 louis==3.8.0
 lxml==4.3.3
@@ -178,7 +178,7 @@ SQLAlchemy==1.3.1
 sqlparse==0.3.0
 sshuttle==0.78.5
 stevedore==1.30.1
-streamlink==1.0.0
+streamlink==1.1.0
 tabulate==0.8.3
 team==1.0
 termcolor==1.1.0
