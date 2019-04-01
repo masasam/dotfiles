@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: print
-# key: print
-# --
-print_r($1);

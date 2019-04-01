@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: thisurl
-# key: thisurl
-# --
-$this->dispatcher->getParam('$1')
