@@ -319,9 +319,6 @@ dingo: ## Install dingo Google DNS over HTTPS
 ccls: ## Install c,c++ language server
 	yay -S ccls
 
-bingo: ## Install golang language server
-	yay -S bingo
-
 php-language-server: ## Install php language-server 
 	sudo pacman -S composer
 	composer require felixfbecker/language-server 
