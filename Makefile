@@ -23,9 +23,9 @@ initdropbox: ## Initial deploy dotfiles using dropbox
 	mkdir -p ${HOME}/.config
 	ln -vsf ${HOME}/Dropbox/zsh/.netrc   ${HOME}/.netrc
 	ln -vsf ${HOME}/Dropbox/zsh/.authinfo   ${HOME}/.authinfo
-	ln -vsf ${HOME}/Dropbox/zsh/.mycli-history   ${HOME}/.mycli-history
+	ln -vsf ${HOME}/Dropbox/cli/.mycli-history   ${HOME}/.mycli-history
 	test -L ${HOME}/.config/pgcli || rm -rf ${HOME}/.config/pgcli
-	ln -vsfn ${HOME}/Dropbox/zsh/pgcli   ${HOME}/.config/pgcli
+	ln -vsfn ${HOME}/Dropbox/cli/pgcli   ${HOME}/.config/pgcli
 	ln -vsf ${HOME}/Dropbox/zsh/hub   ${HOME}/.config/hub
 	test -L ${HOME}/.ssh || rm -rf ${HOME}/.ssh
 	ln -vsfn ${HOME}/Dropbox/ssh   ${HOME}/.ssh
@@ -439,8 +439,8 @@ tmuxp: ## Install tmuxp
 	sudo ln -vsf ${PWD}/.config/main.yaml   ${HOME}/.config/main.yaml
 
 sk-tmux: ## Init sk-tmux
-	chmod a+x /home/masa/Dropbox/zsh/sk-tmux
-	sudo ln -vsf ${HOME}/Dropbox/zsh/sk-tmux   /usr/local/bin/sk-tmux
+	chmod a+x /home/masa/Dropbox/cli/sk-tmux
+	sudo ln -vsf ${HOME}/Dropbox/cli/sk-tmux   /usr/local/bin/sk-tmux
 
 roswell: ## Install ros and lem
 	yay -S roswell
