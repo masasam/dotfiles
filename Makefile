@@ -530,7 +530,7 @@ emacs-devel: ## Install development version of emacs
 google-cloud: ## Install SDK and setting
 	curl https://sdk.cloud.google.com | bash
 	test -L ${HOME}/.config/gcloud || rm -rf ${HOME}/.config/gcloud
-	ln -vsfn ${HOME}/Dropbox/zsh/gcloud   ${HOME}/.config/gcloud
+	ln -vsfn ${HOME}/Dropbox/gcloud   ${HOME}/.config/gcloud
 	gcloud components install kubectl
 	yay -S kubernetes-helm
 	yay -S stern-bin
