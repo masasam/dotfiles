@@ -672,6 +672,15 @@ function fetch-pull-request() {
 }
 
 
+function postgres-backup() {
+    if [ $# = 1 ]; then
+	pg_dump $1 > ~/Dropbox/postgresql/`date '+%Y%m%d%H%M%S'`
+    else
+	echo 'usage: backup-postgres [dbname]'
+    fi
+}
+
+
 # zsh-syntax-highlighting(pacman -S zsh-syntax-highlighting)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # zsh-completions for aws
