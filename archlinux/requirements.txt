@@ -55,7 +55,7 @@ greenlet==0.4.15
 httpie==1.0.2
 httplib2==0.12.1
 humanize==0.5.1
-hyperlink==18.0.0
+hyperlink==19.0.0
 idna==2.8
 importmagic==0.1.7
 incremental==17.5.0
@@ -200,7 +200,7 @@ uritemplate==3.0.0
 urllib3==1.24.1
 vimiv==0.9.1
 virtualenv==16.4.3
-virtualenv-clone==0.5.2
+virtualenv-clone==0.5.3
 virtualenvwrapper==4.8.4
 w3lib==1.20.0
 wcwidth==0.1.7
