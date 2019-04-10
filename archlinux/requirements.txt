@@ -87,7 +87,7 @@ lesscpy==0.13.0
 libtmux==0.8.1
 lit==0.8.0.dev0
 litecli==1.0.0
-louis==3.8.0
+louis==3.9.0
 lxml==4.3.3
 MarkupSafe==1.1.1
 matplotlib==3.0.3
