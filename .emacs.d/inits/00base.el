@@ -166,7 +166,7 @@ If the region is inactive, `backward-kill-word'."
 
 
 ;; emacs c source dir:
-(setq find-function-C-source-directory "~/Dropbox/emacs/emacs-26.1/src")
+(setq find-function-C-source-directory "~/Dropbox/emacs/emacs-26.2/src")
 
 
 ;; Do not change the position of the cursor on the screen as much as possible when scrolling pages
