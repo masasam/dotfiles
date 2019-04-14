@@ -49,6 +49,7 @@ ca-certificates-utils
 cairo
 cairomm
 cantarell-fonts
+cblas
 cdparanoia
 celt
 cheese
@@ -450,6 +451,7 @@ libglvnd
 libgme
 libgnomekbd
 libgpg-error
+libgphoto2
 libgrss
 libgsf
 libgtop
@@ -706,6 +708,7 @@ oath-toolkit
 oniguruma
 openal
 opencore-amr
+opencv
 openexr
 openjpeg2
 openresolv
