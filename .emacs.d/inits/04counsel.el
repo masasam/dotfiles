@@ -40,9 +40,9 @@ If the region is inactive, swiper."
   (interactive)
   (if (region-active-p)
       (progn (setq mark-active nil)
-	     (swiper (buffer-substring
-		      (region-beginning) (region-end))))
-    (swiper)))
+	     (swiper-isearch (buffer-substring
+			      (region-beginning) (region-end))))
+    (swiper-isearch)))
 
 
 ;; counsel-tramp
