@@ -35,8 +35,8 @@
 (setq swiper-include-line-number-in-search t)
 
 (defun swiper-for-region-or-swiper ()
-  "If the region is active, swiper-for-region.
-If the region is inactive, swiper."
+  "If the region is active, swiper-isearch for region.
+If the region is inactive, swiper-isearch."
   (interactive)
   (if (region-active-p)
       (progn (setq mark-active nil)
