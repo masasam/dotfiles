@@ -313,7 +313,7 @@ You can make install from here
 	sudo pacman -S aspell aspell-en httperf asciidoc sbcl
 	sudo pacman -S gdb hub wmctrl gpaste pkgstats ripgrep
 	sudo pacman -S linux-docs pwgen gauche screen ipcalc
-	sudo pacman -S arch-install-scripts ctags parallel
+	sudo pacman -S arch-install-scripts ctags parallel opencv
 	sudo pacman -S pandoc texlive-langjapanese texlive-latexextra
 	sudo pacman -S shellcheck php cscope typescript packer
 	sudo pacman -S noto-fonts-cjk arc-gtk-theme jq dnsmasq
