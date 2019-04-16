@@ -130,12 +130,14 @@ flex
 fontconfig
 fping
 freetype2
+frei0r-plugins
 fribidi
 fuse-common
 fuse2
 fuse3
 fzf
 gauche
+gavl
 gawk
 gc
 gcc
@@ -184,6 +186,7 @@ gnome-settings-daemon
 gnome-shell
 gnome-themes-extra
 gnome-tweaks
+gnome-video-effects
 gnu-netcat
 gnupg
 gnustep-base
