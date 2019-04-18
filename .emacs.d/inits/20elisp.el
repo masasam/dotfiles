@@ -12,7 +12,7 @@
 (add-hook 'emacs-lisp-mode-hook (lambda () (lispy-mode 1)))
 (add-hook 'lisp-interaction-mode-hook (lambda () (lispy-mode 1)))
 (add-hook 'lisp-mode-hook (lambda () (lispy-mode 1)))
-;; (add-hook 'lisp-mode-hook (contribute-swiper)))
+;; (add-hook 'emacs-lisp-mode-hook (contribute-swiper)))
 
 (defun contribute-swiper()
   "Swiper project setting."
