@@ -8,7 +8,7 @@
 (setq ivy-use-selectable-prompt t)
 (setq enable-recursive-minibuffers t)
 (setq company-selection-wrap-around t)
-(bind-key "C-s" 'swiper-isearch-region-or-not)
+(bind-key "C-s" 'swiper-isearch-region)
 (bind-key "C-;" 'counsel-switch-buffer)
 (bind-key "C-c C-r" 'ivy-resume)
 (bind-key "C-x C-c" 'counsel-M-x)
@@ -33,27 +33,6 @@
       "\n------------------------------------------------------------\n")
 
 (setq swiper-include-line-number-in-search t)
-
-(defun swiper-isearch-region-or-not ()
-  "If region is selected, `swiper-isearch' with the keyword selected in region.
-If the region isn't selected, `swiper-isearch'."
-  (interactive)
-  (if (not (use-region-p))
-      (swiper-isearch)
-    (deactivate-mark)
-    (swiper-isearch (buffer-substring-no-properties
-                     (region-beginning) (region-end)))))
-
-
-(defun swiper-region ()
-  "If region is selected, `swiper' with the keyword selected in region.
-If the region isn't selected, `swiper'."
-  (interactive)
-  (if (not (use-region-p))
-      (swiper)
-    (deactivate-mark)
-    (swiper (buffer-substring-no-properties
-             (region-beginning) (region-end)))))
 
 
 (defun swiper-isearch-region ()
