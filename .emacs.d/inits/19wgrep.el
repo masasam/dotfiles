@@ -8,8 +8,12 @@
 (setq wgrep-enable-key "e")
 
 
-;; for deadgrep-mode
-(bind-key "n" 'next-line deadgrep-mode-map)
-(bind-key "p" 'previous-line deadgrep-mode-map)
+;; deadgrep-mode
+(with-eval-after-load 'deadgrep
+  (bind-keys :map deadgrep-mode-map
+	     ("n" . next-line)
+	     ("p" . previous-line)
+	     ("j" . deadgrep-forward)
+	     ("k" . deadgrep-backward)))
 
 ;;; 19wgrep ends here
