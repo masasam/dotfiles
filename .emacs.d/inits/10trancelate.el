@@ -26,7 +26,7 @@
 (defun google-translate-auto ()
   "Automatically recognize and translate Japanese and English."
   (interactive)
-  (if (region-active-p)
+  (if (use-region-p)
       (progn (setq mark-active nil)
 	     (if (string-match (format "\\`[%s]+\\'" "[:ascii:]")
 			       (buffer-substring (region-beginning) (region-end)))
