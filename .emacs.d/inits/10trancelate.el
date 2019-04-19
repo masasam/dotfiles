@@ -26,28 +26,28 @@
 (defun google-translate-auto ()
   "Automatically recognize and translate Japanese and English."
   (interactive)
-  (if (use-region-p)
-      (progn (setq mark-active nil)
-	     (if (string-match (format "\\`[%s]+\\'" "[:ascii:]")
-			       (buffer-substring (region-beginning) (region-end)))
-		 (google-translate-translate
-		  "en" "ja"
-		  (buffer-substring
-		   (region-beginning) (region-end)))
-	       (google-translate-translate
-		"ja" "en"
-		(buffer-substring
-		 (region-beginning) (region-end)))))
-    (let ((string (read-string "Google Translate: ")))
-      (if (string-match
-	   (format "\\`[%s]+\\'" "[:ascii:]")
-	   string)
+  (if (not (use-region-p))
+      (let ((string (read-string "Google Translate: ")))
+	(if (string-match
+	     (format "\\`[%s]+\\'" "[:ascii:]")
+	     string)
+	    (google-translate-translate
+	     "en" "ja"
+	     string)
 	  (google-translate-translate
-	   "en" "ja"
-	   string)
+	   "ja" "en"
+	   string)))
+    (setq mark-active nil)
+    (if (string-match (format "\\`[%s]+\\'" "[:ascii:]")
+		      (buffer-substring (region-beginning) (region-end)))
 	(google-translate-translate
-	 "ja" "en"
-	 string)))))
+	 "en" "ja"
+	 (buffer-substring
+	  (region-beginning) (region-end)))
+      (google-translate-translate
+       "ja" "en"
+       (buffer-substring
+	(region-beginning) (region-end))))))
 
 (defun google-translate--get-b-d1 ()
   (list 427110 1469889687))
