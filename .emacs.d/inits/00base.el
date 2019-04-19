@@ -122,7 +122,7 @@
   "If the region is active, `clipboard-kill-region'.
 If the region is inactive, `backward-kill-word'."
   (interactive)
-  (if (region-active-p)
+  (if (use-region-p)
       (clipboard-kill-region (region-beginning) (region-end))
     (backward-kill-word 1)))
 
