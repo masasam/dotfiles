@@ -8,24 +8,24 @@
 (defun chromium-translate ()
   "Open google translate with chromium."
   (interactive)
-  (if (use-region-p)
-      (progn (setq mark-active nil)
-	     (if (string-match (format "\\`[%s]+\\'" "[:ascii:]")
-			       (buffer-substring (region-beginning) (region-end)))
-		 (browse-url (concat "https://translate.google.com/?source=gtx#en/ja/"
-				     (url-hexify-string (buffer-substring
-							 (region-beginning) (region-end)))))
-	       (browse-url (concat "https://translate.google.com/?source=gtx#ja/en/"
-				   (url-hexify-string (buffer-substring
-						       (region-beginning) (region-end)))))))
-    (let ((string (read-string "Google Translate: ")))
-      (if (string-match
-	   (format "\\`[%s]+\\'" "[:ascii:]")
-	   string)
+  (if (not (use-region-p))
+      (let ((string (read-string "Google Translate: ")))
+	(if (string-match
+	     (format "\\`[%s]+\\'" "[:ascii:]")
+	     string)
+	    (browse-url
+	     (concat "https://translate.google.com/?source=gtx#en/ja/" (url-hexify-string string)))
 	  (browse-url
-	   (concat "https://translate.google.com/?source=gtx#en/ja/" (url-hexify-string string)))
-	(browse-url
-	 (concat "https://translate.google.com/?source=gtx#ja/en/" (url-hexify-string string)))))))
+	   (concat "https://translate.google.com/?source=gtx#ja/en/" (url-hexify-string string)))))
+    (setq mark-active nil)
+    (if (string-match (format "\\`[%s]+\\'" "[:ascii:]")
+		      (buffer-substring (region-beginning) (region-end)))
+	(browse-url (concat "https://translate.google.com/?source=gtx#en/ja/"
+			    (url-hexify-string (buffer-substring
+						(region-beginning) (region-end)))))
+      (browse-url (concat "https://translate.google.com/?source=gtx#ja/en/"
+			  (url-hexify-string (buffer-substring
+					      (region-beginning) (region-end))))))))
 
 
 (defun chromium-calendar ()
