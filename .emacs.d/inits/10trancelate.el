@@ -26,21 +26,21 @@
 (defun google-translate-auto ()
   "Automatically recognize and translate Japanese and English."
   (interactive)
-  (if (not (use-region-p))
-      (let ((string (read-string "Google Translate: ")))
-	(if (string-match
-	     (format "\\`[%s]+\\'" "[:ascii:]")
-	     string)
+  (if (use-region-p)
+      (let ((string (buffer-substring-no-properties (region-beginning) (region-end))))
+	(deactivate-mark)
+	(if (string-match (format "\\`[%s]+\\'" "[:ascii:]")
+			  string)
 	    (google-translate-translate
 	     "en" "ja"
 	     string)
 	  (google-translate-translate
 	   "ja" "en"
 	   string)))
-    (let ((string (buffer-substring-no-properties (region-beginning) (region-end))))
-      (deactivate-mark)
-      (if (string-match (format "\\`[%s]+\\'" "[:ascii:]")
-			string)
+    (let ((string (read-string "Google Translate: ")))
+      (if (string-match
+	   (format "\\`[%s]+\\'" "[:ascii:]")
+	   string)
 	  (google-translate-translate
 	   "en" "ja"
 	   string)
