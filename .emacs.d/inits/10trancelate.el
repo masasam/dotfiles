@@ -37,16 +37,16 @@
 	  (google-translate-translate
 	   "ja" "en"
 	   string)))
-    (setq mark-active nil)
+    (deactivate-mark)
     (if (string-match (format "\\`[%s]+\\'" "[:ascii:]")
-		      (buffer-substring (region-beginning) (region-end)))
+		      (buffer-substring-no-properties (region-beginning) (region-end)))
 	(google-translate-translate
 	 "en" "ja"
-	 (buffer-substring
+	 (buffer-substring-no-properties
 	  (region-beginning) (region-end)))
       (google-translate-translate
        "ja" "en"
-       (buffer-substring
+       (buffer-substring-no-properties
 	(region-beginning) (region-end))))))
 
 (defun google-translate--get-b-d1 ()
