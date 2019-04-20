@@ -38,16 +38,15 @@
 	   "ja" "en"
 	   string)))
     (deactivate-mark)
-    (if (string-match (format "\\`[%s]+\\'" "[:ascii:]")
-		      (buffer-substring-no-properties (region-beginning) (region-end)))
+    (let ((string (buffer-substring-no-properties (region-beginning) (region-end))))
+      (if (string-match (format "\\`[%s]+\\'" "[:ascii:]")
+			string)
+	  (google-translate-translate
+	   "en" "ja"
+	   string)
 	(google-translate-translate
-	 "en" "ja"
-	 (buffer-substring-no-properties
-	  (region-beginning) (region-end)))
-      (google-translate-translate
-       "ja" "en"
-       (buffer-substring-no-properties
-	(region-beginning) (region-end))))))
+	 "ja" "en"
+	 string)))))
 
 (defun google-translate--get-b-d1 ()
   (list 427110 1469889687))
