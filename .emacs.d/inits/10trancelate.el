@@ -37,8 +37,8 @@
 	  (google-translate-translate
 	   "ja" "en"
 	   string)))
-    (deactivate-mark)
     (let ((string (buffer-substring-no-properties (region-beginning) (region-end))))
+      (deactivate-mark)
       (if (string-match (format "\\`[%s]+\\'" "[:ascii:]")
 			string)
 	  (google-translate-translate
@@ -47,6 +47,7 @@
 	(google-translate-translate
 	 "ja" "en"
 	 string)))))
+
 
 (defun google-translate--get-b-d1 ()
   (list 427110 1469889687))
