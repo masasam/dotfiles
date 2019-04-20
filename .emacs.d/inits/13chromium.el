@@ -17,14 +17,14 @@
 	     (concat "https://translate.google.com/?source=gtx#en/ja/" (url-hexify-string string)))
 	  (browse-url
 	   (concat "https://translate.google.com/?source=gtx#ja/en/" (url-hexify-string string)))))
-    (setq mark-active nil)
+    (deactivate-mark)
     (if (string-match (format "\\`[%s]+\\'" "[:ascii:]")
-		      (buffer-substring (region-beginning) (region-end)))
+		      (buffer-substring-no-properties (region-beginning) (region-end)))
 	(browse-url (concat "https://translate.google.com/?source=gtx#en/ja/"
-			    (url-hexify-string (buffer-substring
+			    (url-hexify-string (buffer-substring-no-properties
 						(region-beginning) (region-end)))))
       (browse-url (concat "https://translate.google.com/?source=gtx#ja/en/"
-			  (url-hexify-string (buffer-substring
+			  (url-hexify-string (buffer-substring-no-properties
 					      (region-beginning) (region-end))))))))
 
 
