@@ -160,7 +160,7 @@ requests==2.21.0
 rope==0.14.0
 rsa==4.0
 rtv==1.26.0
-ruamel.yaml==0.15.92
+ruamel.yaml==0.15.93
 s3transfer==0.2.0
 scikit-learn==0.20.3
 scipy==1.2.1
