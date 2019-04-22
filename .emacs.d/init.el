@@ -78,6 +78,7 @@
 (package-install 'flyspell-correct-ivy)
 (package-install 'forge)
 (package-install 'ggtags)
+(package-install 'github-explorer)
 (package-install 'git-gutter)
 (package-install 'git-timemachine)
 (package-install 'go-mode)
