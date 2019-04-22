@@ -106,6 +106,7 @@
 (package-install 'markdown-mode)
 (package-install 'material-theme)
 (package-install 'nginx-mode)
+(package-install 'openwith)
 (package-install 'org-plus-contrib)
 (package-install 'package-lint)
 (package-install 'password-generator)
