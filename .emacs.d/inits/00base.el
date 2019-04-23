@@ -131,7 +131,7 @@ If the region is inactive, `backward-kill-word'."
   "No mark active `exchange-point-and-mark'."
   (interactive)
   (exchange-point-and-mark)
-  (setq mark-active nil))
+  (deactivate-mark))
 
 
 (defun my/upcase-word (arg)
