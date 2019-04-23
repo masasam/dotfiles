@@ -3,6 +3,10 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
+;; tldr
+(setq tldr-directory-path "~/Dropbox/emacs/tldr/")
+
+
 ;; prescient
 (ivy-prescient-mode 1)
 (company-prescient-mode 1)
