@@ -7,12 +7,12 @@ astroid==2.2.5
 attrs==19.1.0
 Automat==0.7.0
 autopep8==1.4.4
-awscli==1.16.144
+awscli==1.16.145
 backcall==0.1.0
 bcrypt==3.1.6
 beautifulsoup4==4.7.1
 bleach==3.1.0
-botocore==1.12.134
+botocore==1.12.135
 btrfsutil==1.1.0
 cached-property==1.5.1
 cachetools==3.1.0
@@ -80,7 +80,7 @@ jupyterlab-server==0.3.0
 jupyterthemes==0.20.0
 kaptan==0.5.12
 kitchen==1.2.5
-kiwisolver==1.0.1
+kiwisolver==1.1.0
 lazy-object-proxy==1.3.1
 lensfun==0.3.2
 lesscpy==0.13.0
@@ -127,7 +127,7 @@ psycopg2-binary==2.8.2
 ptyprocess==0.6.0
 pwquality==1.4.0
 pyasn1==0.4.5
-pyasn1-modules==0.2.4
+pyasn1-modules==0.2.5
 pycodestyle==2.5.0
 pycparser==2.19
 pycryptodome==3.8.1
@@ -198,9 +198,9 @@ truffleHogRegexes==0.0.7
 Twisted==19.2.0
 typed-ast==1.3.4
 uritemplate==3.0.0
-urllib3==1.25
+urllib3==1.25.1
 vimiv==0.9.1
-virtualenv==16.4.3
+virtualenv==16.5.0
 virtualenv-clone==0.5.3
 virtualenvwrapper==4.8.4
 w3lib==1.20.0
@@ -211,5 +211,5 @@ widgetsnbextension==3.4.2
 wrapt==1.11.1
 x256==0.0.3
 yapf==0.27.0
-youtube-dl==2019.4.17
+youtube-dl==2019.4.24
 zope.interface==4.6.0
