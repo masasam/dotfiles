@@ -3,6 +3,6 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
-(add-hook 'rustic-mode 'eglot-ensure)
+;; (add-hook 'rust-mode 'eglot-ensure)
 
 ;;; 24rust.el ends here
