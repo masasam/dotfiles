@@ -7,6 +7,7 @@
 (add-to-list 'auto-mode-alist '("\.js$" . js2-mode))
 
 (add-hook 'js2-mode-hook 'eglot-ensure)
+(add-hook 'typescript-mode-hook 'eglot-ensure)
 (add-hook 'rjsx-mode-hook 'eglot-ensure)
 (add-hook 'rjsx-mode-hook
           (lambda ()
