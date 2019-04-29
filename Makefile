@@ -129,7 +129,6 @@ goinstall: ## Install go packages
 	go get -u -v github.com/kyoshidajp/ghkw
 	go get -u -v github.com/simeji/jid/cmd/jid
 	go get -u -v github.com/jmhodges/jsonpp
-	go get -u -v github.com/TakesxiSximada/unmake
 	go get -d github.com/mithrandie/csvq
 	cd ${HOME}/src/github.com/mithrandie/csvq;\
 	env GO111MODULE=on go install
