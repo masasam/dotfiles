@@ -439,7 +439,6 @@ If you make a mistake on the keyboard, erase all with Ctrl-u
 	go get -u -v github.com/simeji/jid/cmd/jid
 	go get -u -v github.com/jmhodges/jsonpp
 	go get -u -v github.com/mithrandie/csvq
-	go get -u -v github.com/TakesxiSximada/unmake
 
 #### Install using yarn
 
