@@ -18,14 +18,13 @@
 (defun my/python-shell-get-or-create-process (&optional sit)
   "Get or create an inferior Python process for current buffer and return it.
 If SIT is non-nil, sit for that many seconds after creating a
-Python process. This allows the process to start up."
+Python process.  This allows the process to start up."
   (let* ((bufname (format "*%s*" (python-shell-get-process-name nil)))
 	 (proc (get-buffer-process bufname)))
     (if proc
 	proc
       (when (not (executable-find python-shell-interpreter))
-	(error "Python shell interpreter `%s' cannot be found. Please set `python-shell-interpreter' to an valid python binary."
-	       python-shell-interpreter))
+	(error "Python shell interpreter `%s' cannot be found" python-shell-interpreter))
       (let ((default-directory default-directory))
 	(run-python (python-shell-parse-command) nil t))
       (when sit (sit-for sit))
@@ -37,7 +36,10 @@ Python process. This allows the process to start up."
 ;; repl-toggle
 (setq rtog/fullscreen t)
 (require 'repl-toggle)
-(setq rtog/mode-repl-alist '((js2-mode . nodejs-repl) (emacs-lisp-mode . ielm) (ruby-mode . inf-ruby) (python-mode . my/python-shell-switch-to-shell)))
+(setq rtog/mode-repl-alist '((js2-mode . nodejs-repl)
+			     (emacs-lisp-mode . ielm)
+			     (ruby-mode . inf-ruby)
+			     (python-mode . my/python-shell-switch-to-shell)))
 
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
