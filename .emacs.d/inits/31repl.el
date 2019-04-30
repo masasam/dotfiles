@@ -4,20 +4,19 @@
 ;;(setq debug-on-error t)
 
 (require 'python)
-(defvar my/elpy--shell-last-py-buffer nil
-  "Help keep track of python buffer when changing to pyshell.")
+
+(defvar my/python--shell-last-py-buffer nil)
 
 
 (defun my/python-shell-switch-to-shell ()
   "Switch to inferior Python process buffer."
   (interactive)
-  (setq my/elpy--shell-last-py-buffer (buffer-name))
-  (pop-to-buffer (process-buffer (my/elpy-shell-get-or-create-process))))
+  (setq my/python--shell-last-py-buffer (buffer-name))
+  (pop-to-buffer (process-buffer (my/python-shell-get-or-create-process))))
 
 
-(defun my/elpy-shell-get-or-create-process (&optional sit)
+(defun my/python-shell-get-or-create-process (&optional sit)
   "Get or create an inferior Python process for current buffer and return it.
-
 If SIT is non-nil, sit for that many seconds after creating a
 Python process. This allows the process to start up."
   (let* ((bufname (format "*%s*" (python-shell-get-process-name nil)))
@@ -31,7 +30,7 @@ Python process. This allows the process to start up."
 	(run-python (python-shell-parse-command) nil t))
       (when sit (sit-for sit))
       (python-shell-send-string
-       (format "import sys;sys.path.append('%s')" (elpy-project-root)))
+       (format "import sys;sys.path.append('%s')" (projectile-project-root)))
       (get-buffer-process bufname))))
 
 
