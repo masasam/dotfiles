@@ -39,6 +39,7 @@ Python process.  This allows the process to start up."
 (setq rtog/mode-repl-alist '((js2-mode . nodejs-repl)
 			     (emacs-lisp-mode . ielm)
 			     (ruby-mode . inf-ruby)
+			     (lisp-mode. slime)
 			     (python-mode . my/python-shell-switch-to-shell)))
 
 ;; Local Variables:
