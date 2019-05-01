@@ -469,6 +469,7 @@ If you make a mistake on the keyboard, erase all with Ctrl-u
 	yarn global add prettier
 	yarn global add parcel-bundler
 	yarn global add tern
+	yarn global add tsun
 	yarn global add vscode-css-languageserver-bin
 	yarn global add vue-cli
 	yarn global add vue-language-server
