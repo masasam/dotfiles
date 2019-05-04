@@ -770,6 +770,7 @@ pulseaudio
 pulseaudio-alsa
 pulseaudio-bluetooth
 pwgen
+pyenv
 pygobject-devel
 pygobject2-devel
 pygtk

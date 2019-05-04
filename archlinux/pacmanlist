@@ -154,6 +154,7 @@ postgresql-libs
 procps-ng
 psmisc
 pwgen
+pyenv
 pygobject2-devel
 pygtk
 python
