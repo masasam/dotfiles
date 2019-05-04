@@ -396,7 +396,6 @@ aur: ## Install arch linux AUR packages using yay
 	yay -S downgrade
 	yay -S git-secrets
 	yay -S nvm
-	yay -S python36
 	yay -S sequeler-git
 	yay -S slack-desktop-dark
 	yay -S yaourt
