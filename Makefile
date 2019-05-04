@@ -60,7 +60,7 @@ install: ## Install arch linux packages using pacman
 	pacman-contrib x11-ssh-askpass libreoffice-fresh-ja python-prompt_toolkit \
 	jhead peek ncdu sxiv gnome-screenshot sshfs fping syncthing terraform gnupg \
 	xdotool sshuttle packer ripgrep stunnel vimiv adapta-gtk-theme gnome-tweaks \
-	firejail opencv
+	firejail opencv pyenv
 	sudo pkgfile --update
 
 pipinstall: ## Install python packages
@@ -396,7 +396,6 @@ aur: ## Install arch linux AUR packages using yay
 	yay -S downgrade
 	yay -S git-secrets
 	yay -S nvm
-	yay -S pyenv
 	yay -S python36
 	yay -S sequeler-git
 	yay -S slack-desktop-dark
