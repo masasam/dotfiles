@@ -4,35 +4,35 @@ export COMPOSER_HOME := ${HOME}/src/github.com/masasam/dotfiles
 
 init: ## Initial deploy dotfiles
 	test -L ${HOME}/.emacs.d || rm -rf ${HOME}/.emacs.d
-	ln -vsfn ${PWD}/.emacs.d   ${HOME}/.emacs.d
-	ln -vsf ${PWD}/.lesskey   ${HOME}/.lesskey
+	ln -vsfn ${PWD}/.emacs.d ${HOME}/.emacs.d
+	ln -vsf ${PWD}/.lesskey ${HOME}/.lesskey
 	lesskey
-	ln -vsf ${PWD}/.zshrc   ${HOME}/.zshrc
-	ln -vsf ${PWD}/.vimrc   ${HOME}/.vimrc
-	ln -vsf ${PWD}/.bashrc   ${HOME}/.bashrc
-	ln -vsf ${PWD}/.npmrc   ${HOME}/.npmrc
-	ln -vsf ${PWD}/.myclirc   ${HOME}/.myclirc
-	ln -vsf ${PWD}/.tern-config   ${HOME}/.tern-config
-	ln -vsf ${PWD}/.tmux.conf   ${HOME}/.tmux.conf
-	ln -vsf ${PWD}/.screenrc   ${HOME}/.screenrc
-	ln -vsf ${PWD}/.aspell.conf   ${HOME}/.aspell.conf
-	ln -vsf ${PWD}/.gitconfig   ${HOME}/.gitconfig
+	ln -vsf ${PWD}/.zshrc ${HOME}/.zshrc
+	ln -vsf ${PWD}/.vimrc ${HOME}/.vimrc
+	ln -vsf ${PWD}/.bashrc ${HOME}/.bashrc
+	ln -vsf ${PWD}/.npmrc ${HOME}/.npmrc
+	ln -vsf ${PWD}/.myclirc ${HOME}/.myclirc
+	ln -vsf ${PWD}/.tern-config ${HOME}/.tern-config
+	ln -vsf ${PWD}/.tmux.conf ${HOME}/.tmux.conf
+	ln -vsf ${PWD}/.screenrc ${HOME}/.screenrc
+	ln -vsf ${PWD}/.aspell.conf ${HOME}/.aspell.conf
+	ln -vsf ${PWD}/.gitconfig ${HOME}/.gitconfig
 
 initdropbox: ## Initial deploy dotfiles using dropbox
-	sudo ln -vsf ${HOME}/Dropbox/arch/hosts   /etc/hosts
+	sudo ln -vsf ${HOME}/Dropbox/arch/hosts /etc/hosts
 	mkdir -p ${HOME}/.config
-	ln -vsf ${HOME}/Dropbox/zsh/.netrc   ${HOME}/.netrc
-	ln -vsf ${HOME}/Dropbox/zsh/.authinfo   ${HOME}/.authinfo
-	ln -vsf ${HOME}/Dropbox/cli/.mycli-history   ${HOME}/.mycli-history
+	ln -vsf ${HOME}/Dropbox/zsh/.netrc ${HOME}/.netrc
+	ln -vsf ${HOME}/Dropbox/zsh/.authinfo ${HOME}/.authinfo
+	ln -vsf ${HOME}/Dropbox/cli/.mycli-history ${HOME}/.mycli-history
 	test -L ${HOME}/.config/pgcli || rm -rf ${HOME}/.config/pgcli
-	ln -vsfn ${HOME}/Dropbox/cli/pgcli   ${HOME}/.config/pgcli
-	ln -vsf ${HOME}/Dropbox/zsh/hub   ${HOME}/.config/hub
+	ln -vsfn ${HOME}/Dropbox/cli/pgcli ${HOME}/.config/pgcli
+	ln -vsf ${HOME}/Dropbox/zsh/hub ${HOME}/.config/hub
 	test -L ${HOME}/.ssh || rm -rf ${HOME}/.ssh
-	ln -vsfn ${HOME}/Dropbox/ssh   ${HOME}/.ssh
-	chmod 600   ${HOME}/.ssh/id_rsa
+	ln -vsfn ${HOME}/Dropbox/ssh ${HOME}/.ssh
+	chmod 600 ${HOME}/.ssh/id_rsa
 	mkdir -p ${HOME}/.local/share
 	test -L ${HOME}/.local/share/keyrings || rm -rf ${HOME}/.local/share/keyrings
-	ln -vsfn ${HOME}/Dropbox/passwd/keyrings   ${HOME}/.local/share/keyrings
+	ln -vsfn ${HOME}/Dropbox/passwd/keyrings ${HOME}/.local/share/keyrings
 
 base: ## Install base and base-devel package
 	sudo pacman -S bash bzip2 coreutils cryptsetup device-mapper dhcpcd mdadm \
@@ -185,69 +185,69 @@ rustinstall: ## Install rust and rust packages
 
 neomutt: ## Init neomutt mail client
 	mkdir -p ${HOME}/.mutt
-	ln -vsf ${PWD}/.muttrc   ${HOME}/.muttrc
-	ln -vsf ${PWD}/.mutt/mailcap   ${HOME}/.mutt/mailcap
-	ln -vsf ${PWD}/.mutt/certificates   ${HOME}/.mutt/certificates
-	ln -vsf ${HOME}/Dropbox/mutt/aliases   ${HOME}/.mutt/aliases
-	ln -vsf ${HOME}/Dropbox/mutt/signature   ${HOME}/.mutt/signature
-	ln -vsf ${HOME}/Dropbox/mutt/.goobookrc   ${HOME}/.goobookrc
+	ln -vsf ${PWD}/.muttrc ${HOME}/.muttrc
+	ln -vsf ${PWD}/.mutt/mailcap ${HOME}/.mutt/mailcap
+	ln -vsf ${PWD}/.mutt/certificates ${HOME}/.mutt/certificates
+	ln -vsf ${HOME}/Dropbox/mutt/aliases ${HOME}/.mutt/aliases
+	ln -vsf ${HOME}/Dropbox/mutt/signature ${HOME}/.mutt/signature
+	ln -vsf ${HOME}/Dropbox/mutt/.goobookrc ${HOME}/.goobookrc
 	yay -S goobook-git
 	goobook authenticate
 
 urxvt: ## Init rxvt-unicode terminal
 	sudo pacman -S rxvt-unicode urxvt-perls
-	ln -vsf ${PWD}/.Xresources   ${HOME}/.Xresources
-	sudo ln -vsf ${PWD}/usr/share/applications/urxvt.desktop   /usr/share/applications/urxvt.desktop
-	sudo ln -vsf ${PWD}/usr/share/applications/urxvtc.desktop   /usr/share/applications/urxvtc.desktop
-	sudo ln -vsf ${PWD}/usr/share/applications/urxvt-tabbed.desktop   /usr/share/applications/urxvt-tabbed.desktop
+	ln -vsf ${PWD}/.Xresources ${HOME}/.Xresources
+	sudo ln -vsf ${PWD}/usr/share/applications/urxvt.desktop /usr/share/applications/urxvt.desktop
+	sudo ln -vsf ${PWD}/usr/share/applications/urxvtc.desktop /usr/share/applications/urxvtc.desktop
+	sudo ln -vsf ${PWD}/usr/share/applications/urxvt-tabbed.desktop /usr/share/applications/urxvt-tabbed.desktop
 	mkdir -p ${HOME}/.config/autostart
 	chmod a+x ${PWD}/.auto_start.sh
-	ln -vsf ${PWD}/.auto_start.sh   ${HOME}/.auto_start.sh
-	ln -vsf ${PWD}/.config/autostart/autostart.desktop   ${HOME}/.config/autostart
+	ln -vsf ${PWD}/.auto_start.sh ${HOME}/.auto_start.sh
+	ln -vsf ${PWD}/.config/autostart/autostart.desktop ${HOME}/.config/autostart
 
 xterm: ## Init xterm terminal
 	sudo pacman -S xterm
-	ln -vsf ${PWD}/.Xresources   ${HOME}/.Xresources
-	sudo ln -vsf ${PWD}/usr/share/applications/xterm.desktop   /usr/share/applications/xterm.desktop
-	sudo ln -vsf ${PWD}/usr/share/applications/uxterm.desktop   /usr/share/applications/uxterm.desktop
+	ln -vsf ${PWD}/.Xresources ${HOME}/.Xresources
+	sudo ln -vsf ${PWD}/usr/share/applications/xterm.desktop /usr/share/applications/xterm.desktop
+	sudo ln -vsf ${PWD}/usr/share/applications/uxterm.desktop /usr/share/applications/uxterm.desktop
 
 mlterm: ## Init mlterm terminal
 	yay -S mlterm
 	mkdir -p ${HOME}/.mlterm
-	ln -vsf ${PWD}/.mlterm/main   ${HOME}/.mlterm/main
-	ln -vsf ${PWD}/.mlterm/color   ${HOME}/.mlterm/color
-	ln -vsf ${PWD}/.mlterm/aafont   ${HOME}/.mlterm/aafont
-	ln -vsf ${PWD}/.mlterm/key   ${HOME}/.mlterm/key
-	sudo ln -vsf ${PWD}/usr/share/applications/mlterm.desktop   /usr/share/applications/mlterm.desktop
-	sudo ln -vsf ${PWD}/usr/share/applications/mlclient.desktop   /usr/share/applications/mlclient.desktop
+	ln -vsf ${PWD}/.mlterm/main ${HOME}/.mlterm/main
+	ln -vsf ${PWD}/.mlterm/color ${HOME}/.mlterm/color
+	ln -vsf ${PWD}/.mlterm/aafont ${HOME}/.mlterm/aafont
+	ln -vsf ${PWD}/.mlterm/key ${HOME}/.mlterm/key
+	sudo ln -vsf ${PWD}/usr/share/applications/mlterm.desktop /usr/share/applications/mlterm.desktop
+	sudo ln -vsf ${PWD}/usr/share/applications/mlclient.desktop /usr/share/applications/mlclient.desktop
 
 termite: ## Init termite terminal
 	sudo pacman -S termite
 	mkdir -p ${HOME}/.config/termite
-	ln -vsf ${PWD}/.config/termite/config   ${HOME}/.config/termite/config
+	ln -vsf ${PWD}/.config/termite/config ${HOME}/.config/termite/config
 
 tym: ## Init tym terminal
 	yay -S tym
 	mkdir -p ${HOME}/.config/tym
-	ln -vsf ${PWD}/.config/tym/config.lua   ${HOME}/.config/tym/config.lua
-	sudo ln -vsf ${PWD}/usr/share/applications/tym.desktop   /usr/share/applications/tym.desktop
+	ln -vsf ${PWD}/.config/tym/config.lua ${HOME}/.config/tym/config.lua
+	sudo ln -vsf ${PWD}/usr/share/applications/tym.desktop /usr/share/applications/tym.desktop
 
 rclone: ## Init rclone
 	sudo pacman -S rclone
-	chmod 600   ${HOME}/Dropbox/zsh/rclone/rclone.conf
+	chmod 600 ${HOME}/Dropbox/zsh/rclone/rclone.conf
 	test -L ${HOME}/.config/rclone || rm -rf ${HOME}/.config/rclone
-	ln -vsfn ${HOME}/Dropbox/zsh/rclone   ${HOME}/.config/rclone
+	ln -vsfn ${HOME}/Dropbox/zsh/rclone ${HOME}/.config/rclone
 
 dnsmasq: ## Init dnsmasq
 	sudo pacman -S dnsmasq
-	sudo ln -vsf ${PWD}/etc/dnsmasq/resolv.dnsmasq.conf   /etc/resolv.dnsmasq.conf
-	sudo ln -vsf ${PWD}/etc/dnsmasq/dnsmasq.conf   /etc/dnsmasq.conf
+	sudo ln -vsf ${PWD}/etc/dnsmasq/resolv.dnsmasq.conf /etc/resolv.dnsmasq.conf
+	sudo ln -vsf ${PWD}/etc/dnsmasq/dnsmasq.conf /etc/dnsmasq.conf
 	sudo mkdir -p /etc/NetworkManager
 	sudo ln -vsf ${PWD}/etc/NetworkManager/NetworkManager.conf /etc/NetworkManager/NetworkManager.conf
 
 google-mozc: ## Install ibus-mozc
 	test -L ${HOME}/.mozc || rm -rf ${HOME}/.mozc
-	ln -vsfn ${HOME}/Dropbox/mozc/.mozc   ${HOME}/.mozc
+	ln -vsfn ${HOME}/Dropbox/mozc/.mozc ${HOME}/.mozc
 	yay -S ibus-mozc
 	ibus-daemon -drx
 
@@ -262,7 +262,7 @@ ttf-cica: ## Install Cica font
 docker: ## Docker initial setup
 	sudo usermod -aG docker ${USER}
 	mkdir -p ${HOME}/.docker
-	ln -vsf ${HOME}/Dropbox/docker/config.json   ${HOME}/.docker/config.json
+	ln -vsf ${HOME}/Dropbox/docker/config.json ${HOME}/.docker/config.json
 	sudo systemctl enable docker.service
 	sudo systemctl start docker.service
 
@@ -277,9 +277,9 @@ circle-ci-cli: ## Install circle ci cli and setup
 	circleci setup
 
 mariadb: ## Mariadb initial setup
-	sudo ln -vsf ${PWD}/etc/sysctl.d/40-max-user-watches.conf   /etc/sysctl.d/40-max-user-watches.conf
+	sudo ln -vsf ${PWD}/etc/sysctl.d/40-max-user-watches.conf /etc/sysctl.d/40-max-user-watches.conf
 	sudo pacman -S mariadb mariadb-clients
-	sudo ln -vsf ${PWD}/etc/mysql/my.cnf   /etc/mysql/my.cnf
+	sudo ln -vsf ${PWD}/etc/mysql/my.cnf /etc/mysql/my.cnf
 	sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
 	sudo systemctl enable mariadb.service
 	sudo systemctl start mariadb.service
@@ -328,7 +328,7 @@ mpsyt: ## Install and deploy mps-youtube
 	pip install --user youtube-dl
 	test -L ${HOME}/.config/mps-youtube/playlists || rm -rf ${HOME}/.config/mps-youtube/playlists
 	mkdir -p ${HOME}/.config/mps-youtube
-	ln -vsfn ${HOME}/Dropbox/zsh/mps-youtube/playlists   ${HOME}/.config/mps-youtube/playlists
+	ln -vsfn ${HOME}/Dropbox/zsh/mps-youtube/playlists ${HOME}/.config/mps-youtube/playlists
 
 rbenv: ## Install rvenv ruby-build
 	yay -S rbenv
@@ -369,17 +369,17 @@ rails: ## Create rails
 
 sxiv: ## Init sxiv
 	mkdir -p ${HOME}/.config/sxiv/exec
-	ln -vsf ${PWD}/.config/sxiv/exec/image-info   ${HOME}/.config/sxiv/exec/image-info
+	ln -vsf ${PWD}/.config/sxiv/exec/image-info ${HOME}/.config/sxiv/exec/image-info
 	chmod +x ${HOME}/.config/sxiv/exec/image-info
 
 zeal: ## Deploy zeal config and docsets
 	sudo pacman -S zeal qt5-styleplugins qt5ct
-	sudo ln -vsf ${PWD}/etc/environment   /etc/environment
+	sudo ln -vsf ${PWD}/etc/environment /etc/environment
 	mkdir -p ${HOME}/.local/share
 	mkdir -p ${HOME}/.config/Zeal
-	ln -vsf ${PWD}/.config/Zeal/Zeal.conf   ${HOME}/.config/Zeal/Zeal.conf
+	ln -vsf ${PWD}/.config/Zeal/Zeal.conf ${HOME}/.config/Zeal/Zeal.conf
 	test -L ${HOME}/.local/share/Zeal || rm -rf ${HOME}/.local/share/Zeal
-	ln -vsfn ${HOME}/Dropbox/Zeal   ${HOME}/.local/share/Zeal
+	ln -vsfn ${HOME}/Dropbox/Zeal ${HOME}/.local/share/Zeal
 
 zoom: ## Install zoom for web conference
 	sudo pacman -U ${HOME}/Dropbox/arch/zoom_x86_64.pkg.tar.xz
@@ -408,37 +408,37 @@ aurplus: ## Install arch linux AUR packages using yay
 	yay -S rtags
 
 desktop: ## Update desktop entry
-	sudo ln -vsf ${PWD}/usr/share/applications/vim.desktop   /usr/share/applications/vim.desktop
-	sudo ln -vsf ${PWD}/usr/share/applications/avahi-discover.desktop   /usr/share/applications/avahi-discover.desktop
-	sudo ln -vsf ${PWD}/usr/share/applications/bvnc.desktop   /usr/share/applications/bvnc.desktop
-	sudo ln -vsf ${PWD}/usr/share/applications/bssh.desktop   /usr/share/applications/bssh.desktop
-	sudo ln -vsf ${PWD}/usr/share/applications/xterm.desktop   /usr/share/applications/xterm.desktop
-	sudo ln -vsf ${PWD}/usr/share/applications/uxterm.desktop   /usr/share/applications/uxterm.desktop
-	sudo ln -vsf ${PWD}/usr/share/applications/mlterm.desktop   /usr/share/applications/mlterm.desktop
-	sudo ln -vsf ${PWD}/usr/share/applications/mlclient.desktop   /usr/share/applications/mlclient.desktop
-	sudo ln -vsf ${PWD}/usr/share/applications/urxvt.desktop   /usr/share/applications/urxvt.desktop
-	sudo ln -vsf ${PWD}/usr/share/applications/urxvtc.desktop   /usr/share/applications/urxvtc.desktop
-	sudo ln -vsf ${PWD}/usr/share/applications/urxvt-tabbed.desktop   /usr/share/applications/urxvt-tabbed.desktop
-	sudo ln -vsf ${PWD}/usr/share/applications/nvim.desktop   /usr/share/applications/nvim.desktop
+	sudo ln -vsf ${PWD}/usr/share/applications/vim.desktop /usr/share/applications/vim.desktop
+	sudo ln -vsf ${PWD}/usr/share/applications/avahi-discover.desktop /usr/share/applications/avahi-discover.desktop
+	sudo ln -vsf ${PWD}/usr/share/applications/bvnc.desktop /usr/share/applications/bvnc.desktop
+	sudo ln -vsf ${PWD}/usr/share/applications/bssh.desktop /usr/share/applications/bssh.desktop
+	sudo ln -vsf ${PWD}/usr/share/applications/xterm.desktop /usr/share/applications/xterm.desktop
+	sudo ln -vsf ${PWD}/usr/share/applications/uxterm.desktop /usr/share/applications/uxterm.desktop
+	sudo ln -vsf ${PWD}/usr/share/applications/mlterm.desktop /usr/share/applications/mlterm.desktop
+	sudo ln -vsf ${PWD}/usr/share/applications/mlclient.desktop /usr/share/applications/mlclient.desktop
+	sudo ln -vsf ${PWD}/usr/share/applications/urxvt.desktop /usr/share/applications/urxvt.desktop
+	sudo ln -vsf ${PWD}/usr/share/applications/urxvtc.desktop /usr/share/applications/urxvtc.desktop
+	sudo ln -vsf ${PWD}/usr/share/applications/urxvt-tabbed.desktop /usr/share/applications/urxvt-tabbed.desktop
+	sudo ln -vsf ${PWD}/usr/share/applications/nvim.desktop /usr/share/applications/nvim.desktop
 
 toggle: ## Prepare command that toggle between emacs and chromium
-	sudo ln -vsf ${PWD}/usr/share/applications/toggle.desktop   /usr/share/applications/toggle.desktop
+	sudo ln -vsf ${PWD}/usr/share/applications/toggle.desktop /usr/share/applications/toggle.desktop
 	sudo cp ${PWD}/.toggle.sh /usr/local/bin/toggle
 
 aws: ## Init aws cli
 	mkdir -p ${HOME}/.local
 	pip install --user awscli
 	test -L ${HOME}/.aws || rm -rf ${HOME}/.aws
-	ln -vsfn ${HOME}/Dropbox/zsh/.aws   ${HOME}/.aws
+	ln -vsfn ${HOME}/Dropbox/zsh/.aws ${HOME}/.aws
 
 tmuxp: ## Install tmuxp
 	mkdir -p ${HOME}/.local
 	pip install --user tmuxp
-	sudo ln -vsf ${PWD}/.config/main.yaml   ${HOME}/.config/main.yaml
+	sudo ln -vsf ${PWD}/.config/main.yaml ${HOME}/.config/main.yaml
 
 sk-tmux: ## Init sk-tmux
 	chmod a+x /home/masa/Dropbox/cli/sk-tmux
-	sudo ln -vsf ${HOME}/Dropbox/cli/sk-tmux   /usr/local/bin/sk-tmux
+	sudo ln -vsf ${HOME}/Dropbox/cli/sk-tmux /usr/local/bin/sk-tmux
 
 roswell: ## Install ros and lem
 	yay -S roswell
@@ -447,12 +447,12 @@ roswell: ## Install ros and lem
 sylpheed: ## Init sylpheed
 	sudo pacman -S sylpheed
 	test -L ${HOME}/.sylpheed-2.0 || rm -rf ${HOME}/.sylpheed-2.0
-	ln -vsfn ${HOME}/Dropbox/sylpheed/.sylpheed-2.0   ${HOME}/.sylpheed-2.0
+	ln -vsfn ${HOME}/Dropbox/sylpheed/.sylpheed-2.0 ${HOME}/.sylpheed-2.0
 
 psd: ## Profile-Sync-Daemon initial setup
 	yay -S profile-sync-daemon
 	mkdir -p ${HOME}/.config/psd
-	ln -vsf ${PWD}/.config/psd/psd.conf   ${HOME}/.config/psd/psd.conf
+	ln -vsf ${PWD}/.config/psd/psd.conf ${HOME}/.config/psd/psd.conf
 	echo "${USER} ALL=(ALL) NOPASSWD: /usr/bin/psd-overlay-helper" | sudo EDITOR='tee -a' visudo
 	systemctl --user enable psd.service
 
@@ -464,19 +464,19 @@ ranger: ## Init ranger
 	mkdir -p ${HOME}/.local
 	pip install --user ranger-fm
 	test -L ${HOME}/.config/ranger || rm -rf ${HOME}/.config/ranger
-	ln -vsfn ${HOME}/Dropbox/ranger   ${HOME}/.config/ranger
+	ln -vsfn ${HOME}/Dropbox/ranger ${HOME}/.config/ranger
 
 neovim: ## Init neovim
 	sudo pacman -S neovim
 	mkdir -p ${HOME}/.config/nvim
-	ln -vsf ${PWD}/.config/nvim/init.vim   ${HOME}/.config/nvim/init.vim
-	ln -vsf ${PWD}/.config/nvim/installer.sh   ${HOME}/.config/nvim/installer.sh
+	ln -vsf ${PWD}/.config/nvim/init.vim ${HOME}/.config/nvim/init.vim
+	ln -vsf ${PWD}/.config/nvim/installer.sh ${HOME}/.config/nvim/installer.sh
 	bash ${HOME}/.config/nvim/installer.sh ${HOME}/.config/nvim
-	sudo ln -vsf ${PWD}/usr/share/applications/nvim.desktop   /usr/share/applications/nvim.desktop
+	sudo ln -vsf ${PWD}/usr/share/applications/nvim.desktop /usr/share/applications/nvim.desktop
 
 varnish: ## Varnish inital setup
 	sudo pacman -S varnish
-	sudo ln -vsf ${PWD}/etc/varnish/default.vcl   /etc/varnish/default.vcl
+	sudo ln -vsf ${PWD}/etc/varnish/default.vcl /etc/varnish/default.vcl
 	sudo systemctl enable varnish.service
 	sudo systemctl start varnish.service
 
@@ -487,7 +487,7 @@ mongodb: ## Mongodb initial setup
 
 powertop: ## Powertop initial setup (Warning take a long time)
 	sudo pacman -S powertop
-	sudo ln -vsf ${PWD}/etc/systemd/system/powertop.service   /etc/systemd/system/powertop.service
+	sudo ln -vsf ${PWD}/etc/systemd/system/powertop.service /etc/systemd/system/powertop.service
 	sudo powertop --calibrate
 	sudo systemctl enable powertop
 
@@ -503,14 +503,14 @@ nodenv: ## Install nodenv node-build
 wordpress: ## Deploy wordpress
 	sudo pacman -S nginx php-fpm
 	mkdir -p ${HOME}/src/github.com/masasam
-	sudo ln -vsf ${PWD}/etc/nginx/nginx.conf   /etc/nginx/nginx.conf
-	sudo ln -vsf ${PWD}/etc/php/php.ini   /etc/php/php.ini
+	sudo ln -vsf ${PWD}/etc/nginx/nginx.conf /etc/nginx/nginx.conf
+	sudo ln -vsf ${PWD}/etc/php/php.ini /etc/php/php.ini
 	wget https://ja.wordpress.org/wordpress-latest-ja.tar.gz
 	tar zxvf wordpress-latest-ja.tar.gz
 	test -f	wordpress-latest-ja.tar.gz && rm -fr wordpress-latest-ja.tar.gz
 	test -d /var/www/wp-admin || sudo mv wordpress /var/www
 	chmod -R 777 /var/www/wp-content
-	sudo ln -vsfn /var/www    ${HOME}/src/github.com/masasam/wordpress
+	sudo ln -vsfn /var/www ${HOME}/src/github.com/masasam/wordpress
 	sudo chown http:http /var/www/wp-admin/includes/file.php  
 	echo 'create database wp' | mysql -u root
 	echo "grant all privileges on wp.* to wp@localhost identified by 'password';FLUSH PRIVILEGES;" | mysql -u root
