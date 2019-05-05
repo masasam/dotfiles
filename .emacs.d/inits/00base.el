@@ -233,6 +233,12 @@ If the region is inactive, `backward-kill-word'."
   (emacs-lock-mode 'kill))
 
 
+(defun firebase-deploy ()
+  "Firebase deploy command."
+  (interactive)
+  (shell-command "firebase deploy"))
+
+
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:
