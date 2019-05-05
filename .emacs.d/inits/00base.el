@@ -236,7 +236,7 @@ If the region is inactive, `backward-kill-word'."
 (defun firebase-deploy ()
   "Firebase deploy command."
   (interactive)
-  (shell-command "firebase deploy"))
+  (shell-command-to-string "firebase deploy"))
 
 
 (defun sylpheed ()
