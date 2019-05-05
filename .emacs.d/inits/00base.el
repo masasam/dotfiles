@@ -239,6 +239,11 @@ If the region is inactive, `backward-kill-word'."
   (shell-command "firebase deploy"))
 
 
+(defun sylpheed ()
+  "Open sylpheed."
+  (interactive)
+  (shell-command-to-string "sylpheed %u"))
+
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:
