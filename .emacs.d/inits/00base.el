@@ -72,7 +72,7 @@
 ;; xref-find-references key
 (bind-key "M-/" 'xref-find-references)
 
-;; When the mouse cursor is close to the text cursor, the mouse hangs away
+;; When the mouse cursor is close to the text cursor, the mouse pointer move to a place where pointer does not get in the way
 (if (display-mouse-p) (mouse-avoidance-mode 'exile))
 
 ;; Disable automatic save
