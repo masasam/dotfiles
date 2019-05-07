@@ -7,12 +7,12 @@ astroid==2.2.5
 attrs==19.1.0
 Automat==0.7.0
 autopep8==1.4.4
-awscli==1.16.153
+awscli==1.16.154
 backcall==0.1.0
 bcrypt==3.1.6
 beautifulsoup4==4.7.1
 bleach==3.1.0
-botocore==1.12.143
+botocore==1.12.144
 btrfsutil==1.1.0
 cached-property==1.5.1
 cachetools==3.1.0
@@ -81,7 +81,7 @@ jupyterthemes==0.20.0
 kaptan==0.5.12
 kitchen==1.2.5
 kiwisolver==1.1.0
-lazy-object-proxy==1.3.1
+lazy-object-proxy==1.4.0
 lensfun==0.3.2
 lesscpy==0.13.0
 libtmux==0.8.1
@@ -117,7 +117,7 @@ pgspecial==1.11.5
 pickleshare==0.7.5
 Pillow==6.0.0
 pipenv==2018.11.26
-pluggy==0.9.0
+pluggy==0.11.0
 ply==3.11
 progressbar2==3.39.3
 prometheus-client==0.6.0
