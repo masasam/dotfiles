@@ -6,8 +6,8 @@
 (require 'company)
 
 ;; general
-(setq comany-minimum-prefix-length 3)
-(setq comany-selection-wrap-around t)
+(setq company-minimum-prefix-length 3)
+(setq company-selection-wrap-around t)
 (bind-key "C-M-i" 'company-complete)
 (bind-key "C-h" nil company-active-map)
 (bind-key "C-n" 'company-select-next company-active-map)
