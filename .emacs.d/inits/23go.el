@@ -5,13 +5,17 @@
 
 ;; go-mode
 (add-hook 'go-mode-hook 'eglot-ensure)
+(setq gofmt-command "goimports")
 (add-hook 'before-save-hook #'gofmt-before-save)
 (add-hook 'go-mode-hook
 	  '(lambda()
 	     (setq c-basic-offset 4)
-	     (setq indent-tabs-mode t)))
+	     (setq indent-tabs-mode nil)
+	     (setq tab-width 4)))
 
 (with-eval-after-load 'eglot
-  (add-to-list 'eglot-server-programs '(go-mode . ("go-langserver" "-gocodecompletion"))))
+  (add-to-list 'eglot-server-programs '(go-mode . ("gopls")))
+  ;; (add-to-list 'eglot-server-programs '(go-mode . ("go-langserver" "-gocodecompletion")))
+  )
 
 ;;; 23go.el ends here
