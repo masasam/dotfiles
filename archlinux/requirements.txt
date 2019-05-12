@@ -82,7 +82,7 @@ jupyterthemes==0.20.0
 kaptan==0.5.12
 kitchen==1.2.5
 kiwisolver==1.1.0
-lazy-object-proxy==1.4.0
+lazy-object-proxy==1.4.1
 lensfun==0.3.2
 lesscpy==0.13.0
 libtmux==0.8.1
@@ -146,7 +146,7 @@ pynvim==0.3.2
 pyOpenSSL==19.0.0
 pyparsing==2.4.0
 pyrsistent==0.15.1
-PySocks==1.6.8
+PySocks==1.7.0
 python-dateutil==2.8.0
 python-jsonrpc-server==0.1.2
 python-language-server==0.26.1
