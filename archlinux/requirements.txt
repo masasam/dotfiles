@@ -7,12 +7,12 @@ astroid==2.2.5
 attrs==19.1.0
 Automat==0.7.0
 autopep8==1.4.4
-awscli==1.16.157
+awscli==1.16.158
 backcall==0.1.0
 bcrypt==3.1.6
 beautifulsoup4==4.7.1
 bleach==3.1.0
-botocore==1.12.147
+botocore==1.12.148
 btrfsutil==1.1.0
 cached-property==1.5.1
 cachetools==3.1.0
@@ -40,7 +40,7 @@ docopt==0.6.2
 docutils==0.14
 entrypoints==0.3
 ERAlchemy==1.2.10
-Faker==1.0.6
+Faker==1.0.7
 flake8==3.7.7
 future==0.17.1
 gif-for-cli==1.1.1
@@ -66,7 +66,7 @@ ipywidgets==7.4.2
 iso-639==0.4.5
 iso3166==1.0
 isodate==0.6.0
-isort==4.3.19
+isort==4.3.20
 jedi==0.13.3
 Jinja2==2.10.1
 jmespath==0.9.4
