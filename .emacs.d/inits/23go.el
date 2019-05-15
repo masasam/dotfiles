@@ -14,8 +14,6 @@
 	     (setq tab-width 4)))
 
 (with-eval-after-load 'eglot
-  (add-to-list 'eglot-server-programs '(go-mode . ("gopls")))
-  ;; (add-to-list 'eglot-server-programs '(go-mode . ("go-langserver" "-gocodecompletion")))
-  )
+  (add-to-list 'eglot-server-programs '(go-mode . ("gopls"))))
 
 ;;; 23go.el ends here
