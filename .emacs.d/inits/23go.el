@@ -3,7 +3,6 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
-;; go-mode
 (add-hook 'go-mode-hook 'eglot-ensure)
 (setq gofmt-command "goimports")
 (add-hook 'before-save-hook #'gofmt-before-save)
