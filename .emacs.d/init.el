@@ -52,7 +52,6 @@
 (package-install 'dash)
 (package-install 'dashboard)
 (package-install 'deadgrep)
-(package-install 'diminish)
 (package-install 'docker)
 (package-install 'docker-tramp)
 (package-install 'dockerfile-mode)
