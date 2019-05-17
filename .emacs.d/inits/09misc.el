@@ -3,6 +3,8 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
+(minions-mode 1)
+
 ;; tldr
 (setq tldr-directory-path "~/Dropbox/emacs/tldr/")
 
