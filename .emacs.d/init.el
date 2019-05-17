@@ -104,6 +104,7 @@
 (package-install 'magit)
 (package-install 'markdown-mode)
 (package-install 'material-theme)
+(package-install 'minions)
 (package-install 'nginx-mode)
 (package-install 'nodejs-repl)
 (package-install 'openwith)
