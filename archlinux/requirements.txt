@@ -91,7 +91,7 @@ litecli==1.0.0
 louis==3.9.0
 lxml==4.3.3
 MarkupSafe==1.1.1
-matplotlib==3.0.3
+matplotlib==3.1.0
 mccabe==0.6.1
 mistune==0.8.4
 mps-youtube==0.2.8
