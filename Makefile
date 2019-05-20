@@ -12,7 +12,6 @@ init: ## Initial deploy dotfiles
 	ln -vsf ${PWD}/.bashrc ${HOME}/.bashrc
 	ln -vsf ${PWD}/.npmrc ${HOME}/.npmrc
 	ln -vsf ${PWD}/.myclirc ${HOME}/.myclirc
-	ln -vsf ${PWD}/.tern-config ${HOME}/.tern-config
 	ln -vsf ${PWD}/.tmux.conf ${HOME}/.tmux.conf
 	ln -vsf ${PWD}/.screenrc ${HOME}/.screenrc
 	ln -vsf ${PWD}/.aspell.conf ${HOME}/.aspell.conf
@@ -162,7 +161,6 @@ nodeinstall: ## Install node packages
 	yarn global add npm
 	yarn global add prettier
 	yarn global add parcel-bundler
-	yarn global add tern
 	yarn global add vscode-css-languageserver-bin
 	yarn global add vue-cli
 	yarn global add vue-language-server
