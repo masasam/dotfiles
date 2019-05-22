@@ -336,7 +336,7 @@ rbenv: ## Install rvenv ruby-build
 	gem install bundle
 
 rubygem: ## Install rubygem package
-	gem install bundler jekyll sass solargraph rawler
+	gem install bundler jekyll sass solargraph rawler package_cloud
 
 django: ## Install Django
 	mkdir -p ${HOME}/src/github.com/masasam/mydjango;\
