@@ -433,7 +433,6 @@ If you make a mistake on the keyboard, erase all with Ctrl-u
 
 	mkdir -p ${HOME}/{bin,src}
 	go get -u -v golang.org/x/tools/cmd/gopls
-	go get -u -v github.com/sourcegraph/go-langserver
 	go get -u -v github.com/golang/dep/cmd/dep
 	go get -u -v github.com/motemen/ghq
 	go get -u -v github.com/sonatard/ghs
