@@ -499,6 +499,9 @@ nodenv: ## Install nodenv node-build
 	yay -S nodenv
 	git clone https://github.com/nodenv/node-build.git ${HOME}/.nodenv/plugins/node-build
 
+python3.6: ## Install python3.6
+	pyenv install 3.6.8
+
 wordpress: ## Deploy wordpress
 	sudo pacman -S nginx php-fpm
 	mkdir -p ${HOME}/src/github.com/masasam
