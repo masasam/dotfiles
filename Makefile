@@ -90,6 +90,7 @@ pipinstall: ## Install python packages
 	pip install --user matplotlib
 	pip install --user mycli
 	pip install --user neovim
+	pip install --user nose
 	pip install --user opencv-python
 	pip install --user pandas
 	pip install --user pgcli
