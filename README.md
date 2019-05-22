@@ -352,6 +352,7 @@ If you make a mistake on the keyboard, erase all with Ctrl-u
 
 	yay -S discord
 	yay -S drone-cli
+	yay -S gitflow-avh
 	yay -S git-secrets
 	yay -S global
 	yay -S goobook-git
