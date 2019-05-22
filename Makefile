@@ -500,7 +500,8 @@ nodenv: ## Install nodenv node-build
 	yay -S nodenv
 	git clone https://github.com/nodenv/node-build.git ${HOME}/.nodenv/plugins/node-build
 
-python3.6: ## Install python3.6
+other-python: ## Install python3.5 python3.6
+	pyenv install 3.5.7
 	pyenv install 3.6.8
 
 wordpress: ## Deploy wordpress
