@@ -36,6 +36,10 @@
 (defalias 'my/kukei-mark-mode 'rectangle-mark-mode)
 
 
+;; set fci
+(setq fci-rule-column 120)
+
+
 ;; espy
 (setq espy-password-file "~/Dropbox/passwd/password.org.gpg")
 
