@@ -330,7 +330,7 @@ You can make install from here
 	sudo pacman -S oath-toolkit imagemagick peek sshuttle
 	sudo pacman -S bookworm ruby ruby-rdoc pacman-contrib ncdu
 	sudo pacman -S sxiv nnn php-fpm nginx adapta-gtk-theme
-	sudo pacman -S podman firejail pyenv hexedit
+	sudo pacman -S podman firejail pyenv hexedit vagrant lxc
 
 ## Activity
 
