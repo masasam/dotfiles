@@ -7,12 +7,12 @@ astroid==2.2.5
 attrs==19.1.0
 Automat==0.7.0
 autopep8==1.4.4
-awscli==1.16.164
+awscli==1.16.165
 backcall==0.1.0
 bcrypt==3.1.6
 beautifulsoup4==4.7.1
 bleach==3.1.0
-botocore==1.12.154
+botocore==1.12.155
 btrfsutil==1.1.1
 cached-property==1.5.1
 cachetools==3.1.0
@@ -200,7 +200,7 @@ truffleHogRegexes==0.0.7
 Twisted==19.2.0
 typed-ast==1.3.5
 uritemplate==3.0.0
-urllib3==1.25.2
+urllib3==1.25.3
 vimiv==0.9.1
 virtualenv==16.6.0
 virtualenv-clone==0.5.3
