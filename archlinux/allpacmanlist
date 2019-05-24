@@ -932,6 +932,7 @@ usbmuxd
 usbutils
 util-linux
 v4l-utils
+vagrant
 vala
 valgrind
 vamp-plugin-sdk
@@ -940,6 +941,8 @@ vid.stab
 vim
 vim-runtime
 vimiv
+virtualbox
+virtualbox-host-modules-arch
 volume_key
 vte-common
 vte3
