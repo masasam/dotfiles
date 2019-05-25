@@ -201,6 +201,7 @@ texlive-latexextra
 the_silver_searcher
 tig
 tmux
+tokei
 traceroute
 tree
 typescript

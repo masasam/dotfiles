@@ -59,7 +59,7 @@ install: ## Install arch linux packages using pacman
 	pacman-contrib x11-ssh-askpass libreoffice-fresh-ja python-prompt_toolkit \
 	jhead peek ncdu sxiv gnome-screenshot sshfs fping syncthing terraform gnupg \
 	xdotool sshuttle packer ripgrep stunnel vimiv adapta-gtk-theme gnome-tweaks \
-	firejail opencv pyenv hexedit vagrant virtualbox
+	firejail opencv pyenv hexedit vagrant virtualbox tokei
 	sudo pkgfile --update
 
 pipinstall: ## Install python packages
