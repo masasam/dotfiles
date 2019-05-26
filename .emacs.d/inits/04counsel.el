@@ -35,6 +35,10 @@
 (setq swiper-include-line-number-in-search t)
 
 
+;; avy
+(bind-key "C-r" 'avy-goto-word-1)
+
+
 (defun swiper-isearch-region ()
   "If region is selected, `swiper-isearch' with the keyword selected in region.
 If the region isn't selected, `swiper-isearch'."
