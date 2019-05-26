@@ -22,7 +22,7 @@
 
 
 ;; avy
-(bind-key "C-r" 'avy-goto-char-2)
+(bind-key "C-r" 'avy-goto-word-1)
 
 
 ;; back-button
