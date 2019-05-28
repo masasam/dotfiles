@@ -311,6 +311,7 @@ haskell-skylighting
 haskell-skylighting-core
 haskell-socks
 haskell-split
+haskell-splitmix
 haskell-streaming-commons
 haskell-syb
 haskell-tagged
