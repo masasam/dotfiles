@@ -102,6 +102,9 @@
 ;; Save history of minibuffer
 (savehist-mode 1)
 
+;;  Point keeps its screen position when scroll
+(setq scroll-preserve-screen-position :always)
+
 ;; Turn off warning sound screen flash
 (setq visible-bell nil)
 ;; All warning sounds and flash are invalid (note that the warning sound does not sound completely)
