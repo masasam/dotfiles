@@ -7,12 +7,12 @@ astroid==2.2.5
 attrs==19.1.0
 Automat==0.7.0
 autopep8==1.4.4
-awscli==1.16.167
+awscli==1.16.168
 backcall==0.1.0
 bcrypt==3.1.6
 beautifulsoup4==4.7.1
 bleach==3.1.0
-botocore==1.12.157
+botocore==1.12.158
 btrfsutil==1.1.1
 cached-property==1.5.1
 cachetools==3.1.1
@@ -57,7 +57,7 @@ httplib2==0.12.3
 humanize==0.5.1
 hyperlink==19.0.0
 idna==2.8
-importlib-metadata==0.15
+importlib-metadata==0.17
 importmagic==0.1.7
 incremental==17.5.0
 ipykernel==5.1.1
@@ -122,7 +122,7 @@ Pillow==6.0.0
 pipenv==2018.11.26
 pluggy==0.12.0
 ply==3.11
-progressbar2==3.39.3
+progressbar2==3.41.0
 prometheus-client==0.6.0
 prompt-toolkit==2.0.9
 psycopg2==2.8.2
