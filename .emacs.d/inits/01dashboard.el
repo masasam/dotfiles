@@ -3,6 +3,8 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
+(require 'all-the-icons)
+
 (when (window-system)
   ;; Hide splash at start
   (setq inhibit-startup-message t)
