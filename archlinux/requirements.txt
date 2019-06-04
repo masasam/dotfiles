@@ -7,12 +7,12 @@ astroid==2.2.5
 attrs==19.1.0
 Automat==0.7.0
 autopep8==1.4.4
-awscli==1.16.169
+awscli==1.16.170
 backcall==0.1.0
 bcrypt==3.1.6
 beautifulsoup4==4.7.1
 bleach==3.1.0
-botocore==1.12.159
+botocore==1.12.160
 btrfsutil==1.1.1
 cached-property==1.5.1
 cachetools==3.1.1
@@ -30,7 +30,7 @@ cssselect==1.0.3
 cycler==0.10.0
 decorator==4.4.0
 defusedxml==0.6.0
-Django==2.2.1
+Django==2.2.2
 djangorestframework==3.9.4
 docker==4.0.1
 docker-compose==1.24.0
@@ -162,7 +162,7 @@ redis==3.2.1
 requests==2.22.0
 rope==0.14.0
 rsa==4.0
-rtv==1.26.0
+rtv==1.27.0
 ruamel.yaml==0.15.96
 s3transfer==0.2.0
 scikit-learn==0.21.2
