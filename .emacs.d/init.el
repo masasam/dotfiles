@@ -1,3 +1,4 @@
+
 ;;; init.el --- init.el
 ;;; Commentary:
 ;;; Code:
@@ -31,7 +32,6 @@
   (package-install 'ag)
   (package-install 'aggressive-indent)
   (package-install 'alarm-clock)
-  (package-install 'all-the-icons)
   (package-install 'auto-compile)
   (package-install 'avy)
   (package-install 'back-button)
