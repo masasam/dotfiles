@@ -283,7 +283,7 @@ mariadb: ## Mariadb initial setup
 	sudo systemctl enable mariadb.service
 	sudo systemctl start mariadb.service
 	mysql_secure_installation
-	mysql -u root -p < ${HOME}/Dropbox/mariadb/world.sql/data
+	mysql -u root -p < ${HOME}/Dropbox/database/mariadb/world.sql/data
 
 postgresql: ## Postgresql initial setup
 	sudo pacman -S postgresql

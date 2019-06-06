@@ -690,7 +690,7 @@ function gitlab-upstream() {
 
  function postgres-backup() {
      if [ $# = 1 ]; then
-	 pg_dump $1 > ~/Dropbox/postgresql/`date '+%Y%m%d%H%M%S'`
+	 pg_dump $1 > ~/Dropbox/database/postgresql/`date '+%Y%m%d%H%M%S'`
      else
 	 echo 'usage: backup-postgres [dbname]'
      fi
