@@ -27,14 +27,8 @@
 	 "* %? %U %i")
 	("m" "Memo" entry (file+headline "~/Dropbox/emacs/org/memo.org" "Memo")
 	 "* %? %U %i")
-	("s" "Story" entry (file+headline "~/Dropbox/emacs/org/story.org" "Story")
-	 "* %? %U %i")
-	("f" "Future Task" entry (file+headline "~/Dropbox/emacs/org/task_future.org" "Future Task")
-	 "** TODO %? \n")
 	("t" "Task" entry (file+headline "~/Dropbox/emacs/org/task.org" "Task")
-	 "** TODO %? \n   SCHEDULED: %^t \n")
-	("p" "Priority task" entry (file "~/Dropbox/emacs/org/priority_task.org")
-         "* %?\n" :clock-in t :clock-resume t)))
+	 "** TODO %? \n   SCHEDULED: %^t \n")))
 
 (setq org-refile-targets
       (quote (("~/Dropbox/emacs/org/archives.org" :level . 1)
