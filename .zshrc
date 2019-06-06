@@ -591,117 +591,117 @@ function gitlab-upstream() {
 	git remote add upstream git://gitlab.com/$1
     else
 	echo 'usage: gitlab-upstream name'
-     fi
- }
+    fi
+}
 
 
- function gitignore() {
-     curl -L -s https://www.gitignore.io/api/$@
- }
+function gitignore() {
+    curl -L -s https://www.gitignore.io/api/$@
+}
 
 
- function github-stars() {
-     if [ $# = 2 ]; then
-	 open "https://github.com/search?q=language%3A$1+stars%3A%3E%3D$2&type=Repositories&ref=searchresults"
-     else
-	 echo 'usage: github-stars language stars'
-     fi
- }
+function github-stars() {
+    if [ $# = 2 ]; then
+	open "https://github.com/search?q=language%3A$1+stars%3A%3E%3D$2&type=Repositories&ref=searchresults"
+    else
+	echo 'usage: github-stars language stars'
+    fi
+}
 
 
- function terminal-size() {
-     echo "width"
-     tput cols
-     echo "height"
-     tput lines
- }
+function terminal-size() {
+    echo "width"
+    tput cols
+    echo "height"
+    tput lines
+}
 
 
- function optimize-jpg() {
-     if [ $# = 1 ]; then
-	 fname_ext=$1
-	 fname="${fname_ext%.*}"
-	 convert $1 -sampling-factor 4:2:0 -strip -quality 85 -interlace JPEG -colorspace sRGB ${fname}_converted.jpg
-     else
-	 echo 'usage: optimize-jpg sample.jpg'
-     fi
- }
+function optimize-jpg() {
+    if [ $# = 1 ]; then
+	fname_ext=$1
+	fname="${fname_ext%.*}"
+	convert $1 -sampling-factor 4:2:0 -strip -quality 85 -interlace JPEG -colorspace sRGB ${fname}_converted.jpg
+    else
+	echo 'usage: optimize-jpg sample.jpg'
+    fi
+}
 
 
- function blog-jpg() {
-     if [ $# = 1 ]; then
-	 fname_ext=$1
-	 fname="${fname_ext%.*}"
-	 convert $1 -resize 600x zzz_${fname}.jpg
-	 rm -rf $1
-     else
-	 echo 'usage: blog-jpg sample.jpg'
-     fi
- }
+function blog-jpg() {
+    if [ $# = 1 ]; then
+	fname_ext=$1
+	fname="${fname_ext%.*}"
+	convert $1 -resize 600x zzz_${fname}.jpg
+	rm -rf $1
+    else
+	echo 'usage: blog-jpg sample.jpg'
+    fi
+}
 
 
- function optimize-png() {
-     if [ $# = 1 ]; then
-	 fname_ext=$1
-	 fname="${fname_ext%.*}"
-	 convert $1 -strip ${fname}_converted.png
-     else
-	 echo 'usage: optimize-png sample.png'
-     fi
- }
+function optimize-png() {
+    if [ $# = 1 ]; then
+	fname_ext=$1
+	fname="${fname_ext%.*}"
+	convert $1 -strip ${fname}_converted.png
+    else
+	echo 'usage: optimize-png sample.png'
+    fi
+}
 
 
- function clip-file() {
-     if [ $# = 1 ]; then
-	 cat $1 | xsel -bi
-     else
-	 echo 'usage: clip-file file'
-     fi
- }
+function clip-file() {
+    if [ $# = 1 ]; then
+	cat $1 | xsel -bi
+    else
+	echo 'usage: clip-file file'
+    fi
+}
 
 
- function screenshot-window-delay() {
-     if [ $# = 1 ]; then
-	 gnome-screenshot --window --delay=$1
-	 notify-send 'Screenshot' 'Done' -i camera-photo
-     else
-	 echo 'usage: screenshot-window-delay 5'
-     fi
- }
+function screenshot-window-delay() {
+    if [ $# = 1 ]; then
+	gnome-screenshot --window --delay=$1
+	notify-send 'Screenshot' 'Done' -i camera-photo
+    else
+	echo 'usage: screenshot-window-delay 5'
+    fi
+}
 
 
- function quickman() {
-     if [ $# = 1 ]; then
-	 unbuffer tldr $1 | less -SR
-     else
-	 echo 'usage: quickman $1'
-     fi
- }
+function quickman() {
+    if [ $# = 1 ]; then
+	unbuffer tldr $1 | less -SR
+    else
+	echo 'usage: quickman $1'
+    fi
+}
 
 
- function fetch-pull-request() {
-     echo "Please input pull request number"
-     read NUM
-     echo "Please input branch"
-     read BRANCH
-     git fetch origin pull/${NUM}/head:${BRANCH}
- }
+function fetch-pull-request() {
+    echo "Please input pull request number"
+    read NUM
+    echo "Please input branch"
+    read BRANCH
+    git fetch origin pull/${NUM}/head:${BRANCH}
+}
 
 
- function postgres-backup() {
-     if [ $# = 1 ]; then
-	 pg_dump $1 > ~/Dropbox/database/postgresql/`date '+%Y%m%d%H%M%S'`
-     else
-	 echo 'usage: backup-postgres [dbname]'
-     fi
- }
+function postgres-backup() {
+    if [ $# = 1 ]; then
+	pg_dump $1 > ~/Dropbox/database/postgresql/`date '+%Y%m%d%H%M%S'`
+    else
+	echo 'usage: backup-postgres [dbname]'
+    fi
+}
 
 
- # zsh-syntax-highlighting(pacman -S zsh-syntax-highlighting)
- source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
- # zsh-completions for aws
- source ~/.local/bin/aws_zsh_completer.sh
- # password
+# zsh-syntax-highlighting(pacman -S zsh-syntax-highlighting)
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# zsh-completions for aws
+source ~/.local/bin/aws_zsh_completer.sh
+# password
 source ~/Dropbox/zsh/env.sh
 
 # The next line updates PATH for the Google Cloud SDK.
