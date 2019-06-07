@@ -1,4 +1,4 @@
-ansible==2.8.0
+ansible==2.8.1
 ansible-lint==4.1.0
 anytree==2.6.0
 apparmor==2.13.2
@@ -8,12 +8,12 @@ astroid==2.2.5
 attrs==19.1.0
 Automat==0.7.0
 autopep8==1.4.4
-awscli==1.16.173
+awscli==1.16.174
 backcall==0.1.0
 bcrypt==3.1.6
 beautifulsoup4==4.7.1
 bleach==3.1.0
-botocore==1.12.163
+botocore==1.12.164
 btrfsutil==1.1.1
 cached-property==1.5.1
 cachetools==3.1.1
@@ -125,7 +125,7 @@ pipenv==2018.11.26
 pluggy==0.12.0
 ply==3.11
 progressbar2==3.42.0
-prometheus-client==0.6.0
+prometheus-client==0.7.0
 prompt-toolkit==2.0.9
 psycopg2==2.8.2
 psycopg2-binary==2.8.2
@@ -216,6 +216,6 @@ widgetsnbextension==3.4.2
 wrapt==1.11.1
 x256==0.0.3
 yapf==0.27.0
-youtube-dl==2019.5.20
+youtube-dl==2019.6.8
 zipp==0.5.1
 zope.interface==4.6.0
