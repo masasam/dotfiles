@@ -63,6 +63,7 @@
   (package-install 'editorconfig-generate)
   (package-install 'eglot)
   (package-install 'elisp-slime-nav)
+  (package-install 'elixir-mode)
   (package-install 'enh-ruby-mode)
   (package-install 'espy)
   (package-install 'exec-path-from-shell)
