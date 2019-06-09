@@ -496,6 +496,11 @@ gnuglobal: ## Install gnu global
 	pip install --user pygments
 	yay -S global
 
+node8: ## Install node 8
+	nvm install 8.11.1
+	nvm use 8.11.1
+	nvm alias default system
+
 nodenv: ## Install nodenv node-build
 	yay -S nodenv
 	git clone https://github.com/nodenv/node-build.git ${HOME}/.nodenv/plugins/node-build
