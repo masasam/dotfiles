@@ -501,10 +501,6 @@ node8: ## Install node 8
 	nvm use 8.11.1
 	nvm alias default system
 
-nodenv: ## Install nodenv node-build
-	yay -S nodenv
-	git clone https://github.com/nodenv/node-build.git ${HOME}/.nodenv/plugins/node-build
-
 other-python: ## Install python3.5 python3.6
 	pyenv install 3.5.7
 	pyenv install 3.6.8
