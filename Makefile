@@ -498,7 +498,6 @@ gnuglobal: ## Install gnu global
 other-node: ## Install nvm and other node version
 	yay -S nvm
 	nvm install 8.11.1
-	nvm use 8.11.1
 	nvm alias default system
 
 other-python: ## Install python3.5 python3.6
