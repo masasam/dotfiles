@@ -395,7 +395,6 @@ aur: ## Install arch linux AUR packages using yay
 	yay -S downgrade
 	yay -S gitflow-avh
 	yay -S git-secrets
-	yay -S nvm
 	yay -S sequeler-git
 	yay -S slack-desktop-dark
 	yay -S yaourt
@@ -496,7 +495,8 @@ gnuglobal: ## Install gnu global
 	pip install --user pygments
 	yay -S global
 
-node8: ## Install node 8
+other-node: ## Install nvm and other node version
+	yay -S nvm
 	nvm install 8.11.1
 	nvm use 8.11.1
 	nvm alias default system
