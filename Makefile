@@ -59,7 +59,7 @@ install: ## Install arch linux packages using pacman
 	pacman-contrib x11-ssh-askpass libreoffice-fresh-ja python-prompt_toolkit \
 	jhead peek ncdu sxiv gnome-screenshot sshfs fping syncthing terraform gnupg \
 	xdotool sshuttle packer ripgrep stunnel vimiv adapta-gtk-theme gnome-tweaks \
-	firejail opencv pyenv hexedit aria2
+	firejail opencv hexedit aria2
 	sudo pkgfile --update
 
 pipinstall: ## Install python packages
@@ -502,6 +502,7 @@ other-node: ## Install nvm and other node version
 	nvm alias default system
 
 other-python: ## Install python3.5 python3.6
+	sudo pacman -S pyenv
 	pyenv install 3.5.7
 	pyenv install 3.6.8
 
