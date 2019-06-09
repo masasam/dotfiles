@@ -52,14 +52,14 @@ install: ## Install arch linux packages using pacman
 	nmap poppler-data ffmpeg asciidoc sbcl docker aspell aspell-en screen mosh \
 	gdb wmctrl pwgen linux-docs htop tcpdump gvfs p7zip lzop fzf gpaste optipng \
 	arch-install-scripts pandoc jq pkgstats ruby highlight alsa-utils geckodriver \
-	texlive-langjapanese yarn texlive-latexextra ctags hdparm eog curl parallel \
+	texlive-langjapanese tokei texlive-latexextra ctags hdparm eog curl parallel \
 	arc-gtk-theme npm typescript llvm llvm-libs lldb php tree w3m neomutt whois \
 	zsh-syntax-highlighting shellcheck bash-completion mathjax expect elixir lsof \
 	cscope postgresql-libs pdfgrep gnu-netcat cmatrix jpegoptim nethogs mlocate \
 	pacman-contrib x11-ssh-askpass libreoffice-fresh-ja python-prompt_toolkit \
 	jhead peek ncdu sxiv gnome-screenshot sshfs fping syncthing terraform gnupg \
 	xdotool sshuttle packer ripgrep stunnel vimiv adapta-gtk-theme gnome-tweaks \
-	firejail opencv pyenv hexedit tokei aria2
+	firejail opencv pyenv hexedit aria2
 	sudo pkgfile --update
 
 pipinstall: ## Install python packages
@@ -134,6 +134,7 @@ goinstall: ## Install go packages
 	env GO111MODULE=on go install
 
 nodeinstall: ## Install node packages
+	sudo pacman -S yarn
 	mkdir -p ${HOME}/.node_modules
 	yarn global add babel-eslint
 	yarn global add bash-language-server
