@@ -32,10 +32,6 @@ After make install you can deploy dotfiles with this command.
 
 ![make](https://raw.githubusercontent.com/masasam/image/image/make.png)
 
-    make backup
-
-The ArchLinux package list installed by this command is backed up in the archlinux directory.
-
 ### Commands for allinstall
 
 	make allinstall
@@ -43,6 +39,10 @@ The ArchLinux package list installed by this command is backed up in the archlin
 You can install all with this command.
 You can install anything written after allinstall in the makefile.
 Keep Dropbox synchronized before doing make allinstall.
+
+    make backup
+
+The ArchLinux package list installed by this command is backed up in the archlinux directory.
 
 	make allbackup
 
