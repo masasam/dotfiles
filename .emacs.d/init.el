@@ -135,6 +135,7 @@
   (package-install 'smart-jump)
   (package-install 'smartparens)
   (package-install 'swiper)
+  (package-install 'symbol-overlay)
   (package-install 'terraform-mode)
   (package-install 'tldr)
   (package-install 'toml-mode)
