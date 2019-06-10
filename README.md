@@ -360,7 +360,6 @@ If you make a mistake on the keyboard, erase all with Ctrl-u
 	yay -S mozc
 	yay -S nkf
 	yay -S nvm
-	yay -S nodenv
 	yay -S pencil
 	yay -S rbenv
 	yay -S rtags
