@@ -381,6 +381,7 @@ If you make a mistake on the keyboard, erase all with Ctrl-u
 	pip install --user autopep8
 	pip install --user awscli
 	pip install --user cheat
+	pip install --user chromedriver-binary
 	pip install --user docker-compose
 	pip install --user eralchemy
 	pip install --user faker
