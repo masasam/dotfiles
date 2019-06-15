@@ -181,6 +181,16 @@ If the region is inactive, `backward-kill-word'."
 (require 'generic-x)
 
 
+;; tramp with ControlPath
+(customize-set-variable
+ 'tramp-ssh-controlmaster-options
+ (concat
+  "-o ControlPath=/home/masa/.ssh/ssh-ControlPath-%%r@%%h:%%p "
+  "-o ControlMaster=auto -o ControlPersist=yes"))
+
+(customize-set-variable 'tramp-use-ssh-controlmaster-options nil)
+
+
 (defun my/copy-path ()
   "Return the currently open file name or directory name."
   (interactive)
