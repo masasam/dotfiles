@@ -185,10 +185,10 @@ If the region is inactive, `backward-kill-word'."
 (customize-set-variable
  'tramp-ssh-controlmaster-options
  (concat
-  "-o ControlPath=/tmp/ssh-ControlPath-%%r@%%h:%%p "
-  "-o ControlMaster=auto -o ControlPersist=yes"))
+  "-o ControlPath=~/.ssh/master-%%r@%%h:%%p "
+  "-o ControlMaster=auto -o ControlPersist=30m"))
 
-(customize-set-variable 'tramp-use-ssh-controlmaster-options nil)
+;; (customize-set-variable 'tramp-use-ssh-controlmaster-options nil)
 
 
 (defun my/copy-path ()
