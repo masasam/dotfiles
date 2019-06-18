@@ -522,6 +522,14 @@ wordpress: ## Deploy wordpress
 	echo 'create database wp' | mysql -u root
 	echo "grant all privileges on wp.* to wp@localhost identified by 'password';FLUSH PRIVILEGES;" | mysql -u root
 
+elixir-ls: ## Install elixir-ls(Recompile if the version of elixir changes)
+	mkdir -p ${HOME}/src/github.com/JakeBecker
+	cd ${HOME}/src/github.com/JakeBecker;\
+	git clone git@github.com:JakeBecker/elixir-ls.git;\
+	cd elixir-ls && mkdir rel;\
+	mix deps.get && mix compile;\
+	mix elixir_ls.release -o rel
+
 emacs-devel: ## Install development version of emacs
 	cd ${HOME}/src/github.com/masasam;\
 	git clone -b emacs-27 git@github.com:emacs-mirror/emacs.git;\
