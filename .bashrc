@@ -15,6 +15,7 @@ alias urxvtsetup='xrdb -merge $HOME/.Xresources; exit'
 export HISTCONTROL=ignoredups
 export GOPATH=$HOME
 export PATH="$PATH:$GOPATH/bin"
+export PATH="$PATH:$HOME/src/github.com/JakeBecker/elixir-ls/rel/"
 export EDITOR='emacsclient'
 export XDG_CONFIG_HOME=$HOME/.config
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
