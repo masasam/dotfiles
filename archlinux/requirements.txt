@@ -8,12 +8,12 @@ astroid==2.2.5
 attrs==19.1.0
 Automat==0.7.0
 autopep8==1.4.4
-awscli==1.16.179
+awscli==1.16.180
 backcall==0.1.0
 bcrypt==3.1.6
 beautifulsoup4==4.7.1
 bleach==3.1.0
-botocore==1.12.169
+botocore==1.12.170
 btrfsutil==1.1.1
 cached-property==1.5.1
 cachetools==3.1.1
@@ -181,7 +181,7 @@ six==1.12.0
 smmap2==2.0.5
 soupsieve==1.9.1
 speedtest-cli==2.1.1
-SQLAlchemy==1.3.4
+SQLAlchemy==1.3.5
 sqlparse==0.3.0
 sshuttle==0.78.5
 stevedore==1.30.1
