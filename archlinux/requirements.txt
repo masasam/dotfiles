@@ -8,12 +8,12 @@ astroid==2.2.5
 attrs==19.1.0
 Automat==0.7.0
 autopep8==1.4.4
-awscli==1.16.180
+awscli==1.16.181
 backcall==0.1.0
 bcrypt==3.1.6
 beautifulsoup4==4.7.1
 bleach==3.1.0
-botocore==1.12.170
+botocore==1.12.171
 btrfsutil==1.1.1
 cached-property==1.5.1
 cachetools==3.1.1
@@ -214,7 +214,7 @@ wcwidth==0.1.7
 webencodings==0.5.1
 websocket-client==0.56.0
 widgetsnbextension==3.4.2
-wrapt==1.11.1
+wrapt==1.11.2
 x256==0.0.3
 yapf==0.27.0
 youtube-dl==2019.6.8
