@@ -724,5 +724,6 @@ if [ -f '/home/masa/bin/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/ma
 # When using temporarily, use the kubernetes-start function above
 # source <(kubectl completion zsh)
 # source <(stern --completion=zsh)
+
 # nvm
 source /usr/share/nvm/init-nvm.sh
