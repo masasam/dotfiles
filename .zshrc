@@ -720,7 +720,9 @@ if [ -f '/home/masa/bin/google-cloud-sdk/path.zsh.inc' ]; then . '/home/masa/bin
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/masa/bin/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/masa/bin/google-cloud-sdk/completion.zsh.inc'; fi
 
-# kubectl completions(Uncomment only when using it because it is heavy)
+# kubectl completions
+# Uncomment only when using it because it is heavy.
+# When using temporarily, use the kubernetes-start function above
 # source <(kubectl completion zsh)
 # source <(stern --completion=zsh)
 # nvm
