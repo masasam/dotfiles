@@ -44,6 +44,7 @@ If there are two or more windows, it will go to another window."
    ("j" git-gutter:next-hunk)
    ("k" git-gutter:previous-hunk)
    ("o" other-window-or-split)
+   ("r" avy-goto-word-1)
    ("l" recenter-top-bottom)
    ("s" swiper-for-region-or-swiper)
    ("S" window-swap-states)
@@ -55,7 +56,10 @@ If there are two or more windows, it will go to another window."
    ("2" split-window-below)
    ("3" split-window-right)
    ("0" delete-window)
-   ("x" delete-window)))
+   ("x" delete-window)
+   (";" counsel-switch-buffer)
+   ("M-n" next-buffer)
+   ("M-p" previous-buffer)))
 
 
 (defhydra hydra-window (ctl-x-map "" :pre (widen))
