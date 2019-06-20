@@ -315,7 +315,7 @@ You can make install from here
 	sudo pacman -S linux-docs pwgen gauche screen ipcalc
 	sudo pacman -S arch-install-scripts ctags parallel opencv
 	sudo pacman -S pandoc texlive-langjapanese texlive-latexextra
-	sudo pacman -S shellcheck php cscope typescript packer
+	sudo pacman -S shellcheck cscope typescript packer
 	sudo pacman -S noto-fonts-cjk arc-gtk-theme jq dnsmasq
 	sudo pacman -S docker zsh-syntax-highlighting terraform
 	sudo pacman -S npm llvm llvm-libs lldb hdparm rxvt-unicode 
@@ -329,8 +329,8 @@ You can make install from here
 	sudo pacman -S highlight lynx elinks mediainfo cpio flameshot
 	sudo pacman -S oath-toolkit imagemagick peek sshuttle
 	sudo pacman -S bookworm ruby ruby-rdoc pacman-contrib ncdu
-	sudo pacman -S sxiv nnn php-fpm nginx adapta-gtk-theme
-	sudo pacman -S podman firejail pyenv hexedit tokei aria2
+	sudo pacman -S sxiv nnn adapta-gtk-theme podman firejail
+	sudo pacman -S pyenv hexedit tokei aria2
 
 ## Activity
 

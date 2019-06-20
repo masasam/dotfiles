@@ -47,18 +47,18 @@ install: ## Install arch linux packages using pacman
 	inkscape file-roller xclip atool debootstrap oath-toolkit imagemagick lynx \
 	the_silver_searcher cifs-utils elinks flameshot ruby-rdoc ipcalc traceroute \
 	cups-pdf openssh firefox firefox-i18n-ja gimp strace lhasa hub bookworm tig \
-	pkgfile dconf-editor rsync nodejs debian-archive-keyring gauche cpio nnn \
+	pkgfile dconf-editor rsync nodejs debian-archive-keyring gauche cpio aria2 \
 	nmap poppler-data ffmpeg asciidoc sbcl docker aspell aspell-en screen mosh \
 	gdb wmctrl pwgen linux-docs htop tcpdump gvfs p7zip lzop fzf gpaste optipng \
 	arch-install-scripts pandoc jq pkgstats ruby highlight alsa-utils geckodriver \
 	texlive-langjapanese tokei texlive-latexextra ctags hdparm eog curl parallel \
-	arc-gtk-theme npm typescript llvm llvm-libs lldb php tree w3m neomutt whois \
+	arc-gtk-theme npm typescript llvm llvm-libs lldb tree w3m neomutt whois nnn \
 	zsh-syntax-highlighting shellcheck bash-completion mathjax expect elixir lsof \
 	cscope postgresql-libs pdfgrep gnu-netcat cmatrix jpegoptim nethogs mlocate \
 	pacman-contrib x11-ssh-askpass libreoffice-fresh-ja python-prompt_toolkit \
 	jhead peek ncdu sxiv gnome-screenshot sshfs fping syncthing terraform gnupg \
 	xdotool sshuttle packer ripgrep stunnel vimiv adapta-gtk-theme gnome-tweaks \
-	firejail opencv hexedit aria2
+	firejail opencv hexedit
 	sudo pkgfile --update
 
 pipinstall: ## Install python packages
@@ -501,21 +501,6 @@ other-python: ## Install python3.5 python3.6
 	sudo pacman -S pyenv
 	pyenv install 3.5.7
 	pyenv install 3.6.8
-
-wordpress: ## Deploy wordpress
-	sudo pacman -S nginx php-fpm
-	mkdir -p ${HOME}/src/github.com/masasam
-	sudo ln -vsf ${PWD}/etc/nginx/nginx.conf /etc/nginx/nginx.conf
-	sudo ln -vsf ${PWD}/etc/php/php.ini /etc/php/php.ini
-	wget https://ja.wordpress.org/wordpress-latest-ja.tar.gz
-	tar zxvf wordpress-latest-ja.tar.gz
-	test -f	wordpress-latest-ja.tar.gz && rm -fr wordpress-latest-ja.tar.gz
-	test -d /var/www/wp-admin || sudo mv wordpress /var/www
-	chmod -R 777 /var/www/wp-content
-	sudo ln -vsfn /var/www ${HOME}/src/github.com/masasam/wordpress
-	sudo chown http:http /var/www/wp-admin/includes/file.php  
-	echo 'create database wp' | mysql -u root
-	echo "grant all privileges on wp.* to wp@localhost identified by 'password';FLUSH PRIVILEGES;" | mysql -u root
 
 elixir-ls: ## Install elixir-ls(Recompile if the version of elixir changes)
 	mkdir -p ${HOME}/src/github.com/JakeBecker
