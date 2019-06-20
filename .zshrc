@@ -697,6 +697,16 @@ function postgres-backup() {
 }
 
 
+function kubernetes-start() {
+    if [ $# = 0 ]; then
+	source <(kubectl completion zsh)
+	source <(stern --completion=zsh)
+    else
+	echo 'usage: kubernetes-start'
+    fi
+}
+
+
 # zsh-syntax-highlighting(pacman -S zsh-syntax-highlighting)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # zsh-completions for aws
@@ -710,8 +720,8 @@ if [ -f '/home/masa/bin/google-cloud-sdk/path.zsh.inc' ]; then . '/home/masa/bin
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/masa/bin/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/masa/bin/google-cloud-sdk/completion.zsh.inc'; fi
 
-# kubectl completions
-source <(kubectl completion zsh)
-source <(stern --completion=zsh)
+# kubectl completions(Uncomment only when using it because it is heavy)
+# source <(kubectl completion zsh)
+# source <(stern --completion=zsh)
 # nvm
 source /usr/share/nvm/init-nvm.sh
