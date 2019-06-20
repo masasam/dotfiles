@@ -1,4 +1,3 @@
-
 ;;; init.el --- init.el
 ;;; Commentary:
 ;;; Code:
@@ -40,7 +39,6 @@
   (package-install 'browse-at-remote)
   (package-install 'color-identifiers-mode)
   (package-install 'company)
-  (package-install 'company-php)
   (package-install 'company-prescient)
   (package-install 'counsel)
   (package-install 'counsel-css)
@@ -112,7 +110,6 @@
   (package-install 'package-lint)
   (package-install 'password-generator)
   (package-install 'pcre2el)
-  (package-install 'php-mode)
   (package-install 'pkgbuild-mode)
   (package-install 'pocket-reader)
   (package-install 'popwin)
