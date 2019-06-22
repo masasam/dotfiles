@@ -8,12 +8,12 @@ astroid==2.2.5
 attrs==19.1.0
 Automat==0.7.0
 autopep8==1.4.4
-awscli==1.16.183
+awscli==1.16.184
 backcall==0.1.0
 bcrypt==3.1.7
 beautifulsoup4==4.7.1
 bleach==3.1.0
-botocore==1.12.173
+botocore==1.12.174
 btrfsutil==1.1.1
 cached-property==1.5.1
 cachetools==3.1.1
@@ -154,7 +154,7 @@ pyrsistent==0.15.2
 PySocks==1.7.0
 python-dateutil==2.8.0
 python-jsonrpc-server==0.1.2
-python-language-server==0.26.1
+python-language-server==0.27.0
 python-utils==2.3.0
 pytz==2019.1
 PyYAML==5.1.1
@@ -217,6 +217,6 @@ widgetsnbextension==3.4.2
 wrapt==1.11.2
 x256==0.0.3
 yapf==0.27.0
-youtube-dl==2019.6.8
+youtube-dl==2019.6.21
 zipp==0.5.1
 zope.interface==4.6.0
