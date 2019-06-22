@@ -181,7 +181,7 @@ rustinstall: ## Install rust and rust packages
 	cargo install skim
 	cargo install tztail
 	cargo install xsv
-	rustup component add rls-preview rust-analysis rust-src
+	rustup component add rls rust-analysis rust-src
 
 neomutt: ## Init neomutt mail client
 	mkdir -p ${HOME}/.mutt
