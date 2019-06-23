@@ -1,4 +1,4 @@
-;;; 29rust.el --- 29rust.el
+;;; 27rust.el --- 27rust.el
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)
@@ -8,4 +8,4 @@
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:
-;;; 29rust.el ends here
+;;; 27rust.el ends here
