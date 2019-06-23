@@ -122,7 +122,7 @@
   (package-install 'rg)
   (package-install 'rjsx-mode)
   (package-install 'rspec-mode)
-  (package-install 'rustic)
+  (package-install 'rust-mode)
   (package-install 'scss-mode)
   (package-install 'slim-mode)
   (package-install 'slime)
