@@ -141,7 +141,7 @@ PyDispatcher==2.0.5
 pydoc-utils==1.0.1
 pyflakes==2.1.1
 Pygments==2.4.2
-PyGObject==3.32.1
+PyGObject==3.32.2
 pygraphviz==1.5
 PyHamcrest==1.9.0
 pylint==2.3.1
