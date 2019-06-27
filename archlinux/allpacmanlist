@@ -248,6 +248,7 @@ haskell-asn1-types
 haskell-async
 haskell-attoparsec
 haskell-base-compat
+haskell-base-orphans
 haskell-base64-bytestring
 haskell-basement
 haskell-bitarray
@@ -323,6 +324,7 @@ haskell-temporary
 haskell-texmath
 haskell-tf-random
 haskell-th-abstraction
+haskell-time-compat
 haskell-time-locale-compat
 haskell-tls
 haskell-transformers-compat
