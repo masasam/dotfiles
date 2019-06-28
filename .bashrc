@@ -6,7 +6,7 @@
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
-alias remacs='emacs -q -l ~/Dropbox/emacs/default.el'
+alias testemacs='emacs -q -l ~/.emacs.d/test.el'
 PS1='[\u@\h \W]\$ '
 alias screenstart='screen -D -RR'
 alias tmuxstart='tmux new-session -A -s main'
