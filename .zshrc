@@ -243,7 +243,6 @@ PATH="$HOME/.local/bin:$PATH"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
-export COMPOSER_HOME=${HOME}/src/github.com/masasam/dotfiles
 export PATH=$PATH:$HOME/.roswell/bin
 export GTAGSCONF=/usr/share/gtags/gtags.conf
 export GTAGSLABEL=pygments

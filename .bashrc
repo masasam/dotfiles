@@ -23,7 +23,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 PATH="$HOME/.node_modules/bin:$PATH"
 export npm_config_prefix=~/.node_modules
 PATH="$HOME/.local/bin:$PATH"
-export COMPOSER_HOME=${HOME}/src/github.com/masasam/dotfiles
 export GTAGSCONF=/usr/share/gtags/gtags.conf
 export GTAGSLABEL=pygments
 export PAGER=less
