@@ -279,6 +279,7 @@ haskell-haddock-library
 haskell-hashable
 haskell-hourglass
 haskell-hslua
+haskell-hslua-module-system
 haskell-hslua-module-text
 haskell-hsyaml
 haskell-http
