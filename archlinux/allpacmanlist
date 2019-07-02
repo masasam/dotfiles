@@ -634,7 +634,6 @@ libxvmc
 libxxf86dga
 libxxf86vm
 libyaml
-libzip
 libzmf
 licenses
 linux
@@ -758,7 +757,6 @@ perl-file-which
 perl-io-tty
 perl-mailtools
 perl-timedate
-php
 pinentry
 pipewire
 pixman
