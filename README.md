@@ -405,6 +405,8 @@ If you make a mistake on the keyboard, erase all with Ctrl-u
 	pip install --user pgcli
 	pip install --user pipenv
 	pip install --user progressbar2
+	pip install --user psycopg2-binary
+	pip install --user py-spy
 	pip install --user pydoc_utils
 	pip install --user pyflakes
 	pip install --user pygments
