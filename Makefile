@@ -165,7 +165,6 @@ nodeinstall: ## Install node packages
 	yarn global add npm
 	yarn global add prettier
 	yarn global add parcel-bundler
-	yarn global add serverless
 	yarn global add vscode-css-languageserver-bin
 	yarn global add vue-cli
 	yarn global add vue-language-server
@@ -303,6 +302,10 @@ redis: ## Redis inital setup
 	sudo pacman -S redis
 	sudo systemctl enable redis.service
 	sudo systemctl start redis.service
+
+serverless: ## Init setup serverless
+	yarn global add serverless
+	ln -vsf ${HOME}/.config/yarn/global/node_modules/serverless/bin/serverless ${HOME}/.node_modules/bin/serverless
 
 mew: ## Install mew as mail reader
 	cd ~/src;\
