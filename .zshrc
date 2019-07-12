@@ -238,7 +238,7 @@ export XDG_CONFIG_HOME=$HOME/.config
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 PATH="$HOME/.node_modules/bin:$PATH"
-unset npm_config_prefix 
+unset npm_config_prefix
 PATH="$HOME/.local/bin:$PATH"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
