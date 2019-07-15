@@ -92,7 +92,7 @@ lesscpy==0.13.0
 LibAppArmor==2.13.3
 libtmux==0.8.2
 lit==0.8.0.dev0
-litecli==1.0.0
+litecli==1.1.0
 louis==3.10.0
 lxml==4.3.4
 MarkupSafe==1.1.1
@@ -209,7 +209,7 @@ typed-ast==1.4.0
 uritemplate==3.0.0
 urllib3==1.25.3
 vimiv==0.9.1
-virtualenv==16.6.1
+virtualenv==16.6.2
 virtualenv-clone==0.5.3
 virtualenvwrapper==4.8.4
 w3lib==1.20.0
