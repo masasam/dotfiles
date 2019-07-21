@@ -8,12 +8,12 @@ astroid==2.2.5
 attrs==19.1.0
 Automat==0.7.0
 autopep8==1.4.4
-awscli==1.16.200
+awscli==1.16.201
 backcall==0.1.0
 bcrypt==3.1.7
-beautifulsoup4==4.7.1
+beautifulsoup4==4.8.0
 bleach==3.1.0
-botocore==1.12.190
+botocore==1.12.191
 btrfsutil==1.1.1
 cached-property==1.5.1
 cachetools==3.1.1
@@ -21,7 +21,7 @@ certifi==2019.6.16
 cffi==1.12.3
 chardet==3.0.4
 cheat==2.5.1
-chromedriver-binary==76.0.3809.25.0
+chromedriver-binary==76.0.3809.68.0
 cli-helpers==1.2.1
 Click==7.0
 colorama==0.4.1
@@ -30,6 +30,7 @@ constantly==15.1.0
 cryptography==2.7
 cssselect==1.0.3
 cycler==0.10.0
+ddt==1.2.1
 decorator==4.4.0
 defusedxml==0.6.0
 Django==2.2.3
@@ -46,8 +47,9 @@ Faker==2.0.0
 flake8==3.7.8
 future==0.17.1
 gif-for-cli==1.1.1
+gitdb==0.6.4
 gitdb2==2.0.5
-GitPython==2.1.11
+GitPython==2.1.12
 goobook==3.3.dev0
 google-api-python-client==1.7.9
 google-auth==1.6.3
@@ -181,6 +183,7 @@ service-identity==18.1.0
 setproctitle==1.1.10
 simplejson==3.16.1
 six==1.12.0
+smmap==0.9.0
 smmap2==2.0.5
 soupsieve==1.9.2
 speedtest-cli==2.1.1
