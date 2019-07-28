@@ -14,7 +14,7 @@ Xft.lcdfilter:  lcddefault
 URxvt*imLocale: en_US.UTF-8
 URxvt*iso14755:	false
 
-URxvt.geometry:             104x37
+URxvt.geometry:             160x50
 URxvt.scrollBar:  	    false
 URxvt.cursorBlink:          true
 URxvt.cursorColor:          #657b83
@@ -24,10 +24,10 @@ URxvt.lineSpace:            0
 URxvt.letterSpace:  	    0
 
 !! Font
-URxvt.font:              xft:Cica:pixelsize=19:antialiase=true
-URxvt.boldFont:          xft:Cica:bold:pixelsize=19:antialiase=true
-URxvt.italicFont:        xft:Cica:italic:pixelsize=19:antialiase=true
-URxvt.bolditalicFont:    xft:Cica:bold:italic:pixelsize=19:antialiase=true
+URxvt.font:              xft:Cica:pixelsize=23:antialiase=true
+URxvt.boldFont:          xft:Cica:bold:pixelsize=23:antialiase=true
+URxvt.italicFont:        xft:Cica:italic:pixelsize=23:antialiase=true
+URxvt.bolditalicFont:    xft:Cica:bold:italic:pixelsize=23:antialiase=true
 
 !! Color Scheme
 URxvt.color0:               #073642
