@@ -199,7 +199,7 @@ neomutt: ## Init neomutt mail client
 alacritty: ## Init alacritty
 	sudo pacman -S alacritty
 	test -L ${HOME}/.config/alacritty/alacritty.yml || rm -rf ${HOME}/.config/alacritty/alacritty.yml
-	ln -vsf ${PWD}/alacritty.yml ${HOME}/.config/alacritty/alacritty.yml
+	ln -vsf ${PWD}/.config/alacritty/alacritty.yml ${HOME}/.config/alacritty/alacritty.yml
 
 urxvt: ## Init rxvt-unicode terminal
 	sudo pacman -S rxvt-unicode urxvt-perls
