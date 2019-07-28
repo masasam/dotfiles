@@ -24,6 +24,9 @@
 
 (package-initialize)
 
+;; workaround
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
+
 ;; When emacs for the first time execute only, automatic package install
 (unless (file-directory-p "~/.emacs.d/elpa")
   (package-refresh-contents)
