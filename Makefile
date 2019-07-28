@@ -535,7 +535,6 @@ google-cloud: ## Install SDK and setting
 	test -L ${HOME}/.config/gcloud || rm -rf ${HOME}/.config/gcloud
 	ln -vsfn ${HOME}/Dropbox/gcloud   ${HOME}/.config/gcloud
 	gcloud components install kubectl
-	yay -S kubernetes-helm
 	yay -S stern-bin
 
 kubernetes-cluster: ## Kubernetes cluster setup
@@ -689,9 +688,9 @@ testpath: ## Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: install init initdropbox urxvt xterm termite ttf-cica dnsmasq pipinstall goinstall aur google-mozc neomutt docker postgresql redis nodeinstall desktop zeal zoom toggle sylpheed google-cloud aws yay psd mpsyt rclone tmuxp
+allinstall: install init initdropbox alacritty urxvt xterm termite ttf-cica dnsmasq pipinstall goinstall aur google-mozc neomutt docker nodeinstall desktop zeal zoom toggle sylpheed google-cloud aws yay mpsyt rclone
 
-nextinstall: chromium screenkey rubygem rbenv rustinstall
+nextinstall: chromium other-python other-node screenkey rubygem rbenv rustinstall postgresql redis mariadb
 
 allupdate: update pipupdate rustupdate goinstall yarnupdate
 
