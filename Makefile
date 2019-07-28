@@ -196,6 +196,11 @@ neomutt: ## Init neomutt mail client
 	yay -S goobook-git
 	goobook authenticate
 
+alacritty: ## Init alacritty
+	sudo pacman -S alacritty
+	test -L ${HOME}/.config/alacritty/alacritty.yml || rm -rf ${HOME}/.config/alacritty/alacritty.yml
+	ln -vsf ${PWD}/alacritty.yml ${HOME}/.config/alacritty/alacritty.yml
+
 urxvt: ## Init rxvt-unicode terminal
 	sudo pacman -S rxvt-unicode urxvt-perls
 	ln -vsf ${PWD}/.Xresources ${HOME}/.Xresources
