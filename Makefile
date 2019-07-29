@@ -403,6 +403,7 @@ aur: ## Install arch linux AUR packages using yay
 	yay -S downgrade
 	yay -S gitflow-avh
 	yay -S git-secrets
+	yay -S nvm
 	yay -S sequeler-git
 	yay -S slack-desktop-dark
 
@@ -503,7 +504,6 @@ gnuglobal: ## Install gnu global
 	yay -S global
 
 other-node: ## Install nvm and other node version
-	yay -S nvm
 	nvm install 8.11.1
 	nvm alias default system
 
