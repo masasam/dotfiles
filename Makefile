@@ -252,6 +252,9 @@ dnsmasq: ## Init dnsmasq
 	sudo mkdir -p /etc/NetworkManager
 	sudo ln -vsf ${PWD}/etc/NetworkManager/NetworkManager.conf /etc/NetworkManager/NetworkManager.conf
 
+fwupd: ## Bios update
+	sudo pacman -S fwupd
+
 google-mozc: ## Install ibus-mozc
 	test -L ${HOME}/.mozc || rm -rf ${HOME}/.mozc
 	ln -vsfn ${HOME}/Dropbox/mozc/.mozc ${HOME}/.mozc
