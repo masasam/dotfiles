@@ -690,7 +690,7 @@ testpath: ## Echo PATH
 
 allinstall: install init initdropbox alacritty urxvt xterm termite ttf-cica dnsmasq pipinstall goinstall aur google-mozc neomutt docker nodeinstall desktop zeal zoom toggle sylpheed google-cloud aws yay mpsyt rclone
 
-nextinstall: chromium other-python other-node screenkey rubygem rbenv rustinstall postgresql redis mariadb
+nextinstall: chromium other-python screenkey rubygem rbenv rustinstall postgresql redis mariadb
 
 allupdate: update pipupdate rustupdate goinstall yarnupdate
 
