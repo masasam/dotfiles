@@ -1,4 +1,5 @@
 adapta-gtk-theme
+alacritty
 alsa-utils
 arc-gtk-theme
 arch-install-scripts
@@ -30,7 +31,9 @@ dhcpcd
 diffutils
 dnsmasq
 docker
+dosfstools
 e2fsprogs
+efibootmgr
 elinks
 elixir
 emacs
@@ -70,7 +73,6 @@ gpaste
 grep
 groff
 grub
-gtk2
 gvfs-smb
 gzip
 hdparm
@@ -93,7 +95,6 @@ jq
 keychain
 less
 lhasa
-libglade
 libreoffice-fresh-ja
 libtool
 libva-intel-driver
@@ -112,7 +113,6 @@ m4
 make
 man-db
 man-pages
-mariadb
 mathjax
 mdadm
 mlocate
@@ -151,23 +151,15 @@ pkgconf
 pkgfile
 pkgstats
 poppler-data
-postgresql
 postgresql-libs
 procps-ng
 psmisc
 pwgen
 pyenv
-pygobject2-devel
-pygtk
-python
-python-docutils
 python-prompt_toolkit
-python2-cairo
-python2-gobject2
 qt5-styleplugins
 qt5ct
 rclone
-redis
 reiserfsprogs
 ripgrep
 rsync
