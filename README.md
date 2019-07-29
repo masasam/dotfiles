@@ -104,7 +104,8 @@ SSD has only 250 G, but it is sufficient for the environment that uses arch linu
 
 Change it to boot usb in BIOS or UEFI and boot.
 Set secure boot off.
-Set config Sleep State to linux(This may be a peculiar setting of my thinkpad x1).
+Set Config -> Sleep State - Set to "linux"(This may be a peculiar setting of my thinkpad x1).
+Set Config -> Thunderbolt BIOS Assist Mode - Set to "Enabled"(This may be a peculiar setting of my thinkpad x1).
 
 Partitioning
 
