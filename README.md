@@ -98,33 +98,54 @@ Run the following command, replacing /dev/sdx with your drive, e.g. /dev/sdb. (D
 
 ![baobao](https://raw.githubusercontent.com/masasam/image/image/baobao.png)
 
-SSD has only 120 G, but it is sufficient for the environment that uses arch linux and emacs.
+SSD has only 250 G, but it is sufficient for the environment that uses arch linux and emacs.
 
 #### Boot in USB memory
 
-Change it to boot usb in BIOS and boot.
+Change it to boot usb in BIOS or UEFI and boot.
 
 Partitioning
 
-* UEFI can not use thinkpad so BIOS
+* Use UEFI and GPT
 
   Choose according to your hardware.
 
-* Since it is GPT, it is partition / only
+* Partition / only
 
-  '/ Only' may be easier.
+* No swap
 
-* With SSD it's 8G memory so there's no swap
+Install archlinux
 
-gdisk /dev/sda
+	gdisk /dev/sda
 
-    1 sda1  BIOS boot partition(EF02) 1007KB
-    2 sda2 / All remaining
+clear the partition
+
+	Command (? for help):o
+
+Make ESP(EFI System Partition).
+Because I want to do UEFI boot, I make a FAT32 formatted partition.
+
+	Command (? for help):n
+	Permission number: 1
+	First sector     : enter
+	Last sector      : +512M
+	Hex code or GUID : EF00
+
+Set all the rest to / partition
+
+	Command (? for help):n
+	Permission number: 2
+	First sector     : enter
+	Last sector      : enter
+	Hex code or GUID : 8300
 
 Format and mount with ext4
 
-    mkfs.ext4 /dev/sda2
-    mount /dev/sda2 /mnt
+	mkfs.vfat -F32 /dev/sda1
+	mkfs.ext4 /dev/sda2
+	mount /dev/sda2 /mnt
+	mkdir /mnt/boot
+	mount /dev/sda1 /mnt/boot
 
 Connect internet with wifi
 
@@ -205,8 +226,8 @@ Uncomment comment out following
 
 Set boot loader
 
-	pacman -S grub
-	grub-install --recheck /dev/sda
+	pacman -S grub dosfstools efibootmgr
+	grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=arch_grub --recheck --debug
 	grub-mkconfig -o /boot/grub/grub.cfg
 
 #### Prepare drivers and Xorg Gnome
@@ -227,7 +248,7 @@ Gnome can be put as small as necessary
 Terminal uses urxvt and xterm
 
 	sudo pacman -S rxvt-unicode urxvt-perls
-	sudo pacman -S xterm
+	sudo pacman -S xterm alacritty termite
 
 Enable graphical login with gdm
 
@@ -286,10 +307,6 @@ Preparing dotfiles
 
 	dconf-editor /org/gnome/desktop/input-sources/xkb-options 'ctrl:swapcaps'
 	dconf-editor /org/gnome/desktop/interface/gtk-key-theme 'Emacs'
-	dconf-editor /org/gnome/desktop/interface/enable-animations 'False'
-	dconf-editor /org/gnome/desktop/interface/gtk-theme 'Arc-Dark'
-	dconf-editor /org/gnome/desktop/interface/clock-show-date 'True'
-	dconf-editor /org/gnome/settings-daemon/plugins/color/night-light-temperature '5500'
 
 --------------------------------------
 
