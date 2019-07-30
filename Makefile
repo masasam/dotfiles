@@ -492,17 +492,17 @@ mongodb: ## Mongodb initial setup
 	sudo systemctl enable mongodb.service
 	sudo systemctl start mongodb.service
 
-tlp: ## Init tlp for power save
+tlp: ## Setting for power save and battery to last longer
 	sudo pacman -S tlp powertop
 	sudo ln -vsf ${PWD}/etc/default/tlp /etc/default/tlp
 	systemctl enable tlp.service
 	systemctl enable tlp-sleep.service
 
-fwupd: ## For bios uefi update
+fwupd: ## For system firmware and uefi update
 	sudo pacman -S fwupd dmidecode
 	sudo dmidecode -s bios-version  
 
-updatebios: ## Update uefi bios
+uefiupdate: ## Update system firmware and uefi
 	fwpudmgr refresh 
 	fwpudmgr get-updates
 	fwupdmgr update
