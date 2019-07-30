@@ -495,6 +495,11 @@ mongodb: ## Mongodb initial setup
 	sudo systemctl enable mongodb.service
 	sudo systemctl start mongodb.service
 
+tlp: ## Init tlp for power save
+	sudo pacman -S tlp tlp-rdw
+	systemctl enable tlp.service
+	systemctl enable tlp-sleep.service
+
 powertop: ## Powertop initial setup (Warning take a long time)
 	sudo pacman -S powertop
 	sudo ln -vsf ${PWD}/etc/systemd/system/powertop.service /etc/systemd/system/powertop.service
