@@ -496,15 +496,10 @@ mongodb: ## Mongodb initial setup
 	sudo systemctl start mongodb.service
 
 tlp: ## Init tlp for power save
-	sudo pacman -S tlp tlp-rdw
+	sudo pacman -S tlp powertop
+	sudo ln -vsf ${PWD}/etc/default/tlp /etc/default/tlp
 	systemctl enable tlp.service
 	systemctl enable tlp-sleep.service
-
-powertop: ## Powertop initial setup (Warning take a long time)
-	sudo pacman -S powertop
-	sudo ln -vsf ${PWD}/etc/systemd/system/powertop.service /etc/systemd/system/powertop.service
-	sudo powertop --calibrate
-	sudo systemctl enable powertop
 
 gnuglobal: ## Install gnu global
 	mkdir -p ${HOME}/.local
