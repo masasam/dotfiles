@@ -252,9 +252,6 @@ dnsmasq: ## Init dnsmasq
 	sudo mkdir -p /etc/NetworkManager
 	sudo ln -vsf ${PWD}/etc/NetworkManager/NetworkManager.conf /etc/NetworkManager/NetworkManager.conf
 
-fwupd: ## Bios update
-	sudo pacman -S fwupd
-
 google-mozc: ## Install ibus-mozc
 	test -L ${HOME}/.mozc || rm -rf ${HOME}/.mozc
 	ln -vsfn ${HOME}/Dropbox/mozc/.mozc ${HOME}/.mozc
@@ -500,6 +497,15 @@ tlp: ## Init tlp for power save
 	sudo ln -vsf ${PWD}/etc/default/tlp /etc/default/tlp
 	systemctl enable tlp.service
 	systemctl enable tlp-sleep.service
+
+fwupd: ## For bios uefi update
+	sudo pacman -S fwupd dmidecode
+	sudo dmidecode -s bios-version  
+
+updatebios: ## Update uefi bios
+	fwpudmgr refresh 
+	fwpudmgr get-updates
+	fwupdmgr update
 
 gnuglobal: ## Install gnu global
 	mkdir -p ${HOME}/.local
