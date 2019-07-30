@@ -51,6 +51,7 @@ firejail
 flameshot
 flex
 fping
+fwupd
 fzf
 gauche
 gawk
@@ -84,6 +85,7 @@ hugo
 imagemagick
 inetutils
 inkscape
+intel-ucode
 ipcalc
 iperf
 iproute2
@@ -152,6 +154,7 @@ pkgfile
 pkgstats
 poppler-data
 postgresql-libs
+powertop
 procps-ng
 psmisc
 pwgen
@@ -193,6 +196,8 @@ texlive-langjapanese
 texlive-latexextra
 the_silver_searcher
 tig
+tlp
+tlp-rdw
 tmux
 tokei
 traceroute

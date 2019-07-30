@@ -7,12 +7,12 @@ astroid==2.2.5
 attrs==19.1.0
 Automat==0.7.0
 autopep8==1.4.4
-awscli==1.16.207
+awscli==1.16.208
 backcall==0.1.0
 bcrypt==3.1.7
 beautifulsoup4==4.8.0
 bleach==3.1.0
-botocore==1.12.197
+botocore==1.12.198
 btrfsutil==1.1.1
 cached-property==1.5.1
 cachetools==3.1.1
@@ -33,7 +33,7 @@ ddt==1.2.1
 decorator==4.4.0
 defusedxml==0.6.0
 Django==2.2.3
-djangorestframework==3.10.1
+djangorestframework==3.10.2
 docker==4.0.2
 docker-compose==1.24.1
 docker-pycreds==0.4.0
@@ -48,7 +48,7 @@ future==0.17.1
 gif-for-cli==1.1.2
 gitdb==0.6.4
 gitdb2==2.0.5
-GitPython==2.1.12
+GitPython==2.1.13
 goobook==3.3.dev0
 google-api-python-client==1.7.9
 google-auth==1.6.3
@@ -66,7 +66,7 @@ incremental==17.5.0
 ipykernel==5.1.1
 ipython==7.7.0
 ipython-genutils==0.2.0
-ipywidgets==7.5.0
+ipywidgets==7.5.1
 iso-639==0.4.5
 iso3166==1.0
 isodate==0.6.0
@@ -162,7 +162,7 @@ PyYAML==5.1.1
 pyzmq==18.0.2
 qtconsole==4.5.2
 queuelib==1.5.0
-redis==3.3.0
+redis==3.3.2
 requests==2.22.0
 requests-mock==1.6.0
 rope==0.14.0
@@ -216,7 +216,7 @@ w3lib==1.20.0
 wcwidth==0.1.7
 webencodings==0.5.1
 websocket-client==0.56.0
-widgetsnbextension==3.5.0
+widgetsnbextension==3.5.1
 wrapt==1.11.2
 x256==0.0.3
 yapf==0.28.0

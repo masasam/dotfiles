@@ -140,11 +140,13 @@ fribidi
 fuse-common
 fuse2
 fuse3
+fwupd
 fzf
 gauche
 gavl
 gawk
 gc
+gcab
 gcc
 gcc-libs
 gconf
@@ -358,12 +360,14 @@ imlib2
 inetutils
 inkscape
 intel-tbb
+intel-ucode
 ipcalc
 iperf
 iproute2
 iptables
 iputils
 iso-codes
+iw
 jack
 jansson
 jasper
@@ -486,6 +490,7 @@ liblouis
 liblqr
 liblrdf
 libmagick6
+libmbim
 libmm-glib
 libmms
 libmng
@@ -534,6 +539,7 @@ libproxy
 libpsl
 libpulse
 libpwquality
+libqmi
 libquvi
 libquvi-scripts
 libqxp
@@ -552,6 +558,7 @@ libshout
 libsigc++
 libsigsegv
 libsm
+libsmbios
 libsndfile
 libsodium
 libsoup
@@ -613,6 +620,7 @@ libxkbcommon-x11
 libxkbfile
 libxklavier
 libxml2
+libxmlb
 libxmu
 libxpm
 libxrandr
@@ -673,6 +681,7 @@ mkinitcpio
 mkinitcpio-busybox
 mlocate
 mobile-broadband-provider-info
+modemmanager
 mosh
 mozilla-common
 mpfr
@@ -760,6 +769,8 @@ poppler-glib
 popt
 postgresql-libs
 potrace
+powertop
+ppp
 procps-ng
 protobuf
 psmisc
@@ -891,6 +902,8 @@ texlive-latexextra
 the_silver_searcher
 thin-provisioning-tools
 tig
+tlp
+tlp-rdw
 tmux
 tokei
 totem-plparser
