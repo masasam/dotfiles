@@ -286,7 +286,7 @@ circle-ci-cli: ## Install circle ci cli and setup
 mariadb: ## Mariadb initial setup
 	sudo ln -vsf ${PWD}/etc/sysctl.d/40-max-user-watches.conf /etc/sysctl.d/40-max-user-watches.conf
 	sudo pacman -S mariadb mariadb-clients
-	sudo ln -vsf ${PWD}/etc/mysql/my.cnf /etc/mysql/my.cnf
+	sudo ln -vsf ${PWD}/etc/my.cnf /etc/my.cnf
 	sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
 	sudo systemctl enable mariadb.service
 	sudo systemctl start mariadb.service
