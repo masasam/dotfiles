@@ -63,7 +63,7 @@ URxvt.url-select.underline:	true
 !!
 
 xterm*VT100.translations:  #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
-XTerm*geometry:		   104x37
+XTerm*geometry:		   160x50
 XTerm*termName:        	   xterm-256color
 XTerm*utf8:		   1
 XTerm*locale:		   true
@@ -72,9 +72,9 @@ XTerm*cjkWidth:		   true
 XTerm*saveLines:	   2048
 XTerm*lineSpace:           0
 XTerm*letter_space:	   0
-xterm*faceName: 	   Cica:size=14:style=Regular:antialias=true
-xterm*faceNameDoublesize:  Cica:size=14:style=Regular:antialias=true
-xterm*faceSize: 	   14
+xterm*faceName: 	   Cica:size=17.5:style=Regular:antialias=true
+xterm*faceNameDoublesize:  Cica:size=17.5:style=Regular:antialias=true
+xterm*faceSize: 	   17.5
 xterm*borderWidth: 	   0
 
 !! Color Scheme
