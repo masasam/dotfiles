@@ -507,6 +507,10 @@ uefiupdate: ## Update system firmware and uefi
 	fwpudmgr get-updates
 	fwupdmgr update
 
+thinkpad: ## Workaround for Intel throttling issues in Linux
+	sudo pacman -S throttled
+	sudo systemctl enable --now lenovo_fix.service
+
 gnuglobal: ## Install gnu global
 	mkdir -p ${HOME}/.local
 	pip install --user pygments
