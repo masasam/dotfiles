@@ -554,35 +554,24 @@ If you make a mistake on the keyboard, erase all with Ctrl-u
 
 Terminal uses urxvt
 
-# Powertop
+# TLP
 
-Reduce power consumption to save energy.
+Setting for power save and battery to last longer.
 
->sudo pacman -S powertop
-
-Since it becomes invalid when restarting, It will set the following.
-
->sudo powertop --calibrate
-
-sudo vim /etc/systemd/system/powertop.service
-
->[Unit]
->Description=PowerTOP auto tune
-
->[Service]
->Type=idle
->Environment="TERM=dumb"
->ExecStart=/usr/sbin/powertop --auto-tune
-
->[Install]
->WantedBy=multi-user.target
-
-    sudo systemctl enable powertop
-    reboot
+	sudo pacman -S tlp powertop
+	sudo ln -vsf ${PWD}/etc/default/tlp /etc/default/tlp
+	systemctl enable tlp.service
+	systemctl enable tlp-sleep.service
 
 ![PowerTop](https://raw.githubusercontent.com/masasam/image/image/powertop.png)
 
-Succeed if all of this tab is Good
+# BIOS update from Linux
+
+	sudo pacman -S fwupd dmidecode
+	sudo dmidecode -s bios-version
+	fwpudmgr refresh 
+	fwpudmgr get-updates
+	fwupdmgr update
 
 # Enable DNS cache
 
