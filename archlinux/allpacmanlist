@@ -15,6 +15,7 @@ arch-install-scripts
 archlinux-keyring
 argon2
 aria2
+asar
 asciidoc
 aspell
 aspell-en
@@ -29,6 +30,7 @@ autoconf
 automake
 avahi
 babl
+baobab
 bash
 bash-completion
 bc
@@ -95,6 +97,7 @@ device-mapper
 dhcpcd
 diffutils
 djvulibre
+dmidecode
 dmraid
 dnsmasq
 dnssec-anchors
@@ -269,6 +272,7 @@ haskell-data-default-class
 haskell-data-default-instances-containers
 haskell-data-default-instances-dlist
 haskell-data-default-instances-old-locale
+haskell-diff
 haskell-digest
 haskell-dlist
 haskell-doctemplates

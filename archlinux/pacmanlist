@@ -9,6 +9,7 @@ aspell-en
 atool
 autoconf
 automake
+baobab
 bash
 bash-completion
 binutils
@@ -29,6 +30,7 @@ debootstrap
 device-mapper
 dhcpcd
 diffutils
+dmidecode
 dnsmasq
 docker
 dosfstools
