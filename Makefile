@@ -627,8 +627,7 @@ kubernetes-postgres-dmup: ## Kubernetes-portforward-postgres next to command
 
 backup: ## Backup arch linux packages
 	mkdir -p ${PWD}/archlinux
-	pacman -Qqen > ${PWD}/archlinux/pacmanlist
-	pacman -Qnq > ${PWD}/archlinux/allpacmanlist
+	pacman -Qnq > ${PWD}/archlinux/pacmanlist
 	pacman -Qqem > ${PWD}/archlinux/aurlist
 
 update: ## Update arch linux packages and save packages cache 3 generations
