@@ -629,7 +629,7 @@ backup: ## Backup arch linux packages
 	mkdir -p ${PWD}/archlinux
 	pacman -Qqen > ${PWD}/archlinux/pacmanlist
 	pacman -Qnq > ${PWD}/archlinux/allpacmanlist
-	pacman -Qqem > ${PWD}/archlinux/yaylist
+	pacman -Qqem > ${PWD}/archlinux/aurlist
 
 update: ## Update arch linux packages and save packages cache 3 generations
 	yay -Syu; paccache -ruk0
