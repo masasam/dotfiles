@@ -197,6 +197,7 @@ texinfo
 texlive-langjapanese
 texlive-latexextra
 the_silver_searcher
+throttled
 tig
 tlp
 tmux

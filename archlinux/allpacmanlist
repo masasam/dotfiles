@@ -800,6 +800,7 @@ python-oauth2client
 python-packaging
 python-pillow
 python-prompt_toolkit
+python-psutil
 python-pyasn1
 python-pyasn1-modules
 python-pygments
@@ -905,6 +906,7 @@ texlive-langjapanese
 texlive-latexextra
 the_silver_searcher
 thin-provisioning-tools
+throttled
 tig
 tlp
 tmux
