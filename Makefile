@@ -506,7 +506,7 @@ fwupd: ## For system firmware and uefi update
 	sudo dmidecode -s bios-version  
 
 uefiupdate: ## Update system firmware and uefi
-	fwpudmgr refresh 
+	fwpudmgr refresh
 	fwpudmgr get-updates
 	fwupdmgr update
 
