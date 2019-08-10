@@ -569,9 +569,14 @@ Setting for power save and battery to last longer.
 
 	sudo pacman -S fwupd dmidecode
 	sudo dmidecode -s bios-version
-	fwpudmgr refresh 
-	fwpudmgr get-updates
+	fwupdmgr refresh
+	fwupdmgr get-updates
 	fwupdmgr update
+
+If you update the BIOS, you will need to reconfigure grub as follows
+
+	grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=arch_grub --recheck --debug
+	grub-mkconfig -o /boot/grub/grub.cfg
 
 # Enable DNS cache
 
