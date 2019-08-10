@@ -391,6 +391,10 @@ zeal: ## Deploy zeal config and docsets
 zoom: ## Install zoom for web conference
 	sudo pacman -U ${HOME}/Dropbox/arch/zoom_x86_64.pkg.tar.xz
 
+openvpn: ## Install openvpn
+	sudo pacman -S openvpn networkmanager-openvpn
+	sudo ln -vsfn ${HOME}/Dropbox/arch/openvpn/client.conf /etc/openvpn/client/client.conf
+
 screenkey: ## Init screenkey
 	yay -S screenkey
 	mkdir -p ${HOME}/.config
