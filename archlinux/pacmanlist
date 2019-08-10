@@ -97,6 +97,7 @@ desktop-file-utils
 device-mapper
 dhcpcd
 diffutils
+discord
 djvulibre
 dmidecode
 dmraid
@@ -709,6 +710,7 @@ netctl
 nethogs
 nettle
 networkmanager
+networkmanager-openvpn
 nm-connection-editor
 nmap
 nnn
@@ -732,6 +734,8 @@ openjpeg2
 openresolv
 openssh
 openssl
+openvpn
+opera-ffmpeg-codecs
 optipng
 opus
 orc
@@ -765,6 +769,7 @@ perl-timedate
 pinentry
 pipewire
 pixman
+pkcs11-helper
 pkgconf
 pkgfile
 pkgstats
@@ -790,6 +795,7 @@ pygobject2-devel
 pygtk
 python
 python-appdirs
+python-attrs
 python-cachetools
 python-dbus
 python-dbus-common
