@@ -573,8 +573,11 @@ Setting for power save and battery to last longer.
 	fwupdmgr get-updates
 	fwupdmgr update
 
-If you update the BIOS, you will need to reconfigure grub as follows
+After you update the BIOS, you will need to reconfigure grub when next boot. Boot with arch linux usb memory and do as follows.
 
+	mount /dev/sda2 /mnt
+	mount /dev/sda1 /mnt/boot
+	arch-chroot /mnt /bin/bash
 	grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=arch_grub --recheck --debug
 	grub-mkconfig -o /boot/grub/grub.cfg
 
