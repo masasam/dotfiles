@@ -148,7 +148,7 @@ Set all the rest to / partition
 	Last sector      : enter
 	Hex code or GUID : 8300
 
-Format and mount with ext4
+Format and mount with ext4 and fat32
 
 	mkfs.vfat -F32 /dev/sda1
 	mkfs.ext4 /dev/sda2
