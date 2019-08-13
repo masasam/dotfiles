@@ -7,12 +7,12 @@ astroid==2.2.5
 attrs==19.1.0
 Automat==0.7.0
 autopep8==1.4.4
-awscli==1.16.216
+awscli==1.16.217
 backcall==0.1.0
 bcrypt==3.1.7
 beautifulsoup4==4.8.0
 bleach==3.1.0
-botocore==1.12.206
+botocore==1.12.207
 btrfsutil==1.1.1
 cached-property==1.5.1
 cachetools==3.1.1
@@ -71,7 +71,7 @@ iso-639==0.4.5
 iso3166==1.0
 isodate==0.6.0
 isort==4.3.21
-jedi==0.15.0
+jedi==0.15.1
 Jinja2==2.10.1
 jmespath==0.9.4
 joblib==0.13.2
@@ -100,7 +100,7 @@ mccabe==0.6.1
 mistune==0.8.4
 mps-youtube==0.2.8
 msgpack==0.6.1
-mycli==1.19.0
+mycli==1.20.0
 nbconvert==5.6.0
 nbformat==4.4.0
 neovim==0.3.1
@@ -221,6 +221,6 @@ widgetsnbextension==3.5.1
 wrapt==1.11.2
 x256==0.0.3
 yapf==0.28.0
-youtube-dl==2019.8.2
+youtube-dl==2019.8.13
 zipp==0.5.2
 zope.interface==4.6.0
