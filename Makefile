@@ -503,7 +503,7 @@ tlp: ## Setting for power save and battery to last longer
 
 fwupd: ## For system firmware and uefi update
 	sudo pacman -S fwupd dmidecode
-	sudo dmidecode -s bios-version  
+	sudo dmidecode -s bios-version
 
 uefiupdate: ## Update system firmware and uefi
 	fwupdmgr refresh
