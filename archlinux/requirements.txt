@@ -1,4 +1,4 @@
-ansible==2.8.3
+ansible==2.8.4
 ansible-lint==4.1.0
 apparmor==2.13.3
 appdirs==1.4.3
@@ -7,12 +7,12 @@ astroid==2.2.5
 attrs==19.1.0
 Automat==0.7.0
 autopep8==1.4.4
-awscli==1.16.219
+awscli==1.16.220
 backcall==0.1.0
 bcrypt==3.1.7
 beautifulsoup4==4.8.0
 bleach==3.1.0
-botocore==1.12.209
+botocore==1.12.210
 btrfsutil==1.1.1
 cached-property==1.5.1
 cachetools==3.1.1
@@ -81,8 +81,8 @@ jupyter==1.0.0
 jupyter-client==5.3.1
 jupyter-console==6.0.0
 jupyter-core==4.5.0
-jupyterlab==1.0.5
-jupyterlab-server==1.0.2
+jupyterlab==1.0.6
+jupyterlab-server==1.0.4
 jupyterthemes==0.20.0
 kitchen==1.2.6
 kiwisolver==1.1.0
@@ -161,7 +161,7 @@ python-utils==2.3.0
 pytz==2019.2
 PyYAML==5.1.2
 pyzmq==18.1.0
-qtconsole==4.5.2
+qtconsole==4.5.3
 queuelib==1.5.0
 redis==3.3.7
 requests==2.22.0
@@ -169,7 +169,7 @@ requests-mock==1.6.0
 rope==0.14.0
 rsa==4.0
 rtv==1.27.0
-ruamel.yaml==0.16.3
+ruamel.yaml==0.16.4
 ruamel.yaml.clib==0.1.2
 s3transfer==0.2.1
 scikit-learn==0.21.3
@@ -210,7 +210,7 @@ typed-ast==1.4.0
 uritemplate==3.0.0
 urllib3==1.25.3
 vimiv==0.9.1
-virtualenv==16.7.2
+virtualenv==16.7.3
 virtualenv-clone==0.5.3
 virtualenvwrapper==4.8.4
 w3lib==1.21.0
