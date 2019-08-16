@@ -13,7 +13,8 @@
 
 (setq easy-hugo-bloglist '(((easy-hugo-basedir . "~/src/github.com/masasam/solist/")
 			    (easy-hugo-url . "https://solist.work")
-			    (easy-hugo-postdir . "content/services"))
+			    (easy-hugo-postdir . "content/services")
+			    (easy-hugo-bin . "~/Dropbox/arch/hugo"))
 			   ((easy-hugo-basedir . "~/src/github.com/masasam/PPAP/")
 			    (easy-hugo-url . "https://easy-hugo-test.firebaseapp.com")
 			    (easy-hugo-postdir . "content/post"))))
