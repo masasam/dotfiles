@@ -789,6 +789,7 @@ psmisc
 pulseaudio
 pulseaudio-alsa
 pulseaudio-bluetooth
+pv
 pwgen
 pyenv
 pygobject-devel

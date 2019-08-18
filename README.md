@@ -356,7 +356,7 @@ You can make install from here
 	sudo pacman -S oath-toolkit imagemagick peek sshuttle
 	sudo pacman -S bookworm ruby ruby-rdoc pacman-contrib ncdu
 	sudo pacman -S sxiv nnn adapta-gtk-theme podman firejail
-	sudo pacman -S pyenv hexedit tokei aria2 discord
+	sudo pacman -S pyenv hexedit tokei aria2 discord pv
 
 ## Activity
 
