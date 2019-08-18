@@ -169,7 +169,7 @@ requests-mock==1.6.0
 rope==0.14.0
 rsa==4.0
 rtv==1.27.0
-ruamel.yaml==0.16.4
+ruamel.yaml==0.16.5
 ruamel.yaml.clib==0.1.2
 s3transfer==0.2.1
 scikit-learn==0.21.3
@@ -184,7 +184,7 @@ simplejson==3.16.1
 six==1.12.0
 smmap==0.9.0
 smmap2==2.0.5
-soupsieve==1.9.2
+soupsieve==1.9.3
 speedtest-cli==2.1.1
 SQLAlchemy==1.3.7
 sqlparse==0.3.0
