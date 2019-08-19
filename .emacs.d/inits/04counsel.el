@@ -45,9 +45,7 @@ If the region isn't selected, `swiper-isearch'."
   (interactive)
   (if (not (use-region-p))
       (swiper-isearch)
-    (deactivate-mark)
-    (swiper-isearch (buffer-substring-no-properties
-                     (region-beginning) (region-end)))))
+    (swiper-isearch-thing-at-point)))
 
 ;; counsel-tramp
 (setq tramp-default-method "ssh")
