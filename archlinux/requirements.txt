@@ -7,12 +7,12 @@ astroid==2.2.5
 attrs==19.1.0
 Automat==0.7.0
 autopep8==1.4.4
-awscli==1.16.222
+awscli==1.16.223
 backcall==0.1.0
 bcrypt==3.1.7
 beautifulsoup4==4.8.0
 bleach==3.1.0
-botocore==1.12.212
+botocore==1.12.213
 btrfsutil==1.1.1
 cached-property==1.5.1
 cachetools==3.1.1
@@ -20,7 +20,7 @@ certifi==2019.6.16
 cffi==1.12.3
 chardet==3.0.4
 cheat==2.5.1
-chromedriver-binary==77.0.3865.10.0
+chromedriver-binary==77.0.3865.40.0
 cli-helpers==1.2.1
 Click==7.0
 colorama==0.4.1
@@ -81,12 +81,12 @@ jupyter==1.0.0
 jupyter-client==5.3.1
 jupyter-console==6.0.0
 jupyter-core==4.5.0
-jupyterlab==1.0.6
+jupyterlab==1.0.9
 jupyterlab-server==1.0.6
 jupyterthemes==0.20.0
 kitchen==1.2.6
 kiwisolver==1.1.0
-lazy-object-proxy==1.4.1
+lazy-object-proxy==1.4.2
 lensfun==0.3.2
 lesscpy==0.13.0
 LibAppArmor==2.13.3
@@ -100,7 +100,7 @@ mccabe==0.6.1
 mistune==0.8.4
 mps-youtube==0.2.8
 msgpack==0.6.1
-mycli==1.20.0
+mycli==1.20.1
 nbconvert==5.6.0
 nbformat==4.4.0
 neovim==0.3.1
@@ -125,7 +125,7 @@ Pillow==6.1.0
 pipenv==2018.11.26
 pluggy==0.12.0
 ply==3.11
-progressbar2==3.42.0
+progressbar2==3.43.1
 prometheus-client==0.7.1
 prompt-toolkit==2.0.9
 psutil==5.6.3
