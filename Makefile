@@ -703,7 +703,7 @@ allupdate: update pipupdate rustupdate goinstall yarnupdate
 
 allbackup: backup pipbackup
 
-.PHONY: allinstall allupdate allbackup nextinstall
+.PHONY: allinstall nextinstall allupdate allbackup
 
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
