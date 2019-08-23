@@ -308,10 +308,6 @@ redis: ## Redis inital setup
 	sudo systemctl enable redis.service
 	sudo systemctl start redis.service
 
-serverless: ## Init setup serverless
-	yarn global add serverless
-	ln -vsf ${HOME}/.config/yarn/global/node_modules/serverless/bin/serverless ${HOME}/.node_modules/bin/serverless
-
 mew: ## Install mew as mail reader
 	cd ~/src;\
 	wget https://www.mew.org/Release/mew-6.8.tar.gz;\
