@@ -515,10 +515,6 @@ gnuglobal: ## Install gnu global
 	pip install --user pygments
 	yay -S global
 
-other-node: ## Install nvm and other node version
-	nvm install 8.11.1
-	nvm alias default system
-
 other-python: ## Install python3.5 python3.6
 	sudo pacman -S pyenv
 	pyenv install 3.5.7
