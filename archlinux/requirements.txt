@@ -7,12 +7,12 @@ astroid==2.2.5
 attrs==19.1.0
 Automat==0.7.0
 autopep8==1.4.4
-awscli==1.16.224
+awscli==1.16.225
 backcall==0.1.0
 bcrypt==3.1.7
 beautifulsoup4==4.8.0
 bleach==3.1.0
-botocore==1.12.214
+botocore==1.12.215
 btrfsutil==1.1.1
 cached-property==1.5.1
 cachetools==3.1.1
@@ -98,6 +98,7 @@ MarkupSafe==1.1.1
 matplotlib==3.1.1
 mccabe==0.6.1
 mistune==0.8.4
+more-itertools==7.2.0
 mps-youtube==0.2.8
 msgpack==0.6.1
 mycli==1.20.1
@@ -210,7 +211,7 @@ typed-ast==1.4.0
 uritemplate==3.0.0
 urllib3==1.25.3
 vimiv==0.9.1
-virtualenv==16.7.3
+virtualenv==16.7.4
 virtualenv-clone==0.5.3
 virtualenvwrapper==4.8.4
 w3lib==1.21.0
@@ -222,5 +223,5 @@ wrapt==1.11.2
 x256==0.0.3
 yapf==0.28.0
 youtube-dl==2019.8.13
-zipp==0.5.2
+zipp==0.6.0
 zope.interface==4.6.0
