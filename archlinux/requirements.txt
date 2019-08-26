@@ -157,7 +157,7 @@ pyrsistent==0.15.4
 PySocks==1.7.0
 python-dateutil==2.8.0
 python-jsonrpc-server==0.2.0
-python-language-server==0.28.1
+python-language-server==0.28.2
 python-utils==2.3.0
 pytz==2019.2
 PyYAML==5.1.2
