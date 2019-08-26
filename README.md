@@ -102,7 +102,7 @@ SSD has only 250G, but it is sufficient for the environment that uses arch linux
 
 #### Boot in USB memory
 
-Change it to boot usb in BIOS or UEFI and boot.
+Change it to boot from usb in BIOS UEFI.
 
 	Security > Secure Boot: Disable
 	Set Config -> Sleep State: "linux"(This may be a peculiar setting of my thinkpad x1).
