@@ -24,8 +24,11 @@
 
 (package-initialize)
 
-;; workaround
-(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
+
+;; A workaround for a bug that occurs with gnutls 3.6 and emacs 26.1 emacs 26.2
+(when (and (= emacs-major-version 26) (or (= emacs-minor-version 1) (= emacs-minor-version 2)))
+  (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3"))
+
 
 ;; When emacs for the first time execute only, automatic package install
 (unless (file-directory-p "~/.emacs.d/elpa")
