@@ -539,7 +539,7 @@ google-cloud: ## Install SDK and setting
 	curl https://sdk.cloud.google.com | bash
 	test -L ${HOME}/.config/gcloud || rm -rf ${HOME}/.config/gcloud
 	ln -vsfn ${HOME}/Dropbox/gcloud   ${HOME}/.config/gcloud
-	gcloud components install kubectl
+	sudo pacman -S kubectl kubectx minikube
 	yay -S stern-bin
 
 kubernetes-cluster: ## Kubernetes cluster setup
