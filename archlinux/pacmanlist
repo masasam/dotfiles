@@ -117,6 +117,7 @@ emacs
 enchant
 eog
 erlang-nox
+ethtool
 evince
 exempi
 exiv2
@@ -391,6 +392,8 @@ keychain
 keyutils
 kmod
 krb5
+kubectl
+kubectx
 kyotocabinet
 l-smash
 ladspa
@@ -683,6 +686,7 @@ mathjax
 mdadm
 mesa
 metis
+minikube
 minizip
 mjpegtools
 mkinitcpio
@@ -875,6 +879,7 @@ shared-mime-info
 shellcheck
 slang
 slib
+smartmontools
 smbclient
 snappy
 sound-theme-freedesktop
