@@ -222,6 +222,6 @@ widgetsnbextension==3.5.1
 wrapt==1.11.2
 x256==0.0.3
 yapf==0.28.0
-youtube-dl==2019.8.13
+youtube-dl==2019.9.1
 zipp==0.6.0
 zope.interface==4.6.0
