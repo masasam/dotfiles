@@ -15,6 +15,9 @@
 (add-hook 'ruby-mode-hook 'my/enable-trailing-mode)
 (add-hook 'c-mode-hook 'my/enable-trailing-mode)
 (add-hook 'shell-mode-hook 'my/enable-trailing-mode)
+(add-hook 'js2-mode-hook 'my/enable-trailing-mode)
+(add-hook 'web-mode-hook 'my/enable-trailing-mode)
+(add-hook 'elixir-mode-hook 'my/enable-trailing-mode)
 
 
 (defun my/cleanup-for-spaces ()
