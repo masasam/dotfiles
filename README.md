@@ -506,8 +506,7 @@ If you make a mistake on the keyboard, erase all with Ctrl-u
 	curl https://sdk.cloud.google.com | bash
 	test -L ${HOME}/.config/gcloud || rm -rf ${HOME}/.config/gcloud
 	ln -vsfn ${HOME}/Dropbox/zsh/gcloud   ${HOME}/.config/gcloud
-	gcloud components install kubectl
-	yay -S kubernetes-helm-bin
+	sudo pacman -S kubectl kubectx minikube
 	yay -S stern-bin
 	
 #### rbenv rails
