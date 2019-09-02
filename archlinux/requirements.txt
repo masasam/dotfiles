@@ -135,7 +135,7 @@ psycopg2-binary==2.8.3
 ptyprocess==0.6.0
 pwquality==1.4.0
 py-spy==0.1.11
-pyasn1==0.4.6
+pyasn1==0.4.7
 pyasn1-modules==0.2.6
 pycodestyle==2.5.0
 pycparser==2.19
@@ -166,7 +166,7 @@ qtconsole==4.5.4
 queuelib==1.5.0
 redis==3.3.8
 requests==2.22.0
-requests-mock==1.6.0
+requests-mock==1.7.0
 rope==0.14.0
 rsa==4.0
 rtv==1.27.0
