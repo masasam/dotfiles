@@ -7,12 +7,12 @@ astroid==2.2.5
 attrs==19.1.0
 Automat==0.7.0
 autopep8==1.4.4
-awscli==1.16.230
+awscli==1.16.231
 backcall==0.1.0
 bcrypt==3.1.7
 beautifulsoup4==4.8.0
 bleach==3.1.0
-botocore==1.12.220
+botocore==1.12.221
 btrfsutil==1.1.1
 cached-property==1.5.1
 cachetools==3.1.1
@@ -157,7 +157,7 @@ pyrsistent==0.15.4
 PySocks==1.7.0
 python-dateutil==2.8.0
 python-jsonrpc-server==0.2.0
-python-language-server==0.28.2
+python-language-server==0.28.3
 python-utils==2.3.0
 pytz==2019.2
 PyYAML==5.1.2
@@ -211,7 +211,7 @@ typed-ast==1.4.0
 uritemplate==3.0.0
 urllib3==1.25.3
 vimiv==0.9.1
-virtualenv==16.7.4
+virtualenv==16.7.5
 virtualenv-clone==0.5.3
 virtualenvwrapper==4.8.4
 w3lib==1.21.0
