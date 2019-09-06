@@ -810,6 +810,7 @@ python-gobject
 python-google-api-python-client
 python-google-auth
 python-google-auth-httplib2
+python-html2text
 python-httplib2
 python-oauth2client
 python-packaging
