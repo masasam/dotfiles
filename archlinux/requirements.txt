@@ -7,12 +7,12 @@ astroid==2.2.5
 attrs==19.1.0
 Automat==0.7.0
 autopep8==1.4.4
-awscli==1.16.233
+awscli==1.16.234
 backcall==0.1.0
 bcrypt==3.1.7
 beautifulsoup4==4.8.0
 bleach==3.1.0
-botocore==1.12.223
+botocore==1.12.224
 btrfsutil==1.1.1
 cached-property==1.5.1
 cachetools==3.1.1
@@ -55,6 +55,7 @@ google-auth==1.6.3
 google-auth-httplib2==0.0.3
 graph-cli==0.1.2
 greenlet==0.4.15
+html2text==2018.1.9
 httpie==1.0.3
 httplib2==0.13.1
 humanize==0.5.1
