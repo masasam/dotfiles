@@ -539,8 +539,18 @@ google-cloud: ## Install SDK and setting
 	curl https://sdk.cloud.google.com | bash
 	test -L ${HOME}/.config/gcloud || rm -rf ${HOME}/.config/gcloud
 	ln -vsfn ${HOME}/Dropbox/gcloud   ${HOME}/.config/gcloud
-	sudo pacman -S kubectl kubectx minikube
+	sudo pacman -S kubectl kubectx
 	yay -S stern-bin
+
+minikube: ## Setup minikube with kvm2
+	sudo pacman -S minikube libvirt qemu ebtables docker-machine
+	yay -S docker-machine-driver-kvm2
+	sudo usermod -a -G libvirt ${USER}
+	sudo systemctl start libvirtd.service
+	sudo systemctl enable libvirtd.service
+	sudo systemctl start virtlogd.service
+	sudo systemctl enable virtlogd.service
+	minikube config set vm-driver kvm2
 
 kubernetes-cluster: ## Kubernetes cluster setup
 	gcloud container clusters create --num-nodes=2 my-cluster \
