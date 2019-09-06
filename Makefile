@@ -543,7 +543,7 @@ google-cloud: ## Install SDK and setting
 	yay -S stern-bin
 
 minikube: ## Setup minikube with kvm2
-	sudo pacman -S minikube libvirt qemu ebtables docker-machine
+	sudo pacman -S minikube libvirt qemu-headless ebtables docker-machine
 	yay -S docker-machine-driver-kvm2
 	sudo usermod -a -G libvirt ${USER}
 	sudo systemctl start libvirtd.service
