@@ -81,6 +81,12 @@
   (browse-url "https://twitter.com"))
 
 
+(defun chromium-keep ()
+  "Open keep with chromium."
+  (interactive)
+  (browse-url "https://keep.google.com/u/0/"))
+
+
 (defun chromium-rails ()
   "Open rails development server with chromium."
   (interactive)
