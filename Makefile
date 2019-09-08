@@ -539,11 +539,11 @@ google-cloud: ## Install SDK and setting
 	curl https://sdk.cloud.google.com | bash
 	test -L ${HOME}/.config/gcloud || rm -rf ${HOME}/.config/gcloud
 	ln -vsfn ${HOME}/Dropbox/gcloud   ${HOME}/.config/gcloud
-	sudo pacman -S kubectl kubectx
+	sudo pacman -S kubectl
 	yay -S stern-bin
 
 minikube: ## Setup minikube with kvm2
-	sudo pacman -S minikube libvirt qemu-headless ebtables docker-machine
+	sudo pacman -S minikube libvirt qemu-headless ebtables docker-machine kubectx
 	yay -S docker-machine-driver-kvm2
 	sudo usermod -a -G libvirt ${USER}
 	sudo systemctl start libvirtd.service
