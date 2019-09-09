@@ -86,6 +86,7 @@ pipinstall: ## Install python packages
 	pip install --user jupyter
 	pip install --user jupyterlab
 	pip install --user jupyterthemes
+	pip install --user kube-shell
 	pip install --user litecli
 	pip install --user matplotlib
 	pip install --user mycli
