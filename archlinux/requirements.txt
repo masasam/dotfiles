@@ -7,12 +7,12 @@ astroid==2.2.5
 attrs==19.1.0
 Automat==0.7.0
 autopep8==1.4.4
-awscli==1.16.234
+awscli==1.16.235
 backcall==0.1.0
 bcrypt==3.1.7
 beautifulsoup4==4.8.0
 bleach==3.1.0
-botocore==1.12.224
+botocore==1.12.225
 btrfsutil==1.1.1
 cached-property==1.5.1
 cachetools==3.1.1
@@ -45,6 +45,7 @@ ERAlchemy==1.2.10
 Faker==2.0.1
 flake8==3.7.8
 future==0.17.1
+fuzzyfinder==2.1.0
 gif-for-cli==1.1.2
 gitdb==0.6.4
 gitdb2==2.0.5
@@ -64,6 +65,7 @@ idna==2.8
 importlib-metadata==0.20
 importmagic==0.1.7
 incremental==17.5.0
+ipaddress==1.0.22
 ipykernel==5.1.2
 ipython==7.8.0
 ipython-genutils==0.2.0
@@ -87,6 +89,8 @@ jupyterlab-server==1.0.6
 jupyterthemes==0.20.0
 kitchen==1.2.6
 kiwisolver==1.1.0
+kube-shell==0.0.23
+kubernetes==10.0.1
 lazy-object-proxy==1.4.2
 lensfun==0.3.2
 lesscpy==0.13.0
@@ -110,6 +114,7 @@ nose==1.3.7
 notebook==6.0.1
 numpy==1.17.2
 oauth2client==4.1.3
+oauthlib==3.1.0
 opencv-python==4.1.1.26
 packaging==19.1
 pafy==0.5.4
@@ -168,6 +173,7 @@ queuelib==1.5.0
 redis==3.3.8
 requests==2.22.0
 requests-mock==1.7.0
+requests-oauthlib==1.2.0
 rope==0.14.0
 rsa==4.0
 rtv==1.27.0
