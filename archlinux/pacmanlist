@@ -624,6 +624,7 @@ libwbclient
 libwebp
 libwmf
 libwpd
+libwpe
 libwpg
 libwps
 libx11
@@ -997,6 +998,7 @@ wildmidi
 wmctrl
 woff2
 wpa_supplicant
+wpebackend-fdo
 x11-ssh-askpass
 x264
 x265
@@ -1009,6 +1011,7 @@ xcb-util-keysyms
 xcb-util-renderutil
 xcb-util-wm
 xclip
+xdg-dbus-proxy
 xdg-user-dirs
 xdg-utils
 xdotool
