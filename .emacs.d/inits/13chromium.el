@@ -87,6 +87,12 @@
   (browse-url "https://keep.google.com/u/0/"))
 
 
+(defun chromium-minikube ()
+  "Open minikube service server with chromium."
+  (interactive)
+  (browse-url "http://localhost:8080"))
+
+
 (defun chromium-rails ()
   "Open rails development server with chromium."
   (interactive)
