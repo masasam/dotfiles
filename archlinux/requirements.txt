@@ -1,4 +1,4 @@
-ansible==2.8.4
+ansible==2.8.5
 ansible-lint==4.1.0
 apparmor==2.13.3
 appdirs==1.4.3
@@ -7,12 +7,12 @@ astroid==2.2.5
 attrs==19.1.0
 Automat==0.7.0
 autopep8==1.4.4
-awscli==1.16.237
+awscli==1.16.238
 backcall==0.1.0
 bcrypt==3.1.7
 beautifulsoup4==4.8.0
 bleach==3.1.0
-botocore==1.12.227
+botocore==1.12.228
 btrfsutil==1.1.1
 cached-property==1.5.1
 cachetools==3.1.1
