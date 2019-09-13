@@ -502,16 +502,6 @@ kubernetes-image2gcr: ## Upload docker image to Google Container Registry
 	gcloud docker -- push us.gcr.io/${GCP_PROJECT}/myapp:1.0
 	open https://console.cloud.google.com/gcr
 
-kubernetes-deploy: ## Deploy myapp to kubernetes cluster
-	GCP_PROJECT=$(gcloud config get-value project)
-	kubectl run myapp-deploy \
-	--image=us.gcr.io/${GCP_PROJECT}/myapp:1.0 \
-	--replicas=1 \
-	--port=3000 \
-	--limits=cpu=200m \
-	--command -- node app/server.js
-	kubectl get pod
-
 kubernetes-publish: ## Publish kubernetes service
 	kubectl expose deployment myapp-deploy --port=80 --target-port=3000 --type=LoadBalancer
 	watch kubectl get service
@@ -533,25 +523,6 @@ kubernetes-rollout: ## Rollout version for kubernetes
 kubernetes-delete: ## Delete kubernetes cluster
 	kubectl delete deployment,service,pod --all
 	gcloud container clusters delete my-cluster
-
-kubernetes-getyaml: ## Get yaml from kubernetes server
-	kubectl get deployment/myapp-deploy -o yaml --export > deploy.yaml
-	kubectl get service/myapp-deploy -o yaml --export > service.yaml
-	cat service.yaml | sed -e "s/clusterIP/#clusterIP/" > service.yaml
-
-kubernetes-deploy-yaml: ## Deploy from yaml
-	kubectl create -f deploy.yaml
-	kubectl create -f service.yaml
-	kubectl get services
-
-kubernetes-rolling-update-yaml: ## Rolling-update from yaml
-	kubectl apply -f deploy.yaml
-	kubectl get pod
-
-kubernetes-delete-yaml: ## Delete kubernetes cluster from yaml
-	kubectl delete -f deploy.yaml
-	kubectl delete -f service.yaml
-	gcloud container clusters delete myapp-cluster
 
 kubernetes-portforward-mariadb: ## Portforward for mariadb
 	kubectl port-forward mysql-podname 3306:3306
