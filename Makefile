@@ -74,8 +74,6 @@ pipinstall: ## Install python packages
 	pip install --user cheat
 	pip install --user chromedriver-binary
 	pip install --user docker-compose
-	pip install --user django
-	pip install --user djangorestframework
 	pip install --user eralchemy
 	pip install --user faker
 	pip install --user flake8
@@ -88,7 +86,6 @@ pipinstall: ## Install python packages
 	pip install --user jupyter
 	pip install --user jupyterlab
 	pip install --user jupyterthemes
-	pip install --user kube-shell
 	pip install --user litecli
 	pip install --user matplotlib
 	pip install --user mycli
@@ -307,16 +304,6 @@ redis: ## Redis inital setup
 	sudo pacman -S redis
 	sudo systemctl enable redis.service
 	sudo systemctl start redis.service
-
-mew: ## Install mew as mail reader
-	cd ~/src;\
-	wget https://www.mew.org/Release/mew-6.8.tar.gz;\
-	tar zxvf mew-6.8.tar.gz;\
-	test -f	mew-6.8.tar.gz && rm -fr mew-6.8.tar.gz;\
-	cd mew-6.8;\
-	./configure;\
-	make;\
-	sudo make install;\
 
 dingo: ## Install dingo Google DNS over HTTPS
 	sudo pacman -S dingo
@@ -628,6 +615,16 @@ kubernetes-portforward-postgres: ## Portforward for postgres
 
 kubernetes-postgres-dmup: ## Kubernetes-portforward-postgres next to command
 	pg_dump -U root -h localhost dbname > pgdump
+
+mew: ## Install mew as mail reader
+	cd ~/src;\
+	wget https://www.mew.org/Release/mew-6.8.tar.gz;\
+	tar zxvf mew-6.8.tar.gz;\
+	test -f	mew-6.8.tar.gz && rm -fr mew-6.8.tar.gz;\
+	cd mew-6.8;\
+	./configure;\
+	make;\
+	sudo make install;\
 
 backup: ## Backup arch linux packages
 	mkdir -p ${PWD}/archlinux
