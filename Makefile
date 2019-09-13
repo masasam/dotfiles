@@ -403,7 +403,7 @@ aur: ## Install arch linux AUR packages using yay
 	yay -S git-secrets
 	yay -S nvm
 	yay -S sequeler-git
-	yay -S slack-desktop-dark
+	yay -S slack-desktop
 
 aurplus: ## Install arch linux AUR packages using yay
 	yay -S drone-cli
