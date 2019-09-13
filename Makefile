@@ -230,12 +230,6 @@ termite: ## Init termite terminal
 	mkdir -p ${HOME}/.config/termite
 	ln -vsf ${PWD}/.config/termite/config ${HOME}/.config/termite/config
 
-tym: ## Init tym terminal
-	yay -S tym
-	mkdir -p ${HOME}/.config/tym
-	ln -vsf ${PWD}/.config/tym/config.lua ${HOME}/.config/tym/config.lua
-	sudo ln -vsf ${PWD}/usr/share/applications/tym.desktop /usr/share/applications/tym.desktop
-
 rclone: ## Init rclone
 	sudo pacman -S rclone
 	chmod 600 ${HOME}/Dropbox/zsh/rclone/rclone.conf
@@ -320,42 +314,6 @@ mpsyt: ## Install and deploy mps-youtube
 	mkdir -p ${HOME}/.config/mps-youtube
 	ln -vsfn ${HOME}/Dropbox/zsh/mps-youtube/playlists ${HOME}/.config/mps-youtube/playlists
 
-rbenv: ## Install rvenv ruby-build
-	yay -S rbenv
-	yay -S ruby-build
-	rbenv install 2.5.1
-	gem install bundle
-
-rubygem: ## Install rubygem package
-	gem install bundler jekyll sass solargraph rawler package_cloud
-
-django: ## Install Django
-	mkdir -p ${HOME}/src/github.com/masasam/mydjango;\
-	cd ${HOME}/src/github.com/masasam/mydjango;\
-	touch Pipfile;\
-	pipenv --python=3.7.4;\
-	pipenv install django;\
-	pipenv run django-admin startproject config .
-
-rails: ## Create rails
-	export RBENV_ROOT="${HOME}/.rbenv";\
-	if [ -d "${RBENV_ROOT}" ]; then \
-	  export PATH="${RBENV_ROOT}/bin:${PATH}";\
-	  eval "$(rbenv init -)";\
-	fi;\
-	rbenv global 2.5.1;\
-	rbenv rehash;\
-	mkdir -p ${HOME}/src/github.com/masasam/myapp;\
-	cd ${HOME}/src/github.com/masasam/myapp;\
-	rbenv local 2.5.1;\
-	bundle init;\
-	echo "gem 'rails', '~> 5.2.0'" >> Gemfile;\
-	bundle install --path vendor/bundle;\
-	bundle exec rails new -B --webpack=react --database=mysql --skip-test .;\
-	bundle install;\
-	bundle exec rails webpacker:install;\
-	cd -
-
 sxiv: ## Init sxiv
 	mkdir -p ${HOME}/.config/sxiv/exec
 	ln -vsf ${PWD}/.config/sxiv/exec/image-info ${HOME}/.config/sxiv/exec/image-info
@@ -373,15 +331,6 @@ zeal: ## Deploy zeal config and docsets
 zoom: ## Install zoom for web conference
 	sudo pacman -U ${HOME}/Dropbox/arch/zoom_x86_64.pkg.tar.xz
 
-openvpn: ## Install openvpn
-	sudo pacman -S openvpn networkmanager-openvpn
-	sudo ln -vsfn ${HOME}/Dropbox/arch/openvpn/client.conf /etc/openvpn/client/client.conf
-
-screenkey: ## Init screenkey
-	yay -S screenkey
-	mkdir -p ${HOME}/.config
-	ln -vsf ${PWD}/.config/screenkey.json ${HOME}/.config/screenkey.json
-
 yay: ## Install yay using yay
 	yay -S yay
 
@@ -398,6 +347,23 @@ aurplus: ## Install arch linux AUR packages using yay
 	yay -S nkf
 	yay -S pencil
 	yay -S rtags
+
+google-cloud: ## Install SDK and setting
+	curl https://sdk.cloud.google.com | bash
+	test -L ${HOME}/.config/gcloud || rm -rf ${HOME}/.config/gcloud
+	ln -vsfn ${HOME}/Dropbox/gcloud   ${HOME}/.config/gcloud
+	sudo pacman -S kubectl
+	yay -S stern-bin
+
+minikube: ## Setup minikube with kvm2
+	sudo pacman -S minikube libvirt qemu-headless ebtables docker-machine kubectx
+	yay -S docker-machine-driver-kvm2
+	sudo usermod -a -G libvirt ${USER}
+	sudo systemctl start libvirtd.service
+	sudo systemctl enable libvirtd.service
+	sudo systemctl start virtlogd.service
+	sudo systemctl enable virtlogd.service
+	minikube config set vm-driver kvm2
 
 desktop: ## Update desktop entry
 	sudo ln -vsf ${PWD}/usr/share/applications/vim.desktop /usr/share/applications/vim.desktop
@@ -524,23 +490,6 @@ emacs-devel: ## Install development version of emacs
 	sudo make install;\
 	rm -rf ${HOME}/.emacs.d/elpa
 
-google-cloud: ## Install SDK and setting
-	curl https://sdk.cloud.google.com | bash
-	test -L ${HOME}/.config/gcloud || rm -rf ${HOME}/.config/gcloud
-	ln -vsfn ${HOME}/Dropbox/gcloud   ${HOME}/.config/gcloud
-	sudo pacman -S kubectl
-	yay -S stern-bin
-
-minikube: ## Setup minikube with kvm2
-	sudo pacman -S minikube libvirt qemu-headless ebtables docker-machine kubectx
-	yay -S docker-machine-driver-kvm2
-	sudo usermod -a -G libvirt ${USER}
-	sudo systemctl start libvirtd.service
-	sudo systemctl enable libvirtd.service
-	sudo systemctl start virtlogd.service
-	sudo systemctl enable virtlogd.service
-	minikube config set vm-driver kvm2
-
 kubernetes-cluster: ## Kubernetes cluster setup
 	gcloud container clusters create --num-nodes=2 my-cluster \
 	--zone us-central-a \
@@ -616,6 +565,51 @@ kubernetes-portforward-postgres: ## Portforward for postgres
 kubernetes-postgres-dmup: ## Kubernetes-portforward-postgres next to command
 	pg_dump -U root -h localhost dbname > pgdump
 
+openvpn: ## Install openvpn
+	sudo pacman -S openvpn networkmanager-openvpn
+	sudo ln -vsfn ${HOME}/Dropbox/arch/openvpn/client.conf /etc/openvpn/client/client.conf
+
+screenkey: ## Init screenkey
+	yay -S screenkey
+	mkdir -p ${HOME}/.config
+	ln -vsf ${PWD}/.config/screenkey.json ${HOME}/.config/screenkey.json
+
+rbenv: ## Install rvenv ruby-build
+	yay -S rbenv
+	yay -S ruby-build
+	rbenv install 2.5.1
+	gem install bundle
+
+rubygem: ## Install rubygem package
+	gem install bundler jekyll sass solargraph rawler package_cloud
+
+django: ## Install Django
+	mkdir -p ${HOME}/src/github.com/masasam/mydjango;\
+	cd ${HOME}/src/github.com/masasam/mydjango;\
+	touch Pipfile;\
+	pipenv --python=3.7.4;\
+	pipenv install django;\
+	pipenv run django-admin startproject config .
+
+rails: ## Create rails
+	export RBENV_ROOT="${HOME}/.rbenv";\
+	if [ -d "${RBENV_ROOT}" ]; then \
+	  export PATH="${RBENV_ROOT}/bin:${PATH}";\
+	  eval "$(rbenv init -)";\
+	fi;\
+	rbenv global 2.5.1;\
+	rbenv rehash;\
+	mkdir -p ${HOME}/src/github.com/masasam/myapp;\
+	cd ${HOME}/src/github.com/masasam/myapp;\
+	rbenv local 2.5.1;\
+	bundle init;\
+	echo "gem 'rails', '~> 5.2.0'" >> Gemfile;\
+	bundle install --path vendor/bundle;\
+	bundle exec rails new -B --webpack=react --database=mysql --skip-test .;\
+	bundle install;\
+	bundle exec rails webpacker:install;\
+	cd -
+
 mew: ## Install mew as mail reader
 	cd ~/src;\
 	wget https://www.mew.org/Release/mew-6.8.tar.gz;\
@@ -625,6 +619,12 @@ mew: ## Install mew as mail reader
 	./configure;\
 	make;\
 	sudo make install;\
+
+tym: ## Init tym terminal
+	yay -S tym
+	mkdir -p ${HOME}/.config/tym
+	ln -vsf ${PWD}/.config/tym/config.lua ${HOME}/.config/tym/config.lua
+	sudo ln -vsf ${PWD}/usr/share/applications/tym.desktop /usr/share/applications/tym.desktop
 
 backup: ## Backup arch linux packages
 	mkdir -p ${PWD}/archlinux
