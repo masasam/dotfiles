@@ -28,6 +28,8 @@ initdropbox: ## Initial deploy dotfiles using dropbox
 	test -L ${HOME}/.ssh || rm -rf ${HOME}/.ssh
 	ln -vsfn ${HOME}/Dropbox/ssh ${HOME}/.ssh
 	chmod 600 ${HOME}/.ssh/id_rsa
+	test -L ${HOME}/.gnupg || rm -rf ${HOME}/.gnupg
+	ln -vsfn ${HOME}/Dropbox/gnupg ${HOME}/.gnupg
 	mkdir -p ${HOME}/.local/share
 	test -L ${HOME}/.local/share/keyrings || rm -rf ${HOME}/.local/share/keyrings
 	ln -vsfn ${HOME}/Dropbox/passwd/keyrings ${HOME}/.local/share/keyrings
