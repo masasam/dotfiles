@@ -345,11 +345,10 @@ rubygem: ## Install rubygem package
 django: ## Install Django
 	mkdir -p ${HOME}/src/github.com/masasam/mydjango;\
 	cd ${HOME}/src/github.com/masasam/mydjango;\
-	virtualenv env;\
-	source env/bin/activate;\
-	pip install --upgrade pip;\
-	pip install Django;\
-	pip install python-language-server
+	touch Pipfile;\
+	pipenv --python=3.7.4;\
+	pipenv install django;\
+	pipenv run django-admin startproject config .
 
 rails: ## Create rails
 	export RBENV_ROOT="${HOME}/.rbenv";\
