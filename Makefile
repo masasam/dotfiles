@@ -243,6 +243,25 @@ dnsmasq: ## Init dnsmasq
 	sudo mkdir -p /etc/NetworkManager
 	sudo ln -vsf ${PWD}/etc/NetworkManager/NetworkManager.conf /etc/NetworkManager/NetworkManager.conf
 
+tlp: ## Setting for power save and battery to last longer
+	sudo pacman -S tlp powertop
+	sudo ln -vsf ${PWD}/etc/default/tlp /etc/default/tlp
+	systemctl enable tlp.service
+	systemctl enable tlp-sleep.service
+
+fwupd: ## For system firmware and uefi update
+	sudo pacman -S fwupd dmidecode
+	sudo dmidecode -s bios-version
+
+uefiupdate: ## Update system firmware and uefi
+	fwupdmgr refresh
+	fwupdmgr get-updates
+	fwupdmgr update
+
+thinkpad: ## Workaround for Intel throttling issues in Linux
+	sudo pacman -S throttled
+	sudo systemctl enable --now lenovo_fix.service
+
 google-mozc: ## Install ibus-mozc
 	test -L ${HOME}/.mozc || rm -rf ${HOME}/.mozc
 	ln -vsfn ${HOME}/Dropbox/mozc/.mozc ${HOME}/.mozc
@@ -293,6 +312,23 @@ postgresql: ## Postgresql initial setup
 	cd /home;\
 	sudo -u postgres createuser --interactive
 	createdb mydb
+
+google-cloud: ## Install SDK and setting
+	curl https://sdk.cloud.google.com | bash
+	test -L ${HOME}/.config/gcloud || rm -rf ${HOME}/.config/gcloud
+	ln -vsfn ${HOME}/Dropbox/gcloud   ${HOME}/.config/gcloud
+	sudo pacman -S kubectl
+	yay -S stern-bin
+
+minikube: ## Setup minikube with kvm2
+	sudo pacman -S minikube libvirt qemu-headless ebtables docker-machine kubectx
+	yay -S docker-machine-driver-kvm2
+	sudo usermod -a -G libvirt ${USER}
+	sudo systemctl start libvirtd.service
+	sudo systemctl enable libvirtd.service
+	sudo systemctl start virtlogd.service
+	sudo systemctl enable virtlogd.service
+	minikube config set vm-driver kvm2
 
 redis: ## Redis inital setup
 	sudo pacman -S redis
@@ -347,23 +383,6 @@ aurplus: ## Install arch linux AUR packages using yay
 	yay -S nkf
 	yay -S pencil
 	yay -S rtags
-
-google-cloud: ## Install SDK and setting
-	curl https://sdk.cloud.google.com | bash
-	test -L ${HOME}/.config/gcloud || rm -rf ${HOME}/.config/gcloud
-	ln -vsfn ${HOME}/Dropbox/gcloud   ${HOME}/.config/gcloud
-	sudo pacman -S kubectl
-	yay -S stern-bin
-
-minikube: ## Setup minikube with kvm2
-	sudo pacman -S minikube libvirt qemu-headless ebtables docker-machine kubectx
-	yay -S docker-machine-driver-kvm2
-	sudo usermod -a -G libvirt ${USER}
-	sudo systemctl start libvirtd.service
-	sudo systemctl enable libvirtd.service
-	sudo systemctl start virtlogd.service
-	sudo systemctl enable virtlogd.service
-	minikube config set vm-driver kvm2
 
 desktop: ## Update desktop entry
 	sudo ln -vsf ${PWD}/usr/share/applications/vim.desktop /usr/share/applications/vim.desktop
@@ -442,25 +461,6 @@ mongodb: ## Mongodb initial setup
 	sudo pacman -S mongodb mongodb-tools
 	sudo systemctl enable mongodb.service
 	sudo systemctl start mongodb.service
-
-tlp: ## Setting for power save and battery to last longer
-	sudo pacman -S tlp powertop
-	sudo ln -vsf ${PWD}/etc/default/tlp /etc/default/tlp
-	systemctl enable tlp.service
-	systemctl enable tlp-sleep.service
-
-fwupd: ## For system firmware and uefi update
-	sudo pacman -S fwupd dmidecode
-	sudo dmidecode -s bios-version
-
-uefiupdate: ## Update system firmware and uefi
-	fwupdmgr refresh
-	fwupdmgr get-updates
-	fwupdmgr update
-
-thinkpad: ## Workaround for Intel throttling issues in Linux
-	sudo pacman -S throttled
-	sudo systemctl enable --now lenovo_fix.service
 
 gnuglobal: ## Install gnu global
 	mkdir -p ${HOME}/.local
