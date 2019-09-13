@@ -179,6 +179,7 @@ ghostscript
 giflib
 gimp
 git
+git-crypt
 gjs
 glib-networking
 glib2

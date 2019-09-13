@@ -20,7 +20,7 @@ certifi==2019.9.11
 cffi==1.12.3
 chardet==3.0.4
 cheat==2.5.1
-chromedriver-binary==77.0.3865.40.0
+chromedriver-binary==78.0.3904.11.0
 cli-helpers==1.2.1
 Click==7.0
 colorama==0.4.1
@@ -32,8 +32,6 @@ cycler==0.10.0
 ddt==1.2.1
 decorator==4.4.0
 defusedxml==0.6.0
-Django==2.2.5
-djangorestframework==3.10.3
 docker==4.0.2
 docker-compose==1.24.1
 docker-pycreds==0.4.0
@@ -89,7 +87,6 @@ jupyterlab-server==1.0.6
 jupyterthemes==0.20.0
 kitchen==1.2.6
 kiwisolver==1.1.0
-kube-shell==0.0.23
 kubernetes==10.0.1
 lazy-object-proxy==1.4.2
 lensfun==0.3.2
