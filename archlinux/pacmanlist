@@ -197,6 +197,7 @@ gnome-color-manager
 gnome-control-center
 gnome-desktop
 gnome-keyring
+gnome-logs
 gnome-online-accounts
 gnome-screenshot
 gnome-session
@@ -439,6 +440,7 @@ libcddb
 libcdio
 libcdio-paranoia
 libcdr
+libchamplain
 libcmis
 libcroco
 libcue
@@ -658,7 +660,6 @@ libxss
 libxt
 libxtst
 libxv
-libxvmc
 libxxf86dga
 libxxf86vm
 libyaml
@@ -822,6 +823,9 @@ python
 python-appdirs
 python-attrs
 python-cachetools
+python-cairo
+python-chardet
+python-dateutil
 python-dbus
 python-dbus-common
 python-gobject
@@ -830,6 +834,7 @@ python-google-auth
 python-google-auth-httplib2
 python-html2text
 python-httplib2
+python-idna
 python-oauth2client
 python-packaging
 python-pillow
@@ -839,12 +844,17 @@ python-pyasn1
 python-pyasn1-modules
 python-pygments
 python-pyparsing
+python-qrencode
+python-requests
 python-rsa
 python-setuptools
 python-simplejson
 python-six
 python-uritemplate
+python-urllib3
+python-vobject
 python-wcwidth
+python-xdg
 python2
 python2-cairo
 python2-dbus
@@ -853,6 +863,8 @@ python2-gobject2
 python2-six
 qemu-headless
 qpdf
+qreator
+qrencode
 qt5-base
 qt5-declarative
 qt5-location
@@ -1017,7 +1029,6 @@ xdg-user-dirs
 xdg-utils
 xdotool
 xf86-input-libinput
-xf86-video-intel
 xfsprogs
 xkeyboard-config
 xmlsec

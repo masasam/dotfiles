@@ -140,6 +140,7 @@ pwquality==1.4.0
 py-spy==0.1.11
 pyasn1==0.4.7
 pyasn1-modules==0.2.6
+pycairo==1.18.1
 pycodestyle==2.5.0
 pycparser==2.19
 pycryptodome==3.9.0
@@ -163,8 +164,11 @@ python-jsonrpc-server==0.2.0
 python-language-server==0.28.3
 python-utils==2.3.0
 pytz==2019.2
+pyxdg==0.26
 PyYAML==5.1.2
 pyzmq==18.1.0
+qreator==16.6.2
+qrencode==1.2
 qtconsole==4.5.5
 queuelib==1.5.0
 redis==3.3.8
@@ -218,6 +222,7 @@ vimiv==0.9.1
 virtualenv==16.7.5
 virtualenv-clone==0.5.3
 virtualenvwrapper==4.8.4
+vobject==0.9.6.1
 w3lib==1.21.0
 wcwidth==0.1.7
 webencodings==0.5.1
