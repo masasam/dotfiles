@@ -428,12 +428,6 @@ bindkey '^xp' ps-fzf
 bindkey '^x^p' ps-fzf
 
 
-function gcloud-fzf() {
-    gcloud config configurations activate $(gcloud config configurations list | sed -e '1d' | fzf-tmux -d --reverse --prompt="gcloud > " | awk '{print $1}')
-    gcloud config configurations list
-}
-
-
 function alias-fzf() {
     BUFFER=$(alias | fzf-tmux -d --reverse --query "$LBUFFER" --prompt="Alias > " | awk -F"=" '{print $1}')
     print -z "$BUFFER"
