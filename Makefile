@@ -17,7 +17,6 @@ init: ## Initial deploy dotfiles
 	ln -vsf ${PWD}/.gitconfig ${HOME}/.gitconfig
 
 initdropbox: ## Initial deploy dotfiles using dropbox
-	sudo ln -vsf ${HOME}/Dropbox/arch/hosts /etc/hosts
 	mkdir -p ${HOME}/.config
 	ln -vsf ${HOME}/Dropbox/zsh/.netrc ${HOME}/.netrc
 	ln -vsf ${HOME}/Dropbox/zsh/.authinfo ${HOME}/.authinfo
