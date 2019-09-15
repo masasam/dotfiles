@@ -358,7 +358,6 @@ sxiv: ## Init sxiv
 zeal: ## Deploy zeal config and docsets
 	sudo pacman -S zeal qt5-styleplugins qt5ct
 	sudo ln -vsf ${PWD}/etc/environment /etc/environment
-	mkdir -p ${HOME}/.local/share
 	mkdir -p ${HOME}/.config/Zeal
 	ln -vsf ${PWD}/.config/Zeal/Zeal.conf ${HOME}/.config/Zeal/Zeal.conf
 
