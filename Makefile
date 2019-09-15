@@ -360,6 +360,7 @@ zeal: ## Deploy zeal config and docsets
 	sudo ln -vsf ${PWD}/etc/environment /etc/environment
 	mkdir -p ${HOME}/.config/Zeal
 	ln -vsf ${PWD}/.config/Zeal/Zeal.conf ${HOME}/.config/Zeal/Zeal.conf
+	mkdir -p ${HOME}/.local/share/Zeal/Zeal/docsets
 
 zoom: ## Install zoom for web conference
 	sudo pacman -U ${HOME}/Dropbox/arch/zoom_x86_64.pkg.tar.xz
