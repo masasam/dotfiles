@@ -686,6 +686,8 @@ function fetch-pull-request() {
 function mpv-music() {
     if [ $# = 1 ]; then
 	mpv --no-video $1 &
+	sleep 10
+	cd -
     else
 	echo 'usage: mpv-music [url]'
     fi
