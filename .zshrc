@@ -712,12 +712,11 @@ function postgres-backup() {
 }
 
 
-function kubernetes-start() {
+function stern-completion-start() {
     if [ $# = 0 ]; then
-	source <(kubectl completion zsh)
 	source <(stern --completion=zsh)
     else
-	echo 'usage: kubernetes-start'
+	echo 'usage: stern-completion-start'
     fi
 }
 
@@ -735,21 +734,5 @@ if [ -f '/home/masa/google-cloud-sdk/path.zsh.inc' ]; then . '/home/masa/google-
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/masa/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/masa/google-cloud-sdk/completion.zsh.inc'; fi
 
-# kubectl completions
-# Uncomment only when using it because it is heavy.
-# When using temporarily, use the kubernetes-start function above
-# source <(kubectl completion zsh)
-# source <(stern --completion=zsh)
-
 # nvm
 source /usr/share/nvm/init-nvm.sh
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /home/masa/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/masa/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /home/masa/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh ]] && . /home/masa/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh
-# tabtab source for slss package
-# uninstall by removing these lines or running `tabtab uninstall slss`
-[[ -f /home/masa/.config/yarn/global/node_modules/tabtab/.completions/slss.zsh ]] && . /home/masa/.config/yarn/global/node_modules/tabtab/.completions/slss.zsh
