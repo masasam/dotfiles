@@ -581,7 +581,7 @@ Setting for power save and to prevent battery deterioration.
 
 ![PowerTop](https://raw.githubusercontent.com/masasam/image/image/powertop.png)
 
-# BIOS update from Linux
+# UEFI BIOS update from Linux
 
 	sudo pacman -S fwupd dmidecode
 	sudo dmidecode -s bios-version
@@ -589,7 +589,7 @@ Setting for power save and to prevent battery deterioration.
 	fwupdmgr get-updates
 	fwupdmgr update
 
-After you update the BIOS, you will need to reconfigure grub when next boot. Boot with arch linux usb memory and do as follows.
+After you update the UEFI BIOS, you will need to reconfigure grub when next boot. Boot with arch linux usb memory and do as follows.
 This work is not necessary after the second time.
 
 	mount /dev/sda2 /mnt
