@@ -682,6 +682,15 @@ function fetch-pull-request() {
 }
 
 
+function mpv-music() {
+    if [ $# = 1 ]; then
+	mpv --no-video $1 &
+    else
+	echo 'usage: mpv-music [url]'
+    fi
+}
+
+
 function postgres-backup() {
     if [ $# = 1 ]; then
 	pg_dump $1 > ~/Dropbox/database/postgresql/`date '+%Y%m%d%H%M%S'`
