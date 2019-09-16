@@ -314,7 +314,7 @@ Preparing dotfiles
 
     sudo pacman -S dconf-editor
 
-	dconf write /org/gnome/desktop/input-sources/xkb-options "'ctrl:swapcaps'"
+	dconf write /org/gnome/desktop/input-sources/xkb-options "['ctrl:swapcaps']"
 	dconf write /org/gnome/desktop/interface/gtk-key-theme "'Emacs'"
 
 --------------------------------------
