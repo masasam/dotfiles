@@ -691,6 +691,11 @@ function mpv-music() {
 }
 
 
+function mpv-music-quit() {
+    kill -9 $(ps auxf | fzf-tmux -d --reverse --prompt="ps > " | awk '{print $2}')
+}
+
+
 function postgres-backup() {
     if [ $# = 1 ]; then
 	pg_dump $1 > ~/Dropbox/database/postgresql/`date '+%Y%m%d%H%M%S'`
