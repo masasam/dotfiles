@@ -581,7 +581,7 @@ Setting for power save and to prevent battery deterioration.
 
 ![PowerTop](https://raw.githubusercontent.com/masasam/image/image/powertop.png)
 
-# UEFI BIOS update from Linux
+# UEFI BIOS update with Linux
 
 	sudo pacman -S fwupd dmidecode
 	sudo dmidecode -s bios-version
