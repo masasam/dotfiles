@@ -520,7 +520,7 @@ docker
 	sudo systemctl enable docker.service
 	sudo systemctl start docker.service
 
-kubernetes
+Google Kubernetes Engine
 
 	curl https://sdk.cloud.google.com | bash
 	test -L ${HOME}/.config/gcloud || rm -rf ${HOME}/.config/gcloud
