@@ -591,7 +591,11 @@ function gitlab-upstream() {
 
 
 function gitignore() {
-    curl -L -s https://www.gitignore.io/api/$@
+    if [ $# = 1 ]; then
+	curl -L -s https://www.gitignore.io/api/$@
+    else
+	echo 'usage: gitignore django'
+    fi
 }
 
 
