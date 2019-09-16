@@ -42,6 +42,7 @@ zshaddhistory() {
        && ${cmd} != pacman
        && ${cmd} != blog-jpg
        && ${cmd} != xdg-open
+       && ${cmd} != mpv-music
        && ${cmd} != traceroute
        && ${cmd} != speedtest-cli
     ]]
