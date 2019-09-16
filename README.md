@@ -350,7 +350,7 @@ You can make install from here
 	sudo pacman -S pandoc texlive-langjapanese texlive-latexextra
 	sudo pacman -S shellcheck cscope typescript packer alacritty
 	sudo pacman -S noto-fonts-cjk arc-gtk-theme jq dnsmasq
-	sudo pacman -S docker zsh-syntax-highlighting terraform
+	sudo pacman -S zsh-syntax-highlighting terraform
 	sudo pacman -S npm llvm llvm-libs lldb hdparm rxvt-unicode 
 	sudo pacman -S mariadb-clients postgresql-libs tig lsof fzf
 	sudo pacman -S debootstrap tcpdump pdfgrep sshfs stunnel
@@ -510,6 +510,17 @@ If you make a mistake on the keyboard, erase all with Ctrl-u
 	yarn global add webpack
 
 #### Kubernetes
+
+docker
+
+	sudo pacman -S docker
+	sudo usermod -aG docker ${USER}
+	mkdir -p ${HOME}/.docker
+	ln -vsf ${HOME}/Dropbox/docker/config.json ${HOME}/.docker/config.json
+	sudo systemctl enable docker.service
+	sudo systemctl start docker.service
+
+kubernetes
 
 	curl https://sdk.cloud.google.com | bash
 	test -L ${HOME}/.config/gcloud || rm -rf ${HOME}/.config/gcloud
