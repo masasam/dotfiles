@@ -565,7 +565,7 @@ Terminal uses urxvt
 
 # TLP
 
-Setting for power save and battery to last longer.
+Setting for power save and to prevent battery deterioration.
 
 	sudo pacman -S tlp powertop
 	sudo ln -vsf ${PWD}/etc/default/tlp /etc/default/tlp
