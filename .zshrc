@@ -693,7 +693,7 @@ function mpv-music() {
 	sleep 10
 	cd -
     else
-	echo 'usage: mpv-music [url]'
+	echo 'usage: mpv-music [youtube-url]'
     fi
 }
 
