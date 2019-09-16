@@ -243,7 +243,7 @@ dnsmasq: ## Init dnsmasq
 	sudo mkdir -p /etc/NetworkManager
 	sudo ln -vsf ${PWD}/etc/NetworkManager/NetworkManager.conf /etc/NetworkManager/NetworkManager.conf
 
-tlp: ## Setting for power save and battery to last longer
+tlp: ## Setting for power save and to prevent battery deterioration
 	sudo pacman -S tlp powertop
 	sudo ln -vsf ${PWD}/etc/default/tlp /etc/default/tlp
 	systemctl enable tlp.service
