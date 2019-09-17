@@ -60,7 +60,7 @@ setopt hist_ignore_dups     # Same command as before don't add to history
 setopt hist_ignore_space    # Commands beginning with a space delete from history list
 unsetopt hist_verify        # While calling history and executing stop editing once
 setopt hist_reduce_blanks   # Extra white space packed and recorded
-setopt hist_save_no_dups    # When writing to the history file,Ignore the same as the old command.
+setopt hist_save_no_dups    # When writing to the history file, ignore the same as the old command.
 setopt hist_no_store        # Do not register the history command in the history
 setopt hist_expand          # Automatically expand history on completion
 setopt list_packed          # Complementary completion list displayed
@@ -79,7 +79,7 @@ setopt complete_in_word
 setopt equals            # = Expand COMMAND to the path name of COMMAND
 setopt extended_glob     # Enable extended globbing
 unsetopt flow_control    # (Within shell editor) Disable C-s and C-q
-setopt no_flow_control   # Do not use flow control by C-s / C-q
+setopt no_flow_control   # Do not use flow control by C-s/C-q
 setopt hash_cmds         # Hash the path when each command is executed
 setopt no_hup            # Do not kill background jobs when logging out
 setopt long_list_jobs    # By default, jobs -L is set as the output of the internal command jobs
@@ -304,25 +304,12 @@ function cde() {
 }
 
 
-function select-history() {
-  BUFFER=$(history -n -r 1 | fzf-tmux -d --reverse --no-sort +m --query "$LBUFFER" --prompt="History > ")
-  CURSOR=$#BUFFER
+function history-fzf() {
+    BUFFER=$(history -n -r 1 | fzf-tmux -d --reverse --no-sort +m --query "$LBUFFER" --prompt="History > ")
+    CURSOR=$#BUFFER
 }
-zle -N select-history
-bindkey '^r' select-history
-
-
-function select-history-skim() {
-  BUFFER=$(history -n -r 1 | sk-tmux -d --reverse --no-sort +m --query "$LBUFFER" --prompt="History > ")
-  CURSOR=$#BUFFER
-}
-zle -N select-history-skim
-
-
-function rails-routes() {
-  BUFFER=$(bin/rails routes | fzf-tmux -d --reverse --no-sort +m --query "$LBUFFER" --prompt="rails routes > ")
-  CURSOR=$#BUFFER
-}
+zle -N history-fzf
+bindkey '^r' history-fzf
 
 
 function cdr-fzf() {
@@ -351,25 +338,14 @@ bindkey '^x^l' ghq-fzf
 bindkey '^xl' ghq-fzf
 
 
-function ghq-skim() {
-  local selected_dir=$(ghq list | sk-tmux -d --reverse --query="$LBUFFER" --prompt="ghq list > ")
-  if [ -n "$selected_dir" ]; then
-    BUFFER="cd $(ghq root)/${selected_dir}"
-    zle accept-line
-  fi
-  zle reset-prompt
-}
-zle -N ghq-skim
-
-
-function ghq-delete() {
+function ghq-delete-fzf() {
     ghq list --full-path | fzf-tmux -d --reverse --prompt="github-delete > " | xargs -r rm -r
 }
-zle -N ghq-delete
-bindkey '^xD' ghq-delete
+zle -N ghq-delete-fzf
+bindkey '^xD' ghq-delete-fzf
 
 
-function ghs-import() {
+function ghs-import-fzf() {
     [ "$#" -eq 0 ] && echo "Usage : ghs-import QUERY" && return 1
     ghs "$@" | fzf-tmux -d --reverse | awk '{print $1}' | ghq import
 }
@@ -491,6 +467,12 @@ function ssh-fzf () {
 }
 zle -N ssh-fzf
 bindkey '^\' ssh-fzf
+
+
+function rails-routes() {
+    BUFFER=$(bin/rails routes | fzf-tmux -d --reverse --no-sort +m --query "$LBUFFER" --prompt="rails routes > ")
+    CURSOR=$#BUFFER
+}
 
 
 function gitroot() {
