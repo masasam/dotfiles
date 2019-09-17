@@ -125,15 +125,12 @@ goinstall: ## Install go packages
 	go get -u -v golang.org/x/tools/cmd/gopls
 	go get -u -v golang.org/x/tools/cmd/goimports
 	go get -u -v github.com/golang/dep/cmd/dep
-	go get -u -v github.com/pressly/goose/cmd/goose
 	go get -u -v github.com/motemen/ghq
 	go get -u -v github.com/sonatard/ghs
 	go get -u -v github.com/kyoshidajp/ghkw
 	go get -u -v github.com/simeji/jid/cmd/jid
 	go get -u -v github.com/jmhodges/jsonpp
-	go get -d github.com/mithrandie/csvq
-	cd ${HOME}/src/github.com/mithrandie/csvq;\
-	env GO111MODULE=on go install
+	GO111MODULE="on" go get -u -v github.com/mithrandie/csvq
 
 nodeinstall: ## Install node packages
 	sudo pacman -S yarn
@@ -329,6 +326,9 @@ minikube: ## Setup minikube with kvm2
 	sudo systemctl start virtlogd.service
 	sudo systemctl enable virtlogd.service
 	minikube config set vm-driver kvm2
+
+kind: ## Setup kind (Kubernetes In Docker)
+	GO111MODULE="on" go get -u -v sigs.k8s.io/kind@v0.5.1
 
 redis: ## Redis inital setup
 	sudo pacman -S redis
