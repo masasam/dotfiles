@@ -161,7 +161,7 @@ Connect internet with wifi
 	ip link
 	rfkill list
 	rfkill unblock 0
-	wifi-menu wlp0s29f7u1
+	wifi-menu wlp2s0
 
 Make sure the earliest mirror is selected.
 Write the closest mirror on the top.
