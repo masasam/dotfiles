@@ -469,7 +469,7 @@ zle -N ssh-fzf
 bindkey '^\' ssh-fzf
 
 
-function rails-routes() {
+function rails-routes-fzf() {
     BUFFER=$(bin/rails routes | fzf-tmux -d --reverse --no-sort +m --query "$LBUFFER" --prompt="rails routes > ")
     CURSOR=$#BUFFER
 }
