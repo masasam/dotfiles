@@ -350,7 +350,7 @@ You can make install from here
 	sudo pacman -S pandoc texlive-langjapanese texlive-latexextra
 	sudo pacman -S shellcheck cscope typescript packer alacritty
 	sudo pacman -S noto-fonts-cjk arc-gtk-theme jq dnsmasq
-	sudo pacman -S zsh-syntax-highlighting terraform
+	sudo pacman -S zsh-syntax-highlighting terraform wl-clipboard
 	sudo pacman -S npm llvm llvm-libs lldb hdparm rxvt-unicode 
 	sudo pacman -S mariadb-clients postgresql-libs tig lsof fzf
 	sudo pacman -S debootstrap tcpdump pdfgrep sshfs stunnel
