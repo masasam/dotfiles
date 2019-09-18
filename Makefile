@@ -297,6 +297,7 @@ mariadb: ## Mariadb initial setup
 	sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
 	sudo systemctl enable mariadb.service
 	sudo systemctl start mariadb.service
+	sudo mysql -u root -e'set password for root@localhost=password("");'
 	mysql_secure_installation
 	mysql -u root -p < ${HOME}/Dropbox/database/mariadb/world.sql/data
 
