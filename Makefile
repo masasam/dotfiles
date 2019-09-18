@@ -387,17 +387,11 @@ aurplus: ## Install arch linux AUR packages using yay
 
 desktop: ## Update desktop entry
 	sudo ln -vsf ${PWD}/usr/share/applications/vim.desktop /usr/share/applications/vim.desktop
-	sudo ln -vsf ${PWD}/usr/share/applications/avahi-discover.desktop /usr/share/applications/avahi-discover.desktop
-	sudo ln -vsf ${PWD}/usr/share/applications/bvnc.desktop /usr/share/applications/bvnc.desktop
-	sudo ln -vsf ${PWD}/usr/share/applications/bssh.desktop /usr/share/applications/bssh.desktop
 	sudo ln -vsf ${PWD}/usr/share/applications/xterm.desktop /usr/share/applications/xterm.desktop
 	sudo ln -vsf ${PWD}/usr/share/applications/uxterm.desktop /usr/share/applications/uxterm.desktop
-	sudo ln -vsf ${PWD}/usr/share/applications/mlterm.desktop /usr/share/applications/mlterm.desktop
-	sudo ln -vsf ${PWD}/usr/share/applications/mlclient.desktop /usr/share/applications/mlclient.desktop
 	sudo ln -vsf ${PWD}/usr/share/applications/urxvt.desktop /usr/share/applications/urxvt.desktop
 	sudo ln -vsf ${PWD}/usr/share/applications/urxvtc.desktop /usr/share/applications/urxvtc.desktop
 	sudo ln -vsf ${PWD}/usr/share/applications/urxvt-tabbed.desktop /usr/share/applications/urxvt-tabbed.desktop
-	sudo ln -vsf ${PWD}/usr/share/applications/nvim.desktop /usr/share/applications/nvim.desktop
 
 toggle: ## Prepare command that toggle between emacs and chromium
 	sudo ln -vsf ${PWD}/usr/share/applications/toggle.desktop /usr/share/applications/toggle.desktop
