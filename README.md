@@ -496,6 +496,7 @@ If you make a mistake on the keyboard, erase all with Ctrl-u
 	yarn global add javascript-typescript-langserver
 	yarn global add jshint
 	yarn global add logo.svg
+	yarn global add marp-team/marp-cli
 	yarn global add mermaid
 	yarn global add mermaid.cli
 	yarn global add netlify-cli
