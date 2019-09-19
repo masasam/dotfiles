@@ -676,6 +676,7 @@ lm_sensors
 lmdb
 logrotate
 lpsolve
+lshw
 lsof
 lua
 lua51
@@ -698,6 +699,8 @@ mailcap
 make
 man-db
 man-pages
+mariadb
+mariadb-clients
 mariadb-libs
 mathjax
 mdadm
@@ -1009,6 +1012,7 @@ wget
 which
 whois
 wildmidi
+wl-clipboard
 wmctrl
 woff2
 wpa_supplicant
