@@ -319,6 +319,7 @@ Preparing dotfiles
 	dconf write /org/gnome/shell/keybindings/toggle-overview "'<Alt>space'"
 	dconf write /org/gnome/desktop/interface/text-scaling-factor 1.25
 	dconf write /org/gnome/desktop/interface/clock-show-date true
+	dconf write /org/gnome/desktop/interface/clock-show-weekday true
 	dconf write /org/gnome/desktop/interface/show-battery-percentage true
 	dconf write /org/gnome/desktop/wm/preferences/num-workspaces 1
 	dconf write /org/gnome/desktop/wm/keybindings/activate-window-menu "['']"
