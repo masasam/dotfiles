@@ -5,9 +5,6 @@
 
 (minions-mode 1)
 
-;; tldr
-(setq tldr-directory-path "~/Dropbox/emacs/tldr/")
-
 
 ;; prescient
 (ivy-prescient-mode 1)
