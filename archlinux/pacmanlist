@@ -26,7 +26,6 @@ atkmm
 atool
 attr
 audit
-augeas
 autoconf
 automake
 avahi
@@ -58,8 +57,6 @@ cantarell-fonts
 cblas
 cdparanoia
 celt
-celt0.5.1
-ceph-libs
 cheese
 chromaprint
 chromium
@@ -109,11 +106,9 @@ dnssec-anchors
 docbook-xml
 docbook-xsl
 docker
-docker-machine
 dosfstools
 double-conversion
 e2fsprogs
-ebtables
 efibootmgr
 efivar
 elinks
@@ -149,7 +144,6 @@ freetype2
 frei0r-plugins
 fribidi
 fuse-common
-fuse2
 fuse3
 fwupd
 fzf
@@ -187,7 +181,6 @@ glibc
 glibmm
 glslang
 glu
-glusterfs
 gmime3
 gmp
 gnome-autoar
@@ -214,7 +207,6 @@ go
 gobject-introspection-runtime
 goocanvas
 gpaste
-gperftools
 gpgme
 gpm
 gptfdisk
@@ -414,7 +406,6 @@ ldb
 ldns
 lensfun
 less
-leveldb
 lhasa
 libabw
 libaio
@@ -431,7 +422,6 @@ libbs2b
 libbsd
 libbytesize
 libcaca
-libcacard
 libcanberra
 libcanberra-pulse
 libcap
@@ -503,7 +493,6 @@ libimagequant
 libimobiledevice
 libinput
 libiptcdata
-libiscsi
 libixion
 libjpeg-turbo
 libkeybinder3
@@ -532,7 +521,6 @@ libndp
 libnetfilter_conntrack
 libnewt
 libnfnetlink
-libnfs
 libnftnl
 libnghttp2
 libnice
@@ -607,7 +595,6 @@ libtommath
 libtool
 libunistring
 libunwind
-liburcu
 libusb
 libusbmuxd
 libutempter
@@ -616,7 +603,6 @@ libuv
 libva
 libva-intel-driver
 libvdpau
-libvirt
 libvisio
 libvisual
 libvoikko
@@ -706,7 +692,6 @@ mathjax
 mdadm
 mesa
 metis
-minikube
 minizip
 mjpegtools
 mkinitcpio
@@ -732,7 +717,6 @@ ndctl
 neomutt
 neon
 net-tools
-netcf
 netctl
 nethogs
 nettle
@@ -751,7 +735,6 @@ npm
 npth
 nspr
 nss
-numactl
 oath-toolkit
 oniguruma
 openal
@@ -864,7 +847,6 @@ python2-dbus
 python2-gobject
 python2-gobject2
 python2-six
-qemu-headless
 qpdf
 qreator
 qrencode
@@ -887,7 +869,6 @@ redland
 reiserfsprogs
 rest
 ripgrep
-rpcbind
 rsync
 rtkit
 rtmpdump
@@ -905,7 +886,6 @@ sbcl
 screen
 sdl
 sdl2
-seabios
 seahorse
 sed
 semver
@@ -924,7 +904,6 @@ soundtouch
 spandsp
 speex
 speexdsp
-spice
 spirv-tools
 sqlite
 srt
@@ -986,13 +965,11 @@ unzip
 upower
 urxvt-perls
 usbmuxd
-usbredir
 usbutils
 util-linux
 v4l-utils
 valgrind
 vamp-plugin-sdk
-vde2
 vi
 vid.stab
 vim
@@ -1084,7 +1061,6 @@ xsel
 xterm
 xvidcore
 xz
-yajl
 yarn
 zbar
 zeal
