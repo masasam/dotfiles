@@ -217,6 +217,7 @@ alias melpacleanup='rm -rf ${HOME}/.emacs.d/elpa'
 alias goupdate='cd ${HOME}/src/github.com/masasam/dotfiles; make goinstall; cd -'
 alias kindstart='export KUBECONFIG="$(kind get kubeconfig-path --name="kind")"; kubectl cluster-info'
 alias kindstop='unset KUBECONFIG'
+alias mpvgpu='mpv --hwdec=vaapi --vo=gpu'
 alias rustupdate='rustup update'
 alias cargoupdate='cargo install-update -a'
 alias cargocleanup='rm -rf ${HOME}/.cargo/bin/*; cd ${HOME}/src/github.com/masasam/dotfiles; make rustinstall; cd -'
@@ -250,6 +251,7 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 export PATH=$PATH:$HOME/.roswell/bin
+export LIBVA_DRIVER_NAME=iHD
 export GTAGSCONF=/usr/share/gtags/gtags.conf
 export GTAGSLABEL=pygments
 export PAGER=less
