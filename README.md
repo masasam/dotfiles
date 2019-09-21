@@ -366,7 +366,7 @@ You can make install from here
 	sudo pacman -S bookworm ruby ruby-rdoc pacman-contrib ncdu
 	sudo pacman -S sxiv nnn adapta-gtk-theme podman firejail
 	sudo pacman -S pyenv hexedit tokei aria2 discord pv git-crypt
-	sudo pacman -S gnome-logs qreator
+	sudo pacman -S gnome-logs qreator diskus
 
 ## Activity
 
