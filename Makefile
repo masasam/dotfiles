@@ -62,7 +62,7 @@ install: ## Install arch linux packages using pacman
 	jhead peek ncdu sxiv gnome-screenshot sshfs fping syncthing terraform gnupg \
 	xdotool sshuttle packer ripgrep stunnel vimiv adapta-gtk-theme gnome-tweaks \
 	firejail opencv hexedit discord pv smartmontools ethtool git-crypt gnome-logs \
-	qreator wl-clipboard lshw diskus sysprof
+	qreator wl-clipboard lshw diskus sysprof bat
 	sudo pkgfile --update
 
 pipinstall: ## Install python packages
