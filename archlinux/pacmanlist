@@ -33,6 +33,7 @@ babl
 baobab
 bash
 bash-completion
+bat
 bc
 binutils
 bison
@@ -98,6 +99,7 @@ device-mapper
 dhcpcd
 diffutils
 discord
+diskus
 djvulibre
 dmidecode
 dmraid
@@ -368,6 +370,8 @@ imagemagick
 imlib2
 inetutils
 inkscape
+intel-gmmlib
+intel-media-driver
 intel-tbb
 intel-ucode
 ipcalc
@@ -438,6 +442,7 @@ libcups
 libcurl-compat
 libdaemon
 libdatrie
+libdazzle
 libdc1394
 libdca
 libde265
@@ -601,7 +606,7 @@ libutempter
 libutil-linux
 libuv
 libva
-libva-intel-driver
+libva-utils
 libvdpau
 libvisio
 libvisual
@@ -918,6 +923,7 @@ sxiv
 sylpheed
 syncthing
 sysfsutils
+sysprof
 systemd
 systemd-libs
 systemd-sysvcompat
