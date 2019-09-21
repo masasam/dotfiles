@@ -15,6 +15,8 @@ init: ## Initial deploy dotfiles
 	ln -vsf ${PWD}/.screenrc ${HOME}/.screenrc
 	ln -vsf ${PWD}/.aspell.conf ${HOME}/.aspell.conf
 	ln -vsf ${PWD}/.gitconfig ${HOME}/.gitconfig
+	mkdir -p ${HOME}/.config/mpv
+	ln -vsf ${PWD}/.config/mpv/mpv.conf ${HOME}/.config/mpv/mpv.conf
 
 initdropbox: ## Initial deploy dotfiles using dropbox
 	mkdir -p ${HOME}/.config
