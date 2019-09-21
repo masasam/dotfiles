@@ -244,7 +244,7 @@ Set boot loader
 Install drivers that match your environment
 
 	lspci | grep VGA
-	pacman -S intel-media-driver intel-ucode
+	pacman -S intel-media-driver intel-ucode libva-utils
 	pacman -S xorg-server xorg-apps
 
 Gnome can be put as small as necessary
