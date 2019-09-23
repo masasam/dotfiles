@@ -694,6 +694,7 @@ mariadb
 mariadb-clients
 mariadb-libs
 mathjax
+mbedtls
 mdadm
 mesa
 metis
@@ -741,6 +742,7 @@ npth
 nspr
 nss
 oath-toolkit
+obs-studio
 oniguruma
 openal
 opencore-amr
