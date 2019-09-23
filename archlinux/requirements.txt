@@ -7,12 +7,12 @@ astroid==2.2.5
 attrs==19.1.0
 Automat==0.7.0
 autopep8==1.4.4
-awscli==1.16.243
+awscli==1.16.244
 backcall==0.1.0
 bcrypt==3.1.7
 beautifulsoup4==4.8.0
 bleach==3.1.0
-botocore==1.12.233
+botocore==1.12.234
 btrfsutil==1.1.1
 cached-property==1.5.1
 cachetools==3.1.1
@@ -137,7 +137,7 @@ psycopg2==2.8.3
 psycopg2-binary==2.8.3
 ptyprocess==0.6.0
 pwquality==1.4.0
-py-spy==0.1.11
+py-spy==0.2.0
 pyasn1==0.4.7
 pyasn1-modules==0.2.6
 pycairo==1.18.1
