@@ -69,6 +69,7 @@ pipinstall: ## Install python packages
 	mkdir -p ${HOME}/.local
 	curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 	python ${PWD}/get-pip.py --user
+	sudo ln -vsf ${PWD}/usr/share/zsh/site-functions/_pipenv /usr/share/zsh/site-functions/_pipenv
 	pip install --user --upgrade pip
 	pip install --user ansible
 	pip install --user ansible-lint
