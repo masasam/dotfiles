@@ -65,7 +65,7 @@ install: ## Install arch linux packages using pacman
 	qreator wl-clipboard lshw diskus sysprof bat obs-studio
 	sudo pkgfile --update
 
-pipinstall: ## Install python packages
+pipinstall: ## Install python packages for python-language-server
 	mkdir -p ${HOME}/.local
 	curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 	python ${PWD}/get-pip.py --user
