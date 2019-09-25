@@ -309,12 +309,11 @@ mariadb: ## Mariadb initial setup
 postgresql: ## Postgresql initial setup
 	sudo pacman -S postgresql
 	cd /home;\
-	sudo -u postgres initdb --locale ja_JP.UTF-8 -E UTF8 -D '/var/lib/postgres/data'
+	sudo -u postgres initdb -E UTF8 --no-locale -D '/var/lib/postgres/data'
 	sudo systemctl enable postgresql.service
 	sudo systemctl start postgresql.service
 	cd /home;\
 	sudo -u postgres createuser --interactive
-	createdb mydb
 
 google-cloud: ## Install SDK and setting
 	curl https://sdk.cloud.google.com | bash
