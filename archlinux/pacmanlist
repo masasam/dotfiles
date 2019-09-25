@@ -690,7 +690,6 @@ mailcap
 make
 man-db
 man-pages
-mariadb
 mariadb-clients
 mariadb-libs
 mathjax
@@ -796,6 +795,7 @@ poppler
 poppler-data
 poppler-glib
 popt
+postgresql
 postgresql-libs
 potrace
 powertop
