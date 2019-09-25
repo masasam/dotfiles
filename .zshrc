@@ -215,7 +215,7 @@ alias zshbackup='rm -rf ${HOME}/Dropbox/zsh/backup/`ls -rt ${HOME}/Dropbox/zsh/b
 alias melpabackup='rm -rf ${HOME}/Dropbox/emacs/elpa/`ls -rt ${HOME}/Dropbox/emacs/elpa | head -n 1`; tar cfz ${HOME}/Dropbox/emacs/elpa/`date '+%Y%m%d%H%M%S'`.tar.gz -C ${HOME}/.emacs.d elpa'
 alias melpacleanup='rm -rf ${HOME}/.emacs.d/elpa'
 alias goupdate='cd ${HOME}/src/github.com/masasam/dotfiles; make goinstall; cd -'
-alias kindstart='export KUBECONFIG="$(kind get kubeconfig-path --name="kind")"; kubectl cluster-info'
+alias kindstart='kind create cluster; export KUBECONFIG="$(kind get kubeconfig-path --name="kind")"; kubectl cluster-info'
 alias kindstop='unset KUBECONFIG; kind delete cluster'
 alias rustupdate='rustup update'
 alias cargoupdate='cargo install-update -a'
