@@ -105,8 +105,8 @@ SSD has only 250G, but it is sufficient for the environment that uses arch linux
 Change it to boot from usb in BIOS UEFI.
 
 	Security > Secure Boot: Disable
-	Set Config -> Sleep State: "linux"(This may be a peculiar setting of my thinkpad x1).
-	Set Config -> Thunderbolt BIOS Assist Mode: "Enabled"(This may be a peculiar setting of my thinkpad x1).
+	Set Config -> Sleep State: "linux"(This may be a peculiar setting of my thinkpad x1 gen6).
+	Set Config -> Thunderbolt BIOS Assist Mode: "Enabled"(This may be a peculiar setting of my thinkpad x1 gen6).
 	Security > I/O Port Access > Wireless WAN: Disable(for power save)
 	Security > I/O Port Access > Memory Card Slot: Disable(for power save)
 	Security > I/O Port Access > Fingerprint Reader: Disable(for power save)
