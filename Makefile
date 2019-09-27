@@ -381,6 +381,7 @@ aur: ## Install arch linux AUR packages using yay
 	yay -S nvm
 	yay -S sequeler-git
 	yay -S slack-desktop
+	yay -S trivy-bin
 
 aurplus: ## Install arch linux AUR packages using yay
 	yay -S drone-cli
