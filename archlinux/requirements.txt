@@ -47,7 +47,7 @@ future==0.17.1
 fuzzyfinder==2.1.0
 gif-for-cli==1.1.2
 gitdb==0.6.4
-gitdb2==2.0.5
+gitdb2==2.0.6
 GitPython==3.0.2
 goobook==3.3.dev0
 google-api-python-client==1.7.11
