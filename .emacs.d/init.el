@@ -106,6 +106,7 @@
   (package-install 'macrostep)
   (package-install 'magit)
   (package-install 'markdown-mode)
+  (package-install 'markdown-toc)
   (package-install 'material-theme)
   (package-install 'minions)
   (package-install 'nginx-mode)
