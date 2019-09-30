@@ -369,7 +369,7 @@ You can make install from here
 	sudo pacman -S sxiv nnn adapta-gtk-theme podman firejail
 	sudo pacman -S pyenv hexedit tokei aria2 discord pv git-crypt
 	sudo pacman -S gnome-logs qreator diskus sysprof bat
-	sudo pacman -S obs-studio
+	sudo pacman -S obs-studio wireshark-cli
 
 ## Activity
 
