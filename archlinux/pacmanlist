@@ -35,6 +35,7 @@ bash
 bash-completion
 bat
 bc
+bcg729
 binutils
 bison
 blas
@@ -508,6 +509,7 @@ liblouis
 liblqr
 liblrdf
 libmagick6
+libmaxminddb
 libmbim
 libmm-glib
 libmms
@@ -997,6 +999,7 @@ wget
 which
 whois
 wildmidi
+wireshark-cli
 wl-clipboard
 wmctrl
 woff2
