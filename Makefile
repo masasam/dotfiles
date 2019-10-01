@@ -251,7 +251,7 @@ tlp: ## Setting for power save and to prevent battery deterioration
 	systemctl enable tlp.service
 	systemctl enable tlp-sleep.service
 
-fwupd: ## For system firmware and uefi update
+lvfs: ## For system firmware and uefi update
 	sudo pacman -S fwupd dmidecode
 	sudo dmidecode -s bios-version
 
