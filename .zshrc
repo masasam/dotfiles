@@ -209,7 +209,6 @@ alias myip="ip -4 a show wlp2s0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}'"
 alias e='emacsclient'
 alias testemacs='emacs -q -l ~/.emacs.d/test.el'
 alias open='xdg-open'
-alias minikubedocker='eval $(minikube docker-env)'
 alias mysql="mysql --pager='less -S -n -i -F -X'"
 alias zshbackup='rm -rf ${HOME}/Dropbox/zsh/backup/`ls -rt ${HOME}/Dropbox/zsh/backup | head -n 1`; tar cfz ${HOME}/Dropbox/zsh/backup/`date '+%Y%m%d%H%M%S'`.tar.gz -C ${HOME}/Dropbox/zsh/ .zsh_history; rclone sync ${HOME}/Dropbox/zsh drive:backup'
 alias melpabackup='rm -rf ${HOME}/Dropbox/emacs/elpa/`ls -rt ${HOME}/Dropbox/emacs/elpa | head -n 1`; tar cfz ${HOME}/Dropbox/emacs/elpa/`date '+%Y%m%d%H%M%S'`.tar.gz -C ${HOME}/.emacs.d elpa'
