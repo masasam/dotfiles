@@ -7,12 +7,12 @@ astroid==2.3.1
 attrs==19.2.0
 Automat==0.7.0
 autopep8==1.4.4
-awscli==1.16.250
+awscli==1.16.251
 backcall==0.1.0
 bcrypt==3.1.7
 beautifulsoup4==4.8.0
 bleach==3.1.0
-botocore==1.12.240
+botocore==1.12.241
 btrfsutil==1.1.1
 cached-property==1.5.1
 cachetools==3.1.1
@@ -48,7 +48,7 @@ fuzzyfinder==2.1.0
 gif-for-cli==1.1.2
 gitdb==0.6.4
 gitdb2==2.0.6
-GitPython==3.0.2
+GitPython==3.0.3
 goobook==3.3.dev0
 google-api-python-client==1.7.11
 google-auth==1.6.3
