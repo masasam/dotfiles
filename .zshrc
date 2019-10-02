@@ -214,6 +214,7 @@ alias mysql="mysql --pager='less -S -n -i -F -X'"
 alias zshbackup='rm -rf ${HOME}/Dropbox/zsh/backup/`ls -rt ${HOME}/Dropbox/zsh/backup | head -n 1`; tar cfz ${HOME}/Dropbox/zsh/backup/`date '+%Y%m%d%H%M%S'`.tar.gz -C ${HOME}/Dropbox/zsh/ .zsh_history; rclone sync ${HOME}/Dropbox/zsh drive:backup'
 alias melpabackup='rm -rf ${HOME}/Dropbox/emacs/elpa/`ls -rt ${HOME}/Dropbox/emacs/elpa | head -n 1`; tar cfz ${HOME}/Dropbox/emacs/elpa/`date '+%Y%m%d%H%M%S'`.tar.gz -C ${HOME}/.emacs.d elpa'
 alias melpacleanup='rm -rf ${HOME}/.emacs.d/elpa'
+alias dockercleanup='docker system df; docker container prune; docker volume prune; docker image prune; docker network prune; docker system prune; docker system df'
 alias goupdate='cd ${HOME}/src/github.com/masasam/dotfiles; make goinstall; cd -'
 alias kindstart='kind create cluster; export KUBECONFIG="$(kind get kubeconfig-path --name="kind")"; kubectl cluster-info'
 alias kindstop='unset KUBECONFIG; kind delete cluster'
