@@ -654,11 +654,11 @@ function screenshot-window-delay() {
 }
 
 
-function quickman() {
+function mytldr() {
     if [ $# = 1 ]; then
 	unbuffer tldr $1 | less -SR
     else
-	echo 'usage: quickman $1'
+	echo 'usage: mytldr $1'
     fi
 }
 
@@ -692,7 +692,7 @@ function postgres-backup() {
     if [ $# = 1 ]; then
 	pg_dump $1 > ~/Dropbox/database/postgresql/`date '+%Y%m%d%H%M%S'`
     else
-	echo 'usage: backup-postgres [dbname]'
+	echo 'usage: postgres-backup [dbname]'
     fi
 }
 
