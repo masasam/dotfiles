@@ -4,15 +4,15 @@ apparmor==2.13.3
 appdirs==1.4.3
 asn1crypto==0.24.0
 astroid==2.3.1
-attrs==19.1.0
+attrs==19.2.0
 Automat==0.7.0
 autopep8==1.4.4
-awscli==1.16.249
+awscli==1.16.250
 backcall==0.1.0
 bcrypt==3.1.7
 beautifulsoup4==4.8.0
 bleach==3.1.0
-botocore==1.12.239
+botocore==1.12.240
 btrfsutil==1.1.1
 cached-property==1.5.1
 cachetools==3.1.1
@@ -32,7 +32,7 @@ cycler==0.10.0
 ddt==1.2.1
 decorator==4.4.0
 defusedxml==0.6.0
-Django==2.2.5
+Django==2.2.6
 docker==4.0.2
 docker-compose==1.24.1
 docker-pycreds==0.4.0
@@ -76,7 +76,7 @@ isort==4.3.21
 jedi==0.14.1
 Jinja2==2.10.1
 jmespath==0.9.4
-joblib==0.13.2
+joblib==0.14.0
 json5==0.8.5
 jsonschema==3.0.2
 jupyter==1.0.0
