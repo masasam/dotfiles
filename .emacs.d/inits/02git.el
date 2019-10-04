@@ -13,10 +13,8 @@
 (keychain-refresh-environment)
 
 
-;; git-gutter
-(global-git-gutter-mode t)
-(bind-key "C-x v =" 'git-gutter:popup-hunk)
-(bind-key "C-x v s" 'git-gutter:stage-hunk)
-(bind-key "C-x v r" 'git-gutter:revert-hunk)
+;; diff-hl
+(global-diff-hl-mode)
+(add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
 
 ;;; 02git.el ends here
