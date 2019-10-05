@@ -1,2 +1,1 @@
 hub filter=git-crypt diff=git-crypt
-rclone filter=git-crypt diff=git-crypt
