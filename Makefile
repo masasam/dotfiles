@@ -126,8 +126,8 @@ pipinstall: ## Install python packages for python-language-server
 
 goinstall: ## Install go packages
 	mkdir -p ${HOME}/{bin,src}
-	go get -u -v golang.org/x/tools/cmd/gopls
-	go get -u -v golang.org/x/tools/cmd/goimports
+	GO111MODULE="on" go get -u -v golang.org/x/tools/cmd/gopls
+	GO111MODULE="on" go get -u -v golang.org/x/tools/cmd/goimports
 	go get -u -v github.com/golang/dep/cmd/dep
 	go get -u -v github.com/motemen/ghq
 	go get -u -v github.com/sonatard/ghs
