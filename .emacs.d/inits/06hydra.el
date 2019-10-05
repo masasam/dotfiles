@@ -46,7 +46,7 @@ If there are two or more windows, it will go to another window."
    ("o" other-window-or-split)
    ("r" avy-goto-word-1)
    ("l" recenter-top-bottom)
-   ("s" swiper-for-region-or-swiper)
+   ("s" swiper-isearch-region)
    ("S" window-swap-states)
    ("q" kill-buffer)
    ("<" beginning-of-buffer)
