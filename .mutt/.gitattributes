@@ -1,0 +1,2 @@
+aliases filter=git-crypt diff=git-crypt
+signature filter=git-crypt diff=git-crypt
