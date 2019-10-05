@@ -1,6 +1,6 @@
 set send_charset="iso-2022-jp:utf-8"
 
-source ~/Dropbox/mutt/password.rc
+source ~/src/github.com/masasam/dotfiles/.mutt/password.rc
 
 set folder = "imaps://imap.gmail.com:993"
 set spoolfile = "+INBOX"
