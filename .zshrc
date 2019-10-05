@@ -542,7 +542,7 @@ function github-new() {
 	    git push origin master
 	fi
     else
-	echo 'usage: github-new name'
+	echo 'usage: github-new reponame'
     fi
 }
 
