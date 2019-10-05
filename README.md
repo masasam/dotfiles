@@ -473,14 +473,14 @@ If you make a mistake on the keyboard, erase all with Ctrl-u
 #### Install using golang
 
 	mkdir -p ${HOME}/{bin,src}
-	go get -u -v golang.org/x/tools/cmd/gopls
-	go get -u -v github.com/golang/dep/cmd/dep
+	GO111MODULE="on" go get -u -v golang.org/x/tools/cmd/gopls
+	GO111MODULE="on" go get -u -v github.com/golang/dep/cmd/dep
 	go get -u -v github.com/motemen/ghq
 	go get -u -v github.com/sonatard/ghs
 	go get -u -v github.com/kyoshidajp/ghkw
 	go get -u -v github.com/simeji/jid/cmd/jid
 	go get -u -v github.com/jmhodges/jsonpp
-	go get -u -v github.com/mithrandie/csvq
+	GO111MODULE="on" go get -u -v github.com/mithrandie/csvq
 
 #### Install using yarn
 
