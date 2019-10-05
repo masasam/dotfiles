@@ -434,12 +434,6 @@ chromium: ## Install chromium and noto-fonts
 	sudo pacman -S noto-fonts noto-fonts-cjk
 	sudo pacman -S chromium
 
-ranger: ## Init ranger
-	mkdir -p ${HOME}/.local
-	pip install --user ranger-fm
-	test -L ${HOME}/.config/ranger || rm -rf ${HOME}/.config/ranger
-	ln -vsfn ${HOME}/Dropbox/ranger ${HOME}/.config/ranger
-
 neovim: ## Init neovim
 	sudo pacman -S neovim
 	mkdir -p ${HOME}/.config/nvim
