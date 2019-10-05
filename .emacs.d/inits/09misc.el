@@ -6,6 +6,14 @@
 (minions-mode 1)
 
 
+;; tldr
+(with-eval-after-load 'tldr
+  (bind-key "." 'help-go-forward tldr-mode-map)
+  (bind-key "," 'help-go-back tldr-mode-map)
+  (bind-key "n" 'forward-line tldr-mode-map)
+  (bind-key "p" 'previous-line tldr-mode-map))
+
+
 ;; prescient
 (ivy-prescient-mode 1)
 (company-prescient-mode 1)
