@@ -49,6 +49,7 @@ If there are two or more windows, it will go to another window."
    ("s" swiper-isearch-region)
    ("S" window-swap-states)
    ("q" kill-buffer)
+   ("w" clipboard-kill-ring-save)
    ("<" beginning-of-buffer)
    (">" end-of-buffer)
    ("SPC" set-mark-command)
