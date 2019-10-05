@@ -483,7 +483,7 @@ emacs-devel: ## Install development version of emacs
 
 openvpn: ## Install openvpn
 	sudo pacman -S openvpn networkmanager-openvpn
-	sudo ln -vsfn ${HOME}/Dropbox/arch/openvpn/client.conf /etc/openvpn/client/client.conf
+	sudo ln -vsf ${PWD}/etc/openvpn/client/client.conf /etc/openvpn/client/client.conf
 
 screenkey: ## Init screenkey
 	yay -S screenkey
