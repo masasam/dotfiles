@@ -414,10 +414,6 @@ tmuxp: ## Install tmuxp
 	pip install --user tmuxp
 	sudo ln -vsf ${PWD}/.config/main.yaml ${HOME}/.config/main.yaml
 
-sk-tmux: ## Init sk-tmux
-	chmod a+x /home/masa/Dropbox/cli/sk-tmux
-	sudo ln -vsf ${HOME}/Dropbox/cli/sk-tmux /usr/local/bin/sk-tmux
-
 roswell: ## Install ros and lem
 	yay -S roswell
 	ros install cxxxr/lem
