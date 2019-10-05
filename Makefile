@@ -21,13 +21,13 @@ init: ## Initial deploy dotfiles
 init-encrypted: ## Deploy the encrypted file in the git-crypt
 	ln -vsf ${PWD}/.netrc ${HOME}/.netrc
 	ln -vsf ${PWD}/.authinfo ${HOME}/.authinfo
+	ln -vsf ${PWD}/.config/hub ${HOME}/.config/hub
 
 initdropbox: ## Initial deploy dotfiles using dropbox
 	mkdir -p ${HOME}/.config
 	ln -vsf ${HOME}/Dropbox/database/cli/.mycli-history ${HOME}/.mycli-history
 	test -L ${HOME}/.config/pgcli || rm -rf ${HOME}/.config/pgcli
 	ln -vsfn ${HOME}/Dropbox/database/cli/pgcli ${HOME}/.config/pgcli
-	ln -vsf ${HOME}/Dropbox/zsh/hub ${HOME}/.config/hub
 	test -L ${HOME}/.ssh || rm -rf ${HOME}/.ssh
 	ln -vsfn ${HOME}/Dropbox/ssh ${HOME}/.ssh
 	chmod 600 ${HOME}/.ssh/id_rsa
