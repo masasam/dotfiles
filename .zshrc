@@ -189,30 +189,31 @@ RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
 
 
 # Tmux, pass the name of the command currently executed to screen
-case "${TERM}" in screen-256color)
-		      preexec() {
-			  echo -ne "\ek#${1%% *}\e\\"
-		      }
-		      precmd() {
-			  echo -ne "\ek$(basename $(pwd))\e\\"
-			  vcs_info
-		      };;
-		   tmux-256color)
-		       preexec() {
-			   echo -ne "\ek#${1%% *}\e\\"
-		       }
-		       precmd() {
-			   echo -ne "\ek$(basename $(pwd))\e\\"
-			   vcs_info
-		       };;
-		   xterm)
-		      preexec() {
-			  echo -ne "\ek#${1%% *}\e\\"
-		      }
-		      precmd() {
-			  echo -ne "\ek$(basename $(pwd))\e\\"
-			  vcs_info
-		      };;
+case "${TERM}"
+in screen-256color)
+       preexec() {
+	   echo -ne "\ek#${1%% *}\e\\"
+       }
+       precmd() {
+	   echo -ne "\ek$(basename $(pwd))\e\\"
+	   vcs_info
+       };;
+   tmux-256color)
+       preexec() {
+	   echo -ne "\ek#${1%% *}\e\\"
+       }
+       precmd() {
+	   echo -ne "\ek$(basename $(pwd))\e\\"
+	   vcs_info
+       };;
+   xterm)
+       preexec() {
+	   echo -ne "\ek#${1%% *}\e\\"
+       }
+       precmd() {
+	   echo -ne "\ek$(basename $(pwd))\e\\"
+	   vcs_info
+       };;
 esac
 
 
