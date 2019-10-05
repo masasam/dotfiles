@@ -18,10 +18,12 @@ init: ## Initial deploy dotfiles
 	mkdir -p ${HOME}/.config/mpv
 	ln -vsf ${PWD}/.config/mpv/mpv.conf ${HOME}/.config/mpv/mpv.conf
 
+init-encrypted: ## Deploy the encrypted file in the git-crypt
+	ln -vsf ${PWD}/.netrc ${HOME}/.netrc
+	ln -vsf ${PWD}/.authinfo ${HOME}/.authinfo
+
 initdropbox: ## Initial deploy dotfiles using dropbox
 	mkdir -p ${HOME}/.config
-	ln -vsf ${HOME}/Dropbox/zsh/.netrc ${HOME}/.netrc
-	ln -vsf ${HOME}/Dropbox/zsh/.authinfo ${HOME}/.authinfo
 	ln -vsf ${HOME}/Dropbox/database/cli/.mycli-history ${HOME}/.mycli-history
 	test -L ${HOME}/.config/pgcli || rm -rf ${HOME}/.config/pgcli
 	ln -vsfn ${HOME}/Dropbox/database/cli/pgcli ${HOME}/.config/pgcli
