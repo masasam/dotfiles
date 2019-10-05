@@ -602,7 +602,7 @@ function git-upstream() {
     if [ $# = 1 ]; then
 	git remote add upstream $1
     else
-	echo 'usage: github-upstream git://github.com/owner/repo.git'
+	echo 'usage: git-upstream git://github.com/owner/repo.git'
     fi
 }
 
@@ -613,7 +613,7 @@ function git-upstream-follow() {
 	git fetch upstream
 	git merge upstream/master
     else
-	echo 'usage: github-upstream git://github.com/owner/repo.git'
+	echo 'usage: git-upstream-follow git://github.com/owner/repo.git'
     fi
 }
 
