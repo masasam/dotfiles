@@ -236,9 +236,9 @@ termite: ## Init termite terminal
 
 rclone: ## Init rclone
 	sudo pacman -S rclone
-	chmod 600 ${HOME}/Dropbox/zsh/rclone/rclone.conf
-	test -L ${HOME}/.config/rclone || rm -rf ${HOME}/.config/rclone
-	ln -vsfn ${HOME}/Dropbox/zsh/rclone ${HOME}/.config/rclone
+	chmod 600 ${PWD}/.config/rclone/rclone.conf
+	mkdir -p ${HOME}/.config/rclone
+	ln -vsfn ${PWD}/.config/rclone/rclone.conf ${HOME}/.config/rclone/rclone.conf
 
 dnsmasq: ## Init dnsmasq
 	sudo pacman -S dnsmasq
