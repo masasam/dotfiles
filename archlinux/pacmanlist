@@ -59,6 +59,7 @@ cantarell-fonts
 cblas
 cdparanoia
 celt
+cfitsio
 cheese
 chromaprint
 chromium
@@ -160,6 +161,7 @@ gcc-libs
 gconf
 gcr
 gd
+gdal
 gdb
 gdb-common
 gdbm
@@ -170,6 +172,7 @@ gegl
 gendesk
 geoclue
 geocode-glib
+geos
 gettext
 ghc-libs
 ghostscript
@@ -351,6 +354,7 @@ haskell-x509-validation
 haskell-xml
 haskell-zip-archive
 haskell-zlib
+hdf5
 hdparm
 hexedit
 hicolor-icon-theme
@@ -413,6 +417,7 @@ lensfun
 less
 lhasa
 libabw
+libaec
 libaio
 libarchive
 libass
@@ -466,12 +471,14 @@ libfdk-aac
 libffi
 libfontenc
 libfreehand
+libfreexl
 libgcrypt
 libgda
 libgda-mysql
 libgda-postgres
 libgdm
 libgee
+libgeotiff
 libgexiv2
 libglade
 libglvnd
@@ -584,6 +591,7 @@ libsndfile
 libsodium
 libsoup
 libsoxr
+libspatialite
 libspectre
 libspiro
 libsrtp
@@ -692,6 +700,7 @@ mailcap
 make
 man-db
 man-pages
+mapnik
 mariadb-clients
 mariadb-libs
 mathjax
@@ -725,6 +734,7 @@ ndctl
 neomutt
 neon
 net-tools
+netcdf
 netctl
 nethogs
 nettle
@@ -804,6 +814,7 @@ potrace
 powertop
 ppp
 procps-ng
+proj
 protobuf
 psmisc
 pulseaudio
@@ -1022,6 +1033,7 @@ xdg-dbus-proxy
 xdg-user-dirs
 xdg-utils
 xdotool
+xerces-c
 xf86-input-libinput
 xfsprogs
 xkeyboard-config

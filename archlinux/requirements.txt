@@ -2,7 +2,7 @@ ansible==2.8.5
 ansible-lint==4.1.0
 apparmor==2.13.3
 appdirs==1.4.3
-asn1crypto==1.0.0
+asn1crypto==1.0.1
 astroid==2.3.1
 attrs==19.2.0
 Automat==0.7.0
