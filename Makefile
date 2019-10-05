@@ -283,7 +283,7 @@ ttf-cica: ## Install Cica font
 docker: ## Docker initial setup
 	sudo usermod -aG docker ${USER}
 	mkdir -p ${HOME}/.docker
-	ln -vsf ${HOME}/Dropbox/docker/config.json ${HOME}/.docker/config.json
+	ln -vsf ${PWD}/.docker/config.json ${HOME}/.docker/config.json
 	sudo systemctl enable docker.service
 	sudo systemctl start docker.service
 
