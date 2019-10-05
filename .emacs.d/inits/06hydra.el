@@ -1,5 +1,5 @@
 ;;; 06hydra.el --- 06hydra.el
-;;; Commentary:
+
 ;;; Code:
 ;;(setq debug-on-error t)
 
@@ -52,6 +52,7 @@ If there are two or more windows, it will go to another window."
    ("<" beginning-of-buffer)
    (">" end-of-buffer)
    ("SPC" set-mark-command)
+   ("\C-m" dired-find-file)
    ("1" delete-other-windows)
    ("2" split-window-below)
    ("3" split-window-right)
