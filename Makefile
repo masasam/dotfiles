@@ -407,8 +407,7 @@ toggle: ## Prepare command that toggle between emacs and chromium
 aws: ## Init aws cli
 	mkdir -p ${HOME}/.local
 	pip install --user awscli
-	test -L ${HOME}/.aws || rm -rf ${HOME}/.aws
-	ln -vsfn ${HOME}/Dropbox/zsh/.aws ${HOME}/.aws
+	ln -vsfn ${PWD}/.aws ${HOME}/.aws
 
 tmuxp: ## Install tmuxp
 	mkdir -p ${HOME}/.local
