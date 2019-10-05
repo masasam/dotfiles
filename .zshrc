@@ -598,20 +598,22 @@ function remove-exif() {
 }
 
 
-function github-upstream() {
+function git-upstream() {
     if [ $# = 1 ]; then
-	git remote add upstream git://github.com/$1
+	git remote add upstream $1
     else
-	echo 'usage: github-upstream name'
+	echo 'usage: github-upstream git://github.com/owner/repo.git'
     fi
 }
 
 
-function gitlab-upstream() {
+function git-upstream-follow() {
     if [ $# = 1 ]; then
-	git remote add upstream git://gitlab.com/$1
+	git remote add upstream $1
+	git fetch upstream
+	git merge upstream/master
     else
-	echo 'usage: gitlab-upstream name'
+	echo 'usage: github-upstream git://github.com/owner/repo.git'
     fi
 }
 
