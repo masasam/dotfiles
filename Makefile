@@ -418,7 +418,7 @@ roswell: ## Install ros and lem
 sylpheed: ## Init sylpheed
 	sudo pacman -S sylpheed
 	test -L ${HOME}/.sylpheed-2.0 || rm -rf ${HOME}/.sylpheed-2.0
-	ln -vsfn ${HOME}/Dropbox/sylpheed/.sylpheed-2.0 ${HOME}/.sylpheed-2.0
+	ln -vsfn ${HOME}/backup/sylpheed/.sylpheed-2.0 ${HOME}/.sylpheed-2.0
 
 psd: ## Profile-Sync-Daemon initial setup
 	yay -S profile-sync-daemon
