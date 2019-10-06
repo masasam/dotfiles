@@ -252,6 +252,7 @@ alias e='emacsclient'
 alias testemacs='emacs -q -l ~/.emacs.d/test.el'
 alias open='xdg-open'
 alias mysql="mysql --pager='less -S -n -i -F -X'"
+alias syncbackup='rclone sync ${HOME}/backup dropbox:'
 alias zshbackup='rm -rf ${HOME}/backup/zsh/backup/`ls -rt ${HOME}/backup/zsh/backup | head -n 1`; tar cfz ${HOME}/backup/zsh/backup/`date '+%Y%m%d%H%M%S'`.tar.gz -C ${HOME}/backup/zsh/ .zsh_history; rclone sync ${HOME}/backup/zsh googledrive:backup'
 alias melpabackup='rm -rf ${HOME}/backup/emacs/elpa/`ls -rt ${HOME}/backup/emacs/elpa | head -n 1`; tar cfz ${HOME}/backup/emacs/elpa/`date '+%Y%m%d%H%M%S'`.tar.gz -C ${HOME}/.emacs.d elpa'
 alias melpacleanup='rm -rf ${HOME}/.emacs.d/elpa'
