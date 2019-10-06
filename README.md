@@ -38,7 +38,6 @@ After make install you can deploy dotfiles with this command.
 
 You can install all with this command.
 You can install anything written after allinstall in the makefile.
-Keep Dropbox synchronized before doing make allinstall.
 
     make backup
 
@@ -52,7 +51,15 @@ You can backup packages all with this command.
 
 You can update packages all with this command.
 
-#### Criteria of things managed by Dropbox
+### Synchronize backup directory to cloud
+
+Synchronize the backup directory to your favorite cloud using the rclone.
+
+	rclone sync ${HOME}/backup dropbox:
+
+Synchronize the ~/backup directory in this command to dropbox.
+
+#### Criteria of things managed by backup directory
 
 - What can not be placed on github
 
@@ -66,9 +73,7 @@ You can update packages all with this command.
 - Those that can not be opened but need to protect data
 
    Sylpheed configuration file and mail data etc.
-   As mail arrives, it will be synchronized to dropbox so you don't have to think about backup.
-
-Don't forget to make dropbox 2 factor authentication.
+   As mail arrives, it will be synchronized to backup directory so you don't have to think about backup.
 
 # Arch Linux install
 
@@ -287,12 +292,6 @@ Install yay
 	git clone https://aur.archlinux.org/yay.git
 	cd yay
 	makepkg -si
-
-Install dropbox and sync
-
-	yay -S dropbox
-	yay -S nautilus-dropbox
-	dropbox
 
 Preparing dotfiles
 
@@ -522,7 +521,7 @@ docker
 	sudo pacman -S docker
 	sudo usermod -aG docker ${USER}
 	mkdir -p ${HOME}/.docker
-	ln -vsf ${HOME}/Dropbox/docker/config.json ${HOME}/.docker/config.json
+	ln -vsf ${HOME}/backup/.docker/config.json ${HOME}/.docker/config.json
 	sudo systemctl enable docker.service
 	sudo systemctl start docker.service
 
@@ -530,7 +529,7 @@ Google Kubernetes Engine
 
 	curl https://sdk.cloud.google.com | bash
 	test -L ${HOME}/.config/gcloud || rm -rf ${HOME}/.config/gcloud
-	ln -vsfn ${HOME}/Dropbox/zsh/gcloud   ${HOME}/.config/gcloud
+	ln -vsfn ${HOME}/backup/gcloud   ${HOME}/.config/gcloud
 	sudo pacman -S kubectl
 	yay -S stern-bin
 
@@ -652,9 +651,9 @@ reboot
 
 Once mozc is set up
 
-    ln -sfn ~/Dropbox/mozc/.mozc ~/.mozc
+    ln -sfn ~/backup/mozc/mozc ~/.mozc
 
-And set the mozc setting to dropbox.
+And set the mozc setting to backup directory.
 With this it will not have to be set again.
 
 ## How to test Makefile
@@ -675,9 +674,9 @@ Test this [Makefile](https://github.com/masasam/dotfiles/blob/master/Makefile) u
 
 	docker build -t dotfiles /home/${USER}/src/github.com/masasam/dotfiles
 
-2.Run 'docker run' mounting the dropbox directory
+2.Run 'docker run' mounting the backup directory
 
-	docker run -t -i -v /home/${USER}/Dropbox:/home/${USER}/Dropbox:cached --name arch dotfiles /bin/bash
+	docker run -t -i -v /home/${USER}/backup:/home/${USER}/backup:cached --name arch dotfiles /bin/bash
 
 3.Execute the following command in the docker container
 
