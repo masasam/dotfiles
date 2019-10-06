@@ -5,6 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+export HISTFILE=~/backup/bash/.bash_history
 alias ls='ls --color=auto'
 alias testemacs='emacs -q -l ~/.emacs.d/test.el'
 PS1='[\u@\h \W]\$ '
