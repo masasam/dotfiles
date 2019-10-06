@@ -353,9 +353,9 @@ ccls: ## Install c,c++ language server
 mpsyt: ## Install and deploy mps-youtube
 	pip install --user mps-youtube
 	pip install --user youtube-dl
-	test -L ${HOME}/.config/mps-youtube/playlists || rm -rf ${HOME}/.config/mps-youtube/playlists
 	mkdir -p ${HOME}/.config/mps-youtube
-	ln -vsfn ${HOME}/Dropbox/zsh/mps-youtube/playlists ${HOME}/.config/mps-youtube/playlists
+	test -L ${HOME}/.config/mps-youtube/playlists || rm -rf ${HOME}/.config/mps-youtube/playlists
+	ln -vsfn ${HOME}/backup/mps-youtube/playlists ${HOME}/.config/mps-youtube/playlists
 
 sxiv: ## Init sxiv
 	mkdir -p ${HOME}/.config/sxiv/exec
