@@ -51,6 +51,10 @@ You can backup packages all with this command.
 
 You can update packages all with this command.
 
+## At first prepare git-crypt
+
+Configuration file of [rclone](https://github.com/rclone/rclone) is encrypted with [git-crypt](https://github.com/AGWA/git-crypt).
+
 ## Synchronize backup directory to cloud
 
 Synchronize the backup directory to your favorite cloud using the rclone.
