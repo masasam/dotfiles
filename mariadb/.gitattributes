@@ -1,0 +1,2 @@
+init.sql filter=git-crypt diff=git-crypt
+initdump.sql filter=git-crypt diff=git-crypt
