@@ -53,7 +53,7 @@ You can update packages all with this command.
 
 ## Synchronize backup directory to cloud
 
-Synchronize the backup directory to your favorite cloud using the rclone.
+Synchronize the backup directory to your favorite cloud using the [rclone](https://github.com/rclone/rclone).
 
 	rclone sync ${HOME}/backup dropbox:
 
