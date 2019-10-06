@@ -263,7 +263,7 @@ thinkpad: ## Workaround for Intel throttling issues in Linux
 
 google-mozc: ## Install ibus-mozc
 	test -L ${HOME}/.mozc || rm -rf ${HOME}/.mozc
-	ln -vsfn ${HOME}/Dropbox/mozc/.mozc ${HOME}/.mozc
+	ln -vsfn ${HOME}/backup/.mozc ${HOME}/.mozc
 	yay -S ibus-mozc
 	ibus-daemon -drx
 
