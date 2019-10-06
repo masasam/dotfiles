@@ -41,7 +41,7 @@
 
 
 ;; espy
-(setq espy-password-file "~/Dropbox/passwd/password.org.gpg")
+(setq espy-password-file "~/backup/passwd/password.org.gpg")
 
 
 ;; server start for emacs-client
@@ -73,7 +73,7 @@
 
 
 ;; Set bookmark file name
-(setq bookmark-file "~/Dropbox/emacs/bookmarks")
+(setq bookmark-file "~/backup/emacs/bookmarks")
 
 ;; xref-find-references key
 (bind-key "M-/" 'xref-find-references)
@@ -172,7 +172,7 @@ If the region is inactive, `backward-kill-word'."
 
 
 ;; emacs c source dir:
-(setq find-function-C-source-directory "~/Dropbox/emacs/emacs-26.3/src")
+(setq find-function-C-source-directory "~/backup/emacs/emacs-26.3/src")
 
 
 ;; Do not change the position of the cursor on the screen as much as possible when scrolling pages

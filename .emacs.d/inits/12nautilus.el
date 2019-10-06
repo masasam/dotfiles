@@ -9,22 +9,22 @@
   (shell-command (concat "xdg-open " default-directory)))
 
 
-(defun nautilus-dropbox ()
-  "Open dropbox directry with nautilus."
+(defun nautilus-backup ()
+  "Open backup directry with nautilus."
   (interactive)
-  (shell-command "xdg-open ~/Dropbox"))
+  (shell-command "xdg-open ~/backup"))
 
 
 (defun nautilus-work ()
   "Open work directry with nautilus."
   (interactive)
-  (shell-command "xdg-open ~/Dropbox/work"))
+  (shell-command "xdg-open ~/backup/work"))
 
 
 (defun nautilus-cash ()
   "Open cash directry with nautilus."
   (interactive)
-  (shell-command "xdg-open ~/Dropbox/cash"))
+  (shell-command "xdg-open ~/backup/cash"))
 
 
 (defun nautilus-downloads ()

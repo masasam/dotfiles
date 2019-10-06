@@ -58,10 +58,10 @@
 (defun kanban-rename ()
   "Rotate kanban file."
   (interactive)
-  (rename-file "~/Dropbox/kanban/kanban"
+  (rename-file "~/backup/kanban/kanban"
 	       (expand-file-name
 		(read-from-minibuffer "Rename: " `(".txt" . 1) nil nil nil)
-		"~/Dropbox/kanban")
+		"~/backup/kanban")
 	       1))
 
 ;; Local Variables:
