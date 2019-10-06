@@ -51,13 +51,13 @@ You can backup packages all with this command.
 
 You can update packages all with this command.
 
-### Synchronize backup directory to cloud
+## Synchronize backup directory to cloud
 
 Synchronize the backup directory to your favorite cloud using the rclone.
 
 	rclone sync ${HOME}/backup dropbox:
 
-Synchronize the ~/backup directory in this command to dropbox.
+Synchronize the ~/backup directory to dropbox in this command.
 
 #### Criteria of things managed by backup directory
 
