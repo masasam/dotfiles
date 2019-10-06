@@ -191,9 +191,9 @@ neomutt: ## Init neomutt mail client
 	ln -vsf ${PWD}/.muttrc ${HOME}/.muttrc
 	ln -vsf ${PWD}/.mutt/mailcap ${HOME}/.mutt/mailcap
 	ln -vsf ${PWD}/.mutt/certificates ${HOME}/.mutt/certificates
-	ln -vsf ${HOME}/Dropbox/mutt/aliases ${HOME}/.mutt/aliases
-	ln -vsf ${HOME}/Dropbox/mutt/signature ${HOME}/.mutt/signature
-	ln -vsf ${HOME}/Dropbox/mutt/.goobookrc ${HOME}/.goobookrc
+	ln -vsf ${PWD}/.mutt/aliases ${HOME}/.mutt/aliases
+	ln -vsf ${PWD}/.mutt/signature ${HOME}/.mutt/signature
+	ln -vsf ${PWD}/.goobookrc ${HOME}/.goobookrc
 	yay -S goobook-git
 	goobook authenticate
 
