@@ -2,7 +2,7 @@ export PATH := ${HOME}/.local/bin:${HOME}/.node_modules/bin:${HOME}/.cargo/bin:/
 export GOPATH := ${HOME}
 
 rclone: ## Init rclone
-	sudo pacman -S rclone
+	sudo pacman -S rclone git-crypt gnupg
 	mkdir -p ${HOME}/.config/rclone
 	chmod 600 ${PWD}/.config/rclone/rclone.conf
 	ln -vsf ${PWD}/.config/rclone/rclone.conf ${HOME}/.config/rclone/rclone.conf
@@ -64,10 +64,10 @@ install: ## Install arch linux packages using pacman
 	zsh-syntax-highlighting shellcheck bash-completion mathjax expect elixir lsof \
 	cscope postgresql-libs pdfgrep gnu-netcat cmatrix jpegoptim nethogs mlocate \
 	pacman-contrib x11-ssh-askpass libreoffice-fresh-ja python-prompt_toolkit \
-	jhead peek ncdu sxiv gnome-screenshot sshfs fping syncthing terraform gnupg \
+	jhead peek ncdu sxiv gnome-screenshot sshfs fping syncthing terraform bat \
 	xdotool sshuttle packer ripgrep stunnel vimiv adapta-gtk-theme gnome-tweaks \
-	firejail opencv hexedit discord pv smartmontools ethtool git-crypt gnome-logs \
-	qreator wl-clipboard lshw diskus sysprof bat obs-studio wireshark-cli mapnik
+	firejail opencv hexedit discord pv smartmontools ethtool gnome-logs mapnik \
+	qreator wl-clipboard lshw diskus sysprof obs-studio wireshark-cli
 	sudo pkgfile --update
 
 pipinstall: ## Install python packages for python-language-server
