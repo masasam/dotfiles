@@ -1,4 +1,0 @@
-github.com:
-- user: yourgithubid
-  oauth_token: ****************************************
-  protocol: https
