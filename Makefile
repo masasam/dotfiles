@@ -273,12 +273,7 @@ google-mozc: ## Install ibus-mozc
 	ibus-daemon -drx
 
 ttf-cica: ## Install Cica font
-	cd ${HOME}/Dropbox/arch/Cica_v5.0.1_with_emoji/;\
-	sudo install -dm755 /usr/share/fonts/TTF;\
-	sudo install -m644 *.ttf /usr/share/fonts/TTF/;\
-	sudo install -d /usr/share/licenses/ttf-cica/;\
-	sudo install -Dm644 *.txt /usr/share/licenses/ttf-cica/;\
-	cd -
+	yay -S ttf-cica
 
 docker: ## Docker initial setup
 	sudo usermod -aG docker ${USER}
