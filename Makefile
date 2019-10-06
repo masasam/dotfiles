@@ -289,8 +289,6 @@ podman: ## Podman initial setup
 
 circle-ci-cli: ## Install circle ci cli and setup
 	curl -fLSs https://circle.ci/cli | sudo bash
-	test -L ${HOME}/.circleci || rm -rf ${HOME}/.circleci
-	ln -vsfn ${HOME}/Dropbox/zsh/.circleci ${HOME}/.circleci
 	circleci update install
 
 mariadb: ## Mariadb initial setup
