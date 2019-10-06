@@ -60,6 +60,8 @@ Synchronize the backup directory to your favorite cloud using the [rclone](https
 Synchronize the ~/backup directory to dropbox in this command.
 Since configuration file of [rclone](https://github.com/rclone/rclone) is encrypted with [git-crypt](https://github.com/AGWA/git-crypt),
 you install and set up [git-crypt](https://github.com/AGWA/git-crypt) at first step.
+Since [git-crypt](https://github.com/AGWA/git-crypt) is dependent on gnupg, you must place the gnupg configuration file manually.
+I deploy files that is downloaded from google drive to ~/.gnupg.
 
 #### Criteria of things managed by backup directory
 
