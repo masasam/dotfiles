@@ -25,9 +25,6 @@ init-encrypted: ## Deploy the encrypted file in the git-crypt
 
 initdropbox: ## Initial deploy dotfiles using dropbox
 	mkdir -p ${HOME}/.config
-	ln -vsf ${HOME}/Dropbox/database/cli/.mycli-history ${HOME}/.mycli-history
-	test -L ${HOME}/.config/pgcli || rm -rf ${HOME}/.config/pgcli
-	ln -vsfn ${HOME}/Dropbox/database/cli/pgcli ${HOME}/.config/pgcli
 	test -L ${HOME}/.ssh || rm -rf ${HOME}/.ssh
 	ln -vsfn ${HOME}/Dropbox/ssh ${HOME}/.ssh
 	chmod 600 ${HOME}/.ssh/id_rsa
@@ -94,12 +91,10 @@ pipinstall: ## Install python packages for python-language-server
 	pip install --user jupyterthemes
 	pip install --user litecli
 	pip install --user matplotlib
-	pip install --user mycli
 	pip install --user neovim
 	pip install --user nose
 	pip install --user opencv-python
 	pip install --user pandas
-	pip install --user pgcli
 	pip install --user pipenv
 	pip install --user progressbar2
 	pip install --user psycopg2-binary
@@ -310,6 +305,17 @@ postgresql: ## Postgresql initial setup
 	sudo systemctl start postgresql.service
 	cd /home;\
 	sudo -u postgres createuser --interactive
+
+mycli: ## Init mycli
+	mkdir -p ${HOME}/backup/mycli
+	pip install --user mycli
+	ln -vsf ${HOME}/backup/mycli/.mycli-history ${HOME}/.mycli-history
+
+pgcli: ## Init pgcli
+	mkdir -p ${HOME}/backup
+	pip install --user pgcli
+	test -L ${HOME}/.config/pgcli || rm -rf ${HOME}/.config/pgcli
+	ln -vsfn ${HOME}/backup/pgcli ${HOME}/.config/pgcli
 
 google-cloud: ## Install SDK and setting
 	curl https://sdk.cloud.google.com | bash
