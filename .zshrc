@@ -12,7 +12,7 @@ colors
 # last line (\n) probrem countermeasure
 unsetopt promptcr
 
-HISTFILE=~/Dropbox/zsh/.zsh_history
+HISTFILE=~/backup/zsh/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
 # ask you if you have over 10000 history
@@ -252,8 +252,8 @@ alias e='emacsclient'
 alias testemacs='emacs -q -l ~/.emacs.d/test.el'
 alias open='xdg-open'
 alias mysql="mysql --pager='less -S -n -i -F -X'"
-alias zshbackup='rm -rf ${HOME}/Dropbox/zsh/backup/`ls -rt ${HOME}/Dropbox/zsh/backup | head -n 1`; tar cfz ${HOME}/Dropbox/zsh/backup/`date '+%Y%m%d%H%M%S'`.tar.gz -C ${HOME}/Dropbox/zsh/ .zsh_history; rclone sync ${HOME}/Dropbox/zsh googledrive:backup'
-alias melpabackup='rm -rf ${HOME}/Dropbox/emacs/elpa/`ls -rt ${HOME}/Dropbox/emacs/elpa | head -n 1`; tar cfz ${HOME}/Dropbox/emacs/elpa/`date '+%Y%m%d%H%M%S'`.tar.gz -C ${HOME}/.emacs.d elpa'
+alias zshbackup='rm -rf ${HOME}/backup/zsh/backup/`ls -rt ${HOME}/backup/zsh/backup | head -n 1`; tar cfz ${HOME}/backup/zsh/backup/`date '+%Y%m%d%H%M%S'`.tar.gz -C ${HOME}/backup/zsh/ .zsh_history; rclone sync ${HOME}/backup/zsh googledrive:backup'
+alias melpabackup='rm -rf ${HOME}/backup/emacs/elpa/`ls -rt ${HOME}/backup/emacs/elpa | head -n 1`; tar cfz ${HOME}/backup/emacs/elpa/`date '+%Y%m%d%H%M%S'`.tar.gz -C ${HOME}/.emacs.d elpa'
 alias melpacleanup='rm -rf ${HOME}/.emacs.d/elpa'
 alias dockercleanup='docker system df; docker container prune; docker volume prune; docker image prune; docker network prune; docker system prune; docker system df'
 alias goupdate='cd ${HOME}/src/github.com/masasam/dotfiles; make goinstall; cd -'
@@ -310,7 +310,7 @@ autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
   zstyle ':completion:*' recent-dirs-insert both
   zstyle ':chpwd:*' recent-dirs-max 5000
   zstyle ':chpwd:*' recent-dirs-default true
-  zstyle ':chpwd:*' recent-dirs-file "$HOME/Dropbox/zsh/chpwd-recent-dirs"
+  zstyle ':chpwd:*' recent-dirs-file "$HOME/backup/zsh/chpwd-recent-dirs"
   zstyle ':chpwd:*' recent-dirs-pushd true
 fi
 
@@ -732,7 +732,7 @@ function mpv-music-quit() {
 
 function postgres-backup() {
     if [ $# = 1 ]; then
-	pg_dump $1 > ~/Dropbox/database/postgresql/`date '+%Y%m%d%H%M%S'`
+	pg_dump $1 > ~/backup/postgresql/`date '+%Y%m%d%H%M%S'`
     else
 	echo 'usage: postgres-backup [dbname]'
     fi
@@ -753,7 +753,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 # zsh-completions for aws
 source ~/.local/bin/aws_zsh_completer.sh
 # password
-source ~/Dropbox/zsh/env.sh
+source ~/backup/zsh/env.sh
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/masa/google-cloud-sdk/path.zsh.inc' ]; then . '/home/masa/google-cloud-sdk/path.zsh.inc'; fi
