@@ -1,4 +1,3 @@
 .netrc filter=git-crypt diff=git-crypt
 .authinfo filter=git-crypt diff=git-crypt
-.mycli-history filter=git-crypt diff=git-crypt
 .goobookrc filter=git-crypt diff=git-crypt
