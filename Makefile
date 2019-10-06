@@ -23,16 +23,16 @@ init-encrypted: ## Deploy the encrypted file in the git-crypt
 	ln -vsf ${PWD}/.authinfo ${HOME}/.authinfo
 	ln -vsf ${PWD}/.config/hub ${HOME}/.config/hub
 
-initdropbox: ## Initial deploy dotfiles using dropbox
+initbackup: ## Initial deploy dotfiles using backup directory
 	mkdir -p ${HOME}/.config
 	test -L ${HOME}/.ssh || rm -rf ${HOME}/.ssh
-	ln -vsfn ${HOME}/Dropbox/ssh ${HOME}/.ssh
+	ln -vsfn ${HOME}/backup/ssh ${HOME}/.ssh
 	chmod 600 ${HOME}/.ssh/id_rsa
 	test -L ${HOME}/.gnupg || rm -rf ${HOME}/.gnupg
-	ln -vsfn ${HOME}/Dropbox/gnupg ${HOME}/.gnupg
+	ln -vsfn ${HOME}/backup/gnupg ${HOME}/.gnupg
 	mkdir -p ${HOME}/.local/share
 	test -L ${HOME}/.local/share/keyrings || rm -rf ${HOME}/.local/share/keyrings
-	ln -vsfn ${HOME}/Dropbox/passwd/keyrings ${HOME}/.local/share/keyrings
+	ln -vsfn ${HOME}/backup/keyrings ${HOME}/.local/share/keyrings
 
 base: ## Install base and base-devel package
 	sudo pacman -S bash bzip2 coreutils cryptsetup device-mapper dhcpcd mdadm \
@@ -564,15 +564,13 @@ rustupdate: ## Update rust packages
 yarnupdate: ## Update yarn packages
 	yarn global upgrade
 
-test: ## Test this Makefile with docker
+test: ## Test this Makefile with mount backup directory
 	docker build -t dotfiles ${PWD}
-	docker run -v /home/${USER}/Dropbox:${HOME}/Dropbox:cached --name makefiletest -d dotfiles
+	docker run -v /home/${USER}/backup:${HOME}/backup:cached --name makefiletest -d dotfiles
 	@echo "========== make install =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make install"
 	@echo "========== make init =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make init"
-	@echo "========== make initdropbox =========="
-	docker exec makefiletest sh -c "cd ${PWD}; make initdropbox"
 	@echo "========== make neomutt =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make neomutt"
 	@echo "========== make aur =========="
@@ -588,7 +586,7 @@ test: ## Test this Makefile with docker
 	@echo "========== make rustinstall =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make rustinstall"
 
-testsimple: ## Test this Makefile with docker without Dropbox
+testsimple: ## Test this Makefile with docker without backup directory
 	docker build -t dotfiles ${PWD}
 	docker run --name makefiletest -d dotfiles
 	@echo "========== make install =========="
@@ -614,7 +612,7 @@ testpath: ## Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: install init initdropbox alacritty urxvt xterm termite ttf-cica dnsmasq pipinstall goinstall aur google-mozc neomutt docker nodeinstall desktop zeal zoom sylpheed yay mpsyt rclone tlp fwupd google-cloud aws toggle thinkpad
+allinstall: install init initbackup init-encrypted alacritty urxvt xterm termite ttf-cica dnsmasq pipinstall goinstall aur google-mozc neomutt docker nodeinstall desktop zeal zoom sylpheed yay mpsyt rclone tlp fwupd google-cloud aws toggle thinkpad
 
 nextinstall: chromium other-python screenkey rubygem rbenv rustinstall postgresql redis mariadb
 
