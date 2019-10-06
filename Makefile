@@ -1,6 +1,23 @@
 export PATH := ${HOME}/.local/bin:${HOME}/.node_modules/bin:${HOME}/.cargo/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/bin/core_perl:${HOME}/bin:${HOME}/google-cloud-sdk/bin
 export GOPATH := ${HOME}
 
+rclone: ## Init rclone
+	sudo pacman -S rclone
+	mkdir -p ${HOME}/.config/rclone
+	chmod 600 ${PWD}/.config/rclone/rclone.conf
+	ln -vsf ${PWD}/.config/rclone/rclone.conf ${HOME}/.config/rclone/rclone.conf
+
+initfirst: ## Deploy ssh gnupg keyring (Run after the rclone)
+	test -L ${HOME}/.ssh || rclone sync dropbox: ${HOME}/backup
+	test -L ${HOME}/.ssh || rm -rf ${HOME}/.ssh
+	ln -vsfn ${HOME}/backup/ssh ${HOME}/.ssh
+	chmod 600 ${HOME}/.ssh/id_rsa
+	test -L ${HOME}/.gnupg || rm -rf ${HOME}/.gnupg
+	ln -vsfn ${HOME}/backup/gnupg ${HOME}/.gnupg
+	mkdir -p ${HOME}/.local/share
+	test -L ${HOME}/.local/share/keyrings || rm -rf ${HOME}/.local/share/keyrings
+	ln -vsfn ${HOME}/backup/keyrings ${HOME}/.local/share/keyrings
+
 init: ## Initial deploy dotfiles
 	test -L ${HOME}/.emacs.d || rm -rf ${HOME}/.emacs.d
 	ln -vsfn ${PWD}/.emacs.d ${HOME}/.emacs.d
@@ -22,17 +39,6 @@ init-encrypted: ## Deploy the encrypted file in the git-crypt
 	ln -vsf ${PWD}/.netrc ${HOME}/.netrc
 	ln -vsf ${PWD}/.authinfo ${HOME}/.authinfo
 	ln -vsf ${PWD}/.config/hub ${HOME}/.config/hub
-
-initbackup: ## Initial deploy dotfiles using backup directory
-	mkdir -p ${HOME}/.config
-	test -L ${HOME}/.ssh || rm -rf ${HOME}/.ssh
-	ln -vsfn ${HOME}/backup/ssh ${HOME}/.ssh
-	chmod 600 ${HOME}/.ssh/id_rsa
-	test -L ${HOME}/.gnupg || rm -rf ${HOME}/.gnupg
-	ln -vsfn ${HOME}/backup/gnupg ${HOME}/.gnupg
-	mkdir -p ${HOME}/.local/share
-	test -L ${HOME}/.local/share/keyrings || rm -rf ${HOME}/.local/share/keyrings
-	ln -vsfn ${HOME}/backup/keyrings ${HOME}/.local/share/keyrings
 
 base: ## Install base and base-devel package
 	sudo pacman -S bash bzip2 coreutils cryptsetup device-mapper dhcpcd mdadm \
@@ -229,12 +235,6 @@ termite: ## Init termite terminal
 	mkdir -p ${HOME}/.config/termite
 	ln -vsf ${PWD}/.config/termite/config ${HOME}/.config/termite/config
 
-rclone: ## Init rclone
-	sudo pacman -S rclone
-	chmod 600 ${PWD}/.config/rclone/rclone.conf
-	mkdir -p ${HOME}/.config/rclone
-	ln -vsf ${PWD}/.config/rclone/rclone.conf ${HOME}/.config/rclone/rclone.conf
-
 dnsmasq: ## Init dnsmasq
 	sudo pacman -S dnsmasq
 	sudo ln -vsf ${PWD}/etc/dnsmasq/resolv.dnsmasq.conf /etc/resolv.dnsmasq.conf
@@ -320,6 +320,8 @@ pgcli: ## Init pgcli
 google-cloud: ## Install SDK and setting
 	curl https://sdk.cloud.google.com | bash
 	sudo pacman -S kubectl kubectx
+	test -L ${HOME}/.config/gcloud || rm -rf ${HOME}/.config/gcloud
+	ln -vsfn ${HOME}/backup/gcloud   ${HOME}/.config/gcloud
 	yay -S stern-bin
 	yay -S kubernetes-helm-bin
 
@@ -612,7 +614,7 @@ testpath: ## Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: install init initbackup init-encrypted alacritty urxvt xterm termite ttf-cica dnsmasq pipinstall goinstall aur google-mozc neomutt docker nodeinstall desktop zeal zoom sylpheed yay mpsyt rclone tlp fwupd google-cloud aws toggle thinkpad
+allinstall: install rclone initfirst init init-encrypted alacritty urxvt xterm termite ttf-cica dnsmasq pipinstall goinstall aur google-mozc neomutt docker nodeinstall desktop zeal zoom sylpheed yay mpsyt tlp fwupd google-cloud aws toggle thinkpad
 
 nextinstall: chromium other-python screenkey rubygem rbenv rustinstall postgresql redis mariadb
 
