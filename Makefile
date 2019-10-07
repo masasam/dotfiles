@@ -129,6 +129,7 @@ pipinstall: ## Install python packages for python-language-server
 	pip install --user virtualenv
 	pip install --user virtualenvwrapper
 	pip install --user yapf
+	rm -fr get-pip.py
 
 goinstall: ## Install go packages
 	mkdir -p ${HOME}/{bin,src}
