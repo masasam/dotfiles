@@ -54,7 +54,7 @@ install: ## Install arch linux packages using pacman
 	the_silver_searcher cifs-utils elinks flameshot ruby-rdoc ipcalc traceroute \
 	cups-pdf firefox firefox-i18n-ja gimp strace lhasa hub bookworm tig sysprof \
 	pkgfile dconf-editor rsync nodejs debian-archive-keyring gauche cpio aria2 \
-	nmap poppler-data ffmpeg asciidoc sbcl docker aspell aspell-en screen mosh \
+	nmap poppler-data ffmpeg asciidoc sbcl aspell aspell-en screen mosh diskus \
 	gdb wmctrl pwgen linux-docs htop tcpdump gvfs p7zip lzop fzf gpaste optipng \
 	arch-install-scripts pandoc jq pkgstats ruby highlight alsa-utils geckodriver \
 	texlive-langjapanese tokei texlive-latexextra ctags hdparm eog curl parallel \
@@ -65,7 +65,7 @@ install: ## Install arch linux packages using pacman
 	jhead peek ncdu sxiv gnome-screenshot sshfs fping syncthing terraform bat \
 	xdotool sshuttle packer ripgrep stunnel vimiv adapta-gtk-theme gnome-tweaks \
 	firejail opencv hexedit discord pv smartmontools ethtool gnome-logs mapnik \
-	wl-clipboard lshw diskus obs-studio wireshark-cli
+	wl-clipboard lshw obs-studio wireshark-cli
 	sudo pkgfile --update
 
 pipinstall: ## Install python packages for python-language-server
@@ -275,6 +275,7 @@ ttf-cica: ## Install Cica font
 	yay -S ttf-cica
 
 docker: ## Docker initial setup
+	sudo pacman -S docker
 	sudo usermod -aG docker ${USER}
 	mkdir -p ${HOME}/.docker
 	ln -vsf ${PWD}/.docker/config.json ${HOME}/.docker/config.json
