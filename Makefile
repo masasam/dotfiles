@@ -7,7 +7,7 @@ rclone: ## Init rclone
 	chmod 600 ${PWD}/.config/rclone/rclone.conf
 	ln -vsf ${PWD}/.config/rclone/rclone.conf ${HOME}/.config/rclone/rclone.conf
 
-initfirst: ## Deploy ssh gnupg keyring (Run after the rclone)
+initfirst: ## Deploy ssh gnupg (Run after the rclone)
 	test -L ${HOME}/.ssh || rclone sync dropbox: ${HOME}/backup
 	test -L ${HOME}/.ssh || rm -rf ${HOME}/.ssh
 	ln -vsfn ${HOME}/backup/ssh ${HOME}/.ssh
