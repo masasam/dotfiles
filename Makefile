@@ -53,7 +53,7 @@ base: ## Install base and base-devel package
 	libtool patch pkgconf systemd man-pages diffutils e2fsprogs sed
 
 install: ## Install arch linux packages using pacman
-	sudo pacman -S go zsh git vim tmux keychain evince unrar seahorse hugo mpv \
+	sudo pacman -S go zsh git vim tmux keychain evince unrar hugo mpv ethtool \
 	zsh-completions xsel emacs gvfs-smb unace iperf valgrind noto-fonts-emoji \
 	inkscape file-roller xclip atool debootstrap oath-toolkit imagemagick lynx \
 	the_silver_searcher cifs-utils elinks flameshot ruby-rdoc ipcalc traceroute \
@@ -69,8 +69,8 @@ install: ## Install arch linux packages using pacman
 	pacman-contrib x11-ssh-askpass libreoffice-fresh-ja python-prompt_toolkit \
 	jhead peek ncdu gnome-screenshot sshfs fping syncthing terraform bat lshw \
 	xdotool sshuttle packer ripgrep stunnel vimiv adapta-gtk-theme gnome-tweaks \
-	firejail opencv hexedit discord pv smartmontools ethtool gnome-logs mapnik \
-	wl-clipboard wireshark-cli lsof
+	firejail opencv hexedit discord pv smartmontools gnome-logs wireshark-cli \
+	wl-clipboard lsof mapnik
 	sudo pkgfile --update
 
 pipinstall: ## Install python packages for python-language-server
@@ -266,6 +266,7 @@ thinkpad: ## Workaround for Intel throttling issues in Linux
 	sudo systemctl enable --now lenovo_fix.service
 
 keyring: ## Init gnome keyrings
+	sudo pacman -S seahorse
 	mkdir -p ${HOME}/.local/share
 	test -L ${HOME}/.local/share/keyrings || rm -rf ${HOME}/.local/share/keyrings
 	ln -vsfn ${HOME}/backup/keyrings ${HOME}/.local/share/keyrings
