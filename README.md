@@ -53,7 +53,7 @@ You can update packages all with this command.
 
 ## Synchronize backup directory to cloud
 
-rclone set up
+[rclone](https://github.com/rclone/rclone) set up (This example is connected to the google drive)
 ```
 rclone config
 Current remotes:
