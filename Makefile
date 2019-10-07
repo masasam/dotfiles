@@ -73,7 +73,7 @@ install: ## Install arch linux packages using pacman
 	wl-clipboard lsof mapnik
 	sudo pkgfile --update
 
-pipinstall: ## Install python packages for python-language-server
+pipinstall: ## Install python packages
 	mkdir -p ${HOME}/.local
 	curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 	python ${PWD}/get-pip.py --user
