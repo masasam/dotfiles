@@ -513,21 +513,7 @@ You can make install from here
 	sudo pacman -S gnome-logs qreator diskus sysprof bat
 	sudo pacman -S obs-studio wireshark-cli mapnik
 
-## Activity
-
 ![activity](https://raw.githubusercontent.com/masasam/image/image/activity.png)
-
-Activities> Settings> Search
-
-Turn it all off
-
-Activities> Settings> Keyboard> Shortcut
-
->Display System - Activity screen [Alt + Space]
-
->Ctrl-u
-
-If you make a mistake on the keyboard, erase all with Ctrl-u
 
 #### Install using yay
 
