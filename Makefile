@@ -616,7 +616,7 @@ testpath: ## Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: install rclone initfirst init init-encrypted alacritty urxvt xterm termite ttf-cica dnsmasq pipinstall goinstall aur google-mozc neomutt docker nodeinstall desktop zeal zoom sylpheed yay mpsyt tlp fwupd google-cloud aws toggle thinkpad
+allinstall: install rclone initfirst keyring init init-encrypted alacritty urxvt xterm termite ttf-cica dnsmasq pipinstall goinstall aur google-mozc neomutt docker nodeinstall desktop zeal zoom sylpheed yay mpsyt tlp fwupd google-cloud aws toggle thinkpad
 
 nextinstall: chromium other-python screenkey rubygem rbenv rustinstall postgresql redis mariadb
 
