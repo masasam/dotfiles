@@ -55,7 +55,7 @@ You can update packages all with this command.
 
 Synchronize the backup directory to your favorite cloud using the [rclone](https://github.com/rclone/rclone).
 
-	rclone sync ${HOME}/backup dropbox:
+	rclone sync ${HOME}/backup dropbox:backup
 
 Synchronize the ~/backup directory to dropbox in this command.
 This command is a one-way synchronization to the cloud from your laptop or desktop.
