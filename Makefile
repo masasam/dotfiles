@@ -14,9 +14,6 @@ initfirst: ## Deploy ssh gnupg keyring (Run after the rclone)
 	chmod 600 ${HOME}/.ssh/id_rsa
 	test -L ${HOME}/.gnupg || rm -rf ${HOME}/.gnupg
 	ln -vsfn ${HOME}/backup/gnupg ${HOME}/.gnupg
-	mkdir -p ${HOME}/.local/share
-	test -L ${HOME}/.local/share/keyrings || rm -rf ${HOME}/.local/share/keyrings
-	ln -vsfn ${HOME}/backup/keyrings ${HOME}/.local/share/keyrings
 
 init: ## Initial deploy dotfiles
 	test -L ${HOME}/.emacs.d || rm -rf ${HOME}/.emacs.d
@@ -260,6 +257,11 @@ uefiupdate: ## Update system firmware and uefi
 thinkpad: ## Workaround for Intel throttling issues in Linux
 	sudo pacman -S throttled
 	sudo systemctl enable --now lenovo_fix.service
+
+keyring: ## Init gnome keyrings
+	mkdir -p ${HOME}/.local/share
+	test -L ${HOME}/.local/share/keyrings || rm -rf ${HOME}/.local/share/keyrings
+	ln -vsfn ${HOME}/backup/keyrings ${HOME}/.local/share/keyrings
 
 google-mozc: ## Install ibus-mozc
 	test -L ${HOME}/.mozc || rm -rf ${HOME}/.mozc
