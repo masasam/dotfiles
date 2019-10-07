@@ -44,6 +44,7 @@ bluez-libs
 bolt
 bookworm
 boost-libs
+boost1.69-libs
 bridge-utils
 brotli
 btrfs-progs
