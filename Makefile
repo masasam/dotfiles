@@ -8,6 +8,7 @@ rclone: ## Init rclone
 	ln -vsf ${PWD}/.config/rclone/rclone.conf ${HOME}/.config/rclone/rclone.conf
 
 initfirst: ## Deploy ssh gnupg (Run after the rclone)
+	sudo pacman -S openssh
 	test -L ${HOME}/.ssh || rclone sync dropbox: ${HOME}/backup
 	test -L ${HOME}/.ssh || rm -rf ${HOME}/.ssh
 	ln -vsfn ${HOME}/backup/ssh ${HOME}/.ssh
@@ -51,7 +52,7 @@ install: ## Install arch linux packages using pacman
 	zsh-completions xsel emacs gvfs-smb unace iperf valgrind noto-fonts-emoji \
 	inkscape file-roller xclip atool debootstrap oath-toolkit imagemagick lynx \
 	the_silver_searcher cifs-utils elinks flameshot ruby-rdoc ipcalc traceroute \
-	cups-pdf openssh firefox firefox-i18n-ja gimp strace lhasa hub bookworm tig \
+	cups-pdf firefox firefox-i18n-ja gimp strace lhasa hub bookworm tig sysprof \
 	pkgfile dconf-editor rsync nodejs debian-archive-keyring gauche cpio aria2 \
 	nmap poppler-data ffmpeg asciidoc sbcl docker aspell aspell-en screen mosh \
 	gdb wmctrl pwgen linux-docs htop tcpdump gvfs p7zip lzop fzf gpaste optipng \
@@ -64,7 +65,7 @@ install: ## Install arch linux packages using pacman
 	jhead peek ncdu sxiv gnome-screenshot sshfs fping syncthing terraform bat \
 	xdotool sshuttle packer ripgrep stunnel vimiv adapta-gtk-theme gnome-tweaks \
 	firejail opencv hexedit discord pv smartmontools ethtool gnome-logs mapnik \
-	qreator wl-clipboard lshw diskus sysprof obs-studio wireshark-cli
+	qreator wl-clipboard lshw diskus obs-studio wireshark-cli
 	sudo pkgfile --update
 
 pipinstall: ## Install python packages for python-language-server
