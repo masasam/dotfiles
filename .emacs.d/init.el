@@ -61,6 +61,7 @@
   (package-install 'dockerfile-mode)
   (package-install 'dumb-jump)
   (package-install 'eacl)
+  (package-install 'easy-escape)
   (package-install 'easy-hugo)
   (package-install 'easy-jekyll)
   (package-install 'edit-indirect)
