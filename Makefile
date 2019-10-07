@@ -59,13 +59,13 @@ install: ## Install arch linux packages using pacman
 	arch-install-scripts pandoc jq pkgstats ruby highlight alsa-utils geckodriver \
 	texlive-langjapanese tokei texlive-latexextra ctags hdparm eog curl parallel \
 	arc-gtk-theme npm typescript llvm llvm-libs lldb tree w3m whois nnn qreator \
-	zsh-syntax-highlighting shellcheck bash-completion mathjax expect elixir lsof \
+	zsh-syntax-highlighting shellcheck bash-completion mathjax expect obs-studio \
 	cscope postgresql-libs pdfgrep gnu-netcat cmatrix jpegoptim nethogs mlocate \
 	pacman-contrib x11-ssh-askpass libreoffice-fresh-ja python-prompt_toolkit \
 	jhead peek ncdu gnome-screenshot sshfs fping syncthing terraform bat lshw \
 	xdotool sshuttle packer ripgrep stunnel vimiv adapta-gtk-theme gnome-tweaks \
 	firejail opencv hexedit discord pv smartmontools ethtool gnome-logs mapnik \
-	wl-clipboard obs-studio wireshark-cli
+	wl-clipboard wireshark-cli lsof
 	sudo pkgfile --update
 
 pipinstall: ## Install python packages for python-language-server
@@ -384,7 +384,6 @@ yay: ## Install yay using yay
 
 aur: ## Install arch linux AUR packages using yay
 	yay -S downgrade
-	yay -S gitflow-avh
 	yay -S git-secrets
 	yay -S nvm
 	yay -S sequeler-git
@@ -393,6 +392,7 @@ aur: ## Install arch linux AUR packages using yay
 
 aurplus: ## Install arch linux AUR packages using yay
 	yay -S drone-cli
+	yay -S gitflow-avh
 	yay -S nkf
 	yay -S pencil
 	yay -S rtags
@@ -469,6 +469,7 @@ other-python: ## Install python3.5 python3.6
 	pyenv install 3.6.8
 
 elixir-ls: ## Install elixir-ls(Recompile if the version of elixir changes)
+	sudo pacman -S elixir
 	mkdir -p ${HOME}/src/github.com/JakeBecker
 	cd ${HOME}/src/github.com/JakeBecker;\
 	git clone git@github.com:JakeBecker/elixir-ls.git;\
