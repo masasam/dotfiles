@@ -1,0 +1,8 @@
+* Experiment
+** hugo [2018-10-30 火 18:23]
+#+BEGIN_SRC elisp
+(let ((completions (list (list (cdr (rassoc (easy-hugo-nth-eval-bloglist easy-hugo-url 0) (nth 0 easy-hugo-bloglist))) 0)
+			 (list (cdr (rassoc (easy-hugo-nth-eval-bloglist easy-hugo-url 1) (nth 1 easy-hugo-bloglist))) 1)
+			 (list (cdr (rassoc (easy-hugo-nth-eval-bloglist easy-hugo-url 2) (nth 2 easy-hugo-bloglist))) 2))))
+  (cadr (assoc (completing-read "Complete easy-hugo-url: " completions) completions)))
+#+END_SRC

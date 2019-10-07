@@ -1,0 +1,75 @@
+;;;; Emacs Bookmark Format Version 1 ;;;; -*- coding: utf-8-emacs -*- 
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("task.org"
+ (filename . "~/backup/emacs/org/task.org")
+ (front-context-string . "* Task\n** TODO 不")
+ (rear-context-string)
+ (position . 1))
+("experiment.org"
+ (filename . "~/backup/emacs/org/experiment.org")
+ (front-context-string . "* Experiment\n** ")
+ (rear-context-string)
+ (position . 1))
+("archives.org"
+ (filename . "~/backup/emacs/org/archives.org")
+ (front-context-string . "* Archives\n** co")
+ (rear-context-string)
+ (position . 1))
+("remember.org"
+ (filename . "~/backup/emacs/org/remember.org")
+ (front-context-string . "* Remember\n** ma")
+ (rear-context-string)
+ (position . 1))
+("password.org.gpg"
+ (filename . "~/backup/passwd/password.org.gpg")
+ (front-context-string . "* ansible\npass: ")
+ (rear-context-string)
+ (position . 1))
+("githubimage"
+ (filename . "~/Pictures/image/")
+ (front-context-string . ".git\n  -rw-r--r-")
+ (rear-context-string . "96  9月 19 21:48 ")
+ (position . 187))
+("org-capture-last-stored"
+ (filename . "~/backup/emacs/org/memo.org")
+ (front-context-string . "** forkしたリポジトリで本")
+ (rear-context-string . "み表示するための条件分岐です。\n")
+ (position . 18415))
+("org-refile-last-stored"
+ (filename . "~/backup/emacs/org/archives.org")
+ (front-context-string . "** css [2018-11-")
+ (rear-context-string . "gn」を指定することができます\n")
+ (position . 16878))
+("org"
+ (filename . "~/backup/emacs/org/")
+ (front-context-string . ".git\n  -rw-r--r-")
+ (rear-context-string . "96 10月  3 13:29 ")
+ (position . 179))
+("memo"
+ (filename . "~/backup/emacs/org/memo.org")
+ (front-context-string . "* Memo\n** macro ")
+ (rear-context-string)
+ (position . 1))
+("idea"
+ (filename . "~/backup/emacs/org/idea.org")
+ (front-context-string . "* Memo\n** idea [")
+ (rear-context-string)
+ (position . 1))
+("work"
+ (filename . "~/backup/work/")
+ (front-context-string)
+ (rear-context-string . "96  9月  3 11:16 ")
+ (position . 126))
+("kanban"
+ (filename . "~/backup/kanban/kanban")
+ (front-context-string)
+ (rear-context-string)
+ (position . 1))
+(".emacs.d"
+ (filename . "~/src/github.com/masasam/dotfiles/.emacs.d/")
+ (front-context-string . "..\n  -rw-r--r-- ")
+ (rear-context-string . "96  9月 20 13:03 ")
+ (position . 159))
+)
