@@ -62,10 +62,10 @@ install: ## Install arch linux packages using pacman
 	zsh-syntax-highlighting shellcheck bash-completion mathjax expect elixir lsof \
 	cscope postgresql-libs pdfgrep gnu-netcat cmatrix jpegoptim nethogs mlocate \
 	pacman-contrib x11-ssh-askpass libreoffice-fresh-ja python-prompt_toolkit \
-	jhead peek ncdu sxiv gnome-screenshot sshfs fping syncthing terraform bat \
+	jhead peek ncdu gnome-screenshot sshfs fping syncthing terraform bat lshw \
 	xdotool sshuttle packer ripgrep stunnel vimiv adapta-gtk-theme gnome-tweaks \
 	firejail opencv hexedit discord pv smartmontools ethtool gnome-logs mapnik \
-	wl-clipboard lshw obs-studio wireshark-cli
+	wl-clipboard obs-studio wireshark-cli
 	sudo pkgfile --update
 
 pipinstall: ## Install python packages for python-language-server
@@ -323,8 +323,8 @@ pgcli: ## Init pgcli
 	ln -vsfn ${HOME}/backup/pgcli ${HOME}/.config/pgcli
 
 google-cloud: ## Install SDK and setting
-	curl https://sdk.cloud.google.com | bash
 	sudo pacman -S kubectl kubectx
+	curl https://sdk.cloud.google.com | bash
 	test -L ${HOME}/.config/gcloud || rm -rf ${HOME}/.config/gcloud
 	ln -vsfn ${HOME}/backup/gcloud   ${HOME}/.config/gcloud
 	yay -S stern-bin
@@ -365,6 +365,7 @@ mpsyt: ## Install and deploy mps-youtube
 	ln -vsfn ${HOME}/backup/mps-youtube/playlists ${HOME}/.config/mps-youtube/playlists
 
 sxiv: ## Init sxiv
+	sudo pacman -S sxiv
 	mkdir -p ${HOME}/.config/sxiv/exec
 	ln -vsf ${PWD}/.config/sxiv/exec/image-info ${HOME}/.config/sxiv/exec/image-info
 	chmod +x ${HOME}/.config/sxiv/exec/image-info
