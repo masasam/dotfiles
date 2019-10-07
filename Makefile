@@ -3,9 +3,9 @@ export GOPATH := ${HOME}
 
 rclone: ## Init rclone
 	sudo pacman -S rclone git-crypt gnupg
-	mkdir -p ${HOME}/.config/rclone
 	chmod 600 ${PWD}/.config/rclone/rclone.conf
-	ln -vsf ${PWD}/.config/rclone/rclone.conf ${HOME}/.config/rclone/rclone.conf
+	test -L ${HOME}/.config/rclone || rm -rf ${HOME}/.config/rclone
+	ln -vsfn ${PWD}/.config/rclone ${HOME}/.config/rclone
 
 initfirst: ## Deploy ssh gnupg (Run after the rclone)
 	sudo pacman -S openssh
