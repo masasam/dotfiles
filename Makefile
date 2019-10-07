@@ -382,9 +382,6 @@ zeal: ## Deploy zeal config and docsets
 	mkdir -p ${HOME}/.config/Zeal
 	ln -vsf ${PWD}/.config/Zeal/Zeal.conf ${HOME}/.config/Zeal/Zeal.conf
 
-zoom: ## Install zoom for web conference
-	sudo pacman -U ${HOME}/backup/zoom/zoom_x86_64.pkg.tar.xz
-
 yay: ## Install yay using yay
 	yay -S yay
 
@@ -395,6 +392,7 @@ aur: ## Install arch linux AUR packages using yay
 	yay -S sequeler-git
 	yay -S slack-desktop
 	yay -S trivy-bin
+	yay -S zoom
 
 aurplus: ## Install arch linux AUR packages using yay
 	yay -S drone-cli
