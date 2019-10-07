@@ -58,14 +58,14 @@ install: ## Install arch linux packages using pacman
 	gdb wmctrl pwgen linux-docs htop tcpdump gvfs p7zip lzop fzf gpaste optipng \
 	arch-install-scripts pandoc jq pkgstats ruby highlight alsa-utils geckodriver \
 	texlive-langjapanese tokei texlive-latexextra ctags hdparm eog curl parallel \
-	arc-gtk-theme npm typescript llvm llvm-libs lldb tree w3m neomutt whois nnn \
+	arc-gtk-theme npm typescript llvm llvm-libs lldb tree w3m whois nnn qreator \
 	zsh-syntax-highlighting shellcheck bash-completion mathjax expect elixir lsof \
 	cscope postgresql-libs pdfgrep gnu-netcat cmatrix jpegoptim nethogs mlocate \
 	pacman-contrib x11-ssh-askpass libreoffice-fresh-ja python-prompt_toolkit \
 	jhead peek ncdu sxiv gnome-screenshot sshfs fping syncthing terraform bat \
 	xdotool sshuttle packer ripgrep stunnel vimiv adapta-gtk-theme gnome-tweaks \
 	firejail opencv hexedit discord pv smartmontools ethtool gnome-logs mapnik \
-	qreator wl-clipboard lshw diskus obs-studio wireshark-cli
+	wl-clipboard lshw diskus obs-studio wireshark-cli
 	sudo pkgfile --update
 
 pipinstall: ## Install python packages for python-language-server
@@ -186,6 +186,7 @@ rustinstall: ## Install rust and rust packages
 	rustup component add rls rust-analysis rust-src
 
 neomutt: ## Init neomutt mail client
+	sudo pacman -S neomutt
 	mkdir -p ${HOME}/.mutt
 	ln -vsf ${PWD}/.muttrc ${HOME}/.muttrc
 	ln -vsf ${PWD}/.mutt/mailcap ${HOME}/.mutt/mailcap
