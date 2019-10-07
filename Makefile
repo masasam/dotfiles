@@ -7,14 +7,19 @@ rclone: ## Init rclone
 	test -L ${HOME}/.config/rclone || rm -rf ${HOME}/.config/rclone
 	ln -vsfn ${PWD}/.config/rclone ${HOME}/.config/rclone
 
-initfirst: ## Deploy ssh gnupg (Run after the rclone)
-	sudo pacman -S openssh
-	test -L ${HOME}/.ssh || rm -rf ${HOME}/.ssh
-	ln -vsfn ${HOME}/backup/ssh ${HOME}/.ssh
-	chmod 600 ${HOME}/.ssh/id_rsa
+gnupg: ## Deploy gnupg (Run after rclone)
 	test -L ${HOME}/.gnupg || rclone sync dropbox:backup ${HOME}/backup
 	test -L ${HOME}/.gnupg || rm -rf ${HOME}/.gnupg
 	ln -vsfn ${HOME}/backup/gnupg ${HOME}/.gnupg
+
+ssh: ## Init ssh
+	sudo pacman -S openssh
+	mkdir -p ${HOME}/.ssh
+	ln -vsf ${PWD}/.ssh/config ${HOME}/.ssh/config
+	ln -vsf ${PWD}/.ssh/id_rsa ${HOME}/.ssh/id_rsa
+	ln -vsf ${PWD}/.ssh/id_rsa.pub ${HOME}/.ssh/id_rsa.pub
+	ln -vsf ${PWD}/.ssh/known_hosts ${HOME}/.ssh/known_hosts
+	chmod 600 ${HOME}/.ssh/id_rsa
 
 init: ## Initial deploy dotfiles
 	test -L ${HOME}/.emacs.d || rm -rf ${HOME}/.emacs.d
@@ -621,7 +626,7 @@ testpath: ## Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: rclone initfirst install keyring init init-encrypted alacritty urxvt xterm termite ttf-cica dnsmasq pipinstall goinstall aur google-mozc neomutt docker nodeinstall desktop zeal zoom sylpheed yay mpsyt tlp fwupd google-cloud aws toggle thinkpad
+allinstall: rclone gnupg ssh install keyring init init-encrypted alacritty urxvt xterm termite ttf-cica dnsmasq pipinstall goinstall aur google-mozc neomutt docker nodeinstall desktop zeal zoom sylpheed yay mpsyt tlp fwupd google-cloud aws toggle thinkpad
 
 nextinstall: chromium other-python screenkey rubygem rbenv rustinstall postgresql redis mariadb
 
