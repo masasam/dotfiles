@@ -9,10 +9,10 @@ rclone: ## Init rclone
 
 initfirst: ## Deploy ssh gnupg (Run after the rclone)
 	sudo pacman -S openssh
-	test -L ${HOME}/.ssh || rclone sync dropbox:backup ${HOME}/backup
 	test -L ${HOME}/.ssh || rm -rf ${HOME}/.ssh
 	ln -vsfn ${HOME}/backup/ssh ${HOME}/.ssh
 	chmod 600 ${HOME}/.ssh/id_rsa
+	test -L ${HOME}/.gnupg || rclone sync dropbox:backup ${HOME}/backup
 	test -L ${HOME}/.gnupg || rm -rf ${HOME}/.gnupg
 	ln -vsfn ${HOME}/backup/gnupg ${HOME}/.gnupg
 
