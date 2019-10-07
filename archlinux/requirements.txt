@@ -7,12 +7,12 @@ astroid==2.3.1
 attrs==19.2.0
 Automat==0.7.0
 autopep8==1.4.4
-awscli==1.16.253
+awscli==1.16.254
 backcall==0.1.0
 bcrypt==3.1.7
 beautifulsoup4==4.8.1
 bleach==3.1.0
-botocore==1.12.243
+botocore==1.12.244
 btrfsutil==1.1.1
 cached-property==1.5.1
 cachetools==3.1.1
@@ -164,7 +164,7 @@ python-dateutil==2.8.0
 python-jsonrpc-server==0.2.0
 python-language-server==0.28.3
 python-utils==2.3.0
-pytz==2019.2
+pytz==2019.3
 pyxdg==0.26
 PyYAML==5.1.2
 pyzmq==18.1.0
