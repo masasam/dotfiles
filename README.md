@@ -62,6 +62,7 @@ Since configuration file of [rclone](https://github.com/rclone/rclone) is encryp
 you install and set up [git-crypt](https://github.com/AGWA/git-crypt) at first step.
 Since [git-crypt](https://github.com/AGWA/git-crypt) is dependent on gnupg, you must place the gnupg configuration file manually.
 I deploy files that is downloaded from google drive to ~/.gnupg.
+Backup directory sample is [here](https://github.com/masasam/dotfiles/tree/master/backup_sample).
 
 #### Criteria of things managed by backup directory
 
