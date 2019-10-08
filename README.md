@@ -86,7 +86,7 @@ Backup directory sample is [here](https://github.com/masasam/dotfiles/tree/maste
 
 Set the name of the file you want to encrypt to .gitattributes
 
-    .env filter=git-crypt diff=git-crypt
+    rclone.conf filter=git-crypt diff=git-crypt
 
 Commit the .gitattributes to git.
 
@@ -97,7 +97,7 @@ Specify the key used to encrypt.
 
 	git-crypt add-gpg-user YOUR_GNUPG_ID
 
-It is encrypted except in your laptop or desktop after you commit a .env file.
+It is encrypted except in your laptop or desktop after you commit rclone.conf file.
 
 #### Criteria of things managed by backup directory
 
