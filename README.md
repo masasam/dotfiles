@@ -103,7 +103,7 @@ It is encrypted except in your laptop or desktop after you commit rclone.conf.
 
 - What can not be placed on github
 
-   Public key in .ssh etc.
+	scripts that password was written, etc.
 
 - Because it makes a lot of update file, it is troublesome to synchronize with github
 
@@ -113,7 +113,6 @@ It is encrypted except in your laptop or desktop after you commit rclone.conf.
 - Those that can not be opened but need to protect data
 
    Sylpheed configuration file and mail data etc.
-   As mail arrives, it will be synchronized to backup directory so you don't have to think about backup.
 
 # Arch Linux install
 
