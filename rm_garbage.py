@@ -66,7 +66,7 @@ def rm_garbage():
             print("    %s" % f)
 
     if len(found) == 0:
-        print("No garbage files found :)")
+        print("No garbage files found")
         return
 
     if yes_or_no("Remove all?", default="n"):
