@@ -8,9 +8,8 @@ rclone: ## Init rclone
 	ln -vsfn ${PWD}/.config/rclone ${HOME}/.config/rclone
 
 gnupg: ## Deploy gnupg (Run after rclone)
-	test -L ${HOME}/.gnupg || rclone sync dropbox:backup ${HOME}/backup
-	test -L ${HOME}/.gnupg || rm -rf ${HOME}/.gnupg
-	ln -vsfn ${HOME}/backup/gnupg ${HOME}/.gnupg
+	mkdir -p ${HOME}/.gnupg
+	ln -vsf ${PWD}/.gnupg/gpg-agent.conf ${HOME}/.gnupg/gpg-agent.conf
 
 ssh: ## Init ssh
 	sudo pacman -S openssh
