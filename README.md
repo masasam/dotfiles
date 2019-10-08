@@ -53,6 +53,11 @@ You can update packages all with this command.
 
 ## Synchronize backup directory to cloud
 
+Import the gpg key that has been backed up when you install
+
+	gpg --import path/to/private.key
+	gpg --import path/to/public.key
+
 [rclone](https://github.com/rclone/rclone) setting
 
 - google drive is [here](https://rclone.org/drive/)
@@ -69,7 +74,6 @@ This command is a one-way synchronization to the cloud from your laptop or deskt
 Since configuration file of [rclone](https://github.com/rclone/rclone) is encrypted with [git-crypt](https://github.com/AGWA/git-crypt),
 you install and set up [git-crypt](https://github.com/AGWA/git-crypt) at first step.
 Since [git-crypt](https://github.com/AGWA/git-crypt) is dependent on gnupg, you must place the gnupg configuration file manually.
-I deploy files that is downloaded from google drive to ~/.gnupg.
 Backup directory sample is [here](https://github.com/masasam/dotfiles/tree/master/backup_sample).
 
 	make gnupg
