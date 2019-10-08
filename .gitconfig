@@ -1,7 +1,7 @@
 [user]
 	name = Masashi Miyaura
 	email = masasam@users.noreply.github.com
-	signingkey = 639356530311C74F
+	signingkey = 288770C044C8CC3A
 [commit]
     gpgsign = true
 [color]
