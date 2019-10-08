@@ -75,7 +75,7 @@ Since [git-crypt](https://github.com/AGWA/git-crypt) is dependent on gnupg, you 
 I deploy files that is downloaded from google drive to ~/.gnupg.
 Backup directory sample is [here](https://github.com/masasam/dotfiles/tree/master/backup_sample).
 
-	make initfirst
+	make gnupg
 
 If you already have data at the cloud, please download backup directory from the cloud with this command.
 
