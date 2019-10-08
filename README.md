@@ -214,7 +214,7 @@ Write the closest mirror on the top.
 
 Install bese bese-devel of arch
 
-    pacstrap /mnt base base-devel
+    pacstrap /mnt base linux base-devel
 
 Generate fstab
 
