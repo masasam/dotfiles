@@ -53,7 +53,7 @@ You can update packages all with this command.
 
 ## Synchronize backup directory to cloud
 
-Import the gpg key that has been backed up when you install
+Import the gpg key that has been backed up when you install.
 
 	gpg --import path/to/private.key
 	gpg --import path/to/public.key
@@ -78,12 +78,26 @@ The following command is a one-way synchronization to your laptop or desktop fro
 
 Since configuration file of [rclone](https://github.com/rclone/rclone) is encrypted with [git-crypt](https://github.com/AGWA/git-crypt),
 you install and set up [git-crypt](https://github.com/AGWA/git-crypt) at first step.
-Since [git-crypt](https://github.com/AGWA/git-crypt) is dependent on gnupg, you must place the gnupg configuration file manually.
 Backup directory sample is [here](https://github.com/masasam/dotfiles/tree/master/backup_sample).
 
-	make gnupg
+## How to use git-crypt
 
-If you already have data at the cloud, please download backup directory from the cloud with this command.
+	git-crypt init
+
+Set the name of the file you want to encrypt to .gitattributes
+
+    .env filter=git-crypt diff=git-crypt
+
+Commit the .gitattributes to git.
+
+	git add .gitattributes
+	git commit -m 'Add encrypted file config'
+
+Specify the key used to encrypt.
+
+	git-crypt add-gpg-user YOUR_GNUPG_ID
+
+It is encrypted except in your laptop or desktop after you commit a .env file.
 
 #### Criteria of things managed by backup directory
 
