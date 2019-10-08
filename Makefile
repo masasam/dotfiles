@@ -49,7 +49,7 @@ base: ## Install base and base-devel package
 	nano netctl pacman pciutils perl procps-ng psmisc reiserfsprogs s-nail vi \
 	make shadow sysfsutils systemd-sysvcompat tar texinfo usbutils util-linux \
 	which xfsprogs autoconf automake binutils bison fakeroot flex gcc groff m4 \
-	libtool patch pkgconf systemd man-pages diffutils e2fsprogs sed
+	libtool patch pkgconf systemd man-pages diffutils e2fsprogs sed xz
 
 install: ## Install arch linux packages using pacman
 	sudo pacman -S base go zsh git vim tmux keychain evince unrar hugo ethtool \
