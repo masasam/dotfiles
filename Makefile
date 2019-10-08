@@ -52,7 +52,7 @@ base: ## Install base and base-devel package
 	libtool patch pkgconf systemd man-pages diffutils e2fsprogs sed
 
 install: ## Install arch linux packages using pacman
-	sudo pacman -S go zsh git vim tmux keychain evince unrar hugo mpv ethtool \
+	sudo pacman -S base go zsh git vim tmux keychain evince unrar hugo ethtool \
 	zsh-completions xsel emacs gvfs-smb unace iperf valgrind noto-fonts-emoji \
 	inkscape file-roller xclip atool debootstrap oath-toolkit imagemagick lynx \
 	the_silver_searcher cifs-utils elinks flameshot ruby-rdoc ipcalc traceroute \
@@ -69,7 +69,7 @@ install: ## Install arch linux packages using pacman
 	jhead peek ncdu gnome-screenshot sshfs fping syncthing terraform bat lshw \
 	xdotool sshuttle packer ripgrep stunnel vimiv adapta-gtk-theme gnome-tweaks \
 	firejail opencv hexedit discord pv smartmontools gnome-logs wireshark-cli \
-	wl-clipboard lsof mapnik
+	wl-clipboard lsof mapnik mpv
 	sudo pkgfile --update
 
 pipinstall: ## Install python packages
