@@ -97,7 +97,7 @@ Specify the key used to encrypt.
 
 	git-crypt add-gpg-user YOUR_GNUPG_ID
 
-It is encrypted except in your laptop or desktop after you commit rclone.conf file.
+It is encrypted except in your laptop or desktop after you commit rclone.conf.
 
 #### Criteria of things managed by backup directory
 
