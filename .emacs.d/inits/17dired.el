@@ -54,16 +54,6 @@
 		      (set-window-configuration wnd))))
       (error "No more than 2 files should be marked"))))
 
-
-(defun kanban-rename ()
-  "Rotate kanban file."
-  (interactive)
-  (rename-file "~/backup/kanban/kanban"
-	       (expand-file-name
-		(read-from-minibuffer "Rename: " `(".txt" . 1) nil nil nil)
-		"~/backup/kanban")
-	       1))
-
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:

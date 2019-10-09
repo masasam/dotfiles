@@ -36,6 +36,15 @@
 	      ("~/backup/emacs/org/memo.org" :level . 1)
 	      ("~/backup/emacs/org/task.org" :level . 1))))
 
+(defun kanban-rename ()
+  "Rotate kanban file."
+  (interactive)
+  (rename-file "~/backup/kanban/kanban.org"
+	       (expand-file-name
+		(read-from-minibuffer "Rename: " `(".org" . 1) nil nil nil)
+		"~/backup/kanban")
+	       1))
+
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:
