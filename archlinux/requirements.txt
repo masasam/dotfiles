@@ -7,12 +7,12 @@ astroid==2.3.1
 attrs==19.2.0
 Automat==0.7.0
 autopep8==1.4.4
-awscli==1.16.254
+awscli==1.16.255
 backcall==0.1.0
 bcrypt==3.1.7
 beautifulsoup4==4.8.1
 bleach==3.1.0
-botocore==1.12.244
+botocore==1.12.245
 btrfsutil==1.1.1
 cached-property==1.5.1
 cachetools==3.1.1
@@ -80,9 +80,9 @@ joblib==0.14.0
 json5==0.8.5
 jsonschema==3.0.2
 jupyter==1.0.0
-jupyter-client==5.3.3
+jupyter-client==5.3.4
 jupyter-console==6.0.0
-jupyter-core==4.5.0
+jupyter-core==4.6.0
 jupyterlab==1.1.4
 jupyterlab-server==1.0.6
 jupyterthemes==0.20.0
@@ -138,7 +138,7 @@ psycopg2==2.8.3
 psycopg2-binary==2.8.3
 ptyprocess==0.6.0
 pwquality==1.4.1
-py-spy==0.2.1
+py-spy==0.2.2
 pyasn1==0.4.7
 pyasn1-modules==0.2.6
 pycairo==1.18.1
