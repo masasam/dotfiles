@@ -55,8 +55,8 @@ You can update packages all with this command.
 
 Import the gpg key that has been backed up when you install.
 
-	gpg --import path/to/private.key
-	gpg --import path/to/public.key
+	gpg --import /path/to/private.key
+	gpg --import /path/to/public.key
 
 [rclone](https://github.com/rclone/rclone) setting
 
