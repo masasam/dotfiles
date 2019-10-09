@@ -3,6 +3,14 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
+;; flymake
+(eval-after-load 'flymake
+  (require 'flymake-diagnostic-at-point)
+  (add-hook 'flymake-mode-hook #'flymake-diagnostic-at-point-mode)
+  (set-face-attribute 'popup-tip-face nil
+		      :background "dark slate gray" :foreground "cyan1" :underline nil))
+
+
 ;; flycheck
 (add-hook 'after-init-hook #'global-flycheck-mode)
 ;;flycheck-package
