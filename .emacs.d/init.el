@@ -78,6 +78,7 @@
   (package-install 'flycheck)
   (package-install 'flycheck-package)
   (package-install 'flycheck-title)
+  (package-install 'flymake-diagnostic-at-point)
   (package-install 'flyspell-correct)
   (package-install 'flyspell-correct-ivy)
   (package-install 'forge)
