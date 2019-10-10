@@ -1,4 +1,4 @@
-;;; 08flychekc.el --- 08flycheck.el
+;;; 08flymake.el --- 08flymake.el
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)
@@ -7,17 +7,9 @@
 (eval-after-load 'flymake
   (require 'flymake-diagnostic-at-point)
   (add-hook 'flymake-mode-hook #'flymake-diagnostic-at-point-mode)
+  (add-hook 'emacs-lisp-mode-hook #'package-lint-setup-flymake)
   (set-face-attribute 'popup-tip-face nil
-		      :background "dark slate gray" :foreground "cyan1" :underline nil))
-
-
-;; flycheck
-(add-hook 'after-init-hook #'global-flycheck-mode)
-;;flycheck-package
-(eval-after-load 'flycheck
-  '(flycheck-package-setup))
-(with-eval-after-load 'flycheck
-  (flycheck-title-mode))
+		      :background "dark slate gray" :foreground "white" :underline nil))
 
 
 ;; flyspell-correct
@@ -50,4 +42,4 @@
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:
-;;; 08flycheck.el ends here
+;;; 08flymake.el ends here
