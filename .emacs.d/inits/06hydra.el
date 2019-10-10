@@ -21,6 +21,30 @@
   ("C-p" flymake-goto-prev-error))
 
 
+(defhydra hydra-go (go-mode-map "C-c")
+  "go"
+  ("C-n" flymake-goto-next-error)
+  ("C-p" flymake-goto-prev-error))
+
+
+(defhydra hydra-js2 (js2-mode-map "C-c")
+  "js2"
+  ("C-n" flymake-goto-next-error)
+  ("C-p" flymake-goto-prev-error))
+
+
+(defhydra hydra-typescript (typescript-mode-map "C-c")
+  "typescript"
+  ("C-n" flymake-goto-next-error)
+  ("C-p" flymake-goto-prev-error))
+
+
+(defhydra hydra-ruby (ruby-mode-map "C-c")
+  "ruby"
+  ("C-n" flymake-goto-next-error)
+  ("C-p" flymake-goto-prev-error))
+
+
 (defun other-window-or-split ()
   "If there is one window, open split window.
 If there are two or more windows, it will go to another window."
