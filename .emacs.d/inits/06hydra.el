@@ -9,6 +9,12 @@
   ("C-p" outline-previous-visible-heading "PrevHead"))
 
 
+(defhydra hydra-elisp (emacs-lisp-mode-map "C-c")
+  "elisp"
+  ("C-n" flymake-goto-next-error "NextHead")
+  ("C-p" flymake-goto-prev-error "PrevHead"))
+
+
 (defun other-window-or-split ()
   "If there is one window, open split window.
 If there are two or more windows, it will go to another window."
