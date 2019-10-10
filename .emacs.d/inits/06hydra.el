@@ -5,20 +5,20 @@
 
 (defhydra hydra-org (org-mode-map "C-c")
   "org"
-  ("C-n" outline-next-visible-heading "NextHead")
-  ("C-p" outline-previous-visible-heading "PrevHead"))
+  ("C-n" outline-next-visible-heading)
+  ("C-p" outline-previous-visible-heading))
 
 
 (defhydra hydra-elisp (emacs-lisp-mode-map "C-c")
   "elisp"
-  ("C-n" flymake-goto-next-error "NextHead")
-  ("C-p" flymake-goto-prev-error "PrevHead"))
+  ("C-n" flymake-goto-next-error)
+  ("C-p" flymake-goto-prev-error))
 
 
 (defhydra hydra-python (python-mode-map "C-c")
   "python"
-  ("C-n" flymake-goto-next-error "NextHead")
-  ("C-p" flymake-goto-prev-error "PrevHead"))
+  ("C-n" flymake-goto-next-error)
+  ("C-p" flymake-goto-prev-error))
 
 
 (defun other-window-or-split ()
