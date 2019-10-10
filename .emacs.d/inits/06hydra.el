@@ -3,12 +3,6 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
-(defhydra hydra-flymake (global-map "C-c")
-  "flymake"
-  ("C-n" flymake-goto-next-error)
-  ("C-p" flymake-goto-prev-error))
-
-
 (defun other-window-or-split ()
   "If there is one window, open split window.
 If there are two or more windows, it will go to another window."
@@ -70,15 +64,17 @@ If there are two or more windows, it will go to another window."
    ("M-p" previous-buffer)))
 
 
-(defhydra hydra-window (ctl-x-map "" :pre (widen))
-  "page"
+(defhydra hydra-ctrl-x (ctl-x-map "" :pre (widen))
+  "ctrl-x"
   ("0" delete-window)
   ("x" delete-window)
   ("1" delete-other-windows)
   ("2" split-window-below)
   ("3" split-window-right)
   ("o" other-window-or-split)
-  ("S" window-swap-states))
+  ("S" window-swap-states)
+  ("n" flymake-goto-next-error)
+  ("p" flymake-goto-prev-error))
 
 
 (defhydra hydra-zoom (global-map "<f2>")
