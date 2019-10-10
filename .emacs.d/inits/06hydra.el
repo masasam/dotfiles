@@ -3,6 +3,12 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
+(defhydra hydra-org (org-mode-map "C-c")
+  "org"
+  ("C-n" outline-next-visible-heading "NextHead")
+  ("C-p" outline-previous-visible-heading "PrevHead"))
+
+
 (defun other-window-or-split ()
   "If there is one window, open split window.
 If there are two or more windows, it will go to another window."
