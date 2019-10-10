@@ -15,6 +15,12 @@
   ("C-p" flymake-goto-prev-error "PrevHead"))
 
 
+(defhydra hydra-python (python-mode-map "C-c")
+  "python"
+  ("C-n" flymake-goto-next-error "NextHead")
+  ("C-p" flymake-goto-prev-error "PrevHead"))
+
+
 (defun other-window-or-split ()
   "If there is one window, open split window.
 If there are two or more windows, it will go to another window."
