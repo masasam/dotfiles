@@ -3,44 +3,8 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
-(defhydra hydra-org (org-mode-map "C-c")
-  "org"
-  ("C-n" outline-next-visible-heading)
-  ("C-p" outline-previous-visible-heading))
-
-
-(defhydra hydra-elisp (emacs-lisp-mode-map "C-c")
-  "elisp"
-  ("C-n" flymake-goto-next-error)
-  ("C-p" flymake-goto-prev-error))
-
-
-(defhydra hydra-python (python-mode-map "C-c")
-  "python"
-  ("C-n" flymake-goto-next-error)
-  ("C-p" flymake-goto-prev-error))
-
-
-(defhydra hydra-go (go-mode-map "C-c")
-  "go"
-  ("C-n" flymake-goto-next-error)
-  ("C-p" flymake-goto-prev-error))
-
-
-(defhydra hydra-js2 (js2-mode-map "C-c")
-  "js2"
-  ("C-n" flymake-goto-next-error)
-  ("C-p" flymake-goto-prev-error))
-
-
-(defhydra hydra-typescript (typescript-mode-map "C-c")
-  "typescript"
-  ("C-n" flymake-goto-next-error)
-  ("C-p" flymake-goto-prev-error))
-
-
-(defhydra hydra-ruby (ruby-mode-map "C-c")
-  "ruby"
+(defhydra hydra-flymake (global-map "C-c")
+  "flymake"
   ("C-n" flymake-goto-next-error)
   ("C-p" flymake-goto-prev-error))
 
