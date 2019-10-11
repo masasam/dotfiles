@@ -429,6 +429,7 @@ You can make install from here
 	yay -S screenkey
 	yay -S sequeler-git
 	yay -S slack-desktop
+	yay -S terraformer
 	yay -S yay
 
 ##### Install using pip

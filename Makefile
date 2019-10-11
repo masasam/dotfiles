@@ -391,6 +391,7 @@ aur: ## Install arch linux AUR packages using yay
 	yay -S nvm
 	yay -S sequeler-git
 	yay -S slack-desktop
+	yay -S terraformer
 	yay -S trivy-bin
 	yay -S zoom
 
