@@ -4,8 +4,8 @@
 ;;(setq debug-on-error t)
 
 ;; flymake
-(eval-after-load 'flymake
-  (require 'flymake-diagnostic-at-point)
+(require 'flymake-diagnostic-at-point)
+(with-eval-after-load 'flymake
   (add-hook 'flymake-mode-hook #'flymake-diagnostic-at-point-mode)
   (add-hook 'emacs-lisp-mode-hook #'package-lint-setup-flymake)
   (set-face-attribute 'popup-tip-face nil
