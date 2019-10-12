@@ -7,12 +7,12 @@ astroid==2.3.1
 attrs==19.2.0
 Automat==0.7.0
 autopep8==1.4.4
-awscli==1.16.257
+awscli==1.16.258
 backcall==0.1.0
 bcrypt==3.1.7
 beautifulsoup4==4.8.1
 bleach==3.1.0
-botocore==1.12.247
+botocore==1.12.248
 btrfsutil==1.1.1
 cached-property==1.5.1
 cachetools==3.1.1
@@ -93,7 +93,7 @@ lazy-object-proxy==1.4.2
 lensfun==0.3.2
 lesscpy==0.13.0
 LibAppArmor==2.13.3
-lit==0.8.1.dev0
+lit==0.9.0.dev0
 litecli==1.1.0
 louis==3.11.0
 lxml==4.4.1
