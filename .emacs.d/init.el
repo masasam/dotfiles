@@ -46,6 +46,7 @@
   (package-install 'color-identifiers-mode)
   (package-install 'company)
   (package-install 'company-prescient)
+  (package-install 'company-quickhelp)
   (package-install 'counsel)
   (package-install 'counsel-css)
   (package-install 'counsel-projectile)

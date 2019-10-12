@@ -20,6 +20,11 @@
 (bind-key "M-d" 'company-show-doc-buffer company-active-map)
 (add-hook 'after-init-hook 'global-company-mode)
 
+
+;; company-quickhelp
+(setq company-quickhelp-color-foreground "white")
+(setq company-quickhelp-color-background "dark slate gray")
+
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:
