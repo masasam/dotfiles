@@ -10,6 +10,7 @@
   (add-hook 'emacs-lisp-mode-hook #'package-lint-setup-flymake)
   (set-face-attribute 'popup-tip-face nil
 		      :background "dark slate gray" :foreground "white" :underline nil))
+(remove-hook 'flymake-diagnostic-functions 'flymake-proc-legacy-flymake)
 
 
 ;; flyspell-correct
