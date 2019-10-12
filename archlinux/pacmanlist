@@ -31,6 +31,7 @@ automake
 avahi
 babl
 baobab
+base
 bash
 bash-completion
 bat
@@ -740,7 +741,6 @@ netctl
 nethogs
 nettle
 networkmanager
-networkmanager-openvpn
 nm-connection-editor
 nmap
 nnn
@@ -765,7 +765,6 @@ openjpeg2
 openresolv
 openssh
 openssl
-openvpn
 opera-ffmpeg-codecs
 optipng
 opus
@@ -800,7 +799,6 @@ perl-timedate
 pinentry
 pipewire
 pixman
-pkcs11-helper
 pkgconf
 pkgfile
 pkgstats
