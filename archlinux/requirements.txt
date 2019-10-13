@@ -172,7 +172,7 @@ qreator==16.6.2
 qrencode==1.2
 qtconsole==4.5.5
 queuelib==1.5.0
-redis==3.3.10
+redis==3.3.11
 requests==2.22.0
 requests-mock==1.7.0
 requests-oauthlib==1.2.0
