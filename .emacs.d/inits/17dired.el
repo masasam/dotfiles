@@ -13,9 +13,9 @@
   (bind-key "e" 'my-dired-ediff-files dired-mode-map))
 
 (defun dired-dwim-target-directory ()
-  ;; Try to guess which target directory the user may want.
-  ;; If there is a dired buffer displayed in one of the next windows,
-  ;; use its current subdir, else use current subdir of this dired buffer.
+  "Try to guess which target directory the user may want.
+If there is a dired buffer displayed in one of the next windows,
+use its current subdir, else use current subdir of this dired buffer."
   (let ((this-dir (and (eq major-mode 'dired-mode)
 		       (dired-current-directory))))
     ;; non-dired buffer may want to profit from this function, e.g. vm-uudecode
@@ -25,7 +25,7 @@
 			     (with-current-buffer (window-buffer window)
 			       (eq major-mode 'dired-mode)))
 			   nil
-			   'visible)) ; <========================
+			   'visible))
 	       (other-dir (and other-win
 			       (with-current-buffer (window-buffer other-win)
 				 (and (eq major-mode 'dired-mode)
