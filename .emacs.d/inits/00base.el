@@ -234,7 +234,7 @@ If the region is inactive, `backward-kill-word'."
 
 
 (defun trash-list ()
-  "Show trash-list."
+  "Show trash list."
   (interactive)
   (find-file "~/.local/share/Trash/files"))
 
