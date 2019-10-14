@@ -58,7 +58,7 @@ If the region isn't selected, `swiper-isearch'."
 
 
 (defun counsel-ghq--list-candidates ()
-  "Candidates list for counsel-ghq."
+  "Candidates list for `counsel-ghq'."
   (with-temp-buffer
     (unless (zerop (apply #'call-process
 			  "ghq" nil t nil
