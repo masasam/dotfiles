@@ -7,12 +7,12 @@ astroid==2.3.1
 attrs==19.2.0
 Automat==0.7.0
 autopep8==1.4.4
-awscli==1.16.258
+awscli==1.16.259
 backcall==0.1.0
 bcrypt==3.1.7
 beautifulsoup4==4.8.1
 bleach==3.1.0
-botocore==1.12.248
+botocore==1.12.249
 btrfsutil==1.1.1
 cached-property==1.5.1
 cachetools==3.1.1
@@ -41,7 +41,7 @@ docopt==0.6.2
 docutils==0.15.2
 entrypoints==0.3
 ERAlchemy==1.2.10
-Faker==2.0.2
+Faker==2.0.3
 flake8==3.7.8
 future==0.18.0
 fuzzyfinder==2.1.0
@@ -162,7 +162,7 @@ pyrsistent==0.15.4
 PySocks==1.7.1
 python-dateutil==2.8.0
 python-jsonrpc-server==0.2.0
-python-language-server==0.29.0
+python-language-server==0.29.1
 python-utils==2.3.0
 pytz==2019.3
 pyxdg==0.26
