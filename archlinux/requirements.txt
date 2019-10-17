@@ -2,17 +2,17 @@ ansible==2.8.5
 ansible-lint==4.1.0
 apparmor==2.13.3
 appdirs==1.4.3
-asn1crypto==1.1.0
+asn1crypto==1.2.0
 astroid==2.3.1
 attrs==19.3.0
 Automat==0.7.0
 autopep8==1.4.4
-awscli==1.16.260
+awscli==1.16.261
 backcall==0.1.0
 bcrypt==3.1.7
 beautifulsoup4==4.8.1
 bleach==3.1.0
-botocore==1.12.250
+botocore==1.12.251
 btrfsutil==1.1.1
 cached-property==1.5.1
 cachetools==3.1.1
@@ -220,7 +220,7 @@ typed-ast==1.4.0
 uritemplate==3.0.0
 urllib3==1.25.6
 vimiv==0.9.1
-virtualenv==16.7.5
+virtualenv==16.7.6
 virtualenv-clone==0.5.3
 virtualenvwrapper==4.8.4
 vobject==0.9.6.1
@@ -232,6 +232,6 @@ widgetsnbextension==3.5.1
 wrapt==1.11.2
 x256==0.0.3
 yapf==0.28.0
-youtube-dl==2019.9.28
+youtube-dl==2019.10.16
 zipp==0.6.0
 zope.interface==4.6.0
