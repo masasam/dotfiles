@@ -124,7 +124,6 @@
   (package-install 'projectile-rails)
   (package-install 'python-mode)
   (package-install 'quickrun)
-  (package-install 'rbenv)
   (package-install 'realgud)
   (package-install 'realgud-byebug)
   (package-install 'repl-toggle)

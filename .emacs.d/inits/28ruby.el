@@ -3,10 +3,6 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
-(require 'rbenv)
-(setq rbenv-installation-dir "/home/masa/.rbenv")
-(global-rbenv-mode)
-
 (add-hook 'ruby-mode-hook 'eglot-ensure)
 
 ;; projectile rails
