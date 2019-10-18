@@ -119,6 +119,7 @@
   (package-install 'pcre2el)
   (package-install 'pkgbuild-mode)
   (package-install 'popwin)
+  (package-install 'posframe)
   (package-install 'projectile)
   (package-install 'projectile-rails)
   (package-install 'python-mode)
