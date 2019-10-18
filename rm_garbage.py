@@ -5,7 +5,7 @@ import os
 import shutil
 
 
-garbagefiles = [
+GARBAGE_FILES = [
     '~/.recently-used',
     '~/.local/share/recently-used.xbel',
     '~/.thumbnails',
@@ -57,24 +57,25 @@ def yes_or_no(question, default="n"):
 
 
 def rm_garbage():
+    """Recursively remove"""
     print("Found garbage files:")
     found = []
-    for f in garbagefiles:
-        expandfile = os.path.expanduser(f)
+    for garbage_files in GARBAGE_FILES:
+        expandfile = os.path.expanduser(garbage_files)
         if os.path.exists(expandfile):
             found.append(expandfile)
-            print("    %s" % f)
+            print("    %s" % garbage_files)
 
     if len(found) == 0:
         print("No garbage files found")
         return
 
     if yes_or_no("Remove all?", default="n"):
-        for f in found:
-            if os.path.isfile(f):
-                os.remove(f)
+        for found_file in found:
+            if os.path.isfile(found_file):
+                os.remove(found_file)
             else:
-                shutil.rmtree(f)
+                shutil.rmtree(found_file)
         print("All cleaned")
     else:
         print("No file removed")
