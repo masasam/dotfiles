@@ -31,6 +31,8 @@
 				  (get-char-property (point) 'flymake-diagnostic)))
 		 :position (point)
 		 :foreground-color "cyan"
+		 :internal-border-width 2
+		 :internal-border-color "red"
 		 :poshandler 'posframe-poshandler-window-bottom-left-corner)
   (dolist (hook flymake-posframe-hide-posframe-hooks)
     (add-hook hook #'flymake-posframe-hide-posframe nil t)))
