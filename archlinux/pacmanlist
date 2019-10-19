@@ -882,6 +882,7 @@ qt5-webchannel
 qt5-webkit
 qt5-x11extras
 qt5ct
+rapidjson
 raptor
 rasqal
 rclone
