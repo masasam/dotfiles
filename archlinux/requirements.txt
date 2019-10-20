@@ -116,7 +116,7 @@ oauthlib==3.1.0
 opencv-python==4.1.1.26
 packaging==19.2
 pafy==0.5.4
-pandas==0.25.1
+pandas==0.25.2
 pandocfilters==1.4.2
 paramiko==2.6.0
 parsel==1.5.2
