@@ -45,6 +45,7 @@ zshaddhistory() {
        && ${cmd} != blog-jpg
        && ${cmd} != xdg-open
        && ${cmd} != mpv-music
+       && ${cmd} != mpv-video
        && ${cmd} != traceroute
        && ${cmd} != speedtest-cli
     ]]
