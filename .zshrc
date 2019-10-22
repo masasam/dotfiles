@@ -720,7 +720,7 @@ function fetch-pull-request() {
 
 function mpv-music() {
     if [ $# = 1 ]; then
-	mpv --no-video $1 &
+	mpv --no-video --ytdl-format="worstvideo+bestaudio" --quiet $1 &
 	sleep 10
 	cd -
     else
@@ -731,7 +731,7 @@ function mpv-music() {
 
 function mpv-video() {
     if [ $# = 1 ]; then
-	mpv --ontop --no-border --autofit=600 --geometry=100%:100% --ytdl-format="(mp4)[height<=480]/best[height<=480]" --tv-quality 10 $1 &
+	mpv --ontop --no-border --autofit=600 --geometry=100%:100% --ytdl-format="[height<=480]+bestaudio" --tv-quality 10 --quiet $1 &
 	sleep 10
 	cd -
     else
