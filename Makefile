@@ -369,7 +369,7 @@ mpsyt: ## Install and deploy mps-youtube
 	pip install --user youtube-dl
 	mkdir -p ${HOME}/.config/mps-youtube
 	test -L ${HOME}/.config/mps-youtube/playlists || rm -rf ${HOME}/.config/mps-youtube/playlists
-	ln -vsfn ${HOME}/backup/mps-youtube/playlists ${HOME}/.config/mps-youtube/playlists
+	ln -vsfn ${HOME}/backup/youtube/playlists ${HOME}/.config/mps-youtube/playlists
 
 sxiv: ## Init sxiv
 	sudo pacman -S sxiv
