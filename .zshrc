@@ -728,7 +728,7 @@ function mpv-music() {
 }
 
 
-function mpv-music-quit() {
+function mpv-quit() {
     kill -9 $(ps auxf | fzf-tmux -d --reverse --prompt="ps > " | awk '{print $2}')
 }
 
