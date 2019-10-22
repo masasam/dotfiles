@@ -720,7 +720,7 @@ function fetch-pull-request() {
 
 function mpv-music() {
     if [ $# = 0 ]; then
-	mpv --no-video --ytdl-format="worstvideo+bestaudio" --quiet --loop=yes --shuffle ~/backup/youtube/list.m3u &
+	mpv --no-video --ytdl-format="worstvideo+bestaudio" --quiet --shuffle ~/backup/youtube/list.m3u &
 	sleep 10
 	cd -
     elif [ $# = 1 ]; then
@@ -735,7 +735,7 @@ function mpv-music() {
 
 function mpv-video() {
     if [ $# = 0 ]; then
-	mpv --ontop --no-border --autofit=600 --geometry=100%:100% --ytdl-format="[height<=480]+bestaudio" --tv-quality 10 --quiet --loop=yes --shuffle ~/backup/youtube/list.m3u &
+	mpv --ontop --no-border --autofit=600 --geometry=100%:100% --ytdl-format="[height<=480]+bestaudio" --tv-quality 10 --quiet --shuffle ~/backup/youtube/list.m3u &
 	sleep 10
 	cd -
     elif [ $# = 1 ]; then
