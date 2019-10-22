@@ -728,6 +728,17 @@ function mpv-music() {
 }
 
 
+function mpv-video() {
+    if [ $# = 1 ]; then
+	mpv --ontop --no-border --autofit=600 --geometry=100%:100% --tv-quality 10 $1 &
+	sleep 10
+	cd -
+    else
+	echo 'usage: mpv-video [youtube-url]'
+    fi
+}
+
+
 function mpv-quit() {
     kill -9 $(ps auxf | fzf-tmux -d --reverse --prompt="ps > " | awk '{print $2}')
 }
