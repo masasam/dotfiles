@@ -740,7 +740,7 @@ function mpv-video() {
 
 
 function mpv-quit() {
-    kill -9 $(ps auxf | fzf-tmux -d --reverse --prompt="ps > " | awk '{print $2}')
+    kill -9 $(ps auxf | grep mpv | head -n 1 | awk '{print $2}')
 }
 
 
