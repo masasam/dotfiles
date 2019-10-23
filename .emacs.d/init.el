@@ -52,6 +52,7 @@
   (package-install 'counsel-projectile)
   (package-install 'counsel-tramp)
   (package-install 'csv-mode)
+  (package-install 'dart-mode)
   (package-install 'daemons)
   (package-install 'dash)
   (package-install 'dashboard)
