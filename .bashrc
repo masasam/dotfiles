@@ -17,6 +17,7 @@ export HISTCONTROL=ignoredups
 export GOPATH=$HOME
 export PATH="$PATH:$GOPATH/bin"
 export PATH="$PATH:$HOME/src/github.com/JakeBecker/elixir-ls/rel/"
+export PATH="$PATH":"$HOME/.pub-cache/bin"
 export EDITOR='emacsclient'
 export XDG_CONFIG_HOME=$HOME/.config
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
