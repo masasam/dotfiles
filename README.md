@@ -408,6 +408,7 @@ You can make install from here
 	sudo pacman -S pyenv hexedit tokei aria2 discord pv git-crypt
 	sudo pacman -S gnome-logs qreator diskus sysprof bat mapnik
 	sudo pacman -S obs-studio wireshark-cli browserpass-chromium
+	sudo pacman -S dart
 
 ![activity](https://raw.githubusercontent.com/masasam/image/image/activity.png)
 
