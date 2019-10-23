@@ -721,7 +721,7 @@ function fetch-pull-request() {
 function mpv-music() {
     if [ $# = 0 ]; then
 	mpv --no-video --ytdl-format="worstvideo+bestaudio" --quiet --shuffle \
-	    $(ls ~/backup/youtube/*.m3u | fzf-tmux -d --reverse --no-sort +m --query "$LBUFFER" --prompt="History > ") &	
+	    $(ls ~/backup/youtube/*.m3u | fzf-tmux -d --reverse --no-sort +m --query "$LBUFFER" --prompt="Playlist > ") &	
 	sleep 10
 	cd -
     elif [ $# = 1 ]; then
@@ -737,7 +737,7 @@ function mpv-music() {
 function mpv-video() {
     if [ $# = 0 ]; then
 	mpv --ontop --no-border --autofit=600 --geometry=100%:100% --ytdl-format="[height<=480]+bestaudio" --tv-quality 10 --quiet \
-	    --shuffle $(ls ~/backup/youtube/*.m3u | fzf-tmux -d --reverse --no-sort +m --query "$LBUFFER" --prompt="History > ") &
+	    --shuffle $(ls ~/backup/youtube/*.m3u | fzf-tmux -d --reverse --no-sort +m --query "$LBUFFER" --prompt="Playlist > ") &
 	sleep 10
 	cd -
     elif [ $# = 1 ]; then
