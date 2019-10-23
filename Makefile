@@ -69,7 +69,7 @@ install: ## Install arch linux packages using pacman
 	jhead peek ncdu gnome-screenshot sshfs fping syncthing terraform bat lshw \
 	xdotool sshuttle packer ripgrep stunnel vimiv adapta-gtk-theme gnome-tweaks \
 	firejail opencv hexedit discord pv smartmontools gnome-logs wireshark-cli \
-	wl-clipboard lsof mapnik mpv browserpass-chromium dart
+	wl-clipboard lsof mapnik mpv browserpass-chromium
 	sudo pkgfile --update
 
 pipinstall: ## Install python packages
@@ -363,6 +363,10 @@ dingo: ## Install dingo Google DNS over HTTPS
 
 ccls: ## Install c,c++ language server
 	yay -S ccls
+
+dart: ## Install dart and language server
+	sudo pacman -S dart
+	pub global activate dart_language_server
 
 mpsyt: ## Install and deploy mps-youtube
 	pip install --user mps-youtube
