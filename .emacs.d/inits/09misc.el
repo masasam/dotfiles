@@ -108,13 +108,6 @@
 (define-key alarm-clock-mode-map "d" 'alarm-clock-kill)
 
 
-;; which-key
-(which-key-setup-side-window-bottom)
-(which-key-mode 1)
-;; C-x c-h and erase it (call with '?')
-(setq which-key-use-C-h-commands nil)
-
-
 ;; color-identifiers-mode
 (add-hook 'after-init-hook 'global-color-identifiers-mode)
 
