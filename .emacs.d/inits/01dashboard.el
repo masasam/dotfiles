@@ -9,9 +9,13 @@
   ;; Change start screen with dashboard
   (require 'dashboard)
   ;; Set the title
-  (setq dashboard-banner-logo-title (concat "GNU Emacs " emacs-version " kernel " (car (split-string (shell-command-to-string "uname -r") "-"))  " x86_64 ArchLinux GTK " gtk-version-string))
+  (setq dashboard-banner-logo-title
+	(concat "GNU Emacs " emacs-version " kernel "
+		(car (split-string (shell-command-to-string "uname -r") "-"))
+		" x86_64 ArchLinux GTK " gtk-version-string))
   ;; Set the banner
-  (setq dashboard-startup-banner (expand-file-name "emacs.png" user-emacs-directory))
+  (setq dashboard-startup-banner
+	(expand-file-name "emacs.png" user-emacs-directory))
   (dashboard-setup-startup-hook)
   (global-page-break-lines-mode)
   (setq dashboard-page-separator "\n\f\f\n")
