@@ -723,7 +723,7 @@ function mpv-music() {
     local PLAYLISTDIR=~/backup/youtube
     if [ $# = 0 ]; then
 	mpv --no-video --ytdl-format="worstvideo+bestaudio" --quiet --shuffle \
-	    $(ls $PLAYLISTDIR/*.m3u | fzf-tmux -d --reverse --no-sort +m --prompt="Playlist > ") &	
+	    --playlist=$(ls $PLAYLISTDIR/*.m3u | fzf-tmux -d --reverse --no-sort +m --prompt="Playlist > ") &	
 	sleep 10
 	cd -
     elif [ $# = 1 ]; then
@@ -739,12 +739,12 @@ function mpv-music() {
 function mpv-video() {
     local PLAYLISTDIR=~/backup/youtube
     if [ $# = 0 ]; then
-	mpv --ontop --no-border --autofit=600 --geometry=100%:100% --ytdl-format="[height<=480]+bestaudio" --tv-quality 10 --quiet \
-	    --shuffle $(ls $PLAYLISTDIR/*.m3u | fzf-tmux -d --reverse --no-sort +m --prompt="Playlist > ") &
+	mpv --ontop=yes --border=no --autofit=600 --geometry=100%:100% --ytdl-format="[height<=480]+bestaudio" --quiet \
+	    --shuffle --playlist=$(ls $PLAYLISTDIR/*.m3u | fzf-tmux -d --reverse --no-sort +m --prompt="Playlist > ") &
 	sleep 10
 	cd -
     elif [ $# = 1 ]; then
-	mpv --ontop --no-border --autofit=600 --geometry=100%:100% --ytdl-format="[height<=480]+bestaudio" --tv-quality 10 --quiet $1 &
+	mpv --ontop=yes --border=no --autofit=600 --geometry=100%:100% --ytdl-format="[height<=480]+bestaudio" --quiet=yes $1 &
 	sleep 10
 	cd -
     else
