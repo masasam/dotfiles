@@ -364,6 +364,9 @@ dingo: ## Install dingo Google DNS over HTTPS
 ccls: ## Install c,c++ language server
 	yay -S ccls
 
+android: ## Install android-studio
+	yay -S android-studio
+
 dart: ## Install dart and language server
 	sudo pacman -S dart
 	pub global activate dart_language_server
