@@ -25,6 +25,7 @@
 ;; company-quickhelp
 (setq company-quickhelp-color-foreground "white")
 (setq company-quickhelp-color-background "dark slate gray")
+(setq company-quickhelp-max-lines 5)
 (company-quickhelp-mode)
 
 ;; Local Variables:
