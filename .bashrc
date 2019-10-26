@@ -25,6 +25,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 PATH="$HOME/.node_modules/bin:$PATH"
 export npm_config_prefix=~/.node_modules
 PATH="$HOME/.local/bin:$PATH"
+export PATH="$PATH:$HOME/src/github.com/flutter/flutter/bin"
 export LIBVA_DRIVER_NAME=iHD
 export GTAGSCONF=/usr/share/gtags/gtags.conf
 export GTAGSLABEL=pygments

@@ -368,6 +368,12 @@ dart: ## Install dart and language server
 	sudo pacman -S dart
 	pub global activate dart_language_server
 
+flutter: ## Install flutter
+	mkdir -p ~/src/github.com/flutter
+	cd ~/src/github.com/flutter;\
+	wget https://storage.googleapis.com/flutter_infra/releases/stable/linux/flutter_linux_v1.9.1+hotfix.6-stable.tar.xz;\
+	tar xf flutter_linux_v1.9.1+hotfix.6-stable.tar.xz
+
 mpsyt: ## Install and deploy mps-youtube
 	pip install --user mps-youtube
 	pip install --user youtube-dl

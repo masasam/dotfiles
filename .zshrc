@@ -293,6 +293,7 @@ PATH="$HOME/.local/bin:$PATH"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+export PATH="$PATH:$HOME/src/github.com/flutter/flutter/bin"
 export PATH=$PATH:$HOME/.roswell/bin
 export LIBVA_DRIVER_NAME=iHD
 export GTAGSCONF=/usr/share/gtags/gtags.conf
