@@ -755,7 +755,7 @@ function mpv-video() {
 
 
 function mpv-quit() {
-    kill -9 $(ps aux | grep mpv | head -n 1 | awk '{print $2}')
+    pkill -SIGUSR1 -f mpv
 }
 
 
