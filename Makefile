@@ -365,7 +365,6 @@ ccls: ## Install c,c++ language server
 	yay -S ccls
 
 android: ## Install android-studio
-	sudo pacman -S android-tools android-udev
 	yay -S android-studio
 
 dart: ## Install dart and language server
