@@ -98,9 +98,7 @@
 
 
 ;; Fill-Column-Indicator
-(setq fci-rule-column 80)
-(setq fci-rule-width 3)
-(setq fci-rule-color "sea green")
+(setq fci-rule-column 100)
 
 
 ;; alarm-clock
