@@ -19,11 +19,13 @@
 (bind-key "C-i" 'company-complete-selection company-active-map)
 (bind-key "M-d" 'company-show-doc-buffer company-active-map)
 (add-hook 'after-init-hook 'global-company-mode)
+(setq company-tooltip-maximum-width 50)
 
 
 ;; company-quickhelp
 (setq company-quickhelp-color-foreground "white")
 (setq company-quickhelp-color-background "dark slate gray")
+(company-quickhelp-mode)
 
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
