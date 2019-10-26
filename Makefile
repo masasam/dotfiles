@@ -272,7 +272,7 @@ keyring: ## Init gnome keyrings
 	test -L ${HOME}/.local/share/keyrings || rm -rf ${HOME}/.local/share/keyrings
 	ln -vsfn ${HOME}/backup/keyrings ${HOME}/.local/share/keyrings
 
-google-mozc: ## Install ibus-mozc
+mozc: ## Install ibus-mozc
 	test -L ${HOME}/.mozc || rm -rf ${HOME}/.mozc
 	ln -vsfn ${HOME}/backup/mozc ${HOME}/.mozc
 	yay -S ibus-mozc
@@ -641,7 +641,7 @@ testpath: ## Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: rclone gnupg ssh install keyring init init-encrypted alacritty urxvt xterm termite ttf-cica dnsmasq pipinstall goinstall aur google-mozc neomutt docker nodeinstall desktop zeal sylpheed yay mpsyt tlp fwupd google-cloud aws toggle thinkpad kind
+allinstall: rclone gnupg ssh install keyring init init-encrypted alacritty urxvt xterm termite ttf-cica dnsmasq pipinstall goinstall aur mozc neomutt docker nodeinstall desktop zeal sylpheed yay tlp fwupd google-cloud aws toggle thinkpad kind
 
 nextinstall: chromium other-python screenkey rubygem rbenv rustinstall postgresql redis mariadb
 
