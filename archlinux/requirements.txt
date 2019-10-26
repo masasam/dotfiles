@@ -89,12 +89,12 @@ jupyterthemes==0.20.0
 kitchen==1.2.6
 kiwisolver==1.1.0
 kubernetes==10.0.1
-lazy-object-proxy==1.4.2
+lazy-object-proxy==1.4.3
 lensfun==0.3.2
 lesscpy==0.13.0
 LibAppArmor==2.13.3
 lit==0.9.0.dev0
-litecli==1.1.0
+litecli==1.2.0
 louis==3.11.0
 lxml==4.4.1
 MarkupSafe==1.1.1
