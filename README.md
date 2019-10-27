@@ -560,6 +560,10 @@ Google Kubernetes Engine
 	sudo pacman -S kubectl
 	yay -S stern-bin
 
+kind
+
+	GO111MODULE="on" go get -u -v sigs.k8s.io/kind@v0.5.1
+
 minikube with kvm2
 
 	sudo pacman -S minikube libvirt qemu-headless ebtables docker-machine kubectx
