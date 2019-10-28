@@ -69,7 +69,8 @@ install: ## Install arch linux packages using pacman
 	jhead peek ncdu gnome-screenshot sshfs fping syncthing terraform bat lshw \
 	xdotool sshuttle packer ripgrep stunnel vimiv adapta-gtk-theme gnome-tweaks \
 	firejail opencv hexedit discord pv smartmontools gnome-logs wireshark-cli \
-	wl-clipboard lsof mapnik mpv browserpass-chromium editorconfig-core-c
+	wl-clipboard lsof mapnik browserpass-chromium editorconfig-core-c watchexec \
+	mpv
 	sudo pkgfile --update
 
 pipinstall: ## Install python packages
