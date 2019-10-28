@@ -176,19 +176,9 @@ nodeinstall: ## Install node packages
 	yarn global add vue-language-server
 	yarn global add webpack
 
-rustinstall: ## Install rust and rust packages
-	sudo pacman -S cmake
-	mkdir -p ${HOME}/.cargo
-	curl -sSf https://sh.rustup.rs | sh
-	cargo install cargo-edit
-	cargo install cargo-script
-	cargo install cargo-update
-	cargo install exa
-	cargo install fd-find
-	cargo install hyperfine
-	cargo install skim
-	cargo install tztail
-	cargo install xsv
+rustinstall: ## Install rust and rust language server
+	sudo pacman -S rustup
+	rustup default stable
 	rustup component add rls rust-analysis rust-src
 
 neomutt: ## Init neomutt mail client

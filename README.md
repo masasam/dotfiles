@@ -594,21 +594,11 @@ minikube with kvm2
 	bundle install
 	bundle exec rails webpacker:install
 
-#### Install using rust
+#### Install rust and language server
 
-	sudo pacman -S cmake
-	mkdir -p ${HOME}/.cargo
-	curl -sSf https://sh.rustup.rs | sh
-	cargo install cargo-edit
-	cargo install cargo-script
-	cargo install cargo-update
-	cargo install exa
-	cargo install fd-find
-	cargo install hyperfine
-	cargo install skim
-	cargo install tztail
-	cargo install xsv
-	rustup component add rls-preview rust-analysis rust-src
+	sudo pacman -S rustup
+	rustup default stable
+	rustup component add rls rust-analysis rust-src
 
 # Terminal
 
