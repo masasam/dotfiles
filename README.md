@@ -560,7 +560,7 @@ Google Kubernetes Engine
 	sudo pacman -S kubectl
 	yay -S stern-bin
 
-kind
+kind(Kubernetes IN Docker)
 
 	GO111MODULE="on" go get -u -v sigs.k8s.io/kind@v0.5.1
 
