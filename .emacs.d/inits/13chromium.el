@@ -33,6 +33,12 @@
   (browse-url "https://calendar.google.com/calendar/r"))
 
 
+(defun chromium-meeting ()
+  "Open meeting.new with chromium."
+  (interactive)
+  (browse-url "https://meeting.new"))
+
+
 (defun chromium-gmail ()
   "Open gmail with chromium."
   (interactive)
