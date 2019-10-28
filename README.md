@@ -580,20 +580,6 @@ minikube with kvm2
 	yay -S ruby-build
 	rbenv install 2.5.1
 
-#### Create rails app
-
-	rbenv global 2.5.1
-	rbenv rehash
-	mkdir -p ${HOME}/src/github.com/masasam/myapp
-	cd ${HOME}/src/github.com/masasam/myapp
-	rbenv local 2.5.1
-	bundle init
-	echo "gem 'rails', '~> 5.2.0'" >> Gemfile
-	bundle install --path vendor/bundle
-	bundle exec rails new -B --webpack=react --database=mysql --skip-test .
-	bundle install
-	bundle exec rails webpacker:install
-
 #### Install rust and language server
 
 	sudo pacman -S rustup
