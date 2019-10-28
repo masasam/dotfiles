@@ -581,7 +581,7 @@ rustupdate: ## Update rust packages
 yarnupdate: ## Update yarn packages
 	yarn global upgrade
 
-test: ## Test this Makefile with mount backup directory
+testbackup: ## Test this Makefile with mount backup directory
 	docker build -t dotfiles ${PWD}
 	docker run -v /home/${USER}/backup:${HOME}/backup:cached --name makefiletest -d dotfiles
 	@echo "========== make install =========="
@@ -603,7 +603,7 @@ test: ## Test this Makefile with mount backup directory
 	@echo "========== make rustinstall =========="
 	docker exec makefiletest sh -c "cd ${PWD}; make rustinstall"
 
-testsimple: ## Test this Makefile with docker without backup directory
+test: ## Test this Makefile with docker without backup directory
 	docker build -t dotfiles ${PWD}
 	docker run --name makefiletest -d dotfiles
 	@echo "========== make install =========="

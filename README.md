@@ -684,9 +684,9 @@ Test this [Makefile](https://github.com/masasam/dotfiles/blob/master/Makefile) u
 
 	make test
 
-Test this [Makefile](https://github.com/masasam/dotfiles/blob/master/Makefile) using docker without Dropbox
+Test this [Makefile](https://github.com/masasam/dotfiles/blob/master/Makefile) using docker with backup directory
 
-	make testsimple
+	make testbackup
 
 #### When executing manually
 
