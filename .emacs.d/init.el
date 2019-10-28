@@ -135,6 +135,7 @@
   (package-install 'scss-mode)
   (package-install 'slim-mode)
   (package-install 'sly)
+  (package-install 'sly-macrostep)
   (package-install 'smart-jump)
   (package-install 'smartparens)
   (package-install 'swiper)
