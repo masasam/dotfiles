@@ -119,6 +119,7 @@ docker
 dosfstools
 double-conversion
 e2fsprogs
+editorconfig-core-c
 efibootmgr
 efivar
 elinks
@@ -904,6 +905,7 @@ ruby-rdoc
 rubygems
 run-parts
 runc
+rustup
 rxvt-unicode
 rxvt-unicode-terminfo
 s-nail
