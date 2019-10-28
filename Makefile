@@ -411,7 +411,6 @@ aur: ## Install arch linux AUR packages using yay
 
 aurplus: ## Install arch linux AUR packages using yay
 	yay -S drone-cli
-	yay -S gitflow-avh
 	yay -S nkf
 	yay -S pencil
 	yay -S rtags
