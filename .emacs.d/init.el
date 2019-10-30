@@ -89,6 +89,7 @@
   (package-install 'google-this)
   (package-install 'google-translate)
   (package-install 'haml-mode)
+  (package-install 'haskell-mode)
   (package-install 'htmlize)
   (package-install 'hydra)
   (package-install 'imenu-anywhere)
