@@ -20,6 +20,7 @@
 (bind-key "M-d" 'company-show-doc-buffer company-active-map)
 (add-hook 'after-init-hook 'global-company-mode)
 (setq company-tooltip-maximum-width 50)
+(add-to-list 'company-backends 'company-restclient)
 
 
 ;; company-quickhelp
