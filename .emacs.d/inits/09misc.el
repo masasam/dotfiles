@@ -34,6 +34,10 @@
 (beginend-global-mode)
 
 
+;; restclient-test
+(add-hook 'restclient-mode-hook #'restclient-test-mode)
+
+
 ;; editorconfig
 (editorconfig-mode 1)
 (setq editorconfig-get-properties-function
