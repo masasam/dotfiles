@@ -120,6 +120,6 @@
 (defun chromium-js ()
   "Open js development page with chromium."
   (interactive)
-  (browse-url "http://localhost:8000/"))
+  (browse-url "http://localhost:8080/"))
 
 ;;; 13chromium.el ends here
