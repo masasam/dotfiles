@@ -127,6 +127,7 @@
   (package-install 'quickrun)
   (package-install 'realgud)
   (package-install 'realgud-byebug)
+  (package-install 'reformatter)
   (package-install 'repl-toggle)
   (package-install 'rg)
   (package-install 'rjsx-mode)
