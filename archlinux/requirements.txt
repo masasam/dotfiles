@@ -7,12 +7,12 @@ astroid==2.3.2
 attrs==19.3.0
 Automat==0.8.0
 autopep8==1.4.4
-awscli==1.16.271
+awscli==1.16.272
 backcall==0.1.0
 bcrypt==3.1.7
 beautifulsoup4==4.8.1
 bleach==3.1.0
-botocore==1.13.7
+botocore==1.13.8
 btrfsutil==1.1.1
 cached-property==1.5.1
 cachetools==3.1.1
@@ -116,7 +116,7 @@ oauthlib==3.1.0
 opencv-python==4.1.1.26
 packaging==19.2
 pafy==0.5.4
-pandas==0.25.2
+pandas==0.25.3
 pandocfilters==1.4.2
 paramiko==2.6.0
 parsel==1.5.2
@@ -163,7 +163,7 @@ pyrsistent==0.15.5
 PySocks==1.7.1
 python-dateutil==2.8.0
 python-jsonrpc-server==0.2.0
-python-language-server==0.29.3
+python-language-server==0.30.0
 python-utils==2.3.0
 pytz==2019.3
 pyxdg==0.26

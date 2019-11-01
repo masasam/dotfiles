@@ -50,6 +50,7 @@ bridge-utils
 brotli
 browserpass
 browserpass-chromium
+browserpass-firefox
 btrfs-progs
 bubblewrap
 bzip2
