@@ -384,7 +384,7 @@ You can make install from here
     sudo pacman -S cifs-utils gvfs gvfs-smb eog lhasa lzop
     sudo pacman -S seahorse the_silver_searcher zeal vimiv
     sudo pacman -S cups-pdf htop neovim go pkgfile rsync elixir
-	sudo pacman -S nodejs whois nmap poppler-data ffmpeg 
+	sudo pacman -S nodejs whois nmap poppler-data ffmpeg
 	sudo pacman -S aspell aspell-en httperf asciidoc sbcl
 	sudo pacman -S gdb hub wmctrl gpaste pkgstats ripgrep
 	sudo pacman -S linux-docs pwgen gauche screen ipcalc
