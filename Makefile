@@ -395,6 +395,7 @@ aur: ## Install arch linux AUR packages using yay
 	yay -S git-secrets
 	yay -S nvm
 	yay -S sequeler-git
+	yay -S skypeforlinux-stable-bin
 	yay -S slack-desktop
 	yay -S terraformer
 	yay -S trivy-bin
