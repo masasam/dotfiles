@@ -10,6 +10,9 @@
 ;; M-!
 (push "*Shell Command Output*" popwin:special-display-config)
 
+;; trashed
+(push "Trash Can" popwin:special-display-config)
+
 ;; M-x compile
 (push '(compilation-mode :noselect t) popwin:special-display-config)
 

@@ -183,6 +183,7 @@
   (package-install 'test-simple)
   (package-install 'tldr)
   (package-install 'toml-mode)
+  (package-install 'trashed)
   (package-install 'transient)
   (package-install 'tree-mode)
   (package-install 'treepy)
