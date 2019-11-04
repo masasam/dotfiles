@@ -229,18 +229,6 @@ If the region is inactive, `backward-kill-word'."
 (setq auto-mode-alist (append '(("/tmp/mutt.*" . mail-mode)) auto-mode-alist))
 
 
-(defun trash-list ()
-  "Show trash list."
-  (interactive)
-  (find-file "~/.local/share/Trash/files"))
-
-
-(defun trash-empty ()
-  "Make trash empty."
-  (interactive)
-  (shell-command-to-string "trash-empty"))
-
-
 ;; Set buffer that can not be killed
 (with-current-buffer "*scratch*"
   (emacs-lock-mode 'kill))
