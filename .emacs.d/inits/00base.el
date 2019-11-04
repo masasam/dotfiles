@@ -108,8 +108,8 @@
 ;; All warning sounds and flash are invalid (note that the warning sound does not sound completely)
 (setq ring-bell-function 'ignore)
 
-;; It keeps going steadily past the local mark ...  C-u C-SPC C-SPC
-;; It keeps going steadily past the global mark ... C-x C-SPC C-SPC
+;; It keeps going steadily the local mark ...  C-u C-SPC C-SPC
+;; It keeps going steadily the global mark ... C-x C-SPC C-SPC
 (setq set-mark-command-repeat-pop t)
 
 
