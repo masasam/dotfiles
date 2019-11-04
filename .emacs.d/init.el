@@ -77,6 +77,7 @@
   (package-install 'elixir-mode)
   (package-install 'emacsql)
   (package-install 'emacsql-sqlite)
+  (package-install 'epl)
   (package-install 'espy)
   (package-install 'exec-path-from-shell)
   (package-install 'expand-region)
