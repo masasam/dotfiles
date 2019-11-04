@@ -41,7 +41,6 @@
   (package-install 'async)
   (package-install 'auto-compile)
   (package-install 'avy)
-  (package-install 'back-button)
   (package-install 'beginend)
   (package-install 'bind-key)
   (package-install 'browse-at-remote)
