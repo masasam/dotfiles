@@ -394,7 +394,6 @@ yay: ## Install yay using yay
 aur: ## Install arch linux AUR packages using yay
 	yay -S downgrade
 	yay -S git-secrets
-	yay -S kustomize-bin
 	yay -S nvm
 	yay -S sequeler-git
 	yay -S skypeforlinux-stable-bin

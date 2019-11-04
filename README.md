@@ -422,7 +422,6 @@ You can make install from here
 	yay -S mozc
 	yay -S nkf
 	yay -S nvm
-	yay -S kustomize-bin
 	yay -S pencil
 	yay -S rbenv
 	yay -S rtags
