@@ -511,17 +511,21 @@ You can make install from here
 
 	mkdir -p ${HOME}/.node_modules
 	yarn global add babel-eslint
+	yarn global add bash-language-server
 	yarn global add cloc
 	yarn global add create-component-app
 	yarn global add create-nuxt-app
 	yarn global add create-react-app
 	yarn global add eslint
 	yarn global add eslint-cli
+	yarn global add eslint-config-vue
 	yarn global add eslint-plugin-react
+	yarn global add eslint-plugin-vue@next
 	yarn add global expo-cli
 	yarn global add firebase-tools
 	yarn global add fx
 	yarn global add gulp
+	yarn global add	gulp-cli
 	yarn global add heroku
 	yarn global add indium
 	yarn global add javascript-typescript-langserver
@@ -532,11 +536,8 @@ You can make install from here
 	yarn global add mermaid.cli
 	yarn global add netlify-cli
 	yarn global add ngrok
-	yarn global add npm
 	yarn global add prettier
 	yarn global add parcel-bundler
-	yarn global add serverless
-	yarn global add vscode-css-languageserver-bin
 	yarn global add @vue/cli
 	yarn global add vue-language-server
 	yarn global add webpack
