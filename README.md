@@ -518,6 +518,7 @@ You can make install from here
 	yarn global add eslint
 	yarn global add eslint-cli
 	yarn global add eslint-plugin-react
+	yarn add global expo-cli
 	yarn global add firebase-tools
 	yarn global add fx
 	yarn global add gulp
@@ -536,7 +537,7 @@ You can make install from here
 	yarn global add parcel-bundler
 	yarn global add serverless
 	yarn global add vscode-css-languageserver-bin
-	yarn global add vue-cli
+	yarn global add @vue/cli
 	yarn global add vue-language-server
 	yarn global add webpack
 
