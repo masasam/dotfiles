@@ -521,7 +521,7 @@ You can make install from here
 	yarn global add eslint-config-vue
 	yarn global add eslint-plugin-react
 	yarn global add eslint-plugin-vue@next
-	yarn add global expo-cli
+	yarn global add expo-cli
 	yarn global add firebase-tools
 	yarn global add fx
 	yarn global add gulp
