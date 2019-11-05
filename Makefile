@@ -174,6 +174,7 @@ nodeinstall: ## Install node packages
 	yarn global add ngrok
 	yarn global add prettier
 	yarn global add parcel-bundler
+	yarn global add react-native-cli
 	yarn global add @vue/cli
 	yarn global add vue-language-server
 	yarn global add webpack
