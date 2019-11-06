@@ -176,6 +176,7 @@ nodeinstall: ## Install node packages
 	yarn global add parcel-bundler
 	yarn global add @vue/cli
 	yarn global add vue-language-server
+	yarn global add vue-native-cli
 	yarn global add webpack
 
 rustinstall: ## Install rust and rust language server

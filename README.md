@@ -540,6 +540,7 @@ You can make install from here
 	yarn global add parcel-bundler
 	yarn global add @vue/cli
 	yarn global add vue-language-server
+	yarn global add vue-native-cli
 	yarn global add webpack
 
 #### Kubernetes
