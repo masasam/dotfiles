@@ -172,6 +172,7 @@ nodeinstall: ## Install node packages
 	yarn global add mermaid.cli
 	yarn global add netlify-cli
 	yarn global add ngrok
+	yarn global add now
 	yarn global add prettier
 	yarn global add parcel-bundler
 	yarn global add @vue/cli
