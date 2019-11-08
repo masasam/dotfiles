@@ -443,6 +443,7 @@ You can make install from here
 	pip install --user ansible-lint
 	pip install --user autopep8
 	pip install --user awscli
+	pip install --user black
 	pip install --user cheat
 	pip install --user chromedriver-binary
 	pip install --user docker-compose

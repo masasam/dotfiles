@@ -82,6 +82,7 @@ pipinstall: ## Install python packages
 	pip install --user ansible
 	pip install --user ansible-lint
 	pip install --user autopep8
+	pip install --user black
 	pip install --user cheat
 	pip install --user chromedriver-binary
 	pip install --user django
