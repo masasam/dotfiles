@@ -872,7 +872,6 @@ python2-cairo
 python2-dbus
 python2-gobject
 python2-gobject2
-python2-six
 qpdf
 qreator
 qrencode
