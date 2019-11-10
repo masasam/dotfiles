@@ -136,7 +136,7 @@ goinstall: ## Install go packages
 	mkdir -p ${HOME}/{bin,src}
 	GO111MODULE="on" go get -u -v golang.org/x/tools/cmd/gopls
 	GO111MODULE="on" go get -u -v golang.org/x/tools/cmd/goimports
-	GO111MODULE="on" go get -u -v github.com/golang/dep/cmd/dep
+	go get -u -v github.com/golang/dep/cmd/dep
 	GO111MODULE="on" go get -u -v github.com/motemen/ghq
 	go get -u -v github.com/sonatard/ghs
 	go get -u -v github.com/kyoshidajp/ghkw
