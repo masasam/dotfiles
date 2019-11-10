@@ -147,7 +147,7 @@ pyasn1-modules==0.2.7
 pycairo==1.18.2
 pycodestyle==2.5.0
 pycparser==2.19
-pycryptodome==3.9.1
+pycryptodome==3.9.2
 PyDispatcher==2.0.5
 pydoc-utils==1.0.1
 pyflakes==2.1.1
