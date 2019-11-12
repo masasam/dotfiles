@@ -35,4 +35,6 @@
 /tutorial
 /url/
 /var/
+/lsp-cache/
 forge-database.sqlite
+.lsp-session-v1
