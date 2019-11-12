@@ -1,4 +1,4 @@
-;;; 33which-key.el --- 33which-key.el
+;;; 99which-key.el --- 99which-key.el
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)
@@ -11,4 +11,4 @@
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:
-;;; 30web.el ends here
+;;; 99which-key.el ends here

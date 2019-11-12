@@ -128,6 +128,8 @@
   (package-install 'lispy)
   (package-install 'load-relative)
   (package-install 'loc-changes)
+  (package-install 'lsp-mode)
+  (package-install 'php-mode)
   (package-install 'lv)
   (package-install 'macrostep)
   (package-install 'magit)
