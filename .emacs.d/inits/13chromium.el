@@ -54,7 +54,7 @@
 (defun chromium-github ()
   "Open github with chromium."
   (interactive)
-  (browse-url "https://github.com/masasam"))
+  (browse-url "https://repo.new/"))
 
 
 (defun chromium-reddit ()
