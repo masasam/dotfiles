@@ -40,6 +40,7 @@
   (package-install 'alarm-clock)
   (package-install 'async)
   (package-install 'auto-compile)
+  (package-install 'auto-minor-mode)
   (package-install 'avy)
   (package-install 'beginend)
   (package-install 'bind-key)
