@@ -15,6 +15,9 @@
             (setq js-indent-level 2)
             (setq js2-strict-missing-semi-warning nil)))
 
+(require 'lsp-mode)
+(add-to-list 'auto-minor-mode-alist '("\.vue\\'" . lsp))
+
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:
