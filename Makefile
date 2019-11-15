@@ -70,7 +70,7 @@ install: ## Install arch linux packages using pacman
 	xdotool sshuttle packer ripgrep stunnel vimiv adapta-gtk-theme gnome-tweaks \
 	firejail opencv hexedit discord pv smartmontools gnome-logs wireshark-cli \
 	wl-clipboard lsof mapnik browserpass-chromium editorconfig-core-c watchexec \
-	mpv browserpass-firefox
+	mpv browserpass-firefox docker-compose
 	sudo pkgfile --update
 
 pipinstall: ## Install python packages
@@ -86,7 +86,6 @@ pipinstall: ## Install python packages
 	pip install --user cheat
 	pip install --user chromedriver-binary
 	pip install --user django
-	pip install --user docker-compose
 	pip install --user eralchemy
 	pip install --user faker
 	pip install --user flake8
@@ -103,7 +102,6 @@ pipinstall: ## Install python packages
 	pip install --user matplotlib
 	pip install --user neovim
 	pip install --user nose
-	pip install --user opencv-python
 	pip install --user pandas
 	pip install --user pipenv
 	pip install --user progressbar2
@@ -117,7 +115,6 @@ pipinstall: ## Install python packages
 	pip install --user requests_mock
 	pip install --user rope
 	pip install --user rtv
-	pip install --user scikit-learn
 	pip install --user scipy
 	pip install --user scrapy
 	pip install --user seaborn
