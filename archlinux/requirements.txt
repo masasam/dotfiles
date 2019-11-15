@@ -160,7 +160,7 @@ python-language-server==0.30.0
 python-utils==2.3.0
 pytz==2019.3
 pyxdg==0.26
-PyYAML==3.13
+PyYAML==5.1
 pyzmq==18.1.1
 qreator==16.6.2
 qrencode==1.2
