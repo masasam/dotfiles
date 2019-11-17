@@ -311,7 +311,6 @@ Enable graphical login with gdm
 Preparing the net environment
 
 	pacman -S networkmanager
-	systemctl disable dhcpcd.service
 	systemctl enable NetworkManager.service
 	pacman -S otf-ipafont
 	exit
@@ -334,6 +333,7 @@ Install yay
 
 Preparing dotfiles
 
+	sudo pacman -S cifs-utils gvfs gvfs-smb
     mkdir -p ~/src/github.com/masasam
     cd src/github.com/masasam
 	git clone https://github.com/masasam/dotfiles.git
@@ -382,7 +382,7 @@ You can make install from here
     sudo pacman -S zsh-completions keychain syncthing
     sudo pacman -S powertop gimp unrar gnome-screenshot
     sudo pacman -S file-roller xclip atool evince inkscape
-    sudo pacman -S cifs-utils gvfs gvfs-smb eog lhasa lzop
+    sudo pacman -S eog lhasa lzop
     sudo pacman -S seahorse the_silver_searcher zeal vimiv
     sudo pacman -S cups-pdf htop neovim go pkgfile rsync elixir
 	sudo pacman -S nodejs whois nmap poppler-data ffmpeg
