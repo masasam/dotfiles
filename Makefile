@@ -410,8 +410,6 @@ aurplus: ## Install arch linux AUR packages using yay
 
 desktop: ## Update desktop entry
 	sudo ln -vsf ${PWD}/usr/share/applications/vim.desktop /usr/share/applications/vim.desktop
-	sudo ln -vsf ${PWD}/usr/share/applications/xterm.desktop /usr/share/applications/xterm.desktop
-	sudo ln -vsf ${PWD}/usr/share/applications/uxterm.desktop /usr/share/applications/uxterm.desktop
 	sudo ln -vsf ${PWD}/usr/share/applications/urxvt.desktop /usr/share/applications/urxvt.desktop
 	sudo ln -vsf ${PWD}/usr/share/applications/urxvtc.desktop /usr/share/applications/urxvtc.desktop
 	sudo ln -vsf ${PWD}/usr/share/applications/urxvt-tabbed.desktop /usr/share/applications/urxvt-tabbed.desktop
@@ -622,7 +620,7 @@ testpath: ## Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: rclone gnupg ssh install init init-encrypted keyring urxvt xterm termite ttf-cica dnsmasq pipinstall goinstall aur mozc neomutt docker nodeinstall desktop zeal sylpheed yay tlp fwupd gke aws toggle thinkpad kind
+allinstall: rclone gnupg ssh install init init-encrypted keyring urxvt termite ttf-cica dnsmasq pipinstall goinstall aur mozc neomutt docker nodeinstall desktop zeal sylpheed yay tlp fwupd gke aws toggle thinkpad kind
 
 nextinstall: chromium other-python screenkey rubygem rbenv rustinstall postgresql redis mariadb
 
