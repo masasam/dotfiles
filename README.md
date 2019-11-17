@@ -338,6 +338,7 @@ Preparing dotfiles
     cd src/github.com/masasam
 	git clone https://github.com/masasam/dotfiles.git
 	cd dotfiles
+	git-crypt unlock
 	make install
 	make init
 
