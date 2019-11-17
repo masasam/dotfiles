@@ -364,7 +364,7 @@ Preparing dotfiles
 	dconf write /org/gnome/desktop/wm/keybindings/activate-window-menu "['']"
 	dconf write /org/gnome/desktop/search-providers/disable-external true
 	dconf write /org/gnome/desktop/privacy/remember-recent-files false
-	dconf write /org/gnome/shell/keybindings/toggle-overview "'<Alt>space'"
+	dconf write /org/gnome/shell/keybindings/toggle-overview "['<Alt>space']"
 	dconf write /org/gnome/mutter/dynamic-workspaces false
 
 --------------------------------------
