@@ -15,8 +15,6 @@ ssh: ## Init ssh
 	sudo pacman -S openssh
 	mkdir -p ${HOME}/.ssh
 	ln -vsf ${PWD}/.ssh/config ${HOME}/.ssh/config
-	ln -vsf ${PWD}/.ssh/id_rsa ${HOME}/.ssh/id_rsa
-	ln -vsf ${PWD}/.ssh/id_rsa.pub ${HOME}/.ssh/id_rsa.pub
 	ln -vsf ${PWD}/.ssh/known_hosts ${HOME}/.ssh/known_hosts
 	chmod 600 ${HOME}/.ssh/id_rsa
 
