@@ -333,7 +333,7 @@ Install yay
 
 Preparing dotfiles
 
-	sudo pacman -S cifs-utils gvfs gvfs-smb
+	sudo pacman -S cifs-utils gvfs gvfs-smb git-crypt
     mkdir -p ~/src/github.com/masasam
     cd src/github.com/masasam
 	git clone https://github.com/masasam/dotfiles.git
@@ -406,7 +406,7 @@ You can make install from here
 	sudo pacman -S oath-toolkit imagemagick peek sshuttle lshw
 	sudo pacman -S bookworm ruby ruby-rdoc pacman-contrib ncdu
 	sudo pacman -S dart sxiv nnn adapta-gtk-theme podman firejail
-	sudo pacman -S pyenv hexedit tokei aria2 discord pv git-crypt
+	sudo pacman -S pyenv hexedit tokei aria2 discord pv
 	sudo pacman -S gnome-logs qreator diskus sysprof bat mapnik
 	sudo pacman -S obs-studio wireshark-cli browserpass-chromium
 	sudo pacman -S editorconfig-core-c watchexec browserpass-firefox
