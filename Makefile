@@ -545,16 +545,6 @@ rails: ## Create rails
 	bundle exec rails webpacker:install;\
 	cd -
 
-mew: ## Install mew as mail reader
-	cd ~/src;\
-	wget https://www.mew.org/Release/mew-6.8.tar.gz;\
-	tar zxvf mew-6.8.tar.gz;\
-	test -f	mew-6.8.tar.gz && rm -fr mew-6.8.tar.gz;\
-	cd mew-6.8;\
-	./configure;\
-	make;\
-	sudo make install;\
-
 tym: ## Init tym terminal
 	yay -S tym
 	mkdir -p ${HOME}/.config/tym
