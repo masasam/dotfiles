@@ -84,7 +84,6 @@ pipinstall: ## Install python packages
 	pip install --user cheat
 	pip install --user chromedriver-binary
 	pip install --user django
-	pip install --user eralchemy
 	pip install --user faker
 	pip install --user flake8
 	pip install --user gif-for-cli
@@ -309,6 +308,10 @@ postgresql: ## Postgresql initial setup
 	sudo systemctl start postgresql.service
 	cd /home;\
 	sudo -u postgres createuser --interactive
+
+eralchemy: ## Install eralchemy
+	sudo pacman -S graphviz
+	pip install --user eralchemy
 
 mycli: ## Init mycli
 	mkdir -p ${HOME}/backup/mycli
@@ -620,7 +623,7 @@ testpath: ## Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: rclone gnupg ssh install init init-encrypted keyring urxvt termite ttf-cica dnsmasq pipinstall goinstall aur mozc neomutt docker nodeinstall desktop zeal sylpheed yay tlp fwupd gke aws toggle thinkpad kind
+allinstall: rclone gnupg ssh install init init-encrypted keyring urxvt termite yay tlp thinkpad ttf-cica dnsmasq pipinstall goinstall mozc neomutt docker nodeinstall zeal sylpheed fwupd gke aws toggle aur kind eralchemy
 
 nextinstall: chromium other-python screenkey rubygem rbenv rustinstall postgresql redis mariadb
 
