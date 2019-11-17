@@ -622,7 +622,7 @@ testpath: ## Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: rclone gnupg ssh install keyring init init-encrypted alacritty urxvt xterm termite ttf-cica dnsmasq pipinstall goinstall aur mozc neomutt docker nodeinstall desktop zeal sylpheed yay tlp fwupd gke aws toggle thinkpad kind
+allinstall: rclone gnupg ssh install init init-encrypted keyring urxvt xterm termite ttf-cica dnsmasq pipinstall goinstall aur mozc neomutt docker nodeinstall desktop zeal sylpheed yay tlp fwupd gke aws toggle thinkpad kind
 
 nextinstall: chromium other-python screenkey rubygem rbenv rustinstall postgresql redis mariadb
 
