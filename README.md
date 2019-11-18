@@ -96,7 +96,7 @@ It is encrypted except in your laptop or desktop after you commit rclone.conf.
 
 	git-crypt unlock
 
-This command can decrypt an encrypted git repository.
+After cloning a repository with encrypted files, unlock with gnupg at this command.
 
 #### Criteria of things managed by backup directory
 
