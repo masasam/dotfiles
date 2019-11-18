@@ -648,8 +648,6 @@ When restarting NetworkManager, dnsmasq is set to be automatically usable.
 ibus-mozc
 
 Make input sources mozc only for region and language.
-Because I use a US keyboard Japanese conversion is control + space.
-Since I am useing emacs, I use mozc with shift + Space.
 My key setting is based on Kotoeri (closest to emacs key binding).
 
 >「Input before conversion」「Shift+Space」「Disable IME」
