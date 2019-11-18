@@ -574,7 +574,7 @@ rustupdate: ## Update rust packages
 yarnupdate: ## Update yarn packages
 	yarn global upgrade
 
-mysite: ## My site and blogs source
+mysite: ## My site and blogs source(This is private repository)
 	ghq get -p masasam/solist
 	ghq get -p masasam/solistblog
 	ghq get -p masasam/public
