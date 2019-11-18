@@ -34,8 +34,6 @@ init: ## Initial deploy dotfiles
 	ln -vsf ${PWD}/.gitconfig ${HOME}/.gitconfig
 	mkdir -p ${HOME}/.config/mpv
 	ln -vsf ${PWD}/.config/mpv/mpv.conf ${HOME}/.config/mpv/mpv.conf
-
-init-encrypted: ## Deploy the encrypted file in the git-crypt
 	ln -vsf ${PWD}/.netrc ${HOME}/.netrc
 	ln -vsf ${PWD}/.authinfo ${HOME}/.authinfo
 	ln -vsf ${PWD}/.config/hub ${HOME}/.config/hub
@@ -625,7 +623,7 @@ testpath: ## Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: rclone gnupg ssh install init init-encrypted keyring urxvt xterm termite yay tlp thinkpad ttf-cica dnsmasq pipinstall goinstall ibusmozc neomutt docker nodeinstall zeal sylpheed lvfs gke aws toggle aur kind eralchemy
+allinstall: rclone gnupg ssh install init keyring urxvt xterm termite yay tlp thinkpad ttf-cica dnsmasq pipinstall goinstall ibusmozc neomutt docker nodeinstall zeal sylpheed lvfs gke aws toggle aur kind eralchemy mpsyt
 
 nextinstall: chromium other-python screenkey rubygem rbenv rustinstall postgresql redis mariadb
 
