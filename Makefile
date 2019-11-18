@@ -341,7 +341,7 @@ minikube: ## Setup minikube with kvm2
 	minikube config set vm-driver kvm2
 
 kind: ## Setup kind (Kubernetes In Docker)
-	GO111MODULE="on" go get -u -v sigs.k8s.io/kind@v0.5.1
+	GO111MODULE="on" go get sigs.k8s.io/kind@v0.5.1
 	sudo sh -c "kind completion zsh > /usr/share/zsh/site-functions/_kind"
 
 redis: ## Redis inital setup
@@ -625,7 +625,7 @@ testpath: ## Echo PATH
 
 allinstall: rclone gnupg ssh install init keyring urxvt xterm termite yay tlp thinkpad ttf-cica dnsmasq pipinstall goinstall ibusmozc neomutt docker nodeinstall zeal sylpheed lvfs gke aws toggle aur kind eralchemy mpsyt
 
-nextinstall: chromium other-python screenkey rubygem rbenv rustinstall postgresql redis mariadb
+nextinstall: chromium rubygem rbenv rustinstall postgresql mariadb mycli pgcli
 
 allupdate: update pipupdate rustupdate goinstall yarnupdate
 
