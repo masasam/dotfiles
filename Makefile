@@ -413,6 +413,8 @@ aurplus: ## Install arch linux AUR packages using yay
 
 desktop: ## Update desktop entry
 	sudo ln -vsf ${PWD}/usr/share/applications/vim.desktop /usr/share/applications/vim.desktop
+	sudo ln -vsf ${PWD}/usr/share/applications/xterm.desktop /usr/share/applications/xterm.desktop
+	sudo ln -vsf ${PWD}/usr/share/applications/uxterm.desktop /usr/share/applications/uxterm.desktop
 	sudo ln -vsf ${PWD}/usr/share/applications/urxvt.desktop /usr/share/applications/urxvt.desktop
 	sudo ln -vsf ${PWD}/usr/share/applications/urxvtc.desktop /usr/share/applications/urxvtc.desktop
 	sudo ln -vsf ${PWD}/usr/share/applications/urxvt-tabbed.desktop /usr/share/applications/urxvt-tabbed.desktop
@@ -623,7 +625,7 @@ testpath: ## Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: rclone gnupg ssh install init init-encrypted keyring urxvt termite yay tlp thinkpad ttf-cica dnsmasq pipinstall goinstall ibusmozc neomutt docker nodeinstall zeal sylpheed lvfs gke aws toggle aur kind eralchemy
+allinstall: rclone gnupg ssh install init init-encrypted keyring urxvt xterm termite yay tlp thinkpad ttf-cica dnsmasq pipinstall goinstall ibusmozc neomutt docker nodeinstall zeal sylpheed lvfs gke aws toggle aur kind eralchemy
 
 nextinstall: chromium other-python screenkey rubygem rbenv rustinstall postgresql redis mariadb
 
