@@ -269,7 +269,6 @@ Set password
 
 Set groups and permissions
 
-    pacman -S vim
     visudo
 
 Uncomment comment out following
