@@ -53,11 +53,6 @@ You can update packages all with this command.
 
 ## Synchronize backup directory to cloud
 
-Import the gpg key that has been backed up when you install.
-
-	gpg --import /path/to/private.key
-	gpg --import /path/to/public.key
-
 [rclone](https://github.com/rclone/rclone) setting
 
 - google drive is [here](https://rclone.org/drive/)
@@ -98,6 +93,10 @@ Specify the key used to encrypt.
 	git-crypt add-gpg-user YOUR_GNUPG_ID
 
 It is encrypted except in your laptop or desktop after you commit rclone.conf.
+
+	git-crypt unlock
+
+This command can decrypt an encrypted git repository.
 
 #### Criteria of things managed by backup directory
 
@@ -331,9 +330,14 @@ Install yay
 	cd yay
 	makepkg -si
 
-Preparing dotfiles
+#### Preparing dotfiles
 
-	sudo pacman -S cifs-utils gvfs gvfs-smb git-crypt openssh
+	sudo pacman -S cifs-utils gvfs gvfs-smb git-crypt gnupg openssh
+
+Import the gpg key that has been backed up.
+
+	gpg --import /path/to/private.key
+	gpg --import /path/to/public.key
 
 Run the following after set the ssh key
 
