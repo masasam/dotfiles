@@ -39,13 +39,11 @@ init: ## Initial deploy dotfiles
 	ln -vsf ${PWD}/.config/hub ${HOME}/.config/hub
 
 base: ## Install base and base-devel package
-	sudo pacman -S bash bzip2 coreutils cryptsetup device-mapper dhcpcd mdadm \
-	file filesystem findutils gawk gcc-libs gettext glibc grep gzip inetutils \
-	iproute2 iputils jfsutils less licenses linux logrotate lvm2 man-db sudo \
-	nano netctl pacman pciutils perl procps-ng psmisc reiserfsprogs s-nail vi \
-	make shadow sysfsutils systemd-sysvcompat tar texinfo usbutils util-linux \
-	which xfsprogs autoconf automake binutils bison fakeroot flex gcc groff m4 \
-	libtool patch pkgconf systemd man-pages diffutils e2fsprogs sed xz
+	sudo pacman -S filesystem gcc-libs glibc bash coreutils file findutils gawk \
+	grep procps-ng sed tar gettext pciutils psmisc shadow util-linux bzip2 gzip \
+	xz licenses pacman systemd systemd-sysvcompat iputils iproute2 autoconf sudo \
+	automake binutils bison fakeroot flex gcc groff libtool m4 make patch pkgconf \
+	texinfo which
 
 install: ## Install arch linux packages using pacman
 	sudo pacman -S base go zsh git vim tmux keychain evince unrar hugo ethtool \
@@ -66,7 +64,7 @@ install: ## Install arch linux packages using pacman
 	xdotool sshuttle packer ripgrep stunnel vimiv adapta-gtk-theme gnome-tweaks \
 	firejail opencv hexedit discord pv smartmontools gnome-logs wireshark-cli \
 	wl-clipboard lsof mapnik browserpass-chromium editorconfig-core-c watchexec \
-	mpv browserpass-firefox docker-compose
+	mpv browserpass-firefox docker-compose man-db
 	sudo pkgfile --update
 
 pipinstall: ## Install python packages
@@ -287,7 +285,7 @@ circle-ci-cli: ## Install circle ci cli and setup
 	curl -fLSs https://circle.ci/cli | sudo bash
 	circleci update install
 
-mariadb: ## Mariadb initial setup
+maria-db: ## Mariadb initial setup
 	sudo ln -vsf ${PWD}/etc/sysctl.d/40-max-user-watches.conf /etc/sysctl.d/40-max-user-watches.conf
 	sudo pacman -S mariadb mariadb-clients
 	sudo ln -vsf ${PWD}/etc/my.cnf /etc/my.cnf
@@ -625,7 +623,7 @@ testpath: ## Echo PATH
 
 allinstall: rclone gnupg ssh install init keyring urxvt xterm termite yay tlp thinkpad ttf-cica dnsmasq pipinstall goinstall ibusmozc neomutt docker nodeinstall zeal sylpheed lvfs gke aws toggle aur kind eralchemy mpsyt
 
-nextinstall: chromium rubygem rbenv rustinstall postgresql mariadb mycli pgcli
+nextinstall: chromium rubygem rbenv rustinstall postgresql maria-db mycli pgcli
 
 allupdate: update pipupdate rustupdate goinstall yarnupdate
 
