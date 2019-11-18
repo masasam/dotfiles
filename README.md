@@ -661,7 +661,7 @@ reboot
 
 Once mozc is set up
 
-    ln -sfn ~/backup/mozc/mozc ~/.mozc
+    ln -sfn ~/backup/mozc ~/.mozc
 
 And set the mozc setting to backup directory.
 With this it will not have to be set again.
