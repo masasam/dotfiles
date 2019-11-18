@@ -4,7 +4,6 @@ acl
 adapta-gtk-theme
 adobe-source-code-pro-fonts
 adwaita-icon-theme
-alacritty
 alsa-lib
 alsa-plugins
 alsa-utils
@@ -15,7 +14,6 @@ arch-install-scripts
 archlinux-keyring
 argon2
 aria2
-asar
 asciidoc
 aspell
 aspell-en
@@ -74,7 +72,6 @@ clucene
 clutter
 clutter-gst
 clutter-gtk
-cmake
 cmark-gfm
 cmatrix
 cogl
@@ -94,7 +91,6 @@ cups-filters
 cups-pdf
 cups-pk-helper
 curl
-dart
 dav1d
 db
 dbus
@@ -105,7 +101,6 @@ debian-archive-keyring
 debootstrap
 desktop-file-utils
 device-mapper
-dhcpcd
 diffutils
 discord
 diskus
@@ -125,11 +120,9 @@ editorconfig-core-c
 efibootmgr
 efivar
 elinks
-elixir
 emacs
 enchant
 eog
-erlang-nox
 ethtool
 evince
 exempi
@@ -167,7 +160,6 @@ gc
 gcab
 gcc
 gcc-libs
-gconf
 gcr
 gd
 gdal
@@ -178,7 +170,6 @@ gdk-pixbuf2
 gdm
 geckodriver
 gegl
-gendesk
 geoclue
 geocode-glib
 geos
@@ -399,14 +390,12 @@ jansson
 jasper
 jbig2dec
 jemalloc
-jfsutils
 jhead
 jpegoptim
 jq
 js60
 json-c
 json-glib
-jsoncpp
 kbd
 keychain
 keyutils
@@ -549,7 +538,6 @@ libnghttp2
 libnice
 libnl
 libnm
-libnm-glib
 libnma
 libnotify
 libnsl
@@ -684,7 +672,6 @@ llvm
 llvm-libs
 lm_sensors
 lmdb
-logrotate
 lpsolve
 lshw
 lsof
@@ -708,8 +695,8 @@ m4
 mailcap
 make
 man-db
-man-pages
 mapnik
+mariadb
 mariadb-clients
 mariadb-libs
 mathjax
@@ -725,16 +712,13 @@ mlocate
 mobile-broadband-provider-info
 modemmanager
 mosh
-mozilla-common
 mpfr
 mpg123
 mpv
 mtdev
 mujs
 mutter
-mypaint-brushes
 mypaint-brushes1
-nano
 nautilus
 nautilus-sendto
 ncdu
@@ -744,7 +728,6 @@ neomutt
 neon
 net-tools
 netcdf
-netctl
 nethogs
 nettle
 networkmanager
@@ -769,7 +752,6 @@ opencore-amr
 opencv
 openexr
 openjpeg2
-openresolv
 openssh
 openssl
 opera-ffmpeg-codecs
@@ -830,7 +812,6 @@ pv
 pwgen
 pyenv
 pygobject-devel
-pygobject2-devel
 pygtk
 python
 python-appdirs
@@ -904,16 +885,13 @@ qt5-webchannel
 qt5-webkit
 qt5-x11extras
 qt5ct
-rapidjson
 raptor
 rasqal
 rclone
 re2
 readline
 redland
-reiserfsprogs
 rest
-rhash
 ripgrep
 rsync
 rtkit
@@ -927,7 +905,6 @@ runc
 rustup
 rxvt-unicode
 rxvt-unicode-terminfo
-s-nail
 sbc
 sbcl
 screen
@@ -961,7 +938,6 @@ strace
 stunnel
 sudo
 suitesparse
-sxiv
 sylpheed
 syncthing
 sysfsutils
@@ -1028,6 +1004,7 @@ vte-common
 vte3
 vulkan-icd-loader
 w3m
+watchexec
 wavpack
 wayland
 wayland-protocols
