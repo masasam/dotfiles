@@ -209,6 +209,7 @@ Connect internet with wifi
 Make sure the earliest mirror is selected.
 Write the closest mirror on the top.
 
+	sudo pacman -S vi vim
 	vi /etc/pacman.d/mirrorlist
 
 Install bese bese-devel of arch
