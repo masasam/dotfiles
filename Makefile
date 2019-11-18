@@ -574,6 +574,12 @@ rustupdate: ## Update rust packages
 yarnupdate: ## Update yarn packages
 	yarn global upgrade
 
+mysite: ## My site and blogs source
+	ghq get -p masasam/solist
+	ghq get -p masasam/solistblog
+	ghq get -p masasam/public
+	ghq get -p masasam/PPAP
+
 testbackup: ## Test this Makefile with mount backup directory
 	docker build -t dotfiles ${PWD}
 	docker run -v /home/${USER}/backup:${HOME}/backup:cached --name makefiletest -d dotfiles
