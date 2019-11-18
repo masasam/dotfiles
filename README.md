@@ -571,7 +571,7 @@ Google Kubernetes Engine
 
 kind(Kubernetes IN Docker)
 
-	GO111MODULE="on" go get sigs.k8s.io/kind@v0.5.1
+	GO111MODULE="on" go get sigs.k8s.io/kind@v0.6.0
 
 minikube with kvm2
 
