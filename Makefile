@@ -340,7 +340,6 @@ minikube: ## Setup minikube with kvm2
 
 kind: ## Setup kind (Kubernetes In Docker)
 	GO111MODULE="on" go get sigs.k8s.io/kind@v0.5.1
-	sudo sh -c "kind completion zsh > /usr/share/zsh/site-functions/_kind"
 
 redis: ## Redis inital setup
 	sudo pacman -S redis
