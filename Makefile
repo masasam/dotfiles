@@ -2,12 +2,13 @@ export PATH := ${HOME}/.local/bin:${HOME}/.node_modules/bin:${HOME}/.cargo/bin:/
 export GOPATH := ${HOME}
 
 rclone: ## Init rclone
-	sudo pacman -S rclone git-crypt gnupg
+	sudo pacman -S rclone
 	chmod 600 ${PWD}/.config/rclone/rclone.conf
 	test -L ${HOME}/.config/rclone || rm -rf ${HOME}/.config/rclone
 	ln -vsfn ${PWD}/.config/rclone ${HOME}/.config/rclone
 
 gnupg: ## Deploy gnupg (Run after rclone)
+	sudo pacman -S git-crypt gnupg
 	mkdir -p ${HOME}/.gnupg
 	ln -vsf ${PWD}/.gnupg/gpg-agent.conf ${HOME}/.gnupg/gpg-agent.conf
 
