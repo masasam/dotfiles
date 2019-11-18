@@ -7,13 +7,13 @@ astroid==2.3.3
 attrs==19.3.0
 Automat==0.8.0
 autopep8==1.4.4
-awscli==1.16.283
+awscli==1.16.284
 backcall==0.1.0
 bcrypt==3.1.7
 beautifulsoup4==4.8.1
 black==19.10b0
 bleach==3.1.0
-botocore==1.13.19
+botocore==1.13.20
 btrfsutil==1.1.1
 cached-property==1.5.1
 cachetools==3.1.1
@@ -137,7 +137,7 @@ pyasn1-modules==0.2.7
 pycairo==1.18.2
 pycodestyle==2.5.0
 pycparser==2.19
-pycryptodome==3.9.3
+pycryptodome==3.9.4
 PyDispatcher==2.0.5
 pydoc-utils==1.0.1
 pyflakes==2.1.1
