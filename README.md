@@ -192,7 +192,7 @@ Set all the rest to / partition
 	Last sector      : enter
 	Hex code or GUID : 8300
 
-Format and mount with ext4 and fat32
+Format and mount with fat32 and ext4
 
 	mkfs.vfat -F32 /dev/sda1
 	mkfs.ext4 /dev/sda2
@@ -205,7 +205,7 @@ Connect internet with wifi
 	ip link
 	rfkill list
 	rfkill unblock 0
-	wifi-menu wlp2s0
+	wifi-menu wifi0
 
 Make sure the earliest mirror is selected.
 Write the closest mirror on the top.
@@ -334,16 +334,16 @@ Install yay
 Preparing dotfiles
 
 	sudo pacman -S cifs-utils gvfs gvfs-smb git-crypt openssh
+
+Run the following after set the ssh key
+
     mkdir -p ~/src/github.com/masasam
     cd src/github.com/masasam
-	git clone https://github.com/masasam/dotfiles.git
+	git clone git@github.com:masasam/dotfiles.git
 	cd dotfiles
 	git-crypt unlock
 	make install
 	make init
-
-	# after set-url git
-	git remote set-url origin git@github.com:masasam/dotfiles.git
 
 	# Below is for posting images of github
 	cd ~/Pictures
