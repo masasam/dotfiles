@@ -338,6 +338,8 @@ Import the gpg key that has been backed up.
 
 	gpg --import /path/to/private.key
 	gpg --import /path/to/public.key
+	gpg --edit-key masasam@users.noreply.github.com
+	gpg> trust
 
 Run the following after set the ssh key
 
