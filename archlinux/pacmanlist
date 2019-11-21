@@ -838,7 +838,9 @@ python-google-auth-httplib2
 python-html2text
 python-httplib2
 python-idna
+python-importlib-metadata
 python-jsonschema
+python-more-itertools
 python-oauth2client
 python-packaging
 python-paramiko
@@ -867,6 +869,7 @@ python-wcwidth
 python-websocket-client
 python-xdg
 python-yaml
+python-zipp
 python2
 python2-cairo
 python2-dbus
