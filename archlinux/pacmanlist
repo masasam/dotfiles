@@ -842,6 +842,7 @@ python-importlib-metadata
 python-jsonschema
 python-more-itertools
 python-oauth2client
+python-ordered-set
 python-packaging
 python-paramiko
 python-pillow
