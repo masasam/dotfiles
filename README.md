@@ -415,7 +415,7 @@ You can make install from here
 	sudo pacman -S gnome-logs qreator diskus sysprof bat mapnik
 	sudo pacman -S obs-studio wireshark-cli browserpass-chromium
 	sudo pacman -S editorconfig-core-c watchexec browserpass-firefox
-	sudo pacman -S docker-compose man-db baobab
+	sudo pacman -S docker-compose man-db baobab ioping
 
 ![activity](https://raw.githubusercontent.com/masasam/image/image/activity.png)
 
