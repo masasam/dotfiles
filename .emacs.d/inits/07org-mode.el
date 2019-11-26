@@ -7,6 +7,7 @@
 
 (setq org-log-done 'time)
 (setq org-use-speed-commands t)
+(setq org-src-tab-acts-natively t)
 (setq org-src-fontify-natively t)
 (setq org-agenda-files '("~/backup/emacs/org/task.org"))
 (setq calendar-holidays nil)
