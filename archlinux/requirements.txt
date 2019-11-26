@@ -7,13 +7,13 @@ astroid==2.3.3
 attrs==19.3.0
 Automat==0.8.0
 autopep8==1.4.4
-awscli==1.16.291
+awscli==1.16.292
 backcall==0.1.0
 bcrypt==3.1.7
 beautifulsoup4==4.8.1
 black==19.10b0
 bleach==3.1.0
-botocore==1.13.27
+botocore==1.13.28
 btrfsutil==1.1.1
 cached-property==1.5.1
 cachetools==3.1.1
@@ -74,7 +74,7 @@ jedi==0.15.1
 Jinja2==2.10.3
 jmespath==0.9.4
 json5==0.8.5
-jsonschema==3.1.1
+jsonschema==3.2.0
 jupyter==1.0.0
 jupyter-client==5.3.4
 jupyter-console==6.0.0
@@ -144,7 +144,7 @@ pycryptodome==3.9.4
 PyDispatcher==2.0.5
 pydoc-utils==1.0.1
 pyflakes==2.1.1
-Pygments==2.4.2
+Pygments==2.5.1
 PyGObject==3.34.0
 pygraphviz==1.5
 PyHamcrest==1.9.0
