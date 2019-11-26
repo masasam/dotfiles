@@ -378,6 +378,7 @@ intel-gmmlib
 intel-media-driver
 intel-tbb
 intel-ucode
+ioping
 ipcalc
 iperf
 iproute2
