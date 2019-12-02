@@ -6,6 +6,8 @@ adobe-source-code-pro-fonts
 adwaita-icon-theme
 alsa-lib
 alsa-plugins
+alsa-topology-conf
+alsa-ucm-conf
 alsa-utils
 aom
 apparmor
