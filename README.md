@@ -453,7 +453,6 @@ You can make install from here
 	pip install --user black
 	pip install --user cheat
 	pip install --user chromedriver-binary
-	pip install --user docker-compose
 	pip install --user eralchemy
 	pip install --user faker
 	pip install --user flake8
