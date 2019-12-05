@@ -291,17 +291,24 @@ maria-db: ## Mariadb initial setup
 	sudo pacman -S mariadb mariadb-clients
 	sudo ln -vsf ${PWD}/etc/my.cnf /etc/my.cnf
 	sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
-	sudo systemctl enable mariadb.service
 	sudo systemctl start mariadb.service
 	sudo mysql -u root < ${PWD}/mariadb/init.sql
 	mysql_secure_installation
 	mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root mysql
 
-postgresql: ## Postgresql initial setup
+mysql57: ## MySQL initial setup
+	sudo ln -vsf ${PWD}/etc/sysctl.d/40-max-user-watches.conf /etc/sysctl.d/40-max-user-watches.conf
+	yay -S mysql57
+	sudo ln -vsf ${PWD}/etc/my.cnf /etc/mysql/my.cnf
+	sudo mysqld --initialize --user=mysql --basedir=/usr --datadir=/var/lib/mysql
+	sudo systemctl start mysqld.service
+	mysql_secure_installation
+	mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root mysql
+
+postgresql: ## PostgreSQL initial setup
 	sudo pacman -S postgresql
 	cd /home;\
 	sudo -u postgres initdb -E UTF8 --no-locale -D '/var/lib/postgres/data'
-	sudo systemctl enable postgresql.service
 	sudo systemctl start postgresql.service
 	cd /home;\
 	sudo -u postgres createuser --interactive
