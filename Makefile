@@ -347,7 +347,7 @@ minikube: ## Setup minikube with kvm2
 	minikube config set vm-driver kvm2
 
 kind: ## Setup kind (Kubernetes In Docker)
-	GO111MODULE="on" go get sigs.k8s.io/kind@v0.6.0
+	GO111MODULE="on" go get sigs.k8s.io/kind@v0.6.1
 	sudo sh -c "kind completion zsh > /usr/share/zsh/site-functions/_kind"
 
 redis: ## Redis inital setup
