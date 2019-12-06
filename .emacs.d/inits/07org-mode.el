@@ -4,6 +4,7 @@
 ;;(setq debug-on-error t)
 
 (require 'org)
+(require 'org-tempo)
 
 (setq org-log-done 'time)
 (setq org-use-speed-commands t)
