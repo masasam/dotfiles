@@ -8,13 +8,13 @@ astroid==2.3.3
 attrs==19.3.0
 Automat==0.8.0
 autopep8==1.4.4
-awscli==1.16.296
+awscli==1.16.298
 backcall==0.1.0
 bcrypt==3.1.7
 beautifulsoup4==4.8.1
 black==19.10b0
 bleach==3.1.0
-botocore==1.13.32
+botocore==1.13.34
 btrfsutil==1.1.1
 cached-property==1.5.1
 cachetools==3.1.1
@@ -25,7 +25,7 @@ cheat==2.5.1
 chromedriver-binary==79.0.3945.36.0
 cli-helpers==1.2.1
 Click==7.0
-colorama==0.4.1
+colorama==0.4.3
 configobj==5.0.6
 constantly==15.1.0
 cryptography==2.8

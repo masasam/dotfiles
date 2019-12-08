@@ -74,6 +74,7 @@ clucene
 clutter
 clutter-gst
 clutter-gtk
+cmake
 cmark-gfm
 cmatrix
 cogl
@@ -399,6 +400,7 @@ jq
 js60
 json-c
 json-glib
+jsoncpp
 kbd
 keychain
 keyutils
@@ -900,7 +902,9 @@ re2
 readline
 redland
 rest
+rhash
 ripgrep
+rpcsvc-proto
 rsync
 rtkit
 rtmpdump
