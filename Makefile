@@ -65,7 +65,7 @@ install: ## Install arch linux packages using pacman
 	xdotool sshuttle packer ripgrep stunnel vimiv adapta-gtk-theme gnome-tweaks \
 	firejail opencv hexedit discord pv smartmontools gnome-logs wireshark-cli \
 	wl-clipboard lsof mapnik browserpass-chromium editorconfig-core-c watchexec \
-	mpv browserpass-firefox docker-compose man-db baobab ioping
+	mpv browserpass-firefox docker-compose man-db baobab ioping ruby-irb
 	sudo pkgfile --update
 
 pipinstall: ## Install python packages
