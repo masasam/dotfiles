@@ -80,7 +80,6 @@ cmatrix
 cogl
 colord
 colord-gtk
-compface
 compiler-rt
 containerd
 coreutils
@@ -950,7 +949,6 @@ strace
 stunnel
 sudo
 suitesparse
-sylpheed
 syncthing
 sysfsutils
 sysprof
