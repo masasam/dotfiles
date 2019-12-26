@@ -265,6 +265,7 @@ haskell-async
 haskell-attoparsec
 haskell-base-compat
 haskell-base-orphans
+haskell-base16-bytestring
 haskell-base64-bytestring
 haskell-basement
 haskell-bitarray
@@ -288,8 +289,10 @@ haskell-data-default-instances-old-locale
 haskell-diff
 haskell-digest
 haskell-dlist
+haskell-doclayout
 haskell-doctemplates
 haskell-erf
+haskell-errors
 haskell-exceptions
 haskell-glob
 haskell-haddock-library
@@ -340,6 +343,7 @@ haskell-tagged
 haskell-tagsoup
 haskell-temporary
 haskell-texmath
+haskell-text-conversions
 haskell-th-abstraction
 haskell-time-compat
 haskell-tls
