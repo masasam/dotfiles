@@ -713,6 +713,7 @@ mesa
 metis
 minizip
 mjpegtools
+mkcert
 mkinitcpio
 mkinitcpio-busybox
 mlocate
