@@ -125,7 +125,7 @@ pipinstall: ## Install python packages
 
 goinstall: ## Install go packages
 	mkdir -p ${HOME}/{bin,src}
-	GO111MODULE="on" go get -u -v golang.org/x/tools/cmd/gopls
+	GO111MODULE=on go get golang.org/x/tools/gopls@latest
 	GO111MODULE="on" go get -u -v golang.org/x/tools/cmd/goimports
 	go get -u -v github.com/golang/dep/cmd/dep
 	GO111MODULE="on" go get -u -v github.com/motemen/ghq
