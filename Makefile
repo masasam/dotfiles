@@ -269,6 +269,10 @@ ibusmozc: ## Install ibus-mozc
 ttf-cica: ## Install Cica font
 	yay -S ttf-cica
 
+localhostssl: # Set ssl for localhost
+	mkcert -install
+	mkcert localhost
+
 docker: ## Docker initial setup
 	sudo pacman -S docker
 	sudo usermod -aG docker ${USER}
