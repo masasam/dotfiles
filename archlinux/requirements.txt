@@ -8,13 +8,13 @@ astroid==2.3.3
 attrs==19.3.0
 Automat==0.8.0
 autopep8==1.4.4
-awscli==1.16.312
+awscli==1.16.313
 backcall==0.1.0
 bcrypt==3.1.7
 beautifulsoup4==4.8.2
 black==19.10b0
 bleach==3.1.0
-botocore==1.13.48
+botocore==1.13.49
 btrfsutil==1.1.1
 cached-property==1.5.1
 cachetools==3.1.1
@@ -157,7 +157,7 @@ pyOpenSSL==19.1.0
 pyparsing==2.4.6
 PyQt5==5.14.1
 PyQt5-sip==12.7.0
-pyrsistent==0.15.6
+pyrsistent==0.15.7
 PySocks==1.7.1
 python-dateutil==2.8.1
 python-jsonrpc-server==0.3.2
