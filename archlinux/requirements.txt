@@ -8,13 +8,13 @@ astroid==2.3.3
 attrs==19.3.0
 Automat==0.8.0
 autopep8==1.4.4
-awscli==1.17.3
+awscli==1.17.5
 backcall==0.1.0
 bcrypt==3.1.7
 beautifulsoup4==4.8.2
 black==19.10b0
 bleach==3.1.0
-botocore==1.14.3
+botocore==1.14.5
 btrfsutil==1.1.1
 cached-property==1.5.1
 cachetools==3.1.1
@@ -80,7 +80,7 @@ jupyter==1.0.0
 jupyter-client==5.3.4
 jupyter-console==6.1.0
 jupyter-core==4.6.1
-jupyterlab==1.2.4
+jupyterlab==1.2.5
 jupyterlab-server==1.0.6
 jupyterthemes==0.20.0
 kitchen==1.2.6
@@ -160,8 +160,8 @@ PyQt5-sip==12.7.0
 pyrsistent==0.15.7
 PySocks==1.7.1
 python-dateutil==2.8.1
-python-jsonrpc-server==0.3.2
-python-language-server==0.31.4
+python-jsonrpc-server==0.3.3
+python-language-server==0.31.6
 python-utils==2.3.0
 pytz==2019.3
 pyxdg==0.26
@@ -179,7 +179,7 @@ rope==0.16.0
 rsa==4.0
 rtv==1.27.0
 ruamel.yaml==0.16.5
-s3transfer==0.3.0
+s3transfer==0.3.1
 scipy==1.4.1
 Scrapy==1.8.0
 seaborn==0.9.0
