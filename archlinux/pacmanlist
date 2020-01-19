@@ -371,6 +371,7 @@ hub
 hugo
 hunspell
 hwids
+hwloc
 hyphen
 iana-etc
 ibus
@@ -762,6 +763,7 @@ opencore-amr
 opencv
 openexr
 openjpeg2
+openmpi
 openssh
 openssl
 opera-ffmpeg-codecs
