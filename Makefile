@@ -522,6 +522,7 @@ rbenv: ## Install rvenv ruby-build
 	yay -S rbenv
 	yay -S ruby-build
 	rbenv install 2.6.5
+	rbenv rehash
 	gem install bundle
 
 rubygem: ## Install rubygem package
