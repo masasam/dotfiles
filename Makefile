@@ -521,7 +521,7 @@ screenkey: ## Init screenkey
 rbenv: ## Install rvenv ruby-build
 	yay -S rbenv
 	yay -S ruby-build
-	rbenv install 2.5.1
+	rbenv install 2.6.5
 	gem install bundle
 
 rubygem: ## Install rubygem package
