@@ -35,7 +35,7 @@ decorator==4.4.1
 defusedxml==0.6.0
 Django==3.0.2
 docker==4.1.0
-docker-compose==1.25.1
+docker-compose==1.25.2
 docker-pycreds==0.4.0
 dockerpty==0.4.1
 docopt==0.6.2
@@ -50,13 +50,13 @@ gitdb2==2.0.6
 GitPython==3.0.5
 goobook==3.4.dev0
 google-api-python-client==1.7.11
-google-auth==1.7.1
+google-auth==1.10.0
 google-auth-httplib2==0.0.3
 graph-cli==0.1.3
 greenlet==0.4.15
 html2text==2019.8.11
 httpie==2.0.0
-httplib2==0.14.0
+httplib2==0.15.0
 humanize==0.5.1
 hyperlink==19.0.0
 idna==2.8
@@ -102,7 +102,7 @@ mps-youtube==0.2.8
 msgpack==0.6.2
 mycli==1.20.1
 nbconvert==5.6.1
-nbformat==5.0.3
+nbformat==5.0.4
 neovim==0.3.1
 nose==1.3.7
 notebook==6.0.3
@@ -192,7 +192,7 @@ six==1.13.0
 smmap2==2.0.5
 soupsieve==1.9.5
 speedtest-cli==2.1.2
-SQLAlchemy==1.3.12
+SQLAlchemy==1.3.13
 sqlparse==0.3.0
 sshuttle==0.78.5
 stevedore==1.31.0
@@ -216,7 +216,7 @@ Twisted==19.10.0
 typed-ast==1.4.1
 ujson==1.35
 uritemplate==3.0.1
-urllib3==1.25.7
+urllib3==1.25.8
 vimiv==0.9.1
 virtualenv==16.7.9
 virtualenv-clone==0.5.3
@@ -231,5 +231,5 @@ wrapt==1.11.2
 x256==0.0.3
 yapf==0.29.0
 youtube-dl==2020.1.15
-zipp==0.6.0
+zipp==1.0.0
 zope.interface==4.7.1
