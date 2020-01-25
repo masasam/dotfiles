@@ -146,6 +146,7 @@ firejail
 flac
 flameshot
 flex
+fluidsynth
 fontconfig
 fping
 freetype2
@@ -515,6 +516,7 @@ libinput
 libiptcdata
 libixion
 libjpeg-turbo
+libkate
 libkeybinder3
 libksba
 liblangtag
@@ -612,6 +614,7 @@ libteam
 libthai
 libtheora
 libtiff
+libtiger
 libtirpc
 libtommath
 libtool
@@ -672,6 +675,7 @@ libxxf86vm
 libyaml
 libzmf
 licenses
+lilv
 linux
 linux-api-headers
 linux-docs
@@ -693,6 +697,7 @@ lua52-lpeg
 lua52-luajson
 lua52-socket
 luajit
+lv2
 lvm2
 lynx
 lz4
@@ -809,6 +814,7 @@ poppler
 poppler-data
 poppler-glib
 popt
+portaudio
 postgresql
 postgresql-libs
 potrace
@@ -898,6 +904,7 @@ qt5-location
 qt5-sensors
 qt5-styleplugins
 qt5-svg
+qt5-wayland
 qt5-webchannel
 qt5-webkit
 qt5-x11extras
@@ -932,6 +939,7 @@ sdl2
 seahorse
 sed
 semver
+serd
 shaderc
 shadow
 shared-color-targets
@@ -942,6 +950,7 @@ slib
 smartmontools
 smbclient
 snappy
+sord
 sound-theme-freedesktop
 soundtouch
 spandsp
@@ -949,6 +958,7 @@ speex
 speexdsp
 spirv-tools
 sqlite
+sratom
 srt
 sshfs
 sshuttle
