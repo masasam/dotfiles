@@ -86,7 +86,7 @@ jupyterthemes==0.20.0
 kitchen==1.2.6
 kiwisolver==1.1.0
 lazy-object-proxy==1.4.3
-lensfun==0.3.2
+lensfun==0.3.95
 lesscpy==0.14.0
 LibAppArmor==2.13.3
 lit==0.9.1.dev0
@@ -128,7 +128,7 @@ pluggy==0.13.1
 ply==3.11
 progressbar2==3.47.0
 prometheus-client==0.7.1
-prompt-toolkit==3.0.2
+prompt-toolkit==3.0.3
 Protego==0.1.16
 psutil==5.6.7
 psycopg2==2.8.4
@@ -138,7 +138,7 @@ pwquality==1.4.2
 py-spy==0.3.2
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
-pycairo==1.18.2
+pycairo==1.19.0
 pycodestyle==2.5.0
 pycparser==2.19
 pycryptodome==3.9.4
