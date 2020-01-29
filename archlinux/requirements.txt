@@ -92,7 +92,7 @@ LibAppArmor==2.13.3
 lit==0.9.1.dev0
 litecli==1.2.0
 louis==3.12.0
-lxml==4.4.2
+lxml==4.5.0
 MarkupSafe==1.1.1
 matplotlib==3.1.2
 mccabe==0.6.1
