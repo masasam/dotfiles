@@ -4,7 +4,7 @@ sudo pacman -S zsh git
 sudo pacman -S noto-fonts
 sudo pacman -S noto-fonts-cjk
 sudo pacman -S chromium
-mkdir -p /home/masa/src/github.com/aur
+mkdir -p ~/src/github.com/aur
 cd src/github.com/aur/
 git clone https://aur.archlinux.org/yay.git
 cd yay/
