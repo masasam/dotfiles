@@ -2,7 +2,7 @@
 Name=Toggle
 GenericName=Toggle Script
 Comment=no comment
-Exec=/home/masa/src/github.com/masasam/dotfiles/.toggle.sh
+Exec=${HOME}/src/github.com/masasam/dotfiles/.toggle.sh
 Icon=utilities-terminal
 Terminal=true
 Type=Application
