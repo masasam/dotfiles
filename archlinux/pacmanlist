@@ -125,6 +125,7 @@ elinks
 emacs
 enchant
 eog
+espeak
 ethtool
 evince
 exempi
@@ -993,6 +994,7 @@ the_silver_searcher
 thin-provisioning-tools
 throttled
 tig
+tk
 tlp
 tmux
 tokei
