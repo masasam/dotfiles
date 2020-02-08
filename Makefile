@@ -404,6 +404,7 @@ yay: ## Install yay using yay
 
 aur: ## Install arch linux AUR packages using yay
 	yay -S downgrade
+	yay -S emacspeak
 	yay -S git-secrets
 	yay -S nvm
 	yay -S sequeler-git
