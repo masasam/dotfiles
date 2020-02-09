@@ -540,16 +540,15 @@ rails: ## Create rails
 	  export PATH="${RBENV_ROOT}/bin:${PATH}";\
 	  eval "$(rbenv init -)";\
 	fi;\
-	rbenv global 2.5.1;\
+	rbenv global 2.6.5;\
 	rbenv rehash;\
-	mkdir -p ${HOME}/src/github.com/masasam/myapp;\
-	cd ${HOME}/src/github.com/masasam/myapp;\
-	rbenv local 2.5.1;\
+	mkdir -p ${HOME}/src/github.com/masasam/rails;\
+	cd ${HOME}/src/github.com/masasam/rails;\
+	rbenv local 2.6.5;\
 	bundle init;\
-	echo "gem 'rails', '~> 5.2.0'" >> Gemfile;\
+	echo "gem 'rails', '~> 6.0.2'" >> Gemfile;\
 	bundle install --path vendor/bundle;\
-	bundle exec rails new -B --webpack=react --database=mysql --skip-test .;\
-	bundle install;\
+	bundle exec rails new . --database=mysql --skip-test --skip-turbolinks;\
 	bundle exec rails webpacker:install;\
 	cd -
 
