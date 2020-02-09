@@ -488,11 +488,6 @@ gnuglobal: ## Install gnu global
 	pip install --user pygments
 	yay -S global
 
-other-python: ## Install python3.5 python3.6
-	sudo pacman -S pyenv
-	pyenv install 3.5.7
-	pyenv install 3.6.8
-
 elixir-ls: ## Install elixir-ls(Recompile if the version of elixir changes)
 	sudo pacman -S elixir
 	mkdir -p ${HOME}/src/github.com/JakeBecker
