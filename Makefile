@@ -399,12 +399,14 @@ zeal: ## Deploy zeal config and docsets
 	mkdir -p ${HOME}/.config/Zeal
 	ln -vsf ${PWD}/.config/Zeal/Zeal.conf ${HOME}/.config/Zeal/Zeal.conf
 
+emacspeak: ## Install emacspeak for blind person
+	yay -S emacspeak
+
 yay: ## Install yay using yay
 	yay -S yay
 
 aur: ## Install arch linux AUR packages using yay
 	yay -S downgrade
-	yay -S emacspeak
 	yay -S git-secrets
 	yay -S nvm
 	yay -S sequeler-git
