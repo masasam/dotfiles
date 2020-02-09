@@ -534,7 +534,7 @@ django: ## Install Django
 	pipenv install django;\
 	pipenv run django-admin startproject config .
 
-rails: ## Create rails
+rails: ## Create rails from scratch
 	export RBENV_ROOT="${HOME}/.rbenv";\
 	if [ -d "${RBENV_ROOT}" ]; then \
 	  export PATH="${RBENV_ROOT}/bin:${PATH}";\
