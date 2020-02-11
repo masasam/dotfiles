@@ -8,13 +8,13 @@ astroid==2.3.3
 attrs==19.3.0
 Automat==0.8.0
 autopep8==1.5
-awscli==1.17.13
+awscli==1.17.14
 backcall==0.1.0
 bcrypt==3.1.7
 beautifulsoup4==4.8.2
 black==19.10b0
 bleach==3.1.0
-botocore==1.14.13
+botocore==1.14.14
 btrfsutil==1.1.1
 cached-property==1.5.1
 cachetools==3.1.1
@@ -43,6 +43,7 @@ docutils==0.16
 entrypoints==0.3
 ERAlchemy==1.2.10
 Faker==4.0.0
+filelock==3.0.12
 flake8==3.7.9
 future==0.18.2
 gif-for-cli==1.1.2
@@ -218,7 +219,7 @@ ujson==1.35
 uritemplate==3.0.1
 urllib3==1.25.8
 vimiv==0.9.1
-virtualenv==16.7.9
+virtualenv==20.0.1
 virtualenv-clone==0.5.3
 virtualenvwrapper==4.8.4
 vobject==0.9.6.1
