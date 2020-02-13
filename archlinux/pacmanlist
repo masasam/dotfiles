@@ -293,6 +293,7 @@ haskell-digest
 haskell-dlist
 haskell-doclayout
 haskell-doctemplates
+haskell-emojis
 haskell-erf
 haskell-errors
 haskell-exceptions
@@ -314,6 +315,7 @@ haskell-hxt-regex-xmlschema
 haskell-hxt-unicode
 haskell-integer-logarithms
 haskell-ipynb
+haskell-jira-wiki-markup
 haskell-juicypixels
 haskell-lexer
 haskell-memory
