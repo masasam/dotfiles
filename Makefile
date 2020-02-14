@@ -412,7 +412,6 @@ aur: ## Install arch linux AUR packages using yay
 	yay -S sequeler-git
 	yay -S skypeforlinux-stable-bin
 	yay -S slack-desktop
-	yay -S terraformer
 	yay -S trivy-bin
 	yay -S zoom
 
@@ -421,6 +420,11 @@ aurplus: ## Install arch linux AUR packages using yay
 	yay -S nkf
 	yay -S pencil
 	yay -S rtags
+
+terraformer: ## Install terraformer
+	curl -LO https://github.com/GoogleCloudPlatform/terraformer/releases/download/`curl -s https://api.github.com/repos/GoogleCloudPlatform/terraformer/releases/latest | grep tag_name | cut -d '"' -f 4`/terraformer-aws-linux-amd64
+	chmod +x terraformer-aws-linux-amd64
+	sudo mv terraformer-aws-linux-amd64 /usr/local/bin/terraformer
 
 desktop: ## Update desktop entry
 	sudo ln -vsf ${PWD}/usr/share/applications/vim.desktop /usr/share/applications/vim.desktop
