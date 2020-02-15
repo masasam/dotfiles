@@ -8,13 +8,13 @@ astroid==2.3.3
 attrs==19.3.0
 Automat==0.8.0
 autopep8==1.5
-awscli==1.17.16
+awscli==1.18.0
 backcall==0.1.0
 bcrypt==3.1.7
 beautifulsoup4==4.8.2
 black==19.10b0
 bleach==3.1.0
-botocore==1.14.16
+botocore==1.15.0
 btrfsutil==1.1.1
 cached-property==1.5.1
 cachetools==3.1.1
@@ -22,7 +22,7 @@ certifi==2019.11.28
 cffi==1.14.0
 chardet==3.0.4
 cheat==2.5.1
-chromedriver-binary==80.0.3987.16.0
+chromedriver-binary==81.0.4044.20.0
 cli-helpers==1.2.1
 Click==7.0
 colorama==0.4.3
@@ -52,7 +52,7 @@ gitdb2==2.0.6
 GitPython==3.0.7
 goobook==3.4.dev0
 google-api-python-client==1.7.11
-google-auth==1.11.0
+google-auth==1.11.1
 google-auth-httplib2==0.0.3
 graph-cli==0.1.4
 greenlet==0.4.15
@@ -221,7 +221,7 @@ ujson==1.35
 uritemplate==3.0.1
 urllib3==1.25.8
 vimiv==0.9.1
-virtualenv==20.0.3
+virtualenv==20.0.4
 virtualenv-clone==0.5.3
 virtualenvwrapper==4.8.4
 vobject==0.9.6.1
