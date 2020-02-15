@@ -48,7 +48,7 @@ filelock==3.0.12
 flake8==3.7.9
 future==0.18.2
 gif-for-cli==1.1.2
-gitdb2==2.0.6
+gitdb2==3.0.0
 GitPython==3.0.7
 goobook==3.4.dev0
 google-api-python-client==1.7.11
