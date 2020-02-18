@@ -8,13 +8,13 @@ astroid==2.3.3
 attrs==19.3.0
 Automat==20.2.0
 autopep8==1.5
-awscli==1.18.1
+awscli==1.18.2
 backcall==0.1.0
 bcrypt==3.1.7
 beautifulsoup4==4.8.2
 black==19.10b0
 bleach==3.1.0
-botocore==1.15.1
+botocore==1.15.2
 btrfsutil==1.1.1
 cached-property==1.5.1
 cachetools==3.1.1
@@ -81,7 +81,7 @@ jsonschema==3.2.0
 jupyter==1.0.0
 jupyter-client==5.3.4
 jupyter-console==6.1.0
-jupyter-core==4.6.2
+jupyter-core==4.6.3
 jupyterlab==1.2.6
 jupyterlab-server==1.0.6
 jupyterthemes==0.20.0
@@ -101,7 +101,7 @@ mccabe==0.6.1
 mistune==0.8.4
 more-itertools==8.1.0
 mps-youtube==0.2.8
-msgpack==0.6.2
+msgpack==1.0.0
 mycli==1.20.1
 nbconvert==5.6.1
 nbformat==5.0.4
