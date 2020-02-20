@@ -516,6 +516,7 @@ libiec61883
 libimagequant
 libimobiledevice
 libinput
+libinstpatch
 libiptcdata
 libixion
 libjpeg-turbo
