@@ -8,16 +8,16 @@ astroid==2.3.3
 attrs==19.3.0
 Automat==20.2.0
 autopep8==1.5
-awscli==1.18.3
+awscli==1.18.5
 backcall==0.1.0
 bcrypt==3.1.7
 beautifulsoup4==4.8.2
 black==19.10b0
 bleach==3.1.1
-botocore==1.15.3
+botocore==1.15.5
 btrfsutil==1.1.1
 cached-property==1.5.1
-cachetools==3.1.1
+cachetools==4.0.0
 certifi==2019.11.28
 cffi==1.14.0
 chardet==3.0.4
@@ -143,7 +143,7 @@ pyasn1-modules==0.2.8
 pycairo==1.19.0
 pycodestyle==2.5.0
 pycparser==2.19
-pycryptodome==3.9.6
+pycryptodome==3.9.7
 PyDispatcher==2.0.5
 pydoc-utils==1.0.1
 pyflakes==2.1.1
@@ -221,7 +221,7 @@ ujson==1.35
 uritemplate==3.0.1
 urllib3==1.25.8
 vimiv==0.9.1
-virtualenv==20.0.4
+virtualenv==20.0.5
 virtualenv-clone==0.5.3
 virtualenvwrapper==4.8.4
 vobject==0.9.6.1
@@ -234,5 +234,5 @@ wrapt==1.12.0
 x256==0.0.3
 yapf==0.29.0
 youtube-dl==2020.2.16
-zipp==2.2.0
+zipp==3.0.0
 zope.interface==4.7.1
