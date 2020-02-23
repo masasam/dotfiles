@@ -132,7 +132,7 @@ progressbar2==3.47.0
 prometheus-client==0.7.1
 prompt-toolkit==3.0.3
 Protego==0.1.16
-psutil==5.6.7
+psutil==5.7.0
 psycopg2==2.8.4
 psycopg2-binary==2.8.4
 ptyprocess==0.6.0
@@ -140,7 +140,7 @@ pwquality==1.4.2
 py-spy==0.3.2
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
-pycairo==1.19.0
+pycairo==1.19.1
 pycodestyle==2.5.0
 pycparser==2.19
 pycryptodome==3.9.7
