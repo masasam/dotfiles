@@ -65,7 +65,7 @@ install: ## Install arch linux packages using pacman
 	xdotool sshuttle packer ripgrep stunnel vimiv adapta-gtk-theme gnome-tweaks \
 	firejail opencv hexedit discord pv smartmontools gnome-logs wireshark-cli \
 	wl-clipboard lsof mapnik browserpass-chromium editorconfig-core-c watchexec \
-	mpv browserpass-firefox docker-compose man-db baobab ioping ruby-irb mkcert
+	mpv browserpass-firefox man-db baobab ioping ruby-irb mkcert
 	sudo pkgfile --update
 
 pipinstall: ## Install python packages
@@ -334,13 +334,17 @@ pgcli: ## Init pgcli
 	test -L ${HOME}/.config/pgcli || rm -rf ${HOME}/.config/pgcli
 	ln -vsfn ${HOME}/backup/pgcli ${HOME}/.config/pgcli
 
-gke: ## Install google cloud SDK and setting
+gcloud: ## Install google cloud SDK and setting
 	sudo pacman -S kubectl kubectx
 	curl https://sdk.cloud.google.com | bash
 	test -L ${HOME}/.config/gcloud || rm -rf ${HOME}/.config/gcloud
 	ln -vsfn ${HOME}/backup/gcloud   ${HOME}/.config/gcloud
 	yay -S stern-bin
 	yay -S kubernetes-helm-bin
+
+docker-compose: ## Set up docker-compose
+	sudo pacman -S docker-compose
+	gcloud components install docker-credential-gcr
 
 minikube: ## Setup minikube with kvm2
 	sudo pacman -S minikube libvirt qemu-headless ebtables docker-machine
@@ -643,7 +647,7 @@ testpath: ## Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: rclone gnupg ssh install init keyring urxvt xterm termite yay tlp thinkpad ttf-cica dnsmasq pipinstall goinstall ibusmozc neomutt docker nodeinstall zeal sylpheed lvfs gke aws toggle aur kind eralchemy mpsyt
+allinstall: rclone gnupg ssh install init keyring urxvt xterm termite yay tlp thinkpad ttf-cica dnsmasq pipinstall goinstall ibusmozc neomutt docker nodeinstall zeal sylpheed lvfs gcloud docker-compose aws toggle aur kind eralchemy mpsyt
 
 nextinstall: chromium rubygem rbenv rustinstall postgresql maria-db mycli pgcli
 
