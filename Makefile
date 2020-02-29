@@ -418,6 +418,7 @@ aur: ## Install arch linux AUR packages using yay
 	yay -S sequeler-git
 	yay -S skypeforlinux-stable-bin
 	yay -S slack-desktop
+	yay -S tableplus
 	yay -S trivy-bin
 	yay -S zoom
 
