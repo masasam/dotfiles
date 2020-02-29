@@ -3,6 +3,8 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
+(setq ruby-insert-encoding-magic-comment nil)
+
 (add-hook 'ruby-mode-hook 'eglot-ensure)
 
 ;; projectile rails
