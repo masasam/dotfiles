@@ -509,7 +509,6 @@ You can make install from here
 	GO111MODULE="on" go get -u -v golang.org/x/tools/cmd/gopls
 	GO111MODULE="on" go get -u -v github.com/golang/dep/cmd/dep
 	GO111MODULE="on" go get -u -v github.com/x-motemen/ghq
-	go get -u -v github.com/sonatard/ghs
 	go get -u -v github.com/kyoshidajp/ghkw
 	go get -u -v github.com/simeji/jid/cmd/jid
 	go get -u -v github.com/jmhodges/jsonpp
