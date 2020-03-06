@@ -80,6 +80,7 @@ pipinstall: ## Install python packages
 	pip install --user black
 	pip install --user cheat
 	pip install --user chromedriver-binary
+	pip install --user diagrams
 	pip install --user django
 	pip install --user faker
 	pip install --user flake8
