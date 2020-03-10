@@ -8,13 +8,13 @@ astroid==2.3.3
 attrs==19.3.0
 Automat==20.2.0
 autopep8==1.5
-awscli==1.18.16
+awscli==1.18.17
 backcall==0.1.0
 bcrypt==3.1.7
 beautifulsoup4==4.8.2
 black==19.10b0
 bleach==3.1.1
-botocore==1.15.16
+botocore==1.15.17
 btrfsutil==1.1.1
 cached-property==1.5.1
 cachetools==4.0.0
@@ -24,7 +24,7 @@ chardet==3.0.4
 cheat==2.5.1
 chromedriver-binary==81.0.4044.20.0
 cli-helpers==1.2.1
-Click==7.0
+click==7.1.1
 colorama==0.4.3
 configobj==5.0.6
 constantly==15.1.0
@@ -33,7 +33,7 @@ cssselect==1.1.0
 cycler==0.10.0
 decorator==4.4.2
 defusedxml==0.6.0
-diagrams==0.6.5
+diagrams==0.7.2
 distlib==0.3.0
 Django==3.0.4
 docker==4.2.0
@@ -150,8 +150,8 @@ pycryptodome==3.9.7
 PyDispatcher==2.0.5
 pydoc-utils==1.0.1
 pyflakes==2.1.1
-Pygments==2.5.2
-PyGObject==3.34.0
+Pygments==2.6.1
+PyGObject==3.36.0
 pygraphviz==1.5
 PyHamcrest==2.0.2
 pylint==2.4.4
@@ -235,7 +235,7 @@ wcwidth==0.1.8
 webencodings==0.5.1
 websocket-client==0.57.0
 widgetsnbextension==3.5.1
-wrapt==1.12.0
+wrapt==1.12.1
 x256==0.0.3
 yapf==0.29.0
 youtube-dl==2020.3.8
