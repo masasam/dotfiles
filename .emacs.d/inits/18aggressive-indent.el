@@ -4,7 +4,7 @@
 ;;(setq debug-on-error t)
 
 (global-aggressive-indent-mode 1)
-;; (add-to-list 'aggressive-indent-excluded-modes 'html-mode)
+(add-to-list 'aggressive-indent-excluded-modes 'slim-mode)
 
 
 ;; Openwith
