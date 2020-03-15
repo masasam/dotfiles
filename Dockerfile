@@ -32,8 +32,11 @@ RUN echo '%wheel ALL=(ALL) ALL' | sudo EDITOR='tee -a' visudo
 RUN pacman -Syy
 RUN pacman -S xdg-user-dirs --noconfirm
 RUN pacman -S git --noconfirm
+RUN pacman -S go --noconfirm
 
-RUN su - ${USERNAME}
+ENV HOME /home/${USERNAME}
+WORKDIR /home/${USERNAME}
+USER ${USERNAME}
 RUN LANG=C xdg-user-dirs-update --force
 RUN mkdir -p /home/${USERNAME}/src/github.com && cd /home/${USERNAME}/src/github.com && git clone https://aur.archlinux.org/yay.git && cd /home/${USERNAME}/src/github.com/yay && makepkg -si
 RUN mkdir -p /home/${USERNAME}/src/github.com/masasam && cd /home/${USERNAME}/src/github.com/masasam && git clone https://github.com/masasam/dotfiles
