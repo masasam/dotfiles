@@ -9,6 +9,7 @@ alsa-plugins
 alsa-topology-conf
 alsa-ucm-conf
 alsa-utils
+amtk
 aom
 apparmor
 arc-gtk-theme
@@ -120,6 +121,7 @@ e2fsprogs
 editorconfig-core-c
 efibootmgr
 efivar
+elfutils
 elinks
 emacs
 enchant
@@ -172,6 +174,7 @@ gdbm
 gdk-pixbuf2
 gdm
 geckodriver
+gedit
 gegl
 geoclue
 geocode-glib
@@ -235,6 +238,7 @@ gsound
 gspell
 gssdp
 gst-plugins-bad
+gst-plugins-bad-libs
 gst-plugins-base
 gst-plugins-base-libs
 gst-plugins-good
@@ -244,6 +248,7 @@ gtk2
 gtk3
 gtkmm
 gtksourceview3
+gtksourceview4
 gtkspell
 gts
 guile
@@ -532,6 +537,7 @@ libmagick6
 libmaxminddb
 libmbim
 libmfx
+libmicrohttpd
 libmm-glib
 libmms
 libmng
@@ -753,6 +759,7 @@ nethogs
 netpbm
 nettle
 networkmanager
+ninja
 nm-connection-editor
 nmap
 nnn
@@ -958,6 +965,7 @@ snappy
 sord
 sound-theme-freedesktop
 soundtouch
+source-highlight
 spandsp
 speex
 speexdsp
@@ -985,6 +993,7 @@ tar
 tcl
 tcpdump
 tdb
+tepl
 termite
 termite-terminfo
 terraform
@@ -1036,7 +1045,6 @@ vim-runtime
 vimiv
 volume_key
 vte-common
-vte3
 vulkan-icd-loader
 w3m
 watchexec
