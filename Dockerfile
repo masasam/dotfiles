@@ -24,19 +24,30 @@ RUN locale-gen
 RUN export LANG=C
 RUN echo LANG=ja_JP.UTF-8 > /etc/locale.conf
 
-RUN useradd -m -G wheel -s /bin/bash ${USERNAME}
+RUN useradd -m -r -G wheel -s /bin/bash ${USERNAME}
 RUN echo "root:${PASSWORD}" | chpasswd
 RUN echo "${USERNAME}:${PASSWORD}" | chpasswd
-RUN echo '%wheel ALL=(ALL) ALL' | sudo EDITOR='tee -a' visudo
+RUN echo '%wheel ALL=(ALL) ALL' | EDITOR='tee -a' visudo
 
 RUN pacman -Syy
 RUN pacman -S xdg-user-dirs --noconfirm
 RUN pacman -S git --noconfirm
 RUN pacman -S go --noconfirm
+RUN pacman -S wget --noconfirm
 
 ENV HOME /home/${USERNAME}
 WORKDIR /home/${USERNAME}
 USER ${USERNAME}
-RUN LANG=C xdg-user-dirs-update --force
-RUN mkdir -p /home/${USERNAME}/src/github.com && cd /home/${USERNAME}/src/github.com && git clone https://aur.archlinux.org/yay.git && cd /home/${USERNAME}/src/github.com/yay && makepkg -si
-RUN mkdir -p /home/${USERNAME}/src/github.com/masasam && cd /home/${USERNAME}/src/github.com/masasam && git clone https://github.com/masasam/dotfiles
+RUN LANG=C xdg-user-dirs-update --force &&\
+	mkdir -p /home/${USERNAME}/src/github.com &&\
+	mkdir -p /home/${USERNAME}/src/github.com/masasam
+
+USER ${USERNAME}
+WORKDIR /tmp
+RUN wget https://github.com/Jguer/yay/releases/download/v9.4.6/yay_9.4.6_x86_64.tar.gz &&\
+	tar xzvf yay_9.4.6_x86_64.tar.gz
+USER root
+RUN cp /tmp/yay_9.4.6_x86_64/yay /usr/bin/yay
+USER ${USERNAME}
+WORKDIR /home/${USERNAME}/src/github.com/masasam
+RUN git clone https://github.com/masasam/dotfiles
