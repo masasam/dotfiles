@@ -8,7 +8,7 @@
 #   make install
 #   make init
 
-FROM base/archlinux:latest
+FROM archlinux:latest
 
 ARG USERNAME=masa
 ARG PASSWORD=hogehoge
