@@ -602,45 +602,25 @@ mysite: ## My site and blogs source(This is private repository)
 
 testbackup: ## Test this Makefile with mount backup directory
 	docker build -t dotfiles ${PWD}
-	docker run -v /home/${USER}/backup:${HOME}/backup:cached --name makefiletest -d dotfiles
-	@echo "========== make install =========="
-	docker exec makefiletest sh -c "cd ${PWD}; make install"
-	@echo "========== make init =========="
-	docker exec makefiletest sh -c "cd ${PWD}; make init"
-	@echo "========== make neomutt =========="
-	docker exec makefiletest sh -c "cd ${PWD}; make neomutt"
-	@echo "========== make aur =========="
-	docker exec makefiletest sh -c "cd ${PWD}; make aur"
-	@echo "========== make mozc =========="
-	docker exec makefiletest sh -c "cd ${PWD}; make google-mozc"
-	@echo "========== make pipinstall =========="
-	docker exec makefiletest sh -c "cd ${PWD}; make pipinstall"
-	@echo "========== make goinstall =========="
-	docker exec makefiletest sh -c "cd ${PWD}; make goinstall"
-	@echo "========== make nodeinstall =========="
-	docker exec makefiletest sh -c "cd ${PWD}; make nodeinstall"
-	@echo "========== make rustinstall =========="
-	docker exec makefiletest sh -c "cd ${PWD}; make rustinstall"
+	docker run -it --name maketestbackup -v /home/${USER}/backup:${HOME}/backup:cached --name makefiletest -d dotfiles:latest /bin/bash;\
+	docker exec -it maketestbackup sh -c "cd ${PWD}; make install";\
+	docker exec -it maketestbackup sh -c "cd ${PWD}; make init";\
+	docker exec -it maketestbackup sh -c "cd ${PWD}; make neomutt";\
+	docker exec -it maketestbackup sh -c "cd ${PWD}; make aur";\
+	docker exec -it maketestbackup sh -c "cd ${PWD}; make pipinstall";\
+	docker exec -it maketestbackup sh -c "cd ${PWD}; make goinstall";\
+	docker exec -it maketestbackup sh -c "cd ${PWD}; make nodeinstall"
 
 test: ## Test this Makefile with docker without backup directory
-	docker build -t dotfiles ${PWD}
-	docker run --name makefiletest -d dotfiles
-	@echo "========== make install =========="
-	docker exec makefiletest sh -c "cd ${PWD}; make install"
-	@echo "========== make init =========="
-	docker exec makefiletest sh -c "cd ${PWD}; make init"
-	@echo "========== make neomutt =========="
-	docker exec makefiletest sh -c "cd ${PWD}; make neomutt"
-	@echo "========== make aur =========="
-	docker exec makefiletest sh -c "cd ${PWD}; make aur"
-	@echo "========== make pipinstall =========="
-	docker exec makefiletest sh -c "cd ${PWD}; make pipinstall"
-	@echo "========== make goinstall =========="
-	docker exec makefiletest sh -c "cd ${PWD}; make goinstall"
-	@echo "========== make nodeinstall =========="
-	docker exec makefiletest sh -c "cd ${PWD}; make nodeinstall"
-	@echo "========== make rustinstall =========="
-	docker exec makefiletest sh -c "cd ${PWD}; make rustinstall"
+	docker build -t dotfiles ${PWD};\
+	docker run -it --name maketest -d dotfiles:latest /bin/bash;\
+	docker exec -it maketest sh -c "cd ${PWD}; make install";\
+	docker exec -it maketest sh -c "cd ${PWD}; make init";\
+	docker exec -it maketest sh -c "cd ${PWD}; make neomutt";\
+	docker exec -it maketest sh -c "cd ${PWD}; make aur";\
+	docker exec -it maketest sh -c "cd ${PWD}; make pipinstall";\
+	docker exec -it maketest sh -c "cd ${PWD}; make goinstall";\
+	docker exec -it maketest sh -c "cd ${PWD}; make nodeinstall"
 
 testpath: ## Echo PATH
 	PATH=$$PATH
