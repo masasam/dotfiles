@@ -19,7 +19,7 @@ RUN pacman -Syu --noconfirm
 RUN pacman -S base base-devel --noconfirm
 
 RUN echo thinkpad > /etc/hostname
-RUN echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen && echo 'ja_JP.UTF-8 UTF-8' >> /etc/locale.gen
+RUN echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen
 RUN locale-gen
 RUN export LANG=C
 RUN echo LANG=ja_JP.UTF-8 > /etc/locale.conf
