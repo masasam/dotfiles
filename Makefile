@@ -597,7 +597,6 @@ yarnupdate: ## Update yarn packages
 mysite: ## My site and blogs source(This is private repository)
 	ghq get -p masasam/solist
 	ghq get -p masasam/solistblog
-	ghq get -p masasam/public
 	ghq get -p masasam/PPAP
 
 testbackup: ## Test this Makefile with mount backup directory
