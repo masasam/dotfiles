@@ -16,6 +16,7 @@ arch-install-scripts
 archlinux-keyring
 argon2
 aria2
+asar
 asciidoc
 aspell
 aspell-en
@@ -962,6 +963,7 @@ slib
 smartmontools
 smbclient
 snappy
+sndio
 sord
 sound-theme-freedesktop
 soundtouch
