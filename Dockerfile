@@ -12,6 +12,7 @@ FROM archlinux:latest
 
 ARG USERNAME=masa
 ARG PASSWORD=hogehoge
+ARG REPOSITORY=/home/masa/src/github.com/masasam
 
 ENV HOME /home/${USERNAME}
 
@@ -39,8 +40,7 @@ ENV HOME /home/${USERNAME}
 WORKDIR /home/${USERNAME}
 USER ${USERNAME}
 RUN LANG=C xdg-user-dirs-update --force &&\
-	mkdir -p /home/${USERNAME}/src/github.com &&\
-	mkdir -p /home/${USERNAME}/src/github.com/masasam
+	mkdir -p ${REPOSITORY}
 
 USER ${USERNAME}
 WORKDIR /tmp
@@ -49,5 +49,5 @@ RUN wget https://github.com/Jguer/yay/releases/download/v9.4.6/yay_9.4.6_x86_64.
 USER root
 RUN cp /tmp/yay_9.4.6_x86_64/yay /usr/bin/yay
 USER ${USERNAME}
-WORKDIR /home/${USERNAME}/src/github.com/masasam
+WORKDIR ${REPOSITORY}
 RUN git clone https://github.com/masasam/dotfiles
