@@ -12,7 +12,7 @@ FROM archlinux:latest
 
 ARG USERNAME=masa
 ARG PASSWORD=hogehoge
-ARG REPOSITORY=/home/masa/src/github.com/masasam
+ARG REPOSITORY=/home/${USERNAME}/src/github.com/masasam
 
 ENV HOME /home/${USERNAME}
 
