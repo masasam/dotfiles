@@ -270,6 +270,7 @@ haskell-asn1-types
 haskell-async
 haskell-attoparsec
 haskell-base-compat
+haskell-base-compat-batteries
 haskell-base-orphans
 haskell-base16-bytestring
 haskell-base64-bytestring
