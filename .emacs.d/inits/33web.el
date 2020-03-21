@@ -23,6 +23,7 @@
   (setq web-mode-script-padding 0)
   (setq web-mode-block-padding 0)
   (setq web-mode-enable-auto-pairing t)
+  (setq web-mode-enable-auto-expanding t)
   (setq web-mode-enable-css-colorization t)
   (setq web-mode-enable-heredoc-fontification t)
   (setq web-mode-enable-current-column-highlight t))
