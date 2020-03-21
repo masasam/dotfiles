@@ -60,7 +60,6 @@
   (package-install 'dart-mode)
   (package-install 'dash)
   (package-install 'dashboard)
-  (package-install 'ddskk)
   (package-install 'deadgrep)
   (package-install 'diff-hl)
   (package-install 'docker)
