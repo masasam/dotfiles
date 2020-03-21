@@ -145,6 +145,7 @@ nodeinstall: ## Install node packages
 	yarn global add create-component-app
 	yarn global add create-nuxt-app
 	yarn global add create-react-app
+	yarn global add dockerfile-language-server-nodejs
 	yarn global add esbuild-linux-64
 	yarn global add eslint
 	yarn global add eslint-cli
