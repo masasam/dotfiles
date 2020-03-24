@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: pic
+# key: pic
+# --
+https://picsum.photos/$1/$2
