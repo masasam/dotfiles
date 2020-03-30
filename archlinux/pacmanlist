@@ -847,7 +847,6 @@ pv
 pwgen
 pyenv
 pygobject-devel
-pygtk
 python
 python-appdirs
 python-asn1crypto
