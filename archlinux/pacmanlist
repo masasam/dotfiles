@@ -273,6 +273,7 @@ haskell-async
 haskell-attoparsec
 haskell-base-compat
 haskell-base-compat-batteries
+haskell-base-noprelude
 haskell-base-orphans
 haskell-base16-bytestring
 haskell-base64-bytestring
