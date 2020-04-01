@@ -64,10 +64,6 @@
 (bind-key "C-x C-k" 'kill-buffer)
 
 
-;; Assign ibuffer to C-x C-b
-(bind-key "C-x C-b" 'ibuffer)
-
-
 ;; Set bookmark file name
 (setq bookmark-file "~/backup/emacs/bookmarks")
 

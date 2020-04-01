@@ -10,6 +10,8 @@
 (setq company-selection-wrap-around t)
 (bind-key "C-s" 'swiper-isearch-region)
 (bind-key "C-;" 'counsel-switch-buffer)
+(bind-key "C-x C-b" 'counsel-switch-buffer)
+(bind-key "C-x b" 'counsel-switch-buffer)
 (bind-key "C-c C-r" 'ivy-resume)
 (bind-key "C-x C-c" 'counsel-M-x)
 (bind-key "M-x" 'counsel-M-x)
