@@ -30,8 +30,6 @@
   (setq web-mode-enable-current-column-highlight t))
 (add-hook 'web-mode-hook  'my-web-mode-hook)
 
-(bind-key "C-c C-v" 'browse-url-of-buffer web-mode-map)
-
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:

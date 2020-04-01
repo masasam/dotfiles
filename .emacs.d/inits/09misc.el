@@ -103,7 +103,6 @@
 
 ;; alarm-clock
 (setq alarm-clock-sound-file "~/backup/emacs/alarm.mp3")
-(define-key alarm-clock-mode-map "d" 'alarm-clock-kill)
 
 
 ;; color-identifiers-mode
