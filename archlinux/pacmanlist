@@ -501,7 +501,6 @@ libgdm
 libgee
 libgeotiff
 libgexiv2
-libglade
 libglvnd
 libgme
 libgnomekbd
@@ -867,9 +866,11 @@ python-docker-pycreds
 python-dockerpty
 python-docopt
 python-gobject
+python-google-api-core
 python-google-api-python-client
 python-google-auth
 python-google-auth-httplib2
+python-googleapis-common-protos
 python-html2text
 python-httplib2
 python-idna
@@ -883,6 +884,7 @@ python-paramiko
 python-pillow
 python-ply
 python-prompt_toolkit
+python-protobuf
 python-psutil
 python-pyasn1
 python-pyasn1-modules
@@ -891,6 +893,7 @@ python-pygments
 python-pynacl
 python-pyparsing
 python-pyrsistent
+python-pytz
 python-qrencode
 python-requests
 python-rsa
@@ -907,7 +910,6 @@ python-xdg
 python-yaml
 python-zipp
 python2
-python2-cairo
 python2-dbus
 python2-gobject
 python2-gobject2
