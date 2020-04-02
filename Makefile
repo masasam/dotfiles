@@ -414,7 +414,6 @@ yay: ## Install yay using yay
 
 aur: ## Install arch linux AUR packages using yay
 	yay -S downgrade
-	yay -S github-cli
 	yay -S git-secrets
 	yay -S nvm
 	yay -S sequeler-git
@@ -423,6 +422,11 @@ aur: ## Install arch linux AUR packages using yay
 	yay -S tableplus
 	yay -S trivy-bin
 	yay -S zoom
+
+gh: ## Install and setup github-cli
+	yay -S github-cli
+	test -L ${HOME}/.config/gh || rm -rf ${HOME}/.config/gh
+	ln -vsfn ${HOME}/backup/gh ${HOME}/.config/gh
 
 aurplus: ## Install arch linux AUR packages using yay
 	yay -S drone-cli
@@ -629,7 +633,7 @@ testpath: ## Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: rclone gnupg ssh install init keyring urxvt xterm termite yay tlp thinkpad ttf-cica dnsmasq pipinstall goinstall ibusmozc neomutt docker nodeinstall zeal sylpheed lvfs gcloud docker-compose aws toggle aur kind eralchemy mpsyt
+allinstall: rclone gnupg ssh install init keyring urxvt xterm termite yay tlp thinkpad ttf-cica dnsmasq pipinstall goinstall ibusmozc neomutt docker nodeinstall zeal sylpheed lvfs gcloud docker-compose aws toggle aur kind eralchemy mpsyt gh
 
 nextinstall: chromium rubygem rbenv rustinstall postgresql maria-db mycli pgcli
 
