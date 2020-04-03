@@ -8,13 +8,13 @@ astroid==2.3.3
 attrs==19.3.0
 Automat==20.2.0
 autopep8==1.5
-awscli==1.18.34
+awscli==1.18.35
 backcall==0.1.0
 bcrypt==3.1.7
 beautifulsoup4==4.8.2
 black==19.10b0
 bleach==3.1.4
-botocore==1.15.34
+botocore==1.15.35
 btrfsutil==1.1.1
 cached-property==1.5.1
 cachetools==4.0.0
@@ -33,7 +33,7 @@ cssselect==1.1.0
 cycler==0.10.0
 decorator==4.4.2
 defusedxml==0.6.0
-diagrams==0.8.0
+diagrams==0.8.1
 distlib==0.3.0
 Django==3.0.5
 docker==4.2.0
@@ -63,7 +63,7 @@ graphviz==0.13.2
 greenlet==0.4.15
 html2text==2019.8.11
 httpie==2.0.0
-httplib2==0.17.0
+httplib2==0.17.1
 humanize==2.2.0
 hyperlink==19.0.0
 idna==2.9
@@ -91,7 +91,7 @@ jupyterlab==2.0.1
 jupyterlab-server==1.1.0
 jupyterthemes==0.20.0
 kitchen==1.2.6
-kiwisolver==1.1.0
+kiwisolver==1.2.0
 lazy-object-proxy==1.4.3
 lensfun==0.3.95
 lesscpy==0.14.0

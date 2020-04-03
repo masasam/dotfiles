@@ -942,7 +942,9 @@ rtkit
 rtmpdump
 rubberband
 ruby
+ruby-irb
 ruby-rdoc
+ruby-reline
 rubygems
 run-parts
 runc
