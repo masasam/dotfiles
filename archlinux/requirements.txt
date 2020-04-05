@@ -181,7 +181,7 @@ qtconsole==4.7.2
 QtPy==1.9.0
 queuelib==1.5.0
 redis==3.4.1
-regex==2020.2.20
+regex==2020.4.4
 requests==2.23.0
 requests-mock==1.7.0
 rope==0.16.0
@@ -229,7 +229,7 @@ ujson==2.0.3
 uritemplate==3.0.1
 urllib3==1.25.8
 vimiv==0.9.1
-virtualenv==20.0.15
+virtualenv==20.0.16
 virtualenv-clone==0.5.4
 virtualenvwrapper==4.8.4
 vobject==0.9.6.1

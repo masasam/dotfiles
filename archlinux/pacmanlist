@@ -688,6 +688,7 @@ libxtst
 libxv
 libxxf86vm
 libyaml
+libzip
 libzmf
 licenses
 lilv
@@ -819,6 +820,7 @@ perl-file-which
 perl-io-tty
 perl-mailtools
 perl-timedate
+php
 pinentry
 pipewire
 pixman
