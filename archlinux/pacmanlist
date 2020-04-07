@@ -436,6 +436,7 @@ lcms2
 ldb
 ldns
 lensfun
+leptonica
 less
 lhasa
 libabw
@@ -896,6 +897,7 @@ python-pynacl
 python-pyparsing
 python-pyrsistent
 python-pytz
+python-pyxdg
 python-qrencode
 python-requests
 python-rsa
@@ -908,7 +910,6 @@ python-urllib3
 python-vobject
 python-wcwidth
 python-websocket-client
-python-xdg
 python-yaml
 python-zipp
 python2
@@ -1007,6 +1008,7 @@ tdb
 termite
 termite-terminfo
 terraform
+tesseract
 tevent
 texinfo
 texlive-bin

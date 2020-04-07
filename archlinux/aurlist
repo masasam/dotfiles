@@ -7,6 +7,7 @@ ibus-mozc
 kubernetes-helm-bin
 nvm
 rbenv
+ripgrep-all
 ruby-build
 sequeler-git
 skypeforlinux-stable-bin
