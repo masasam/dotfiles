@@ -8,14 +8,14 @@ astroid==2.3.3
 attrs==19.3.0
 Automat==20.2.0
 autopep8==1.5.1
-awscli==1.18.37
+awscli==1.18.38
 backcall==0.1.0
 bcrypt==3.1.7
 beautifulsoup4==4.9.0
 black==19.10b0
 bleach==3.1.4
-botocore==1.15.37
-btrfsutil==1.1.1
+botocore==1.15.38
+btrfsutil==1.2.0
 cached-property==1.5.1
 cachetools==4.0.0
 certifi==2020.4.5.1
@@ -203,7 +203,7 @@ smmap==3.0.1
 smmap2==3.0.1
 soupsieve==2.0
 speedtest-cli==2.1.2
-SQLAlchemy==1.3.15
+SQLAlchemy==1.3.16
 sqlparse==0.3.1
 sshuttle==0.78.5
 stevedore==1.32.0
