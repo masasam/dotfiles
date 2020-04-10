@@ -123,7 +123,7 @@ pandocfilters==1.4.2
 paramiko==2.7.1
 parsel==1.5.2
 parso==0.6.2
-pathspec==0.7.0
+pathspec==0.8.0
 pbr==5.4.5
 pexpect==4.8.0
 pgcli==2.2.0
@@ -229,7 +229,7 @@ ujson==2.0.3
 uritemplate==3.0.1
 urllib3==1.25.8
 vimiv==0.9.1
-virtualenv==20.0.16
+virtualenv==20.0.17
 virtualenv-clone==0.5.4
 virtualenvwrapper==4.8.4
 vobject==0.9.6.1
