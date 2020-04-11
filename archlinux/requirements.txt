@@ -33,11 +33,11 @@ cssselect==1.1.0
 cycler==0.10.0
 decorator==4.4.2
 defusedxml==0.6.0
-diagrams==0.8.1
+diagrams==0.8.2
 distlib==0.3.0
 Django==3.0.5
 docker==4.2.0
-docker-compose==1.25.4
+docker-compose==1.25.5
 docker-pycreds==0.4.0
 dockerpty==0.4.1
 docopt==0.6.2
@@ -49,9 +49,9 @@ filelock==3.0.12
 flake8==3.7.9
 future==0.18.2
 gif-for-cli==1.1.2
-gitdb==4.0.2
+gitdb==4.0.4
 gitdb2==4.0.2
-GitPython==3.1.0
+GitPython==3.1.1
 goobook==3.4.dev0
 google-api-core==1.16.0
 google-api-python-client==1.8.0
@@ -126,7 +126,7 @@ parso==0.6.2
 pathspec==0.8.0
 pbr==5.4.5
 pexpect==4.8.0
-pgcli==2.2.0
+pgcli==3.0.0
 pgspecial==1.11.9
 pickleshare==0.7.5
 Pillow==6.2.1
@@ -152,7 +152,7 @@ pycparser==2.20
 pycryptodome==3.9.7
 PyDispatcher==2.0.5
 pydoc-utils==1.0.1
-pyflakes==2.1.1
+pyflakes==2.2.0
 Pygments==2.6.1
 PyGObject==3.36.0
 pygraphviz==1.5
@@ -199,7 +199,7 @@ service-identity==18.1.0
 setproctitle==1.1.10
 simplejson==3.17.0
 six==1.14.0
-smmap==3.0.1
+smmap==3.0.2
 smmap2==3.0.1
 soupsieve==2.0
 speedtest-cli==2.1.2
