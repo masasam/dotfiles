@@ -522,6 +522,19 @@ zle -N ssh-fzf
 bindkey '^\' ssh-fzf
 
 
+function fzf-checkout-pull-request () {
+    local selected_pr_id=$(gh pr list | fzf-tmux -d --reverse --prompt="pr > " --query "$LBUFFER" | awk '{ print $1 }')
+    if [ -n "$selected_pr_id" ]; then
+        BUFFER="gh pr checkout ${selected_pr_id}"
+        zle accept-line
+    fi
+    zle clear-screen
+}
+zle -N fzf-checkout-pull-request
+bindkey '^xg' fzf-checkout-pull-request
+bindkey '^x^g' fzf-checkout-pull-request
+
+
 function rails-routes-fzf() {
     BUFFER=$(bin/rails routes | fzf-tmux -d --reverse --no-sort +m --query "$LBUFFER" --prompt="rails routes > ")
     CURSOR=$#BUFFER
