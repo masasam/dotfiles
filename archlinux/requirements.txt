@@ -88,7 +88,7 @@ jupyter-client==6.1.2
 jupyter-console==6.1.0
 jupyter-core==4.6.3
 jupyterlab==2.1.0
-jupyterlab-server==1.1.0
+jupyterlab-server==1.1.1
 jupyterthemes==0.20.0
 kitchen==1.2.6
 kiwisolver==1.2.0
