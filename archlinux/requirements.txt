@@ -70,7 +70,7 @@ idna==2.9
 importlib-metadata==1.5.0
 importmagic==0.1.7
 incremental==17.5.0
-ipykernel==5.2.0
+ipykernel==5.2.1
 ipython==7.13.0
 ipython-genutils==0.2.0
 ipywidgets==7.5.1
@@ -78,7 +78,7 @@ iso-639==0.4.5
 iso3166==1.0.1
 isodate==0.6.0
 isort==4.3.21
-jedi==0.16.0
+jedi==0.17.0
 Jinja2==2.11.2
 jmespath==0.9.5
 json5==0.9.4
