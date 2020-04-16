@@ -82,6 +82,7 @@ cogl
 colord
 colord-gtk
 compiler-rt
+confuse
 containerd
 coreutils
 cpio
@@ -151,6 +152,7 @@ firefox-i18n-ja
 firejail
 flac
 flameshot
+flashrom
 flex
 fluidsynth
 fontconfig
@@ -494,6 +496,7 @@ libffi
 libfontenc
 libfreehand
 libfreexl
+libftdi
 libgcrypt
 libgda
 libgda-mysql
@@ -529,6 +532,7 @@ libinput
 libinstpatch
 libiptcdata
 libixion
+libjcat
 libjpeg-turbo
 libkate
 libkeybinder3
@@ -636,6 +640,7 @@ libtool
 libunistring
 libunwind
 libusb
+libusb-compat
 libusbmuxd
 libutempter
 libutil-linux
