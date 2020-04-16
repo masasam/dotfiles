@@ -8,13 +8,13 @@ astroid==2.3.3
 attrs==19.3.0
 Automat==20.2.0
 autopep8==1.5.1
-awscli==1.18.39
+awscli==1.18.40
 backcall==0.1.0
 bcrypt==3.1.7
 beautifulsoup4==4.9.0
 black==19.10b0
 bleach==3.1.4
-botocore==1.15.39
+botocore==1.15.40
 btrfsutil==1.2.0
 cached-property==1.5.1
 cachetools==4.0.0
@@ -177,7 +177,7 @@ PyYAML==5.3.1
 pyzmq==19.0.0
 qreator==16.6.2
 qrencode==1.2
-qtconsole==4.7.2
+qtconsole==4.7.3
 QtPy==1.9.0
 queuelib==1.5.0
 redis==3.4.1
@@ -229,7 +229,7 @@ ujson==2.0.3
 uritemplate==3.0.1
 urllib3==1.25.8
 vimiv==0.9.1
-virtualenv==20.0.17
+virtualenv==20.0.18
 virtualenv-clone==0.5.4
 virtualenvwrapper==4.8.4
 vobject==0.9.6.1
