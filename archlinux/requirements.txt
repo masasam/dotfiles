@@ -1,4 +1,4 @@
-ansible==2.9.6
+ansible==2.9.7
 ansible-lint==4.2.0
 apparmor==2.13.4
 appdirs==1.4.3
@@ -8,13 +8,13 @@ astroid==2.3.3
 attrs==19.3.0
 Automat==20.2.0
 autopep8==1.5.1
-awscli==1.18.40
+awscli==1.18.41
 backcall==0.1.0
 bcrypt==3.1.7
 beautifulsoup4==4.9.0
 black==19.10b0
 bleach==3.1.4
-botocore==1.15.40
+botocore==1.15.41
 btrfsutil==1.2.0
 cached-property==1.5.1
 cachetools==4.0.0
@@ -22,7 +22,7 @@ certifi==2020.4.5.1
 cffi==1.14.0
 chardet==3.0.4
 cheat==2.5.1
-chromedriver-binary==81.0.4044.69.0
+chromedriver-binary==83.0.4103.14.0
 cli-helpers==1.2.1
 click==7.1.1
 colorama==0.4.3
@@ -107,7 +107,7 @@ mistune==0.8.4
 more-itertools==8.2.0
 mps-youtube==0.2.8
 msgpack==1.0.0
-mycli==1.20.1
+mycli==1.21.0
 nbconvert==5.6.1
 nbformat==5.0.5
 neovim==0.3.1
@@ -227,7 +227,7 @@ Twisted==20.3.0
 typed-ast==1.4.1
 ujson==2.0.3
 uritemplate==3.0.1
-urllib3==1.25.8
+urllib3==1.25.9
 vimiv==0.9.1
 virtualenv==20.0.18
 virtualenv-clone==0.5.4
