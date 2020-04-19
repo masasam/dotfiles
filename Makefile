@@ -208,7 +208,7 @@ urxvt: ## Init rxvt-unicode terminal
 	mkdir -p ${HOME}/.config/autostart
 	chmod a+x ${PWD}/.auto_start.sh
 	ln -vsf ${PWD}/.auto_start.sh ${HOME}/.auto_start.sh
-	ln -vsf ${PWD}/.config/autostart/autostart.desktop ${HOME}/.config/autostart
+	ln -vsf ${PWD}/.config/autostart/autostart.desktop ${HOME}/.config/autostart/autostart.desktop
 
 xterm: ## Init xterm terminal
 	sudo pacman -S xterm
@@ -266,6 +266,8 @@ keyring: ## Init gnome keyrings
 ibusmozc: ## Install ibus-mozc
 	test -L ${HOME}/.mozc || rm -rf ${HOME}/.mozc
 	ln -vsfn ${HOME}/backup/mozc ${HOME}/.mozc
+	mkdir -p ${HOME}/.config/autostart
+	ln -vsf ${PWD}/.config/autostart/ibus.desktop ${HOME}/.config/autostart/ibus.desktop
 	yay -S ibus-mozc
 	ibus-daemon -drx
 
