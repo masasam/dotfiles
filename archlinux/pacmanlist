@@ -1,3 +1,4 @@
+a52dec
 aalib
 accountsservice
 acl
@@ -16,6 +17,7 @@ arch-install-scripts
 archlinux-keyring
 argon2
 aria2
+aribb24
 asar
 asciidoc
 aspell
@@ -478,9 +480,11 @@ libdca
 libde265
 libdrm
 libdv
+libdvbpsi
 libdvdnav
 libdvdread
 libe-book
+libebml
 libedit
 libelf
 libepoxy
@@ -541,7 +545,9 @@ libldap
 liblouis
 liblqr
 liblrdf
+libmad
 libmagick6
+libmatroska
 libmaxminddb
 libmbim
 libmfx
@@ -554,6 +560,7 @@ libmodplug
 libmp4v2
 libmpc
 libmpcdec
+libmpeg2
 libmspub
 libmwaw
 libmypaint
@@ -627,6 +634,7 @@ libssh2
 libstaroffice
 libstemmer
 libsynctex
+libtar
 libtasn1
 libteam
 libthai
@@ -638,6 +646,7 @@ libtommath
 libtool
 libunistring
 libunwind
+libupnp
 libusb
 libusb-compat
 libusbmuxd
@@ -1058,6 +1067,7 @@ vid.stab
 vim
 vim-runtime
 vimiv
+vlc
 volume_key
 vte-common
 vulkan-icd-loader
