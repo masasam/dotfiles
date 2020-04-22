@@ -260,6 +260,7 @@ alias zshbackup='rm -rf ${HOME}/backup/zsh/backup/`ls -rt ${HOME}/backup/zsh/bac
 alias melpabackup='rm -rf ${HOME}/backup/emacs/elpa/`ls -rt ${HOME}/backup/emacs/elpa | head -n 1`; tar cfz ${HOME}/backup/emacs/elpa/`date '+%Y%m%d%H%M%S'`.tar.gz -C ${HOME}/.emacs.d elpa'
 alias melpacleanup='rm -rf ${HOME}/.emacs.d/elpa'
 alias dockercleanup='docker system df; docker container prune; docker volume prune; docker image prune; docker network prune; docker system prune; docker system df'
+alias yarncleanup='yarn cache clean'
 alias goupdate='cd ${HOME}/src/github.com/masasam/dotfiles; make goinstall; cd -'
 alias kindstart='kind create cluster; export KUBECONFIG="$(kind get kubeconfig-path --name="kind")"; kubectl cluster-info'
 alias kindstop='unset KUBECONFIG; kind delete cluster'
