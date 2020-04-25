@@ -797,6 +797,29 @@ function stern-completion-start() {
 }
 
 
+function tumxpane2() {
+    tmux split-window -h
+    tmux select-pane -t 1
+}
+
+
+function tumxpane3() {
+    tmux split-window -v
+    tmux split-window -h
+    tmux resize-pane -U 7
+    tmux select-pane -t 1
+}
+
+
+function tumxpane4() {
+    tmux split-window -h
+    tmux split-window -v
+    tmux select-pane -t 1
+    tmux split-window -v
+    tmux select-pane -t 1
+}
+
+
 # zsh-syntax-highlighting(pacman -S zsh-syntax-highlighting)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # zsh-completions for aws
