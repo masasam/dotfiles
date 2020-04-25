@@ -804,9 +804,8 @@ function tumxpane2() {
 
 
 function tumxpane3() {
-    tmux split-window -v
     tmux split-window -h
-    tmux resize-pane -U 7
+    tmux split-window -v
     tmux select-pane -t 1
 }
 
@@ -816,6 +815,14 @@ function tumxpane4() {
     tmux split-window -v
     tmux select-pane -t 1
     tmux split-window -v
+    tmux select-pane -t 1
+}
+
+
+function tumxpanedb() {
+    tmux split-window -v
+    tmux split-window -h
+    tmux resize-pane -U 7
     tmux select-pane -t 1
 }
 
