@@ -797,20 +797,20 @@ function stern-completion-start() {
 }
 
 
-function tumxpane2() {
+function tmuxpane2() {
     tmux split-window -h
     tmux select-pane -t 1
 }
 
 
-function tumxpane3() {
+function tmuxpane3() {
     tmux split-window -h
     tmux split-window -v
     tmux select-pane -t 1
 }
 
 
-function tumxpane4() {
+function tmuxpane4() {
     tmux split-window -h
     tmux split-window -v
     tmux select-pane -t 1
@@ -819,7 +819,7 @@ function tumxpane4() {
 }
 
 
-function tumxpanedb() {
+function tmuxpanedb() {
     tmux split-window -v
     tmux split-window -h
     tmux resize-pane -U 7
