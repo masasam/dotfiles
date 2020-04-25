@@ -8,13 +8,13 @@ astroid==2.3.3
 attrs==19.3.0
 Automat==20.2.0
 autopep8==1.5.2
-awscli==1.18.45
+awscli==1.18.46
 backcall==0.1.0
 bcrypt==3.1.7
 beautifulsoup4==4.9.0
 black==19.10b0
 bleach==3.1.4
-botocore==1.15.45
+botocore==1.15.46
 btrfsutil==1.2.0
 cached-property==1.5.1
 cachetools==4.1.0
@@ -87,7 +87,7 @@ jupyter==1.0.0
 jupyter-client==6.1.3
 jupyter-console==6.1.0
 jupyter-core==4.6.3
-jupyterlab==2.1.0
+jupyterlab==2.1.1
 jupyterlab-server==1.1.1
 jupyterthemes==0.20.0
 kitchen==1.2.6
@@ -127,7 +127,7 @@ pathspec==0.8.0
 pbr==5.4.5
 pexpect==4.8.0
 pgcli==3.0.0
-pgspecial==1.11.9
+pgspecial==1.11.10
 pickleshare==0.7.5
 Pillow==6.2.1
 pipenv==2018.11.26
@@ -191,7 +191,7 @@ ruamel.yaml==0.16.10
 ruamel.yaml.clib==0.2.0
 s3transfer==0.3.3
 scipy==1.4.1
-Scrapy==2.0.1
+Scrapy==2.1.0
 seaborn==0.10.0
 selenium==3.141.0
 Send2Trash==1.5.0
@@ -207,7 +207,7 @@ SQLAlchemy==1.3.16
 sqlparse==0.3.1
 sshuttle==0.78.5
 stevedore==1.32.0
-streamlink==1.4.0
+streamlink==1.4.1
 tabulate==0.8.7
 team==1.0
 termcolor==1.1.0
