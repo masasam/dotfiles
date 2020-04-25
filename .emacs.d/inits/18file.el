@@ -1,10 +1,10 @@
-;;; 18aggressive-indent.el --- 18aggressive-indent
+;;; 18file.el --- 18file
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)
 
-(global-aggressive-indent-mode 1)
-(add-to-list 'aggressive-indent-excluded-modes 'slim-mode)
+;; (global-aggressive-indent-mode 1)
+;; (add-to-list 'aggressive-indent-excluded-modes 'slim-mode)
 
 
 ;; Openwith
@@ -26,4 +26,4 @@
             (list (openwith-make-extension-regexp '("odp" "pps" "ppt" "pptx"))
                   "libreoffice" '("--impress" file))))
 
-;;; 18aggressive-indent ends here
+;;; 18file ends here
