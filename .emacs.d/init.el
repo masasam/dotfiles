@@ -122,6 +122,7 @@
   (package-install 'jsonrpc)
   (package-install 'key-chord)
   (package-install 'keycast)
+  (package-install 'keypression)
   (package-install 'keychain-environment)
   (package-install 'know-your-http-well)
   (package-install 'kubernetes)
