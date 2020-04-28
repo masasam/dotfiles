@@ -445,6 +445,7 @@ lhasa
 libabw
 libaec
 libaio
+libappindicator-gtk3
 libarchive
 libass
 libassuan
@@ -475,6 +476,8 @@ libcurl-compat
 libdaemon
 libdatrie
 libdazzle
+libdbusmenu-glib
+libdbusmenu-gtk3
 libdc1394
 libdca
 libde265
@@ -531,6 +534,7 @@ libidn2
 libiec61883
 libimagequant
 libimobiledevice
+libindicator-gtk3
 libinput
 libinstpatch
 libiptcdata
