@@ -8,13 +8,13 @@ astroid==2.4.0
 attrs==19.3.0
 Automat==20.2.0
 autopep8==1.5.2
-awscli==1.18.47
+awscli==1.18.49
 backcall==0.1.0
 bcrypt==3.1.7
 beautifulsoup4==4.9.0
 black==19.10b0
-bleach==3.1.4
-botocore==1.15.47
+bleach==3.1.5
+botocore==1.15.49
 btrfsutil==1.2.0
 cached-property==1.5.1
 cachetools==4.1.0
@@ -133,7 +133,7 @@ Pillow==6.2.1
 pipenv==2018.11.26
 pluggy==0.13.1
 ply==3.11
-progressbar2==3.51.0
+progressbar2==3.51.1
 prometheus-client==0.7.1
 prompt-toolkit==3.0.5
 Protego==0.1.16
@@ -180,7 +180,7 @@ qrencode==1.2
 qtconsole==4.7.3
 QtPy==1.9.0
 queuelib==1.5.0
-redis==3.4.1
+redis==3.5.0
 regex==2020.4.4
 requests==2.23.0
 requests-mock==1.7.0
