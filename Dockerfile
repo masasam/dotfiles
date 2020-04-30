@@ -1,13 +1,3 @@
-# How to test Makefile
-# 1.Build this Dockerfile
-#   docker build -t dotfiles /home/${USER}/src/github.com/masasam/dotfiles
-# 2.Run 'docker run' mounting the backup directory
-#   docker run -t -i -v /home/${USER}/backup:/home/${USER}/backup:cached --name arch dotfiles /bin/bash
-# 3.Execute the following command in the docker container
-#   cd /home/${USER}/src/github.com/masasam/dotfiles
-#   make install
-#   make init
-
 FROM archlinux:latest
 
 ARG USERNAME=masa
