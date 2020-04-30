@@ -1,4 +1,3 @@
-a52dec
 aalib
 accountsservice
 acl
@@ -17,7 +16,6 @@ arch-install-scripts
 archlinux-keyring
 argon2
 aria2
-aribb24
 asar
 asciidoc
 aspell
@@ -132,7 +130,6 @@ elinks
 emacs
 enchant
 eog
-espeak
 ethtool
 evince
 exempi
@@ -276,7 +273,6 @@ haskell-async
 haskell-attoparsec
 haskell-base-compat
 haskell-base-compat-batteries
-haskell-base-noprelude
 haskell-base-orphans
 haskell-base16-bytestring
 haskell-base64-bytestring
@@ -307,7 +303,6 @@ haskell-doctemplates
 haskell-emojis
 haskell-erf
 haskell-errors
-haskell-exceptions
 haskell-glob
 haskell-haddock-library
 haskell-hashable
@@ -483,11 +478,9 @@ libdca
 libde265
 libdrm
 libdv
-libdvbpsi
 libdvdnav
 libdvdread
 libe-book
-libebml
 libedit
 libelf
 libepoxy
@@ -549,9 +542,7 @@ libldap
 liblouis
 liblqr
 liblrdf
-libmad
 libmagick6
-libmatroska
 libmaxminddb
 libmbim
 libmfx
@@ -564,7 +555,6 @@ libmodplug
 libmp4v2
 libmpc
 libmpcdec
-libmpeg2
 libmspub
 libmwaw
 libmypaint
@@ -638,7 +628,6 @@ libssh2
 libstaroffice
 libstemmer
 libsynctex
-libtar
 libtasn1
 libteam
 libthai
@@ -650,7 +639,6 @@ libtommath
 libtool
 libunistring
 libunwind
-libupnp
 libusb
 libusb-compat
 libusbmuxd
@@ -1034,7 +1022,6 @@ the_silver_searcher
 thin-provisioning-tools
 throttled
 tig
-tk
 tlp
 tmux
 tokei
@@ -1070,7 +1057,6 @@ vid.stab
 vim
 vim-runtime
 vimiv
-vlc
 volume_key
 vte-common
 vulkan-icd-loader
