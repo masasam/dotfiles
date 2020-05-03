@@ -403,7 +403,8 @@ sxiv: ## Init sxiv
 	chmod +x ${HOME}/.config/sxiv/exec/image-info
 
 zeal: ## Deploy zeal config and docsets
-	sudo pacman -S zeal qt5-styleplugins qt5ct
+	yay -S zeal
+	sudo pacman -S qt5-styleplugins qt5ct
 	sudo ln -vsf ${PWD}/etc/environment /etc/environment
 	mkdir -p ${HOME}/.config/Zeal
 	ln -vsf ${PWD}/.config/Zeal/Zeal.conf ${HOME}/.config/Zeal/Zeal.conf
