@@ -177,6 +177,7 @@ gdb
 gdb-common
 gdbm
 gdk-pixbuf2
+gdl
 gdm
 geckodriver
 gegl
@@ -204,6 +205,7 @@ gnome-bluetooth
 gnome-color-manager
 gnome-control-center
 gnome-desktop
+gnome-disk-utility
 gnome-keyring
 gnome-logs
 gnome-online-accounts
@@ -250,8 +252,10 @@ gtk-update-icon-cache
 gtk2
 gtk3
 gtkmm
+gtkmm3
 gtksourceview3
 gtkspell
+gtkspell3
 gts
 guile
 guile2.0
@@ -1147,7 +1151,6 @@ xvidcore
 xz
 yarn
 zbar
-zeal
 zenity
 zeromq
 zinnia

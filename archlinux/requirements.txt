@@ -133,7 +133,7 @@ Pillow==6.2.1
 pipenv==2018.11.26
 pluggy==0.13.1
 ply==3.11
-progressbar2==3.51.2
+progressbar2==3.51.3
 prometheus-client==0.7.1
 prompt-toolkit==3.0.5
 Protego==0.1.16
@@ -183,7 +183,7 @@ queuelib==1.5.0
 redis==3.5.0
 regex==2020.4.4
 requests==2.23.0
-requests-mock==1.7.0
+requests-mock==1.8.0
 rope==0.16.0
 rsa==4.0
 rtv==1.27.0
@@ -241,6 +241,6 @@ widgetsnbextension==3.5.1
 wrapt==1.12.1
 x256==0.0.3
 yapf==0.30.0
-youtube-dl==2020.3.24
+youtube-dl==2020.5.3
 zipp==3.1.0
 zope.interface==5.1.0
