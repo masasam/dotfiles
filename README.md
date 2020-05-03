@@ -578,7 +578,7 @@ Google Kubernetes Engine
 
 kind(Kubernetes IN Docker)
 
-	GO111MODULE="on" go get sigs.k8s.io/kind@v0.8.0
+	GO111MODULE="on" go get sigs.k8s.io/kind@v0.8.1
 	sudo sh -c "kind completion zsh > /usr/share/zsh/site-functions/_kind"
 
 minikube with kvm2
