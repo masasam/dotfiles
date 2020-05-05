@@ -8,13 +8,13 @@ astroid==2.4.0
 attrs==19.3.0
 Automat==20.2.0
 autopep8==1.5.2
-awscli==1.18.51
+awscli==1.18.52
 backcall==0.1.0
 bcrypt==3.1.7
 beautifulsoup4==4.9.0
 black==19.10b0
 bleach==3.1.5
-botocore==1.16.1
+botocore==1.16.2
 btrfsutil==1.2.0
 cached-property==1.5.1
 cachetools==4.1.0
@@ -35,7 +35,7 @@ decorator==4.4.2
 defusedxml==0.6.0
 diagrams==0.9.0
 distlib==0.3.0
-Django==3.0.5
+Django==3.0.6
 docker==4.2.0
 docker-compose==1.25.5
 docker-pycreds==0.4.0
@@ -87,7 +87,7 @@ jupyter==1.0.0
 jupyter-client==6.1.3
 jupyter-console==6.1.0
 jupyter-core==4.6.3
-jupyterlab==2.1.1
+jupyterlab==2.1.2
 jupyterlab-server==1.1.1
 jupyterthemes==0.20.0
 kitchen==1.2.6
@@ -229,7 +229,7 @@ ujson==2.0.3
 uritemplate==3.0.1
 urllib3==1.25.9
 vimiv==0.9.1
-virtualenv==20.0.19
+virtualenv==20.0.20
 virtualenv-clone==0.5.4
 virtualenvwrapper==4.8.4
 vobject==0.9.6.1
