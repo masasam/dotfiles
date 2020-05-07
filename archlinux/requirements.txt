@@ -174,14 +174,14 @@ python-utils==2.4.0
 pytz==2020.1
 pyxdg==0.26
 PyYAML==5.3.1
-pyzmq==19.0.0
+pyzmq==19.0.1
 qreator==16.6.2
 qrencode==1.2
 qtconsole==4.7.3
 QtPy==1.9.0
 queuelib==1.5.0
 redis==3.5.0
-regex==2020.4.4
+regex==2020.5.7
 requests==2.23.0
 requests-mock==1.8.0
 rope==0.17.0
