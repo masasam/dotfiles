@@ -422,6 +422,7 @@ You can make install from here
 
 #### Install using yay
 
+	yay -S appimagelauncher
 	yay -S drone-cli
 	yay -S github-cli
 	yay -S git-secrets
