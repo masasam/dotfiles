@@ -93,6 +93,12 @@
   (browse-url "https://keep.google.com/u/0/"))
 
 
+(defun chromium-keep-new ()
+  "Open new keep with chromium."
+  (interactive)
+  (browse-url "https://keep.new"))
+
+
 (defun chromium-minikube ()
   "Open minikube service server with chromium."
   (interactive)
