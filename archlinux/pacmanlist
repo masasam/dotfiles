@@ -45,6 +45,7 @@ bluez
 bluez-libs
 bolt
 bookworm
+boost
 boost-libs
 bridge-utils
 brotli
@@ -160,6 +161,7 @@ freetype2
 frei0r-plugins
 fribidi
 fuse-common
+fuse2
 fuse3
 fwupd
 fzf
@@ -248,6 +250,7 @@ gst-plugins-base
 gst-plugins-base-libs
 gst-plugins-good
 gstreamer
+gtest
 gtk-update-icon-cache
 gtk2
 gtk3
@@ -397,6 +400,7 @@ imagemagick
 imlib2
 inetutils
 inkscape
+inotify-tools
 intel-gmmlib
 intel-media-driver
 intel-media-sdk
@@ -944,6 +948,7 @@ rclone
 re2
 readline
 redland
+reiserfsprogs
 rest
 rhash
 ripgrep
@@ -1164,5 +1169,6 @@ zsh
 zsh-completions
 zsh-syntax-highlighting
 zstd
+zsync
 zvbi
 zziplib
