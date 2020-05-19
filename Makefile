@@ -66,7 +66,7 @@ install: ## Install arch linux packages using pacman
 	firejail opencv hexedit discord pv smartmontools gnome-logs wireshark-cli \
 	wl-clipboard lsof mapnik browserpass-chromium editorconfig-core-c watchexec \
 	mpv browserpass-firefox man-db baobab ioping ruby-irb mkcert code findomain \
-	guetzli
+	guetzli openvpn
 	sudo pkgfile --update
 
 pipinstall: ## Install python packages
@@ -529,10 +529,6 @@ emacs-devel: ## Install development version of emacs
 	make;\
 	sudo make install;\
 	rm -rf ${HOME}/.emacs.d/elpa
-
-openvpn: ## Install openvpn
-	sudo pacman -S openvpn networkmanager-openvpn
-	sudo ln -vsf ${PWD}/etc/openvpn/client/client.conf /etc/openvpn/client/client.conf
 
 screenkey: ## Init screenkey
 	yay -S screenkey
