@@ -802,6 +802,7 @@ openjpeg2
 openmpi
 openssh
 openssl
+openvpn
 opera-ffmpeg-codecs
 optipng
 opus
@@ -837,6 +838,7 @@ php
 pinentry
 pipewire
 pixman
+pkcs11-helper
 pkgconf
 pkgfile
 pkgstats
