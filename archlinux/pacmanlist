@@ -139,6 +139,7 @@ expat
 expect
 faac
 faad2
+fabric
 fakeroot
 ffmpeg
 fftw
@@ -892,6 +893,7 @@ python-html2text
 python-httplib2
 python-idna
 python-importlib-metadata
+python-invoke
 python-jsonschema
 python-more-itertools
 python-oauth2client
