@@ -134,7 +134,6 @@ goinstall: ## Install go packages
 	go get -u -v github.com/kyoshidajp/ghkw
 	go get -u -v github.com/simeji/jid/cmd/jid
 	go get -u -v github.com/jmhodges/jsonpp
-	go get -u -v github.com/k1LoW/tbls
 	GO111MODULE="on" go get -u -v github.com/mithrandie/csvq
 
 nodeinstall: ## Install node packages
