@@ -107,6 +107,7 @@ pipinstall: ## Install python packages
 	pip install --user pyflakes
 	pip install --user pylint
 	pip install --user python-language-server
+	pip install --user r7insight_python
 	pip install --user redis
 	pip install --user requests_mock
 	pip install --user rope
