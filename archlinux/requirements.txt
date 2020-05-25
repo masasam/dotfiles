@@ -33,7 +33,7 @@ cssselect==1.1.0
 cycler==0.10.0
 decorator==4.4.2
 defusedxml==0.6.0
-diagrams==0.11.0
+diagrams==0.12.0
 distlib==0.3.0
 Django==3.0.6
 docker==4.2.0
@@ -68,7 +68,7 @@ httplib2==0.17.4
 humanize==2.4.0
 hyperlink==19.0.0
 idna==2.9
-importlib-metadata==1.5.2
+importlib-metadata==1.6.0
 importmagic==0.1.7
 incremental==17.5.0
 invoke==1.4.1
@@ -200,7 +200,7 @@ Send2Trash==1.5.0
 service-identity==18.1.0
 setproctitle==1.1.10
 simplejson==3.17.0
-six==1.14.0
+six==1.15.0
 smmap==3.0.4
 smmap2==3.0.1
 soupsieve==2.0.1
