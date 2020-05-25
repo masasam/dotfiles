@@ -278,6 +278,7 @@ haskell-ansi-terminal
 haskell-asn1-encoding
 haskell-asn1-parse
 haskell-asn1-types
+haskell-assoc
 haskell-async
 haskell-attoparsec
 haskell-base-compat
@@ -286,6 +287,7 @@ haskell-base-orphans
 haskell-base16-bytestring
 haskell-base64-bytestring
 haskell-basement
+haskell-bifunctors
 haskell-bitarray
 haskell-blaze-builder
 haskell-blaze-html
@@ -296,6 +298,7 @@ haskell-cereal
 haskell-cmark-gfm
 haskell-cmdargs
 haskell-colour
+haskell-comonad
 haskell-connection
 haskell-cookie
 haskell-cryptonite
@@ -306,6 +309,7 @@ haskell-data-default-instances-dlist
 haskell-data-default-instances-old-locale
 haskell-diff
 haskell-digest
+haskell-distributive
 haskell-dlist
 haskell-doclayout
 haskell-doctemplates

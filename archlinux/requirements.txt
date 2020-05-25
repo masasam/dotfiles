@@ -136,7 +136,7 @@ pipenv==2018.11.26
 pluggy==0.13.1
 ply==3.11
 progressbar2==3.51.3
-prometheus-client==0.7.1
+prometheus-client==0.8.0
 prompt-toolkit==3.0.5
 Protego==0.1.16
 protobuf==3.11.4
@@ -171,7 +171,7 @@ pyrsistent==0.16.0
 PySocks==1.7.1
 python-dateutil==2.8.1
 python-jsonrpc-server==0.3.4
-python-language-server==0.32.0
+python-language-server==0.33.0
 python-utils==2.4.0
 pytz==2020.1
 pyxdg==0.26
@@ -182,6 +182,7 @@ qrencode==1.2
 qtconsole==4.7.4
 QtPy==1.9.0
 queuelib==1.5.0
+r7insight-python==1.0.0
 redis==3.5.2
 regex==2020.5.14
 requests==2.23.0
