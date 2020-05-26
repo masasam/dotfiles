@@ -100,6 +100,7 @@ pipinstall: ## Install python packages
 	pip install --user nose
 	pip install --user pandas
 	pip install --user pipenv
+	pip install --user poetry
 	pip install --user progressbar2
 	pip install --user psycopg2-binary
 	pip install --user py-spy
