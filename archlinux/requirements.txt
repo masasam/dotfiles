@@ -8,13 +8,13 @@ astroid==2.4.1
 attrs==19.3.0
 Automat==20.2.0
 autopep8==1.5.2
-awscli==1.18.68
+awscli==1.18.69
 backcall==0.1.0
 bcrypt==3.1.7
 beautifulsoup4==4.9.1
 black==19.10b0
 bleach==3.1.5
-botocore==1.16.18
+botocore==1.16.19
 btrfsutil==1.2.0
 CacheControl==0.12.6
 cached-property==1.5.1
@@ -142,7 +142,7 @@ pgcli==3.0.0
 pgspecial==1.11.10
 pickleshare==0.7.5
 Pillow==6.2.1
-pipenv==2018.11.26
+pipenv==2020.5.28
 pkginfo==1.5.0.1
 pluggy==0.13.1
 ply==3.11
@@ -261,6 +261,6 @@ widgetsnbextension==3.5.1
 wrapt==1.12.1
 x256==0.0.3
 yapf==0.30.0
-youtube-dl==2020.5.8
+youtube-dl==2020.5.29
 zipp==3.1.0
 zope.interface==5.1.0
