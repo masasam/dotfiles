@@ -70,7 +70,7 @@ greenlet==0.4.15
 html2text==2019.8.11
 html5lib==1.0.1
 httpie==2.1.0
-httplib2==0.17.4
+httplib2==0.18.0
 humanize==2.4.0
 hyperlink==19.0.0
 idna==2.9
