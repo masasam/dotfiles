@@ -7,7 +7,7 @@ asn1crypto==1.3.0
 astroid==2.4.1
 attrs==19.3.0
 Automat==20.2.0
-autopep8==1.5.2
+autopep8==1.5.3
 awscli==1.18.69
 backcall==0.1.0
 bcrypt==3.1.7
@@ -24,11 +24,11 @@ certifi==2020.4.5.1
 cffi==1.14.0
 chardet==3.0.4
 cheat==2.5.1
-chromedriver-binary==83.0.4103.39.0
+chromedriver-binary==84.0.4147.30.0
 cleo==0.8.1
 cli-helpers==2.0.1
 click==7.1.2
-clikit==0.6.0
+clikit==0.6.1
 colorama==0.4.3
 configobj==5.0.6
 constantly==15.1.0
@@ -38,7 +38,7 @@ cssselect==1.1.0
 cycler==0.10.0
 decorator==4.4.2
 defusedxml==0.6.0
-diagrams==0.12.0
+diagrams==0.13.0
 distlib==0.3.0
 Django==3.0.6
 docker==4.2.0
@@ -57,11 +57,11 @@ future==0.18.2
 gif-for-cli==1.1.2
 gitdb==4.0.5
 gitdb2==4.0.2
-GitPython==3.1.2
+GitPython==3.1.3
 goobook==3.4.dev0
 google-api-core==1.16.0
 google-api-python-client==1.8.3
-google-auth==1.11.3
+google-auth==1.16.0
 google-auth-httplib2==0.0.3
 googleapis-common-protos==1.51.0
 graph-cli==0.1.4
@@ -79,7 +79,7 @@ importmagic==0.1.7
 incremental==17.5.0
 invoke==1.4.1
 ipykernel==5.3.0
-ipython==7.14.0
+ipython==7.15.0
 ipython-genutils==0.2.0
 ipywidgets==7.5.1
 iso-639==0.4.5
@@ -129,7 +129,7 @@ oauth2client==4.1.3
 ordered-set==3.1.1
 packaging==20.4
 pafy==0.5.5
-pandas==1.0.3
+pandas==1.0.4
 pandocfilters==1.4.2
 paramiko==2.7.1
 parsel==1.6.0
@@ -179,7 +179,7 @@ pynvim==0.4.1
 pyOpenSSL==19.1.0
 pyparsing==2.4.7
 PyQt5==5.14.2
-PyQt5-sip==12.7.2
+PyQt5-sip==12.8.0
 pyrsistent==0.16.0
 PySocks==1.7.1
 python-dateutil==2.8.1

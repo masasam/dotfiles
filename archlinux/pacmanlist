@@ -368,6 +368,7 @@ haskell-temporary
 haskell-texmath
 haskell-text-conversions
 haskell-th-abstraction
+haskell-these
 haskell-time-compat
 haskell-tls
 haskell-transformers-compat
