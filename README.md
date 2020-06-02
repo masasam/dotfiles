@@ -577,7 +577,7 @@ Google Kubernetes Engine
 	curl https://sdk.cloud.google.com | bash
 	test -L ${HOME}/.config/gcloud || rm -rf ${HOME}/.config/gcloud
 	ln -vsfn ${HOME}/backup/gcloud   ${HOME}/.config/gcloud
-	sudo pacman -S kubectl
+	sudo pacman -S kubectl kubectx kustomize
 	yay -S stern-bin
 
 kind(Kubernetes IN Docker)
