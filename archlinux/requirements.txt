@@ -8,13 +8,13 @@ astroid==2.4.1
 attrs==19.3.0
 Automat==20.2.0
 autopep8==1.5.3
-awscli==1.18.71
+awscli==1.18.72
 backcall==0.1.0
 bcrypt==3.1.7
 beautifulsoup4==4.9.1
 black==19.10b0
 bleach==3.1.5
-botocore==1.16.21
+botocore==1.16.22
 btrfsutil==1.2.0
 CacheControl==0.12.6
 cached-property==1.5.1
@@ -40,7 +40,7 @@ decorator==4.4.2
 defusedxml==0.6.0
 diagrams==0.13.1
 distlib==0.3.0
-Django==3.0.6
+Django==3.0.7
 docker==4.2.1
 docker-compose==1.25.5
 docker-pycreds==0.4.0
@@ -70,7 +70,7 @@ greenlet==0.4.15
 html2text==2019.8.11
 html5lib==1.0.1
 httpie==2.1.0
-httplib2==0.17.4
+httplib2==0.18.1
 humanize==2.4.0
 hyperlink==19.0.0
 idna==2.9
@@ -184,7 +184,7 @@ pyrsistent==0.16.0
 PySocks==1.7.1
 python-dateutil==2.8.1
 python-jsonrpc-server==0.3.4
-python-language-server==0.33.0
+python-language-server==0.33.1
 python-utils==2.4.0
 pytz==2020.1
 pyxdg==0.26

@@ -440,6 +440,7 @@ kmod
 krb5
 kubectl
 kubectx
+kustomize
 kyotocabinet
 l-smash
 ladspa
