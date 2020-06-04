@@ -8,13 +8,13 @@ astroid==2.4.1
 attrs==19.3.0
 Automat==20.2.0
 autopep8==1.5.3
-awscli==1.18.72
+awscli==1.18.73
 backcall==0.1.0
 bcrypt==3.1.7
 beautifulsoup4==4.9.1
 black==19.10b0
 bleach==3.1.5
-botocore==1.16.22
+botocore==1.16.23
 btrfsutil==1.2.0
 CacheControl==0.12.6
 cached-property==1.5.1
@@ -124,7 +124,7 @@ nbformat==5.0.6
 neovim==0.3.1
 nose==1.3.7
 notebook==6.0.3
-numpy==1.18.4
+numpy==1.18.5
 oauth2client==4.1.3
 ordered-set==3.1.1
 packaging==20.4
@@ -225,7 +225,7 @@ speedtest-cli==2.1.2
 SQLAlchemy==1.3.17
 sqlparse==0.3.1
 sshuttle==0.78.5
-stevedore==1.32.0
+stevedore==2.0.0
 streamlink==1.4.1
 tabulate==0.8.7
 team==1.0
