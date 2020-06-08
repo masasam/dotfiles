@@ -881,14 +881,17 @@ python-cachetools
 python-cairo
 python-cffi
 python-chardet
+python-click
 python-cryptography
 python-dateutil
 python-dbus
 python-dbus-common
+python-distro
 python-docker
 python-docker-pycreds
 python-dockerpty
 python-docopt
+python-dotenv
 python-gobject
 python-google-api-core
 python-google-api-python-client
