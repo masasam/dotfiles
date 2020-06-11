@@ -8,13 +8,13 @@ astroid==2.4.2
 attrs==19.3.0
 Automat==20.2.0
 autopep8==1.5.3
-awscli==1.18.77
+awscli==1.18.78
 backcall==0.2.0
 bcrypt==3.1.7
 beautifulsoup4==4.9.1
 black==19.10b0
 bleach==3.1.5
-botocore==1.17.0
+botocore==1.17.1
 btrfsutil==1.2.0
 CacheControl==0.12.6
 cached-property==1.5.1
@@ -62,7 +62,7 @@ GitPython==3.1.3
 goobook==3.4.dev0
 google-api-core==1.16.0
 google-api-python-client==1.8.3
-google-auth==1.16.1
+google-auth==1.17.0
 google-auth-httplib2==0.0.3
 googleapis-common-protos==1.51.0
 graph-cli==0.1.4
@@ -204,7 +204,7 @@ requests==2.23.0
 requests-mock==1.8.0
 requests-toolbelt==0.9.1
 rope==0.17.0
-rsa==4.1
+rsa==4.2
 rtv==1.27.0
 ruamel.yaml==0.16.10
 ruamel.yaml.clib==0.2.0
@@ -256,7 +256,7 @@ virtualenv-clone==0.5.4
 virtualenvwrapper==4.8.4
 vobject==0.9.6.1
 w3lib==1.22.0
-wcwidth==0.1.9
+wcwidth==0.2.4
 webencodings==0.5.1
 websocket-client==0.57.0
 widgetsnbextension==3.5.1
