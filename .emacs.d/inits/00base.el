@@ -3,11 +3,14 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
-;; theme
-(load-theme 'material t)
-;; Change part of theme to your liking.
-;; Investigate by changing 'M-x list-faces-display'
-(custom-set-faces '(cursor ((t (:background "#82c600")))))
+;; ;; theme
+;; (load-theme 'material t)
+;; ;; Change part of theme to your liking.
+;; ;; Investigate by changing 'M-x list-faces-display'
+;; (custom-set-faces '(cursor ((t (:background "#82c600")))))
+
+(iceberg-theme-create-theme-file)
+(load-theme 'solarized-iceberg-dark t)
 
 
 ;; Save the file specified code with basic utf-8 if it exists
