@@ -105,7 +105,6 @@
   (package-install 'hierarchy)
   (package-install 'htmlize)
   (package-install 'hydra)
-  (package-install 'iceberg-theme)
   (package-install 'iedit)
   (package-install 'imenu-anywhere)
   (package-install 'inf-ruby)
