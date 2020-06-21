@@ -421,6 +421,7 @@ aur: ## Install arch linux AUR packages using yay
 	yay -S appimagelauncher
 	yay -S beekeeper-studio-bin
 	yay -S downgrade
+	yay -S ferdi-bin
 	yay -S git-secrets
 	yay -S nvm
 	yay -S ripgrep-all
