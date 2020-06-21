@@ -419,18 +419,20 @@ yay: ## Install yay using yay
 
 aur: ## Install arch linux AUR packages using yay
 	yay -S appimagelauncher
-	yay -S beekeeper-studio-bin
 	yay -S downgrade
 	yay -S ferdi-bin
 	yay -S git-secrets
 	yay -S nvm
 	yay -S ripgrep-all
-	yay -S sequeler-git
 	yay -S skypeforlinux-stable-bin
 	yay -S slack-desktop
-	yay -S tableplus
 	yay -S trivy-bin
 	yay -S zoom
+
+guidb: ## Install gui database tools
+	yay -S beekeeper-studio-bin
+	yay -S sequeler-git
+	yay -S tableplus
 
 gh: ## Install and setup github-cli
 	yay -S github-cli
@@ -638,7 +640,7 @@ testpath: ## Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: rclone gnupg ssh install init keyring urxvt xterm termite yay tlp thinkpad ttf-cica dnsmasq pipinstall goinstall ibusmozc neomutt docker nodeinstall zeal sylpheed lvfs gcloud docker-compose aws toggle aur kind eralchemy mpsyt gh
+allinstall: rclone gnupg ssh install init keyring urxvt xterm termite yay tlp thinkpad ttf-cica dnsmasq pipinstall goinstall ibusmozc neomutt docker nodeinstall zeal sylpheed lvfs gcloud docker-compose aws toggle aur guidb kind eralchemy mpsyt gh
 
 nextinstall: chromium rubygem rbenv rustinstall postgresql maria-db mycli pgcli
 
