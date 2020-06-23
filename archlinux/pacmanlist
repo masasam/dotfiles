@@ -1168,6 +1168,7 @@ xorgproto
 xsel
 xterm
 xvidcore
+xxhash
 xz
 yarn
 zbar

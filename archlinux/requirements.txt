@@ -8,13 +8,13 @@ astroid==2.4.2
 attrs==19.3.0
 Automat==20.2.0
 autopep8==1.5.3
-awscli==1.18.84
+awscli==1.18.85
 backcall==0.2.0
 bcrypt==3.1.7
 beautifulsoup4==4.9.1
 black==19.10b0
 bleach==3.1.5
-botocore==1.17.7
+botocore==1.17.8
 btrfsutil==1.2.0
 CacheControl==0.12.6
 cached-property==1.5.1
@@ -69,7 +69,7 @@ graph-cli==0.1.6
 graphviz==0.14
 greenlet==0.4.16
 html2text==2019.8.11
-html5lib==1.0.1
+html5lib==1.1
 httpie==2.2.0
 httplib2==0.18.1
 humanize==2.4.0
@@ -97,7 +97,7 @@ jupyter==1.0.0
 jupyter-client==6.1.3
 jupyter-console==6.1.0
 jupyter-core==4.6.3
-jupyterlab==2.1.4
+jupyterlab==2.1.5
 jupyterlab-server==1.1.5
 jupyterthemes==0.20.0
 keyring==21.2.1
@@ -186,7 +186,7 @@ PySocks==1.7.1
 python-dateutil==2.8.1
 python-dotenv==0.13.0
 python-jsonrpc-server==0.3.4
-python-language-server==0.33.2
+python-language-server==0.33.3
 python-utils==2.4.0
 pytz==2020.1
 pyxdg==0.26
@@ -194,7 +194,7 @@ PyYAML==5.3.1
 pyzmq==19.0.1
 qreator==16.6.2
 qrencode==1.2
-qtconsole==4.7.4
+qtconsole==4.7.5
 QtPy==1.9.0
 queuelib==1.5.0
 r7insight-python==1.0.0
@@ -227,7 +227,7 @@ speedtest-cli==2.1.2
 SQLAlchemy==1.3.17
 sqlparse==0.3.1
 sshuttle==1.0.2
-stevedore==2.0.0
+stevedore==2.0.1
 streamlink==1.4.1
 tabulate==0.8.7
 team==1.0
@@ -251,7 +251,7 @@ ujson==1.35
 uritemplate==3.0.1
 urllib3==1.25.9
 vimiv==0.9.1
-virtualenv==20.0.23
+virtualenv==20.0.24
 virtualenv-clone==0.5.4
 virtualenvwrapper==4.8.4
 vobject==0.9.6.1
