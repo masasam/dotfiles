@@ -4,7 +4,9 @@
 ;;(setq debug-on-error t)
 
 ;; theme
-(load-theme 'material t)
+;; (load-theme 'material t)
+(load-theme 'dracula t)
+
 ;; Change part of theme to your liking.
 ;; Investigate by changing 'M-x list-faces-display'
 (custom-set-faces '(cursor ((t (:background "#82c600")))))

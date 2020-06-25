@@ -65,6 +65,7 @@
   (package-install 'docker)
   (package-install 'docker-tramp)
   (package-install 'dockerfile-mode)
+  (package-install 'dracula-theme)
   (package-install 'dumb-jump)
   (package-install 'eacl)
   (package-install 'easy-escape)
