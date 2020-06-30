@@ -410,7 +410,6 @@ inotify-tools
 intel-gmmlib
 intel-media-driver
 intel-media-sdk
-intel-tbb
 intel-ucode
 ioping
 ipcalc
@@ -1028,6 +1027,7 @@ t1lib
 taglib
 talloc
 tar
+tbb
 tcl
 tcpdump
 tdb
@@ -1124,7 +1124,6 @@ xkeyboard-config
 xmlsec
 xorg-bdftopcf
 xorg-font-util
-xorg-font-utils
 xorg-fonts-encodings
 xorg-iceauth
 xorg-luit
