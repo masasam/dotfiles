@@ -8,13 +8,13 @@ astroid==2.4.2
 attrs==19.3.0
 Automat==20.2.0
 autopep8==1.5.3
-awscli==1.18.93
+awscli==1.18.95
 backcall==0.2.0
 bcrypt==3.1.7
 beautifulsoup4==4.9.1
 black==19.10b0
 bleach==3.1.5
-botocore==1.17.16
+botocore==1.17.18
 btrfsutil==1.2.0
 CacheControl==0.12.6
 cached-property==1.5.1
@@ -65,7 +65,7 @@ google-api-python-client==1.9.3
 google-auth==1.18.0
 google-auth-httplib2==0.0.3
 googleapis-common-protos==1.52.0
-graph-cli==0.1.6
+graph-cli==0.1.7
 graphviz==0.14
 greenlet==0.4.16
 html2text==2019.8.11
@@ -86,7 +86,7 @@ ipywidgets==7.5.1
 iso-639==0.4.5
 iso3166==1.0.1
 isodate==0.6.0
-isort==5.0.3
+isort==5.0.4
 itemadapter==0.1.0
 jedi==0.17.1
 jeepney==0.4.3
@@ -229,7 +229,7 @@ SQLAlchemy==1.3.18
 sqlparse==0.3.1
 sshuttle==1.0.2
 stevedore==2.0.1
-streamlink==1.4.1
+streamlink==1.5.0
 tabulate==0.8.7
 team==1.0
 termcolor==1.1.0
@@ -252,7 +252,7 @@ ujson==1.35
 uritemplate==3.0.1
 urllib3==1.25.9
 vimiv==0.9.1
-virtualenv==20.0.25
+virtualenv==20.0.26
 virtualenv-clone==0.5.4
 virtualenvwrapper==4.8.4
 vobject==0.9.6.1

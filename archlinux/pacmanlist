@@ -260,6 +260,7 @@ gtkmm3
 gtksourceview3
 gtkspell
 gtkspell3
+gtop
 gts
 guetzli
 guile
@@ -388,6 +389,7 @@ hdf5
 hdparm
 hexedit
 hicolor-icon-theme
+hidapi
 highlight
 hspell
 htop
