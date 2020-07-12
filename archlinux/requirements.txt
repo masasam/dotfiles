@@ -63,7 +63,7 @@ goobook==3.4.dev0
 google-api-core==1.20.0
 google-api-python-client==1.9.3
 google-auth==1.18.0
-google-auth-httplib2==0.0.3
+google-auth-httplib2==0.0.4
 googleapis-common-protos==1.52.0
 graph-cli==0.1.7
 graphviz==0.14
@@ -86,7 +86,7 @@ ipywidgets==7.5.1
 iso-639==0.4.5
 iso3166==1.0.1
 isodate==0.6.0
-isort==5.0.6
+isort==5.0.9
 itemadapter==0.1.0
 jedi==0.17.1
 jeepney==0.4.3
@@ -185,7 +185,7 @@ PyQt5-sip==12.8.0
 pyrsistent==0.16.0
 PySocks==1.7.1
 python-dateutil==2.8.1
-python-dotenv==0.13.0
+python-dotenv==0.14.0
 python-jsonrpc-server==0.3.4
 python-language-server==0.34.1
 python-utils==2.4.0
@@ -228,7 +228,7 @@ speedtest-cli==2.1.2
 SQLAlchemy==1.3.18
 sqlparse==0.3.1
 sshuttle==1.0.2
-stevedore==2.0.1
+stevedore==3.0.0
 streamlink==1.5.0
 tabulate==0.8.7
 team==1.0
