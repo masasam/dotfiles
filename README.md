@@ -422,6 +422,7 @@ You can make install from here
 
 #### Install using yay
 
+	yay -S altair
 	yay -S appimagelauncher
 	yay -S beekeeper-studio-bin
 	yay -S drone-cli
