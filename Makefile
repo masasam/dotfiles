@@ -38,6 +38,7 @@ init: ## Initial deploy dotfiles
 	ln -vsf ${PWD}/.netrc ${HOME}/.netrc
 	ln -vsf ${PWD}/.authinfo ${HOME}/.authinfo
 	ln -vsf ${PWD}/.config/hub ${HOME}/.config/hub
+	sudo ln -vsf ${PWD}/etc/hosts /etc/hosts
 
 base: ## Install base and base-devel package
 	sudo pacman -S filesystem gcc-libs glibc bash coreutils file findutils gawk \
