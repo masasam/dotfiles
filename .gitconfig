@@ -3,7 +3,7 @@
 	email = masasam@users.noreply.github.com
 	signingkey = 288770C044C8CC3A
 [commit]
-    gpgsign = true
+	gpgsign = true
 [color]
 	ui = auto
 	status = auto
@@ -42,15 +42,15 @@
 [diff]
 	compactionHeuristic = true
 [ghq]
-    root = ~/src
+	root = ~/src
 [ghq "https://gitlab.com/"]
-     vcs = git
+	vcs = git
 [ghq "https://bitbucket.org/"]
-     vcs = git
+	vcs = git
 [gpg]
 	program = gpg2
 [url "https://"]
-    insteadOf = git://
+	insteadOf = git://
 [secrets]
 	providers = git secrets --aws-provider
 	patterns = [A-Z0-9]{20}
