@@ -8,13 +8,13 @@ astroid==2.4.2
 attrs==19.3.0
 Automat==20.2.0
 autopep8==1.5.3
-awscli==1.18.97
+awscli==1.18.98
 backcall==0.2.0
 bcrypt==3.1.7
 beautifulsoup4==4.9.1
 black==19.10b0
 bleach==3.1.5
-botocore==1.17.20
+botocore==1.17.21
 btrfsutil==1.2.0
 CacheControl==0.12.6
 cached-property==1.5.1
@@ -74,7 +74,7 @@ httpie==2.2.0
 httplib2==0.18.1
 humanize==2.5.0
 hyperlink==19.0.0
-idna==2.9
+idna==2.10
 importlib-metadata==1.6.1
 importmagic==0.1.7
 incremental==17.5.0
@@ -86,7 +86,7 @@ ipywidgets==7.5.1
 iso-639==0.4.5
 iso3166==1.0.1
 isodate==0.6.0
-isort==5.0.9
+isort==5.1.0
 itemadapter==0.1.0
 jedi==0.17.1
 jeepney==0.4.3
@@ -98,7 +98,7 @@ jupyter==1.0.0
 jupyter-client==6.1.6
 jupyter-console==6.1.0
 jupyter-core==4.6.3
-jupyterlab==2.1.5
+jupyterlab==2.2.0
 jupyterlab-server==1.2.0
 jupyterthemes==0.20.0
 keyring==21.2.1
@@ -252,7 +252,7 @@ ujson==1.35
 uritemplate==3.0.1
 urllib3==1.25.9
 vimiv==0.9.1
-virtualenv==20.0.26
+virtualenv==20.0.27
 virtualenv-clone==0.5.4
 virtualenvwrapper==4.8.4
 vobject==0.9.6.1
