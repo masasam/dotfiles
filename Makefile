@@ -438,7 +438,7 @@ guidb: ## Install gui database tools
 	yay -S tableplus
 
 gh: ## Install and setup github-cli
-	yay -S github-cli
+	pacman -S github-cli
 	test -L ${HOME}/.config/gh || rm -rf ${HOME}/.config/gh
 	ln -vsfn ${HOME}/backup/gh ${HOME}/.config/gh
 

@@ -428,7 +428,6 @@ You can make install from here
 	yay -S beekeeper-studio-bin
 	yay -S drone-cli
 	yay -S ferdi-bin
-	yay -S github-cli
 	yay -S git-secrets
 	yay -S global
 	yay -S goobook-git
