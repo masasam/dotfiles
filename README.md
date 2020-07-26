@@ -416,7 +416,7 @@ You can make install from here
 	sudo pacman -S obs-studio wireshark-cli browserpass-chromium
 	sudo pacman -S editorconfig-core-c watchexec browserpass-firefox
 	sudo pacman -S docker-compose man-db baobab ioping mkcert code
-	sudo pacman -S guetzli openvpn fabric gtop pass
+	sudo pacman -S guetzli openvpn fabric gtop pass github-cli
 
 ![activity](https://raw.githubusercontent.com/masasam/image/image/activity.png)
 
