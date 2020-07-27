@@ -346,7 +346,6 @@ gcloud: ## Install google cloud SDK and setting
 	test -L ${HOME}/.config/gcloud || rm -rf ${HOME}/.config/gcloud
 	ln -vsfn ${HOME}/backup/gcloud   ${HOME}/.config/gcloud
 	yay -S stern-bin
-	yay -S kubernetes-helm-bin
 
 docker-compose: ## Set up docker-compose
 	sudo pacman -S docker-compose
