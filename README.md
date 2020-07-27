@@ -477,7 +477,6 @@ You can make install from here
 	pip install --user matplotlib
 	pip install --user mps-youtube
 	pip install --user mycli
-	pip install --user mssql-cli
 	pip install --user neovim
 	pip install --user nose
 	pip install --user opencv-python

@@ -331,6 +331,7 @@ postgresql: ## PostgreSQL initial setup
 
 sqlserver: ## Init microsoft sql server
 	yay -S mssql-server
+	yay -S mssql-tools
 	yay -S php-pdo_sqlsrv
 	pip install --user mssql-cli
 	systemctl start mssql-server.service
