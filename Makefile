@@ -336,6 +336,9 @@ sqlserver: ## Init microsoft sql server
 	pip install --user mssql-cli
 	systemctl start mssql-server.service
 
+remotedesktop: ## Install remotedesktop
+	sudo pacman -S remmina freerdp libvncserver
+
 eralchemy: ## Install eralchemy
 	sudo pacman -S graphviz
 	pip install --user eralchemy
