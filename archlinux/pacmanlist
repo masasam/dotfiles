@@ -38,6 +38,7 @@ bash-completion
 bat
 bc
 bcg729
+bind
 binutils
 bison
 blas
@@ -98,6 +99,7 @@ cups-filters
 cups-pdf
 cups-pk-helper
 curl
+cyrus-sasl-gssapi
 dav1d
 db
 dbus
@@ -109,6 +111,7 @@ debootstrap
 desktop-file-utils
 device-mapper
 diffutils
+ding-libs
 discord
 diskus
 djvulibre
@@ -161,6 +164,7 @@ flex
 fluidsynth
 fontconfig
 fping
+freerdp
 freetype2
 frei0r-plugins
 fribidi
@@ -532,6 +536,7 @@ libgpg-error
 libgphoto2
 libgrss
 libgsf
+libgssglue
 libgtop
 libgudev
 libgusb
@@ -671,6 +676,7 @@ libva-utils
 libvdpau
 libvisio
 libvisual
+libvncserver
 libvoikko
 libvorbis
 libvpx
@@ -789,6 +795,7 @@ nethogs
 netpbm
 nettle
 networkmanager
+nfsidmap
 ninja
 nm-connection-editor
 nmap
@@ -803,6 +810,7 @@ npm
 npth
 nspr
 nss
+numactl
 oath-toolkit
 obs-studio
 oniguruma
@@ -814,6 +822,7 @@ openjpeg2
 openmpi
 openssh
 openssl
+openssl-1.0
 openvpn
 opera-ffmpeg-codecs
 optipng
@@ -839,6 +848,7 @@ patch
 pciutils
 pcre
 pcre2
+pcsclite
 pdfgrep
 peek
 perl
@@ -848,6 +858,7 @@ perl-io-tty
 perl-mailtools
 perl-timedate
 php
+php-intl
 pinentry
 pipewire
 pixman
@@ -944,6 +955,8 @@ python-websocket-client
 python-yaml
 python-zipp
 python2
+python2-backports
+python2-configparser
 python2-dbus
 python2-gobject
 python2-gobject2
@@ -968,6 +981,7 @@ re2
 readline
 redland
 reiserfsprogs
+remmina
 rest
 rhash
 ripgrep
@@ -1019,6 +1033,7 @@ sratom
 srt
 sshfs
 sshuttle
+sssd
 startup-notification
 strace
 stunnel
@@ -1073,6 +1088,7 @@ uchardet
 udisks2
 unace
 unarchiver
+unixodbc
 unrar
 unzip
 upower
@@ -1091,6 +1107,7 @@ vimiv
 vmaf
 volume_key
 vte-common
+vte3
 vulkan-icd-loader
 w3m
 watchexec

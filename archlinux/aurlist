@@ -7,7 +7,10 @@ ferdi-bin
 git-secrets
 goobook-git
 ibus-mozc
+mssql-server
+mssql-tools
 nvm
+php-pdo_sqlsrv
 qt5-styleplugins
 rbenv
 ripgrep-all
