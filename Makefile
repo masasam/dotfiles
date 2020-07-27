@@ -331,6 +331,7 @@ postgresql: ## PostgreSQL initial setup
 
 sqlserver: ## Init microsoft sql server
 	yay -S mssql-server
+	yay -S php-pdo_sqlsrv
 	systemctl start mssql-server.service
 
 eralchemy: ## Install eralchemy
