@@ -532,6 +532,7 @@ You can make install from here
 	yarn global add bash-language-server
 	yarn global add cloc
 	yarn global add create-component-app
+	yarn global add create-next-app
 	yarn global add create-nuxt-app
 	yarn global add create-react-app
 	yarn global add dockerfile-language-server-nodejs
