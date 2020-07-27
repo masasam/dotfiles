@@ -97,7 +97,6 @@ pipinstall: ## Install python packages
 	pip install --user jupyterthemes
 	pip install --user litecli
 	pip install --user matplotlib
-	pip install --user mssql-cli
 	pip install --user neovim
 	pip install --user nose
 	pip install --user pandas
@@ -333,6 +332,7 @@ postgresql: ## PostgreSQL initial setup
 sqlserver: ## Init microsoft sql server
 	yay -S mssql-server
 	yay -S php-pdo_sqlsrv
+	pip install --user mssql-cli
 	systemctl start mssql-server.service
 
 eralchemy: ## Install eralchemy
