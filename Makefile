@@ -97,6 +97,7 @@ pipinstall: ## Install python packages
 	pip install --user jupyterthemes
 	pip install --user litecli
 	pip install --user matplotlib
+	pip install --user mssql-cli
 	pip install --user neovim
 	pip install --user nose
 	pip install --user pandas
