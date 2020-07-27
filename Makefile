@@ -251,6 +251,10 @@ lvfs: ## For Linux Vendor Firmware Service
 	sudo pacman -S fwupd dmidecode
 	sudo dmidecode -s bios-version
 
+php: ## Init php setting
+	sudo pacman -S php php-intl
+	sudo ln -vsf ${PWD}/etc/php/php.ini /etc/php/php.ini
+
 uefiupdate: ## Update system firmware and uefi
 	fwupdmgr refresh
 	fwupdmgr get-updates
