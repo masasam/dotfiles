@@ -251,10 +251,6 @@ lvfs: ## For Linux Vendor Firmware Service
 	sudo pacman -S fwupd dmidecode
 	sudo dmidecode -s bios-version
 
-php: ## Init php setting
-	sudo pacman -S php php-intl
-	sudo ln -vsf ${PWD}/etc/php/php.ini /etc/php/php.ini
-
 uefiupdate: ## Update system firmware and uefi
 	fwupdmgr refresh
 	fwupdmgr get-updates
@@ -297,6 +293,10 @@ podman: ## Podman initial setup
 	sudo pacman -S podman
 	sudo systemctl enable io.podman.service
 	sudo systemctl start io.podman.service
+
+php: ## Init php setting
+	sudo pacman -S php php-intl
+	sudo ln -vsf ${PWD}/etc/php/php.ini /etc/php/php.ini
 
 circle-ci-cli: ## Install circle ci cli and setup
 	curl -fLSs https://circle.ci/cli | sudo bash
