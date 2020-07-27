@@ -329,6 +329,10 @@ postgresql: ## PostgreSQL initial setup
 	cd /home;\
 	sudo -u postgres createuser --interactive
 
+sqlserver: ## Init microsoft sql server
+	yay -S mssql-server
+	systemctl start mssql-server.service
+
 eralchemy: ## Install eralchemy
 	sudo pacman -S graphviz
 	pip install --user eralchemy
