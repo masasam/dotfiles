@@ -1,5 +1,8 @@
 !! ~/.Xresources
 
+!! emacs
+Emacs*useXIM: false
+
 !!
 !! rxvt-unicode (urxvt)
 !!
