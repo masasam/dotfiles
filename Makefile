@@ -445,6 +445,10 @@ aur: ## Install arch linux AUR packages using yay
 	yay -S trivy-bin
 	yay -S zoom
 
+myremote: ## Install remote software
+	yay -S teamviewer
+	yay -S anydesk-bin
+
 guidb: ## Install gui database tools
 	yay -S beekeeper-studio-bin
 	yay -S sequeler-git
