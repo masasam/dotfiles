@@ -101,6 +101,7 @@
   (package-install 'google-c-style)
   (package-install 'google-this)
   (package-install 'google-translate)
+  (package-install 'graphql-mode)
   (package-install 'haml-mode)
   (package-install 'hcl-mode)
   (package-install 'hierarchy)
