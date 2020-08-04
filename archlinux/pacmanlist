@@ -208,6 +208,7 @@ glib2
 glibc
 glibmm
 glslang
+glu
 gmime3
 gmp
 gnome-autoar
@@ -263,6 +264,7 @@ gtest
 gtk-update-icon-cache
 gtk2
 gtk3
+gtkglext
 gtkmm
 gtkmm3
 gtksourceview3
@@ -733,6 +735,7 @@ llvm-libs
 lm_sensors
 lmdb
 lpsolve
+lsb-release
 lshw
 lsof
 lua
@@ -775,6 +778,7 @@ mlocate
 mobile-broadband-provider-info
 modemmanager
 mosh
+mozilla-common
 mpfr
 mpg123
 mpv
@@ -944,6 +948,7 @@ python-qrencode
 python-requests
 python-rsa
 python-setuptools
+python-shiboken2
 python-simplejson
 python-six
 python-texttable
@@ -966,6 +971,7 @@ qrencode
 qt5-base
 qt5-declarative
 qt5-location
+qt5-quickcontrols
 qt5-sensors
 qt5-svg
 qt5-wayland

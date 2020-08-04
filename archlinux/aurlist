@@ -1,5 +1,6 @@
 altair
 amazon-workspaces-bin
+anydesk-bin
 appimagelauncher
 beekeeper-studio-bin
 downgrade
@@ -19,6 +20,7 @@ skypeforlinux-stable-bin
 slack-desktop
 stern-bin
 tableplus
+teamviewer
 trivy-bin
 ttf-cica
 yay
