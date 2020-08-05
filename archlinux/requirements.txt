@@ -10,7 +10,7 @@ astroid==2.4.2
 attrs==19.3.0
 Automat==20.2.0
 autopep8==1.5.4
-awscli==1.18.111
+awscli==1.18.112
 backcall==0.2.0
 backpack==0.1
 backports.csv==1.0.7
@@ -18,7 +18,7 @@ bcrypt==3.1.7
 beautifulsoup4==4.9.1
 black==19.10b0
 bleach==3.1.5
-botocore==1.17.34
+botocore==1.17.35
 btrfsutil==1.2.0
 CacheControl==0.12.6
 cached-property==1.5.1
@@ -45,7 +45,7 @@ defusedxml==0.6.0
 diagrams==0.16.0
 distlib==0.3.1
 distro==1.5.0
-Django==3.0.9
+Django==3.1
 docker==4.2.2
 docker-compose==1.26.2
 docker-pycreds==0.4.0
@@ -79,7 +79,7 @@ html5lib==1.1
 httpie==2.2.0
 httplib2==0.18.1
 humanize==2.5.0
-hyperlink==19.0.0
+hyperlink==20.0.1
 idna==2.10
 importlib-metadata==1.6.1
 importmagic==0.1.7
@@ -95,6 +95,7 @@ iso3166==1.0.1
 isodate==0.6.0
 isort==4.3.21
 itemadapter==0.1.0
+itemloaders==1.0.1
 jedi==0.17.2
 jeepney==0.4.3
 Jinja2==2.11.2
@@ -219,7 +220,7 @@ ruamel.yaml==0.16.10
 ruamel.yaml.clib==0.2.0
 s3transfer==0.3.3
 scipy==1.5.2
-Scrapy==2.2.1
+Scrapy==2.3.0
 seaborn==0.10.1
 SecretStorage==3.1.2
 selenium==3.141.0
@@ -261,7 +262,7 @@ ujson==1.35
 uritemplate==3.0.1
 urllib3==1.25.10
 vimiv==0.9.1
-virtualenv==20.0.29
+virtualenv==20.0.30
 virtualenv-clone==0.5.4
 virtualenvwrapper==4.8.4
 vobject==0.9.6.1
