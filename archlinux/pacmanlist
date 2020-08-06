@@ -746,6 +746,7 @@ lua52-expat
 lua52-lpeg
 lua52-luajson
 lua52-socket
+lua53
 luajit
 lv2
 lvm2
