@@ -9,6 +9,7 @@
 (setq inhibit-splash-screen t)
 (setq inhibit-startup-message t)
 (set-frame-parameter nil 'fullscreen 'maximized)
+(setq byte-compile-warnings '(cl-functions))
 
 (require 'package)
 (let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
