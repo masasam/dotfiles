@@ -17,8 +17,6 @@
             (list (openwith-make-extension-regexp '("avi" "flv" "mov" "mp4"
                                                     "mpeg" "mpg" "ogg" "wmv"))
                   "mpv" '(file))
-            (list (openwith-make-extension-regexp '("bmp" "jpeg" "jpg" "png"))
-                  "eog" '(file))
             (list (openwith-make-extension-regexp '("doc" "docx" "odt"))
                   "libreoffice" '("--writer" file))
             (list (openwith-make-extension-regexp '("ods" "xls" "xlsx"))
