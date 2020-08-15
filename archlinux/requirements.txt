@@ -10,7 +10,7 @@ astroid==2.4.2
 attrs==19.3.0
 Automat==20.2.0
 autopep8==1.5.4
-awscli==1.18.119
+awscli==1.18.120
 backcall==0.2.0
 backpack==0.1
 backports.csv==1.0.7
@@ -18,7 +18,7 @@ bcrypt==3.1.7
 beautifulsoup4==4.9.1
 black==19.10b0
 bleach==3.1.5
-botocore==1.17.42
+botocore==1.17.43
 btrfsutil==1.2.0
 CacheControl==0.12.6
 cached-property==1.5.1
@@ -122,7 +122,7 @@ lockfile==0.12.2
 louis==3.14.0
 lxml==4.5.2
 MarkupSafe==1.1.1
-matplotlib==3.3.0
+matplotlib==3.3.1
 mccabe==0.6.1
 mistune==0.8.4
 more-itertools==8.4.0
