@@ -1,6 +1,5 @@
 altair
 amazon-workspaces-bin
-anydesk-bin
 appimagelauncher
 beekeeper-studio-bin
 downgrade
@@ -8,10 +7,7 @@ git-secrets
 goobook-git
 graphql-playground-electron
 ibus-mozc
-mssql-server
-mssql-tools
 nvm
-php-pdo_sqlsrv
 qt5-styleplugins
 rbenv
 ripgrep-all
@@ -21,7 +17,6 @@ skypeforlinux-stable-bin
 slack-desktop
 stern-bin
 tableplus
-teamviewer
 trivy-bin
 ttf-cica
 yay

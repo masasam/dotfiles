@@ -38,7 +38,6 @@ bash-completion
 bat
 bc
 bcg729
-bind
 binutils
 bison
 blas
@@ -99,7 +98,6 @@ cups-filters
 cups-pdf
 cups-pk-helper
 curl
-cyrus-sasl-gssapi
 dav1d
 db
 dbus
@@ -111,7 +109,6 @@ debootstrap
 desktop-file-utils
 device-mapper
 diffutils
-ding-libs
 discord
 diskus
 djvulibre
@@ -207,7 +204,6 @@ glib2
 glibc
 glibmm
 glslang
-glu
 gmime3
 gmp
 gnome-autoar
@@ -263,7 +259,6 @@ gtest
 gtk-update-icon-cache
 gtk2
 gtk3
-gtkglext
 gtkmm
 gtkmm3
 gtksourceview3
@@ -317,6 +312,7 @@ haskell-data-default-class
 haskell-data-default-instances-containers
 haskell-data-default-instances-dlist
 haskell-data-default-instances-old-locale
+haskell-data-fix
 haskell-diff
 haskell-digest
 haskell-distributive
@@ -371,6 +367,7 @@ haskell-socks
 haskell-split
 haskell-splitmix
 haskell-streaming-commons
+haskell-strict
 haskell-syb
 haskell-tagged
 haskell-tagsoup
@@ -734,7 +731,6 @@ llvm-libs
 lm_sensors
 lmdb
 lpsolve
-lsb-release
 lshw
 lsof
 lua
@@ -799,7 +795,6 @@ nethogs
 netpbm
 nettle
 networkmanager
-nfsidmap
 ninja
 nm-connection-editor
 nmap
@@ -814,7 +809,6 @@ npm
 npth
 nspr
 nss
-numactl
 oath-toolkit
 obs-studio
 oniguruma
@@ -826,7 +820,6 @@ openjpeg2
 openmpi
 openssh
 openssl
-openssl-1.0
 openvpn
 opera-ffmpeg-codecs
 optipng
@@ -948,7 +941,6 @@ python-qrencode
 python-requests
 python-rsa
 python-setuptools
-python-shiboken2
 python-simplejson
 python-six
 python-texttable
@@ -960,8 +952,6 @@ python-websocket-client
 python-yaml
 python-zipp
 python2
-python2-backports
-python2-configparser
 python2-dbus
 python2-gobject
 python2-gobject2
@@ -971,7 +961,6 @@ qrencode
 qt5-base
 qt5-declarative
 qt5-location
-qt5-quickcontrols
 qt5-sensors
 qt5-svg
 qt5-wayland
@@ -1039,7 +1028,6 @@ sratom
 srt
 sshfs
 sshuttle
-sssd
 startup-notification
 strace
 stunnel
@@ -1094,7 +1082,6 @@ uchardet
 udisks2
 unace
 unarchiver
-unixodbc
 unrar
 unzip
 upower

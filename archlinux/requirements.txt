@@ -25,7 +25,7 @@ cached-property==1.5.1
 cachetools==4.1.1
 cachy==0.1.1
 certifi==2020.6.20
-cffi==1.14.1
+cffi==1.14.2
 chardet==3.0.4
 cheat==2.5.1
 chromedriver-binary==85.0.4183.38.0
