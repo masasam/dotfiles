@@ -329,13 +329,6 @@ postgresql: ## PostgreSQL initial setup
 	cd /home;\
 	sudo -u postgres createuser --interactive
 
-sqlserver: ## Init microsoft sql server
-	yay -S mssql-server
-	yay -S mssql-tools
-	yay -S php-pdo_sqlsrv
-	pip install --user mssql-cli
-	systemctl start mssql-server.service
-
 remotedesktop: ## Install remotedesktop
 	sudo pacman -S remmina freerdp libvncserver
 
@@ -444,10 +437,6 @@ aur: ## Install arch linux AUR packages using yay
 	yay -S slack-desktop
 	yay -S trivy-bin
 	yay -S zoom
-
-myremote: ## Install remote software
-	yay -S teamviewer
-	yay -S anydesk-bin
 
 guidb: ## Install gui database tools
 	yay -S beekeeper-studio-bin
