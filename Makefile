@@ -348,7 +348,7 @@ pgcli: ## Init pgcli
 	ln -vsfn ${HOME}/backup/pgcli ${HOME}/.config/pgcli
 
 gcloud: ## Install google cloud SDK and setting
-	sudo pacman -S kubectl kubectx kustomize
+	sudo pacman -S kubectl kubectx kustomize helm
 	curl https://sdk.cloud.google.com | bash
 	test -L ${HOME}/.config/gcloud || rm -rf ${HOME}/.config/gcloud
 	ln -vsfn ${HOME}/backup/gcloud   ${HOME}/.config/gcloud
