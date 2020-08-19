@@ -422,12 +422,9 @@ You can make install from here
 
 #### Install using yay
 
-	yay -S altair
-	yay -S amazon-workspaces-bin
 	yay -S appimagelauncher
 	yay -S beekeeper-studio-bin
 	yay -S drone-cli
-	yay -S ferdi-bin
 	yay -S git-secrets
 	yay -S global
 	yay -S goobook-git
