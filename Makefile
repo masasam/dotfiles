@@ -428,7 +428,6 @@ aur: ## Install arch linux AUR packages using yay
 	yay -S altair
 	yay -S appimagelauncher
 	yay -S downgrade
-	yay -S ferdi-bin
 	yay -S git-secrets
 	yay -S nvm
 	yay -S ripgrep-all
