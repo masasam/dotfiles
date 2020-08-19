@@ -426,7 +426,6 @@ yay: ## Install yay using yay
 
 aur: ## Install arch linux AUR packages using yay
 	yay -S altair
-	yay -S amazon-workspaces-bin
 	yay -S appimagelauncher
 	yay -S downgrade
 	yay -S ferdi-bin
