@@ -126,7 +126,6 @@ e2fsprogs
 editorconfig-core-c
 efibootmgr
 efivar
-electron
 electron7
 elfutils
 elinks
@@ -303,6 +302,9 @@ haskell-cereal
 haskell-cmark-gfm
 haskell-cmdargs
 haskell-colour
+haskell-commonmark
+haskell-commonmark-extensions
+haskell-commonmark-pandoc
 haskell-comonad
 haskell-connection
 haskell-cookie
