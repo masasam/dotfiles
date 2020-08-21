@@ -429,7 +429,6 @@ aur: ## Install arch linux AUR packages using yay
 	yay -S downgrade
 	yay -S git-secrets
 	yay -S nvm
-	yay -S ripgrep-all
 	yay -S skypeforlinux-stable-bin
 	yay -S slack-desktop
 	yay -S trivy-bin

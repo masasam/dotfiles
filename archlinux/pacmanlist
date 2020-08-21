@@ -460,7 +460,6 @@ lcms2
 ldb
 ldns
 lensfun
-leptonica
 less
 lhasa
 libabw
@@ -1054,7 +1053,6 @@ tdb
 termite
 termite-terminfo
 terraform
-tesseract
 tevent
 texinfo
 texlive-bin

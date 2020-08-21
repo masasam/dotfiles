@@ -1,5 +1,5 @@
 ansible==2.9.12
-ansible-lint==4.3.0
+ansible-lint==4.3.1
 apparmor==2.13.4
 appdirs==1.4.4
 applicationinsights==0.11.9
@@ -10,7 +10,7 @@ astroid==2.4.2
 attrs==19.3.0
 Automat==20.2.0
 autopep8==1.5.4
-awscli==1.18.123
+awscli==1.18.124
 backcall==0.2.0
 backpack==0.1
 backports.csv==1.0.7
@@ -18,7 +18,7 @@ bcrypt==3.2.0
 beautifulsoup4==4.9.1
 black==19.10b0
 bleach==3.1.5
-botocore==1.17.46
+botocore==1.17.47
 btrfsutil==1.2.0
 CacheControl==0.12.6
 cached-property==1.5.1
@@ -34,6 +34,7 @@ cli-helpers==2.1.0
 click==7.1.2
 clikit==0.6.2
 colorama==0.4.3
+commonmark==0.9.1
 configobj==5.0.6
 constantly==15.1.0
 crashtest==0.3.1
@@ -138,7 +139,7 @@ oauth2client==4.1.3
 ordered-set==4.0.2
 packaging==20.4
 pafy==0.5.5
-pandas==1.1.0
+pandas==1.1.1
 pandocfilters==1.4.2
 paramiko==2.7.1
 parsel==1.6.0
@@ -212,6 +213,7 @@ regex==2020.7.14
 requests==2.24.0
 requests-mock==1.8.0
 requests-toolbelt==0.8.0
+rich==5.2.1
 rope==0.17.0
 rsa==4.5
 rtv==1.27.0
@@ -256,6 +258,7 @@ truffleHog==2.1.11
 truffleHogRegexes==0.0.7
 Twisted==20.3.0
 typed-ast==1.4.1
+typing-extensions==3.7.4.2
 ujson==1.35
 uritemplate==3.0.1
 urllib3==1.25.10
