@@ -692,6 +692,7 @@ libxau
 libxaw
 libxcb
 libxcomposite
+libxcrypt
 libxcursor
 libxdamage
 libxdmcp
