@@ -425,7 +425,6 @@ yay: ## Install yay using yay
 	yay -S yay
 
 aur: ## Install arch linux AUR packages using yay
-	yay -S appimagelauncher
 	yay -S downgrade
 	yay -S git-secrets
 	yay -S nvm
@@ -445,6 +444,7 @@ gh: ## Install and setup github-cli
 	ln -vsfn ${HOME}/backup/gh ${HOME}/.config/gh
 
 aurplus: ## Install arch linux AUR packages using yay
+	yay -S appimagelauncher
 	yay -S drone-cli
 	yay -S nkf
 	yay -S pencil
