@@ -38,7 +38,7 @@ commonmark==0.9.1
 configobj==5.0.6
 constantly==15.1.0
 crashtest==0.3.1
-cryptography==3.0
+cryptography==3.1
 cssselect==1.1.0
 cycler==0.10.0
 decorator==4.4.2
@@ -109,7 +109,7 @@ jupyter-core==4.6.3
 jupyterlab==2.2.6
 jupyterlab-server==1.2.0
 jupyterthemes==0.20.0
-keyring==21.3.1
+keyring==21.4.0
 kitchen==1.2.6
 kiwisolver==1.2.0
 lazy-object-proxy==1.5.1
@@ -125,7 +125,7 @@ MarkupSafe==1.1.1
 matplotlib==3.3.1
 mccabe==0.6.1
 mistune==0.8.4
-more-itertools==8.4.0
+more-itertools==8.5.0
 mps-youtube==0.2.8
 msgpack==1.0.0
 mycli==1.22.2
