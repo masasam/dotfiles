@@ -45,7 +45,6 @@ bluez
 bluez-libs
 bolt
 bookworm
-boost
 boost-libs
 bridge-utils
 brotli
@@ -164,7 +163,6 @@ freetype2
 frei0r-plugins
 fribidi
 fuse-common
-fuse2
 fuse3
 fwupd
 fzf
@@ -254,7 +252,6 @@ gst-plugins-base
 gst-plugins-base-libs
 gst-plugins-good
 gstreamer
-gtest
 gtk-update-icon-cache
 gtk2
 gtk3
