@@ -10,7 +10,7 @@ astroid==2.4.2
 attrs==20.1.0
 Automat==20.2.0
 autopep8==1.5.4
-awscli==1.18.131
+awscli==1.18.132
 backcall==0.2.0
 backpack==0.1
 backports.csv==1.0.7
@@ -18,7 +18,7 @@ bcrypt==3.2.0
 beautifulsoup4==4.9.1
 black==20.8b1
 bleach==3.1.5
-botocore==1.17.54
+botocore==1.17.55
 btrfsutil==1.2.0
 CacheControl==0.12.6
 cached-property==1.5.1
@@ -69,7 +69,7 @@ GitPython==3.1.7
 goobook==3.4.dev0
 google-api-core==1.22.0
 google-api-python-client==1.10.0
-google-auth==1.21.0
+google-auth==1.21.1
 google-auth-httplib2==0.0.4
 googleapis-common-protos==1.52.0
 graph-cli==0.1.7
@@ -93,7 +93,7 @@ ipywidgets==7.5.1
 iso-639==0.4.5
 iso3166==1.0.1
 isodate==0.6.0
-isort==5.4.2
+isort==5.5.0
 itemadapter==0.1.0
 itemloaders==1.0.2
 jedi==0.17.2
@@ -205,7 +205,7 @@ PyYAML==5.3.1
 pyzmq==19.0.2
 qreator==16.6.2
 qrencode==1.2
-qtconsole==4.7.6
+qtconsole==4.7.7
 QtPy==1.9.0
 queuelib==1.5.0
 r7insight-python==1.0.0
@@ -218,7 +218,7 @@ rich==6.0.0
 rope==0.17.0
 rsa==4.6
 rtv==1.27.0
-ruamel.yaml==0.16.10
+ruamel.yaml==0.16.11
 ruamel.yaml.clib==0.2.0
 s3transfer==0.3.3
 scipy==1.5.2
@@ -253,7 +253,7 @@ tldr==1.0.0
 toml==0.10.1
 tomlkit==0.7.0
 tornado==6.0.4
-traitlets==5.0.2
+traitlets==5.0.3
 trash-cli==0.17.1.14
 truffleHog==2.1.11
 truffleHogRegexes==0.0.7
