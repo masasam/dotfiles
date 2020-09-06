@@ -7,7 +7,7 @@ argon2-cffi==20.1.0
 asgiref==3.2.10
 asn1crypto==1.4.0
 astroid==2.4.2
-attrs==20.1.0
+attrs==20.2.0
 Automat==20.2.0
 autopep8==1.5.4
 awscli==1.18.133
