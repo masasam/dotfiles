@@ -125,6 +125,7 @@ e2fsprogs
 editorconfig-core-c
 efibootmgr
 efivar
+electron
 electron7
 elfutils
 elinks
@@ -666,7 +667,6 @@ libusb
 libusb-compat
 libusbmuxd
 libutempter
-libutil-linux
 libuv
 libva
 libva-utils
@@ -1088,6 +1088,7 @@ urxvt-perls
 usbmuxd
 usbutils
 util-linux
+util-linux-libs
 v4l-utils
 valgrind
 vamp-plugin-sdk
