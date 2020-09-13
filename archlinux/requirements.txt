@@ -133,7 +133,7 @@ msgpack==1.0.0
 mycli==1.22.2
 mypy-extensions==0.4.3
 nbclient==0.5.0
-nbconvert==6.0.1
+nbconvert==6.0.2
 nbformat==5.0.7
 neovim==0.3.1
 nest-asyncio==1.4.0
@@ -194,7 +194,7 @@ PyNaCl==1.4.0
 pynvim==0.4.1
 pyOpenSSL==19.1.0
 pyparsing==2.4.7
-PyQt5==5.15.0
+PyQt5==5.15.1
 PyQt5-sip==12.8.1
 pyrsistent==0.17.0
 PySocks==1.7.1
