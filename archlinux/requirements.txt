@@ -183,7 +183,7 @@ pycryptodome==3.9.8
 PyDispatcher==2.0.5
 pydoc-utils==1.0.1
 pyflakes==2.2.0
-Pygments==2.6.1
+Pygments==2.7.0
 PyGObject==3.36.1
 pygraphviz==1.6
 PyHamcrest==2.0.2
@@ -196,7 +196,7 @@ pyOpenSSL==19.1.0
 pyparsing==2.4.7
 PyQt5==5.15.1
 PyQt5-sip==12.8.1
-pyrsistent==0.17.0
+pyrsistent==0.17.3
 PySocks==1.7.1
 python-dateutil==2.8.1
 python-dotenv==0.14.0
@@ -280,6 +280,6 @@ widgetsnbextension==3.5.1
 wrapt==1.12.1
 x256==0.0.3
 yapf==0.30.0
-youtube-dl==2020.9.6
+youtube-dl==2020.9.14
 zipp==3.1.0
 zope.interface==5.1.0
