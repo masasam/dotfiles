@@ -471,6 +471,7 @@ libasyncns
 libatasmart
 libatomic_ops
 libavc1394
+libavtp
 libblockdev
 libbluray
 libbs2b
@@ -570,6 +571,7 @@ libmagick6
 libmaxminddb
 libmbim
 libmfx
+libmicrodns
 libmicrohttpd
 libmm-glib
 libmms
@@ -1033,6 +1035,7 @@ strace
 stunnel
 sudo
 suitesparse
+svt-hevc
 sylpheed
 syncthing
 sysfsutils
@@ -1201,4 +1204,5 @@ zsh-syntax-highlighting
 zstd
 zsync
 zvbi
+zxing-cpp
 zziplib
