@@ -248,7 +248,7 @@ streamlink==1.5.0
 tabulate==0.8.7
 team==1.0
 termcolor==1.1.0
-terminado==0.8.3
+terminado==0.9.0
 terminaltables==3.1.0
 testpath==0.4.4
 text-unidecode==1.3
