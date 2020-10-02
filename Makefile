@@ -405,6 +405,10 @@ mpsyt: ## Install and deploy mps-youtube
 	test -L ${HOME}/.config/mps-youtube/playlists || rm -rf ${HOME}/.config/mps-youtube/playlists
 	ln -vsfn ${HOME}/backup/youtube/playlists ${HOME}/.config/mps-youtube/playlists
 
+spotify: ## Install spotify
+	gpg --keyserver hkp://keyserver.ubuntu.com --receive-keys 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
+	yay -S spotify
+
 sxiv: ## Init sxiv
 	sudo pacman -S sxiv
 	mkdir -p ${HOME}/.config/sxiv/exec
