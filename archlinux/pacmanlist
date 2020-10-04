@@ -492,6 +492,7 @@ libcroco
 libcue
 libcups
 libcurl-compat
+libcurl-gnutls
 libdaemon
 libdatrie
 libdazzle

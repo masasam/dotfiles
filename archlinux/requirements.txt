@@ -12,7 +12,7 @@ async-generator==1.10
 attrs==20.2.0
 Automat==20.2.0
 autopep8==1.5.4
-awscli==1.18.151
+awscli==1.18.152
 backcall==0.2.0
 backpack==0.1
 backports.csv==1.0.7
@@ -20,7 +20,7 @@ bcrypt==3.2.0
 beautifulsoup4==4.9.2
 black==20.8b1
 bleach==3.2.1
-botocore==1.18.10
+botocore==1.18.11
 btrfsutil==1.2.0
 CacheControl==0.12.6
 cached-property==1.5.2
@@ -59,10 +59,10 @@ entrypoints==0.3
 enum34==1.1.10
 ERAlchemy==1.2.10
 fabric==2.5.0
-Faker==4.1.6
+Faker==4.4.0
 filelock==3.0.12
 first==2.0.2
-flake8==3.8.3
+flake8==3.8.4
 future==0.18.2
 gif-for-cli==1.1.2
 gitdb==4.0.5
@@ -81,7 +81,7 @@ html2text==2020.1.16
 html5lib==1.1
 httpie==2.2.0
 httplib2==0.18.1
-humanize==3.0.0
+humanize==3.0.1
 hyperlink==20.0.1
 idna==2.10
 importlib-metadata==1.6.1
@@ -134,7 +134,7 @@ msgpack==1.0.0
 mycli==1.22.2
 mypy-extensions==0.4.3
 nbclient==0.5.0
-nbconvert==6.0.6
+nbconvert==6.0.7
 nbformat==5.0.7
 neovim==0.3.1
 nest-asyncio==1.4.1
@@ -270,7 +270,7 @@ ujson==3.2.0
 uritemplate==3.0.1
 urllib3==1.25.10
 vimiv==0.9.1
-virtualenv==20.0.31
+virtualenv==20.0.32
 virtualenv-clone==0.5.4
 virtualenvwrapper==4.8.4
 vobject==0.9.6.1
