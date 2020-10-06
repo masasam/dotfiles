@@ -749,6 +749,7 @@ lua52-luajson
 lua52-socket
 lua53
 luajit
+luit
 lv2
 lvm2
 lynx
@@ -1151,7 +1152,6 @@ xmlsec
 xorg-bdftopcf
 xorg-fonts-encodings
 xorg-iceauth
-xorg-luit
 xorg-mkfontscale
 xorg-server
 xorg-server-common
