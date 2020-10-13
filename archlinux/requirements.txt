@@ -95,7 +95,7 @@ ipywidgets==7.5.1
 iso-639==0.4.5
 iso3166==1.0.1
 isodate==0.6.0
-isort==5.6.2
+isort==5.6.3
 itemadapter==0.1.1
 itemloaders==1.0.3
 jedi==0.17.2
@@ -167,7 +167,7 @@ poetry==1.1.2
 poetry-core==1.0.0
 progressbar2==3.53.1
 prometheus-client==0.8.0
-prompt-toolkit==3.0.7
+prompt-toolkit==3.0.8
 Protego==0.1.16
 protobuf==3.12.4
 psutil==5.7.2
@@ -216,7 +216,7 @@ QtPy==1.9.0
 queuelib==1.5.0
 r7insight-python==1.0.0
 redis==3.5.3
-regex==2020.9.27
+regex==2020.10.11
 requests==2.24.0
 requests-mock==1.8.0
 requests-toolbelt==0.9.1
@@ -228,7 +228,7 @@ ruamel.yaml==0.16.12
 ruamel.yaml.clib==0.2.2
 s3transfer==0.3.3
 scipy==1.5.2
-Scrapy==2.3.0
+Scrapy==2.4.0
 seaborn==0.11.0
 SecretStorage==3.1.2
 selenium==3.141.0
@@ -242,7 +242,7 @@ smmap==3.0.4
 smmap2==3.0.1
 soupsieve==2.0.1
 speedtest-cli==2.1.2
-SQLAlchemy==1.3.19
+SQLAlchemy==1.3.20
 sqlparse==0.4.1
 sshuttle==1.0.4
 stevedore==3.2.2
@@ -270,7 +270,7 @@ ujson==4.0.1
 uritemplate==3.0.1
 urllib3==1.25.10
 vimiv==0.9.1
-virtualenv==20.0.33
+virtualenv==20.0.34
 virtualenv-clone==0.5.4
 virtualenvwrapper==4.8.4
 vobject==0.9.6.1
