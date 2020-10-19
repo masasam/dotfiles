@@ -13,7 +13,7 @@ async-generator==1.10
 attrs==20.2.0
 Automat==20.2.0
 autopep8==1.5.4
-awscli==1.18.159
+awscli==1.18.160
 backcall==0.2.0
 backpack==0.1
 backports.csv==1.0.7
@@ -21,7 +21,7 @@ bcrypt==3.2.0
 beautifulsoup4==4.9.3
 black==20.8b1
 bleach==3.2.1
-botocore==1.18.18
+botocore==1.19.0
 btrfsutil==1.2.0
 CacheControl==0.12.6
 cached-property==1.5.2
@@ -82,7 +82,7 @@ html2text==2020.1.16
 html5lib==1.1
 httpie==2.2.0
 httplib2==0.18.1
-humanize==3.0.1
+humanize==3.1.0
 hyperlink==20.0.1
 idna==2.10
 importlib-metadata==1.6.1
@@ -124,7 +124,7 @@ lit==0.10.1.dev0
 litecli==1.4.1
 lockfile==0.12.2
 louis==3.15.0
-lxml==4.6.0
+lxml==4.6.1
 MarkupSafe==1.1.1
 matplotlib==3.3.2
 mccabe==0.6.1
@@ -153,7 +153,7 @@ parsel==1.6.0
 parso==0.7.1
 pastel==0.2.1
 pathspec==0.8.0
-pbr==5.5.0
+pbr==5.5.1
 pexpect==4.8.0
 pgcli==3.0.0
 pgspecial==1.11.10
@@ -221,7 +221,7 @@ regex==2020.10.15
 requests==2.24.0
 requests-mock==1.8.0
 requests-toolbelt==0.9.1
-rich==8.0.0
+rich==9.0.1
 rope==0.18.0
 rsa==4.6
 rtv==1.27.0
