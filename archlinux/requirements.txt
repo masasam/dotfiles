@@ -13,7 +13,7 @@ async-generator==1.10
 attrs==20.2.0
 Automat==20.2.0
 autopep8==1.5.4
-awscli==1.18.160
+awscli==1.18.161
 backcall==0.2.0
 backpack==0.1
 backports.csv==1.0.7
@@ -21,7 +21,7 @@ bcrypt==3.2.0
 beautifulsoup4==4.9.3
 black==20.8b1
 bleach==3.2.1
-botocore==1.19.1
+botocore==1.19.2
 btrfsutil==1.2.0
 CacheControl==0.12.6
 cached-property==1.5.2
