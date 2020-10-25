@@ -85,7 +85,7 @@ httplib2==0.18.1
 humanize==3.1.0
 hyperlink==20.0.1
 idna==2.10
-importlib-metadata==1.6.1
+importlib-metadata==2.0.0
 importmagic==0.1.7
 incremental==17.5.0
 invoke==1.4.1
@@ -284,5 +284,5 @@ wrapt==1.12.1
 x256==0.0.3
 yapf==0.30.0
 youtube-dl==2020.9.20
-zipp==3.3.1
+zipp==3.3.2
 zope.interface==5.1.2
