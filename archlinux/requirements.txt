@@ -13,7 +13,7 @@ async-generator==1.10
 attrs==20.2.0
 Automat==20.2.0
 autopep8==1.5.4
-awscli==1.18.164
+awscli==1.18.165
 backcall==0.2.0
 backpack==0.1
 backports.csv==1.0.7
@@ -21,7 +21,7 @@ bcrypt==3.2.0
 beautifulsoup4==4.9.3
 black==20.8b1
 bleach==3.2.1
-botocore==1.19.4
+botocore==1.19.5
 btrfsutil==1.2.0
 CacheControl==0.12.6
 cached-property==1.5.2
@@ -41,7 +41,7 @@ commonmark==0.9.1
 configobj==5.0.6
 constantly==15.1.0
 crashtest==0.3.1
-cryptography==3.1.1
+cryptography==3.2
 cssselect==1.1.0
 cycler==0.10.0
 decorator==4.4.2
@@ -161,7 +161,7 @@ pickleshare==0.7.5
 Pillow==7.2.0
 pip-tools==5.3.1
 pipenv==2020.8.13
-pkginfo==1.6.0
+pkginfo==1.6.1
 pluggy==0.13.1
 ply==3.11
 poetry==1.1.4
@@ -284,5 +284,5 @@ wrapt==1.12.1
 x256==0.0.3
 yapf==0.30.0
 youtube-dl==2020.9.20
-zipp==3.3.2
+zipp==3.4.0
 zope.interface==5.1.2
