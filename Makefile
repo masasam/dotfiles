@@ -440,7 +440,6 @@ aur: ## Install arch linux AUR packages using yay
 guidb: ## Install gui database tools
 	yay -S beekeeper-studio-bin
 	yay -S sequeler-git
-	yay -S tableplus
 
 gh: ## Install and setup github-cli
 	pacman -S github-cli
