@@ -1,6 +1,6 @@
 ansible==2.10.1
 ansible-base==2.10.2
-ansible-lint==4.3.5
+ansible-lint==4.3.6
 apparmor==3.0.0
 appdirs==1.4.4
 applicationinsights==0.11.9
@@ -171,7 +171,7 @@ prometheus-client==0.8.0
 prompt-toolkit==3.0.8
 Protego==0.1.16
 protobuf==3.12.4
-psutil==5.7.2
+psutil==5.7.3
 psycopg2==2.8.6
 psycopg2-binary==2.8.6
 ptyprocess==0.6.0
