@@ -551,7 +551,7 @@ screenkey: ## Init screenkey
 rbenv: ## Install rvenv ruby-build
 	yay -S rbenv
 	yay -S ruby-build
-	rbenv install 2.6.5
+	rbenv install 2.7.2
 	rbenv rehash
 	gem install bundle
 
@@ -562,7 +562,7 @@ django: ## Install Django
 	mkdir -p ${HOME}/src/github.com/masasam/mydjango;\
 	cd ${HOME}/src/github.com/masasam/mydjango;\
 	touch Pipfile;\
-	pipenv --python=3.7.4;\
+	pipenv --python=3.8.6;\
 	pipenv install django;\
 	pipenv run django-admin startproject config .
 
