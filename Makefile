@@ -572,13 +572,13 @@ rails: ## Create rails from scratch
 	  export PATH="${RBENV_ROOT}/bin:${PATH}";\
 	  eval "$(rbenv init -)";\
 	fi;\
-	rbenv global 2.6.5;\
+	rbenv global 2.7.2;\
 	rbenv rehash;\
 	mkdir -p ${HOME}/src/github.com/masasam/rails;\
 	cd ${HOME}/src/github.com/masasam/rails;\
-	rbenv local 2.6.5;\
+	rbenv local 2.7.2;\
 	bundle init;\
-	echo "gem 'rails', '~> 6.0.2'" >> Gemfile;\
+	echo "gem 'rails', '~> 6.0.3.3'" >> Gemfile;\
 	bundle install --path vendor/bundle;\
 	bundle exec rails new . --database=mysql --skip-test --skip-turbolinks;\
 	bundle exec rails webpacker:install;\
