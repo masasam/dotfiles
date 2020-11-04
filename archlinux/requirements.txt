@@ -1,4 +1,4 @@
-ansible==2.10.1
+ansible==2.10.2
 ansible-base==2.10.3
 ansible-lint==4.3.7
 apparmor==3.0.0
@@ -13,7 +13,7 @@ async-generator==1.10
 attrs==20.2.0
 Automat==20.2.0
 autopep8==1.5.4
-awscli==1.18.170
+awscli==1.18.171
 backcall==0.2.0
 backpack==0.1
 backports.csv==1.0.7
@@ -21,7 +21,7 @@ bcrypt==3.2.0
 beautifulsoup4==4.9.3
 black==20.8b1
 bleach==3.2.1
-botocore==1.19.10
+botocore==1.19.11
 btrfsutil==1.2.0
 CacheControl==0.12.6
 cached-property==1.5.2
@@ -60,7 +60,7 @@ entrypoints==0.3
 enum34==1.1.10
 ERAlchemy==1.2.10
 fabric==2.5.0
-Faker==4.14.0
+Faker==4.14.1
 filelock==3.0.12
 first==2.0.2
 flake8==3.8.4
@@ -160,7 +160,7 @@ pgspecial==1.11.10
 pickleshare==0.7.5
 Pillow==7.2.0
 pip-tools==5.3.1
-pipenv==2020.8.13
+pipenv==2020.11.4
 pkginfo==1.6.1
 pluggy==0.13.1
 ply==3.11
