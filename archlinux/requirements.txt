@@ -6,14 +6,14 @@ appdirs==1.4.4
 applicationinsights==0.11.9
 argcomplete==1.12.1
 argon2-cffi==20.1.0
-asgiref==3.3.0
+asgiref==3.3.1
 asn1crypto==1.4.0
 astroid==2.4.2
 async-generator==1.10
 attrs==20.3.0
 Automat==20.2.0
 autopep8==1.5.4
-awscli==1.18.173
+awscli==1.18.174
 backcall==0.2.0
 backpack==0.1
 backports.csv==1.0.7
@@ -21,8 +21,8 @@ bcrypt==3.2.0
 beautifulsoup4==4.9.3
 black==20.8b1
 bleach==3.2.1
-botocore==1.19.13
-btrfsutil==1.2.0
+botocore==1.19.14
+btrfsutil==5.9
 CacheControl==0.12.6
 cached-property==1.5.2
 cachetools==4.1.1
