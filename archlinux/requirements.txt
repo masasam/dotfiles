@@ -13,7 +13,7 @@ async-generator==1.10
 attrs==20.3.0
 Automat==20.2.0
 autopep8==1.5.4
-awscli==1.18.174
+awscli==1.18.175
 backcall==0.2.0
 backpack==0.1
 backports.csv==1.0.7
@@ -21,7 +21,7 @@ bcrypt==3.2.0
 beautifulsoup4==4.9.3
 black==20.8b1
 bleach==3.2.1
-botocore==1.19.14
+botocore==1.19.15
 btrfsutil==5.9
 CacheControl==0.12.6
 cached-property==1.5.2
@@ -100,7 +100,7 @@ isort==5.6.4
 itemadapter==0.2.0
 itemloaders==1.0.3
 jedi==0.17.2
-jeepney==0.4.3
+jeepney==0.5.0
 Jinja2==2.11.2
 jmespath==0.10.0
 json5==0.9.5
@@ -120,7 +120,7 @@ lazy-object-proxy==1.5.1
 lensfun==0.3.95
 lesscpy==0.14.0
 LibAppArmor==3.0.0
-lit==0.10.1.dev0
+lit==0.11.0.dev0
 litecli==1.4.1
 lockfile==0.12.2
 louis==3.15.0
