@@ -1,8 +1,20 @@
 {
-  "settingsVersion": "1.64.6",
+  "settingsVersion": "1.66",
   "exclusionRules": [
     {
       "pattern": "https?://mail.google.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://www.reddit.com/*",
+      "passKeys": "j"
+    },
+    {
+      "pattern": "https?://www.reddit.com/*",
+      "passKeys": "k"
+    },
+    {
+      "pattern": "https?://twitter.com/*",
       "passKeys": ""
     }
   ],
