@@ -12,10 +12,6 @@
     {
       "pattern": "https?://www.reddit.com/*",
       "passKeys": "k"
-    },
-    {
-      "pattern": "https?://twitter.com/*",
-      "passKeys": ""
     }
   ],
   "filterLinkHints": false,
