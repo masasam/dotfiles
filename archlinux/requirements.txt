@@ -76,7 +76,7 @@ google-auth==1.23.0
 google-auth-httplib2==0.0.4
 googleapis-common-protos==1.52.0
 graph-cli==0.1.7
-graphviz==0.14.2
+graphviz==0.15
 greenlet==0.4.17
 html2text==2020.1.16
 html5lib==1.1
@@ -160,7 +160,7 @@ pgspecial==1.11.10
 pickleshare==0.7.5
 Pillow==7.2.0
 pip-tools==5.3.1
-pipenv==2020.11.4
+pipenv==2020.11.15
 pkginfo==1.6.1
 pluggy==0.13.1
 ply==3.11
@@ -261,7 +261,7 @@ toml==0.10.2
 tomlkit==0.7.0
 tornado==6.1
 traitlets==5.0.5
-trash-cli==0.20.11.7
+trash-cli==0.20.11.14
 truffleHog==2.1.11
 truffleHogRegexes==0.0.7
 Twisted==20.3.0
