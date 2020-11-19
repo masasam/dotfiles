@@ -13,7 +13,7 @@ async-generator==1.10
 attrs==20.3.0
 Automat==20.2.0
 autopep8==1.5.4
-awscli==1.18.180
+awscli==1.18.181
 backcall==0.2.0
 backpack==0.1
 backports.csv==1.0.7
@@ -21,7 +21,7 @@ bcrypt==3.2.0
 beautifulsoup4==4.9.3
 black==20.8b1
 bleach==3.2.1
-botocore==1.19.20
+botocore==1.19.21
 btrfsutil==5.9
 CacheControl==0.12.6
 cached-property==1.5.2
@@ -108,7 +108,7 @@ jsonschema==3.2.0
 jupyter==1.0.0
 jupyter-client==6.1.7
 jupyter-console==6.2.0
-jupyter-core==4.6.3
+jupyter-core==4.7.0
 jupyterlab==2.2.9
 jupyterlab-pygments==0.1.2
 jupyterlab-server==1.2.0
@@ -283,6 +283,6 @@ widgetsnbextension==3.5.1
 wrapt==1.12.1
 x256==0.0.3
 yapf==0.30.0
-youtube-dl==2020.11.18
+youtube-dl==2020.11.19
 zipp==3.4.0
 zope.interface==5.2.0
