@@ -13,7 +13,7 @@ async-generator==1.10
 attrs==20.3.0
 Automat==20.2.0
 autopep8==1.5.4
-awscli==1.18.182
+awscli==1.18.183
 backcall==0.2.0
 backpack==0.1
 backports.csv==1.0.7
@@ -21,7 +21,7 @@ bcrypt==3.2.0
 beautifulsoup4==4.9.3
 black==20.8b1
 bleach==3.2.1
-botocore==1.19.22
+botocore==1.19.23
 btrfsutil==5.9
 CacheControl==0.12.6
 cached-property==1.5.2
@@ -60,7 +60,7 @@ entrypoints==0.3
 enum34==1.1.10
 ERAlchemy==1.2.10
 fabric==2.5.0
-Faker==4.17.0
+Faker==4.17.1
 filelock==3.0.12
 first==2.0.2
 flake8==3.8.4
