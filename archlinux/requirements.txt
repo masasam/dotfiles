@@ -159,7 +159,7 @@ pgcli==3.0.0
 pgspecial==1.11.10
 pickleshare==0.7.5
 Pillow==7.2.0
-pip-tools==5.3.1
+pip-tools==5.4.0
 pipenv==2020.11.15
 pkginfo==1.6.1
 pluggy==0.13.1
@@ -271,7 +271,7 @@ ujson==4.0.1
 uritemplate==3.0.1
 urllib3==1.25.10
 vimiv==0.9.1
-virtualenv==20.1.0
+virtualenv==20.2.0
 virtualenv-clone==0.5.4
 virtualenvwrapper==4.8.4
 vobject==0.9.6.1
@@ -283,6 +283,6 @@ widgetsnbextension==3.5.1
 wrapt==1.12.1
 x256==0.0.3
 yapf==0.30.0
-youtube-dl==2020.11.19
+youtube-dl==2020.11.21.1
 zipp==3.4.0
 zope.interface==5.2.0
