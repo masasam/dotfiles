@@ -1,4 +1,4 @@
-ansible==2.10.3
+ansible==2.10.4
 ansible-base==2.10.3
 ansible-lint==4.3.7
 apparmor==3.0.0
@@ -13,7 +13,7 @@ async-generator==1.10
 attrs==20.3.0
 Automat==20.2.0
 autopep8==1.5.4
-awscli==1.18.185
+awscli==1.18.187
 backcall==0.2.0
 backpack==0.1
 backports.csv==1.0.7
@@ -21,7 +21,7 @@ bcrypt==3.2.0
 beautifulsoup4==4.9.3
 black==20.8b1
 bleach==3.2.1
-botocore==1.19.25
+botocore==1.19.27
 btrfsutil==5.9
 CacheControl==0.12.6
 cached-property==1.5.2
@@ -36,7 +36,7 @@ cleo==0.8.1
 cli-helpers==2.1.0
 click==7.1.2
 clikit==0.6.2
-colorama==0.4.4
+colorama==0.4.3
 commonmark==0.9.1
 configobj==5.0.6
 constantly==15.1.0
@@ -49,13 +49,13 @@ defusedxml==0.6.0
 diagrams==0.17.0
 distlib==0.3.1
 distro==1.5.0
-Django==3.1.3
+Django==3.1.4
 docker==4.3.1
 docker-compose==1.27.4
 docker-pycreds==0.4.0
 dockerpty==0.4.1
 docopt==0.6.2
-docutils==0.16
+docutils==0.15.2
 entrypoints==0.3
 enum34==1.1.10
 ERAlchemy==1.2.10
@@ -68,7 +68,7 @@ future==0.18.2
 gif-for-cli==1.1.2
 gitdb==4.0.5
 gitdb2==4.0.2
-GitPython==3.1.11
+GitPython==3.0.6
 goobook==3.4.dev0
 google-api-core==1.22.4
 google-api-python-client==1.12.3
@@ -76,7 +76,7 @@ google-auth==1.23.0
 google-auth-httplib2==0.0.4
 googleapis-common-protos==1.52.0
 graph-cli==0.1.7
-graphviz==0.15
+graphviz==0.13.2
 greenlet==0.4.17
 html2text==2020.1.16
 html5lib==1.1
@@ -116,7 +116,7 @@ jupyterthemes==0.20.0
 keyring==21.5.0
 kitchen==1.2.6
 kiwisolver==1.3.1
-lazy-object-proxy==1.5.2
+lazy-object-proxy==1.4.3
 lensfun==0.3.95
 lesscpy==0.14.0
 LibAppArmor==3.0.0
@@ -221,9 +221,9 @@ regex==2020.11.13
 requests==2.24.0
 requests-mock==1.8.0
 requests-toolbelt==0.9.1
-rich==9.2.0
+rich==9.3.0
 rope==0.18.0
-rsa==4.6
+rsa==4.5
 rtv==1.27.0
 ruamel.yaml==0.16.12
 ruamel.yaml.clib==0.2.2
@@ -244,7 +244,7 @@ smmap2==3.0.1
 soupsieve==2.0.1
 speedtest-cli==2.1.2
 SQLAlchemy==1.3.20
-sqlparse==0.4.1
+sqlparse==0.3.1
 sshuttle==1.0.4
 stevedore==3.3.0
 streamlink==1.7.0
@@ -283,6 +283,6 @@ widgetsnbextension==3.5.1
 wrapt==1.12.1
 x256==0.0.3
 yapf==0.30.0
-youtube-dl==2020.11.29
+youtube-dl==2020.12.2
 zipp==3.4.0
 zope.interface==5.2.0
