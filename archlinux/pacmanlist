@@ -229,6 +229,7 @@ gnutls
 go
 gobject-introspection-runtime
 goocanvas
+gopls
 gpaste
 gpgme
 gpm
