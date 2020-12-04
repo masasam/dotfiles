@@ -26,7 +26,7 @@ certifi==2020.11.8
 cffi==1.14.4
 chardet==3.0.4
 cheat==2.5.1
-chromedriver-binary==87.0.4280.20.0
+chromedriver-binary==87.0.4280.88.0
 cleo==0.8.1
 cli-helpers==2.1.0
 click==7.1.2
@@ -41,7 +41,7 @@ cssselect==1.1.0
 cycler==0.10.0
 decorator==4.4.2
 defusedxml==0.6.0
-diagrams==0.17.0
+diagrams==0.18.0
 distlib==0.3.1
 distro==1.5.0
 Django==3.1.4
@@ -52,7 +52,7 @@ dockerpty==0.4.1
 docopt==0.6.2
 entrypoints==0.3
 fabric==2.5.0
-Faker==4.18.0
+Faker==5.0.0
 filelock==3.0.12
 flake8==3.8.4
 gif-for-cli==1.1.2

@@ -249,6 +249,7 @@ gsm
 gsound
 gspell
 gssdp
+gst-plugin-pipewire
 gst-plugins-bad
 gst-plugins-bad-libs
 gst-plugins-base
