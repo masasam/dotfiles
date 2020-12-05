@@ -26,7 +26,7 @@ certifi==2020.11.8
 cffi==1.14.4
 chardet==3.0.4
 cheat==2.5.1
-chromedriver-binary==87.0.4280.88.0
+chromedriver-binary==88.0.4324.27.1
 cleo==0.8.1
 cli-helpers==2.1.0
 click==7.1.2
