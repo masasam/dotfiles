@@ -843,6 +843,7 @@ openmpi
 openssh
 openssl
 openvpn
+opera
 optipng
 opus
 orc
@@ -1169,7 +1170,6 @@ xorg-iceauth
 xorg-mkfontscale
 xorg-server
 xorg-server-common
-xorg-server-xwayland
 xorg-sessreg
 xorg-setxkbmap
 xorg-smproxy
@@ -1199,6 +1199,7 @@ xorg-xrefresh
 xorg-xset
 xorg-xsetroot
 xorg-xvinfo
+xorg-xwayland
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
