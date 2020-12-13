@@ -109,7 +109,7 @@ lensfun==0.3.95
 lesscpy==0.14.0
 LibAppArmor==3.0.1
 lit==0.11.0.dev0
-litecli==1.4.1
+litecli==1.5.0
 lockfile==0.12.2
 louis==3.15.0
 lxml==4.6.2
@@ -198,7 +198,7 @@ regex==2020.11.13
 requests==2.25.0
 requests-mock==1.8.0
 requests-toolbelt==0.9.1
-rich==9.3.0
+rich==9.4.0
 rope==0.18.0
 rsa==4.6
 rtv==1.27.0
