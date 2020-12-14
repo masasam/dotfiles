@@ -20,7 +20,7 @@ bleach==3.2.1
 btrfsutil==5.9
 CacheControl==0.12.6
 cached-property==1.5.2
-cachetools==4.1.1
+cachetools==4.2.0
 cachy==0.3.0
 certifi==2020.12.5
 cffi==1.14.4
@@ -61,7 +61,7 @@ gitdb2==4.0.2
 GitPython==3.0.6
 google-api-core==1.23.0
 google-api-python-client==1.12.8
-google-auth==1.23.0
+google-auth==1.24.0
 google-auth-httplib2==0.0.4
 googleapis-common-protos==1.52.0
 graph-cli==0.1.7
@@ -73,7 +73,7 @@ httpie==2.3.0
 httplib2==0.18.1
 hyperlink==20.0.1
 idna==2.10
-importlib-metadata==3.1.1
+importlib-metadata==3.2.0
 importmagic==0.1.7
 incremental==17.5.0
 invoke==1.4.1
