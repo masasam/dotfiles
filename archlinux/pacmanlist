@@ -581,6 +581,7 @@ libkate
 libkeybinder3
 libksba
 liblangtag
+libldac
 libldap
 liblouis
 liblqr
@@ -621,6 +622,7 @@ libodfgen
 libofa
 libogg
 libomxil-bellagio
+libopenaptx
 liborcus
 libosinfo
 libotf
