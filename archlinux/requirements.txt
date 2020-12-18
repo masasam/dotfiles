@@ -118,7 +118,7 @@ matplotlib==3.3.3
 mccabe==0.6.1
 mistune==0.8.4
 more-itertools==8.6.0
-msgpack==1.0.1
+msgpack==1.0.2
 mypy-extensions==0.4.3
 nbclient==0.5.1
 nbconvert==6.0.7
@@ -198,7 +198,7 @@ regex==2020.11.13
 requests==2.25.1
 requests-mock==1.8.0
 requests-toolbelt==0.9.1
-rich==9.4.0
+rich==9.5.1
 rope==0.18.0
 rsa==4.6
 rtv==1.27.0
