@@ -58,7 +58,7 @@ install: ## Install arch linux packages using pacman
 	gdb wmctrl pwgen linux-docs htop tcpdump gvfs p7zip lzop fzf gpaste optipng \
 	arch-install-scripts pandoc jq pkgstats ruby highlight alsa-utils geckodriver \
 	texlive-langjapanese tokei texlive-latexextra ctags hdparm eog curl parallel \
-	arc-gtk-theme npm typescript llvm llvm-libs lldb tree w3m whois nnn qreator \
+	arc-gtk-theme npm typescript llvm llvm-libs lldb tree w3m whois qreator pass \
 	zsh-syntax-highlighting shellcheck bash-completion mathjax expect obs-studio \
 	cscope postgresql-libs pdfgrep gnu-netcat cmatrix jpegoptim nethogs mlocate \
 	pacman-contrib x11-ssh-askpass libreoffice-fresh-ja python-prompt_toolkit \
@@ -67,7 +67,7 @@ install: ## Install arch linux packages using pacman
 	firejail opencv hexedit discord pv smartmontools gnome-logs wireshark-cli \
 	wl-clipboard lsof mapnik browserpass-chromium editorconfig-core-c watchexec \
 	mpv browserpass-firefox man-db baobab ioping ruby-irb mkcert code findomain \
-	guetzli openvpn fabric gtop pass gopls
+	guetzli openvpn fabric gtop gopls
 	sudo pkgfile --update
 
 pipinstall: ## Install python packages
