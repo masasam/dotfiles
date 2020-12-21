@@ -205,7 +205,7 @@ rtv==1.27.0
 ruamel.yaml==0.16.12
 scipy==1.5.4
 Scrapy==2.4.1
-seaborn==0.11.0
+seaborn==0.11.1
 SecretStorage==3.3.0
 selenium==3.141.0
 Send2Trash==1.5.0
