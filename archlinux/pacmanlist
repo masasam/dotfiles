@@ -345,6 +345,7 @@ haskell-hxt
 haskell-hxt-charproperties
 haskell-hxt-regex-xmlschema
 haskell-hxt-unicode
+haskell-indexed-traversable
 haskell-integer-logarithms
 haskell-ipynb
 haskell-jira-wiki-markup
