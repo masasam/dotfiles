@@ -160,7 +160,7 @@ Protego==0.1.16
 protobuf==3.12.4
 psutil==5.7.3
 psycopg2-binary==2.8.6
-ptyprocess==0.6.0
+ptyprocess==0.7.0
 pwquality==1.4.4
 py-spy==0.3.3
 pyasn1==0.4.8
@@ -247,7 +247,7 @@ typed-ast==1.4.1
 typing-extensions==3.7.4.3
 ujson==4.0.1
 uritemplate==3.0.1
-urllib3==1.25.11
+urllib3==1.26.1
 vimiv==0.9.1
 virtualenv==20.2.2
 virtualenv-clone==0.5.4
