@@ -54,7 +54,7 @@ dockerpty==0.4.1
 docopt==0.6.2
 entrypoints==0.3
 fabric==2.5.0
-Faker==5.0.2
+Faker==5.1.0
 filelock==3.0.12
 flake8==3.8.4
 gif-for-cli==1.1.2
@@ -223,7 +223,7 @@ sniffio==1.2.0
 soupsieve==2.1
 speedtest-cli==2.1.2
 sqlparse==0.4.1
-sshuttle==1.0.4
+sshuttle==1.0.5
 stevedore==3.3.0
 streamlink==2.0.0
 tabulate==0.8.7
