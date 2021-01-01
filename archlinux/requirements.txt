@@ -188,7 +188,7 @@ python-dotenv==0.15.0
 python-jsonrpc-server==0.4.0
 python-language-server==0.35.1
 python-utils==2.4.0
-pytz==2020.4
+pytz==2020.5
 pyxdg==0.26
 PyYAML==5.3.1
 pyzmq==20.0.0
