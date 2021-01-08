@@ -67,7 +67,7 @@ install: ## Install arch linux packages using pacman
 	firejail opencv hexedit discord pv smartmontools gnome-logs wireshark-cli \
 	wl-clipboard lsof mapnik browserpass-chromium editorconfig-core-c watchexec \
 	mpv browserpass-firefox man-db baobab ioping ruby-irb mkcert code findomain \
-	guetzli openvpn fabric gtop gopls
+	guetzli openvpn fabric gtop gopls convmv
 	sudo pkgfile --update
 
 pipinstall: ## Install python packages
