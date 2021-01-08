@@ -137,7 +137,7 @@ https://www.archlinux.org/releng/releases/
 Create USB installation media.
 Run the following command, replacing /dev/sdx with your drive, e.g. /dev/sdb. (Do not append a partition number, so do not use something like /dev/sdb1)
 
-	sudo dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx status=progress oflag=sync
+	sudo dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx status=progress && sync
 
 ![baobao](https://raw.githubusercontent.com/masasam/image/image/baobao.png)
 
