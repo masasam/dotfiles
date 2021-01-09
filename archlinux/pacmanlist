@@ -87,6 +87,7 @@ compiler-rt
 composer
 confuse
 containerd
+convmv
 coreutils
 cpio
 cracklib
