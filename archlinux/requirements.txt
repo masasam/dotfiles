@@ -148,7 +148,7 @@ pexpect==4.8.0
 pickleshare==0.7.5
 Pillow==8.1.0
 pipenv==2020.11.15
-pkginfo==1.6.1
+pkginfo==1.7.0
 pluggy==0.13.1
 ply==3.11
 poetry==1.1.4
