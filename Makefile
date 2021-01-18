@@ -479,6 +479,7 @@ awsv2: ## Init aws cli version 2
 	curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 	unzip awscliv2.zip
 	sudo ./aws/install
+	ln -vsfn ${PWD}/.aws ${HOME}/.aws
 	rm -fr awscliv2.zip
 	rm -rf aws
 
