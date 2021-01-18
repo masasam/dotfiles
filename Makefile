@@ -475,6 +475,13 @@ aws: ## Init aws cli
 	pip install --user awscli
 	ln -vsfn ${PWD}/.aws ${HOME}/.aws
 
+awsv2: ## Init aws cli version 2
+	curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+	unzip awscliv2.zip
+	sudo ./aws/install
+	rm -fr awscliv2.zip
+	rm -rf aws
+
 tmuxp: ## Install tmuxp
 	mkdir -p ${HOME}/.local
 	pip install --user tmuxp
