@@ -833,7 +833,7 @@ function tmuxpanedb() {
 # zsh-syntax-highlighting(pacman -S zsh-syntax-highlighting)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # zsh-completions for aws
-source ~/.local/bin/aws_zsh_completer.sh
+# source ~/.local/bin/aws_zsh_completer.sh
 # password
 source ~/backup/zsh/env.sh
 
