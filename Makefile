@@ -484,6 +484,7 @@ awsv2: ## Init aws cli version 2
 	ln -vsfn ${PWD}/.aws ${HOME}/.aws
 	rm -fr awscliv2.zip
 	rm -rf aws
+	pip install --user awslogs
 
 tmuxp: ## Install tmuxp
 	mkdir -p ${HOME}/.local
