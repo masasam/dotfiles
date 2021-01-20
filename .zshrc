@@ -857,3 +857,8 @@ function _pip_completion {
 }
 compctl -K _pip_completion pip
 # pip zsh completion end
+
+# zsh-completions for aws v2
+autoload bashcompinit
+bashcompinit
+complete -C '/usr/local/bin/aws_completer' aws
