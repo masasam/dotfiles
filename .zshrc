@@ -834,6 +834,10 @@ function change-aws-profile() {
     if [ $# = 1 ]; then
 	export AWS_PROFILE=$1
     else
+	echo 'Please select a profile from below'
+	echo '---------------------'
+	aws configure list-profiles
+	echo '---------------------'
 	echo 'usage: change-aws-profile [profilename]'
     fi
 }
@@ -843,6 +847,10 @@ function add-aws-profile() {
     if [ $# = 1 ]; then
 	aws configure --profile $1
     else
+	echo 'Please specify something other than the list below'
+	echo '---------------------'
+	aws configure list-profiles
+	echo '---------------------'
 	echo 'usage: add-aws-profile [profilename]'
     fi
 }
