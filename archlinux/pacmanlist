@@ -572,6 +572,7 @@ libiec61883
 libimagequant
 libimobiledevice
 libindicator-gtk3
+libinih
 libinput
 libinstpatch
 libiptcdata
