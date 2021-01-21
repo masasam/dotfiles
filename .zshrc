@@ -831,19 +831,19 @@ function tmuxpanedb() {
 
 
 function change-aws-profile() {
-    if [ $# = 0 ]; then
-	echo 'usage: change-aws-profile [profilename]'
-    else
+    if [ $# = 1 ]; then
 	export AWS_PROFILE=$1
+    else
+	echo 'usage: change-aws-profile [profilename]'
     fi
 }
 
 
 function add-aws-profile() {
-    if [ $# = 0 ]; then
-	echo 'usage: add-aws-profile [profilename]'
-    else
+    if [ $# = 1 ]; then
 	aws configure --profile $1
+    else
+	echo 'usage: add-aws-profile [profilename]'
     fi
 }
 
