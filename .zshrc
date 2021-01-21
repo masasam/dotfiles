@@ -830,6 +830,15 @@ function tmuxpanedb() {
 }
 
 
+function change-aws-profile() {
+    if [ $# = 0 ]; then
+	echo 'usage: change-aws-profile [profilename]'	
+    else
+	export AWS_PROFILE=$1	
+    fi    
+}
+
+
 # zsh-syntax-highlighting(pacman -S zsh-syntax-highlighting)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # zsh-completions for aws
