@@ -211,7 +211,7 @@ regex==2020.11.13
 requests==2.25.1
 requests-mock==1.8.0
 requests-toolbelt==0.9.1
-rich==9.8.2
+rich==9.9.0
 rope==0.18.0
 rsa==4.7
 rtv==1.27.0
@@ -227,7 +227,7 @@ service-identity==18.1.0
 shellingham==1.3.2
 simplejson==3.17.2
 six==1.15.0
-smmap==3.0.4
+smmap==3.0.5
 sniffio==1.2.0
 soupsieve==2.1
 speedtest-cli==2.1.2
