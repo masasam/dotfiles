@@ -25,7 +25,7 @@ botocore==1.19.59
 btrfsutil==5.10
 CacheControl==0.12.6
 cached-property==1.5.2
-cachetools==4.2.0
+cachetools==4.2.1
 cachy==0.3.0
 certifi==2020.12.5
 cffi==1.14.4
@@ -59,7 +59,7 @@ docopt==0.6.2
 docutils==0.16
 entrypoints==0.3
 fabric==2.5.0
-Faker==5.6.5
+Faker==5.7.0
 filelock==3.0.12
 flake8==3.8.4
 gif-for-cli==1.1.2
@@ -195,7 +195,7 @@ python-dateutil==2.8.1
 python-dotenv==0.15.0
 python-jsonrpc-server==0.4.0
 python-language-server==0.35.1
-python-utils==2.5.2
+python-utils==2.5.3
 pytz==2020.5
 pyxdg==0.26
 PyYAML==5.3.1
