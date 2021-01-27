@@ -511,6 +511,11 @@ chromium: ## Install chromium and noto-fonts
 	sudo pacman -S noto-fonts noto-fonts-cjk
 	sudo pacman -S chromium browserpass-chromium
 
+chrome: ## Install chromium and noto-fonts
+	sudo pacman -S noto-fonts noto-fonts-cjk libpipewire02
+	yay -S google-chrome
+	yay -S browserpass-chrome
+
 neovim: ## Init neovim
 	sudo pacman -S neovim
 	mkdir -p ${HOME}/.config/nvim
