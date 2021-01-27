@@ -65,9 +65,9 @@ install: ## Install arch linux packages using pacman
 	jhead peek ncdu gnome-screenshot sshfs fping syncthing terraform bat lshw \
 	xdotool sshuttle packer ripgrep stunnel vimiv adapta-gtk-theme gnome-tweaks \
 	firejail opencv hexedit discord pv smartmontools gnome-logs wireshark-cli \
-	wl-clipboard lsof mapnik browserpass-chromium editorconfig-core-c watchexec \
+	wl-clipboard lsof mapnik editorconfig-core-c watchexec gtop gopls convmv \
 	mpv browserpass-firefox man-db baobab ioping ruby-irb mkcert code findomain \
-	guetzli openvpn fabric gtop gopls convmv
+	guetzli openvpn fabric
 	sudo pkgfile --update
 
 pipinstall: ## Install python packages
@@ -467,7 +467,7 @@ desktop: ## Update desktop entry
 	sudo ln -vsf ${PWD}/usr/share/applications/urxvtc.desktop /usr/share/applications/urxvtc.desktop
 	sudo ln -vsf ${PWD}/usr/share/applications/urxvt-tabbed.desktop /usr/share/applications/urxvt-tabbed.desktop
 
-toggle: ## Prepare command that toggle between emacs and chromium
+toggle: ## Prepare command that toggle between emacs and browser
 	sudo ln -vsf ${PWD}/usr/share/applications/toggle.desktop /usr/share/applications/toggle.desktop
 	sudo cp ${PWD}/.toggle.sh /usr/local/bin/toggle
 
@@ -509,7 +509,7 @@ psd: ## Profile-Sync-Daemon initial setup
 
 chromium: ## Install chromium and noto-fonts
 	sudo pacman -S noto-fonts noto-fonts-cjk
-	sudo pacman -S chromium
+	sudo pacman -S chromium browserpass-chromium
 
 neovim: ## Init neovim
 	sudo pacman -S neovim
