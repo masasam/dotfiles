@@ -434,7 +434,6 @@ aur: ## Install arch linux AUR packages using yay
 	yay -S git-secrets
 	yay -S nvm
 	yay -S slack-desktop
-	yay -S trivy-bin
 	yay -S zoom
 
 guidb: ## Install gui database tools
@@ -453,6 +452,7 @@ aurplus: ## Install arch linux AUR packages using yay
 	yay -S pencil
 	yay -S rtags
 	yay -S skypeforlinux-stable-bin
+	yay -S trivy-bin
 
 terraformer: ## Install terraformer
 	curl -LO https://github.com/GoogleCloudPlatform/terraformer/releases/download/`curl -s https://api.github.com/repos/GoogleCloudPlatform/terraformer/releases/latest | grep tag_name | cut -d '"' -f 4`/terraformer-aws-linux-amd64
