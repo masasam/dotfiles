@@ -78,20 +78,17 @@ pipinstall: ## Install python packages
 	pip install --user --upgrade pip
 	pip install --user ansible
 	pip install --user ansible-lint
-	pip install --user autopep8
 	pip install --user black
 	pip install --user cheat
 	pip install --user chromedriver-binary
 	pip install --user diagrams
 	pip install --user django
 	pip install --user faker
-	pip install --user flake8
 	pip install --user gif-for-cli
 	pip install --user graph-cli
 	pip install --user httpie
 	pip install --user importmagic
 	pip install --user ipywidgets
-	pip install --user jedi
 	pip install --user jupyter
 	pip install --user jupyterlab
 	pip install --user jupyterthemes
@@ -107,13 +104,9 @@ pipinstall: ## Install python packages
 	pip install --user psycopg2-binary
 	pip install --user py-spy
 	pip install --user pydoc_utils
-	pip install --user pyflakes
-	pip install --user pylint
-	pip install --user python-language-server
 	pip install --user r7insight_python
 	pip install --user redis
 	pip install --user requests_mock
-	pip install --user rope
 	pip install --user rtv
 	pip install --user scipy
 	pip install --user scrapy
@@ -126,7 +119,6 @@ pipinstall: ## Install python packages
 	pip install --user truffleHog
 	pip install --user virtualenv
 	pip install --user virtualenvwrapper
-	pip install --user yapf
 	rm -fr get-pip.py
 
 goinstall: ## Install go packages
