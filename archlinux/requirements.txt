@@ -1,4 +1,4 @@
-ansible==2.10.5
+ansible==2.10.6
 ansible-base==2.10.5
 ansible-lint==4.3.7
 anyio==2.0.2
@@ -20,8 +20,8 @@ bcrypt==3.2.0
 beautifulsoup4==4.9.3
 black==20.8b1
 bleach==3.2.3
-boto3==1.16.60
-botocore==1.19.60
+boto3==1.16.61
+botocore==1.19.61
 btrfsutil==5.10
 CacheControl==0.12.6
 cached-property==1.5.2
@@ -135,7 +135,7 @@ nbclient==0.5.1
 nbconvert==6.0.7
 nbformat==5.1.2
 neovim==0.3.1
-nest-asyncio==1.4.3
+nest-asyncio==1.5.1
 nodeenv==1.5.0
 nose==1.3.7
 notebook==6.2.0
@@ -160,7 +160,7 @@ pluggy==0.13.1
 ply==3.11
 poetry==1.1.4
 poetry-core==1.0.0
-pre-commit==2.9.3
+pre-commit==2.10.0
 progressbar2==3.53.1
 prometheus-client==0.9.0
 prompt-toolkit==3.0.14
@@ -211,7 +211,7 @@ regex==2020.11.13
 requests==2.25.1
 requests-mock==1.8.0
 requests-toolbelt==0.9.1
-rich==9.9.0
+rich==9.10.0
 rope==0.18.0
 rsa==4.7
 rtv==1.27.0

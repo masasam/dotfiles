@@ -2,6 +2,7 @@ beekeeper-studio-bin
 downgrade
 git-secrets
 goobook-git
+google-chrome
 ibus-mozc
 nvm
 rbenv
@@ -9,7 +10,6 @@ ruby-build
 sequeler-git
 slack-desktop
 stern-bin
-trivy-bin
 ttf-cica
 yay
 zeal

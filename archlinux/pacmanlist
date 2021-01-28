@@ -68,7 +68,6 @@ celt
 cfitsio
 cheese
 chromaprint
-chromium
 cifs-utils
 clang
 clucene
@@ -636,6 +635,7 @@ libpciaccess
 libpeas
 libpgm
 libpipeline
+libpipewire02
 libplacebo
 libplist
 libpng
