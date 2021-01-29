@@ -930,6 +930,7 @@ python-docker-pycreds
 python-dockerpty
 python-docopt
 python-dotenv
+python-future
 python-gobject
 python-google-api-core
 python-google-api-python-client
@@ -941,13 +942,18 @@ python-httplib2
 python-idna
 python-importlib-metadata
 python-invoke
+python-jedi
+python-jsonrpc-server
 python-jsonschema
+python-language-server
 python-more-itertools
 python-oauth2client
 python-ordered-set
 python-packaging
 python-paramiko
+python-parso
 python-pillow
+python-pluggy
 python-ply
 python-prompt_toolkit
 python-protobuf
@@ -968,6 +974,7 @@ python-setuptools
 python-simplejson
 python-six
 python-texttable
+python-ujson
 python-uritemplate
 python-urllib3
 python-vobject
