@@ -236,6 +236,7 @@ gpm
 gptfdisk
 granite
 graphene
+graphicsmagick
 graphite
 graphviz
 grep
@@ -587,7 +588,6 @@ libldap
 liblouis
 liblqr
 liblrdf
-libmagick6
 libmaxminddb
 libmbim
 libmfx
