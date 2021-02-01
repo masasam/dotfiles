@@ -856,6 +856,20 @@ function add-aws-profile() {
 }
 
 
+function check-arch-iso() {
+    if [ $# = 2 ]; then
+	local archsum=`md5sum $1 | awk '{print $1}'`
+	if [ $archsum = $2 ]; then
+	    echo 'Correct iso file'
+	else
+	    echo 'Incorrect iso file'
+	fi
+    else
+	echo 'usage: check-arch-iso [arch.iso] [md5]'
+    fi
+}
+
+
 # zsh-syntax-highlighting(pacman -S zsh-syntax-highlighting)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # zsh-completions for aws
