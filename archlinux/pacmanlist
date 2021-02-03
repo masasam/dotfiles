@@ -47,6 +47,7 @@ bluez-libs
 bolt
 bookworm
 boost-libs
+box2d
 bridge-utils
 brotli
 browserpass
