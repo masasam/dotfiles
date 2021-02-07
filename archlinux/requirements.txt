@@ -76,7 +76,7 @@ graphviz==0.13.2
 greenlet==1.0.0
 html2text==2020.1.16
 html5lib==1.1
-httpie==2.3.0
+httpie==2.4.0
 httplib2==0.18.1
 hyperlink==21.0.0
 identify==1.5.13
@@ -160,7 +160,7 @@ pluggy==0.13.1
 ply==3.11
 poetry==1.1.4
 poetry-core==1.0.2
-pre-commit==2.10.0
+pre-commit==2.10.1
 progressbar2==3.53.1
 prometheus-client==0.9.0
 prompt-toolkit==3.0.14
