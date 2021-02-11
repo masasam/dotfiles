@@ -277,8 +277,6 @@ localhostssl: # Set ssl for localhost
 docker: ## Docker initial setup
 	sudo pacman -S docker
 	sudo usermod -aG docker ${USER}
-	mkdir -p ${HOME}/.docker
-	ln -vsf ${PWD}/.docker/config.json ${HOME}/.docker/config.json
 	sudo systemctl enable docker.service
 	sudo systemctl start docker.service
 
