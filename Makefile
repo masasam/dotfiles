@@ -275,7 +275,7 @@ localhostssl: # Set ssl for localhost
 	mkcert localhost
 
 docker: ## Docker initial setup
-	sudo pacman -S docker
+	sudo pacman -S docker docker-compose
 	sudo usermod -aG docker ${USER}
 	sudo systemctl enable docker.service
 	sudo systemctl start docker.service
@@ -340,10 +340,6 @@ gcloud: ## Install google cloud SDK and setting
 	test -L ${HOME}/.config/gcloud || rm -rf ${HOME}/.config/gcloud
 	ln -vsfn ${HOME}/backup/gcloud   ${HOME}/.config/gcloud
 	yay -S stern-bin
-
-docker-compose: ## Set up docker-compose
-	sudo pacman -S docker-compose
-	gcloud components install docker-credential-gcr
 
 minikube: ## Setup minikube with kvm2
 	sudo pacman -S minikube libvirt qemu-headless ebtables docker-machine
@@ -658,7 +654,7 @@ testpath: ## Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: rclone gnupg ssh install init keyring urxvt xterm termite yay tlp thinkpad ttf-cica dnsmasq pipinstall goinstall ibusmozc neomutt docker nodeinstall zeal sylpheed lvfs gcloud docker-compose aws toggle aur guidb kind eralchemy mpsyt gh
+allinstall: rclone gnupg ssh install init keyring urxvt xterm termite yay tlp thinkpad ttf-cica dnsmasq pipinstall goinstall ibusmozc neomutt docker nodeinstall zeal sylpheed lvfs gcloud aws toggle aur guidb kind eralchemy mpsyt gh
 
 nextinstall: chromium rubygem rbenv rustinstall postgresql maria-db mycli pgcli
 
