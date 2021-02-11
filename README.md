@@ -415,7 +415,7 @@ You can make install from here
 	sudo pacman -S gnome-logs qreator diskus sysprof bat mapnik
 	sudo pacman -S obs-studio wireshark-cli browserpass-chromium
 	sudo pacman -S editorconfig-core-c watchexec browserpass-firefox
-	sudo pacman -S docker-compose man-db baobab ioping mkcert code
+	sudo pacman -S man-db baobab ioping mkcert code
 	sudo pacman -S guetzli fabric gtop pass github-cli
 
 ![activity](https://raw.githubusercontent.com/masasam/image/image/activity.png)
@@ -566,10 +566,8 @@ You can make install from here
 
 docker
 
-	sudo pacman -S docker
+	sudo pacman -S docker docker-compose
 	sudo usermod -aG docker ${USER}
-	mkdir -p ${HOME}/.docker
-	ln -vsf ${HOME}/backup/.docker/config.json ${HOME}/.docker/config.json
 	sudo systemctl enable docker.service
 	sudo systemctl start docker.service
 
