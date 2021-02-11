@@ -471,7 +471,7 @@ awsv2: ## Init aws cli version 2
 	test -L ${HOME}/.aws || rm -rf ${HOME}/.aws
 	ln -vsfn ${PWD}/.aws ${HOME}/.aws
 	rm -fr awscliv2.zip
-	rm -rf aws
+	rm -fr aws
 	pip install --user awslogs
 
 tmuxp: ## Install tmuxp
