@@ -67,7 +67,7 @@ install: ## Install arch linux packages using pacman
 	firejail opencv hexedit discord pv smartmontools gnome-logs wireshark-cli \
 	wl-clipboard lsof mapnik editorconfig-core-c watchexec gtop gopls convmv \
 	mpv browserpass-firefox man-db baobab ioping ruby-irb mkcert code findomain \
-	guetzli openvpn fabric python-language-server
+	guetzli fabric python-language-server
 	sudo pkgfile --update
 
 pipinstall: ## Install python packages
@@ -305,14 +305,10 @@ maria-db: ## Mariadb initial setup
 	mysql_secure_installation
 	mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root mysql
 
-mysql57: ## MySQL initial setup
-	sudo ln -vsf ${PWD}/etc/sysctl.d/40-max-user-watches.conf /etc/sysctl.d/40-max-user-watches.conf
-	yay -S mysql57
-	sudo ln -vsf ${PWD}/etc/my.cnf /etc/mysql/my.cnf
-	sudo mysqld --initialize --user=mysql --basedir=/usr --datadir=/var/lib/mysql
-	sudo systemctl start mysqld.service
-	mysql_secure_installation
-	mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root mysql
+tailscale: ## tailscale initial setup
+	sudo pacman -S tailscale
+	sudo systemctl enable --now tailscaled
+	sudo tailscale up
 
 postgresql: ## PostgreSQL initial setup
 	sudo pacman -S postgresql
