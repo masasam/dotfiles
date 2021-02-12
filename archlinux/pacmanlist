@@ -846,7 +846,6 @@ openjpeg2
 openmpi
 openssh
 openssl
-openvpn
 opera
 optipng
 opus
@@ -885,7 +884,6 @@ php-intl
 pinentry
 pipewire
 pixman
-pkcs11-helper
 pkgconf
 pkgfile
 pkgstats
@@ -1074,6 +1072,7 @@ systemd-libs
 systemd-sysvcompat
 t1lib
 taglib
+tailscale
 talloc
 tar
 tbb
