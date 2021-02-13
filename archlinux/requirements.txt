@@ -19,8 +19,8 @@ bcrypt==3.2.0
 beautifulsoup4==4.9.3
 black==20.8b1
 bleach==3.3.0
-boto3==1.17.6
-botocore==1.20.6
+boto3==1.17.7
+botocore==1.20.7
 bracex==2.1.1
 btrfsutil==5.10.1
 CacheControl==0.12.6
@@ -28,7 +28,7 @@ cached-property==1.5.2
 cachetools==4.2.1
 cachy==0.3.0
 certifi==2020.12.5
-cffi==1.14.4
+cffi==1.14.5
 cfgv==3.2.0
 chardet==3.0.4
 cheat==2.5.1
@@ -199,7 +199,7 @@ python-utils==2.5.6
 pytz==2021.1
 pyxdg==0.26
 PyYAML==5.3.1
-pyzmq==22.0.2
+pyzmq==22.0.3
 qreator==16.6.2
 qrencode==1.2
 qtconsole==5.0.2
