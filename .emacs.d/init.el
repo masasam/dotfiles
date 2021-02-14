@@ -98,6 +98,7 @@
   (package-install 'git-commit)
   (package-install 'git-timemachine)
   (package-install 'github-explorer)
+  (package-install 'github-review)
   (package-install 'go-mode)
   (package-install 'google-c-style)
   (package-install 'google-this)
