@@ -70,7 +70,7 @@ GitPython==3.0.6
 goobook==3.5.1.dev0
 google-api-core==1.26.0
 google-api-python-client==1.12.8
-google-auth==1.26.0
+google-auth==1.26.1
 google-auth-httplib2==0.0.4
 googleapis-common-protos==1.52.0
 graph-cli==0.1.7

@@ -388,6 +388,7 @@ haskell-texmath
 haskell-text-conversions
 haskell-text-icu
 haskell-th-abstraction
+haskell-th-compat
 haskell-these
 haskell-time-compat
 haskell-tls
