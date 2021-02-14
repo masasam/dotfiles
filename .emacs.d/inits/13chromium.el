@@ -27,103 +27,103 @@
 	 (concat "https://translate.google.com/?source=gtx#ja/en/" (url-hexify-string string)))))))
 
 
-(defun chromium-calendar ()
+(defun chrome-calendar ()
   "Open google-calendar with chromium."
   (interactive)
   (browse-url "https://calendar.google.com/calendar/r"))
 
 
-(defun chromium-meeting ()
+(defun chrome-meeting ()
   "Open meeting.new with chromium."
   (interactive)
   (browse-url "https://meeting.new"))
 
 
-(defun chromium-gmail ()
+(defun chrome-gmail ()
   "Open gmail with chromium."
   (interactive)
   (browse-url "https://mail.google.com/mail/u/0/#inbox"))
 
 
-(defun chromium-drive ()
+(defun chrome-drive ()
   "Open google-drive with chromium."
   (interactive)
   (browse-url "https://drive.google.com/drive/u/0/my-drive"))
 
 
-(defun chromium-github ()
+(defun chrome-github ()
   "Open github with chromium."
   (interactive)
   (browse-url "https://repo.new/"))
 
 
-(defun chromium-reddit ()
+(defun chrome-reddit ()
   "Open reddit with chromium."
   (interactive)
   (browse-url "https://www.reddit.com"))
 
 
-(defun chromium-hackernews ()
+(defun chrome-hackernews ()
   "Open hackernews with chromium."
   (interactive)
   (browse-url "https://news.ycombinator.com"))
 
 
-(defun chromium-maps ()
+(defun chrome-maps ()
   "Open google-maps with chromium."
   (interactive)
   (browse-url "https://www.google.co.jp/maps"))
 
 
-(defun chromium-pocket ()
+(defun chrome-pocket ()
   "Open pocket with chromium."
   (interactive)
   (browse-url "https://getpocket.com/a/queue/"))
 
 
-(defun chromium-twitter ()
+(defun chrome-twitter ()
   "Open twitter with chromium."
   (interactive)
   (browse-url "https://twitter.com"))
 
 
-(defun chromium-keep ()
+(defun chrome-keep ()
   "Open keep with chromium."
   (interactive)
   (browse-url "https://keep.google.com/u/0/"))
 
 
-(defun chromium-keep-new ()
+(defun chrome-keep-new ()
   "Open new keep with chromium."
   (interactive)
   (browse-url "https://keep.new"))
 
 
-(defun chromium-minikube ()
+(defun chrome-minikube ()
   "Open minikube service server with chromium."
   (interactive)
   (browse-url "http://localhost:8080"))
 
 
-(defun chromium-rails ()
+(defun chrome-rails ()
   "Open rails development server with chromium."
   (interactive)
   (browse-url "http://localhost:3000"))
 
 
-(defun chromium-django ()
+(defun chrome-django ()
   "Open django development server with chromium."
   (interactive)
   (browse-url "http://localhost:8000"))
 
 
-(defun chromium-django-admin ()
+(defun chrome-django-admin ()
   "Open django development admin server with chromium."
   (interactive)
   (browse-url "http://localhost:8000/admin/"))
 
 
-(defun chromium-js ()
+(defun chrome-js ()
   "Open js development page with chromium."
   (interactive)
   (browse-url "http://localhost:8080/"))
