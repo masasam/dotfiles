@@ -108,6 +108,7 @@ dconf-editor
 debian-archive-keyring
 debootstrap
 desktop-file-utils
+detox
 device-mapper
 diffutils
 discord
@@ -128,7 +129,6 @@ editorconfig-core-c
 efibootmgr
 efivar
 electron
-electron9
 elfutils
 elinks
 emacs
