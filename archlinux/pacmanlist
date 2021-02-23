@@ -647,6 +647,7 @@ libpsl
 libpulse
 libpwquality
 libqmi
+libqrtr-glib
 libquvi
 libquvi-scripts
 libqxp
