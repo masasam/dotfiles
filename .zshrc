@@ -800,32 +800,34 @@ function stern-completion-start() {
 }
 
 
-function tmuxpane2() {
-    tmux split-window -h
-    tmux select-pane -t 1
-}
-
-
-function tmuxpane3() {
-    tmux split-window -h
-    tmux split-window -v
-    tmux select-pane -t 1
-}
-
-
-function tmuxpane4() {
-    tmux split-window -h
-    tmux split-window -v
-    tmux select-pane -t 1
-    tmux split-window -v
-    tmux select-pane -t 1
-}
-
-
 function ide() {
     tmux split-window -v
     tmux split-window -h
     tmux resize-pane -U 7
+    tmux select-pane -t 1
+}
+
+
+function ide2() {
+    tmux split-window -h
+    tmux split-window -v
+    tmux select-pane -t 1
+}
+
+
+function ide3() {
+    tmux split-window -h
+    tmux select-pane -t 1
+    tmux split-window -v
+    tmux select-pane -t 1
+}
+
+
+function ide4() {
+    tmux split-window -h
+    tmux split-window -v
+    tmux select-pane -t 1
+    tmux split-window -v
     tmux select-pane -t 1
 }
 
