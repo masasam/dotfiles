@@ -822,7 +822,7 @@ function tmuxpane4() {
 }
 
 
-function tmuxpanedb() {
+function ide() {
     tmux split-window -v
     tmux split-window -h
     tmux resize-pane -U 7
