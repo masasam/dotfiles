@@ -660,7 +660,7 @@ testpath: ## Echo PATH
 
 allinstall: rclone gnupg ssh install init keyring urxvt xterm termite yay tlp thinkpad ttf-cica dnsmasq pipinstall goinstall ibusmozc neomutt docker nodeinstall zeal lvfs gcloud awsv2 toggle aur beekeeper kind eralchemy mpsyt gh
 
-nextinstall: chromium rubygem rbenv rustinstall postgresql maria-db mycli pgcli
+nextinstall: chrome rubygem rbenv rustinstall postgresql maria-db mycli pgcli
 
 allupdate: update pipupdate rustupdate goinstall yarnupdate
 
