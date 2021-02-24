@@ -418,9 +418,13 @@ aur: ## Install arch linux AUR packages using yay
 	yay -S slack-desktop
 	yay -S zoom
 
-guidb: ## Install gui database tools
-	yay -S beekeeper-studio-bin
+sequeler: ## Install gui database tools
 	yay -S sequeler-git
+
+beekeeper: ## Setup beekeeper-studio
+	yay -S beekeeper-studio-bin
+	test -L ${HOME}/.config/beekeeper-studio || rm -rf ${HOME}/.config/beekeeper-studio
+	ln -vsfn ${HOME}/backup/beekeeper-studio ${HOME}/.config/beekeeper-studio
 
 gh: ## Install and setup github-cli
 	pacman -S github-cli
@@ -654,7 +658,7 @@ testpath: ## Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: rclone gnupg ssh install init keyring urxvt xterm termite yay tlp thinkpad ttf-cica dnsmasq pipinstall goinstall ibusmozc neomutt docker nodeinstall zeal sylpheed lvfs gcloud awsv2 toggle aur guidb kind eralchemy mpsyt gh
+allinstall: rclone gnupg ssh install init keyring urxvt xterm termite yay tlp thinkpad ttf-cica dnsmasq pipinstall goinstall ibusmozc neomutt docker nodeinstall zeal sylpheed lvfs gcloud awsv2 toggle aur beekeeper kind eralchemy mpsyt gh
 
 nextinstall: chromium rubygem rbenv rustinstall postgresql maria-db mycli pgcli
 
