@@ -858,7 +858,7 @@ function add-aws-profile() {
 }
 
 
-function check-arch-iso() {
+function check-iso() {
     if [ $# = 2 ]; then
 	local archsum=`md5sum $1 | awk '{print $1}'`
 	if [ $archsum = $2 ]; then
@@ -867,7 +867,7 @@ function check-arch-iso() {
 	    echo 'Incorrect iso file'
 	fi
     else
-	echo 'usage: check-arch-iso [arch.iso] [md5]'
+	echo 'usage: check-iso [arch.iso] [md5]'
     fi
 }
 
