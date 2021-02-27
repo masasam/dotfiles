@@ -19,8 +19,8 @@ bcrypt==3.2.0
 beautifulsoup4==4.9.3
 black==20.8b1
 bleach==3.3.0
-boto3==1.17.16
-botocore==1.20.16
+boto3==1.17.17
+botocore==1.20.17
 bracex==2.1.1
 btrfsutil==5.10.1
 CacheControl==0.12.6
@@ -52,7 +52,7 @@ distlib==0.3.1
 distro==1.5.0
 Django==3.1.7
 docker==4.4.4
-docker-compose==1.28.4
+docker-compose==1.28.5
 docker-pycreds==0.4.0
 dockerpty==0.4.1
 docopt==0.6.2
@@ -88,7 +88,7 @@ importmagic==0.1.7
 incremental==17.5.0
 invoke==1.5.0
 ipykernel==5.5.0
-ipython==7.20.0
+ipython==7.21.0
 ipython-genutils==0.2.0
 ipywidgets==7.6.3
 iso-639==0.4.5
@@ -134,7 +134,7 @@ more-itertools==8.6.0
 msgpack==1.0.2
 mypy-extensions==0.4.3
 nbclassic==0.2.6
-nbclient==0.5.2
+nbclient==0.5.3
 nbconvert==6.0.7
 nbformat==5.1.2
 neovim==0.3.1
