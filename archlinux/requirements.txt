@@ -8,7 +8,7 @@ argcomplete==1.12.2
 argon2-cffi==20.1.0
 asgiref==3.3.1
 asn1crypto==1.4.0
-astroid==2.5
+astroid==2.5.1
 async-generator==1.10
 attrs==20.3.0
 Automat==20.2.0
@@ -212,7 +212,7 @@ regex==2020.11.13
 requests==2.25.1
 requests-mock==1.8.0
 requests-toolbelt==0.9.1
-rich==9.12.2
+rich==9.12.3
 rsa==4.7.2
 rtv==1.27.0
 ruamel.yaml==0.16.12
@@ -251,7 +251,7 @@ traitlets==5.0.5
 trash-cli==0.20.12.26
 truffleHog==2.2.1
 truffleHogRegexes==0.0.7
-Twisted==20.3.0
+Twisted==21.2.0
 typed-ast==1.4.2
 typing-extensions==3.7.4.3
 ujson==4.0.2
