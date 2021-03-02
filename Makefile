@@ -106,6 +106,7 @@ pipinstall: ## Install python packages
 	pip install --user progressbar2
 	pip install --user psycopg2-binary
 	pip install --user py-spy
+	pip install --user pydantic
 	pip install --user pydoc_utils
 	pip install --user r7insight_python
 	pip install --user redis
