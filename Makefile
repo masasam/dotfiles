@@ -85,6 +85,7 @@ pipinstall: ## Install python packages
 	pip install --user django
 	pip install --user djangorestframework
 	pip install --user django-nested-admin
+	pip install --user django-ses
 	pip install --user faker
 	pip install --user gif-for-cli
 	pip install --user graph-cli
