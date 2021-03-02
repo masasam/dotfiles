@@ -84,6 +84,7 @@ pipinstall: ## Install python packages
 	pip install --user diagrams
 	pip install --user django
 	pip install --user djangorestframework
+	pip install --user django-nested-admin
 	pip install --user faker
 	pip install --user gif-for-cli
 	pip install --user graph-cli
@@ -120,6 +121,7 @@ pipinstall: ## Install python packages
 	pip install --user truffleHog
 	pip install --user virtualenv
 	pip install --user virtualenvwrapper
+	pip install --user zappa
 	rm -fr get-pip.py
 
 goinstall: ## Install go packages
