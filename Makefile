@@ -83,6 +83,7 @@ pipinstall: ## Install python packages
 	pip install --user chromedriver-binary
 	pip install --user diagrams
 	pip install --user django
+	pip install --user djangorestframework
 	pip install --user faker
 	pip install --user gif-for-cli
 	pip install --user graph-cli
