@@ -885,6 +885,7 @@ php
 php-intl
 pinentry
 pipewire
+pipewire-media-session
 pixman
 pkgconf
 pkgfile
