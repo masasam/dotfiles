@@ -172,7 +172,7 @@ pluggy==0.13.1
 ply==3.11
 poetry==1.1.5
 poetry-core==1.0.2
-pre-commit==2.10.1
+pre-commit==2.11.0
 progressbar2==3.53.1
 prometheus-client==0.9.0
 prompt-toolkit==3.0.16
@@ -192,7 +192,7 @@ pycryptodome==3.10.1
 pydantic==1.8.1
 PyDispatcher==2.0.5
 pydoc-utils==1.0.1
-Pygments==2.8.0
+Pygments==2.8.1
 PyGObject==3.38.0
 PyHamcrest==2.0.2
 PyJWT==2.0.1

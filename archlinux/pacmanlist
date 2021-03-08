@@ -490,6 +490,7 @@ libasyncns
 libatasmart
 libatomic_ops
 libavc1394
+libavif
 libavtp
 libblockdev
 libbluray
@@ -745,6 +746,7 @@ libxtst
 libxv
 libxxf86vm
 libyaml
+libyuv
 libzip
 libzmf
 licenses
@@ -1065,6 +1067,7 @@ strace
 stunnel
 sudo
 suitesparse
+svt-av1
 svt-hevc
 sylpheed
 syncthing
