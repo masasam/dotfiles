@@ -19,8 +19,8 @@ bcrypt==3.2.0
 beautifulsoup4==4.9.3
 black==20.8b1
 bleach==3.3.0
-boto3==1.17.22
-botocore==1.20.22
+boto3==1.17.24
+botocore==1.20.24
 bracex==2.1.1
 btrfsutil==5.10.1
 CacheControl==0.12.6
@@ -47,7 +47,7 @@ cryptography==3.4.6
 cssselect==1.1.0
 cycler==0.10.0
 decorator==4.4.2
-defusedxml==0.7.0
+defusedxml==0.7.1
 diagrams==0.19.1
 distlib==0.3.1
 distro==1.5.0
@@ -65,7 +65,7 @@ durationpy==0.5
 enrich==1.2.6
 entrypoints==0.3
 fabric==2.6.0
-Faker==6.5.0
+Faker==6.6.0
 filelock==3.0.12
 future==0.18.2
 gif-for-cli==1.1.2
@@ -87,7 +87,7 @@ html5lib==1.1
 httpie==2.4.0
 httplib2==0.19.0
 hyperlink==21.0.0
-identify==2.1.0
+identify==2.1.1
 idna==2.10
 importlib-metadata==3.4.0
 importmagic==0.1.7
@@ -115,7 +115,7 @@ jupyter-console==6.2.0
 jupyter-core==4.7.1
 jupyter-packaging==0.7.12
 jupyter-server==1.4.1
-jupyterlab==3.0.9
+jupyterlab==3.0.10
 jupyterlab-pygments==0.1.2
 jupyterlab-server==2.3.0
 jupyterlab-widgets==1.0.0
@@ -131,7 +131,7 @@ LibAppArmor==3.0.1
 lit==0.11.1.dev0
 litecli==1.5.0
 lockfile==0.12.2
-louis==3.16.0
+louis==3.17.0
 lxml==4.6.2
 MarkupSafe==1.1.1
 matplotlib==3.3.4
@@ -264,7 +264,7 @@ tornado==6.1
 tqdm==4.59.0
 traitlets==5.0.5
 trash-cli==0.20.12.26
-troposphere==2.6.3
+troposphere==2.6.4
 truffleHog==2.2.1
 truffleHogRegexes==0.0.7
 Twisted==21.2.0
