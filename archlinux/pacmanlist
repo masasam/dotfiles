@@ -42,6 +42,7 @@ bcg729
 binutils
 bison
 blas
+blockdiag
 bluez
 bluez-libs
 bolt
@@ -934,6 +935,7 @@ python-docker-pycreds
 python-dockerpty
 python-docopt
 python-dotenv
+python-funcparserlib
 python-future
 python-gobject
 python-google-api-core
@@ -983,6 +985,7 @@ python-uritemplate
 python-urllib3
 python-vobject
 python-wcwidth
+python-webcolors
 python-websocket-client
 python-yaml
 python-zipp
@@ -1037,6 +1040,7 @@ sdl2
 seahorse
 sed
 semver
+seqdiag
 serd
 shaderc
 shadow
