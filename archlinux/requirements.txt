@@ -91,7 +91,7 @@ httplib2==0.19.0
 hyperlink==21.0.0
 identify==2.1.2
 idna==2.10
-importlib-metadata==3.4.0
+importlib-metadata==3.7.2
 importmagic==0.1.7
 incremental==21.3.0
 invoke==1.5.0
@@ -166,7 +166,7 @@ pbr==5.5.1
 pexpect==4.8.0
 pickleshare==0.7.5
 Pillow==8.1.0
-pip-tools==5.5.0
+pip-tools==6.0.0
 pipenv==2020.11.15
 pkginfo==1.7.0
 placebo==0.9.0
