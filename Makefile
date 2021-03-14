@@ -379,7 +379,7 @@ awsv2: ## Init aws cli version 2
 
 tmuxp: ${HOME}/.local ## Install tmuxp
 	pip install --user $@
-	sudo ln -vsf {${PWD},${HOME}}/.config/main.yaml ${HOME}/.config/main.yaml
+	sudo ln -vsf {${PWD},${HOME}}/.config/main.yaml
 
 roswell: ## Install ros and lem
 	$(PACMAN) $@
