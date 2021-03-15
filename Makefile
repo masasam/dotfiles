@@ -139,7 +139,7 @@ urxvt: ## Init rxvt-unicode terminal
 	for item in urxvt{,c,-tabbed}; do sudo ln -vsf {${PWD},}/usr/share/application/$$item.desktop; done
 	mkdir -p ${HOME}/.config/autostart
 	chmod a+x ${PWD}/.auto_start.sh
-	ln -vsf {${PWD},${HOME}}/.auto_start.sh ${HOME}/.auto_start.sh
+	ln -vsf {${PWD},${HOME}}/.auto_start.sh
 	ln -vsf ${PWD}/.config/autostart/autostart.desktop ${HOME}/.config/autostart/autostart.desktop
 
 xterm: ## Init xterm terminal
