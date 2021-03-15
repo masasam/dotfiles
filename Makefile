@@ -357,7 +357,7 @@ terraformer: ## Install terraformer
 
 desktop: ## Update desktop entry
 	for item in vim xterm uxterm urxvt urxvtc urxvt-tabbed; do
-		sudo ln -vsf {${PWD},}/usr/shared/applications/$${item}.desktop
+		sudo ln -vsf {${PWD},}/usr/share/applications/$${item}.desktop
 	done
 
 toggle: ## Prepare command that toggle between emacs and browser
