@@ -104,6 +104,7 @@ dav1d
 db
 dbus
 dbus-glib
+dbus-python
 dconf
 dconf-editor
 debian-archive-keyring
@@ -935,8 +936,6 @@ python-colorama
 python-contextlib2
 python-cryptography
 python-dateutil
-python-dbus
-python-dbus-common
 python-dephell
 python-dephell-archive
 python-dephell-argparse
@@ -953,6 +952,7 @@ python-dephell-venvs
 python-dephell-versioning
 python-distlib
 python-distro
+python-dnspython
 python-docker
 python-docker-pycreds
 python-dockerpty
@@ -979,6 +979,7 @@ python-jinja
 python-jsonrpc-server
 python-jsonschema
 python-language-server
+python-markdown
 python-markupsafe
 python-mistune
 python-more-itertools
@@ -1039,7 +1040,6 @@ python-yarl
 python-yaspin
 python-zipp
 python2
-python2-dbus
 python2-gobject
 qpdf
 qreator
@@ -1151,6 +1151,7 @@ the_silver_searcher
 thin-provisioning-tools
 throttled
 tig
+time
 tlp
 tmux
 tokei
