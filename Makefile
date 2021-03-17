@@ -13,7 +13,7 @@ PIP_PKGS	+= django-nested-admin django-ses faker gif-for-cli graph-cli httpie im
 PIP_PKGS	+= jupyter jupyterlab jupyterthemes litecli matplotlib neovim nose pandas pipenv poetry pre-commit
 PIP_PKGS	+= progressbar2 psycopg2-binary py-spy pydantic pydoc_utils r7insight_python redis requests_mock
 PIP_PKGS	+= rtv scipy scrapy seaborn selenium speedtest-cli streamlink tldr trash-cli truffleHog virtualenv
-PIP_PKGS	+= virtualenvwrapper zappa
+PIP_PKGS	+= virtualenvwrapper zappa time
 
 PACKAGES	:= base go zsh git vim tmux keychain evince unrar hugo ethtool zsh-completions xsel emacs gvfs-smb
 PACKAGES	+= unace iperf valgrind noto-fonts-emoji inkscape file-roller xclip atool debootstrap oath-toolkit 
