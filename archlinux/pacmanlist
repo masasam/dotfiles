@@ -335,6 +335,7 @@ haskell-errors
 haskell-file-embed
 haskell-glob
 haskell-haddock-library
+haskell-haddock-library1.9
 haskell-hashable
 haskell-hourglass
 haskell-hslua
