@@ -111,7 +111,7 @@ html5lib==1.1
 httpie==2.4.0
 httplib2==0.19.0
 hyperlink==21.0.0
-identify==2.1.4
+identify==2.2.0
 idna==2.10
 importlib-metadata==3.7.2
 importmagic==0.1.7

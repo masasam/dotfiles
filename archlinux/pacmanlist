@@ -339,6 +339,7 @@ haskell-haddock-library1.9
 haskell-hashable
 haskell-hourglass
 haskell-hslua
+haskell-hslua-module-path
 haskell-hslua-module-system
 haskell-hslua-module-text
 haskell-hsyaml
