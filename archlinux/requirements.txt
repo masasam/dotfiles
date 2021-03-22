@@ -124,7 +124,7 @@ ipywidgets==7.6.3
 iso-639==0.4.5
 iso3166==1.0.1
 isodate==0.6.0
-isort==5.7.0
+isort==5.8.0
 itemadapter==0.2.0
 itemloaders==1.0.4
 jedi==0.18.0
@@ -156,7 +156,7 @@ lit==0.11.1.dev0
 litecli==1.6.0
 lockfile==0.12.2
 louis==3.17.0
-lxml==4.6.2
+lxml==4.6.3
 m2r==0.2.1
 Markdown==3.3.4
 MarkupSafe==1.1.1
@@ -298,7 +298,7 @@ tornado==6.1
 tqdm==4.59.0
 traitlets==5.0.5
 trash-cli==0.20.12.26
-troposphere==2.6.4
+troposphere==2.7.0
 truffleHog==2.2.1
 truffleHogRegexes==0.0.7
 Twisted==21.2.0
@@ -325,8 +325,8 @@ wsgi-request-logger==0.4.6
 x256==0.0.3
 xdg==5.0.1
 yarl==1.6.3
-yaspin==1.4.1
+yaspin==1.5.0
 youtube-dl==2021.3.14
 zappa==0.52.0
 zipp==3.4.1
-zope.interface==5.2.0
+zope.interface==5.3.0

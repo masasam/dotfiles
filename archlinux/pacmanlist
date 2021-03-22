@@ -1182,6 +1182,7 @@ upower
 urxvt-perls
 usbmuxd
 usbutils
+usleep
 util-linux
 util-linux-libs
 v4l-utils
