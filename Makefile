@@ -329,6 +329,9 @@ zeal: ## Deploy zeal config and docsets
 emacspeak: ## Install emacspeak for blind person
 	yay -S $@
 
+intel: ## Setup Intel Graphics
+	sudo ln -vsf {${PWD},}/etc/X11/xorg.conf.d/20-intel.conf
+
 yay: ## Install yay using yay
 	yay -S $@
 
