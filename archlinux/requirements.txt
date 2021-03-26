@@ -1,7 +1,7 @@
 aiohttp==3.7.3
 ansible==3.1.0
 ansible-base==2.10.7
-ansible-lint==5.0.5
+ansible-lint==5.0.6
 anyio==2.2.0
 apparmor==3.0.1
 appdirs==1.4.4
@@ -22,8 +22,8 @@ beautifulsoup4==4.9.3
 black==20.8b1
 bleach==3.3.0
 blockdiag==2.0.1
-boto3==1.17.36
-botocore==1.20.36
+boto3==1.17.37
+botocore==1.20.37
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.11
@@ -74,7 +74,7 @@ distro==1.5.0
 Django==3.1.7
 django-nested-admin==3.3.3
 django-ses==1.0.3
-djangorestframework==3.12.2
+djangorestframework==3.12.3
 dnspython==1.16.0
 docker==4.4.4
 docker-compose==1.28.6
@@ -86,14 +86,14 @@ durationpy==0.5
 enrich==1.2.6
 entrypoints==0.3
 fabric==2.6.0
-Faker==6.6.2
+Faker==6.6.3
 filelock==3.0.12
 fissix==19.2b1
 funcparserlib==0.3.6
 future==0.18.2
 futures==3.1.1
 gif-for-cli==1.1.2
-gitdb==4.0.5
+gitdb==4.0.6
 gitdb2==4.0.2
 GitPython==3.0.6
 goobook==3.5.1.dev0
@@ -263,7 +263,7 @@ rtv==1.27.0
 ruamel.yaml==0.16.13
 ruamel.yaml.clib==0.2.2
 s3transfer==0.3.6
-scipy==1.6.1
+scipy==1.6.2
 Scrapy==2.4.1
 seaborn==0.11.1
 SecretStorage==3.3.1
@@ -282,7 +282,7 @@ speedtest-cli==2.1.2
 sqlparse==0.4.1
 sshuttle==1.0.5
 stevedore==3.3.0
-streamlink==2.1.0
+streamlink==2.1.1
 tabulate==0.8.9
 team==1.0
 termcolor==1.1.0
