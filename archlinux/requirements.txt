@@ -9,7 +9,7 @@ argcomplete==1.12.2
 argon2-cffi==20.1.0
 asgiref==3.3.1
 asn1crypto==1.4.0
-astroid==2.5.1
+astroid==2.5.2
 async-generator==1.10
 async-timeout==3.0.1
 attrs==20.3.0
@@ -36,7 +36,7 @@ certifi==2020.12.5
 cffi==1.14.5
 cfgv==3.2.0
 cfn-flip==1.2.3
-chardet==3.0.4
+chardet==4.0.0
 cheat==2.5.1
 chromedriver-binary==90.0.4430.24.0
 cleo==0.8.1
@@ -111,7 +111,7 @@ html5lib==1.1
 httpie==2.4.0
 httplib2==0.19.0
 hyperlink==21.0.0
-identify==2.2.1
+identify==2.2.2
 idna==2.10
 importlib-metadata==3.7.3
 importmagic==0.1.7
