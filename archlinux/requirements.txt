@@ -1,4 +1,4 @@
-aiohttp==3.7.3
+aiohttp==3.7.4
 ansible==3.2.0
 ansible-base==2.10.7
 ansible-lint==5.0.6
