@@ -22,8 +22,8 @@ beautifulsoup4==4.9.3
 black==20.8b1
 bleach==3.3.0
 blockdiag==2.0.1
-boto3==1.17.41
-botocore==1.20.41
+boto3==1.17.42
+botocore==1.20.42
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.11.1
@@ -73,7 +73,7 @@ distlib==0.3.1
 distro==1.5.0
 Django==3.1.7
 django-nested-admin==3.3.3
-django-ses==1.0.3
+django-ses==2.0.0
 djangorestframework==3.12.4
 dnspython==1.16.0
 docker==4.4.4
@@ -102,7 +102,7 @@ google-api-python-client==1.12.8
 google-auth==1.28.0
 google-auth-httplib2==0.1.0
 googleapis-common-protos==1.53.0
-graph-cli==0.1.9
+graph-cli==0.1.10
 graphviz==0.16
 greenlet==1.0.0
 hjson==3.0.2
@@ -160,7 +160,7 @@ lxml==4.6.3
 m2r==0.2.1
 Markdown==3.3.4
 MarkupSafe==1.1.1
-matplotlib==3.4.0
+matplotlib==3.4.1
 mccabe==0.6.1
 mistune==0.8.4
 more-itertools==8.6.0
@@ -326,7 +326,7 @@ x256==0.0.3
 xdg==5.0.1
 yarl==1.6.3
 yaspin==1.5.0
-youtube-dl==2021.3.31
+youtube-dl==2021.4.1
 zappa==0.52.0
 zipp==3.4.1
 zope.interface==5.3.0
