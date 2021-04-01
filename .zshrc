@@ -841,7 +841,7 @@ function aws-profile-change() {
 	echo '---------------------'
 	aws configure list-profiles
 	echo '---------------------'
-	echo 'usage: change-aws-profile [profilename]'
+	echo 'usage: aws-profile-change [profilename]'
     fi
 }
 
@@ -854,7 +854,7 @@ function aws-profile-add() {
 	echo '---------------------'
 	aws configure list-profiles
 	echo '---------------------'
-	echo 'usage: add-aws-profile [profilename]'
+	echo 'usage: aws-profile-add [profilename]'
     fi
 }
 
@@ -872,6 +872,14 @@ function check-iso() {
     fi
 }
 
+
+function s3-download() {
+    if [ $# = 1 ]; then
+	echo 'usage: s3-download [s3object]'
+    else
+	open https://s3.console.aws.amazon.com/s3/object/$1
+    fi
+}
 
 # zsh-syntax-highlighting(pacman -S zsh-syntax-highlighting)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
