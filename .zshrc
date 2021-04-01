@@ -833,7 +833,7 @@ function ide4() {
 }
 
 
-function change-aws-profile() {
+function aws-profile-change() {
     if [ $# = 1 ]; then
 	export AWS_PROFILE=$1
     else
@@ -846,7 +846,7 @@ function change-aws-profile() {
 }
 
 
-function add-aws-profile() {
+function aws-profile-add() {
     if [ $# = 1 ]; then
 	aws configure --profile $1
     else
