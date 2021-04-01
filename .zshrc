@@ -875,9 +875,9 @@ function check-iso() {
 
 function s3-download() {
     if [ $# = 1 ]; then
-	echo 'usage: s3-download [s3object]'
+	open https://s3.console.aws.amazon.com/s3/object/$1	
     else
-	open https://s3.console.aws.amazon.com/s3/object/$1
+	echo 'usage: s3-download [s3object]'
     fi
 }
 
