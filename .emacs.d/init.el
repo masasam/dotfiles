@@ -198,6 +198,7 @@
   (package-install 'typescript-mode)
   (package-install 'visual-regexp)
   (package-install 'volatile-highlights)
+  (package-install 'vterm)
   (package-install 'web-mode)
   (package-install 'wgrep)
   (package-install 'wgrep-ag)
