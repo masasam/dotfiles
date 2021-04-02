@@ -1,6 +1,8 @@
 ;;; init.el --- init.el
 ;;; Commentary:
+;; URL: https://github.com/masasam/dotfiles
 ;;; Code:
+;; Package-Requires: ((emacs "25.1"))
 ;;(setq debug-on-error t)
 
 (menu-bar-mode 0)
