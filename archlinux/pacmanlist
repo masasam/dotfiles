@@ -131,6 +131,7 @@ editorconfig-core-c
 efibootmgr
 efivar
 electron
+electron11
 elfutils
 elinks
 emacs
@@ -710,6 +711,7 @@ libvncserver
 libvoikko
 libvorbis
 libvpx
+libvterm
 libwacom
 libwebp
 libwmf
