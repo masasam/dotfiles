@@ -52,7 +52,7 @@ crashtest==0.3.1
 cryptography==3.4.7
 cssselect==1.1.0
 cycler==0.10.0
-decorator==5.0.3
+decorator==5.0.4
 defusedxml==0.7.1
 dephell==0.8.3
 dephell-archive==0.1.5
@@ -81,7 +81,7 @@ docker-compose==1.28.6
 docker-pycreds==0.4.0
 dockerpty==0.4.1
 docopt==0.6.2
-docutils==0.16
+docutils==0.17
 durationpy==0.5
 enrich==1.2.6
 entrypoints==0.3
