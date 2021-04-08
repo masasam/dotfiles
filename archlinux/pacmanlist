@@ -264,6 +264,7 @@ gstreamer
 gtk-update-icon-cache
 gtk2
 gtk3
+gtk4
 gtkmm
 gtkmm3
 gtksourceview3
@@ -1199,6 +1200,7 @@ vmaf
 volume_key
 vte-common
 vte3
+vulkan-headers
 vulkan-icd-loader
 w3m
 watchexec
