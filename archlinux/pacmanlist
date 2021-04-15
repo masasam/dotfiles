@@ -286,6 +286,7 @@ harfbuzz-icu
 haskell-aeson
 haskell-aeson-pretty
 haskell-ansi-terminal
+haskell-appar
 haskell-asn1-encoding
 haskell-asn1-parse
 haskell-asn1-types
@@ -304,6 +305,7 @@ haskell-blaze-builder
 haskell-blaze-html
 haskell-blaze-markup
 haskell-byteable
+haskell-byteorder
 haskell-case-insensitive
 haskell-cereal
 haskell-citeproc
@@ -354,6 +356,7 @@ haskell-hxt-regex-xmlschema
 haskell-hxt-unicode
 haskell-indexed-traversable
 haskell-integer-logarithms
+haskell-iproute
 haskell-ipynb
 haskell-jira-wiki-markup
 haskell-juicypixels
