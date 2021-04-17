@@ -39,6 +39,7 @@ bash-completion
 bat
 bc
 bcg729
+bind
 binutils
 bison
 blas
@@ -816,7 +817,6 @@ mlocate
 mobile-broadband-provider-info
 modemmanager
 mosh
-mozilla-common
 mpfr
 mpg123
 mpv
