@@ -82,7 +82,7 @@ docker-compose==1.29.1
 docker-pycreds==0.4.0
 dockerpty==0.4.1
 docopt==0.6.2
-docutils==0.17
+docutils==0.17.1
 durationpy==0.5
 enrich==1.2.6
 entrypoints==0.3
@@ -113,7 +113,7 @@ html2text==2020.1.16
 html5lib==1.1
 httpie==2.4.0
 httplib2==0.19.1
-hyperframe==6.0.0
+hyperframe==6.0.1
 hyperlink==21.0.0
 identify==2.2.3
 idna==3.1
