@@ -30,7 +30,7 @@ PACKAGES	+= jhead peek ncdu gnome-screenshot sshfs fping syncthing terraform bat
 PACKAGES	+= ripgrep stunnel vimiv adapta-gtk-theme gnome-tweaks firejail opencv hexedit discord pv 
 PACKAGES	+= smartmontools gnome-logs wireshark-cli wl-clipboard lsof mapnik editorconfig-core-c watchexec
 PACKAGES	+= gtop gopls convmv mpv browserpass-firefox man-db baobab ioping ruby-irb mkcert code findomain
-PACKAGES	+= guetzli fabric python-language-server detox usleep libvterm
+PACKAGES	+= guetzli fabric python-language-server detox usleep libvterm bind
 
 BASE_PKGS	:= filesystem gcc-libs glibc bash coreutils file findutils gawk grep procps-ng sed tar gettext
 BASE_PKGS	+= pciutils psmisc shadow util-linux bzip2 gzip xz licenses pacman systemd systemd-sysvcompat 
