@@ -2,7 +2,7 @@ aiohttp==3.7.4.post0
 ansible==3.2.0
 ansible-base==2.10.8
 ansible-lint==5.0.7
-anyio==2.2.0
+anyio==3.0.0
 apparmor==3.0.1
 appdirs==1.4.4
 argcomplete==1.12.3
@@ -315,7 +315,7 @@ ujson==4.0.2
 uritemplate==3.0.1
 urllib3==1.26.4
 vimiv==0.9.1
-virtualenv==20.4.3
+virtualenv==20.4.4
 virtualenv-clone==0.5.4
 virtualenvwrapper==4.8.4
 vobject==0.9.6.1
