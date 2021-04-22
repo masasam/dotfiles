@@ -1,8 +1,8 @@
 aiohttp==3.7.4.post0
-ansible==3.2.0
+ansible==3.3.0
 ansible-base==2.10.8
 ansible-lint==5.0.7
-anyio==3.0.0
+anyio==2.2.0
 apparmor==3.0.1
 appdirs==1.4.4
 argcomplete==1.12.3
@@ -22,8 +22,8 @@ beautifulsoup4==4.9.3
 black==20.8b1
 bleach==3.3.0
 blockdiag==2.0.1
-boto3==1.17.54
-botocore==1.20.54
+boto3==1.17.55
+botocore==1.20.55
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.11.1
@@ -115,7 +115,7 @@ httpie==2.4.0
 httplib2==0.19.1
 hyperframe==6.0.1
 hyperlink==21.0.0
-identify==2.2.3
+identify==2.2.4
 idna==3.1
 importlib-metadata==3.7.3
 importmagic==0.1.7
@@ -143,7 +143,7 @@ jupyter-client==6.1.13
 jupyter-console==6.4.0
 jupyter-core==4.7.1
 jupyter-packaging==0.9.2
-jupyter-server==1.6.2
+jupyter-server==1.6.4
 jupyterlab==3.0.14
 jupyterlab-pygments==0.1.2
 jupyterlab-server==2.4.0
@@ -254,7 +254,7 @@ qreator==20.2.1
 qrencode==1.2
 qtconsole==5.0.3
 QtPy==1.9.0
-queuelib==1.5.0
+queuelib==1.6.1
 r7insight-python==1.0.0
 redis==3.5.3
 regex==2021.4.4
@@ -268,7 +268,7 @@ rsa==4.7.2
 rtv==1.27.0
 ruamel.yaml==0.17.4
 ruamel.yaml.clib==0.2.2
-s3transfer==0.4.0
+s3transfer==0.4.1
 scipy==1.6.2
 Scrapy==2.4.1
 seaborn==0.11.1
@@ -304,7 +304,7 @@ tomlkit==0.7.0
 tornado==6.1
 tqdm==4.60.0
 traitlets==5.0.5
-trash-cli==0.20.12.26
+trash-cli==0.21.4.18
 troposphere==2.7.1
 truffleHog==2.2.1
 truffleHogRegexes==0.0.7
