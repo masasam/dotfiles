@@ -269,7 +269,6 @@ alias cargoupdate='cargo install-update -a'
 alias cargocleanup='rm -rf ${HOME}/.cargo/bin/*; cd ${HOME}/src/github.com/masasam/dotfiles; make rustinstall; cd -'
 alias yarnupdate='yarn global upgrade'
 alias yarncleanupcash='yarn cache clean'
-alias yarncleanup='yarn global remove $(yarn global list | grep info | sed 's/^info "\(.*\)@.*".*$/\1/')'
 alias pipbackup='cd ${HOME}/src/github.com/masasam/dotfiles; make pipbackup; cd -'
 alias pipupdate='pip list --user | cut -d" " -f 1 | tail -n +3 | xargs pip install -U --user'
 alias pipcleanup='pip cache purge'
@@ -880,6 +879,11 @@ function s3-download() {
     else
 	echo 'usage: s3-download [s3object]'
     fi
+}
+
+
+function yarncleanup() {
+    yarn global remove $(yarn global list | grep info | sed 's/^info "\(.*\)@.*".*$/\1/')
 }
 
 # zsh-syntax-highlighting(pacman -S zsh-syntax-highlighting)
