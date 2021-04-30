@@ -1,12 +1,12 @@
 export PATH := ${HOME}/.local/bin:${HOME}/.node_modules/bin:${HOME}/.cargo/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/bin/core_perl:${HOME}/bin:${HOME}/google-cloud-sdk/bin
 export GOPATH := ${HOME}
 
-NODE_PKGS	:= babel-eslint bash-language-server cloc create-component-app create-nuxt-app create-react-app
-NODE_PKGS	+= dockerfile-language-server-nodejs esbuild-linux-64 eslint eslint-cli eslint-config-vue
-NODE_PKGS	+= eslint-plugin-react eslint-plugin-vue@next expo-cli firebase-tools fx gulp gulp-cli heroku 
-NODE_PKGS	+= indium intelephense javascript-typescript-langserver jshint logo.svg @marp-team/marp-cli
-NODE_PKGS	+= mermaid mermaid.cli netlify-cli ngrok now prettier parcel-bundler typescript-language-server
-NODE_PKGS	+= @vue/cli vue-language-server vue-native-cli webpack
+NODE_PKGS	:= babel-eslint bash-language-server cloc create-nuxt-app create-react-app webpack
+NODE_PKGS	+= dockerfile-language-server-nodejs eslint eslint-cli eslint-config-vue netlify-cli
+NODE_PKGS	+= eslint-plugin-react eslint-plugin-vue@next expo-cli firebase-tools fx heroku 
+NODE_PKGS	+= indium intelephense javascript-typescript-langserver logo.svg @marp-team/marp-cli
+NODE_PKGS	+= mermaid mermaid.cli ngrok now prettier parcel-bundler typescript-language-server
+NODE_PKGS	+= @vue/cli vue-language-server vue-native-cli jshint
 
 PIP_PKGS	:= ansible ansible-lint black cheat chromedriver-binary diagrams django djangorestframework
 PIP_PKGS	+= django-nested-admin django-ses faker gif-for-cli graph-cli httpie importmagic ipywidgets
