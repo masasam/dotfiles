@@ -258,7 +258,7 @@ PyYAML==5.4.1
 pyzmq==22.0.3
 qreator==20.2.1
 qrencode==1.2
-qtconsole==5.0.3
+qtconsole==5.1.0
 QtPy==1.9.0
 queuelib==1.6.1
 r7insight-python==1.0.0
