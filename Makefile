@@ -358,6 +358,10 @@ terraformer: ## Install terraformer
 	curl -LO https://github.com/GoogleCloudPlatform/$@/releases/download/`curl -s https://api.github.com/repos/GoogleCloudPlatform/$@/releases/latest | grep tag_name | cut -d '"' -f 4`/$@-aws-linux-amd64
 	sudo install -m 755 $@-aws-linux-amd64 /usr/local/bin/$@ && rm $@-aws-linux-amd64
 
+bluetooth: # Setup bluetooth for AS801 by AfterShokz
+	$(PACMAN) bluez
+	$(SYSTEMD_ENABLE) $@
+
 desktop: ## Update desktop entry
 	for item in vim xterm uxterm urxvt urxvtc urxvt-tabbed; do
 		sudo ln -vsf {${PWD},}/usr/share/applications/$${item}.desktop
