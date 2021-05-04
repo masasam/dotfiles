@@ -1,7 +1,7 @@
 aiohttp==3.7.4.post0
 ansible==3.3.0
-ansible-base==2.10.8
-ansible-lint==5.0.7
+ansible-base==2.10.9
+ansible-lint==5.0.8
 anyio==2.2.0
 apparmor==3.0.1
 appdirs==1.4.4
@@ -22,8 +22,8 @@ beautifulsoup4==4.9.3
 black==21.4b2
 bleach==3.3.0
 blockdiag==2.0.1
-boto3==1.17.62
-botocore==1.20.62
+boto3==1.17.64
+botocore==1.20.64
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.11.1
@@ -235,7 +235,7 @@ pycryptodome==3.10.1
 pydantic==1.8.1
 PyDispatcher==2.0.5
 pydoc-utils==1.0.1
-Pygments==2.8.1
+Pygments==2.9.0
 PyGObject==3.40.1
 PyHamcrest==2.0.2
 PyJWT==2.1.0
