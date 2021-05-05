@@ -19,11 +19,11 @@ Babel==2.9.1
 backcall==0.2.0
 bcrypt==3.2.0
 beautifulsoup4==4.9.3
-black==21.4b2
+black==21.5b0
 bleach==3.3.0
 blockdiag==2.0.1
-boto3==1.17.64
-botocore==1.20.64
+boto3==1.17.66
+botocore==1.20.66
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.11.1
@@ -73,7 +73,7 @@ diagrams==0.19.1
 diff-match-patch==20200713
 distlib==0.3.1
 distro==1.5.0
-Django==3.2
+Django==3.2.1
 django-nested-admin==3.3.3
 django-ses==2.0.0
 djangorestframework==3.12.4
