@@ -22,8 +22,8 @@ beautifulsoup4==4.9.3
 black==21.5b0
 bleach==3.3.0
 blockdiag==2.0.1
-boto3==1.17.66
-botocore==1.20.66
+boto3==1.17.67
+botocore==1.20.67
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.11.1
@@ -123,8 +123,8 @@ importlib-metadata==4.0.1
 importmagic==0.1.7
 incremental==21.3.0
 invoke==1.5.0
-ipykernel==5.5.3
-ipython==7.23.0
+ipykernel==5.5.4
+ipython==7.23.1
 ipython-genutils==0.2.0
 ipywidgets==7.6.3
 isc==2.0
@@ -251,7 +251,7 @@ python-dotenv==0.17.1
 python-jsonrpc-server==0.4.0
 python-language-server==0.36.2
 python-monkey-business==1.0.0
-python-slugify==5.0.0
+python-slugify==5.0.2
 python-utils==2.5.6
 pytz==2021.1
 PyYAML==5.4.1
@@ -322,7 +322,7 @@ ujson==4.0.2
 uritemplate==3.0.1
 urllib3==1.26.4
 vimiv==0.9.1
-virtualenv==20.4.4
+virtualenv==20.4.6
 virtualenv-clone==0.5.4
 virtualenvwrapper==4.8.4
 vobject==0.9.6.1
