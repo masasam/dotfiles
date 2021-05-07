@@ -172,6 +172,7 @@ fribidi
 fuse-common
 fuse3
 fwupd
+fwupd-efi
 fzf
 gauche
 gavl

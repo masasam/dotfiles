@@ -22,8 +22,8 @@ beautifulsoup4==4.9.3
 black==21.5b0
 bleach==3.3.0
 blockdiag==2.0.1
-boto3==1.17.67
-botocore==1.20.67
+boto3==1.17.68
+botocore==1.20.68
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.11.1
@@ -73,7 +73,7 @@ diagrams==0.19.1
 diff-match-patch==20200713
 distlib==0.3.1
 distro==1.5.0
-Django==3.2.1
+Django==3.2.2
 django-nested-admin==3.3.3
 django-ses==2.0.0
 djangorestframework==3.12.4
@@ -107,7 +107,7 @@ google-auth-httplib2==0.1.0
 googleapis-common-protos==1.53.0
 graph-cli==0.1.13
 graphviz==0.16
-greenlet==1.0.0
+greenlet==1.1.0
 h2==4.0.0
 hjson==3.0.2
 hpack==4.0.0
@@ -144,7 +144,7 @@ jupyter==1.0.0
 jupyter-client==6.1.13
 jupyter-console==6.4.0
 jupyter-core==4.7.1
-jupyter-packaging==0.9.2
+jupyter-packaging==0.10.1
 jupyter-server==1.6.4
 jupyterlab==3.0.14
 jupyterlab-pygments==0.1.2
@@ -225,7 +225,7 @@ psutil==5.8.0
 psycopg2-binary==2.8.6
 ptyprocess==0.7.0
 pwquality==1.4.4
-py-spy==0.3.5
+py-spy==0.3.6
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
 pycairo==1.20.0
