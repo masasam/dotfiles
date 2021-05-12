@@ -1,5 +1,5 @@
 aiohttp==3.7.4.post0
-ansible==3.3.0
+ansible==3.4.0
 ansible-base==2.10.9
 ansible-lint==5.0.8
 anyio==3.0.1
@@ -22,11 +22,11 @@ beautifulsoup4==4.9.3
 black==21.5b1
 bleach==3.3.0
 blockdiag==2.0.1
-boto3==1.17.70
-botocore==1.20.70
+boto3==1.17.71
+botocore==1.20.71
 bowler==0.8.0
 bracex==2.1.1
-btrfsutil==5.11.1
+btrfsutil==5.12
 CacheControl==0.12.6
 cached-property==1.5.2
 cachetools==4.2.2
@@ -167,7 +167,7 @@ lxml==4.6.3
 m2r==0.2.1
 Markdown==3.3.4
 MarkupPy==1.14
-MarkupSafe==1.1.1
+MarkupSafe==2.0.0
 matplotlib==3.4.2
 matplotlib-inline==0.1.2
 mccabe==0.6.1
@@ -177,7 +177,7 @@ mps-youtube==0.2.8
 msgpack==1.0.2
 multidict==5.1.0
 mypy-extensions==0.4.3
-nbclassic==0.2.7
+nbclassic==0.2.8
 nbclient==0.5.3
 nbconvert==6.0.7
 nbformat==5.1.3
@@ -220,7 +220,7 @@ progressbar2==3.53.1
 prometheus-client==0.10.1
 prompt-toolkit==3.0.18
 Protego==0.1.16
-protobuf==3.15.8
+protobuf==3.16.0
 psutil==5.8.0
 psycopg2-binary==2.8.6
 ptyprocess==0.7.0
@@ -232,7 +232,7 @@ pycairo==1.20.0
 pycodestyle==2.7.0
 pycparser==2.20
 pycryptodome==3.10.1
-pydantic==1.8.1
+pydantic==1.8.2
 PyDispatcher==2.0.5
 pydoc-utils==1.0.1
 Pygments==2.9.0
@@ -286,7 +286,7 @@ service-identity==21.1.0
 sh==1.14.1
 shellingham==1.4.0
 simplejson==3.17.2
-six==1.15.0
+six==1.16.0
 smmap==4.0.0
 sniffio==1.2.0
 soupsieve==2.2.1
@@ -300,7 +300,7 @@ tabulate==0.8.9
 team==1.0
 tenacity==7.0.0
 termcolor==1.1.0
-terminado==0.9.4
+terminado==0.9.5
 terminaltables==3.1.0
 testpath==0.4.4
 text-unidecode==1.3
@@ -311,7 +311,7 @@ tomlkit==0.7.0
 tornado==6.1
 tqdm==4.60.0
 traitlets==5.0.5
-trash-cli==0.21.4.18
+trash-cli==0.21.5.11
 troposphere==2.7.1
 truffleHog==2.2.1
 truffleHogRegexes==0.0.7
@@ -331,7 +331,7 @@ wcmatch==8.1.2
 wcwidth==0.2.5
 webcolors==1.11.1
 webencodings==0.5.1
-websocket-client==0.58.0
+websocket-client==0.59.0
 Werkzeug==0.16.1
 widgetsnbextension==3.5.1
 wrapt==1.12.1
