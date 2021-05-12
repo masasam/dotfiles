@@ -22,8 +22,8 @@ beautifulsoup4==4.9.3
 black==21.5b1
 bleach==3.3.0
 blockdiag==2.0.1
-boto3==1.17.71
-botocore==1.20.71
+boto3==1.17.72
+botocore==1.20.72
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.12
@@ -41,7 +41,7 @@ cheat==2.5.1
 chromedriver-binary==91.0.4472.19.0
 cleo==0.8.1
 cli-helpers==2.1.0
-click==7.1.2
+click==8.0.0
 clikit==0.6.2
 colorama==0.4.4
 commonmark==0.9.1
@@ -144,7 +144,7 @@ jupyter==1.0.0
 jupyter-client==6.1.13
 jupyter-console==6.4.0
 jupyter-core==4.7.1
-jupyter-packaging==0.10.1
+jupyter-packaging==0.10.2
 jupyter-server==1.7.0
 jupyterlab==3.0.15
 jupyterlab-pygments==0.1.2
@@ -269,7 +269,7 @@ requests-mock==1.9.2
 requests-toolbelt==0.9.1
 resolvelib==0.5.4
 retrying==1.3.3
-rich==10.1.0
+rich==10.2.0
 rsa==4.7.2
 rtv==1.27.0
 ruamel.yaml==0.17.4
