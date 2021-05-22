@@ -1,7 +1,7 @@
 aiohttp==3.7.4.post0
 ansible==3.4.0
 ansible-base==2.10.9
-ansible-lint==5.0.9
+ansible-lint==5.0.10
 anyio==3.1.0
 apparmor==3.0.1
 appdirs==1.4.4
@@ -22,8 +22,8 @@ beautifulsoup4==4.9.3
 black==21.5b1
 bleach==3.3.0
 blockdiag==2.0.1
-boto3==1.17.76
-botocore==1.20.76
+boto3==1.17.78
+botocore==1.20.78
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.12.1
@@ -41,7 +41,7 @@ cheat==2.5.1
 chromedriver-binary==91.0.4472.19.0
 cleo==0.8.1
 cli-helpers==2.1.0
-click==8.0.0
+click==8.0.1
 clikit==0.6.2
 colorama==0.4.4
 commonmark==0.9.1
@@ -89,7 +89,7 @@ enrich==1.2.6
 entrypoints==0.3
 et-xmlfile==1.1.0
 fabric==2.6.0
-Faker==8.2.0
+Faker==8.2.1
 filelock==3.0.12
 fissix==19.2b1
 funcparserlib==0.3.6
@@ -117,7 +117,7 @@ httpie==2.4.0
 httplib2==0.19.1
 hyperframe==6.0.1
 hyperlink==21.0.0
-identify==2.2.4
+identify==2.2.5
 idna==3.1
 importlib-metadata==4.0.1
 importmagic==0.1.7
@@ -145,7 +145,7 @@ jupyter-client==6.1.13
 jupyter-console==6.4.0
 jupyter-core==4.7.1
 jupyter-packaging==0.10.2
-jupyter-server==1.7.0
+jupyter-server==1.8.0
 jupyterlab==3.0.16
 jupyterlab-pygments==0.1.2
 jupyterlab-server==2.5.2
@@ -177,7 +177,7 @@ mps-youtube==0.2.8
 msgpack==1.0.2
 multidict==5.1.0
 mypy-extensions==0.4.3
-nbclassic==0.2.8
+nbclassic==0.3.1
 nbclient==0.5.3
 nbconvert==6.0.7
 nbformat==5.1.3
@@ -213,7 +213,7 @@ pluggy==0.13.1
 ply==3.11
 poetry==1.1.6
 poetry-core==1.0.3
-pre-commit==2.12.1
+pre-commit==2.13.0
 priority==1.3.0
 progress==1.5
 progressbar2==3.53.1
@@ -294,7 +294,7 @@ speedtest-cli==2.1.3
 sqlparse==0.4.1
 sshuttle==1.0.5
 stevedore==3.3.0
-streamlink==2.1.1
+streamlink==2.1.2
 tablib==3.0.0
 tabulate==0.8.9
 team==1.0
@@ -307,11 +307,11 @@ text-unidecode==1.3
 texttable==1.6.3
 tldr==1.2.1
 toml==0.10.2
-tomlkit==0.7.1
+tomlkit==0.7.2
 tornado==6.1
 tqdm==4.60.0
 traitlets==5.0.5
-trash-cli==0.21.5.11
+trash-cli==0.21.5.20
 troposphere==2.7.1
 truffleHog==2.2.1
 truffleHogRegexes==0.0.7
@@ -327,7 +327,7 @@ virtualenv-clone==0.5.4
 virtualenvwrapper==4.8.4
 vobject==0.9.6.1
 w3lib==1.22.0
-wcmatch==8.1.2
+wcmatch==8.2
 wcwidth==0.2.5
 webcolors==1.11.1
 webencodings==0.5.1
