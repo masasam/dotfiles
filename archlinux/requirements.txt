@@ -69,7 +69,7 @@ dephell-specifier==0.2.2
 dephell-venvs==0.1.16
 dephell-versioning==0.1.2
 deprecation==2.1.0
-diagrams==0.19.1
+diagrams==0.20.0
 diff-match-patch==20200713
 distlib==0.3.1
 distro==1.5.0
