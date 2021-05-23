@@ -100,8 +100,8 @@ gitdb==4.0.7
 gitdb2==4.0.2
 GitPython==3.0.6
 goobook==3.5.1.dev0
-google-api-core==1.26.3
-google-api-python-client==2.4.0
+google-api-core==1.28.0
+google-api-python-client==2.5.0
 google-auth==1.28.1
 google-auth-httplib2==0.1.0
 googleapis-common-protos==1.53.0
@@ -311,7 +311,7 @@ tomlkit==0.7.2
 tornado==6.1
 tqdm==4.60.0
 traitlets==5.0.5
-trash-cli==0.21.5.20
+trash-cli==0.21.5.22
 troposphere==2.7.1
 truffleHog==2.2.1
 truffleHogRegexes==0.0.7
