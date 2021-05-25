@@ -1,7 +1,7 @@
 aiohttp==3.7.4.post0
 ansible==3.4.0
-ansible-base==2.10.9
-ansible-lint==5.0.10
+ansible-base==2.10.10
+ansible-lint==5.0.11
 anyio==3.1.0
 apparmor==3.0.1
 appdirs==1.4.4
@@ -22,8 +22,8 @@ beautifulsoup4==4.9.3
 black==21.5b1
 bleach==3.3.0
 blockdiag==2.0.1
-boto3==1.17.78
-botocore==1.20.78
+boto3==1.17.79
+botocore==1.20.79
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.12.1
@@ -309,7 +309,7 @@ tldr==1.2.1
 toml==0.10.2
 tomlkit==0.7.2
 tornado==6.1
-tqdm==4.60.0
+tqdm==4.61.0
 traitlets==5.0.5
 trash-cli==0.21.5.22
 troposphere==2.7.1
@@ -322,7 +322,7 @@ ujson==4.0.2
 uritemplate==3.0.1
 urllib3==1.26.4
 vimiv==0.9.1
-virtualenv==20.4.6
+virtualenv==20.4.7
 virtualenv-clone==0.5.4
 virtualenvwrapper==4.8.4
 vobject==0.9.6.1
