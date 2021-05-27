@@ -22,8 +22,8 @@ beautifulsoup4==4.9.3
 black==21.5b1
 bleach==3.3.0
 blockdiag==2.0.1
-boto3==1.17.79
-botocore==1.20.79
+boto3==1.17.81
+botocore==1.20.81
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.12.1
@@ -89,7 +89,7 @@ enrich==1.2.6
 entrypoints==0.3
 et-xmlfile==1.1.0
 fabric==2.6.0
-Faker==8.2.1
+Faker==8.3.0
 filelock==3.0.12
 fissix==19.2b1
 funcparserlib==0.3.6
@@ -117,7 +117,7 @@ httpie==2.4.0
 httplib2==0.19.1
 hyperframe==6.0.1
 hyperlink==21.0.0
-identify==2.2.5
+identify==2.2.6
 idna==3.1
 importlib-metadata==4.0.1
 importmagic==0.1.7
@@ -255,7 +255,7 @@ python-slugify==5.0.2
 python-utils==2.5.6
 pytz==2021.1
 PyYAML==5.4.1
-pyzmq==22.0.3
+pyzmq==22.1.0
 qreator==20.2.1
 qrencode==1.2
 qtconsole==5.1.0
@@ -311,7 +311,7 @@ tomlkit==0.7.2
 tornado==6.1
 tqdm==4.61.0
 traitlets==5.0.5
-trash-cli==0.21.5.22
+trash-cli==0.21.5.25
 troposphere==2.7.1
 truffleHog==2.2.1
 truffleHogRegexes==0.0.7
