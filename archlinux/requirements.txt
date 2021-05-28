@@ -12,7 +12,7 @@ asn1crypto==1.4.0
 astroid==2.5.6
 async-generator==1.10
 async-timeout==3.0.1
-attrs==20.3.0
+attrs==21.2.0
 Automat==20.2.0
 awslogs==0.14.0
 Babel==2.9.1
@@ -22,8 +22,8 @@ beautifulsoup4==4.9.3
 black==21.5b1
 bleach==3.3.0
 blockdiag==2.0.1
-boto3==1.17.81
-botocore==1.20.81
+boto3==1.17.83
+botocore==1.20.83
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.12.1
@@ -89,7 +89,7 @@ enrich==1.2.6
 entrypoints==0.3
 et-xmlfile==1.1.0
 fabric==2.6.0
-Faker==8.3.0
+Faker==8.4.0
 filelock==3.0.12
 fissix==19.2b1
 funcparserlib==0.3.6
