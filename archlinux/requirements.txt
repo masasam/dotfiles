@@ -22,8 +22,8 @@ beautifulsoup4==4.9.3
 black==21.5b1
 bleach==3.3.0
 blockdiag==2.0.1
-boto3==1.17.83
-botocore==1.20.83
+boto3==1.17.84
+botocore==1.20.84
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.12.1
@@ -124,7 +124,7 @@ importmagic==0.1.7
 incremental==21.3.0
 invoke==1.5.0
 ipykernel==5.5.5
-ipython==7.23.1
+ipython==7.24.0
 ipython-genutils==0.2.0
 ipywidgets==7.6.3
 isc==2.0
@@ -265,7 +265,7 @@ r7insight-python==1.0.0
 redis==3.5.3
 regex==2021.4.4
 requests==2.25.1
-requests-mock==1.9.2
+requests-mock==1.9.3
 requests-toolbelt==0.9.1
 resolvelib==0.5.4
 retrying==1.3.3
@@ -341,7 +341,7 @@ xdg==5.0.1
 xlrd==2.0.1
 xlwt==1.3.0
 yarl==1.6.3
-yaspin==1.5.0
+yaspin==2.0.0
 youtube-dl==2021.5.16
 zappa==0.52.0
 zipp==3.4.1

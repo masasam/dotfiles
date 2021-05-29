@@ -263,6 +263,7 @@ gst-plugins-base
 gst-plugins-base-libs
 gst-plugins-good
 gstreamer
+gtest
 gtk-update-icon-cache
 gtk2
 gtk3
@@ -490,6 +491,7 @@ ldns
 lensfun
 less
 lhasa
+lib2geom
 libabw
 libaec
 libaio
@@ -1034,6 +1036,7 @@ python-shellingham
 python-simplejson
 python-six
 python-tabulate
+python-termcolor
 python-texttable
 python-toml
 python-tomlkit
@@ -1065,6 +1068,7 @@ qt5-webchannel
 qt5-webkit
 qt5-x11extras
 qt5ct
+ragel
 raptor
 rasqal
 rav1e
