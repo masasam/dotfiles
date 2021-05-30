@@ -1,5 +1,6 @@
 /*.elc
 /.cask
+/.cache
 /.edbi-ds-history
 /.python-environments/
 /abbrev_defs
