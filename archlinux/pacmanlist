@@ -400,11 +400,14 @@ haskell-text-conversions
 haskell-text-icu
 haskell-th-abstraction
 haskell-th-compat
+haskell-th-lift
+haskell-th-lift-instances
 haskell-these
 haskell-time-compat
 haskell-tls
 haskell-transformers-compat
 haskell-typed-process
+haskell-unicode-collation
 haskell-unicode-transforms
 haskell-uniplate
 haskell-unliftio-core
