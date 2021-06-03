@@ -22,8 +22,8 @@ beautifulsoup4==4.9.3
 black==21.5b2
 bleach==3.3.0
 blockdiag==2.0.1
-boto3==1.17.85
-botocore==1.20.85
+boto3==1.17.86
+botocore==1.20.86
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.12.1
@@ -73,7 +73,7 @@ diagrams==0.20.0
 diff-match-patch==20200713
 distlib==0.3.2
 distro==1.5.0
-Django==3.2.3
+Django==3.2.4
 django-nested-admin==3.3.3
 django-ses==2.0.0
 djangorestframework==3.12.4
@@ -89,7 +89,7 @@ enrich==1.2.6
 entrypoints==0.3
 et-xmlfile==1.1.0
 fabric==2.6.0
-Faker==8.4.0
+Faker==8.5.0
 filelock==3.0.12
 fissix==19.2b1
 funcparserlib==0.3.6
@@ -124,7 +124,7 @@ importmagic==0.1.7
 incremental==21.3.0
 invoke==1.5.0
 ipykernel==5.5.5
-ipython==7.24.0
+ipython==7.24.1
 ipython-genutils==0.2.0
 ipywidgets==7.6.3
 isc==2.0
