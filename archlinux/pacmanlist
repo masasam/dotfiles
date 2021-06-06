@@ -515,7 +515,6 @@ libbsd
 libbytesize
 libcaca
 libcanberra
-libcanberra-pulse
 libcap
 libcap-ng
 libcddb
@@ -813,7 +812,6 @@ mariadb-clients
 mariadb-libs
 mathjax
 mbedtls
-mcomix
 md4c
 mdadm
 mesa
