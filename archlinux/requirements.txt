@@ -118,7 +118,7 @@ httplib2==0.19.1
 hyperframe==6.0.1
 hyperlink==21.0.0
 identify==2.2.9
-idna==3.1
+idna==3.2
 importlib-metadata==4.0.1
 importmagic==0.1.7
 incremental==21.3.0
@@ -159,7 +159,7 @@ lazy-object-proxy==1.6.0
 lensfun==0.3.95
 lesscpy==0.14.0
 LibAppArmor==3.0.1
-lit==0.11.1.dev0
+lit==12.0.0.dev0
 litecli==1.6.0
 lockfile==0.12.2
 louis==3.17.0
