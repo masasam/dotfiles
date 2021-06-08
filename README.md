@@ -363,6 +363,7 @@ Run the following after set the ssh key
 	dconf write /org/gnome/desktop/interface/gtk-theme "'Adwaita-dark'"
 	dconf write /org/gnome/desktop/interface/gtk-key-theme "'Emacs'"
 	dconf write /org/gnome/desktop/interface/text-scaling-factor 1.25
+	dconf write /org/gnome/desktop/interface/cursor-size 30
 	dconf write /org/gnome/desktop/interface/clock-show-date true
 	dconf write /org/gnome/desktop/interface/clock-show-weekday true
 	dconf write /org/gnome/desktop/interface/show-battery-percentage true
