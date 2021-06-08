@@ -9,7 +9,7 @@ argcomplete==1.12.3
 argon2-cffi==20.1.0
 asgiref==3.3.4
 asn1crypto==1.4.0
-astroid==2.5.7
+astroid==2.5.8
 async-generator==1.10
 async-timeout==3.0.1
 attrs==21.2.0
@@ -22,8 +22,8 @@ beautifulsoup4==4.9.3
 black==21.5b2
 bleach==3.3.0
 blockdiag==2.0.1
-boto3==1.17.88
-botocore==1.20.88
+boto3==1.17.89
+botocore==1.20.89
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.12.1
@@ -89,7 +89,7 @@ enrich==1.2.6
 entrypoints==0.3
 et-xmlfile==1.1.0
 fabric==2.6.0
-Faker==8.5.1
+Faker==8.6.0
 filelock==3.0.12
 fissix==19.2b1
 funcparserlib==0.3.6
@@ -117,7 +117,7 @@ httpie==2.4.0
 httplib2==0.19.1
 hyperframe==6.0.1
 hyperlink==21.0.0
-identify==2.2.9
+identify==2.2.10
 idna==3.2
 importlib-metadata==4.0.1
 importmagic==0.1.7
@@ -162,7 +162,7 @@ LibAppArmor==3.0.1
 lit==12.0.0.dev0
 litecli==1.6.0
 lockfile==0.12.2
-louis==3.17.0
+louis==3.18.0
 lxml==4.6.3
 m2r==0.2.1
 Markdown==3.3.4
