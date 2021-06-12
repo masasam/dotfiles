@@ -851,6 +851,7 @@ nm-connection-editor
 nmap
 node-gyp
 nodejs
+nodejs-nopt
 notmuch-runtime
 noto-fonts
 noto-fonts-cjk
