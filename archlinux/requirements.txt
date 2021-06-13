@@ -38,7 +38,7 @@ cfgv==3.3.0
 cfn-flip==1.2.3
 chardet==4.0.0
 cheat==2.5.1
-chromedriver-binary==91.0.4472.19.0
+chromedriver-binary==91.0.4472.101.0
 cleo==0.8.1
 cli-helpers==2.1.0
 click==8.0.1
@@ -309,7 +309,7 @@ tldr==1.2.1
 toml==0.10.2
 tomlkit==0.7.2
 tornado==6.1
-tqdm==4.61.0
+tqdm==4.61.1
 traitlets==5.0.5
 trash-cli==0.21.6.10.1
 troposphere==2.7.1
