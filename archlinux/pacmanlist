@@ -812,7 +812,6 @@ mariadb-clients
 mariadb-libs
 mathjax
 mbedtls
-mcomix
 md4c
 mdadm
 mesa
@@ -871,7 +870,6 @@ openjpeg2
 openmpi
 openssh
 openssl
-opera
 optipng
 opus
 orc
