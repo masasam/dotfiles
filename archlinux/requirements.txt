@@ -275,7 +275,7 @@ rtv==1.27.0
 ruamel.yaml==0.17.9
 ruamel.yaml.clib==0.2.2
 s3transfer==0.4.2
-scipy==1.6.3
+scipy==1.7.0
 Scrapy==2.4.1
 seaborn==0.11.1
 SecretStorage==3.3.1
