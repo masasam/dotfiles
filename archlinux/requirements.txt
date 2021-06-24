@@ -2,7 +2,7 @@ aiohttp==3.7.4.post0
 ansible==3.4.0
 ansible-base==2.10.11
 ansible-lint==5.0.12
-anyio==3.2.0
+anyio==3.2.1
 apparmor==3.0.1
 appdirs==1.4.4
 argcomplete==1.12.3
@@ -22,8 +22,8 @@ beautifulsoup4==4.9.3
 black==21.6b0
 bleach==3.3.0
 blockdiag==2.0.1
-boto3==1.17.98
-botocore==1.20.98
+boto3==1.17.99
+botocore==1.20.99
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.12.1
@@ -89,7 +89,7 @@ enrich==1.2.6
 entrypoints==0.3
 et-xmlfile==1.1.0
 fabric==2.6.0
-Faker==8.8.1
+Faker==8.8.2
 filelock==3.0.12
 fissix==19.2b1
 funcparserlib==0.3.6
@@ -220,7 +220,7 @@ progressbar2==3.53.1
 prometheus-client==0.11.0
 prompt-toolkit==3.0.18
 Protego==0.1.16
-protobuf==3.16.0
+protobuf==3.17.3
 psutil==5.8.0
 psycopg2-binary==2.9.1
 ptyprocess==0.7.0
