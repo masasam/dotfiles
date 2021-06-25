@@ -30,6 +30,7 @@ zshaddhistory() {
        && ${cmd} != cd
        && ${cmd} != man
        && ${cmd} != scp
+       && ${cmd} != ssh
        && ${cmd} != vim
        && ${cmd} != nvim
        && ${cmd} != less
