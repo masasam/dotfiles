@@ -7,7 +7,7 @@ apparmor==3.0.1
 appdirs==1.4.4
 argcomplete==1.12.3
 argon2-cffi==20.1.0
-asgiref==3.3.4
+asgiref==3.4.0
 asn1crypto==1.4.0
 astroid==2.6.0
 async-generator==1.10
@@ -22,8 +22,8 @@ beautifulsoup4==4.9.3
 black==21.6b0
 bleach==3.3.0
 blockdiag==2.0.1
-boto3==1.17.101
-botocore==1.20.101
+boto3==1.17.102
+botocore==1.20.102
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.12.1
@@ -100,8 +100,8 @@ gitdb==4.0.7
 gitdb2==4.0.2
 GitPython==3.0.6
 goobook==3.5.1.dev0
-google-api-core==1.28.0
-google-api-python-client==2.5.0
+google-api-core==1.30.0
+google-api-python-client==2.10.0
 google-auth==1.28.1
 google-auth-httplib2==0.1.0
 googleapis-common-protos==1.53.0
@@ -214,11 +214,11 @@ ply==3.11
 poetry==1.1.7
 poetry-core==1.0.3
 pre-commit==2.13.0
-priority==1.3.0
+priority==2.0.0
 progress==1.5
 progressbar2==3.53.1
 prometheus-client==0.11.0
-prompt-toolkit==3.0.18
+prompt-toolkit==3.0.19
 Protego==0.1.16
 protobuf==3.17.3
 psutil==5.8.0
@@ -247,7 +247,7 @@ pyparsing==2.4.7
 pyrsistent==0.17.3
 PySocks==1.7.1
 python-dateutil==2.8.1
-python-dotenv==0.17.1
+python-dotenv==0.18.0
 python-jsonrpc-server==0.4.0
 python-language-server==0.36.2
 python-monkey-business==1.0.0
