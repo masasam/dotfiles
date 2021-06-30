@@ -9,7 +9,7 @@ argcomplete==1.12.3
 argon2-cffi==20.1.0
 asgiref==3.4.0
 asn1crypto==1.4.0
-astroid==2.6.0
+astroid==2.6.1
 async-generator==1.10
 async-timeout==3.0.1
 attrs==21.2.0
@@ -258,7 +258,7 @@ PyYAML==5.4.1
 pyzmq==22.1.0
 qreator==20.2.1
 qrencode==1.2
-qtconsole==5.1.0
+qtconsole==5.1.1
 QtPy==1.9.0
 queuelib==1.6.1
 r7insight-python==1.0.0
