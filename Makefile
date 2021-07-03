@@ -8,7 +8,7 @@ NODE_PKGS	+= indium intelephense javascript-typescript-langserver logo.svg @marp
 NODE_PKGS	+= mermaid mermaid.cli ngrok now prettier parcel-bundler typescript-language-server
 NODE_PKGS	+= @vue/cli vue-language-server vue-native-cli jshint
 
-PIP_PKGS	:= ansible ansible-lint black cheat chromedriver-binary diagrams django djangorestframework
+PIP_PKGS	:= ansible ansible-lint beautifulsoup4 black cheat chromedriver-binary diagrams django djangorestframework
 PIP_PKGS	+= django-nested-admin django-ses faker gif-for-cli graph-cli httpie importmagic ipywidgets
 PIP_PKGS	+= jupyter jupyterlab jupyterthemes litecli matplotlib neovim nose pandas pipenv poetry pre-commit
 PIP_PKGS	+= progressbar2 psycopg2-binary py-spy pydantic pydoc_utils r7insight_python redis requests_mock
