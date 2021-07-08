@@ -132,7 +132,6 @@ editorconfig-core-c
 efibootmgr
 efivar
 electron
-electron11
 electron12
 elfutils
 elinks
@@ -435,7 +434,6 @@ hidapi
 highlight
 hspell
 htop
-http-parser
 hub
 hugo
 hunspell
