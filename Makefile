@@ -157,7 +157,7 @@ mlterm: ## Init mlterm terminal
 	sudo ln -vsf {${PWD},}/usr/share/applications/mlclient.desktop
 
 termite: ## Init termite terminal
-	$(PACMAN) $@
+	yay -S $@
 	mkdir -p ${HOME}/.config/$@
 	ln -vsf {${PWD},${HOME}}/.config/$@/config
 
