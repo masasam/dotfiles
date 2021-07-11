@@ -119,7 +119,7 @@ hyperframe==6.0.1
 hyperlink==21.0.0
 identify==2.2.11
 idna==3.2
-importlib-metadata==4.5.0
+importlib-metadata==4.6.0
 importmagic==0.1.7
 incremental==21.3.0
 invoke==1.5.0
@@ -135,7 +135,7 @@ isort==5.9.2
 itemadapter==0.2.0
 itemloaders==1.0.4
 jedi==0.18.0
-jeepney==0.6.0
+jeepney==0.7.0
 Jinja2==2.11.3
 jmespath==0.10.0
 json5==0.9.6
@@ -345,5 +345,5 @@ yarl==1.6.3
 yaspin==2.0.0
 youtube-dl==2021.6.6
 zappa==0.53.0
-zipp==3.4.1
+zipp==3.5.0
 zope.interface==5.4.0
