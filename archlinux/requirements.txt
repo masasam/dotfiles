@@ -1,6 +1,6 @@
 ansible==3.4.0
 ansible-base==2.10.11
-ansible-lint==5.1.1
+ansible-lint==5.1.2
 anyio==3.2.1
 apparmor==3.0.1
 appdirs==1.4.4
@@ -26,7 +26,7 @@ boto3==1.18.1
 botocore==1.21.1
 bowler==0.8.0
 bracex==2.1.1
-btrfsutil==5.12.1
+btrfsutil==5.13
 CacheControl==0.12.6
 cached-property==1.5.2
 cachy==0.3.0
@@ -112,7 +112,7 @@ hyperframe==6.0.1
 hyperlink==21.0.0
 identify==2.2.11
 idna==3.2
-importlib-metadata==4.6.0
+importlib-metadata==4.6.1
 importmagic==0.1.7
 incremental==21.3.0
 invoke==1.5.0
@@ -191,7 +191,7 @@ paramiko==2.7.2
 parsel==1.6.0
 parso==0.8.2
 pastel==0.2.1
-pathspec==0.8.1
+pathspec==0.9.0
 pbr==5.6.0
 pep517==0.10.0
 pexpect==4.8.0
