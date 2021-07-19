@@ -8,7 +8,7 @@ argcomplete==1.12.3
 argon2-cffi==20.1.0
 asgiref==3.4.1
 asn1crypto==1.4.0
-astroid==2.6.2
+astroid==2.6.4
 async-generator==1.10
 async-timeout==3.0.1
 attrs==21.2.0
@@ -22,8 +22,8 @@ beautifulsoup4==4.9.3
 black==21.7b0
 bleach==3.3.1
 blockdiag==2.0.1
-boto3==1.18.1
-botocore==1.21.1
+boto3==1.18.2
+botocore==1.21.2
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.13
@@ -75,7 +75,7 @@ distlib==0.3.2
 distro==1.5.0
 Django==3.2.5
 django-nested-admin==3.3.3
-django-ses==2.1.1
+django-ses==2.2.0
 djangorestframework==3.12.4
 dnspython==1.16.0
 docker==5.0.0
@@ -116,7 +116,7 @@ importlib-metadata==4.6.1
 importmagic==0.1.7
 incremental==21.3.0
 invoke==1.5.0
-ipykernel==6.0.2
+ipykernel==6.0.3
 ipython==7.25.0
 ipython-genutils==0.2.0
 ipywidgets==7.6.3
@@ -193,7 +193,7 @@ parso==0.8.2
 pastel==0.2.1
 pathspec==0.9.0
 pbr==5.6.0
-pep517==0.10.0
+pep517==0.11.0
 pexpect==4.8.0
 pickleshare==0.7.5
 Pillow==8.3.1

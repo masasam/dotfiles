@@ -1024,6 +1024,7 @@ python-tabulate
 python-termcolor
 python-texttable
 python-toml
+python-tomli
 python-tomlkit
 python-typing_extensions
 python-ujson
