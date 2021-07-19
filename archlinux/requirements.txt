@@ -179,7 +179,7 @@ nest-asyncio==1.5.1
 nodeenv==1.6.0
 nose==1.3.7
 notebook==6.4.0
-numpy==1.21.0
+numpy==1.21.1
 odfpy==1.4.1
 openpyxl==3.0.7
 ordered-set==4.0.2
