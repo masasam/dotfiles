@@ -22,8 +22,8 @@ beautifulsoup4==4.9.3
 black==21.7b0
 bleach==3.3.1
 blockdiag==2.0.1
-boto3==1.18.7
-botocore==1.21.7
+boto3==1.18.8
+botocore==1.21.8
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.13
@@ -139,7 +139,7 @@ jupyter-console==6.4.0
 jupyter-core==4.7.1
 jupyter-packaging==0.10.4
 jupyter-server==1.10.1
-jupyterlab==3.0.16
+jupyterlab==3.1.0
 jupyterlab-pygments==0.1.2
 jupyterlab-server==2.6.1
 jupyterlab-widgets==1.0.0
@@ -312,7 +312,7 @@ ujson==4.0.2
 urllib3==1.26.6
 vimiv==0.9.1
 virtualenv==20.6.0
-virtualenv-clone==0.5.5
+virtualenv-clone==0.5.6
 virtualenvwrapper==4.8.4
 w3lib==1.22.0
 wcmatch==8.2
