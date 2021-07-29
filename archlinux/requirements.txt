@@ -22,8 +22,8 @@ beautifulsoup4==4.9.3
 black==21.7b0
 bleach==3.3.1
 blockdiag==2.0.1
-boto3==1.18.8
-botocore==1.21.8
+boto3==1.18.9
+botocore==1.21.9
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.13
@@ -128,7 +128,7 @@ isort==5.9.2
 itemadapter==0.3.0
 itemloaders==1.0.4
 jedi==0.18.0
-jeepney==0.7.0
+jeepney==0.7.1
 Jinja2==2.11.3
 jmespath==0.10.0
 json5==0.9.6
@@ -305,7 +305,7 @@ trash-cli==0.21.7.24
 troposphere==3.0.2
 truffleHog==2.2.1
 truffleHogRegexes==0.0.7
-Twisted==21.2.0
+Twisted==21.7.0
 typed-ast==1.4.3
 typing-extensions==3.10.0.0
 ujson==4.0.2
