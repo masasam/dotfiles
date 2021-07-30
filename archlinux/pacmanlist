@@ -553,6 +553,7 @@ libexttextcat
 libfdk-aac
 libffi
 libfontenc
+libfreeaptx
 libfreehand
 libfreexl
 libftdi
@@ -642,7 +643,6 @@ libodfgen
 libofa
 libogg
 libomxil-bellagio
-libopenaptx
 liborcus
 libosinfo
 libotf

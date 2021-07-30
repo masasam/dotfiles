@@ -22,8 +22,8 @@ beautifulsoup4==4.9.3
 black==21.7b0
 bleach==3.3.1
 blockdiag==2.0.1
-boto3==1.18.9
-botocore==1.21.9
+boto3==1.18.10
+botocore==1.21.10
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.13
@@ -124,7 +124,7 @@ isc==2.0
 iso-639==0.4.5
 iso3166==1.0.1
 isodate==0.6.0
-isort==5.9.2
+isort==5.9.3
 itemadapter==0.3.0
 itemloaders==1.0.4
 jedi==0.18.0
@@ -139,7 +139,7 @@ jupyter-console==6.4.0
 jupyter-core==4.7.1
 jupyter-packaging==0.10.4
 jupyter-server==1.10.1
-jupyterlab==3.1.0
+jupyterlab==3.1.1
 jupyterlab-pygments==0.1.2
 jupyterlab-server==2.6.1
 jupyterlab-widgets==1.0.0
@@ -201,7 +201,7 @@ pip-tools==6.2.0
 pipenv==2021.5.29
 pkginfo==1.7.1
 placebo==0.9.0
-platformdirs==2.1.0
+platformdirs==2.2.0
 pluggy==0.13.1
 ply==3.11
 poetry==1.1.7
