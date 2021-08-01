@@ -22,8 +22,8 @@ beautifulsoup4==4.9.3
 black==21.7b0
 bleach==3.3.1
 blockdiag==2.0.1
-boto3==1.18.10
-botocore==1.21.10
+boto3==1.18.11
+botocore==1.21.11
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.13
@@ -37,7 +37,7 @@ cfgv==3.3.0
 cfn-flip==1.2.3
 chardet==4.0.0
 cheat==2.5.1
-chromedriver-binary==92.0.4515.43.0
+chromedriver-binary==93.0.4577.15.0
 cleo==0.8.1
 cli-helpers==2.1.0
 click==8.0.1
@@ -217,7 +217,7 @@ psutil==5.8.0
 psycopg2-binary==2.9.1
 ptyprocess==0.7.0
 pwquality==1.4.4
-py-spy==0.3.7
+py-spy==0.3.8
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
 pycodestyle==2.7.0
@@ -296,10 +296,10 @@ text-unidecode==1.3
 texttable==1.6.4
 tldr==2.0.0
 toml==0.10.2
-tomli==1.1.0
+tomli==1.2.0
 tomlkit==0.7.2
 tornado==6.1
-tqdm==4.61.2
+tqdm==4.62.0
 traitlets==5.0.5
 trash-cli==0.21.7.24
 troposphere==3.0.2
@@ -311,7 +311,7 @@ typing-extensions==3.10.0.0
 ujson==4.0.2
 urllib3==1.26.6
 vimiv==0.9.1
-virtualenv==20.6.0
+virtualenv==20.7.0
 virtualenv-clone==0.5.6
 virtualenvwrapper==4.8.4
 w3lib==1.22.0
