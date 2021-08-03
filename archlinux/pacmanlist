@@ -203,6 +203,7 @@ giflib
 gimp
 git
 git-crypt
+git-lfs
 github-cli
 gjs
 glib-networking
@@ -972,6 +973,7 @@ python-docopt
 python-docutils
 python-dotenv
 python-fissix
+python-fluidity
 python-funcparserlib
 python-future
 python-gobject
@@ -985,6 +987,7 @@ python-jinja
 python-jsonrpc-server
 python-jsonschema
 python-language-server
+python-lexicon
 python-markdown
 python-markupsafe
 python-mistune
