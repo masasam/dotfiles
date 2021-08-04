@@ -8,7 +8,7 @@ argcomplete==1.12.3
 argon2-cffi==20.1.0
 asgiref==3.4.1
 asn1crypto==1.4.0
-astroid==2.6.5
+astroid==2.6.6
 async-generator==1.10
 async-timeout==3.0.1
 attrs==21.2.0
@@ -20,10 +20,10 @@ backports.entry-points-selectable==1.1.0
 bcrypt==3.2.0
 beautifulsoup4==4.9.3
 black==21.7b0
-bleach==3.3.1
+bleach==4.0.0
 blockdiag==2.0.1
-boto3==1.18.12
-botocore==1.21.12
+boto3==1.18.13
+botocore==1.21.13
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.13
@@ -89,7 +89,7 @@ enrich==1.2.6
 entrypoints==0.3
 et-xmlfile==1.1.0
 fabric==2.6.0
-Faker==8.10.3
+Faker==8.11.0
 filelock==3.0.12
 fissix==19.2b1
 fluidity-sm==0.2.1
@@ -142,7 +142,7 @@ jupyter-packaging==0.10.4
 jupyter-server==1.10.2
 jupyterlab==3.1.1
 jupyterlab-pygments==0.1.2
-jupyterlab-server==2.6.1
+jupyterlab-server==2.6.2
 jupyterlab-widgets==1.0.0
 jupyterthemes==0.20.0
 kappa==0.6.0
@@ -254,7 +254,7 @@ QtPy==1.9.0
 queuelib==1.6.1
 r7insight-python==1.0.0
 redis==3.5.3
-regex==2021.7.6
+regex==2021.8.3
 requests==2.26.0
 requests-mock==1.9.3
 requests-toolbelt==0.9.1
