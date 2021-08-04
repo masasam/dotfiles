@@ -22,8 +22,8 @@ beautifulsoup4==4.9.3
 black==21.7b0
 bleach==4.0.0
 blockdiag==2.0.1
-boto3==1.18.13
-botocore==1.21.13
+boto3==1.18.14
+botocore==1.21.14
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.13
@@ -111,7 +111,7 @@ html5lib==1.1
 httpie==2.4.0
 hyperframe==6.0.1
 hyperlink==21.0.0
-identify==2.2.11
+identify==2.2.12
 idna==3.2
 importlib-metadata==4.6.1
 importmagic==0.1.7
@@ -140,7 +140,7 @@ jupyter-console==6.4.0
 jupyter-core==4.7.1
 jupyter-packaging==0.10.4
 jupyter-server==1.10.2
-jupyterlab==3.1.1
+jupyterlab==3.1.2
 jupyterlab-pygments==0.1.2
 jupyterlab-server==2.6.2
 jupyterlab-widgets==1.0.0
@@ -248,7 +248,7 @@ python-slugify==5.0.2
 python-utils==2.5.6
 pytz==2021.1
 PyYAML==5.4.1
-pyzmq==22.1.0
+pyzmq==22.2.0
 qtconsole==5.1.1
 QtPy==1.9.0
 queuelib==1.6.1
