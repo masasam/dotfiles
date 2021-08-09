@@ -336,7 +336,7 @@ yay: ## Install yay using yay
 	yay -S $@
 
 aur: ## Install arch linux AUR packages using yay
-	yay -S downgrade git-secrets nvm slack-desktop zoom
+	yay -S downgrade git-secrets nvm rgxg slack-desktop zoom
 
 sequeler: ## Install gui database tools
 	yay -S $@-git

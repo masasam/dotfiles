@@ -435,6 +435,7 @@ You can make install from here
 	yay -S nvm
 	yay -S pencil
 	yay -S rbenv
+	yay -S rgxg
 	yay -S ripgrep-all
 	yay -S rtags
 	yay -S ruby-build
