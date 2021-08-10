@@ -2,7 +2,7 @@ ansible==3.4.0
 ansible-base==2.10.12
 ansible-lint==5.1.2
 anyio==3.3.0
-apparmor==3.0.1
+apparmor==3.0.3
 appdirs==1.4.4
 argcomplete==1.12.3
 argon2-cffi==20.1.0
@@ -22,11 +22,11 @@ beautifulsoup4==4.9.3
 black==21.7b0
 bleach==4.0.0
 blockdiag==2.0.1
-boto3==1.18.16
-botocore==1.21.16
+boto3==1.18.17
+botocore==1.21.17
 bowler==0.8.0
 bracex==2.1.1
-btrfsutil==5.13
+btrfsutil==5.13.1
 CacheControl==0.12.6
 cached-property==1.5.2
 cachy==0.3.0
@@ -153,7 +153,7 @@ lazy-object-proxy==1.6.0
 lensfun==0.3.95
 lesscpy==0.15.0
 lexicon==1.0.0
-LibAppArmor==3.0.1
+LibAppArmor==3.0.3
 lit==12.0.1.dev0
 litecli==1.6.0
 lockfile==0.12.2
@@ -272,7 +272,7 @@ Scrapy==2.4.1
 seaborn==0.11.1
 SecretStorage==3.3.1
 selenium==3.141.0
-Send2Trash==1.7.1
+Send2Trash==1.8.0
 seqdiag==2.0.0
 service-identity==21.1.0
 sh==1.14.2
@@ -313,7 +313,7 @@ typing-extensions==3.10.0.0
 ujson==4.0.2
 urllib3==1.26.6
 vimiv==0.9.1
-virtualenv==20.7.0
+virtualenv==20.7.1
 virtualenv-clone==0.5.6
 virtualenvwrapper==4.8.4
 w3lib==1.22.0

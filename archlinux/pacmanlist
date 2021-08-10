@@ -30,6 +30,7 @@ atool
 attr
 audit
 autoconf
+autogen
 automake
 avahi
 babl
@@ -611,6 +612,7 @@ liblrdf
 libmanette
 libmaxminddb
 libmbim
+libmd
 libmfx
 libmicrodns
 libmicrohttpd
