@@ -903,6 +903,7 @@ perl-error
 perl-file-which
 perl-io-tty
 perl-mailtools
+perl-net-ip
 perl-timedate
 php
 php-intl
