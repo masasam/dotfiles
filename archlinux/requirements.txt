@@ -301,7 +301,7 @@ toml==0.10.2
 tomli==1.2.1
 tomlkit==0.7.2
 tornado==6.1
-tqdm==4.62.0
+tqdm==4.62.1
 traitlets==5.0.5
 trash-cli==0.21.7.24
 troposphere==3.0.2
