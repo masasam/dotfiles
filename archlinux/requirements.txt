@@ -22,8 +22,8 @@ beautifulsoup4==4.9.3
 black==21.7b0
 bleach==4.0.0
 blockdiag==2.0.1
-boto3==1.18.23
-botocore==1.21.23
+boto3==1.18.24
+botocore==1.21.24
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.13.1
@@ -291,7 +291,7 @@ tabulate==0.8.9
 team==1.0
 tenacity==8.0.1
 termcolor==1.1.0
-terminado==0.11.0
+terminado==0.11.1
 terminaltables==3.1.0
 testpath==0.5.0
 text-unidecode==1.3
