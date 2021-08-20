@@ -101,13 +101,13 @@ pipinstall: ${HOME}/.local ## Install python packages
 	rm -fr get-pip.py
 
 goinstall: ${HOME}/.local ## Install go packages
-	GO111MODULE="on" go get golang.org/x/tools/gopls@latest
-	GO111MODULE="on" go get -u -v golang.org/x/tools/cmd/goimports
-	GO111MODULE="on" go get -u -v github.com/x-motemen/ghq
-	go get -u -v github.com/kyoshidajp/ghkw
-	go get -u -v github.com/simeji/jid/cmd/jid
-	go get -u -v github.com/jmhodges/jsonpp
-	GO111MODULE="on" go get -u -v github.com/mithrandie/csvq
+	go install golang.org/x/tools/gopls@latest
+	go install golang.org/x/tools/cmd/goimports@latest
+	go install github.com/x-motemen/ghq@latest
+	go install github.com/kyoshidajp/ghkw@latest
+	go install github.com/simeji/jid/cmd/jid@latest
+	go install github.com/jmhodges/jsonpp@latest
+	go install github.com/mithrandie/csvq@latest
 
 nodeinstall: ## Install node packages
 	sudo pacman -S yarn
