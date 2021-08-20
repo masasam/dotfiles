@@ -517,14 +517,13 @@ You can make install from here
 #### Install using golang
 
 	mkdir -p ${HOME}/{bin,src}
-	GO111MODULE="on" go get -u -v golang.org/x/tools/cmd/gopls
-	GO111MODULE="on" go get -u -v github.com/golang/dep/cmd/dep
-	GO111MODULE="on" go get -u -v github.com/x-motemen/ghq
-	go get -u -v github.com/kyoshidajp/ghkw
-	go get -u -v github.com/simeji/jid/cmd/jid
-	go get -u -v github.com/jmhodges/jsonpp
-	go get -u -v github.com/k1LoW/tbls
-	GO111MODULE="on" go get -u -v github.com/mithrandie/csvq
+	go install golang.org/x/tools/gopls@latest
+	go install golang.org/x/tools/cmd/goimports@latest
+	go install github.com/x-motemen/ghq@latest
+	go install github.com/kyoshidajp/ghkw@latest
+	go install github.com/simeji/jid/cmd/jid@latest
+	go install github.com/jmhodges/jsonpp@latest
+	go install github.com/mithrandie/csvq@latest
 
 #### Install using yarn
 
@@ -584,7 +583,7 @@ Google Kubernetes Engine
 
 kind(Kubernetes IN Docker)
 
-	GO111MODULE=on go get sigs.k8s.io/kind@v0.11.0
+	go install sigs.k8s.io/kind@v0.11.1
 	sudo sh -c "kind completion zsh > /usr/share/zsh/site-functions/_kind"
 
 minikube with kvm2
