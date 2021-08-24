@@ -22,8 +22,8 @@ beautifulsoup4==4.9.3
 black==21.7b0
 bleach==4.0.0
 blockdiag==2.0.1
-boto3==1.18.26
-botocore==1.21.26
+boto3==1.18.27
+botocore==1.21.27
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.13.1
@@ -142,7 +142,7 @@ jupyter-packaging==0.10.4
 jupyter-server==1.10.2
 jupyterlab==3.1.7
 jupyterlab-pygments==0.1.2
-jupyterlab-server==2.7.1
+jupyterlab-server==2.7.2
 jupyterlab-widgets==1.0.0
 jupyterthemes==0.20.0
 kappa==0.6.0
@@ -213,7 +213,7 @@ priority==2.0.0
 progress==1.5
 progressbar2==3.53.1
 prometheus-client==0.11.0
-prompt-toolkit==3.0.19
+prompt-toolkit==3.0.20
 Protego==0.1.16
 psutil==5.8.0
 psycopg2-binary==2.9.1
@@ -301,7 +301,7 @@ toml==0.10.2
 tomli==1.2.1
 tomlkit==0.7.2
 tornado==6.1
-tqdm==4.62.1
+tqdm==4.62.2
 traitlets==5.0.5
 trash-cli==0.21.7.24
 troposphere==3.0.2
