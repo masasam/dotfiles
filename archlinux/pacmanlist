@@ -814,6 +814,7 @@ mariadb-clients
 mariadb-libs
 mathjax
 mbedtls
+mcomix
 md4c
 mdadm
 mesa
@@ -945,6 +946,7 @@ python-bcrypt
 python-bowler
 python-cachecontrol
 python-cached-property
+python-cairo
 python-cerberus
 python-cffi
 python-chardet
