@@ -22,8 +22,8 @@ beautifulsoup4==4.9.3
 black==21.7b0
 bleach==4.1.0
 blockdiag==2.0.1
-boto3==1.18.29
-botocore==1.21.29
+boto3==1.18.30
+botocore==1.21.30
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.13.1
@@ -126,7 +126,7 @@ iso-639==0.4.5
 iso3166==1.0.1
 isodate==0.6.0
 isort==5.9.3
-itemadapter==0.3.0
+itemadapter==0.4.0
 itemloaders==1.0.4
 jedi==0.18.0
 jeepney==0.7.1
@@ -252,10 +252,10 @@ PyYAML==5.4.1
 pyzmq==22.2.1
 qtconsole==5.1.1
 QtPy==1.10.0
-queuelib==1.6.1
+queuelib==1.6.2
 r7insight-python==1.0.0
 redis==3.5.3
-regex==2021.8.21
+regex==2021.8.27
 requests==2.26.0
 requests-mock==1.9.3
 requests-toolbelt==0.9.1
