@@ -8,7 +8,7 @@ argcomplete==1.12.3
 argon2-cffi==21.1.0
 asgiref==3.4.1
 asn1crypto==1.4.0
-astroid==2.7.2
+astroid==2.7.3
 async-generator==1.10
 async-timeout==3.0.1
 attrs==21.2.0
@@ -22,8 +22,8 @@ beautifulsoup4==4.9.3
 black==21.8b0
 bleach==4.1.0
 blockdiag==2.0.1
-boto3==1.18.31
-botocore==1.21.31
+boto3==1.18.32
+botocore==1.21.32
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.13.1
@@ -117,7 +117,7 @@ importlib-metadata==4.6.1
 importmagic==0.1.7
 incremental==21.3.0
 invoke==1.6.0
-ipykernel==6.2.0
+ipykernel==6.3.0
 ipython==7.27.0
 ipython-genutils==0.2.0
 ipywidgets==7.6.3
@@ -135,7 +135,7 @@ jmespath==0.10.0
 json5==0.9.6
 jsonschema==3.2.0
 jupyter==1.0.0
-jupyter-client==7.0.1
+jupyter-client==7.0.2
 jupyter-console==6.4.0
 jupyter-core==4.7.1
 jupyter-packaging==0.10.4
@@ -203,7 +203,7 @@ pip-tools==6.2.0
 pipenv==2021.5.29
 pkginfo==1.7.1
 placebo==0.9.0
-platformdirs==2.2.0
+platformdirs==2.3.0
 pluggy==1.0.0
 ply==3.11
 poetry==1.1.8
@@ -303,14 +303,14 @@ tomli==1.2.1
 tomlkit==0.7.2
 tornado==6.1
 tqdm==4.62.2
-traitlets==5.0.5
+traitlets==5.1.0
 trash-cli==0.21.7.24
 troposphere==3.0.3
 truffleHog==2.2.1
 truffleHogRegexes==0.0.7
 Twisted==21.7.0
 typed-ast==1.4.3
-typing-extensions==3.10.0.1
+typing-extensions==3.10.0.2
 ujson==4.1.0
 urllib3==1.26.6
 vimiv==0.9.1

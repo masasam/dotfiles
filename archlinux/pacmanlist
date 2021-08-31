@@ -133,7 +133,6 @@ e2fsprogs
 editorconfig-core-c
 efibootmgr
 efivar
-electron
 electron12
 elfutils
 elinks
@@ -431,6 +430,7 @@ haskell-zlib
 hdf5
 hdparm
 helm
+hex
 hexedit
 hicolor-icon-theme
 hidapi
