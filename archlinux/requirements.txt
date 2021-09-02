@@ -22,8 +22,8 @@ beautifulsoup4==4.9.3
 black==21.8b0
 bleach==4.1.0
 blockdiag==2.0.1
-boto3==1.18.33
-botocore==1.21.33
+boto3==1.18.34
+botocore==1.21.34
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.13.1
@@ -73,7 +73,7 @@ diagrams==0.20.0
 diff-match-patch==20200713
 distlib==0.3.2
 distro==1.5.0
-Django==3.2.6
+Django==3.2.7
 django-nested-admin==3.3.3
 django-ses==2.2.1
 djangorestframework==3.12.4
@@ -120,7 +120,7 @@ invoke==1.6.0
 ipykernel==6.3.1
 ipython==7.27.0
 ipython-genutils==0.2.0
-ipywidgets==7.6.3
+ipywidgets==7.6.4
 isc==2.0
 iso-639==0.4.5
 iso3166==1.0.1
@@ -140,10 +140,10 @@ jupyter-console==6.4.0
 jupyter-core==4.7.1
 jupyter-packaging==0.10.4
 jupyter-server==1.10.2
-jupyterlab==3.1.9
+jupyterlab==3.1.10
 jupyterlab-pygments==0.1.2
 jupyterlab-server==2.7.2
-jupyterlab-widgets==1.0.0
+jupyterlab-widgets==1.0.1
 jupyterthemes==0.20.0
 kappa==0.6.0
 keyring==21.8.0
