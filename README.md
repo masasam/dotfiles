@@ -505,6 +505,7 @@ You can make install from here
 	pip install --user selenium
 	pip install --user speedtest-cli
 	pip install --user streamlink
+	pip install --user termdown
 	pip install --user tldr
 	pip install --user tmuxp
 	pip install --user trash-cli
