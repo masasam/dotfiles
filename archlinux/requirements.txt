@@ -22,8 +22,8 @@ beautifulsoup4==4.9.3
 black==21.8b0
 bleach==4.1.0
 blockdiag==2.0.1
-boto3==1.18.34
-botocore==1.21.34
+boto3==1.18.35
+botocore==1.21.35
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.13.1
@@ -78,7 +78,7 @@ django-nested-admin==3.3.3
 django-ses==2.2.1
 djangorestframework==3.12.4
 dnspython==1.16.0
-docker==5.0.0
+docker==5.0.2
 docker-compose==1.29.2
 docker-pycreds==0.4.0
 dockerpty==0.4.1
@@ -222,7 +222,7 @@ pwquality==1.4.4
 py-spy==0.3.8
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
-pycairo==1.20.0
+pycairo==1.20.1
 pycodestyle==2.7.0
 pycparser==2.20
 pycryptodome==3.10.1
