@@ -22,8 +22,8 @@ beautifulsoup4==4.9.3
 black==21.8b0
 bleach==4.1.0
 blockdiag==2.0.1
-boto3==1.18.35
-botocore==1.21.35
+boto3==1.18.36
+botocore==1.21.36
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.13.1
@@ -157,7 +157,7 @@ LibAppArmor==3.0.3
 lit==12.0.1.dev0
 litecli==1.6.0
 lockfile==0.12.2
-louis==3.18.0
+louis==3.19.0
 lxml==4.6.3
 m2r==0.2.1
 Markdown==3.3.4
@@ -208,7 +208,7 @@ pluggy==1.0.0
 ply==3.11
 poetry==1.1.8
 poetry-core==1.0.4
-pre-commit==2.14.1
+pre-commit==2.15.0
 priority==2.0.0
 progress==1.5
 progressbar2==3.53.1
@@ -229,6 +229,7 @@ pycryptodome==3.10.1
 pydantic==1.8.2
 PyDispatcher==2.0.5
 pydoc-utils==1.0.1
+pyfiglet==0.8.post1
 Pygments==2.10.0
 PyGObject==3.40.1
 PyHamcrest==2.0.2
@@ -251,7 +252,7 @@ pytz==2021.1
 PyYAML==5.4.1
 pyzmq==22.2.1
 qtconsole==5.1.1
-QtPy==1.10.0
+QtPy==1.11.0
 queuelib==1.6.2
 r7insight-python==1.0.0
 redis==3.5.3
@@ -292,6 +293,7 @@ tabulate==0.8.9
 team==1.0
 tenacity==8.0.1
 termcolor==1.1.0
+termdown==1.17.0
 terminado==0.11.1
 terminaltables==3.1.0
 testpath==0.5.0
