@@ -108,7 +108,7 @@ hjson==3.0.2
 hpack==4.0.0
 html2text==2020.1.16
 html5lib==1.1
-httpie==2.4.0
+httpie==2.5.0
 hyperframe==6.0.1
 hyperlink==21.0.0
 identify==2.2.13
