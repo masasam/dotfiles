@@ -22,8 +22,8 @@ beautifulsoup4==4.9.3
 black==21.8b0
 bleach==4.1.0
 blockdiag==2.0.1
-boto3==1.18.36
-botocore==1.21.36
+boto3==1.18.37
+botocore==1.21.37
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.13.1
@@ -142,7 +142,7 @@ jupyter-packaging==0.10.4
 jupyter-server==1.10.2
 jupyterlab==3.1.10
 jupyterlab-pygments==0.1.2
-jupyterlab-server==2.7.2
+jupyterlab-server==2.8.1
 jupyterlab-widgets==1.0.1
 jupyterthemes==0.20.0
 kappa==0.6.0
@@ -164,7 +164,7 @@ Markdown==3.3.4
 MarkupPy==1.14
 MarkupSafe==2.0.1
 matplotlib==3.4.3
-matplotlib-inline==0.1.2
+matplotlib-inline==0.1.3
 mccabe==0.6.1
 mistune==0.8.4
 more-itertools==8.8.0
@@ -287,14 +287,14 @@ speedtest-cli==2.1.3
 sqlparse==0.4.1
 sshuttle==1.0.5
 stevedore==3.4.0
-streamlink==2.3.0
+streamlink==2.4.0
 tablib==3.0.0
 tabulate==0.8.9
 team==1.0
 tenacity==8.0.1
 termcolor==1.1.0
 termdown==1.17.0
-terminado==0.11.1
+terminado==0.12.1
 terminaltables==3.1.0
 testpath==0.5.0
 text-unidecode==1.3
@@ -317,7 +317,7 @@ ujson==4.1.0
 urllib3==1.26.6
 vimiv==0.9.1
 virtualenv==20.7.2
-virtualenv-clone==0.5.6
+virtualenv-clone==0.5.7
 virtualenvwrapper==4.8.4
 w3lib==1.22.0
 wcmatch==8.2
