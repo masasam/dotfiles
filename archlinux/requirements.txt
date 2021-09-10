@@ -22,8 +22,8 @@ beautifulsoup4==4.10.0
 black==21.8b0
 bleach==4.1.0
 blockdiag==2.0.1
-boto3==1.18.38
-botocore==1.21.38
+boto3==1.18.39
+botocore==1.21.39
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.13.1
@@ -51,7 +51,7 @@ crashtest==0.3.1
 cryptography==3.4.8
 cssselect==1.1.0
 cycler==0.10.0
-debugpy==1.4.1
+debugpy==1.4.3
 decorator==5.0.9
 defusedxml==0.7.1
 dephell==0.8.3
@@ -111,13 +111,13 @@ html5lib==1.1
 httpie==2.5.0
 hyperframe==6.0.1
 hyperlink==21.0.0
-identify==2.2.13
+identify==2.2.14
 idna==3.2
 importlib-metadata==4.8.1
 importmagic==0.1.7
 incremental==21.3.0
 invoke==1.6.0
-ipykernel==6.3.1
+ipykernel==6.4.0
 ipython==7.27.0
 ipython-genutils==0.2.0
 ipywidgets==7.6.4
@@ -139,7 +139,7 @@ jupyter-client==7.0.2
 jupyter-console==6.4.0
 jupyter-core==4.7.1
 jupyter-packaging==0.10.4
-jupyter-server==1.10.2
+jupyter-server==1.11.0
 jupyterlab==3.1.11
 jupyterlab-pygments==0.1.2
 jupyterlab-server==2.8.1
@@ -211,7 +211,7 @@ poetry-core==1.0.4
 pre-commit==2.15.0
 priority==2.0.0
 progress==1.5
-progressbar2==3.53.1
+progressbar2==3.53.2
 prometheus-client==0.11.0
 prompt-toolkit==3.0.20
 Protego==0.1.16
@@ -219,7 +219,7 @@ psutil==5.8.0
 psycopg2-binary==2.9.1
 ptyprocess==0.7.0
 pwquality==1.4.4
-py-spy==0.3.8
+py-spy==0.3.9
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
 pycairo==1.20.1
