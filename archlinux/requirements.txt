@@ -22,8 +22,8 @@ beautifulsoup4==4.10.0
 black==21.8b0
 bleach==4.1.0
 blockdiag==2.0.1
-boto3==1.18.39
-botocore==1.21.39
+boto3==1.18.40
+botocore==1.21.40
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.13.1
@@ -37,7 +37,7 @@ cfgv==3.3.1
 cfn-flip==1.2.3
 chardet==4.0.0
 cheat==2.5.1
-chromedriver-binary==93.0.4577.15.0
+chromedriver-binary==94.0.4606.41.0
 cleo==0.8.1
 cli-helpers==2.1.0
 click==8.0.1
@@ -117,7 +117,7 @@ importlib-metadata==4.8.1
 importmagic==0.1.7
 incremental==21.3.0
 invoke==1.6.0
-ipykernel==6.4.0
+ipykernel==6.4.1
 ipython==7.27.0
 ipython-genutils==0.2.0
 ipywidgets==7.6.4
@@ -183,7 +183,7 @@ nose==1.3.7
 notebook==6.4.3
 numpy==1.21.2
 odfpy==1.4.1
-openpyxl==3.0.7
+openpyxl==3.0.8
 ordered-set==4.0.2
 packaging==20.9
 pafy==0.5.5
@@ -284,7 +284,7 @@ smmap==4.0.0
 sniffio==1.2.0
 soupsieve==2.2.1
 speedtest-cli==2.1.3
-sqlparse==0.4.1
+sqlparse==0.4.2
 sshuttle==1.0.5
 stevedore==3.4.0
 streamlink==2.4.0
