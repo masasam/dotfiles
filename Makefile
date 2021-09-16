@@ -31,7 +31,6 @@ PACKAGES	+= ripgrep stunnel vimiv adapta-gtk-theme gnome-tweaks firejail opencv 
 PACKAGES	+= smartmontools gnome-logs wireshark-cli wl-clipboard lsof mapnik editorconfig-core-c watchexec
 PACKAGES	+= gtop gopls convmv mpv browserpass-firefox man-db baobab ioping ruby-irb mkcert code findomain
 PACKAGES	+= guetzli fabric python-language-server detox usleep libvterm bind asunder lame git-lfs hex miller
-PACKAGES	+= jdk8-openjdk
 
 BASE_PKGS	:= filesystem gcc-libs glibc bash coreutils file findutils gawk grep procps-ng sed tar gettext
 BASE_PKGS	+= pciutils psmisc shadow util-linux bzip2 gzip xz licenses pacman systemd systemd-sysvcompat 
@@ -304,6 +303,9 @@ dart: ## Install dart and language server
 flutter: ## Install flutter
 	mkdir -p ~/src/github.com/$@
 	wget -O- $(FLUTTER_URL) | tar -C ~/src/github.com/$@ xf-
+
+jdk: ## Install jdk
+	$(PACMAN) jdk8-openjdk
 
 mpsyt: ## Install and deploy mps-youtube
 	pip install --user mps-youtube youtube-dl
