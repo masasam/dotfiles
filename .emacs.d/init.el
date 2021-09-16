@@ -138,6 +138,7 @@
   (package-install 'load-relative)
   (package-install 'loc-changes)
   (package-install 'lsp-mode)
+  (package-install 'lsp-java)
   (package-install 'lv)
   (package-install 'macrostep)
   (package-install 'magit)
