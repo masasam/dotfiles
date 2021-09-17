@@ -468,11 +468,16 @@ iw
 jack2
 jansson
 jasper
+java-environment-common
+java-runtime-common
 jbig2dec
+jdk-openjdk
 jemalloc
 jhead
 jpegoptim
 jq
+jre-openjdk
+jre-openjdk-headless
 js78
 json-c
 json-glib
@@ -629,6 +634,7 @@ libmwaw
 libmypaint
 libnautilus-extension
 libndp
+libnet
 libnetfilter_conntrack
 libnewt
 libnfnetlink

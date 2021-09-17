@@ -22,8 +22,8 @@ beautifulsoup4==4.10.0
 black==21.9b0
 bleach==4.1.0
 blockdiag==2.0.1
-boto3==1.18.42
-botocore==1.21.42
+boto3==1.18.43
+botocore==1.21.43
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.13.1
@@ -135,9 +135,9 @@ jmespath==0.10.0
 json5==0.9.6
 jsonschema==3.2.0
 jupyter==1.0.0
-jupyter-client==7.0.2
+jupyter-client==7.0.3
 jupyter-console==6.4.0
-jupyter-core==4.7.1
+jupyter-core==4.8.1
 jupyter-packaging==0.10.5
 jupyter-server==1.11.0
 jupyterlab==3.1.12
@@ -250,7 +250,7 @@ python-slugify==5.0.2
 python-utils==2.5.6
 pytz==2021.1
 PyYAML==5.4.1
-pyzmq==22.2.1
+pyzmq==22.3.0
 qtconsole==5.1.1
 QtPy==1.11.1
 queuelib==1.6.2
@@ -316,7 +316,7 @@ typing-extensions==3.10.0.2
 ujson==4.1.0
 urllib3==1.26.6
 vimiv==0.9.1
-virtualenv==20.7.2
+virtualenv==20.8.0
 virtualenv-clone==0.5.7
 virtualenvwrapper==4.8.4
 w3lib==1.22.0
