@@ -123,7 +123,7 @@ ipython-genutils==0.2.0
 ipywidgets==7.6.5
 isc==2.0
 iso-639==0.4.5
-iso3166==2.0.1
+iso3166==2.0.2
 isodate==0.6.0
 isort==5.9.3
 itemadapter==0.4.0
@@ -304,7 +304,7 @@ toml==0.10.2
 tomli==1.2.1
 tomlkit==0.7.2
 tornado==6.1
-tqdm==4.62.2
+tqdm==4.62.3
 traitlets==5.1.0
 trash-cli==0.21.7.24
 troposphere==3.0.3
