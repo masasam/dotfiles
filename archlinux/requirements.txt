@@ -22,8 +22,8 @@ beautifulsoup4==4.10.0
 black==21.9b0
 bleach==4.1.0
 blockdiag==2.0.1
-boto3==1.18.45
-botocore==1.21.45
+boto3==1.18.46
+botocore==1.21.46
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.14
@@ -71,7 +71,7 @@ dephell-versioning==0.1.2
 deprecation==2.1.0
 diagrams==0.20.0
 diff-match-patch==20200713
-distlib==0.3.2
+distlib==0.3.3
 distro==1.6.0
 Django==3.2.7
 django-nested-admin==3.3.3
@@ -140,7 +140,7 @@ jupyter-console==6.4.0
 jupyter-core==4.8.1
 jupyter-packaging==0.10.5
 jupyter-server==1.11.0
-jupyterlab==3.1.12
+jupyterlab==3.1.13
 jupyterlab-pygments==0.1.2
 jupyterlab-server==2.8.1
 jupyterlab-widgets==1.0.2
@@ -167,7 +167,7 @@ matplotlib==3.4.3
 matplotlib-inline==0.1.3
 mccabe==0.6.1
 mistune==0.8.4
-more-itertools==8.9.0
+more-itertools==8.10.0
 mps-youtube==0.2.8
 msgpack==1.0.2
 multidict==5.1.0
@@ -183,7 +183,7 @@ nose==1.3.7
 notebook==6.4.4
 numpy==1.21.2
 odfpy==1.4.1
-openpyxl==3.0.8
+openpyxl==3.0.9
 ordered-set==4.0.2
 packaging==20.9
 pafy==0.5.5
@@ -313,7 +313,7 @@ truffleHogRegexes==0.0.7
 Twisted==21.7.0
 typed-ast==1.4.3
 typing-extensions==3.10.0.2
-ujson==4.1.0
+ujson==4.2.0
 urllib3==1.26.6
 vimiv==0.9.1
 virtualenv==20.8.0
