@@ -23,8 +23,8 @@ beautifulsoup4==4.10.0
 black==21.9b0
 bleach==4.1.0
 blockdiag==2.0.1
-boto3==1.18.47
-botocore==1.21.47
+boto3==1.18.48
+botocore==1.21.48
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.14.1
@@ -76,7 +76,7 @@ distlib==0.3.3
 distro==1.6.0
 Django==3.2.7
 django-nested-admin==3.3.3
-django-ses==2.2.1
+django-ses==2.2.2
 djangorestframework==3.12.4
 dnspython==2.1.0
 docker==5.0.2
@@ -90,7 +90,7 @@ enrich==1.2.6
 entrypoints==0.3
 et-xmlfile==1.1.0
 fabric==2.6.0
-Faker==8.13.2
+Faker==8.14.0
 filelock==3.0.12
 fissix==19.2b1
 fluidity-sm==0.2.1
@@ -175,7 +175,7 @@ multidict==5.1.0
 mypy-extensions==0.4.3
 nbclassic==0.3.2
 nbclient==0.5.4
-nbconvert==6.1.0
+nbconvert==6.2.0
 nbformat==5.1.3
 neovim==0.3.1
 nest-asyncio==1.5.1
@@ -226,7 +226,7 @@ pyasn1-modules==0.2.8
 pycairo==1.20.1
 pycodestyle==2.7.0
 pycparser==2.20
-pycryptodome==3.10.1
+pycryptodome==3.10.4
 pydantic==1.8.2
 PyDispatcher==2.0.5
 pydoc-utils==1.0.1
@@ -257,14 +257,14 @@ QtPy==1.11.2
 queuelib==1.6.2
 r7insight-python==1.0.0
 redis==3.5.3
-regex==2021.8.28
+regex==2021.9.24
 requests==2.26.0
 requests-mock==1.9.3
 requests-toolbelt==0.9.1
 requests-unixsocket==0.2.0
 resolvelib==0.5.4
 retrying==1.3.3
-rich==10.10.0
+rich==10.11.0
 rsa==4.7.2
 rtv==1.27.0
 ruamel.yaml==0.17.16
@@ -317,7 +317,7 @@ typing-extensions==3.10.0.2
 ujson==4.2.0
 urllib3==1.26.6
 vimiv==0.9.1
-virtualenv==20.8.0
+virtualenv==20.8.1
 virtualenv-clone==0.5.7
 virtualenvwrapper==4.8.4
 w3lib==1.22.0
