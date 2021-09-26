@@ -119,7 +119,7 @@ importmagic==0.1.7
 incremental==21.3.0
 invoke==1.6.0
 ipykernel==6.4.1
-ipython==7.27.0
+ipython==7.28.0
 ipython-genutils==0.2.0
 ipywidgets==7.6.5
 isc==2.0
@@ -143,7 +143,7 @@ jupyter-packaging==0.10.5
 jupyter-server==1.11.0
 jupyterlab==3.1.13
 jupyterlab-pygments==0.1.2
-jupyterlab-server==2.8.1
+jupyterlab-server==2.8.2
 jupyterlab-widgets==1.0.2
 jupyterthemes==0.20.0
 kappa==0.6.0
@@ -204,7 +204,7 @@ pip-tools==6.3.0
 pipenv==2021.5.29
 pkginfo==1.7.1
 placebo==0.9.0
-platformdirs==2.3.0
+platformdirs==2.4.0
 pluggy==1.0.0
 ply==3.11
 poetry==1.1.10
