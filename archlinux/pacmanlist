@@ -697,6 +697,7 @@ libsmbios
 libsndfile
 libsodium
 libsoup
+libsoup3
 libsoxr
 libspatialite
 libspectre
