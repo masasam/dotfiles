@@ -19,6 +19,9 @@
 			    (easy-hugo-url . "https://easy-hugo-test.firebaseapp.com")
 			    (easy-hugo-postdir . "content/post"))))
 
+(setq easy-hugo-no-help t)
+(easy-hugo-enable-menu)
+
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:
