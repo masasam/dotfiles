@@ -418,7 +418,7 @@ You can make install from here
 	sudo pacman -S editorconfig-core-c watchexec browserpass-firefox
 	sudo pacman -S man-db baobab ioping mkcert code detox git-lfs
 	sudo pacman -S guetzli fabric gtop pass github-cli libvterm
-	sudo pacman -S perl-net-ip hex miller
+	sudo pacman -S perl-net-ip hex miller btop
 
 ![activity](https://raw.githubusercontent.com/masasam/image/image/activity.png)
 
