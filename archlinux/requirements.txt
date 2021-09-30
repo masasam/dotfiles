@@ -23,8 +23,8 @@ beautifulsoup4==4.10.0
 black==21.9b0
 bleach==4.1.0
 blockdiag==2.0.1
-boto3==1.18.50
-botocore==1.21.50
+boto3==1.18.51
+botocore==1.21.51
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.14.1
@@ -102,7 +102,7 @@ gitdb2==4.0.2
 GitPython==3.0.6
 graph-cli==0.1.13
 graphviz==0.16
-greenlet==1.1.1
+greenlet==1.1.2
 h2==4.0.0
 hjson==3.0.2
 hpack==4.0.0
@@ -135,7 +135,7 @@ jmespath==0.10.0
 json5==0.9.6
 jsonschema==3.2.0
 jupyter==1.0.0
-jupyter-client==7.0.4
+jupyter-client==7.0.5
 jupyter-console==6.4.0
 jupyter-core==4.8.1
 jupyter-packaging==0.10.6

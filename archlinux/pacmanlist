@@ -57,6 +57,7 @@ brotli
 browserpass
 browserpass-chromium
 browserpass-firefox
+btop
 btrfs-progs
 bubblewrap
 bzip2
@@ -133,7 +134,7 @@ e2fsprogs
 editorconfig-core-c
 efibootmgr
 efivar
-electron12
+electron13
 elfutils
 elinks
 emacs
