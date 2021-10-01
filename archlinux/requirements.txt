@@ -23,8 +23,8 @@ beautifulsoup4==4.10.0
 black==21.9b0
 bleach==4.1.0
 blockdiag==2.0.1
-boto3==1.18.51
-botocore==1.21.51
+boto3==1.18.52
+botocore==1.21.52
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.14.1
@@ -49,7 +49,7 @@ configobj==5.0.6
 constantly==15.1.0
 contextlib2==0.6.0.post1
 crashtest==0.3.1
-cryptography==3.4.8
+cryptography==35.0.0
 cssselect==1.1.0
 cycler==0.10.0
 debugpy==1.4.3
@@ -90,7 +90,7 @@ entrypoints==0.3
 et-xmlfile==1.1.0
 fabric==2.6.0
 Faker==8.14.0
-filelock==3.1.0
+filelock==3.2.0
 fissix==19.2b1
 fluidity-sm==0.2.1
 funcparserlib==0.3.6
@@ -256,7 +256,7 @@ QtPy==1.11.2
 queuelib==1.6.2
 r7insight-python==1.0.0
 redis==3.5.3
-regex==2021.9.24
+regex==2021.9.30
 requests==2.26.0
 requests-mock==1.9.3
 requests-toolbelt==0.9.1
