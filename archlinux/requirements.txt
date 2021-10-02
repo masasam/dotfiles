@@ -1,7 +1,7 @@
 ansible==4.6.0
 ansible-base==2.10.14
 ansible-core==2.11.5
-ansible-lint==5.1.3
+ansible-lint==5.2.0
 anyio==3.3.2
 apparmor==3.0.3
 appdirs==1.4.4
@@ -23,8 +23,8 @@ beautifulsoup4==4.10.0
 black==21.9b0
 bleach==4.1.0
 blockdiag==2.0.1
-boto3==1.18.52
-botocore==1.21.52
+boto3==1.18.53
+botocore==1.21.53
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.14.1
@@ -72,6 +72,7 @@ dephell-versioning==0.1.2
 deprecation==2.1.0
 diagrams==0.20.0
 diff-match-patch==20200713
+diffoscope==186
 distlib==0.3.3
 distro==1.6.0
 Django==3.2.7
@@ -89,7 +90,8 @@ enrich==1.2.6
 entrypoints==0.3
 et-xmlfile==1.1.0
 fabric==2.6.0
-Faker==8.14.0
+Faker==8.14.1
+file-magic==0.4.0
 filelock==3.2.0
 fissix==19.2b1
 fluidity-sm==0.2.1
@@ -111,7 +113,7 @@ html5lib==1.1
 httpie==2.5.0
 hyperframe==6.0.1
 hyperlink==21.0.0
-identify==2.2.15
+identify==2.3.0
 idna==3.2
 importlib-metadata==4.8.1
 importmagic==0.1.7
@@ -154,6 +156,7 @@ lensfun==0.3.95
 lesscpy==0.15.0
 lexicon==1.0.0
 LibAppArmor==3.0.3
+libarchive-c==3.1
 lit==12.0.1.dev0
 litecli==1.6.0
 lockfile==0.12.2
@@ -248,7 +251,7 @@ python-language-server==0.36.2
 python-monkey-business==1.0.0
 python-slugify==5.0.2
 python-utils==2.5.6
-pytz==2021.1
+pytz==2021.3
 PyYAML==5.4.1
 pyzmq==22.3.0
 qtconsole==5.1.1
@@ -300,6 +303,7 @@ testpath==0.5.0
 text-unidecode==1.3
 texttable==1.6.4
 tldr==2.0.0
+tlsh==4.5.0
 toml==0.10.2
 tomli==1.2.1
 tomlkit==0.7.2

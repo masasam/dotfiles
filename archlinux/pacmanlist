@@ -116,6 +116,7 @@ debootstrap
 desktop-file-utils
 detox
 device-mapper
+diffoscope
 diffutils
 discord
 diskus
@@ -964,6 +965,7 @@ python-click
 python-colorama
 python-contextlib2
 python-cryptography
+python-defusedxml
 python-dephell
 python-dephell-archive
 python-dephell-argparse
@@ -1003,6 +1005,8 @@ python-jsonrpc-server
 python-jsonschema
 python-language-server
 python-lexicon
+python-libarchive-c
+python-magic
 python-markdown
 python-markupsafe
 python-mistune
@@ -1041,6 +1045,7 @@ python-six
 python-tabulate
 python-termcolor
 python-texttable
+python-tlsh
 python-toml
 python-tomli
 python-tomlkit
