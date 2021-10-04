@@ -92,7 +92,7 @@ et-xmlfile==1.1.0
 fabric==2.6.0
 Faker==8.14.1
 file-magic==0.4.0
-filelock==3.2.0
+filelock==3.3.0
 fissix==19.2b1
 fluidity-sm==0.2.1
 funcparserlib==0.3.6
@@ -340,5 +340,5 @@ yarl==1.6.3
 yaspin==2.1.0
 youtube-dl==2021.6.6
 zappa==0.53.0
-zipp==3.5.0
+zipp==3.6.0
 zope.interface==5.4.0
