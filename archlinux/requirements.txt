@@ -23,8 +23,8 @@ beautifulsoup4==4.10.0
 black==21.9b0
 bleach==4.1.0
 blockdiag==2.0.1
-boto3==1.18.53
-botocore==1.21.53
+boto3==1.18.54
+botocore==1.21.54
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.14.1
@@ -52,7 +52,7 @@ crashtest==0.3.1
 cryptography==35.0.0
 cssselect==1.1.0
 cycler==0.10.0
-debugpy==1.4.3
+debugpy==1.5.0
 decorator==5.1.0
 defusedxml==0.7.1
 dephell==0.8.3
@@ -90,7 +90,7 @@ enrich==1.2.6
 entrypoints==0.3
 et-xmlfile==1.1.0
 fabric==2.6.0
-Faker==8.14.1
+Faker==8.16.0
 file-magic==0.4.0
 filelock==3.3.0
 fissix==19.2b1
@@ -102,7 +102,7 @@ gif-for-cli==1.1.2
 gitdb==4.0.7
 gitdb2==4.0.2
 GitPython==3.0.6
-graph-cli==0.1.13
+graph-cli==0.1.14
 graphviz==0.16
 greenlet==1.1.2
 h2==4.0.0
@@ -141,7 +141,7 @@ jupyter-client==7.0.5
 jupyter-console==6.4.0
 jupyter-core==4.8.1
 jupyter-packaging==0.10.6
-jupyter-server==1.11.0
+jupyter-server==1.11.1
 jupyterlab==3.1.14
 jupyterlab-pygments==0.1.2
 jupyterlab-server==2.8.2
@@ -209,8 +209,8 @@ placebo==0.10.0
 platformdirs==2.4.0
 pluggy==1.0.0
 ply==3.11
-poetry==1.1.10
-poetry-core==1.0.6
+poetry==1.1.11
+poetry-core==1.0.7
 pre-commit==2.15.0
 priority==2.0.0
 progress==1.5
