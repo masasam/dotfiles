@@ -23,8 +23,8 @@ beautifulsoup4==4.10.0
 black==21.9b0
 bleach==4.1.0
 blockdiag==2.0.1
-boto3==1.18.54
-botocore==1.21.54
+boto3==1.18.55
+botocore==1.21.55
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.14.1
@@ -75,7 +75,7 @@ diff-match-patch==20200713
 diffoscope==186
 distlib==0.3.3
 distro==1.6.0
-Django==3.2.7
+Django==3.2.8
 django-nested-admin==3.3.3
 django-ses==2.3.0
 djangorestframework==3.12.4
@@ -102,10 +102,10 @@ gif-for-cli==1.1.2
 gitdb==4.0.7
 gitdb2==4.0.2
 GitPython==3.0.6
-graph-cli==0.1.14
+graph-cli==0.1.17
 graphviz==0.16
 greenlet==1.1.2
-h2==4.0.0
+h2==4.1.0
 hjson==3.0.2
 hpack==4.0.0
 html2text==2020.1.16
@@ -137,12 +137,12 @@ jmespath==0.10.0
 json5==0.9.6
 jsonschema==3.2.0
 jupyter==1.0.0
-jupyter-client==7.0.5
+jupyter-client==7.0.6
 jupyter-console==6.4.0
 jupyter-core==4.8.1
 jupyter-packaging==0.10.6
 jupyter-server==1.11.1
-jupyterlab==3.1.14
+jupyterlab==3.1.17
 jupyterlab-pygments==0.1.2
 jupyterlab-server==2.8.2
 jupyterlab-widgets==1.0.2
