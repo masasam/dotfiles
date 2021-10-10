@@ -34,10 +34,10 @@ RUN LANG=C xdg-user-dirs-update --force &&\
 
 USER ${USERNAME}
 WORKDIR /tmp
-RUN wget https://github.com/Jguer/yay/releases/download/v10.3.1/yay_10.3.1_x86_64.tar.gz &&\
-	tar xzvf yay_10.3.1_x86_64.tar.gz
+RUN wget https://github.com/Jguer/yay/releases/download/v11.0.1/yay_11.0.1_x86_64.tar.gz &&\
+	tar xzvf yay_11.0.1_x86_64.tar.gz
 USER root
-RUN cp /tmp/yay_10.3.1_x86_64/yay /usr/bin/yay
+RUN cp /tmp/yay_11.0.1_x86_64/yay /usr/bin/yay
 USER ${USERNAME}
 WORKDIR ${REPOSITORY}
 RUN git clone https://github.com/masasam/dotfiles
