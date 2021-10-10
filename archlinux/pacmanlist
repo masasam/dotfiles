@@ -413,6 +413,7 @@ haskell-tls
 haskell-transformers-compat
 haskell-typed-process
 haskell-unicode-collation
+haskell-unicode-data
 haskell-unicode-transforms
 haskell-uniplate
 haskell-unliftio-core
@@ -873,6 +874,7 @@ npm
 npth
 nspr
 nss
+numactl
 oath-toolkit
 obs-studio
 oniguruma
