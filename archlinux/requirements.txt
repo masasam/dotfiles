@@ -1,6 +1,6 @@
 ansible==4.6.0
-ansible-base==2.10.14
-ansible-core==2.11.5
+ansible-base==2.10.15
+ansible-core==2.11.6
 ansible-lint==5.2.0
 anyio==3.3.3
 apparmor==3.0.3
@@ -23,8 +23,8 @@ beautifulsoup4==4.10.0
 black==21.9b0
 bleach==4.1.0
 blockdiag==2.0.1
-boto3==1.18.58
-botocore==1.21.58
+boto3==1.18.59
+botocore==1.21.59
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.14.2
@@ -41,7 +41,7 @@ cheat==2.5.1
 chromedriver-binary==95.0.4638.17.0
 cleo==0.8.1
 cli-helpers==2.1.0
-click==8.0.1
+click==8.0.3
 clikit==0.6.2
 colorama==0.4.4
 commonmark==0.9.1
@@ -90,7 +90,7 @@ enrich==1.2.6
 entrypoints==0.3
 et-xmlfile==1.1.0
 fabric==2.6.0
-Faker==9.2.0
+Faker==9.3.1
 file-magic==0.4.0
 filelock==3.3.0
 fissix==19.2b1
