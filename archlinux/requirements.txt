@@ -23,8 +23,8 @@ beautifulsoup4==4.10.0
 black==21.9b0
 bleach==4.1.0
 blockdiag==2.0.1
-boto3==1.18.62
-botocore==1.21.62
+boto3==1.18.63
+botocore==1.21.63
 bowler==0.8.0
 bracex==2.1.1
 btrfsutil==5.14.2
@@ -93,7 +93,7 @@ et-xmlfile==1.1.0
 fabric==2.6.0
 Faker==9.3.1
 file-magic==0.4.0
-filelock==3.3.0
+filelock==3.3.1
 fissix==19.2b1
 fluidity-sm==0.2.1
 funcparserlib==0.3.6
@@ -217,7 +217,7 @@ poetry-core==1.0.7
 pre-commit==2.15.0
 priority==2.0.0
 progress==1.6
-progressbar2==3.54.0
+progressbar2==3.55.0
 prometheus-client==0.11.0
 prompt-toolkit==3.0.20
 Protego==0.1.16
