@@ -2,7 +2,7 @@ ansible==4.6.0
 ansible-base==2.10.15
 ansible-core==2.11.6
 ansible-lint==5.2.0
-anyio==3.3.3
+anyio==3.3.4
 apparmor==3.0.3
 appdirs==1.4.4
 argcomplete==1.12.3
@@ -239,7 +239,7 @@ pyfiglet==0.8.post1
 Pygments==2.10.0
 PyGObject==3.40.1
 PyHamcrest==2.0.2
-PyJWT==2.2.0
+PyJWT==2.3.0
 pylev==1.4.0
 PyNaCl==1.4.0
 pynvim==0.4.3
@@ -317,7 +317,7 @@ traitlets==5.1.0
 trash-cli==0.21.7.24
 trio==0.19.0
 trio-websocket==0.9.2
-troposphere==3.0.3
+troposphere==3.1.0
 truffleHog==2.2.1
 truffleHogRegexes==0.0.7
 Twisted==21.7.0
