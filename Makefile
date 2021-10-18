@@ -112,7 +112,7 @@ goinstall: ${HOME}/.local ## Install go packages
 
 nodeinstall: ## Install node packages
 	sudo pacman -S yarn
-	mkdir -p $${HOME}/.node_modules
+	mkdir -p ${HOME}/.node_modules
 	for pkg in $(NODE_PKGS); do yarn global add $$pkg; done
 
 rustinstall: ## Install rust and rust language server
