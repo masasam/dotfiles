@@ -100,7 +100,7 @@ funcparserlib==0.3.6
 future==0.18.2
 futures==3.1.1
 gif-for-cli==1.1.2
-gitdb==4.0.8
+gitdb==4.0.9
 gitdb2==4.0.2
 GitPython==3.0.6
 graph-cli==0.1.17
@@ -244,7 +244,7 @@ pylev==1.4.0
 PyNaCl==1.4.0
 pynvim==0.4.3
 pyOpenSSL==21.0.0
-pyparsing==2.4.7
+pyparsing==3.0.1
 pyrsistent==0.18.0
 PySocks==1.7.1
 python-dateutil==2.8.2
@@ -314,7 +314,7 @@ tomlkit==0.7.2
 tornado==6.1
 tqdm==4.62.3
 traitlets==5.1.0
-trash-cli==0.21.7.24
+trash-cli==0.21.10.24
 trio==0.19.0
 trio-websocket==0.9.2
 troposphere==3.1.0
@@ -326,7 +326,7 @@ typing-extensions==3.10.0.2
 ujson==4.2.0
 urllib3==1.26.7
 vimiv==0.9.1
-virtualenv==20.8.1
+virtualenv==20.9.0
 virtualenv-clone==0.5.7
 virtualenvwrapper==4.8.4
 w3lib==1.22.0
