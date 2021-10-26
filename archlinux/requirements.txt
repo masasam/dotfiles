@@ -9,7 +9,7 @@ argcomplete==1.12.3
 argon2-cffi==21.1.0
 asgiref==3.4.1
 asn1crypto==1.4.0
-astroid==2.8.3
+astroid==2.8.4
 async-generator==1.10
 async-timeout==3.0.1
 attrs==21.2.0
@@ -23,8 +23,8 @@ beautifulsoup4==4.10.0
 black==21.9b0
 bleach==4.1.0
 blockdiag==2.0.1
-boto3==1.19.2
-botocore==1.22.2
+boto3==1.19.3
+botocore==1.22.3
 bowler==0.8.0
 bracex==2.2
 btrfsutil==5.14.2
@@ -91,7 +91,7 @@ enrich==1.2.6
 entrypoints==0.3
 et-xmlfile==1.1.0
 fabric==2.6.0
-Faker==9.5.2
+Faker==9.6.0
 file-magic==0.4.0
 filelock==3.3.1
 fissix==19.2b1
@@ -309,11 +309,11 @@ texttable==1.6.4
 tldr==2.0.0
 tlsh==4.5.0
 toml==0.10.2
-tomli==1.2.1
+tomli==1.2.2
 tomlkit==0.7.2
 tornado==6.1
 tqdm==4.62.3
-traitlets==5.1.0
+traitlets==5.1.1
 trash-cli==0.21.10.24
 trio==0.19.0
 trio-websocket==0.9.2
