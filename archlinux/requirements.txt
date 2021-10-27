@@ -23,8 +23,8 @@ beautifulsoup4==4.10.0
 black==21.9b0
 bleach==4.1.0
 blockdiag==2.0.1
-boto3==1.19.3
-botocore==1.22.3
+boto3==1.19.4
+botocore==1.22.4
 bowler==0.8.0
 bracex==2.2
 btrfsutil==5.14.2
@@ -39,7 +39,7 @@ cfn-flip==1.3.0
 chardet==4.0.0
 charset-normalizer==2.0.7
 cheat==2.5.1
-chromedriver-binary==95.0.4638.17.0
+chromedriver-binary==96.0.4664.18.0
 cleo==0.8.1
 cli-helpers==2.1.0
 click==8.0.3
@@ -85,7 +85,7 @@ docker==5.0.3
 docker-pycreds==0.4.0
 dockerpty==0.4.1
 docopt==0.6.2
-docutils==0.17.1
+docutils==0.18
 durationpy==0.5
 enrich==1.2.6
 entrypoints==0.3
@@ -141,7 +141,7 @@ jsonschema==3.2.0
 jupyter==1.0.0
 jupyter-client==7.0.6
 jupyter-console==6.4.0
-jupyter-core==4.8.1
+jupyter-core==4.9.0
 jupyter-packaging==0.11.0
 jupyter-server==1.11.1
 jupyterlab==3.2.1
@@ -295,7 +295,7 @@ sqlparse==0.4.2
 sshuttle==1.0.5
 stevedore==3.5.0
 streamlink==2.4.0
-tablib==3.0.0
+tablib==3.1.0
 tabulate==0.8.9
 team==1.0
 tenacity==8.0.1
