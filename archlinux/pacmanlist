@@ -1012,7 +1012,7 @@ python-libarchive-c
 python-magic
 python-markdown
 python-markupsafe
-python-mistune
+python-mistune1
 python-more-itertools
 python-msgpack
 python-multidict
