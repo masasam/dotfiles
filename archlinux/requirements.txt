@@ -23,8 +23,8 @@ beautifulsoup4==4.10.0
 black==21.9b0
 bleach==4.1.0
 blockdiag==2.0.1
-boto3==1.19.5
-botocore==1.22.5
+boto3==1.19.6
+botocore==1.22.6
 bowler==0.8.0
 bracex==2.2
 btrfsutil==5.14.2
@@ -141,7 +141,7 @@ jsonschema==3.2.0
 jupyter==1.0.0
 jupyter-client==7.0.6
 jupyter-console==6.4.0
-jupyter-core==4.9.0
+jupyter-core==4.9.1
 jupyter-packaging==0.11.0
 jupyter-server==1.11.1
 jupyterlab==3.2.1
@@ -336,7 +336,7 @@ webcolors==1.11.1
 webencodings==0.5.1
 websocket-client==0.59.0
 Werkzeug==0.16.1
-widgetsnbextension==3.5.1
+widgetsnbextension==3.5.2
 wrapt==1.13.2
 wsgi-request-logger==0.4.6
 wsproto==1.0.0
