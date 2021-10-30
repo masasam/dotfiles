@@ -23,8 +23,8 @@ beautifulsoup4==4.10.0
 black==21.9b0
 bleach==4.1.0
 blockdiag==2.0.1
-boto3==1.19.6
-botocore==1.22.6
+boto3==1.19.7
+botocore==1.22.7
 bowler==0.8.0
 bracex==2.2
 btrfsutil==5.14.2
@@ -52,7 +52,7 @@ contextlib2==0.6.0.post1
 crashtest==0.3.1
 cryptography==35.0.0
 cssselect==1.1.0
-cycler==0.10.0
+cycler==0.11.0
 debugpy==1.5.1
 decorator==5.1.0
 defusedxml==0.7.1
@@ -73,7 +73,7 @@ dephell-versioning==0.1.2
 deprecation==2.1.0
 diagrams==0.20.0
 diff-match-patch==20200713
-diffoscope==187
+diffoscope==189
 distlib==0.3.3
 distro==1.6.0
 Django==3.2.8
@@ -93,7 +93,7 @@ et-xmlfile==1.1.0
 fabric==2.6.0
 Faker==9.7.1
 file-magic==0.4.0
-filelock==3.3.1
+filelock==3.3.2
 fissix==19.2b1
 fluidity-sm==0.2.1
 funcparserlib==0.3.6
@@ -122,7 +122,7 @@ importmagic==0.1.7
 incremental==21.3.0
 invoke==1.6.0
 ipykernel==6.4.2
-ipython==7.28.0
+ipython==7.29.0
 ipython-genutils==0.2.0
 ipywidgets==7.6.5
 isc==2.0
@@ -218,7 +218,7 @@ pre-commit==2.15.0
 priority==2.0.0
 progress==1.6
 progressbar2==3.55.0
-prometheus-client==0.11.0
+prometheus-client==0.12.0
 prompt-toolkit==3.0.20
 Protego==0.1.16
 psutil==5.8.0
@@ -244,7 +244,7 @@ pylev==1.4.0
 PyNaCl==1.4.0
 pynvim==0.4.3
 pyOpenSSL==21.0.0
-pyparsing==3.0.3
+pyparsing==2.4.7
 pyrsistent==0.18.0
 PySocks==1.7.1
 python-dateutil==2.8.2
@@ -337,7 +337,7 @@ webencodings==0.5.1
 websocket-client==0.59.0
 Werkzeug==0.16.1
 widgetsnbextension==3.5.2
-wrapt==1.13.2
+wrapt==1.13.3
 wsgi-request-logger==0.4.6
 wsproto==1.0.0
 x256==0.0.3
