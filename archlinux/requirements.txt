@@ -23,9 +23,9 @@ beautifulsoup4==4.10.0
 black==21.10b0
 bleach==4.1.0
 blockdiag==2.0.1
-boto3==1.19.7
-botocore==1.22.7
-bowler==0.8.0
+boto3==1.19.8
+botocore==1.22.8
+bowler==0.9.0
 bracex==2.2
 btrfsutil==5.14.2
 CacheControl==0.12.6
@@ -76,7 +76,7 @@ diff-match-patch==20200713
 diffoscope==189
 distlib==0.3.3
 distro==1.6.0
-Django==3.2.8
+Django==3.2.9
 django-nested-admin==3.3.3
 django-ses==2.3.0
 djangorestframework==3.12.4
@@ -116,12 +116,12 @@ httpie==2.6.0
 hyperframe==6.0.1
 hyperlink==21.0.0
 identify==2.3.3
-idna==3.2
+idna==3.3
 importlib-metadata==4.8.1
 importmagic==0.1.7
 incremental==21.3.0
 invoke==1.6.0
-ipykernel==6.4.2
+ipykernel==6.5.0
 ipython==7.29.0
 ipython-genutils==0.2.0
 ipywidgets==7.6.5
@@ -143,7 +143,7 @@ jupyter-client==7.0.6
 jupyter-console==6.4.0
 jupyter-core==4.9.1
 jupyter-packaging==0.11.0
-jupyter-server==1.11.1
+jupyter-server==1.11.2
 jupyterlab==3.2.1
 jupyterlab-pygments==0.1.2
 jupyterlab-server==2.8.2
@@ -262,7 +262,7 @@ QtPy==1.11.2
 queuelib==1.6.2
 r7insight-python==1.0.0
 redis==3.5.3
-regex==2021.10.23
+regex==2021.11.1
 requests==2.26.0
 requests-mock==1.9.3
 requests-toolbelt==0.9.1
@@ -326,7 +326,7 @@ typing-extensions==3.10.0.2
 ujson==4.2.0
 urllib3==1.26.7
 vimiv==0.9.1
-virtualenv==20.9.0
+virtualenv==20.10.0
 virtualenv-clone==0.5.7
 virtualenvwrapper==4.8.4
 w3lib==1.22.0

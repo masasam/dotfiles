@@ -944,6 +944,7 @@ ppp
 procps-ng
 proj
 protobuf
+protobuf-c
 psmisc
 pulseaudio
 pulseaudio-alsa
