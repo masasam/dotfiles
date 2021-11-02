@@ -18,8 +18,7 @@
 	(expand-file-name "emacs.png" user-emacs-directory))
   (dashboard-setup-startup-hook)
   (global-page-break-lines-mode)
-  (setq dashboard-page-separator "\n\f\f\n")
-  (setq dashboard-items '((recents . 14))))
+  (setq dashboard-page-separator "\n\f\f\n"))
 
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
