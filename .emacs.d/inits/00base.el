@@ -36,6 +36,8 @@
 (defalias 'my/ruler-show 'fci-mode)
 (defalias 'my/kukei-mark-mode 'rectangle-mark-mode)
 
+;; browse-at-remote
+(setq browse-at-remote-prefer-symbolic nil)
 
 ;; espy
 (setq espy-password-file "~/backup/passwd/password.org.gpg")

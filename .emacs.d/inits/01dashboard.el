@@ -16,6 +16,9 @@
   ;; Set the banner
   (setq dashboard-startup-banner
 	(expand-file-name "emacs.png" user-emacs-directory))
+  (setq dashboard-items '((recents   . 5)
+                             (bookmarks . 5)
+                             (agenda    . 5)))
   (dashboard-setup-startup-hook)
   (global-page-break-lines-mode)
   (setq dashboard-page-separator "\n\f\f\n"))
