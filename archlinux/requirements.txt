@@ -1,4 +1,4 @@
-ansible==4.7.0
+ansible==4.8.0
 ansible-base==2.10.15
 ansible-core==2.11.6
 ansible-lint==5.2.1
@@ -23,8 +23,8 @@ beautifulsoup4==4.10.0
 black==21.10b0
 bleach==4.1.0
 blockdiag==2.0.1
-boto3==1.19.8
-botocore==1.22.8
+boto3==1.19.9
+botocore==1.22.9
 bowler==0.9.0
 bracex==2.2
 btrfsutil==5.14.2
@@ -91,7 +91,7 @@ enrich==1.2.6
 entrypoints==0.3
 et-xmlfile==1.1.0
 fabric==2.6.0
-Faker==9.7.1
+Faker==9.8.0
 file-magic==0.4.0
 filelock==3.3.2
 fissix==19.2b1
@@ -163,7 +163,7 @@ lit==12.0.1.dev0
 litecli==1.6.0
 lockfile==0.12.2
 louis==3.19.0
-lxml==4.6.3
+lxml==4.6.4
 m2r==0.2.1
 Markdown==3.3.4
 MarkupPy==1.14
@@ -262,7 +262,7 @@ QtPy==1.11.2
 queuelib==1.6.2
 r7insight-python==1.0.0
 redis==3.5.3
-regex==2021.11.1
+regex==2021.11.2
 requests==2.26.0
 requests-mock==1.9.3
 requests-toolbelt==0.9.1
@@ -330,7 +330,7 @@ virtualenv==20.10.0
 virtualenv-clone==0.5.7
 virtualenvwrapper==4.8.4
 w3lib==1.22.0
-wcmatch==8.2
+wcmatch==8.3
 wcwidth==0.2.5
 webcolors==1.11.1
 webencodings==0.5.1
