@@ -17,14 +17,14 @@ Automat==20.2.0
 awslogs==0.14.0
 Babel==2.9.1
 backcall==0.2.0
-backports.entry-points-selectable==1.1.0
+backports.entry-points-selectable==1.1.1
 bcrypt==3.2.0
 beautifulsoup4==4.10.0
 black==21.10b0
 bleach==4.1.0
 blockdiag==2.0.1
-boto3==1.20.0
-botocore==1.23.1
+boto3==1.20.2
+botocore==1.23.2
 bowler==0.9.0
 bracex==2.2.1
 btrfsutil==5.15
@@ -39,7 +39,7 @@ cfn-flip==1.3.0
 chardet==4.0.0
 charset-normalizer==2.0.7
 cheat==2.5.1
-chromedriver-binary==96.0.4664.18.0
+chromedriver-binary==96.0.4664.35.0
 cleo==0.8.1
 cli-helpers==2.1.0
 click==8.0.3
@@ -129,7 +129,7 @@ isc==2.0
 iso-639==0.4.5
 iso3166==2.0.2
 isodate==0.6.0
-isort==5.10.0
+isort==5.10.1
 itemadapter==0.4.0
 itemloaders==1.0.4
 jedi==0.18.0
@@ -175,7 +175,7 @@ mistune==0.8.4
 more-itertools==8.10.0
 mps-youtube==0.2.8
 msgpack==1.0.2
-multidict==5.1.0
+multidict==5.2.0
 mypy-extensions==0.4.3
 nbclassic==0.3.4
 nbclient==0.5.5
@@ -206,7 +206,7 @@ pexpect==4.8.0
 pickleshare==0.7.5
 Pillow==8.4.0
 pip-tools==6.4.0
-pipenv==2021.11.5.post0
+pipenv==2021.11.9
 pkginfo==1.7.1
 placebo==0.10.0
 platformdirs==2.4.0
@@ -262,7 +262,7 @@ QtPy==1.11.2
 queuelib==1.6.2
 r7insight-python==1.0.0
 redis==3.5.3
-regex==2021.11.2
+regex==2021.11.10
 requests==2.26.0
 requests-mock==1.9.3
 requests-toolbelt==0.9.1
@@ -343,7 +343,7 @@ wsproto==1.0.0
 x256==0.0.3
 xlrd==2.0.1
 xlwt==1.3.0
-yarl==1.6.3
+yarl==1.7.2
 yaspin==2.1.0
 youtube-dl==2021.6.6
 zappa==0.54.0

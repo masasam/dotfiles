@@ -533,6 +533,7 @@ libcddb
 libcdio
 libcdio-paranoia
 libcdr
+libcheese
 libcloudproviders
 libcmis
 libcolord
@@ -939,6 +940,7 @@ portaudio
 postgresql
 postgresql-libs
 potrace
+power-profiles-daemon
 powertop
 ppp
 procps-ng
