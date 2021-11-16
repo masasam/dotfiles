@@ -23,8 +23,8 @@ beautifulsoup4==4.10.0
 black==21.10b0
 bleach==4.1.0
 blockdiag==2.0.1
-boto3==1.20.5
-botocore==1.23.5
+boto3==1.20.6
+botocore==1.23.6
 bowler==0.9.0
 bracex==2.2.1
 btrfsutil==5.15
@@ -70,6 +70,7 @@ dephell-shells==0.1.5
 dephell-specifier==0.2.2
 dephell-venvs==0.1.16
 dephell-versioning==0.1.2
+Deprecated==1.2.13
 deprecation==2.1.0
 diagrams==0.20.0
 diff-match-patch==20200713
@@ -91,7 +92,7 @@ enrich==1.2.6
 entrypoints==0.3
 et-xmlfile==1.1.0
 fabric==2.6.0
-Faker==9.8.1
+Faker==9.8.2
 file-magic==0.4.0
 filelock==3.3.2
 fissix==21.6.6
@@ -142,7 +143,7 @@ jupyter==1.0.0
 jupyter-client==7.0.6
 jupyter-console==6.4.0
 jupyter-core==4.9.1
-jupyter-packaging==0.11.0
+jupyter-packaging==0.11.1
 jupyter-server==1.11.2
 jupyterlab==3.2.3
 jupyterlab-pygments==0.1.2
@@ -261,7 +262,7 @@ qtconsole==5.2.0
 QtPy==1.11.2
 queuelib==1.6.2
 r7insight-python==1.0.0
-redis==3.5.3
+redis==4.0.0
 regex==2021.11.10
 requests==2.26.0
 requests-mock==1.9.3
