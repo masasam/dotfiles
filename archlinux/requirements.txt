@@ -23,8 +23,8 @@ beautifulsoup4==4.10.0
 black==21.10b0
 bleach==4.1.0
 blockdiag==2.0.1
-boto3==1.20.6
-botocore==1.23.6
+boto3==1.20.7
+botocore==1.23.7
 bowler==0.9.0
 bracex==2.2.1
 btrfsutil==5.15
@@ -94,9 +94,10 @@ et-xmlfile==1.1.0
 fabric==2.6.0
 Faker==9.8.2
 file-magic==0.4.0
-filelock==3.3.2
+filelock==3.4.0
 fissix==21.6.6
 fluidity-sm==0.2.1
+fonttools==4.28.1
 funcparserlib==0.3.6
 future==0.18.2
 futures==3.1.1
@@ -116,7 +117,7 @@ html5lib==1.1
 httpie==2.6.0
 hyperframe==6.0.1
 hyperlink==21.0.0
-identify==2.3.5
+identify==2.3.6
 idna==3.3
 importlib-metadata==4.8.1
 importmagic==0.1.7
@@ -166,10 +167,10 @@ lockfile==0.12.2
 louis==3.19.0
 lxml==4.6.4
 m2r==0.2.1
-Markdown==3.3.4
+Markdown==3.3.5
 MarkupPy==1.14
 MarkupSafe==2.0.1
-matplotlib==3.4.3
+matplotlib==3.5.0
 matplotlib-inline==0.1.3
 mccabe==0.6.1
 mistune==0.8.4
@@ -186,7 +187,7 @@ neovim==0.3.1
 nest-asyncio==1.5.1
 nodeenv==1.6.0
 nose==1.3.7
-notebook==6.4.5
+notebook==6.4.6
 numpy==1.21.4
 odfpy==1.4.1
 openpyxl==3.0.9
@@ -270,7 +271,7 @@ requests-toolbelt==0.9.1
 requests-unixsocket==0.2.0
 resolvelib==0.5.4
 retrying==1.3.3
-rich==10.13.0
+rich==10.14.0
 rsa==4.7.2
 rtv==1.27.0
 ruamel.yaml==0.17.17
@@ -284,9 +285,10 @@ selenium==4.0.0
 Send2Trash==1.8.0
 seqdiag==2.0.0
 service-identity==21.1.0
+setuptools-scm==6.3.2
 sh==1.14.2
 shellingham==1.4.0
-shtab==1.4.2
+shtab==1.5.0
 six==1.16.0
 smmap==5.0.0
 sniffio==1.2.0
