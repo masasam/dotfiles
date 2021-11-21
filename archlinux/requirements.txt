@@ -39,7 +39,7 @@ cfn-flip==1.3.0
 chardet==4.0.0
 charset-normalizer==2.0.7
 cheat==2.5.1
-chromedriver-binary==96.0.4664.45.0
+chromedriver-binary==97.0.4692.20.0
 cleo==0.8.1
 cli-helpers==2.1.0
 click==8.0.3
