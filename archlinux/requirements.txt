@@ -9,7 +9,7 @@ argcomplete==1.12.3
 argon2-cffi==21.1.0
 asgiref==3.4.1
 asn1crypto==1.4.0
-astroid==2.8.5
+astroid==2.9.0
 async-generator==1.10
 async-timeout==3.0.1
 attrs==21.2.0
@@ -50,7 +50,7 @@ configobj==5.0.6
 constantly==15.1.0
 contextlib2==0.6.0.post1
 crashtest==0.3.1
-cryptography==35.0.0
+cryptography==36.0.0
 cssselect==1.1.0
 cycler==0.11.0
 debugpy==1.5.1
@@ -97,7 +97,7 @@ file-magic==0.4.0
 filelock==3.4.0
 fissix==21.6.6
 fluidity-sm==0.2.1
-fonttools==4.28.1
+fonttools==4.28.2
 funcparserlib==0.3.6
 future==0.18.2
 futures==3.1.1
