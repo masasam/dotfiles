@@ -2,7 +2,7 @@ ansible==4.8.0
 ansible-base==2.10.15
 ansible-core==2.11.6
 ansible-lint==5.2.1
-anyio==3.3.4
+anyio==3.4.0
 apparmor==3.0.3
 appdirs==1.4.4
 argcomplete==1.12.3
@@ -23,8 +23,8 @@ beautifulsoup4==4.10.0
 black==21.11b1
 bleach==4.1.0
 blockdiag==2.0.1
-boto3==1.20.10
-botocore==1.23.10
+boto3==1.20.11
+botocore==1.23.11
 bowler==0.9.0
 bracex==2.2.1
 btrfsutil==5.15
@@ -92,7 +92,7 @@ enrich==1.2.6
 entrypoints==0.3
 et-xmlfile==1.1.0
 fabric==2.6.0
-Faker==9.8.2
+Faker==9.8.3
 file-magic==0.4.0
 filelock==3.4.0
 fissix==21.6.6
@@ -141,7 +141,7 @@ jmespath==0.10.0
 json5==0.9.6
 jsonschema==3.2.0
 jupyter==1.0.0
-jupyter-client==7.0.6
+jupyter-client==7.1.0
 jupyter-console==6.4.0
 jupyter-core==4.9.1
 jupyter-packaging==0.11.1
@@ -264,7 +264,7 @@ qtconsole==5.2.0
 QtPy==1.11.2
 queuelib==1.6.2
 r7insight-python==1.0.0
-redis==4.0.1
+redis==4.0.2
 regex==2021.11.10
 requests==2.26.0
 requests-mock==1.9.3
@@ -282,7 +282,7 @@ scipy==1.7.2
 Scrapy==2.4.1
 seaborn==0.11.2
 SecretStorage==3.3.1
-selenium==4.0.0
+selenium==4.1.0
 Send2Trash==1.8.0
 seqdiag==2.0.0
 service-identity==21.1.0
@@ -328,7 +328,7 @@ truffleHogRegexes==0.0.7
 Twisted==21.7.0
 typed-ast==1.5.0
 typing_extensions==4.0.0
-ujson==4.2.0
+ujson==4.3.0
 urllib3==1.26.7
 vimiv==0.9.1
 virtualenv==20.10.0
