@@ -23,8 +23,8 @@ beautifulsoup4==4.10.0
 black==21.11b1
 bleach==4.1.0
 blockdiag==2.0.1
-boto3==1.20.11
-botocore==1.23.11
+boto3==1.20.12
+botocore==1.23.12
 bowler==0.9.0
 bracex==2.2.1
 btrfsutil==5.15
@@ -86,7 +86,7 @@ docker==5.0.3
 docker-pycreds==0.4.0
 dockerpty==0.4.1
 docopt==0.6.2
-docutils==0.18
+docutils==0.18.1
 durationpy==0.5
 enrich==1.2.6
 entrypoints==0.3
@@ -145,7 +145,7 @@ jupyter-client==7.1.0
 jupyter-console==6.4.0
 jupyter-core==4.9.1
 jupyter-packaging==0.11.1
-jupyter-server==1.11.2
+jupyter-server==1.12.0
 jupyterlab==3.2.4
 jupyterlab-pygments==0.1.2
 jupyterlab-server==2.8.2
@@ -208,7 +208,7 @@ pexpect==4.8.0
 pickleshare==0.7.5
 Pillow==8.4.0
 pip-tools==6.4.0
-pipenv==2021.11.15
+pipenv==2021.11.23
 pkginfo==1.8.1
 placebo==0.10.0
 platformdirs==2.4.0
@@ -260,7 +260,7 @@ python-utils==2.5.6
 pytz==2021.3
 PyYAML==6.0
 pyzmq==22.3.0
-qtconsole==5.2.0
+qtconsole==5.2.1
 QtPy==1.11.2
 queuelib==1.6.2
 r7insight-python==1.0.0
@@ -289,7 +289,7 @@ service-identity==21.1.0
 setuptools-scm==6.3.2
 sh==1.14.2
 shellingham==1.4.0
-shtab==1.5.0
+shtab==1.5.1
 six==1.16.0
 smmap==5.0.0
 sniffio==1.2.0
