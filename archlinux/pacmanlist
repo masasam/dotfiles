@@ -725,6 +725,7 @@ libtommath
 libtool
 libunistring
 libunwind
+liburcu
 libusb
 libusb-compat
 libusbmuxd
@@ -1234,7 +1235,6 @@ which
 whois
 wildmidi
 wireshark-cli
-wl-clipboard
 wmctrl
 woff2
 wpa_supplicant
