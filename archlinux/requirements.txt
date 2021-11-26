@@ -27,7 +27,7 @@ boto3==1.20.13
 botocore==1.23.13
 bowler==0.9.0
 bracex==2.2.1
-btrfsutil==5.15
+btrfsutil==5.15.1
 CacheControl==0.12.6
 cached-property==1.5.2
 cachy==0.3.0
@@ -299,7 +299,7 @@ speedtest-cli==2.1.3
 sqlparse==0.4.2
 sshuttle==1.0.5
 stevedore==3.5.0
-streamlink==3.0.1
+streamlink==3.0.2
 tablib==3.1.0
 tabulate==0.8.9
 team==1.0
