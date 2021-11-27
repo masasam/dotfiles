@@ -23,8 +23,8 @@ beautifulsoup4==4.10.0
 black==21.11b1
 bleach==4.1.0
 blockdiag==2.0.1
-boto3==1.20.13
-botocore==1.23.13
+boto3==1.20.14
+botocore==1.23.14
 bowler==0.9.0
 bracex==2.2.1
 btrfsutil==5.15.1
@@ -124,7 +124,7 @@ importmagic==0.1.7
 incremental==21.3.0
 invoke==1.6.0
 ipykernel==6.5.1
-ipython==7.29.0
+ipython==7.30.0
 ipython-genutils==0.2.0
 ipywidgets==7.6.5
 isc==2.0
@@ -145,7 +145,7 @@ jupyter-client==7.1.0
 jupyter-console==6.4.0
 jupyter-core==4.9.1
 jupyter-packaging==0.11.1
-jupyter-server==1.12.0
+jupyter-server==1.12.1
 jupyterlab==3.2.4
 jupyterlab-pygments==0.1.2
 jupyterlab-server==2.8.2
