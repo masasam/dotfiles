@@ -957,6 +957,7 @@ pwgen
 pyenv
 python
 python-aiohttp
+python-aiosignal
 python-appdirs
 python-asn1crypto
 python-async-timeout
@@ -969,6 +970,7 @@ python-cairo
 python-cerberus
 python-cffi
 python-chardet
+python-charset-normalizer
 python-click
 python-colorama
 python-contextlib2
@@ -999,6 +1001,7 @@ python-docutils
 python-dotenv
 python-fissix
 python-fluidity
+python-frozenlist
 python-funcparserlib
 python-future
 python-gobject
