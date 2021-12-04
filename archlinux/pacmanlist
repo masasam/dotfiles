@@ -1014,7 +1014,6 @@ python-jedi
 python-jinja
 python-jsonrpc-server
 python-jsonschema
-python-language-server
 python-lexicon
 python-libarchive-c
 python-magic
@@ -1022,6 +1021,7 @@ python-markdown
 python-markupsafe
 python-mistune1
 python-more-itertools
+python-moreorless
 python-msgpack
 python-multidict
 python-ordered-set
@@ -1063,6 +1063,7 @@ python-tomlkit
 python-typing_extensions
 python-ujson
 python-urllib3
+python-volatile
 python-wcwidth
 python-webcolors
 python-webencodings

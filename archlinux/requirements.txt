@@ -1,6 +1,6 @@
 aiohttp==3.8.1
 aiosignal==1.2.0
-ansible==5.0.0
+ansible==5.0.1
 ansible-base==2.10.15
 ansible-core==2.12.0
 ansible-lint==5.3.0
@@ -25,8 +25,8 @@ beautifulsoup4==4.10.0
 black==21.11b1
 bleach==4.1.0
 blockdiag==2.0.1
-boto3==1.20.18
-botocore==1.23.18
+boto3==1.20.20
+botocore==1.23.20
 bowler==0.9.0
 bracex==2.2.1
 btrfsutil==5.15.1
@@ -39,7 +39,7 @@ cffi==1.15.0
 cfgv==3.3.1
 cfn-flip==1.3.0
 chardet==4.0.0
-charset-normalizer==2.0.8
+charset-normalizer==2.0.9
 cheat==2.5.1
 chromedriver-binary==97.0.4692.20.0
 cleo==0.8.1
@@ -99,7 +99,7 @@ file-magic==0.4.0
 filelock==3.4.0
 fissix==21.6.6
 fluidity-sm==0.2.1
-fonttools==4.28.2
+fonttools==4.28.3
 frozenlist==1.2.0
 funcparserlib==0.3.6
 future==0.18.2
@@ -178,6 +178,7 @@ matplotlib-inline==0.1.3
 mccabe==0.6.1
 mistune==0.8.4
 more-itertools==8.10.0
+moreorless==0.4.0
 mps-youtube==0.2.8
 msgpack==1.0.3
 multidict==5.2.0
@@ -264,7 +265,7 @@ pytz==2021.3
 PyYAML==6.0
 pyzmq==22.3.0
 qtconsole==5.2.1
-QtPy==1.11.2
+QtPy==1.11.3
 queuelib==1.6.2
 r7insight-python==1.0.0
 redis==4.0.2
@@ -329,7 +330,7 @@ troposphere==3.1.1
 truffleHog==2.2.1
 truffleHogRegexes==0.0.7
 Twisted==21.7.0
-typed-ast==1.5.0
+typed-ast==1.5.1
 typing_extensions==4.0.1
 ujson==4.3.0
 urllib3==1.26.7
@@ -337,6 +338,7 @@ vimiv==0.9.1
 virtualenv==20.10.0
 virtualenv-clone==0.5.7
 virtualenvwrapper==4.8.4
+volatile==2.1.0
 w3lib==1.22.0
 wcmatch==8.3
 wcwidth==0.2.5
