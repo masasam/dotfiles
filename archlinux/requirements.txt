@@ -41,7 +41,7 @@ cfn-flip==1.3.0
 chardet==4.0.0
 charset-normalizer==2.0.9
 cheat==2.5.1
-chromedriver-binary==97.0.4692.20.0
+chromedriver-binary==97.0.4692.36.0
 cleo==0.8.1
 cli-helpers==2.1.0
 click==8.0.3
@@ -238,7 +238,7 @@ pycairo==1.20.1
 pycodestyle==2.8.0
 pycountry==20.7.3
 pycparser==2.21
-pycryptodome==3.11.0
+pycryptodome==3.12.0
 pydantic==1.8.2
 PyDispatcher==2.0.5
 pydoc-utils==1.0.1
