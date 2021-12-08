@@ -2,7 +2,7 @@
 Name=AutoStart
 GenericName=Auto Start Script
 Comment=no comment
-Exec=${HOME}/.auto_start.sh
+Exec=/home/masa/.auto_start.sh
 Icon=utilities-terminal
 Terminal=true
 Type=Application
