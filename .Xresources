@@ -17,7 +17,7 @@ Xft.lcdfilter:  lcddefault
 URxvt*imLocale: en_US.UTF-8
 URxvt*iso14755:	false
 
-URxvt.geometry:             147x39
+URxvt.geometry:             147x38
 URxvt.scrollBar:  	    false
 URxvt.cursorBlink:          true
 URxvt.cursorColor:          #657b83
