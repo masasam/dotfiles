@@ -3,7 +3,7 @@ aiosignal==1.2.0
 ansible==5.0.1
 ansible-base==2.10.16
 ansible-core==2.12.1
-ansible-lint==5.3.0
+ansible-lint==5.3.1
 anyio==3.4.0
 apparmor==3.0.3
 appdirs==1.4.4
@@ -79,7 +79,7 @@ diff-match-patch==20200713
 diffoscope==193
 distlib==0.3.3
 distro==1.6.0
-Django==3.2.9
+Django==4.0
 django-nested-admin==3.3.3
 django-ses==2.3.1
 djangorestframework==3.12.4
@@ -94,7 +94,7 @@ enrich==1.2.6
 entrypoints==0.3
 et-xmlfile==1.1.0
 fabric==2.6.0
-Faker==9.9.0
+Faker==10.0.0
 file-magic==0.4.0
 filelock==3.4.0
 fissix==21.6.6
@@ -148,7 +148,7 @@ jupyter-client==7.1.0
 jupyter-console==6.4.0
 jupyter-core==4.9.1
 jupyter-packaging==0.11.1
-jupyter-server==1.12.1
+jupyter-server==1.13.0
 jupyterlab==3.2.4
 jupyterlab-pygments==0.1.2
 jupyterlab-server==2.8.2
@@ -167,7 +167,7 @@ libarchive-c==3.2
 lit==13.0.0.dev0
 litecli==1.6.0
 lockfile==0.12.2
-louis==3.19.0
+louis==3.20.0
 lxml==4.6.4
 m2r==0.2.1
 Markdown==3.3.6
@@ -311,7 +311,7 @@ tenacity==8.0.1
 termcolor==1.1.0
 termdown==1.18.0
 terminado==0.12.1
-terminaltables==3.1.0
+terminaltables==3.1.10
 testpath==0.5.0
 text-unidecode==1.3
 texttable==1.6.4
@@ -344,7 +344,7 @@ wcmatch==8.3
 wcwidth==0.2.5
 webcolors==1.11.1
 webencodings==0.5.1
-websocket-client==1.2.1
+websocket-client==1.2.3
 Werkzeug==2.0.2
 widgetsnbextension==3.5.2
 wrapt==1.13.3
