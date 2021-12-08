@@ -56,7 +56,7 @@ URxvt.background:           #002b36
 URxvt.perl-ext-common:		default,clipboard,matcher
 URxvt.keysym.C-C:		perl:clipboard:copy
 URxvt.keysym.C-V:		perl:clipboard:paste
-URxvt.url-launcher:		/usr/bin/chromium
+URxvt.url-launcher:		/usr/bin/xdg-open
 URxvt.matcher.button:		1
 URxvt.url-select.underline:	true
 
