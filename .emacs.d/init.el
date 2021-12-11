@@ -53,6 +53,7 @@
   (package-install 'company-quickhelp)
   (package-install 'company-restclient)
   (package-install 'counsel)
+  (package-install 'counsel-chrome-bm)
   (package-install 'counsel-css)
   (package-install 'counsel-projectile)
   (package-install 'counsel-tramp)
