@@ -8,7 +8,7 @@ anyio==3.4.0
 apparmor==3.0.3
 appdirs==1.4.4
 argcomplete==1.12.3
-argon2-cffi==21.2.0
+argon2-cffi==21.3.0
 argon2-cffi-bindings==21.2.0
 asgiref==3.4.1
 asn1crypto==1.4.0
@@ -174,7 +174,7 @@ m2r==0.2.1
 Markdown==3.3.6
 MarkupPy==1.14
 MarkupSafe==2.0.1
-matplotlib==3.5.0
+matplotlib==3.5.1
 matplotlib-inline==0.1.3
 mccabe==0.6.1
 mistune==0.8.4
