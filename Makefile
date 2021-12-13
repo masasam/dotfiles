@@ -8,7 +8,7 @@ NODE_PKGS	+= indium intelephense javascript-typescript-langserver logo.svg @marp
 NODE_PKGS	+= mermaid mermaid.cli ngrok now prettier parcel-bundler typescript-language-server
 NODE_PKGS	+= @vue/cli vue-language-server vue-native-cli jshint
 
-PIP_PKGS	:= beautifulsoup4 black cheat chromedriver-binary diagrams django djangorestframework
+PIP_PKGS	:= ansible ansible-lint beautifulsoup4 black cheat chromedriver-binary diagrams django djangorestframework
 PIP_PKGS	+= django-nested-admin django-ses faker gif-for-cli graph-cli httpie importmagic ipywidgets
 PIP_PKGS	+= jupyter jupyterlab jupyterthemes litecli matplotlib neovim nose pandas pipenv poetry pre-commit
 PIP_PKGS	+= progressbar2 psycopg2-binary py-spy pydantic pydoc_utils r7insight_python redis requests_mock
@@ -31,7 +31,7 @@ PACKAGES	+= ripgrep stunnel vimiv adapta-gtk-theme gnome-tweaks firejail opencv 
 PACKAGES	+= smartmontools gnome-logs wireshark-cli wl-clipboard lsof mapnik editorconfig-core-c watchexec
 PACKAGES	+= gtop gopls convmv mpv browserpass-firefox man-db baobab ioping ruby-irb mkcert code findomain
 PACKAGES	+= guetzli fabric python-language-server detox usleep libvterm bind asunder lame git-lfs hex miller
-PACKAGES	+= diffoscope dust rbw ansible ansible-lint
+PACKAGES	+= diffoscope dust rbw
 
 BASE_PKGS	:= filesystem gcc-libs glibc bash coreutils file findutils gawk grep procps-ng sed tar gettext
 BASE_PKGS	+= pciutils psmisc shadow util-linux bzip2 gzip xz licenses pacman systemd systemd-sysvcompat 
