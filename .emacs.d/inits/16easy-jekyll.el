@@ -12,8 +12,10 @@
 			      (easy-jekyll-url . "http://example1.com")
 			      (easy-jekyll-sshdomain . "blogdomain")
 			      (easy-jekyll-root . "/home/jekyll2")
-			      (easy-jekyll-google-cloud-storage-bucket-name . "masa-storage"))
+			      (easy-jekyll-google-cloud-storage-bucket-name . "masa-storage")
+			      (easy-jekyll-additional-postdir . "_pages"))
 			     ((easy-jekyll-basedir . "~/src/github.com/masasam/jekyll2/")
+			      (easy-jekyll-additional-postdir . "_pages")
 			      (easy-jekyll-url . "http://example2.net"))))
 
 ;; Local Variables:
