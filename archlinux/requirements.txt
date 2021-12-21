@@ -20,7 +20,7 @@ charset-normalizer==2.0.4
 click==8.0.3
 colorama==0.4.4
 contextlib2==0.6.0.post1
-cryptography==36.0.0
+cryptography==36.0.1
 defusedxml==0.7.1
 dephell==0.8.3
 dephell-archive==0.1.7
