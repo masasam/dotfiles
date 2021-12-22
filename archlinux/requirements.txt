@@ -1,11 +1,11 @@
 aiohttp==3.8.1
 aiosignal==1.2.0
-ansible==5.0.1
+ansible==5.1.0
 ansible-core==2.12.1
 apparmor==3.0.3
 appdirs==1.4.4
 asn1crypto==1.4.0
-async-timeout==4.0.1
+async-timeout==4.0.2
 attrs==21.2.0
 bcrypt==3.2.0
 blockdiag==2.0.1
