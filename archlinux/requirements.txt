@@ -36,7 +36,7 @@ dephell-shells==0.1.5
 dephell-specifier==0.2.2
 dephell-venvs==0.1.18
 dephell-versioning==0.1.2
-diffoscope==196
+diffoscope==197
 distlib==0.3.3
 distro==1.6.0
 dnspython==2.1.0
