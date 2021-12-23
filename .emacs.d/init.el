@@ -64,6 +64,7 @@
   (package-install 'dashboard)
   (package-install 'deadgrep)
   (package-install 'diff-hl)
+  (package-install 'dirvish)
   (package-install 'docker)
   (package-install 'docker-tramp)
   (package-install 'dockerfile-mode)
