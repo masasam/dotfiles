@@ -144,6 +144,7 @@ enchant
 eog
 ethtool
 evince
+exa
 exempi
 exiv2
 expat
@@ -442,6 +443,7 @@ hidapi
 highlight
 hspell
 htop
+http-parser
 hub
 hugo
 hunspell
@@ -579,6 +581,7 @@ libgdm
 libgee
 libgeotiff
 libgexiv2
+libgit2
 libglvnd
 libgme
 libgnomekbd
