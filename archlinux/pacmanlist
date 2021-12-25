@@ -678,6 +678,7 @@ libplacebo
 libplist
 libpng
 libportal
+libportal-gtk3
 libproxy
 libpsl
 libpulse
