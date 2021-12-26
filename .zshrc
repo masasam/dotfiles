@@ -314,7 +314,7 @@ if [ -d "${RBENV_ROOT}" ]; then
   export PATH="${RBENV_ROOT}/bin:${PATH}"
   eval "$(rbenv init -)"
 fi
-export ANDROID_HOME=~/Android/Sdk
+# export ANDROID_HOME=~/Android/Sdk
 export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
