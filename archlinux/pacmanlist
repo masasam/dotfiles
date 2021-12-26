@@ -39,6 +39,7 @@ base
 bash
 bash-completion
 bat
+bazel
 bc
 bcg729
 bind
@@ -480,12 +481,15 @@ java-environment-common
 java-runtime-common
 jbig2dec
 jdk-openjdk
+jdk11-openjdk
 jemalloc
 jhead
 jpegoptim
 jq
 jre-openjdk
 jre-openjdk-headless
+jre11-openjdk
+jre11-openjdk-headless
 js78
 json-c
 json-glib
