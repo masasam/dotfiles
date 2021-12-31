@@ -6,7 +6,7 @@ apparmor==3.0.3
 appdirs==1.4.4
 asn1crypto==1.4.0
 async-timeout==4.0.2
-attrs==21.2.0
+attrs==21.3.0
 bcrypt==3.2.0
 blockdiag==2.0.1
 bowler==0.9.0
@@ -119,7 +119,7 @@ tlsh==4.5.0
 toml==0.10.2
 tomli==1.2.2
 tomlkit==0.8.0
-typing-extensions==3.10.0.2
+typing-extensions==4.0.1
 ujson==4.3.0
 urllib3==1.26.7
 vimiv==0.9.1
