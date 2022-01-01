@@ -36,7 +36,7 @@ dephell-shells==0.1.5
 dephell-specifier==0.2.2
 dephell-venvs==0.1.18
 dephell-versioning==0.1.2
-diffoscope==197
+diffoscope==198
 distlib==0.3.3
 distro==1.6.0
 dnspython==2.1.0
@@ -91,7 +91,7 @@ ptyprocess==0.7.0
 pwquality==1.4.4
 pycairo==1.20.1
 pycparser==2.21
-Pygments==2.10.0
+Pygments==2.11.0
 PyGObject==3.42.0
 PyNaCl==1.4.0
 pyOpenSSL==21.0.0
