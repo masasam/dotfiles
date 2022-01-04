@@ -86,7 +86,7 @@ pluggy==0.13.1
 ply==3.11
 progress==1.6
 prompt-toolkit==3.0.24
-psutil==5.8.0
+psutil==5.9.0
 ptyprocess==0.7.0
 pwquality==1.4.4
 pycairo==1.20.1
@@ -117,7 +117,7 @@ termcolor==1.1.0
 texttable==1.6.4
 tlsh==4.5.0
 toml==0.10.2
-tomli==1.2.2
+tomli==1.2.3
 tomlkit==0.8.0
 typing-extensions==4.0.1
 ujson==4.3.0
