@@ -37,7 +37,7 @@ dephell-specifier==0.2.2
 dephell-venvs==0.1.18
 dephell-versioning==0.1.2
 diffoscope==198
-distlib==0.3.3
+distlib==0.3.4
 distro==1.6.0
 dnspython==2.1.0
 docker==5.0.3
@@ -120,7 +120,7 @@ toml==0.10.2
 tomli==1.2.3
 tomlkit==0.8.0
 typing-extensions==4.0.1
-ujson==4.3.0
+ujson==5.1.0
 urllib3==1.26.7
 vimiv==0.9.1
 volatile==2.1.0
