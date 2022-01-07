@@ -77,11 +77,11 @@ msgpack==1.0.3
 multidict==5.2.0
 ordered-set==4.0.2
 packaging==20.9
-paramiko==2.7.2
+paramiko==2.9.1
 parso==0.8.2
 pep517==0.12.0
 pexpect==4.8.0
-Pillow==8.4.0
+Pillow==9.0.0
 pluggy==0.13.1
 ply==3.11
 progress==1.6
@@ -91,7 +91,7 @@ ptyprocess==0.7.0
 pwquality==1.4.4
 pycairo==1.20.1
 pycparser==2.21
-Pygments==2.11.1
+Pygments==2.11.2
 PyGObject==3.42.0
 PyNaCl==1.4.0
 pyOpenSSL==21.0.0
