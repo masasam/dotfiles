@@ -723,6 +723,7 @@ libssh2
 libstaroffice
 libstemmer
 libsynctex
+libsysprof-capture
 libtasn1
 libteam
 libthai
