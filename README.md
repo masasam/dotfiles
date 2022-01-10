@@ -419,6 +419,7 @@ You can make install from here
 	sudo pacman -S man-db baobab ioping mkcert code detox git-lfs
 	sudo pacman -S guetzli fabric gtop pass github-cli libvterm
 	sudo pacman -S perl-net-ip hex miller btop diffoscope dust
+	sudo pacman -S sslscan
 
 ![activity](https://raw.githubusercontent.com/masasam/image/image/activity.png)
 
