@@ -348,6 +348,7 @@ haskell-emojis
 haskell-erf
 haskell-errors
 haskell-file-embed
+haskell-ghc-bignum-orphans
 haskell-glob
 haskell-haddock-library
 haskell-hashable
