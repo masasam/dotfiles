@@ -952,7 +952,6 @@ portaudio
 postgresql
 postgresql-libs
 potrace
-power-profiles-daemon
 powertop
 ppp
 procps-ng
