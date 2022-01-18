@@ -4,6 +4,7 @@ ansible==5.2.0
 ansible-core==2.12.1
 apparmor==3.0.3
 appdirs==1.4.4
+asciidoc==10.1.1
 asn1crypto==1.4.0
 async-timeout==4.0.2
 attrs==21.3.0
@@ -96,7 +97,7 @@ PyGObject==3.42.0
 PyNaCl==1.4.0
 pyOpenSSL==21.0.0
 pyparsing==2.4.7
-pyrsistent==0.18.0
+pyrsistent==0.18.1
 python-dotenv==0.19.2
 python-jsonrpc-server==0.4.0
 PyYAML==5.4.1
