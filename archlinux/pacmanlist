@@ -802,6 +802,7 @@ linux
 linux-api-headers
 linux-docs
 linux-firmware
+linux-firmware-whence
 lldb
 llvm
 llvm-libs
