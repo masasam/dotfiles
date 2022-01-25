@@ -40,7 +40,7 @@ dephell-versioning==0.1.2
 diffoscope==201
 distlib==0.3.4
 distro==1.6.0
-dnspython==2.1.0
+dnspython==2.2.0
 docker==5.0.3
 docker-pycreds==0.4.0
 dockerpty==0.4.1
