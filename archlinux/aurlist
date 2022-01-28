@@ -12,6 +12,7 @@ ruby-build
 sequeler-git
 slack-desktop
 stern-bin
+stripe-cli-bin
 termite
 ttf-cica
 yay
