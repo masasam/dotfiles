@@ -1,9 +1,11 @@
 aalib
+abiword
 accountsservice
 acl
 adapta-gtk-theme
 adobe-source-code-pro-fonts
 adwaita-icon-theme
+aiksaurus
 alsa-card-profiles
 alsa-lib
 alsa-plugins
@@ -242,6 +244,7 @@ gnustep-base
 gnutls
 go
 gobject-introspection-runtime
+goffice
 goocanvas
 gopls
 gpaste
@@ -276,6 +279,7 @@ gtk-update-icon-cache
 gtk2
 gtk3
 gtk4
+gtkmathview
 gtkmm
 gtkmm3
 gtksourceview3
@@ -508,6 +512,7 @@ l-smash
 ladspa
 lame
 lapack
+lasem
 lcms2
 ldb
 ldns
@@ -670,6 +675,7 @@ libomxil-bellagio
 liborcus
 libosinfo
 libotf
+libots
 libp11-kit
 libpagemaker
 libpaper
@@ -798,6 +804,7 @@ libzip
 libzmf
 licenses
 lilv
+link-grammar
 linux
 linux-api-headers
 linux-docs
@@ -808,6 +815,7 @@ llvm
 llvm-libs
 lm_sensors
 lmdb
+loudmouth
 lpsolve
 lshw
 lsof
@@ -959,6 +967,7 @@ procps-ng
 proj
 protobuf
 protobuf-c
+psiconv
 psmisc
 pulseaudio
 pulseaudio-alsa
@@ -1258,6 +1267,7 @@ wmctrl
 woff2
 wpa_supplicant
 wpebackend-fdo
+wv
 x11-ssh-askpass
 x264
 x265
