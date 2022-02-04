@@ -82,7 +82,7 @@ paramiko==2.9.2
 parso==0.8.2
 pep517==0.12.0
 pexpect==4.8.0
-Pillow==9.0.0
+Pillow==9.0.1
 pluggy==0.13.1
 ply==3.11
 progress==1.6
