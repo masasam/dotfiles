@@ -11,7 +11,7 @@ attrs==21.4.0
 bcrypt==3.2.0
 blockdiag==2.0.1
 bowler==0.9.0
-btrfsutil==5.16
+btrfsutil==5.16.1
 CacheControl==0.12.6
 cached-property==1.5.2
 Cerberus==1.3.4
@@ -86,7 +86,7 @@ Pillow==9.0.1
 pluggy==0.13.1
 ply==3.11
 progress==1.6
-prompt-toolkit==3.0.26
+prompt-toolkit==3.0.27
 psutil==5.9.0
 ptyprocess==0.7.0
 pwquality==1.4.4
@@ -119,7 +119,7 @@ texttable==1.6.4
 tlsh==4.5.0
 toml==0.10.2
 tomli==2.0.0
-tomlkit==0.9.0
+tomlkit==0.9.1
 typing-extensions==4.0.1
 ujson==5.1.0
 urllib3==1.26.8
