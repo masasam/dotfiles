@@ -247,6 +247,7 @@ goffice
 goocanvas
 gopls
 gpaste
+gperf
 gpgme
 gpm
 gptfdisk
@@ -634,6 +635,7 @@ libldap
 liblouis
 liblqr
 liblrdf
+libltc
 libmanette
 libmaxminddb
 libmbim
@@ -672,6 +674,7 @@ libodfgen
 libofa
 libogg
 libomxil-bellagio
+libopenmpt
 liborcus
 libosinfo
 libotf
@@ -853,6 +856,7 @@ mcomix
 md4c
 mdadm
 mesa
+meson
 metis
 miller
 minizip
@@ -1095,6 +1099,7 @@ python-zipp
 python2
 python2-gobject
 qpdf
+qrencode
 qt5-base
 qt5-declarative
 qt5-location
