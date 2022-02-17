@@ -200,6 +200,7 @@ ibusmozc: ## Install ibus-mozc
 
 fcitx-mozc: ## Install fcitx-mozc
 	$(PACMAN) $@
+	sudo ln -vsf ${PWD}/etc/environment /etc/environment
 
 ttf-cica: ## Install Cica font
 	yay -S $@
