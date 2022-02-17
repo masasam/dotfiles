@@ -3,10 +3,7 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
-(add-hook 'python-mode-hook 'eglot-ensure)
-((python-mode
-  . ((eglot-workspace-configuration
-      . ((:pyls . (:plugins (:jedi_completion (:include_params t)))))))))
+(add-hook 'python-mode-hook #'lsp-deferred)
 
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
