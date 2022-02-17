@@ -202,7 +202,7 @@ fcitx-mozc: ## Install fcitx-mozc
 	$(PACMAN) $@
 
 ttf-cica: ## Install Cica font
-	$(PACMAN) $@
+	yay -S $@
 
 localhostssl: # Set ssl for localhost
 	mkcert -install
