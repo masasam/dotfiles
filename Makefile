@@ -198,6 +198,9 @@ ibusmozc: ## Install ibus-mozc
 	yay -S ibus-mozc
 	ibus-daemon -drx
 
+fcitx-mozc: ## Install fcitx-mozc
+	$(PACMAN) $@
+
 ttf-cica: ## Install Cica font
 	$(PACMAN) $@
 
@@ -550,7 +553,7 @@ testpath: ## Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: rclone gnupg ssh install init keyring urxvt xterm termite yay tlp thinkpad ttf-cica dnsmasq pipinstall goinstall ibusmozc neomutt docker nodeinstall zeal lvfs gcloud awsv2 toggle aur beekeeper kind eralchemy mpsyt gh
+allinstall: rclone gnupg ssh install init keyring urxvt xterm termite yay tlp thinkpad ttf-cica dnsmasq pipinstall goinstall fcitx-mozc neomutt docker nodeinstall zeal lvfs gcloud awsv2 toggle aur beekeeper kind eralchemy mpsyt gh
 
 nextinstall: chrome rubygem rbenv rustinstall postgresql maria-db mycli pgcli
 
