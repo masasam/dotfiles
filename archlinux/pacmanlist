@@ -89,6 +89,7 @@ code
 cogl
 colord
 colord-gtk
+colord-gtk-common
 compface
 compiler-rt
 composer
@@ -565,6 +566,7 @@ libdca
 libde265
 libdrm
 libdv
+libdvdcss
 libdvdnav
 libdvdread
 libe-book
@@ -979,6 +981,7 @@ pulseaudio-bluetooth
 pv
 pwgen
 pyenv
+pyright
 python
 python-aiohttp
 python-aiosignal
