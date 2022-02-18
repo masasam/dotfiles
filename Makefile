@@ -203,6 +203,8 @@ fcitx-mozc: ## Install fcitx-mozc
 	sudo ln -vsf ${PWD}/etc/environment /etc/environment
 	mkdir -p ${HOME}/.config/fcitx/addon
 	ln -vsf {${PWD},${HOME}}/.config/fcitx/addon/fcitx-clipboard.conf
+	test -L ${HOME}/.mozc || rm -rf ${HOME}/.mozc
+	ln -vsfn ${HOME}/backup/mozc ${HOME}/.mozc
 
 ttf-cica: ## Install Cica font
 	yay -S $@
