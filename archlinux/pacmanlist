@@ -156,7 +156,10 @@ faac
 faad2
 fabric
 fakeroot
+fcitx
+fcitx-mozc
 ffmpeg
+ffmpeg4.4
 fftw
 file
 file-roller
@@ -486,14 +489,11 @@ jasper
 java-environment-common
 java-runtime-common
 jbig2dec
-jdk-openjdk
 jdk11-openjdk
 jemalloc
 jhead
 jpegoptim
 jq
-jre-openjdk
-jre-openjdk-headless
 jre11-openjdk
 jre11-openjdk-headless
 js78

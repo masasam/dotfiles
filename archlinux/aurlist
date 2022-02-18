@@ -4,7 +4,6 @@ downgrade
 git-secrets
 google-chrome
 google-earth-pro
-ibus-mozc
 nvm
 python-language-server
 rbenv
@@ -13,7 +12,6 @@ ruby-build
 sequeler-git
 slack-desktop
 stern-bin
-stripe-cli-bin
 termite
 ttf-cica
 yay
