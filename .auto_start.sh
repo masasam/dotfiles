@@ -4,5 +4,5 @@
 # See ${PWD}/.config/autostart/autostart.desktop
 sleep 1
 xrdb -merge $HOME/.Xresources
-# xdotool key shift+space
+xdotool key shift+space
 exit
