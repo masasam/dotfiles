@@ -3,7 +3,9 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
-(add-hook 'python-mode-hook #'lsp-deferred)
+(add-hook 'python-mode-hook (lambda ()
+                          (require 'lsp-pyright)
+                          (lsp)))
 
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
