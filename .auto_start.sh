@@ -1,4 +1,3 @@
-
 #!/bin/bash
 # Script to apply .Xresources at GUI startup
 # See ${PWD}/.config/autostart/autostart.desktop
