@@ -861,6 +861,7 @@ mesa
 meson
 metis
 miller
+miniserve
 minizip
 mjpegtools
 mkcert
