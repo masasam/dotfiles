@@ -5,7 +5,7 @@
 
 (add-hook 'python-mode-hook (lambda ()
                           (require 'lsp-pyright)
-                          (lsp)))
+                          (lsp-deferred)))
 
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
