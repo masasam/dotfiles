@@ -5,7 +5,9 @@
 
 (setq ruby-insert-encoding-magic-comment nil)
 
-(add-hook 'ruby-mode-hook 'eglot-ensure)
+(require 'lsp-mode)
+(setq lsp-solargraph-use-bundler t)
+(add-hook 'ruby-mode-hook 'lsp)
 
 ;; projectile rails
 (projectile-rails-global-mode)
