@@ -4,7 +4,7 @@
 ;;(setq debug-on-error t)
 
 (require 'lsp-java)
-(add-hook 'java-mode-hook #'lsp)
+(add-hook 'java-mode-hook 'lsp-deferred)
 
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
