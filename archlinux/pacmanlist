@@ -116,6 +116,7 @@ dconf
 dconf-editor
 debian-archive-keyring
 debootstrap
+deno
 desktop-file-utils
 detox
 device-mapper
