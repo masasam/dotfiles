@@ -501,6 +501,9 @@ rails: rubygem rbenv ## Create rails project from scratch
 	bundle exec $@ new . --database=mysql --skip-test --skip-turbolinks
 	bundle exec $@ webpacker:install
 
+dvd: # Backup dvd media
+	sudo pacman -S libdvdcss dvdbackup
+
 tym: ## Init tym terminal
 	yay -S $@
 	mkdir -p ${HOME}/.config/$@
