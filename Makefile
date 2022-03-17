@@ -502,7 +502,7 @@ rails: rubygem rbenv ## Create rails project from scratch
 	bundle exec $@ webpacker:install
 
 dvd: # Backup dvd media
-	sudo pacman -S libdvdcss dvdbackup
+	$(PACMAN) libdvdcss dvdbackup
 
 tym: ## Init tym terminal
 	yay -S $@
