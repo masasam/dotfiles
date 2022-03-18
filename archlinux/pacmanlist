@@ -136,6 +136,7 @@ docker-compose
 dosfstools
 double-conversion
 dust
+dvdbackup
 e2fsprogs
 editorconfig-core-c
 efibootmgr
@@ -364,9 +365,15 @@ haskell-haddock-library
 haskell-hashable
 haskell-hourglass
 haskell-hslua
+haskell-hslua-classes
+haskell-hslua-core
+haskell-hslua-marshalling
 haskell-hslua-module-path
 haskell-hslua-module-system
 haskell-hslua-module-text
+haskell-hslua-module-version
+haskell-hslua-objectorientation
+haskell-hslua-packaging
 haskell-hsyaml
 haskell-http
 haskell-http-client
@@ -383,6 +390,7 @@ haskell-ipynb
 haskell-jira-wiki-markup
 haskell-juicypixels
 haskell-lexer
+haskell-lua
 haskell-memory
 haskell-mime-types
 haskell-mono-traversable
