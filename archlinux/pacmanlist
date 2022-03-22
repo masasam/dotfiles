@@ -161,6 +161,7 @@ fakeroot
 fcitx
 fcitx-mozc
 fdupes
+ffcall
 ffmpeg
 ffmpeg4.4
 fftw
@@ -391,6 +392,7 @@ haskell-jira-wiki-markup
 haskell-juicypixels
 haskell-lexer
 haskell-libyaml
+haskell-lpeg
 haskell-lua
 haskell-memory
 haskell-mime-types
@@ -846,6 +848,7 @@ lua52-lpeg
 lua52-luajson
 lua52-socket
 lua53
+lua53-lpeg
 luajit
 luit
 lv2
