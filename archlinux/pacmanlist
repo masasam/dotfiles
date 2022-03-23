@@ -366,6 +366,7 @@ haskell-haddock-library
 haskell-hashable
 haskell-hourglass
 haskell-hslua
+haskell-hslua-aeson
 haskell-hslua-classes
 haskell-hslua-core
 haskell-hslua-marshalling
@@ -401,6 +402,7 @@ haskell-network
 haskell-network-uri
 haskell-old-locale
 haskell-old-time
+haskell-pandoc-lua-marshal
 haskell-pandoc-types
 haskell-pem
 haskell-pretty-show

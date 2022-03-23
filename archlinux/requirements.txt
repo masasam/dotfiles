@@ -70,7 +70,7 @@ louis==3.21.0
 m2r==0.2.1
 Markdown==3.3.6
 MarkupSafe==2.1.0
-meson==0.61.3
+meson==0.62.0
 mistune==0.8.4
 more-itertools==8.10.0
 moreorless==0.4.0
@@ -96,7 +96,7 @@ Pygments==2.11.2
 PyGObject==3.42.0
 PyNaCl==1.4.0
 pyOpenSSL==21.0.0
-pyparsing==3.0.3
+pyparsing==3.0.4
 pyrsistent==0.18.1
 python-dotenv==0.19.2
 python-jsonrpc-server==0.4.0
