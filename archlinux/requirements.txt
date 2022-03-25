@@ -96,9 +96,9 @@ Pygments==2.11.2
 PyGObject==3.42.0
 PyNaCl==1.4.0
 pyOpenSSL==22.0.0
-pyparsing==3.0.5
+pyparsing==3.0.7
 pyrsistent==0.18.1
-python-dotenv==0.19.2
+python-dotenv==0.20.0
 python-jsonrpc-server==0.4.0
 PyYAML==6.0
 requests==2.27.1
