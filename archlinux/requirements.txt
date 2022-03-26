@@ -37,7 +37,7 @@ dephell-shells==0.1.5
 dephell-specifier==0.2.2
 dephell-venvs==0.1.18
 dephell-versioning==0.1.2
-diffoscope==207
+diffoscope==208
 distlib==0.3.4
 distro==1.7.0
 dnspython==2.2.0
@@ -59,7 +59,7 @@ idna==3.3
 importlib-metadata==4.8.1
 invoke==1.6.0
 jedi==0.18.1
-Jinja2==3.0.3
+Jinja2==3.1.0
 jsonschema==3.2.0
 lensfun==0.3.3
 lexicon==2.0.0
