@@ -464,7 +464,7 @@ emacs-devel: ## Install development version of emacs
 	rm -rf ${HOME}/.emacs.d/elpa
 
 screenkey: ## Init screenkey
-	yay -S screenkey
+	$(PACMAN) $@
 	mkdir -p ${HOME}/.config
 	ln -vsf ${PWD}/.config/screenkey.json ${HOME}/.config/screenkey.json
 
