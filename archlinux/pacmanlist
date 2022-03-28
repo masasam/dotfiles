@@ -1168,6 +1168,7 @@ rxvt-unicode-terminfo
 sbc
 sbcl
 screen
+screenkey
 sdl
 sdl2
 seahorse
