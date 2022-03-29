@@ -1,7 +1,7 @@
 aiohttp==3.8.1
 aiosignal==1.2.0
 ansible==5.5.0
-ansible-core==2.12.3
+ansible-core==2.12.4
 apparmor==3.0.4
 appdirs==1.4.4
 asciidoc==10.1.4
@@ -37,7 +37,7 @@ dephell-shells==0.1.5
 dephell-specifier==0.2.2
 dephell-venvs==0.1.18
 dephell-versioning==0.1.2
-diffoscope==208
+diffoscope==209
 distlib==0.3.4
 distro==1.7.0
 dnspython==2.2.0
@@ -120,7 +120,7 @@ texttable==1.6.4
 tlsh==4.5.0
 toml==0.10.2
 tomli==2.0.1
-tomlkit==0.10.0
+tomlkit==0.10.1
 typing-extensions==4.1.0
 ujson==5.1.0
 urllib3==1.26.9
