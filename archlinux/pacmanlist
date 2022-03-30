@@ -685,6 +685,7 @@ libnice
 libnl
 libnm
 libnma
+libnma-common
 libnotify
 libnsl
 libnumbertext
@@ -879,6 +880,7 @@ mesa
 meson
 metis
 miller
+mimalloc
 miniserve
 minizip
 mjpegtools
@@ -888,6 +890,7 @@ mkinitcpio-busybox
 mlocate
 mobile-broadband-provider-info
 modemmanager
+mold
 mosh
 mpfr
 mpg123
@@ -1176,6 +1179,7 @@ sed
 semver
 seqdiag
 serd
+serverless
 shaderc
 shadow
 shared-color-targets
