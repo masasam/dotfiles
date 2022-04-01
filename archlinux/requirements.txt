@@ -132,4 +132,5 @@ webencodings==0.5.1
 websocket-client==1.2.3
 yarl==1.7.2
 yaspin==2.1.0
+youtube-dl==2021.12.17
 zipp==3.7.0
