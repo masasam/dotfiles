@@ -873,7 +873,6 @@ mariadb-clients
 mariadb-libs
 mathjax
 mbedtls
-mcomix
 md4c
 mdadm
 mesa
@@ -1212,7 +1211,6 @@ sudo
 suitesparse
 svt-av1
 svt-hevc
-sylpheed
 syncthing
 sysfsutils
 systemd

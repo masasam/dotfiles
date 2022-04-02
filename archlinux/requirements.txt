@@ -18,7 +18,7 @@ Cerberus==1.3.4
 cffi==1.15.0
 chardet==4.0.0
 charset-normalizer==2.0.10
-click==8.1.0
+click==8.1.2
 colorama==0.4.4
 contextlib2==0.6.0.post1
 cryptography==36.0.2
@@ -46,7 +46,7 @@ docker-pycreds==0.4.0
 dockerpty==0.4.1
 docopt==0.6.2
 docutils==0.16
-fabric==2.6.0
+fabric==2.7.0
 file-magic==0.4.0
 fissix==21.6.6
 fluidity-sm==0.2.1
@@ -82,7 +82,7 @@ paramiko==2.9.2
 parso==0.8.2
 pep517==0.12.0
 pexpect==4.8.0
-Pillow==9.0.1
+Pillow==9.1.0
 pluggy==1.0.0
 ply==3.11
 progress==1.6
@@ -129,7 +129,7 @@ volatile==2.1.0
 wcwidth==0.2.5
 webcolors==1.11.1
 webencodings==0.5.1
-websocket-client==1.2.3
+websocket-client==1.3.2
 yarl==1.7.2
 yaspin==2.1.0
 youtube-dl==2021.12.17
