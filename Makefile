@@ -191,6 +191,7 @@ keyring: ${HOME}/.local ## Init gnome keyrings
 	ln -vsfn ${HOME}/{backup,.local/share}/keyrings
 
 ibusmozc: ## Install ibus-mozc
+	sudo ln -vsf ${PWD}/etc/environment /etc/environment
 	test -L ${HOME}/.mozc || rm -rf ${HOME}/.mozc
 	ln -vsfn ${HOME}/backup/mozc ${HOME}/.mozc
 	mkdir -p ${HOME}/.config/autostart
