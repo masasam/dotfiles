@@ -142,6 +142,7 @@ editorconfig-core-c
 efibootmgr
 efivar
 electron
+electron17
 elfutils
 elinks
 emacs
