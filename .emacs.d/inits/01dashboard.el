@@ -20,7 +20,7 @@
                              (bookmarks . 5)
                              (agenda    . 5)))
   (dashboard-setup-startup-hook)
-  (global-page-break-lines-mode)
+
   (setq dashboard-page-separator "\n\f\f\n"))
 
 ;; Local Variables:
