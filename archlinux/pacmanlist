@@ -28,6 +28,7 @@ at-spi2-atk
 at-spi2-core
 atk
 atkmm
+atool
 attr
 audit
 autoconf
@@ -90,6 +91,7 @@ cogl
 colord
 colord-gtk
 colord-gtk-common
+colord-gtk4
 compface
 compiler-rt
 composer
@@ -232,9 +234,12 @@ gmp
 gnome-autoar
 gnome-backgrounds
 gnome-bluetooth
+gnome-bluetooth-3.0
 gnome-color-manager
 gnome-control-center
 gnome-desktop
+gnome-desktop-4
+gnome-desktop-common
 gnome-disk-utility
 gnome-keyring
 gnome-logs
@@ -514,6 +519,7 @@ jq
 jre11-openjdk
 jre11-openjdk-headless
 js78
+js91
 json-c
 json-glib
 jsoncpp
@@ -540,6 +546,7 @@ less
 lhasa
 lib2geom
 libabw
+libadwaita
 libaec
 libaio
 libappindicator-gtk3
@@ -624,6 +631,7 @@ libgtop
 libgudev
 libgusb
 libgweather
+libgweather-4
 libgxps
 libhandy
 libhandy0
@@ -687,6 +695,7 @@ libnl
 libnm
 libnma
 libnma-common
+libnma-gtk4
 libnotify
 libnsl
 libnumbertext
