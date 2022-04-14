@@ -560,6 +560,7 @@ libavif
 libavtp
 libblockdev
 libbluray
+libbpf
 libbs2b
 libbsd
 libbytesize
