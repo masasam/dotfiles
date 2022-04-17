@@ -51,6 +51,7 @@ blas
 blockdiag
 bluez
 bluez-libs
+bluez-utils
 bolt
 bookworm
 boost-libs
