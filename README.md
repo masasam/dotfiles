@@ -359,7 +359,7 @@ Run the following after set the ssh key
 
     sudo pacman -S dconf-editor
 
-	dconf write /org/gnome/desktop/input-sources/xkb-options "['ctrl:swapcaps']"
+	dconf write /org/gnome/desktop/input-sources/xkb-options "['ctrl:nocaps']"
 	dconf write /org/gnome/desktop/interface/gtk-theme "'Adwaita-dark'"
 	dconf write /org/gnome/desktop/interface/gtk-key-theme "'Emacs'"
 	dconf write /org/gnome/desktop/interface/text-scaling-factor 1.25
