@@ -94,7 +94,7 @@ pwquality==1.4.4
 pycairo==1.21.0
 pycparser==2.21
 Pygments==2.11.2
-PyGObject==3.42.0
+PyGObject==3.42.1
 PyNaCl==1.4.0
 pyOpenSSL==22.0.0
 pyparsing==3.0.8
