@@ -420,7 +420,7 @@ You can make install from here
 	sudo pacman -S guetzli fabric gtop pass github-cli libvterm
 	sudo pacman -S perl-net-ip hex miller btop diffoscope dust
 	sudo pacman -S sslscan abiword pyright miniserve fdupes deno
-	sudo pacman -S serverless mold
+	sudo pacman -S serverless mold fx
 
 ![activity](https://raw.githubusercontent.com/masasam/image/image/activity.png)
 
