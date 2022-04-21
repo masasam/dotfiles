@@ -689,7 +689,7 @@ With this it will not have to be set again.
     ibus-setup
 
 Open the emoji tab
-Since ctrl-;(semicolon) is set in the shortcut of emoji ruby, delete it.
+Since <Control>semicolon is set in the shortcut of emoji ruby, delete it.
 
 ## How to test Makefile
 
