@@ -162,7 +162,6 @@ faad2
 fabric
 fakeroot
 fcitx
-fcitx-mozc
 fdupes
 ffcall
 ffmpeg
@@ -191,6 +190,7 @@ fuse-common
 fuse3
 fwupd
 fwupd-efi
+fx
 fzf
 gauche
 gavl
