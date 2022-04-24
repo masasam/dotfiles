@@ -389,7 +389,7 @@ terraformer: ## Install terraformer
 	sudo install -m 755 $@-aws-linux-amd64 /usr/local/bin/$@ && rm $@-aws-linux-amd64
 
 bluetooth: # Setup bluetooth for AS801 by AfterShokz
-	$(PACMAN) bluez
+	$(PACMAN) bluez bluez-utils
 	$(SYSTEMD_ENABLE) $@
 
 desktop: ## Update desktop entry
