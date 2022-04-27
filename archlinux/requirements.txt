@@ -1,6 +1,6 @@
 aiohttp==3.8.1
 aiosignal==1.2.0
-ansible==5.6.0
+ansible==5.7.0
 ansible-core==2.12.5
 apparmor==3.0.4
 appdirs==1.4.4
@@ -40,7 +40,7 @@ dephell-versioning==0.1.2
 diffoscope==210
 distlib==0.3.4
 distro==1.7.0
-dnspython==2.2.0
+dnspython==2.2.1
 docker==5.0.3
 docker-pycreds==0.4.0
 dockerpty==0.4.1
