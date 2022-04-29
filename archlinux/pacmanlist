@@ -568,6 +568,7 @@ libcaca
 libcanberra
 libcap
 libcap-ng
+libcbor
 libcddb
 libcdio
 libcdio-paranoia
