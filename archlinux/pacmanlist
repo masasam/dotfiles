@@ -1182,7 +1182,7 @@ sbc
 sbcl
 screen
 screenkey
-sdl
+sdl12-compat
 sdl2
 seahorse
 sed
