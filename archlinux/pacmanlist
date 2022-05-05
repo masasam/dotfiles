@@ -14,6 +14,7 @@ alsa-ucm-conf
 alsa-utils
 aom
 apparmor
+appstream-glib
 arc-gtk-theme
 arch-install-scripts
 archlinux-keyring
@@ -177,6 +178,7 @@ firejail
 flac
 flameshot
 flashrom
+flatpak
 flex
 fluidsynth
 fontconfig
@@ -186,6 +188,7 @@ freetype2
 frei0r-plugins
 fribidi
 fuse-common
+fuse2
 fuse3
 fwupd
 fwupd-efi
@@ -877,6 +880,7 @@ m2r
 m4
 mailcap
 make
+malcontent
 man-db
 mapnik
 mariadb
@@ -952,6 +956,7 @@ optipng
 opus
 orc
 osinfo-db
+ostree
 otf-ipafont
 p11-kit
 p7zip
@@ -1323,6 +1328,9 @@ xcb-util-renderutil
 xcb-util-wm
 xclip
 xdg-dbus-proxy
+xdg-desktop-portal
+xdg-desktop-portal-gnome
+xdg-desktop-portal-gtk
 xdg-user-dirs
 xdg-utils
 xdotool
