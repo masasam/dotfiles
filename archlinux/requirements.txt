@@ -79,7 +79,7 @@ msgpack==1.0.3
 multidict==6.0.2
 ordered-set==4.0.2
 packaging==21.3
-paramiko==2.9.2
+paramiko==2.10.1
 parso==0.8.2
 pep517==0.12.0
 pexpect==4.8.0
