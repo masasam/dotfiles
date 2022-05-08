@@ -68,7 +68,7 @@ libarchive-c==4.0
 lit==13.0.1.dev0
 louis==3.21.0
 m2r==0.2.1
-Markdown==3.3.6
+Markdown==3.3.7
 MarkupSafe==2.1.1
 mcomix==2.0.1
 meson==0.62.1
