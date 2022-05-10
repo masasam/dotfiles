@@ -391,6 +391,7 @@ terraformer: ## Install terraformer
 bluetooth: # Setup bluetooth for AS801 by AfterShokz
 	$(PACMAN) bluez bluez-utils
 	$(SYSTEMD_ENABLE) $@
+	sudo ln -vsf ${PWD}/etc/bluetooth/main.conf /etc/bluetooth/main.conf
 
 desktop: ## Update desktop entry
 	for item in vim xterm uxterm urxvt urxvtc urxvt-tabbed; do
