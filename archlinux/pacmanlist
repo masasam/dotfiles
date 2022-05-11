@@ -990,7 +990,6 @@ php
 php-intl
 pinentry
 pipewire
-pipewire-media-session
 pixman
 pkgconf
 pkgfile
@@ -1309,6 +1308,7 @@ wget
 which
 whois
 wildmidi
+wireplumber
 wireshark-cli
 wmctrl
 woff2

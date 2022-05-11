@@ -9,7 +9,7 @@ asn1crypto==1.5.1
 async-timeout==4.0.2
 attrs==21.4.0
 bcrypt==3.2.0
-blockdiag==2.0.1
+blockdiag==3.0.0
 bowler==0.9.0
 btrfsutil==5.17
 CacheControl==0.12.6
@@ -108,7 +108,7 @@ retrying==1.3.3
 ruamel.yaml==0.17.21
 ruamel.yaml.clib==0.2.6
 screenkey==1.5
-seqdiag==2.0.0
+seqdiag==3.0.0
 sh==1.14.2
 shellingham==1.4.0
 six==1.16.0
