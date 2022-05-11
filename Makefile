@@ -185,6 +185,9 @@ thinkpad: ## Workaround for Intel throttling issues in Linux
 	$(PACMAN) throttled
 	$(SYSTEMD_ENABLE) lenovo_fix.service
 
+wireplumber: ## Workaroud for wireplumber problem
+	sudo systemctl --user mask wireplumber --now
+
 keyring: ${HOME}/.local ## Init gnome keyrings
 	$(PACMAN) seahorse
 	test -L ${HOME}/.local/share/keyrings || rm -rf ${HOME}/.local/share/keyrings
