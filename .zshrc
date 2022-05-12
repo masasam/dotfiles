@@ -888,6 +888,16 @@ function yarncleanup() {
     yarn global remove $(yarn global list | grep info | sed 's/^info "\(.*\)@.*".*$/\1/')
 }
 
+
+function dirsum() {
+    if [ $# = 1 ]; then
+	find $1 -type f -print0 | xargs -0 shasum | awk '{print $1}' | sort | shasum
+    else
+	echo 'usage: dirsum [directory]'
+    fi	
+}
+
+
 # zsh-syntax-highlighting(pacman -S zsh-syntax-highlighting)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # zsh-completions for aws
