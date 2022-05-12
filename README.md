@@ -355,6 +355,10 @@ Run the following after set the ssh key
 	cd ~/Pictures
 	git clone -b image git@github.com:masasam/image.git
 
+Audio setting
+
+	sudo pacman -S pipewire-pulse
+
 ### dconf setting
 
     sudo pacman -S dconf-editor
