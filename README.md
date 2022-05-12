@@ -312,6 +312,10 @@ Preparing the net environment
 	pacman -S networkmanager
 	systemctl enable NetworkManager.service
 	pacman -S otf-ipafont
+
+Audio setting
+
+	sudo pacman -S pipewire-pulse pipewire-media-session
 	exit
 	reboot
 
@@ -354,10 +358,6 @@ Run the following after set the ssh key
 	# Below is for posting images of github
 	cd ~/Pictures
 	git clone -b image git@github.com:masasam/image.git
-
-Audio setting
-
-	sudo pacman -S pipewire-pulse pipewire-media-session
 
 ### dconf setting
 
