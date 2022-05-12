@@ -185,12 +185,8 @@ thinkpad: ## Workaround for Intel throttling issues in Linux
 	$(PACMAN) throttled
 	$(SYSTEMD_ENABLE) lenovo_fix.service
 
-pipewire-media-session: ## new sound session manager
-	$(PACMAN) pipewire-media-session
-
-wireplumber: ## Workaroud for wireplumber problem
-	$(PACMAN) wireplumber
-	sudo systemctl --user mask wireplumber --now
+pipewire-pulse: ## Install pipewire-pulse
+	$(PACMAN) pipewire-pulse
 
 keyring: ${HOME}/.local ## Init gnome keyrings
 	$(PACMAN) seahorse
@@ -587,7 +583,7 @@ testpath: ## Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: rclone gnupg ssh install init keyring urxvt xterm termite yay tlp thinkpad pipewire-media-session ttf-cica dnsmasq pipinstall goinstall fcitx-mozc neomutt docker nodeinstall zeal lvfs gcloud awsv2 toggle aur beekeeper kind eralchemy mpsyt gh
+allinstall: rclone gnupg ssh install init keyring urxvt xterm termite yay tlp thinkpad pipewire-pulse ttf-cica dnsmasq pipinstall goinstall fcitx-mozc neomutt docker nodeinstall zeal lvfs gcloud awsv2 toggle aur beekeeper kind eralchemy mpsyt gh
 
 nextinstall: chrome rubygem rbenv rustinstall postgresql maria-db mycli pgcli
 
