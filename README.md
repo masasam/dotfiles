@@ -357,7 +357,7 @@ Run the following after set the ssh key
 
 Audio setting
 
-	sudo pacman -S pipewire-pulse
+	sudo pacman -S pipewire-pulse pipewire-media-session
 
 ### dconf setting
 

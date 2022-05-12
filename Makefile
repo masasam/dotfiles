@@ -186,7 +186,7 @@ thinkpad: ## Workaround for Intel throttling issues in Linux
 	$(SYSTEMD_ENABLE) lenovo_fix.service
 
 pipewire-pulse: ## Install pipewire-pulse
-	$(PACMAN) pipewire-pulse
+	$(PACMAN) pipewire-pulse pipewire-media-session
 
 keyring: ${HOME}/.local ## Init gnome keyrings
 	$(PACMAN) seahorse
