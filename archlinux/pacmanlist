@@ -991,6 +991,7 @@ php-intl
 pinentry
 pipewire
 pipewire-media-session
+pipewire-pulse
 pixman
 pkgconf
 pkgfile
@@ -1012,9 +1013,7 @@ protobuf
 protobuf-c
 psiconv
 psmisc
-pulseaudio
 pulseaudio-alsa
-pulseaudio-bluetooth
 pv
 pwgen
 pyenv
