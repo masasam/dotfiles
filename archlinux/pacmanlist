@@ -120,6 +120,7 @@ dconf
 dconf-editor
 debian-archive-keyring
 debootstrap
+debuginfod
 deno
 desktop-file-utils
 detox
@@ -183,6 +184,7 @@ flex
 fluidsynth
 fontconfig
 fping
+freeglut
 freerdp
 freetype2
 frei0r-plugins
