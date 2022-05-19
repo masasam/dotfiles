@@ -424,7 +424,7 @@ You can make install from here
 	sudo pacman -S guetzli fabric gtop pass github-cli libvterm
 	sudo pacman -S perl-net-ip hex miller btop diffoscope dust
 	sudo pacman -S sslscan abiword pyright miniserve fdupes deno
-	sudo pacman -S serverless mold fx
+	sudo pacman -S serverless mold fx httpie
 
 ![activity](https://raw.githubusercontent.com/masasam/image/image/activity.png)
 
@@ -472,7 +472,6 @@ You can make install from here
 	pip install --user faker
 	pip install --user flake8
 	pip install --user graph-cli
-	pip install --user httpie
 	pip install --user importmagic
 	pip install --user ipywidgets
 	pip install --user jedi
