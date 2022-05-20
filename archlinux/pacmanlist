@@ -480,6 +480,7 @@ highlight
 hspell
 htop
 http-parser
+httpie
 hub
 hugo
 hunspell
@@ -670,6 +671,7 @@ liblouis
 liblqr
 liblrdf
 libltc
+libmalcontent
 libmanette
 libmaxminddb
 libmbim
@@ -1038,6 +1040,7 @@ python-chardet
 python-charset-normalizer
 python-click
 python-colorama
+python-commonmark
 python-contextlib2
 python-cryptography
 python-defusedxml
@@ -1109,9 +1112,12 @@ python-pynacl
 python-pyopenssl
 python-pyparsing
 python-pyrsistent
+python-pysocks
 python-requests
+python-requests-toolbelt
 python-resolvelib
 python-retrying
+python-rich
 python-ruamel-yaml
 python-ruamel.yaml.clib
 python-setuptools
