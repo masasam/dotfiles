@@ -1,7 +1,7 @@
 aiohttp==3.8.1
 aiosignal==1.2.0
 ansible==5.8.0
-ansible-core==2.12.5
+ansible-core==2.12.6
 apparmor==3.0.4
 appdirs==1.4.4
 asciidoc==10.1.4
@@ -72,7 +72,7 @@ louis==3.21.0
 m2r==0.2.1
 Markdown==3.3.7
 MarkupSafe==2.1.1
-mcomix==2.0.1
+mcomix==2.0.2
 meson==0.62.1
 mistune==0.8.4
 more-itertools==8.12.0
