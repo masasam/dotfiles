@@ -60,7 +60,6 @@ httpie==3.2.1
 idna==3.3
 importlib-metadata==4.8.1
 invoke==1.6.0
-jedi==0.18.1
 Jinja2==3.0.3
 jsonschema==3.2.0
 lensfun==0.3.3
@@ -82,11 +81,9 @@ multidict==6.0.2
 ordered-set==4.0.2
 packaging==21.3
 paramiko==2.11.0
-parso==0.8.2
 pep517==0.12.0
 pexpect==4.8.0
-Pillow==9.1.0
-pluggy==1.0.0
+Pillow==9.1.1
 ply==3.11
 progress==1.6
 prompt-toolkit==3.0.28
@@ -103,7 +100,6 @@ pyparsing==3.0.9
 pyrsistent==0.18.1
 PySocks==1.7.1
 python-dotenv==0.20.0
-python-jsonrpc-server==0.4.0
 PyYAML==6.0
 requests==2.27.1
 requests-toolbelt==0.9.1
@@ -126,9 +122,8 @@ texttable==1.6.4
 tlsh==4.5.0
 toml==0.10.2
 tomli==2.0.1
-tomlkit==0.10.2
+tomlkit==0.11.0
 typing-extensions==4.2.0
-ujson==5.3.0
 urllib3==1.26.9
 vimiv==0.9.1
 volatile==2.1.0

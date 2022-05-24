@@ -1078,9 +1078,7 @@ python-html5lib
 python-idna
 python-importlib-metadata
 python-invoke
-python-jedi
 python-jinja
-python-jsonrpc-server
 python-jsonschema
 python-lexicon
 python-libarchive-c
@@ -1095,12 +1093,10 @@ python-multidict
 python-ordered-set
 python-packaging
 python-paramiko
-python-parso
 python-pep517
 python-pexpect
 python-pillow
 python-pip
-python-pluggy
 python-ply
 python-progress
 python-prompt_toolkit
@@ -1132,7 +1128,6 @@ python-toml
 python-tomli
 python-tomlkit
 python-typing_extensions
-python-ujson
 python-urllib3
 python-volatile
 python-wcwidth
