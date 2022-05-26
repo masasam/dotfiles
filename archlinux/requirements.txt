@@ -4,7 +4,7 @@ ansible==5.8.0
 ansible-core==2.12.6
 apparmor==3.0.4
 appdirs==1.4.4
-asciidoc==10.1.4
+asciidoc==10.2.0
 asn1crypto==1.5.1
 async-timeout==4.0.2
 attrs==21.4.0
@@ -60,7 +60,7 @@ httpie==3.2.1
 idna==3.3
 importlib-metadata==4.8.1
 invoke==1.6.0
-Jinja2==3.0.3
+Jinja2==3.1.2
 jsonschema==3.2.0
 lensfun==0.3.3
 lexicon==2.0.0
