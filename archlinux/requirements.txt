@@ -22,7 +22,7 @@ click==8.1.3
 colorama==0.4.4
 commonmark==0.9.1
 contextlib2==0.6.0.post1
-cryptography==37.0.0
+cryptography==37.0.1
 defusedxml==0.7.1
 dephell==0.8.3
 dephell-archive==0.1.7
@@ -38,7 +38,7 @@ dephell-shells==0.1.5
 dephell-specifier==0.2.2
 dephell-venvs==0.1.18
 dephell-versioning==0.1.2
-diffoscope==213
+diffoscope==214
 distlib==0.3.4
 distro==1.7.0
 dnspython==2.2.1
@@ -86,7 +86,7 @@ pexpect==4.8.0
 Pillow==9.1.1
 ply==3.11
 progress==1.6
-prompt-toolkit==3.0.28
+prompt-toolkit==3.0.29
 psutil==5.9.0
 ptyprocess==0.7.0
 pwquality==1.4.4
