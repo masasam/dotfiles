@@ -1,12 +1,11 @@
 export PATH := ${HOME}/.local/bin:${HOME}/.node_modules/bin:${HOME}/.cargo/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/bin/core_perl:${HOME}/bin:${HOME}/google-cloud-sdk/bin
 export GOPATH := ${HOME}
 
-NODE_PKGS	:= babel-eslint bash-language-server cloc create-nuxt-app create-react-app webpack
+NODE_PKGS	:= babel-eslint cloc create-nuxt-app create-react-app webpack firebase-tools now
 NODE_PKGS	+= dockerfile-language-server-nodejs eslint eslint-cli eslint-config-vue netlify-cli
-NODE_PKGS	+= eslint-plugin-react eslint-plugin-vue@next expo-cli firebase-tools fx heroku 
+NODE_PKGS	+= eslint-plugin-react eslint-plugin-vue@next expo-cli fx heroku ngrok prettier
 NODE_PKGS	+= indium intelephense javascript-typescript-langserver logo.svg @marp-team/marp-cli
-NODE_PKGS	+= mermaid mermaid.cli ngrok now prettier parcel-bundler typescript-language-server
-NODE_PKGS	+= @vue/cli vue-language-server vue-native-cli jshint
+NODE_PKGS	+= mermaid mermaid.cli jshint parcel-bundler typescript-language-server
 
 PIP_PKGS	:= ansible ansible-lint beautifulsoup4 black cheat chromedriver-binary diagrams django djangorestframework
 PIP_PKGS	+= django-nested-admin django-ses faker gif-for-cli graph-cli importmagic ipywidgets virtualenvwrapper
@@ -32,6 +31,7 @@ PACKAGES	+= smartmontools gnome-logs wireshark-cli wl-clipboard lsof mapnik edit
 PACKAGES	+= gtop gopls convmv mpv browserpass-firefox man-db baobab ioping ruby-irb mkcert code findomain
 PACKAGES	+= guetzli fabric python-language-server detox usleep libvterm bind asunder lame git-lfs hex miller
 PACKAGES	+= diffoscope dust rbw exa sslscan abiword pyright miniserve fdupes deno serverless mold fx httpie
+PACKAGES	+= bash-language-server
 
 BASE_PKGS	:= filesystem gcc-libs glibc bash coreutils file findutils gawk grep procps-ng sed tar gettext
 BASE_PKGS	+= pciutils psmisc shadow util-linux bzip2 gzip xz licenses pacman systemd systemd-sysvcompat 
