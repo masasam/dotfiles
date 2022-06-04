@@ -424,7 +424,7 @@ You can make install from here
 	sudo pacman -S guetzli fabric gtop pass github-cli libvterm
 	sudo pacman -S perl-net-ip hex miller btop diffoscope dust
 	sudo pacman -S sslscan abiword pyright miniserve fdupes deno
-	sudo pacman -S serverless mold fx httpie
+	sudo pacman -S serverless mold fx httpie bash-language-server
 
 ![activity](https://raw.githubusercontent.com/masasam/image/image/activity.png)
 
@@ -535,7 +535,6 @@ You can make install from here
 
 	mkdir -p ${HOME}/.node_modules
 	yarn global add babel-eslint
-	yarn global add bash-language-server
 	yarn global add cloc
 	yarn global add create-component-app
 	yarn global add create-nuxt-app
