@@ -41,6 +41,7 @@ baobab
 base
 bash
 bash-completion
+bash-language-server
 bat
 bazel
 bc
