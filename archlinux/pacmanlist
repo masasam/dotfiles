@@ -954,6 +954,7 @@ opencv
 openexr
 openjpeg2
 openmpi
+openpmix
 openssh
 openssl
 optipng
