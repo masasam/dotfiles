@@ -792,6 +792,7 @@ libuv
 libva
 libva-utils
 libvdpau
+libverto
 libvisio
 libvisual
 libvncserver
