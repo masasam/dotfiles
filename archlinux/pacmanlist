@@ -1080,6 +1080,9 @@ python-html5lib
 python-idna
 python-importlib-metadata
 python-invoke
+python-jaraco.context
+python-jaraco.functools
+python-jaraco.text
 python-jinja
 python-jsonschema
 python-lexicon
@@ -1092,6 +1095,7 @@ python-more-itertools
 python-moreorless
 python-msgpack
 python-multidict
+python-nspektr
 python-ordered-set
 python-packaging
 python-paramiko
