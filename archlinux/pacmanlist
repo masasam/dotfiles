@@ -1134,8 +1134,10 @@ python-tlsh
 python-toml
 python-tomli
 python-tomlkit
+python-trove-classifiers
 python-typing_extensions
 python-urllib3
+python-validate-pyproject
 python-volatile
 python-wcwidth
 python-webcolors
