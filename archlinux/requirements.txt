@@ -1,7 +1,7 @@
 aiohttp==3.8.1
 aiosignal==1.2.0
 ansible==5.9.0
-ansible-core==2.12.6
+ansible-core==2.12.7
 apparmor==3.0.4
 appdirs==1.4.4
 asciidoc==10.2.0
