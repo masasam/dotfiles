@@ -38,7 +38,7 @@ dephell-shells==0.1.5
 dephell-specifier==0.2.2
 dephell-venvs==0.1.18
 dephell-versioning==0.1.2
-diffoscope==216
+diffoscope==217
 distlib==0.3.4
 distro==1.7.0
 dnspython==2.2.1
@@ -118,7 +118,7 @@ sh==1.14.2
 shellingham==1.4.0
 six==1.16.0
 sshuttle==1.1.0
-tabulate==0.8.9
+tabulate==0.8.10
 TBB==0.2
 team==1.0
 termcolor==1.1.0

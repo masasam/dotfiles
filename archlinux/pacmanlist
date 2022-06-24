@@ -141,6 +141,7 @@ docker
 docker-compose
 dosfstools
 double-conversion
+duktape
 dust
 dvdbackup
 e2fsprogs
