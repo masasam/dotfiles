@@ -51,6 +51,7 @@ binutils
 bison
 blas
 blockdiag
+blosc
 bluez
 bluez-libs
 bluez-utils
