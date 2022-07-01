@@ -1040,6 +1040,7 @@ python-cachecontrol
 python-cached-property
 python-cairo
 python-cerberus
+python-certifi
 python-cffi
 python-chardet
 python-charset-normalizer
@@ -1106,6 +1107,7 @@ python-pep517
 python-pexpect
 python-pillow
 python-pip
+python-platformdirs
 python-ply
 python-progress
 python-prompt_toolkit
@@ -1130,6 +1132,7 @@ python-sh
 python-shellingham
 python-six
 python-tabulate
+python-tenacity
 python-termcolor
 python-texttable
 python-tlsh
