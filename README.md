@@ -315,7 +315,7 @@ Preparing the net environment
 
 Audio setting
 
-	sudo pacman -S pipewire-pulse pipewire-media-session
+	sudo pacman -S pipewire-pulse
 	exit
 	reboot
 
