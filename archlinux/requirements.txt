@@ -70,7 +70,7 @@ lensfun==0.3.3
 lexicon==2.0.0
 LibAppArmor==3.0.4
 libarchive-c==4.0
-lit==13.0.1.dev0
+lit==14.0.6.dev0
 louis==3.22.0
 m2r==0.2.1
 Markdown==3.3.7
@@ -92,7 +92,7 @@ Pillow==9.1.1
 platformdirs==2.5.1
 ply==3.11
 progress==1.6
-prompt-toolkit==3.0.29
+prompt-toolkit==3.0.30
 psutil==5.9.1
 ptyprocess==0.7.0
 pwquality==1.4.4
