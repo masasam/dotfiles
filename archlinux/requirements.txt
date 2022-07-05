@@ -16,11 +16,11 @@ CacheControl==0.12.6
 cached-property==1.5.2
 Cerberus==1.3.4
 certifi==2022.6.15
-cffi==1.15.0
+cffi==1.15.1
 chardet==4.0.0
 charset-normalizer==2.1.0
 click==8.1.3
-colorama==0.4.4
+colorama==0.4.5
 commonmark==0.9.1
 contextlib2==21.6.0
 cryptography==37.0.2
@@ -76,7 +76,7 @@ m2r==0.2.1
 Markdown==3.3.7
 MarkupSafe==2.1.1
 mcomix==2.0.2
-meson==0.62.2
+meson==0.63.0
 mistune==0.8.4
 more-itertools==8.13.0
 moreorless==0.4.0
@@ -88,7 +88,7 @@ packaging==21.3
 paramiko==2.11.0
 pep517==0.12.0
 pexpect==4.8.0
-Pillow==9.1.1
+Pillow==9.2.0
 platformdirs==2.5.1
 ply==3.11
 progress==1.6
