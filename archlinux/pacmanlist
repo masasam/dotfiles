@@ -1090,6 +1090,7 @@ python-jinja
 python-jsonschema
 python-lexicon
 python-libarchive-c
+python-lxml
 python-magic
 python-markdown
 python-markupsafe
@@ -1099,6 +1100,7 @@ python-moreorless
 python-msgpack
 python-multidict
 python-nspektr
+python-numpy
 python-ordered-set
 python-packaging
 python-paramiko

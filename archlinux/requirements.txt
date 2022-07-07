@@ -72,6 +72,7 @@ LibAppArmor==3.0.4
 libarchive-c==4.0
 lit==14.0.6.dev0
 louis==3.22.0
+lxml==4.9.0
 m2r==0.2.1
 Markdown==3.3.7
 MarkupSafe==2.1.1
@@ -83,6 +84,7 @@ moreorless==0.4.0
 msgpack==1.0.3
 multidict==6.0.2
 nspektr==0.4.0
+numpy==1.23.0
 ordered-set==4.0.2
 packaging==21.3
 paramiko==2.11.0
