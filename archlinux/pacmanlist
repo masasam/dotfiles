@@ -383,6 +383,7 @@ haskell-hslua-aeson
 haskell-hslua-classes
 haskell-hslua-core
 haskell-hslua-marshalling
+haskell-hslua-module-doclayout
 haskell-hslua-module-path
 haskell-hslua-module-system
 haskell-hslua-module-text
