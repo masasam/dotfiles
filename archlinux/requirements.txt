@@ -39,7 +39,7 @@ dephell-shells==0.1.5
 dephell-specifier==0.2.2
 dephell-venvs==0.1.18
 dephell-versioning==0.1.2
-diffoscope==218
+diffoscope==219
 distlib==0.3.4
 distro==1.7.0
 dnspython==2.2.1
@@ -71,7 +71,7 @@ LibAppArmor==3.0.4
 libarchive-c==4.0
 lit==14.0.6.dev0
 louis==3.22.0
-lxml==4.9.0
+lxml==4.9.1
 m2r==0.2.1
 Markdown==3.3.7
 MarkupSafe==2.1.1
@@ -145,4 +145,4 @@ websocket-client==1.3.3
 yarl==1.7.2
 yaspin==2.1.0
 youtube-dl==2021.12.17
-zipp==3.8.0
+zipp==3.8.1

@@ -867,6 +867,7 @@ lpsolve
 lshw
 lsof
 lua
+lua-lpeg
 lua51
 lua52
 lua52-bitop
