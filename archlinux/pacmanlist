@@ -77,7 +77,6 @@ cairomm
 cantarell-fonts
 cblas
 cdparanoia
-celt
 cfitsio
 cheese
 chromaprint
@@ -738,6 +737,7 @@ libportal
 libportal-gtk3
 libproxy
 libpsl
+libptytty
 libpulse
 libpwquality
 libqmi
