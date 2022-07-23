@@ -104,6 +104,7 @@ convmv
 coreutils
 cpio
 cracklib
+crypto++
 cryptsetup
 cscope
 ctags
@@ -599,6 +600,7 @@ libdbusmenu-gtk3
 libdc1394
 libdca
 libde265
+libdeflate
 libdrm
 libdv
 libdvdcss
@@ -954,6 +956,7 @@ nss
 numactl
 oath-toolkit
 obs-studio
+ocl-icd
 oniguruma
 openal
 opencore-amr
@@ -1157,6 +1160,7 @@ python-yarl
 python-yaspin
 python-zipp
 python2
+qhull
 qpdf
 qrencode
 qt5-base
@@ -1303,6 +1307,7 @@ uchardet
 udisks2
 unace
 unarchiver
+unixodbc
 unrar
 unzip
 upower
