@@ -77,7 +77,7 @@ Markdown==3.4.1
 MarkupSafe==2.1.1
 mcomix==2.0.2
 meson==0.63.0
-mistune==0.8.4
+mistune==2.0.3
 more-itertools==8.13.0
 moreorless==0.4.0
 msgpack==1.0.3
