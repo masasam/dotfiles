@@ -39,7 +39,7 @@ dephell-shells==0.1.5
 dephell-specifier==0.2.2
 dephell-venvs==0.1.18
 dephell-versioning==0.1.2
-diffoscope==219
+diffoscope==220
 distlib==0.3.5
 distro==1.7.0
 dnspython==2.2.1
@@ -66,7 +66,7 @@ jaraco.text==3.8.1
 Jinja2==3.1.2
 jsonschema==3.2.0
 lensfun==0.3.3
-lexicon==2.0.0
+lexicon==2.0.1
 LibAppArmor==3.0.4
 libarchive-c==4.0
 lit==14.0.6.dev0
