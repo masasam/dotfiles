@@ -335,7 +335,7 @@ flutter: ## Install flutter
 	wget -O- $(FLUTTER_URL) | tar -C ~/src/github.com/$@ xf-
 
 jdk: ## Install jdk
-	$(PACMAN) jdk-openjdk
+	$(PACMAN) jdk8-openjdk
 
 mpsyt: ## Install and deploy mps-youtube
 	pip install --user mps-youtube youtube-dl
