@@ -43,7 +43,6 @@ bash
 bash-completion
 bash-language-server
 bat
-bazel
 bc
 bcg729
 bind
@@ -521,13 +520,13 @@ jasper
 java-environment-common
 java-runtime-common
 jbig2dec
-jdk11-openjdk
+jdk8-openjdk
 jemalloc
 jhead
 jpegoptim
 jq
-jre11-openjdk
-jre11-openjdk-headless
+jre8-openjdk
+jre8-openjdk-headless
 js78
 js91
 json-c
@@ -698,7 +697,6 @@ libmwaw
 libmypaint
 libnautilus-extension
 libndp
-libnet
 libnetfilter_conntrack
 libnewt
 libnfnetlink
