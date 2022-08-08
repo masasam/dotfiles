@@ -1159,9 +1159,12 @@ rubberband
 ruby
 ruby-bundledgems
 ruby-bundler
+ruby-date
 ruby-irb
 ruby-json
 ruby-minitest
+ruby-net-http
+ruby-open-uri
 ruby-power_assert
 ruby-psych
 ruby-rake
@@ -1171,6 +1174,8 @@ ruby-rexml
 ruby-stdlib
 ruby-stringio
 ruby-test-unit
+ruby-time
+ruby-uri
 rubygems
 run-parts
 runc
