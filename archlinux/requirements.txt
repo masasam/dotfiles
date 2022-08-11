@@ -1,6 +1,6 @@
 ansible==6.2.0
 ansible-core==2.13.2
-apparmor==3.0.6
+apparmor==3.0.7
 appdirs==1.4.4
 asciidoc==10.2.0
 asn1crypto==1.5.1
@@ -46,7 +46,7 @@ jsonpointer==2.3
 jsonschema==4.9.0
 lensfun==0.3.3
 lexicon==2.0.1
-LibAppArmor==3.0.6
+LibAppArmor==3.0.7
 libarchive-c==4.0
 lit==14.0.6.dev0
 louis==3.22.0
