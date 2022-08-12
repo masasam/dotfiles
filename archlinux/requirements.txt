@@ -103,7 +103,7 @@ toml==0.10.2
 tomli==2.0.1
 trove-classifiers==2022.8.7
 typing_extensions==4.2.0
-urllib3==1.26.9
+urllib3==1.26.10
 validate-pyproject==0.9
 vimiv==0.9.1
 wcwidth==0.2.5
