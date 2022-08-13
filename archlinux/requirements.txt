@@ -54,7 +54,7 @@ lxml==4.9.1
 Markdown==3.4.1
 MarkupSafe==2.1.1
 mcomix==2.0.2
-meson==0.63.0
+meson==0.63.1
 more-itertools==8.13.0
 msgpack==1.0.3
 multidict==6.0.2
