@@ -112,6 +112,7 @@ cups-filters
 cups-pdf
 cups-pk-helper
 curl
+cython
 dav1d
 db
 dbus
@@ -1033,6 +1034,7 @@ python
 python-appdirs
 python-asn1crypto
 python-attrs
+python-autocommand
 python-bcrypt
 python-cachecontrol
 python-cached-property
@@ -1063,6 +1065,7 @@ python-gobject
 python-html2text
 python-idna
 python-importlib-metadata
+python-inflect
 python-invoke
 python-jaraco.context
 python-jaraco.functools
@@ -1091,6 +1094,7 @@ python-progress
 python-prompt_toolkit
 python-psutil
 python-pycparser
+python-pydantic
 python-pygments
 python-pynacl
 python-pyopenssl
