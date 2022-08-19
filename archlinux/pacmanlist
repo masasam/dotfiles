@@ -1161,9 +1161,19 @@ rtkit
 rtmpdump
 rubberband
 ruby
+ruby-abbrev
+ruby-base64
+ruby-benchmark
+ruby-bigdecimal
 ruby-bundledgems
 ruby-bundler
+ruby-cgi
+ruby-csv
 ruby-date
+ruby-delegate
+ruby-did_you_mean
+ruby-digest
+ruby-drb
 ruby-irb
 ruby-json
 ruby-minitest
@@ -1175,6 +1185,7 @@ ruby-rake
 ruby-rdoc
 ruby-reline
 ruby-rexml
+ruby-ruby2_keywords
 ruby-stdlib
 ruby-stringio
 ruby-test-unit
