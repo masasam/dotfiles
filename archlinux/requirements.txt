@@ -22,7 +22,7 @@ contextlib2==21.6.0
 cryptography==37.0.4
 Cython==0.29.32
 defusedxml==0.7.1
-diffoscope==220
+diffoscope==221
 distlib==0.3.5
 distro==1.7.0
 dnspython==2.2.1
