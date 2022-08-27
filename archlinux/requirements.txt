@@ -38,7 +38,7 @@ future==0.18.2
 html2text==2020.1.16
 httpie==3.2.1
 idna==3.3
-importlib-metadata==4.8.1
+importlib-metadata==4.8.2
 inflect==6.0.0
 invoke==1.6.0
 jaraco.context==4.1.2
@@ -107,7 +107,7 @@ toml==0.10.2
 tomli==2.0.1
 trove-classifiers==2022.8.7
 typing_extensions==4.3.0
-urllib3==1.26.11
+urllib3==1.26.12
 validate-pyproject==0.9
 vimiv==0.9.1
 wcwidth==0.2.5
