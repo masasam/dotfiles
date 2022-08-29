@@ -1,6 +1,6 @@
 ansible==6.3.0
 ansible-core==2.13.3
-apparmor==3.0.7
+apparmor==3.1.1
 appdirs==1.4.4
 asciidoc==10.2.0
 asn1crypto==1.5.1
@@ -49,7 +49,7 @@ jsonpointer==2.3
 jsonschema==4.9.0
 lensfun==0.3.3
 lexicon==2.0.1
-LibAppArmor==3.0.7
+LibAppArmor==3.1.1
 libarchive-c==4.0
 lit==14.0.6.dev0
 louis==3.22.0
@@ -105,7 +105,7 @@ texttable==1.6.4
 tlsh==4.5.0
 toml==0.10.2
 tomli==2.0.1
-trove-classifiers==2022.8.7
+trove-classifiers==2022.8.24
 typing_extensions==4.3.0
 urllib3==1.26.12
 validate-pyproject==0.9
