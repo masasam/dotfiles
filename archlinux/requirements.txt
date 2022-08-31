@@ -20,6 +20,7 @@ colorama==0.4.5
 commonmark==0.9.1
 contextlib2==21.6.0
 cryptography==37.0.4
+cssselect==1.1.0
 Cython==0.29.32
 defusedxml==0.7.1
 diffoscope==221
@@ -59,14 +60,14 @@ MarkupSafe==2.1.1
 mcomix==2.0.2
 meson==0.63.1
 more-itertools==8.13.0
-msgpack==1.0.3
+msgpack==1.0.4
 multidict==6.0.2
 nspektr==0.4.0
-numpy==1.23.1
-ordered-set==4.0.2
+numpy==1.23.2
+ordered-set==4.1.0
 packaging==21.3
 paramiko==2.11.0
-pep517==0.12.0
+pep517==0.13.0
 Pillow==9.2.0
 platformdirs==2.5.2
 ply==3.11

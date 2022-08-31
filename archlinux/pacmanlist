@@ -1049,6 +1049,7 @@ python-colorama
 python-commonmark
 python-contextlib2
 python-cryptography
+python-cssselect
 python-defusedxml
 python-distlib
 python-distro
