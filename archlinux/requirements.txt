@@ -9,7 +9,7 @@ autocommand==2.2.1
 bcrypt==3.2.2
 blockdiag==3.0.0
 btrfsutil==5.19
-CacheControl==0.12.6
+CacheControl==0.12.11
 cached-property==1.5.2
 certifi==2022.6.15
 cffi==1.15.1
@@ -47,7 +47,7 @@ jaraco.functools==3.5.1
 jaraco.text==3.9.1
 Jinja2==3.1.2
 jsonpointer==2.3
-jsonschema==4.9.0
+jsonschema==4.14.0
 lensfun==0.3.3
 lexicon==2.0.1
 LibAppArmor==3.1.1
@@ -77,7 +77,7 @@ psutil==5.9.1
 pwquality==1.4.4
 pycairo==1.21.0
 pycparser==2.21
-pydantic==1.9.2
+pydantic==1.10.1
 Pygments==2.13.0
 PyGObject==3.42.2
 PyNaCl==1.4.0
@@ -106,7 +106,7 @@ texttable==1.6.4
 tlsh==4.5.0
 toml==0.10.2
 tomli==2.0.1
-trove-classifiers==2022.8.24
+trove-classifiers==2022.8.31
 typing_extensions==4.3.0
 urllib3==1.26.12
 validate-pyproject==0.9

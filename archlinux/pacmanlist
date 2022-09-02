@@ -150,8 +150,7 @@ e2fsprogs
 editorconfig-core-c
 efibootmgr
 efivar
-electron17
-electron18
+electron19
 elfutils
 elinks
 emacs
@@ -339,6 +338,7 @@ haskell-base64-bytestring
 haskell-basement
 haskell-bifunctors
 haskell-bitarray
+haskell-bitvec
 haskell-blaze-builder
 haskell-blaze-html
 haskell-blaze-markup
