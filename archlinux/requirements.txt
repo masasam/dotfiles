@@ -11,7 +11,7 @@ blockdiag==3.0.0
 btrfsutil==5.19
 CacheControl==0.12.11
 cached-property==1.5.2
-certifi==2022.6.15
+certifi==2022.6.15.1
 cffi==1.15.1
 chardet==5.0.0
 charset-normalizer==2.1.1
@@ -27,7 +27,7 @@ diffoscope==221
 distlib==0.3.6
 distro==1.7.0
 dnspython==2.2.1
-docker==5.0.3
+docker==6.0.0
 docker-pycreds==0.4.0
 dockerpty==0.4.1
 docopt==0.6.2
@@ -63,7 +63,7 @@ more-itertools==8.13.0
 msgpack==1.0.4
 multidict==6.0.2
 nspektr==0.4.0
-numpy==1.23.2
+numpy==1.23.3
 ordered-set==4.1.0
 packaging==21.3
 paramiko==2.11.0
@@ -72,7 +72,7 @@ Pillow==9.2.0
 platformdirs==2.5.2
 ply==3.11
 progress==1.6
-prompt-toolkit==3.0.30
+prompt-toolkit==3.0.31
 psutil==5.9.1
 pwquality==1.4.4
 pycairo==1.21.0
