@@ -83,7 +83,7 @@ PyGObject==3.42.2
 PyNaCl==1.4.0
 pyOpenSSL==22.0.0
 pyparsing==3.0.9
-pyrsistent==0.18.1
+pyrsistent==0.19.0
 PySocks==1.7.1
 python-dotenv==0.21.0
 python-magic==0.4.27
