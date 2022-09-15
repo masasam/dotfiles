@@ -11,7 +11,7 @@ blockdiag==3.0.0
 btrfsutil==5.19
 CacheControl==0.12.11
 cached-property==1.5.2
-certifi==2022.6.15.1
+certifi==2022.9.14
 cffi==1.15.1
 chardet==5.0.0
 charset-normalizer==2.1.1
@@ -38,7 +38,7 @@ funcparserlib==1.0.0
 future==0.18.2
 html2text==2020.1.16
 httpie==3.2.1
-idna==3.3
+idna==3.4
 importlib-metadata==4.8.3
 inflect==6.0.0
 invoke==1.6.0
