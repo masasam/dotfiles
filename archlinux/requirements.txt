@@ -39,7 +39,7 @@ future==0.18.2
 html2text==2020.1.16
 httpie==3.2.1
 idna==3.4
-importlib-metadata==4.8.3
+importlib-metadata==4.9.0
 inflect==6.0.0
 invoke==1.6.0
 jaraco.context==4.1.2
