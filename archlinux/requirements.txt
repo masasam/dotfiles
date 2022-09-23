@@ -73,7 +73,7 @@ platformdirs==2.5.2
 ply==3.11
 progress==1.6
 prompt-toolkit==3.0.31
-psutil==5.9.1
+psutil==5.9.2
 pwquality==1.4.4
 pycairo==1.21.0
 pycparser==2.21
@@ -101,7 +101,7 @@ six==1.16.0
 sshuttle==1.1.1
 TBB==0.2
 team==1.0
-tenacity==8.0.1
+tenacity==8.1.0
 texttable==1.6.4
 tlsh==4.5.0
 toml==0.10.2
