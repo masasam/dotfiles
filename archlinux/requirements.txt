@@ -23,7 +23,7 @@ cryptography==38.0.1
 cssselect==1.1.0
 Cython==0.29.32
 defusedxml==0.7.1
-diffoscope==221
+diffoscope==222
 distlib==0.3.6
 distro==1.7.0
 dnspython==2.2.1

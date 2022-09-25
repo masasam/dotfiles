@@ -1173,7 +1173,6 @@ python-webencodings
 python-websocket-client
 python-yaml
 python-zipp
-python2
 qhull
 qpdf
 qrencode
@@ -1332,6 +1331,7 @@ thin-provisioning-tools
 throttled
 tig
 time
+tk
 tlp
 tmux
 tokei
@@ -1427,6 +1427,7 @@ xorg-iceauth
 xorg-mkfontscale
 xorg-server
 xorg-server-common
+xorg-server-xvfb
 xorg-sessreg
 xorg-setxkbmap
 xorg-smproxy
