@@ -11,7 +11,7 @@ blockdiag==3.0.0
 btrfsutil==5.19.1
 CacheControl==0.12.11
 cached-property==1.5.2
-certifi==2022.9.14
+certifi==2022.9.24
 cffi==1.15.1
 chardet==5.0.0
 charset-normalizer==2.1.1
