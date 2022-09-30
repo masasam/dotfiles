@@ -363,6 +363,7 @@ haskell-conduit
 haskell-conduit-extra
 haskell-connection
 haskell-constraints
+haskell-contravariant
 haskell-cookie
 haskell-cryptonite
 haskell-data-default
@@ -417,6 +418,7 @@ haskell-hxt-charproperties
 haskell-hxt-regex-xmlschema
 haskell-hxt-unicode
 haskell-indexed-traversable
+haskell-indexed-traversable-instances
 haskell-integer-logarithms
 haskell-iproute
 haskell-ipynb
@@ -436,6 +438,7 @@ haskell-network-byte-order
 haskell-network-uri
 haskell-old-locale
 haskell-old-time
+haskell-onetuple
 haskell-optparse-applicative
 haskell-pandoc-lua-marshal
 haskell-pandoc-types
@@ -445,12 +448,15 @@ haskell-primitive
 haskell-psqueues
 haskell-quickcheck
 haskell-random
+haskell-recv
 haskell-regex-base
 haskell-regex-pcre
 haskell-regex-tdfa
 haskell-resourcet
 haskell-safe
 haskell-scientific
+haskell-semialign
+haskell-semigroupoids
 haskell-servant
 haskell-servant-server
 haskell-sha
@@ -466,6 +472,7 @@ haskell-some
 haskell-sop-core
 haskell-split
 haskell-splitmix
+haskell-statevar
 haskell-streaming-commons
 haskell-strict
 haskell-string-conversions
@@ -508,6 +515,7 @@ haskell-wai-app-static
 haskell-wai-extra
 haskell-wai-logger
 haskell-warp
+haskell-witherable
 haskell-word8
 haskell-x509
 haskell-x509-store
