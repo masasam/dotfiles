@@ -23,7 +23,7 @@ cryptography==38.0.1
 cssselect==1.1.0
 Cython==0.29.32
 defusedxml==0.7.1
-diffoscope==222
+diffoscope==223
 distlib==0.3.6
 distro==1.7.0
 dnspython==2.2.1
@@ -41,7 +41,7 @@ httpie==3.2.1
 idna==3.4
 importlib-metadata==4.9.0
 inflect==6.0.0
-invoke==1.6.0
+invoke==1.7.0
 jaraco.context==4.1.2
 jaraco.functools==3.5.2
 jaraco.text==3.9.1
