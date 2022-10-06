@@ -1253,6 +1253,7 @@ ruby-net-http
 ruby-open-uri
 ruby-power_assert
 ruby-psych
+ruby-racc
 ruby-rake
 ruby-rdoc
 ruby-reline
