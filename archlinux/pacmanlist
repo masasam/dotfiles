@@ -1057,6 +1057,7 @@ php
 php-intl
 pinentry
 pipewire
+pipewire-audio
 pipewire-pulse
 pixman
 pkgconf
