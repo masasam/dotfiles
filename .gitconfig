@@ -33,6 +33,8 @@
 	pager = less
 	excludesfile = ~/.gitignore
 	commentchar = ^
+	fsmonitor = true
+	untrackedcache = true
 [push]
 	default = upstream
 [pager]
