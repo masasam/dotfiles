@@ -510,6 +510,7 @@ haskell-uuid-types
 haskell-vault
 haskell-vector
 haskell-vector-algorithms
+haskell-vector-stream
 haskell-wai
 haskell-wai-app-static
 haskell-wai-extra
