@@ -1,2 +1,2 @@
 # Set bluetooth power up
-ACTION=="add", KERNEL=="hci0", RUN+="/usr/bin/btmgmt auto-power"
+ACTION=="add", KERNEL=="hci0", RUN+="/usr/bin/bluetoothctl power on"
