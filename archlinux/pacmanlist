@@ -385,6 +385,7 @@ haskell-erf
 haskell-errors
 haskell-fast-logger
 haskell-file-embed
+haskell-generically
 haskell-ghc-bignum-orphans
 haskell-glob
 haskell-gridtables
