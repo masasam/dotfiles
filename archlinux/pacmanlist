@@ -1181,6 +1181,7 @@ python-wcwidth
 python-webcolors
 python-webencodings
 python-websocket-client
+python-wheel
 python-yaml
 python-zipp
 qhull
