@@ -40,7 +40,7 @@ html2text==2020.1.16
 httpie==3.2.1
 idna==3.4
 importlib-metadata==5.0.0
-inflect==6.0.0
+inflect==6.0.1
 invoke==1.7.1
 jaraco.context==4.1.2
 jaraco.functools==3.5.2
