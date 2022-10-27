@@ -18,6 +18,8 @@
 ;; unused key
 (global-unset-key [C-wheel-up])
 (global-unset-key [C-wheel-down])
+(global-unset-key [C-mouse-4])
+(global-unset-key [C-mouse-5])
 
 ;; exec-path-from-shell
 (when (memq window-system '(mac ns x))
