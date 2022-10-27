@@ -15,6 +15,9 @@
 (set-language-environment "Japanese")
 (prefer-coding-system 'utf-8)
 
+;; unused key
+(global-unset-key [C-wheel-up])
+(global-unset-key [C-wheel-down])
 
 ;; exec-path-from-shell
 (when (memq window-system '(mac ns x))
