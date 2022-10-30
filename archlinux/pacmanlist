@@ -455,6 +455,7 @@ haskell-regex-pcre
 haskell-regex-tdfa
 haskell-resourcet
 haskell-safe
+haskell-safe-exceptions
 haskell-scientific
 haskell-semialign
 haskell-semigroupoids
