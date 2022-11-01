@@ -633,6 +633,7 @@ libbs2b
 libbsd
 libbytesize
 libcaca
+libcamera
 libcanberra
 libcap
 libcap-ng
@@ -993,6 +994,7 @@ nethogs
 netpbm
 nettle
 networkmanager
+nftables
 ninja
 nm-connection-editor
 nmap
