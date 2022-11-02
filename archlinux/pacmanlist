@@ -206,6 +206,7 @@ gcab
 gcc
 gcc-libs
 gcr
+gcr-4
 gd
 gdal
 gdb
@@ -217,7 +218,8 @@ gdm
 geckodriver
 gegl
 geoclue
-geocode-glib
+geocode-glib-2
+geocode-glib-common
 geos
 gettext
 ghc-libs
@@ -584,6 +586,7 @@ jpegoptim
 jq
 jre8-openjdk
 jre8-openjdk-headless
+js102
 js78
 js91
 json-c
@@ -793,6 +796,7 @@ libplist
 libpng
 libportal
 libportal-gtk3
+libportal-gtk4
 libproxy
 libpsl
 libptytty
@@ -808,6 +812,7 @@ libraw
 libraw1394
 libreoffice-fresh
 libreoffice-fresh-ja
+librest
 librevenge
 librsvg
 librttopo
@@ -1400,6 +1405,7 @@ wayland
 wayland-protocols
 webkit2gtk
 webkit2gtk-4.1
+webp-pixbuf-loader
 webrtc-audio-processing
 wget
 which
