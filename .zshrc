@@ -870,7 +870,7 @@ function check-iso() {
 	    echo 'Incorrect iso file'
 	fi
     else
-	echo 'usage: check-iso [arch.iso] [md5]'
+	echo 'usage: check-iso [arch.iso] [b2sum]'
     fi
 }
 
