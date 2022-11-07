@@ -863,7 +863,7 @@ function aws-profile-add() {
 
 function check-iso() {
     if [ $# = 2 ]; then
-	local archsum=`md5sum $1 | awk '{print $1}'`
+	local archsum=`b2sum $1 | awk '{print $1}'`
 	if [ $archsum = $2 ]; then
 	    echo 'Correct iso file'
 	else
