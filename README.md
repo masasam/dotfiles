@@ -209,7 +209,7 @@ Connect internet with wifi
 Make sure the earliest mirror is selected.
 Write the closest mirror on the top.
 
-	sudo pacman -S vi vim
+	pacman -S vi vim
 	vi /etc/pacman.d/mirrorlist
 
 Install bese bese-devel of arch
@@ -299,8 +299,8 @@ Gnome can be put as small as necessary
 
 Terminal uses urxvt and termite
 
-	sudo pacman -S rxvt-unicode urxvt-perls
-	sudo pacman -S termite
+	pacman -S rxvt-unicode urxvt-perls
+	pacman -S termite
 
 Enable graphical login with gdm
 
@@ -315,7 +315,7 @@ Preparing the net environment
 
 Audio setting
 
-	sudo pacman -S pipewire-pulse
+	pacman -S pipewire-pulse
 	exit
 	reboot
 
