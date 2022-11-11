@@ -790,7 +790,6 @@ libpciaccess
 libpeas
 libpgm
 libpipeline
-libpipewire02
 libplacebo
 libplist
 libpng
@@ -852,6 +851,7 @@ libtool
 libunistring
 libunwind
 liburcu
+liburing
 libusb
 libusb-compat
 libusbmuxd
