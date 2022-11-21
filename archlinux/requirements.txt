@@ -14,7 +14,7 @@ cached-property==1.5.2
 certifi==2022.9.24
 cffi==1.15.1
 chardet==5.0.0
-charset-normalizer==3.0.0
+charset-normalizer==3.0.1
 click==8.1.3
 colorama==0.4.6
 commonmark==0.9.1
@@ -75,7 +75,7 @@ ply==3.11
 progress==1.6
 prompt-toolkit==3.0.32
 psutil==5.9.4
-pwquality==1.4.4
+pwquality==1.4.5
 pycairo==1.21.0
 pycparser==2.21
 pydantic==1.10.2
