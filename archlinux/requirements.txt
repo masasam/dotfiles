@@ -5,7 +5,7 @@ appdirs==1.4.4
 asciidoc==10.2.0
 asn1crypto==1.5.1
 attrs==22.1.0
-autocommand==2.2.1
+autocommand==2.2.2
 bcrypt==4.0.1
 blockdiag==3.0.0
 btrfsutil==6.0.1
