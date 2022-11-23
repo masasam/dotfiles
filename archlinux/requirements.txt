@@ -1,5 +1,5 @@
-ansible==6.6.0
-ansible-core==2.13.6
+ansible==7.0.0
+ansible-core==2.14.0
 apparmor==3.1.2
 appdirs==1.4.4
 asciidoc==10.2.0
@@ -44,7 +44,7 @@ inflect==6.0.2
 invoke==1.7.3
 jaraco.context==4.1.2
 jaraco.functools==3.5.2
-jaraco.text==3.10.0
+jaraco.text==3.11.0
 Jinja2==3.1.2
 jsonpointer==2.3
 jsonschema==4.17.0
@@ -58,7 +58,7 @@ lxml==4.9.1
 Markdown==3.4.1
 MarkupSafe==2.1.1
 mcomix==2.0.2
-meson==0.64.0
+meson==0.64.1
 more-itertools==9.0.0
 msgpack==1.0.4
 multidict==6.0.2
@@ -73,10 +73,10 @@ Pillow==9.3.0
 platformdirs==2.5.4
 ply==3.11
 progress==1.6
-prompt-toolkit==3.0.32
+prompt-toolkit==3.0.33
 psutil==5.9.4
 pwquality==1.4.5
-pycairo==1.21.0
+pycairo==1.22.0
 pycparser==2.21
 pydantic==1.10.2
 Pygments==2.13.0
