@@ -47,7 +47,7 @@ jaraco.functools==3.5.2
 jaraco.text==3.11.0
 Jinja2==3.1.2
 jsonpointer==2.3
-jsonschema==4.17.0
+jsonschema==4.17.1
 lensfun==0.3.3
 lexicon==2.0.1
 LibAppArmor==3.1.2
