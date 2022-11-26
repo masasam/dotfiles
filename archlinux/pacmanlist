@@ -1,5 +1,6 @@
 aalib
 abiword
+abseil-cpp
 accountsservice
 acl
 adapta-gtk-theme
@@ -13,6 +14,7 @@ alsa-topology-conf
 alsa-ucm-conf
 alsa-utils
 aom
+apache-orc
 apparmor
 appstream
 appstream-glib
@@ -21,6 +23,7 @@ arch-install-scripts
 archlinux-keyring
 argon2
 aria2
+arrow
 asar
 asciidoc
 aspell
@@ -222,6 +225,7 @@ geocode-glib-2
 geocode-glib-common
 geos
 gettext
+gflags
 ghc-libs
 ghostscript
 giflib
@@ -267,6 +271,7 @@ go
 gobject-introspection-runtime
 goffice
 goocanvas
+google-glog
 gopls
 gpaste
 gperf
@@ -282,6 +287,7 @@ grep
 grilo
 groff
 gron
+grpc
 grub
 gsettings-desktop-schemas
 gsfonts
@@ -856,6 +862,7 @@ libusb
 libusb-compat
 libusbmuxd
 libutempter
+libutf8proc
 libuv
 libva
 libva-utils
@@ -1072,6 +1079,7 @@ pixman
 pkgconf
 pkgfile
 pkgstats
+podofo
 polkit
 poppler
 poppler-data
@@ -1208,6 +1216,7 @@ qt6-base
 qt6-svg
 qt6-translations
 ragel
+rapidjson
 raptor
 rasqal
 rav1e
@@ -1349,6 +1358,7 @@ texlive-langjapanese
 texlive-latexextra
 the_silver_searcher
 thin-provisioning-tools
+thrift
 throttled
 tig
 time
@@ -1377,6 +1387,7 @@ unixodbc
 unrar
 unzip
 upower
+uriparser
 urxvt-perls
 usbmuxd
 usbutils
@@ -1484,6 +1495,7 @@ xorg-xwininfo
 xorg-xwud
 xorgproto
 xsel
+xsimd
 xterm
 xvidcore
 xxhash
