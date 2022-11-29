@@ -32,7 +32,7 @@
 
 
 ;; font
-(add-to-list 'default-frame-alist '(font . "Cica-20"))
+(add-to-list 'default-frame-alist '(font . "Cica-21"))
 
 
 ;; defalias list
