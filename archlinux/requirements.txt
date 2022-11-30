@@ -8,7 +8,7 @@ attrs==22.1.0
 autocommand==2.2.2
 bcrypt==4.0.1
 blockdiag==3.0.0
-btrfsutil==6.0.1
+btrfsutil==6.0.2
 CacheControl==0.12.11
 cached-property==1.5.2
 certifi==2022.9.24
@@ -47,7 +47,7 @@ jaraco.functools==3.5.2
 jaraco.text==3.11.0
 Jinja2==3.1.2
 jsonpointer==2.3
-jsonschema==4.17.1
+jsonschema==4.17.2
 lensfun==0.3.3
 lexicon==2.0.1
 LibAppArmor==3.1.2
@@ -117,4 +117,4 @@ webcolors==1.12
 webencodings==0.5.1
 websocket-client==1.4.2
 youtube-dl==2021.12.17
-zipp==3.10.0
+zipp==3.11.0
