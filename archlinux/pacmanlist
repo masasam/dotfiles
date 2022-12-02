@@ -5,6 +5,7 @@ accountsservice
 acl
 adapta-gtk-theme
 adobe-source-code-pro-fonts
+adwaita-cursors
 adwaita-icon-theme
 aiksaurus
 alsa-card-profiles
@@ -125,6 +126,7 @@ dconf-editor
 debian-archive-keyring
 debootstrap
 debuginfod
+default-cursors
 deno
 desktop-file-utils
 detox

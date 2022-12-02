@@ -76,7 +76,7 @@ progress==1.6
 prompt-toolkit==3.0.33
 psutil==5.9.4
 pwquality==1.4.5
-pycairo==1.22.0
+pycairo==1.23.0
 pycparser==2.21
 pydantic==1.10.2
 Pygments==2.13.0
@@ -107,7 +107,7 @@ texttable==1.6.7
 tlsh==4.5.0
 toml==0.10.2
 tomli==2.0.1
-trove-classifiers==2022.10.19
+trove-classifiers==2022.12.1
 typing_extensions==4.4.0
 urllib3==1.26.12
 validate-pyproject==0.10.1
