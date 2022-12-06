@@ -61,7 +61,7 @@ mcomix==2.0.2
 meson==0.64.1
 more-itertools==9.0.0
 msgpack==1.0.4
-multidict==6.0.2
+multidict==6.0.3
 nftables==0.1
 nspektr==0.4.0
 numpy==1.23.5
