@@ -1,5 +1,5 @@
 ansible==7.0.0
-ansible-core==2.14.0
+ansible-core==2.14.1
 apparmor==3.1.2
 appdirs==1.4.4
 asciidoc==10.2.0
@@ -53,7 +53,7 @@ lexicon==2.0.1
 LibAppArmor==3.1.2
 libarchive-c==4.0
 lit==14.0.6.dev0
-louis==3.23.0
+louis==3.24.0
 lxml==4.9.1
 Markdown==3.4.1
 MarkupSafe==2.1.1
