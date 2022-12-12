@@ -70,7 +70,7 @@ packaging==21.3
 paramiko==2.11.1
 pep517==0.13.0
 Pillow==9.3.0
-platformdirs==2.5.4
+platformdirs==2.6.0
 ply==3.11
 progress==1.6
 prompt-toolkit==3.0.33
