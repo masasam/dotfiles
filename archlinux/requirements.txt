@@ -54,7 +54,7 @@ LibAppArmor==3.1.2
 libarchive-c==4.0
 lit==14.0.6.dev0
 louis==3.24.0
-lxml==4.9.1
+lxml==4.9.2
 Markdown==3.4.1
 MarkupSafe==2.1.1
 mcomix==2.0.2

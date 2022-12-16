@@ -118,6 +118,7 @@ curl
 cython
 dav1d
 db
+db5.3
 dbus
 dbus-glib
 dbus-python
