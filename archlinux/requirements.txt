@@ -137,7 +137,7 @@ jupyterlab-widgets==3.0.4
 jupyterlab_server==2.16.5
 jupyterthemes==0.20.0
 kappa==0.6.0
-keyring==23.11.0
+keyring==23.13.1
 kitchen==1.2.6
 kiwisolver==1.4.4
 lensfun==0.3.3
@@ -233,7 +233,7 @@ python-magic==0.4.27
 python-monkey-business==1.0.0
 python-slugify==7.0.0
 python-utils==3.4.5
-pytz==2022.6
+pytz==2022.7
 PyYAML==6.0
 pyzmq==24.0.1
 qtconsole==5.4.0
