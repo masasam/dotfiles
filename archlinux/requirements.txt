@@ -25,8 +25,8 @@ beautifulsoup4==4.11.1
 black==22.12.0
 bleach==5.0.1
 blockdiag==3.0.0
-boto3==1.26.32
-botocore==1.29.32
+boto3==1.26.33
+botocore==1.29.33
 bracex==2.3.post1
 btrfsutil==6.0.2
 CacheControl==0.12.11
@@ -98,14 +98,14 @@ html2text==2020.1.16
 html5lib==1.1
 httpie==3.2.1
 hyperlink==21.0.0
-identify==2.5.10
+identify==2.5.11
 idna==3.4
 importlib-metadata==5.0.0
 importmagic==0.1.7
 incremental==22.10.0
 inflect==6.0.2
 invoke==1.7.3
-ipykernel==6.19.2
+ipykernel==6.19.3
 ipython==8.7.0
 ipython-genutils==0.2.0
 ipywidgets==8.0.3
@@ -130,8 +130,8 @@ jupyter-events==0.5.0
 jupyter_client==7.4.8
 jupyter_core==5.1.0
 jupyter_server==2.0.1
-jupyter_server_terminals==0.4.2
-jupyterlab==3.5.1
+jupyter_server_terminals==0.4.3
+jupyterlab==3.5.2
 jupyterlab-pygments==0.2.2
 jupyterlab-widgets==3.0.4
 jupyterlab_server==2.16.5
@@ -163,8 +163,8 @@ multidict==6.0.3
 mypy-extensions==0.4.3
 nbclassic==0.4.8
 nbclient==0.7.2
-nbconvert==7.2.6
-nbformat==5.7.0
+nbconvert==7.2.7
+nbformat==5.7.1
 neovim==0.3.1
 nest-asyncio==1.5.6
 nftables==0.1
@@ -188,7 +188,7 @@ pep517==0.13.0
 pexpect==4.8.0
 pickleshare==0.7.5
 Pillow==9.3.0
-pipenv==2022.12.17
+pipenv==2022.12.19
 pkginfo==1.9.2
 placebo==0.9.0
 platformdirs==2.6.0
@@ -298,7 +298,7 @@ tomli==2.0.1
 tomlkit==0.11.6
 tornado==6.2
 tqdm==4.64.1
-traitlets==5.7.1
+traitlets==5.8.0
 trash-cli==0.22.10.20
 trio==0.22.0
 trio-websocket==0.9.2
