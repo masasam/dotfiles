@@ -39,6 +39,7 @@ autoconf
 autogen
 automake
 avahi
+ayatana-ido
 babl
 baobab
 base
@@ -637,6 +638,8 @@ libatomic_ops
 libavc1394
 libavif
 libavtp
+libayatana-appindicator
+libayatana-indicator
 libb2
 libblockdev
 libbluray
