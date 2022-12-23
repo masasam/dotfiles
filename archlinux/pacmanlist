@@ -1129,6 +1129,7 @@ python-commonmark
 python-contextlib2
 python-cryptography
 python-cssselect
+python-decorator
 python-defusedxml
 python-distlib
 python-distro
