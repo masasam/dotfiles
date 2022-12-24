@@ -30,6 +30,10 @@ After make install you can deploy dotfiles with this command.
 
 ### With Makefile, you will be able to recover your usual environment in 1 hour
 
+You can see argument on this Makefile with this command.
+
+    make
+
 ![make](https://raw.githubusercontent.com/masasam/image/image/make.png)
 
 ### Commands for allinstall
