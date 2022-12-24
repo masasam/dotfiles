@@ -381,6 +381,7 @@ beekeeper: ## Setup beekeeper-studio
 
 dbeaver: ## Setup dbeaver
 	$(PACMAN) dbeaver
+	sudo archlinux-java set java-19-openjdk
 
 gh: ## Install and setup github-cli
 	$(PACMAN) github-cli
