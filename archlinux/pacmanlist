@@ -120,6 +120,7 @@ cython
 dav1d
 db
 db5.3
+dbeaver
 dbus
 dbus-glib
 dbus-python
@@ -589,11 +590,16 @@ jasper
 java-environment-common
 java-runtime-common
 jbig2dec
+jdk11-openjdk
 jdk8-openjdk
 jemalloc
 jhead
 jpegoptim
 jq
+jre-openjdk
+jre-openjdk-headless
+jre11-openjdk
+jre11-openjdk-headless
 jre8-openjdk
 jre8-openjdk-headless
 js102
@@ -770,6 +776,7 @@ libmwaw
 libmypaint
 libnautilus-extension
 libndp
+libnet
 libnetfilter_conntrack
 libnewt
 libnfnetlink

@@ -25,8 +25,8 @@ beautifulsoup4==4.11.1
 black==22.12.0
 bleach==5.0.1
 blockdiag==3.0.0
-boto3==1.26.36
-botocore==1.29.36
+boto3==1.26.37
+botocore==1.29.37
 bracex==2.3.post1
 btrfsutil==6.0.2
 CacheControl==0.12.11
@@ -74,7 +74,7 @@ docutils==0.19
 dulwich==0.20.50
 durationpy==0.5
 entrypoints==0.4
-exceptiongroup==1.0.4
+exceptiongroup==1.1.0
 executing==1.2.0
 fabric==2.7.1
 Faker==15.3.4
@@ -129,12 +129,12 @@ jupyter-console==6.4.4
 jupyter-events==0.5.0
 jupyter_client==7.4.8
 jupyter_core==5.1.1
-jupyter_server==2.0.4
+jupyter_server==2.0.5
 jupyter_server_terminals==0.4.3
 jupyterlab==3.5.2
 jupyterlab-pygments==0.2.2
 jupyterlab-widgets==3.0.5
-jupyterlab_server==2.16.5
+jupyterlab_server==2.16.6
 jupyterthemes==0.20.0
 kappa==0.6.0
 keyring==23.13.1
@@ -155,7 +155,7 @@ MarkupSafe==2.1.1
 matplotlib==3.6.2
 matplotlib-inline==0.1.6
 mcomix==2.1.0
-meson==0.64.1
+meson==1.0.0
 mistune==2.0.4
 more-itertools==9.0.0
 msgpack==1.0.4
