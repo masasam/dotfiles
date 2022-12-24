@@ -379,6 +379,9 @@ beekeeper: ## Setup beekeeper-studio
 	test -L ${HOME}/.config/$@-studio || rm -rf ${HOME}/.config/$@-studio
 	ln -vsfn ${HOME}/{backup,.config}/$@-studio
 
+dbeaver: ## Setup dbeaver
+	$(PACMAN) dbeaver
+
 gh: ## Install and setup github-cli
 	$(PACMAN) github-cli
 	test -L ${HOME}/.config/$@ || rm -rf ${HOME}/.config/$@
@@ -585,7 +588,7 @@ testpath: ## Echo PATH
 
 allinstall: rclone gnupg ssh install init keyring urxvt xterm termite yay tlp thinkpad pipewire-pulse ttf-cica dnsmasq pipinstall goinstall fcitx-mozc neomutt docker nodeinstall zeal lvfs gcloud awsv2 toggle aur beekeeper kind eralchemy mpsyt gh
 
-nextinstall: chrome rubygem rbenv rustinstall postgresql maria-db mycli pgcli
+nextinstall: chrome rubygem rbenv rustinstall postgresql maria-db mycli pgcli dbeaver
 
 allupdate: update pipupdate rustupdate goinstall yarnupdate
 
