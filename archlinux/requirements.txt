@@ -25,8 +25,8 @@ beautifulsoup4==4.11.1
 black==22.12.0
 bleach==5.0.1
 blockdiag==3.0.0
-boto3==1.26.37
-botocore==1.29.37
+boto3==1.26.38
+botocore==1.29.38
 bracex==2.3.post1
 btrfsutil==6.1
 CacheControl==0.12.11

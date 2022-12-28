@@ -397,6 +397,7 @@ haskell-emojis
 haskell-erf
 haskell-errors
 haskell-fast-logger
+haskell-fgl
 haskell-file-embed
 haskell-generically
 haskell-ghc-bignum-orphans
