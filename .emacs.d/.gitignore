@@ -39,6 +39,7 @@
 /var/
 /lsp-cache/
 forge-database.sqlite
+forge-database-*
 .lsp-session-v1
 kkcrc
 .dap-breakpoints
