@@ -25,8 +25,8 @@ beautifulsoup4==4.11.1
 black==22.12.0
 bleach==5.0.1
 blockdiag==3.0.0
-boto3==1.26.39
-botocore==1.29.39
+boto3==1.26.40
+botocore==1.29.40
 bracex==2.3.post1
 btrfsutil==6.1
 CacheControl==0.12.11
@@ -58,7 +58,7 @@ debugpy==1.6.4
 decorator==5.1.1
 defusedxml==0.7.1
 diagrams==0.23.1
-diffoscope==228
+diffoscope==229
 distlib==0.3.6
 distro==1.8.0
 Django==4.1.4
@@ -214,7 +214,7 @@ pycairo==1.23.0
 pycountry==22.3.5
 pycparser==2.21
 pycryptodome==3.16.0
-pydantic==1.10.2
+pydantic==1.10.4
 PyDispatcher==2.0.6
 pydoc-utils==1.0.1
 pyfiglet==0.8.post1
