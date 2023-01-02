@@ -128,7 +128,7 @@ jupyter==1.0.0
 jupyter-console==6.4.4
 jupyter-events==0.5.0
 jupyter_client==7.4.8
-jupyter_core==5.1.1
+jupyter_core==5.1.2
 jupyter_server==2.0.6
 jupyter_server_terminals==0.4.3
 jupyterlab==3.5.2
@@ -187,7 +187,7 @@ pbr==5.11.0
 pep517==0.13.0
 pexpect==4.8.0
 pickleshare==0.7.5
-Pillow==9.3.0
+Pillow==9.4.0
 pipenv==2022.12.19
 pkginfo==1.9.2
 placebo==0.9.0
@@ -218,11 +218,11 @@ pydantic==1.10.4
 PyDispatcher==2.0.6
 pydoc-utils==1.0.1
 pyfiglet==0.8.post1
-Pygments==2.13.0
+Pygments==2.14.0
 PyGObject==3.42.2
 PyNaCl==1.4.0
 pynvim==0.4.3
-pyOpenSSL==22.1.0
+pyOpenSSL==23.0.0
 pyparsing==3.0.9
 pyrsistent==0.19.3
 PySocks==1.7.1
