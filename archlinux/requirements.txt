@@ -1,7 +1,7 @@
 ansible==7.1.0
 ansible-compat==2.2.7
 ansible-core==2.14.1
-ansible-lint==6.10.1
+ansible-lint==6.10.2
 anyio==3.6.2
 apparmor==3.1.2
 appdirs==1.4.4
@@ -61,7 +61,7 @@ diagrams==0.23.1
 diffoscope==230
 distlib==0.3.6
 distro==1.8.0
-Django==4.1.4
+Django==4.1.5
 django-nested-admin==4.0.2
 django-ses==3.3.0
 djangorestframework==3.14.0
