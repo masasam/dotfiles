@@ -183,7 +183,7 @@ uefiupdate: ## Update system firmware and uefi
 
 thinkpad: ## Workaround for Intel throttling issues in Linux
 	$(PACMAN) throttled
-	$(SYSTEMD_ENABLE) lenovo_fix.service
+	$(SYSTEMD_ENABLE) throttled
 
 pipewire-pulse: ## Install pipewire-pulse
 	$(PACMAN) pipewire-pulse
