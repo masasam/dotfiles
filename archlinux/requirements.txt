@@ -25,8 +25,8 @@ beautifulsoup4==4.11.1
 black==22.12.0
 bleach==5.0.1
 blockdiag==3.0.0
-boto3==1.26.41
-botocore==1.29.41
+boto3==1.26.42
+botocore==1.29.42
 bracex==2.3.post1
 btrfsutil==6.1
 CacheControl==0.12.11
@@ -98,7 +98,7 @@ html2text==2020.1.16
 html5lib==1.1
 httpie==3.2.1
 hyperlink==21.0.0
-identify==2.5.11
+identify==2.5.12
 idna==3.4
 importlib-metadata==5.0.0
 importmagic==0.1.7
@@ -106,7 +106,7 @@ incremental==22.10.0
 inflect==6.0.2
 invoke==1.7.3
 ipykernel==6.20.0
-ipython==8.7.0
+ipython==8.8.0
 ipython-genutils==0.2.0
 ipywidgets==8.0.4
 isodate==0.6.1
@@ -121,7 +121,7 @@ jedi==0.18.2
 jeepney==0.8.0
 Jinja2==3.1.2
 jmespath==1.0.1
-json5==0.9.10
+json5==0.9.11
 jsonpointer==2.3
 jsonschema==4.17.3
 jupyter==1.0.0
@@ -134,7 +134,7 @@ jupyter_server_terminals==0.4.3
 jupyterlab==3.5.2
 jupyterlab-pygments==0.2.2
 jupyterlab-widgets==3.0.5
-jupyterlab_server==2.17.0
+jupyterlab_server==2.18.0
 jupyterthemes==0.20.0
 kappa==0.6.0
 keyring==23.13.1
@@ -189,7 +189,7 @@ pexpect==4.8.0
 pickleshare==0.7.5
 Pillow==9.4.0
 pipenv==2022.12.19
-pkginfo==1.9.2
+pkginfo==1.9.3
 placebo==0.9.0
 platformdirs==2.6.0
 ply==3.11
@@ -256,7 +256,7 @@ rtv==1.27.0
 ruamel.yaml==0.17.21
 ruamel.yaml.clib==0.2.7
 s3transfer==0.6.0
-scipy==1.9.3
+scipy==1.10.0
 Scrapy==2.7.1
 screenkey==1.5
 seaborn==0.12.2
@@ -266,7 +266,7 @@ Send2Trash==1.8.0
 seqdiag==3.0.0
 service-identity==21.1.0
 sh==1.14.3
-shellingham==1.5.0
+shellingham==1.5.0.post1
 shtab==1.5.8
 six==1.16.0
 smmap==5.0.0
@@ -284,7 +284,7 @@ tabulate==0.9.0
 TBB==0.2
 team==1.0
 tenacity==8.1.0
-termcolor==2.1.1
+termcolor==2.2.0
 termdown==1.18.0
 terminado==0.17.1
 text-unidecode==1.3
