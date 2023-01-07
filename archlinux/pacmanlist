@@ -482,6 +482,7 @@ haskell-skylighting
 haskell-skylighting-core
 haskell-skylighting-format-ansi
 haskell-skylighting-format-blaze-html
+haskell-skylighting-format-context
 haskell-skylighting-format-latex
 haskell-socks
 haskell-some
