@@ -379,6 +379,7 @@ haskell-constraints
 haskell-contravariant
 haskell-cookie
 haskell-cryptonite
+haskell-data-array-byte
 haskell-data-default
 haskell-data-default-class
 haskell-data-default-instances-containers
