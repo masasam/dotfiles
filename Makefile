@@ -387,6 +387,7 @@ gh: ## Install and setup github-cli
 	$(PACMAN) github-cli
 	test -L ${HOME}/.config/$@ || rm -rf ${HOME}/.config/$@
 	ln -vsfn ${HOME}/{backup,.config}/$@
+	gh extension install seachicken/gh-poi
 
 aurplus: ## Install arch linux AUR packages using yay
 	yay -S appimagelauncher drone-cli nkf pencil rtags skypeforlinux-stable-bin trivy-bin
