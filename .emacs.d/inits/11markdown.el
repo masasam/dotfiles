@@ -18,7 +18,7 @@
 	     filename
 	     " -o "
 	     (file-name-sans-extension filename)
-	     ".pdf -V mainfont=IPAPGothic -V fontsize=14pt --pdf-engine=lualatex"))
+	     ".pdf -V mainfont=IPAPGothic -V geometry:margin=20mm -V fontsize=14pt --pdf-engine=lualatex"))
     (shell-command-to-string
      (concat "xdg-open "
 	     (file-name-sans-extension filename)
