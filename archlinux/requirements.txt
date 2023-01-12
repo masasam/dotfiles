@@ -25,8 +25,8 @@ beautifulsoup4==4.11.1
 black==22.12.0
 bleach==5.0.1
 blockdiag==3.0.0
-boto3==1.26.47
-botocore==1.29.47
+boto3==1.26.48
+botocore==1.29.48
 bracex==2.3.post1
 btrfsutil==6.1.2
 CacheControl==0.12.11
@@ -38,7 +38,7 @@ cfn-flip==1.3.0
 chardet==5.1.0
 charset-normalizer==3.0.1
 cheat==2.5.1
-chromedriver-binary==109.0.5414.25.0
+chromedriver-binary==109.0.5414.74.0
 cleo==2.0.1
 cli-helpers==2.3.0
 click==8.1.3
@@ -98,7 +98,7 @@ html2text==2020.1.16
 html5lib==1.1
 httpie==3.2.1
 hyperlink==21.0.0
-identify==2.5.12
+identify==2.5.13
 idna==3.4
 importlib-metadata==5.0.0
 importmagic==0.1.7
@@ -126,7 +126,7 @@ jsonpointer==2.3
 jsonschema==4.17.3
 jupyter==1.0.0
 jupyter-console==6.4.4
-jupyter-events==0.6.1
+jupyter-events==0.6.2
 jupyter_client==7.4.8
 jupyter_core==5.1.3
 jupyter_server==2.0.6
@@ -164,7 +164,7 @@ mypy-extensions==0.4.3
 nbclassic==0.4.8
 nbclient==0.7.2
 nbconvert==7.2.7
-nbformat==5.7.1
+nbformat==5.7.2
 neovim==0.3.1
 nest-asyncio==1.5.6
 nftables==0.1
@@ -183,7 +183,7 @@ paramiko==2.11.1
 parsel==1.7.0
 parso==0.8.3
 pathspec==0.10.3
-pbr==5.11.0
+pbr==5.11.1
 pep517==0.13.0
 pexpect==4.8.0
 pickleshare==0.7.5
@@ -241,7 +241,7 @@ QtPy==2.3.0
 queuelib==1.6.2
 r7insight-python==1.0.0
 rapidfuzz==2.13.7
-redis==4.4.1
+redis==4.4.2
 requests==2.28.1
 requests-file==1.5.1
 requests-mock==1.10.0
