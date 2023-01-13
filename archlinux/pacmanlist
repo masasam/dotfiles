@@ -1178,7 +1178,6 @@ python-numpy
 python-ordered-set
 python-packaging
 python-paramiko
-python-pep517
 python-pillow
 python-pip
 python-platformdirs
