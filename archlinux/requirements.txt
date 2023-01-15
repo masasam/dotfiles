@@ -233,7 +233,7 @@ python-magic==0.4.27
 python-monkey-business==1.0.0
 python-slugify==7.0.0
 python-utils==3.4.5
-pytz==2022.7
+pytz==2022.7.1
 PyYAML==6.0
 pyzmq==25.0.0
 qtconsole==5.4.0
