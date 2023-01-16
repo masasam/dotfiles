@@ -450,7 +450,7 @@ chromium: ## Install chromium and noto-fonts and browserpass
 	ln -vsfn ${HOME}/backup/browserpass ${HOME}/.password-store
 
 chrome: ## Install chrome and noto-fonts and browserpass
-	$(PACMAN) google-$@ browserpass-$@ noto-fonts noto-fonts-cjk libpipewire02
+	$(PACMAN) google-$@ browserpass-$@ noto-fonts noto-fonts-cjk
 	$(MAKE) -C /usr/lib/browserpass hosts-$@-user
 	test -L ${HOME}/.password-store || rm -rf ${HOME}/.password-store
 	ln -vsfn ${HOME}/backup/browserpass ${HOME}/.password-store
