@@ -105,7 +105,7 @@ importmagic==0.1.7
 incremental==22.10.0
 inflect==6.0.2
 invoke==1.7.3
-ipykernel==6.20.1
+ipykernel==6.20.2
 ipython==8.8.0
 ipython-genutils==0.2.0
 ipywidgets==8.0.4
@@ -134,7 +134,7 @@ jupyter_server_terminals==0.4.4
 jupyterlab==3.5.2
 jupyterlab-pygments==0.2.2
 jupyterlab-widgets==3.0.5
-jupyterlab_server==2.18.0
+jupyterlab_server==2.19.0
 jupyterthemes==0.20.0
 kappa==0.6.0
 keyring==23.13.1
@@ -163,7 +163,7 @@ multidict==6.0.3
 mypy-extensions==0.4.3
 nbclassic==0.4.8
 nbclient==0.7.2
-nbconvert==7.2.7
+nbconvert==7.2.8
 nbformat==5.7.3
 neovim==0.3.1
 nest-asyncio==1.5.6
@@ -184,7 +184,6 @@ parsel==1.7.0
 parso==0.8.3
 pathspec==0.10.3
 pbr==5.11.1
-pep517==0.13.0
 pexpect==4.8.0
 pickleshare==0.7.5
 Pillow==9.4.0
@@ -251,7 +250,7 @@ retrying==1.3.3
 rfc3339-validator==0.1.4
 rfc3986-validator==0.1.1
 rfc3987==1.3.8
-rich==13.0.1
+rich==13.1.0
 rtv==1.27.0
 ruamel.yaml==0.17.21
 ruamel.yaml.clib==0.2.7
