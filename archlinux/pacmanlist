@@ -1169,6 +1169,8 @@ python-libarchive-c
 python-lxml
 python-magic
 python-markdown
+python-markdown-it-py
+python-mdurl
 python-more-itertools
 python-msgpack
 python-multidict
@@ -1208,6 +1210,7 @@ python-toml
 python-tomli
 python-trove-classifiers
 python-typing_extensions
+python-uc-micro-py
 python-urllib3
 python-validate-pyproject
 python-wcwidth
