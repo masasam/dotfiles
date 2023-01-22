@@ -504,7 +504,8 @@ rbenv: ## Install rvenv ruby-build
 	gem install bundle
 
 rubygem: ## Install rubygem package
-	gem install bundler jekyll sass compass solargraph rawler rdoc irb rails
+	yay -S ruby-solargraph
+	gem install bundler jekyll sass compass rawler rdoc irb rails
 
 django: ## Create django project from scratch
 	mkdir -p ${HOME}/src/github.com/masasam/djangoproject && cd $$_ && touch Pipfile && \
