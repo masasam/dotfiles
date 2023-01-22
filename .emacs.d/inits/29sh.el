@@ -3,7 +3,7 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
-(add-hook 'sh-mode-hook #'lsp-deferred)
+(add-hook 'sh-mode-hook 'eglot-ensure)
 
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
