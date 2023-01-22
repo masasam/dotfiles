@@ -321,7 +321,7 @@ dingo: ## Install dingo Google DNS over HTTPS
 	$(SYSTEMD_ENABLE) $@.service
 
 ccls: ## Install c,c++ language server
-	yay -S ccls
+	$(PACMAN) $@
 
 android: ## Install android-studio
 	yay -S android-studio

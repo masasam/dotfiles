@@ -3,8 +3,8 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
-(add-hook 'c-mode-hook 'lsp-deferred)
-(add-hook 'c++-mode-hook 'lsp-deferred)
+(add-hook 'c-mode-hook 'eglot-ensure)
+(add-hook 'c++-mode-hook 'eglot-ensure)
 
 (add-hook 'c-mode-common-hook 'google-set-c-style)
 
