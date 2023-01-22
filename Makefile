@@ -4,8 +4,8 @@ export GOPATH := ${HOME}
 NODE_PKGS	:= babel-eslint cloc create-nuxt-app create-react-app webpack firebase-tools now
 NODE_PKGS	+= dockerfile-language-server-nodejs eslint eslint-cli eslint-config-vue netlify-cli
 NODE_PKGS	+= eslint-plugin-react eslint-plugin-vue@next expo-cli fx heroku ngrok prettier
-NODE_PKGS	+= indium intelephense javascript-typescript-langserver logo.svg @marp-team/marp-cli
-NODE_PKGS	+= mermaid mermaid.cli jshint parcel-bundler
+NODE_PKGS	+= indium intelephense logo.svg @marp-team/marp-cli jshint parcel-bundler
+NODE_PKGS	+= mermaid mermaid.cli
 
 PIP_PKGS	:= ansible ansible-lint beautifulsoup4 black cheat chromedriver-binary diagrams django djangorestframework
 PIP_PKGS	+= django-nested-admin django-ses faker gif-for-cli graph-cli importmagic ipywidgets virtualenvwrapper
