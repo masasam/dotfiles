@@ -31,7 +31,7 @@ PACKAGES	+= smartmontools gnome-logs wireshark-cli wl-clipboard lsof mapnik edit
 PACKAGES	+= gtop gopls convmv mpv browserpass-firefox man-db baobab ioping ruby-irb mkcert code findomain
 PACKAGES	+= guetzli fabric python-language-server detox usleep libvterm bind asunder lame git-lfs hex miller
 PACKAGES	+= diffoscope dust rbw exa sslscan abiword pyright miniserve fdupes deno serverless mold fx httpie
-PACKAGES	+= bash-language-server gron pyenv typescript-language-server
+PACKAGES	+= bash-language-server gron pyenv typescript-language-server csvkit
 
 BASE_PKGS	:= filesystem gcc-libs glibc bash coreutils file findutils gawk grep procps-ng sed tar gettext
 BASE_PKGS	+= pciutils psmisc shadow util-linux bzip2 gzip xz licenses pacman systemd systemd-sysvcompat 
