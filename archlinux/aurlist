@@ -10,6 +10,7 @@ pscale-cli
 rbenv
 rgxg
 ruby-build
+ruby-solargraph
 sequeler-git
 slack-desktop
 stern-bin
