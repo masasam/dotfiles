@@ -1159,6 +1159,7 @@ python-docopt
 python-docutils
 python-dotenv
 python-et-xmlfile
+python-fastjsonschema
 python-fluidity
 python-funcparserlib
 python-future
