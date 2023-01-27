@@ -30,8 +30,8 @@ beautifulsoup4==4.11.1
 black==22.12.0
 bleach==6.0.0
 blockdiag==3.0.0
-boto3==1.26.57
-botocore==1.29.57
+boto3==1.26.58
+botocore==1.29.58
 bracex==2.3.post1
 btrfsutil==6.1.2
 CacheControl==0.12.11
@@ -55,7 +55,7 @@ constantly==15.1.0
 contextlib2==21.6.0
 contourpy==1.0.7
 crashtest==0.4.1
-cryptography==38.0.4
+cryptography==39.0.0
 cssselect==1.2.0
 csvkit==1.0.7
 cycler==0.11.0
@@ -136,7 +136,7 @@ jsonschema==4.17.3
 jupyter==1.0.0
 jupyter-console==6.4.4
 jupyter-events==0.6.3
-jupyter_client==7.4.9
+jupyter_client==8.0.1
 jupyter_core==5.1.5
 jupyter_server==2.1.0
 jupyter_server_terminals==0.4.4
@@ -173,7 +173,7 @@ more-itertools==9.0.0
 msgpack==1.0.4
 multidict==6.0.3
 mypy-extensions==0.4.3
-nbclassic==0.4.8
+nbclassic==0.5.1
 nbclient==0.7.2
 nbconvert==7.2.9
 nbformat==5.7.3
@@ -210,7 +210,7 @@ ply==3.11
 poetry==1.3.2
 poetry-core==1.4.0
 poetry-plugin-export==1.2.0
-pre-commit==3.0.0
+pre-commit==3.0.1
 progress==1.6
 progressbar2==4.2.0
 prometheus-client==0.16.0
