@@ -96,7 +96,7 @@ future==0.18.2
 gif-for-cli==1.1.2
 gitdb==4.0.10
 gitdb2==4.0.2
-GitPython==3.0.6
+GitPython==3.1.30
 graph-cli==0.1.19
 graphviz==0.20.1
 greenlet==2.0.2
