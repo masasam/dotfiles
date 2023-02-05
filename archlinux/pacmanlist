@@ -349,6 +349,7 @@ haskell-auto-update
 haskell-base-compat
 haskell-base-compat-batteries
 haskell-base-orphans
+haskell-base-unicode-symbols
 haskell-base16-bytestring
 haskell-base64
 haskell-base64-bytestring
@@ -413,12 +414,14 @@ haskell-hslua
 haskell-hslua-aeson
 haskell-hslua-classes
 haskell-hslua-core
+haskell-hslua-list
 haskell-hslua-marshalling
 haskell-hslua-module-doclayout
 haskell-hslua-module-path
 haskell-hslua-module-system
 haskell-hslua-module-text
 haskell-hslua-module-version
+haskell-hslua-module-zip
 haskell-hslua-objectorientation
 haskell-hslua-packaging
 haskell-hsyaml
@@ -458,7 +461,10 @@ haskell-old-locale
 haskell-old-time
 haskell-onetuple
 haskell-optparse-applicative
+haskell-pandoc
+haskell-pandoc-lua-engine
 haskell-pandoc-lua-marshal
+haskell-pandoc-server
 haskell-pandoc-types
 haskell-pem
 haskell-pretty-show
@@ -533,6 +539,7 @@ haskell-vector-algorithms
 haskell-vector-stream
 haskell-wai
 haskell-wai-app-static
+haskell-wai-cors
 haskell-wai-extra
 haskell-wai-logger
 haskell-warp
@@ -556,6 +563,7 @@ hexedit
 hicolor-icon-theme
 hidapi
 highlight
+hslua-cli
 hspell
 htop
 http-parser
@@ -1070,7 +1078,7 @@ pacman-contrib
 pacman-mirrorlist
 pam
 pambase
-pandoc
+pandoc-cli
 pango
 pangomm
 parallel
