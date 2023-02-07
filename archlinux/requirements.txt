@@ -32,8 +32,8 @@ beautifulsoup4==4.11.2
 black==23.1.0
 bleach==6.0.0
 blockdiag==3.0.0
-boto3==1.26.64
-botocore==1.29.64
+boto3==1.26.65
+botocore==1.29.65
 bracex==2.3.post1
 btrfsutil==6.1.3
 CacheControl==0.12.11
@@ -173,7 +173,7 @@ matplotlib-inline==0.1.6
 mcomix==2.1.0
 mdurl==0.1.2
 meson==1.0.0
-mistune==2.0.4
+mistune==2.0.5
 more-itertools==9.0.0
 msgpack==1.0.4
 multidict==6.0.3
@@ -192,7 +192,7 @@ notebook_shim==0.2.2
 nspektr==0.4.0
 numpy==1.24.2
 olefile==0.46
-openpyxl==3.0.10
+openpyxl==3.1.0
 ordered-set==4.1.0
 outcome==1.2.0
 packaging==23.0
@@ -345,7 +345,7 @@ uri-template==1.2.0
 urllib3==1.26.12
 validate-pyproject==0.12.1
 vimiv==0.9.1
-virtualenv==20.17.1
+virtualenv==20.18.0
 virtualenv-clone==0.5.7
 virtualenvwrapper==4.8.4
 w3lib==2.1.1
