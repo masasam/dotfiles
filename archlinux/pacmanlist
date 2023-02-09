@@ -1315,6 +1315,7 @@ ruby-csv
 ruby-date
 ruby-delegate
 ruby-did_you_mean
+ruby-diff-lcs
 ruby-digest
 ruby-drb
 ruby-english
