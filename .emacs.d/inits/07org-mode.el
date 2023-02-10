@@ -17,6 +17,9 @@
 (bind-key "C-c a" 'org-agenda)
 (bind-key "C-c c" 'org-capture)
 
+(with-eval-after-load "org"
+  (define-key org-mode-map (kbd "C-'") #'hydra-pinky/body))
+
 (setq org-capture-templates
       '(("e" "Experiment" entry (file+headline "~/backup/emacs/org/experiment.org" "Experiment")
 	 "* %? %U %i\n
