@@ -70,7 +70,7 @@ diagrams==0.23.3
 diffoscope==235
 distlib==0.3.6
 distro==1.8.0
-Django==4.1.6
+Django==4.1.7
 django-nested-admin==4.0.2
 django-ses==3.3.0
 djangorestframework==3.14.0
