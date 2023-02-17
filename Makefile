@@ -456,6 +456,9 @@ chrome: ## Install chrome and noto-fonts and browserpass
 	test -L ${HOME}/.password-store || rm -rf ${HOME}/.password-store
 	ln -vsfn ${HOME}/backup/browserpass ${HOME}/.password-store
 
+edge: ## Install edge
+	yay -S microsoft-edge-stable-bin
+
 neovim: ## Init neovim
 	$(PACMAN) $@
 	mkdir -p ${HOME}/.config/nvim
