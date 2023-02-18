@@ -8,7 +8,7 @@ alabaster==0.7.13
 ansible==7.2.0
 ansible-compat==3.0.1
 ansible-core==2.14.2
-ansible-lint==6.13.0
+ansible-lint==6.13.1
 anyio==3.6.2
 apparmor==3.1.2
 appdirs==1.4.4
@@ -32,8 +32,8 @@ beautifulsoup4==4.11.2
 black==23.1.0
 bleach==6.0.0
 blockdiag==3.0.0
-boto3==1.26.73
-botocore==1.29.73
+boto3==1.26.74
+botocore==1.29.74
 bracex==2.3.post1
 btrfsutil==6.1.3
 CacheControl==0.12.11
@@ -67,7 +67,7 @@ debugpy==1.6.6
 decorator==5.1.1
 defusedxml==0.7.1
 diagrams==0.23.3
-diffoscope==235
+diffoscope==236
 distlib==0.3.6
 distro==1.8.0
 Django==4.1.7
@@ -234,7 +234,7 @@ pycountry==22.3.5
 pycparser==2.21
 pycryptodome==3.17
 pydantic==1.10.4
-PyDispatcher==2.0.6
+PyDispatcher==2.0.7
 pydoc-utils==1.0.1
 pyfiglet==0.8.post1
 Pygments==2.14.0
@@ -282,7 +282,7 @@ Scrapy==2.8.0
 screenkey==1.5
 seaborn==0.12.2
 SecretStorage==3.3.3
-selenium==4.8.0
+selenium==4.8.1
 Send2Trash==1.8.0
 seqdiag==3.0.0
 service-identity==21.1.0
