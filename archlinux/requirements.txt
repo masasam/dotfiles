@@ -178,7 +178,7 @@ more-itertools==9.0.0
 msgpack==1.0.4
 multidict==6.0.3
 mypy-extensions==1.0.0
-nbclassic==0.5.1
+nbclassic==0.5.2
 nbclient==0.7.2
 nbconvert==7.2.9
 nbformat==5.7.3
@@ -207,7 +207,7 @@ pbr==5.11.1
 pexpect==4.8.0
 pickleshare==0.7.5
 Pillow==9.4.0
-pipenv==2023.2.4
+pipenv==2023.2.18
 pkginfo==1.9.6
 placebo==0.9.0
 platformdirs==2.6.2
@@ -282,7 +282,7 @@ Scrapy==2.8.0
 screenkey==1.5
 seaborn==0.12.2
 SecretStorage==3.3.3
-selenium==4.8.1
+selenium==4.8.2
 Send2Trash==1.8.0
 seqdiag==3.0.0
 service-identity==21.1.0
@@ -309,7 +309,7 @@ sqlparse==0.4.3
 sshuttle==1.1.1
 stack-data==0.6.2
 stevedore==5.0.0
-streamlink==5.2.1
+streamlink==5.3.0
 subprocess-tee==0.4.1
 tabulate==0.9.0
 TBB==0.2
