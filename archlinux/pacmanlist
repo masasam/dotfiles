@@ -1136,6 +1136,7 @@ python-agate-dbf
 python-agate-excel
 python-agate-sql
 python-appdirs
+python-argcomplete
 python-asn1crypto
 python-attrs
 python-autocommand
@@ -1262,6 +1263,7 @@ python-webencodings
 python-websocket-client
 python-wheel
 python-xlrd
+python-xmltodict
 python-yaml
 python-zipp
 qhull
@@ -1587,6 +1589,7 @@ xxhash
 xz
 yarn
 youtube-dl
+yq
 zbar
 zenity
 zeromq

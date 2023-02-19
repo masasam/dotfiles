@@ -360,10 +360,12 @@ widgetsnbextension==4.0.5
 wsproto==1.2.0
 x256==0.0.3
 xlrd==2.0.1
+xmltodict==0.13.0
 y-py==0.5.5
 yamllint==1.29.0
 youtube-dl==2021.12.17
 ypy-websocket==0.8.2
+yq==3.1.0
 zappa==0.56.1
-zipp==3.13.0
+zipp==3.14.0
 zope.interface==5.5.2
