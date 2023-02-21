@@ -788,6 +788,7 @@ libmpcdec
 libmspub
 libmwaw
 libmypaint
+libmysofa
 libnautilus-extension
 libndp
 libnet
@@ -823,6 +824,7 @@ libpciaccess
 libpeas
 libpgm
 libpipeline
+libpipewire
 libplacebo
 libplist
 libpng
