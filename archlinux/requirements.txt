@@ -32,8 +32,8 @@ beautifulsoup4==4.11.2
 black==23.1.0
 bleach==6.0.0
 blockdiag==3.0.0
-boto3==1.26.75
-botocore==1.29.75
+boto3==1.26.76
+botocore==1.29.76
 bracex==2.3.post1
 btrfsutil==6.1.3
 CacheControl==0.12.11
@@ -136,9 +136,9 @@ json5==0.9.11
 jsonpointer==2.3
 jsonschema==4.17.3
 jupyter==1.0.0
-jupyter-console==6.6.0
+jupyter-console==6.6.1
 jupyter-events==0.6.3
-jupyter-ydoc==0.3.2
+jupyter-ydoc==0.3.3
 jupyter_client==8.0.3
 jupyter_core==5.2.0
 jupyter_server==2.3.0
@@ -248,7 +248,7 @@ pyrsistent==0.19.3
 PySocks==1.7.1
 python-dateutil==2.8.2
 python-dotenv==0.21.1
-python-json-logger==2.0.6
+python-json-logger==2.0.7
 python-magic==0.4.27
 python-monkey-business==1.0.0
 python-slugify==8.0.0
@@ -364,7 +364,7 @@ xmltodict==0.13.0
 y-py==0.6.0
 yamllint==1.29.0
 youtube-dl==2021.12.17
-ypy-websocket==0.8.3
+ypy-websocket==0.8.4
 yq==3.1.0
 zappa==0.56.1
 zipp==3.14.0
