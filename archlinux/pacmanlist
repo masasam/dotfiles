@@ -282,6 +282,7 @@ google-glog
 gopls
 gpaste
 gperf
+gperftools
 gpgme
 gpm
 gptfdisk
@@ -563,6 +564,7 @@ hexedit
 hicolor-icon-theme
 hidapi
 highlight
+highway
 hslua-cli
 hspell
 htop
@@ -758,6 +760,7 @@ libisl
 libixion
 libjcat
 libjpeg-turbo
+libjxl
 libkate
 libkeybinder3
 libksba
