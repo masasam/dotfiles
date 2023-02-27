@@ -219,7 +219,7 @@ pre-commit==3.1.0
 progress==1.6
 progressbar2==4.2.0
 prometheus-client==0.16.0
-prompt-toolkit==3.0.36
+prompt-toolkit==3.0.37
 Protego==0.2.1
 psutil==5.9.4
 psycopg2-binary==2.9.5
