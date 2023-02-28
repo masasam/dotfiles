@@ -7,7 +7,7 @@ aiosqlite==0.18.0
 alabaster==0.7.13
 ansible==7.2.0
 ansible-compat==3.0.1
-ansible-core==2.14.2
+ansible-core==2.14.3
 ansible-lint==6.13.1
 anyio==3.6.2
 apparmor==3.1.2
@@ -32,10 +32,11 @@ beautifulsoup4==4.11.2
 black==23.1.0
 bleach==6.0.0
 blockdiag==3.0.0
-boto3==1.26.79
-botocore==1.29.79
+boto3==1.26.80
+botocore==1.29.80
 bracex==2.3.post1
 btrfsutil==6.1.3
+build==0.10.0
 CacheControl==0.12.11
 cached-property==1.5.2
 certifi==2022.12.7
@@ -45,7 +46,7 @@ cfn-flip==1.3.0
 chardet==5.1.0
 charset-normalizer==3.0.1
 cheat==2.5.1
-chromedriver-binary==111.0.5563.19.0
+chromedriver-binary==111.0.5563.41.0
 cleo==2.0.1
 cli-helpers==2.3.0
 click==8.1.3
@@ -80,7 +81,7 @@ docker-pycreds==0.4.0
 dockerpty==0.4.1
 docopt==0.6.2
 docutils==0.19
-dulwich==0.20.50
+dulwich==0.21.3
 durationpy==0.5
 entrypoints==0.4
 et-xmlfile==1.1.0
@@ -115,6 +116,7 @@ importlib-metadata==5.0.0
 importmagic==0.1.7
 incremental==22.10.0
 inflect==6.0.2
+installer==0.6.0
 invoke==2.0.0
 ipykernel==6.21.2
 ipython==8.10.0
@@ -136,7 +138,7 @@ json5==0.9.11
 jsonpointer==2.3
 jsonschema==4.17.3
 jupyter==1.0.0
-jupyter-console==6.6.1
+jupyter-console==6.6.2
 jupyter-events==0.6.3
 jupyter-ydoc==0.3.4
 jupyter_client==8.0.3
@@ -212,10 +214,10 @@ pkginfo==1.9.6
 placebo==0.9.0
 platformdirs==2.6.2
 ply==3.11
-poetry==1.3.2
-poetry-core==1.4.0
+poetry==1.4.0
+poetry-core==1.5.1
 poetry-plugin-export==1.3.0
-pre-commit==3.1.0
+pre-commit==3.1.1
 progress==1.6
 progressbar2==4.2.0
 prometheus-client==0.16.0
@@ -244,6 +246,7 @@ PyNaCl==1.4.0
 pynvim==0.4.3
 pyOpenSSL==23.0.0
 pyparsing==3.0.9
+pyproject_hooks==1.0.0
 pyrsistent==0.19.3
 PySocks==1.7.1
 python-dateutil==2.8.2
