@@ -32,8 +32,8 @@ beautifulsoup4==4.11.2
 black==23.1.0
 bleach==6.0.0
 blockdiag==3.0.0
-boto3==1.26.82
-botocore==1.29.82
+boto3==1.26.83
+botocore==1.29.83
 bracex==2.3.post1
 btrfsutil==6.1.3
 build==0.10.0
