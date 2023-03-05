@@ -168,7 +168,7 @@ lockfile==0.12.2
 louis==3.24.0
 lxml==4.9.2
 Markdown==3.4.1
-markdown-it-py==2.1.0
+markdown-it-py==2.2.0
 MarkupSafe==2.1.2
 matplotlib==3.7.1
 matplotlib-inline==0.1.6
