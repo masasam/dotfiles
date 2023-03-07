@@ -375,7 +375,7 @@ sequeler: ## Install gui database tools
 	yay -S $@-git
 
 beekeeper: ## Setup beekeeper-studio
-	yay -S $@-studio-bin
+	yay -S $@-studio
 	test -L ${HOME}/.config/$@-studio || rm -rf ${HOME}/.config/$@-studio
 	ln -vsfn ${HOME}/{backup,.config}/$@-studio
 
