@@ -32,8 +32,8 @@ beautifulsoup4==4.11.2
 black==23.1.0
 bleach==6.0.0
 blockdiag==3.0.0
-boto3==1.26.86
-botocore==1.29.86
+boto3==1.26.87
+botocore==1.29.87
 bracex==2.3.post1
 btrfsutil==6.2.1
 build==0.10.0
@@ -68,7 +68,7 @@ debugpy==1.6.6
 decorator==5.1.1
 defusedxml==0.7.1
 diagrams==0.23.3
-diffoscope==236
+diffoscope==238
 distlib==0.3.6
 distro==1.8.0
 Django==4.1.7
@@ -109,7 +109,7 @@ html2text==2020.1.16
 html5lib==1.1
 httpie==3.2.1
 hyperlink==21.0.0
-identify==2.5.18
+identify==2.5.19
 idna==3.4
 imagesize==1.4.1
 importlib-metadata==5.0.0
