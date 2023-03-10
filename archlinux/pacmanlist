@@ -43,6 +43,7 @@ ayatana-ido
 babl
 baobab
 base
+base-devel
 bash
 bash-completion
 bash-language-server
@@ -131,6 +132,7 @@ dconf
 dconf-editor
 debian-archive-keyring
 debootstrap
+debugedit
 debuginfod
 default-cursors
 deno

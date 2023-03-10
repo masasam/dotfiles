@@ -8,7 +8,7 @@ alabaster==0.7.13
 ansible==7.3.0
 ansible-compat==3.0.1
 ansible-core==2.14.3
-ansible-lint==6.14.1
+ansible-lint==6.14.2
 anyio==3.6.2
 apparmor==3.1.3
 appdirs==1.4.4
@@ -32,8 +32,8 @@ beautifulsoup4==4.11.2
 black==23.1.0
 bleach==6.0.0
 blockdiag==3.0.0
-boto3==1.26.87
-botocore==1.29.87
+boto3==1.26.88
+botocore==1.29.88
 bracex==2.3.post1
 btrfsutil==6.2.1
 build==0.10.0
@@ -46,7 +46,7 @@ cfn-flip==1.3.0
 chardet==5.1.0
 charset-normalizer==3.0.1
 cheat==2.5.1
-chromedriver-binary==111.0.5563.41.0
+chromedriver-binary==111.0.5563.64.0
 cleo==2.0.1
 cli-helpers==2.3.0
 click==8.1.3
@@ -235,7 +235,7 @@ pycairo==1.23.0
 pycountry==22.3.5
 pycparser==2.21
 pycryptodome==3.17
-pydantic==1.10.5
+pydantic==1.10.6
 PyDispatcher==2.0.7
 pydoc-utils==1.0.1
 pyfiglet==0.8.post1
