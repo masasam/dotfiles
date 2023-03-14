@@ -39,7 +39,6 @@ autoconf
 autogen
 automake
 avahi
-ayatana-ido
 babl
 baobab
 base
@@ -200,7 +199,6 @@ fluidsynth
 fontconfig
 fping
 freeglut
-freerdp
 freetype2
 frei0r-plugins
 fribidi
@@ -662,8 +660,6 @@ libatomic_ops
 libavc1394
 libavif
 libavtp
-libayatana-appindicator
-libayatana-indicator
 libb2
 libblockdev
 libbluray
@@ -736,7 +732,6 @@ libgpg-error
 libgphoto2
 libgrss
 libgsf
-libgssglue
 libgtop
 libgudev
 libgusb
@@ -905,7 +900,6 @@ libvdpau
 libverto
 libvisio
 libvisual
-libvncserver
 libvoikko
 libvorbis
 libvpx
@@ -1302,7 +1296,6 @@ re2
 readline
 redland
 reiserfsprogs
-remmina
 rest
 rhash
 ripgrep
