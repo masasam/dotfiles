@@ -32,8 +32,8 @@ beautifulsoup4==4.11.2
 black==23.1.0
 bleach==6.0.0
 blockdiag==3.0.0
-boto3==1.26.91
-botocore==1.29.91
+boto3==1.26.92
+botocore==1.29.92
 bracex==2.3.post1
 btrfsutil==6.2.1
 build==0.10.0
@@ -90,7 +90,7 @@ executing==1.2.0
 fabric==3.0.0
 Faker==17.6.0
 fastjsonschema==2.16.3
-filelock==3.9.1
+filelock==3.10.0
 fluidity-sm==0.2.1
 fonttools==4.39.0
 fqdn==1.5.1
@@ -204,7 +204,7 @@ paramiko==2.11.1
 parsedatetime==2.6
 parsel==1.7.0
 parso==0.8.3
-pathspec==0.11.0
+pathspec==0.11.1
 pbr==5.11.1
 pexpect==4.8.0
 pickleshare==0.7.5
