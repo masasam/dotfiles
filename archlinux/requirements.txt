@@ -12,7 +12,7 @@ ansible-lint==6.14.2
 anyio==3.6.2
 apparmor==3.1.3
 appdirs==1.4.4
-argcomplete==2.1.1
+argcomplete==2.1.2
 argon2-cffi==21.3.0
 argon2-cffi-bindings==21.2.0
 arrow==1.2.3
@@ -32,8 +32,8 @@ beautifulsoup4==4.11.2
 black==23.1.0
 bleach==6.0.0
 blockdiag==3.0.0
-boto3==1.26.93
-botocore==1.29.93
+boto3==1.26.94
+botocore==1.29.94
 bracex==2.3.post1
 btrfsutil==6.2.1
 build==0.10.0
@@ -46,7 +46,7 @@ cfn-flip==1.3.0
 chardet==5.1.0
 charset-normalizer==3.1.0
 cheat==2.5.1
-chromedriver-binary==111.0.5563.64.0
+chromedriver-binary==112.0.5615.28.0
 cleo==2.0.1
 cli-helpers==2.3.0
 click==8.1.3
@@ -194,7 +194,7 @@ notebook_shim==0.2.2
 nspektr==0.4.0
 numpy==1.24.2
 olefile==0.46
-openpyxl==3.1.1
+openpyxl==3.1.2
 ordered-set==4.1.0
 outcome==1.2.0
 packaging==23.0
@@ -217,7 +217,7 @@ ply==3.11
 poetry==1.4.0
 poetry-core==1.5.1
 poetry-plugin-export==1.3.0
-pre-commit==3.1.1
+pre-commit==3.2.0
 progress==1.6
 progressbar2==4.2.0
 prometheus-client==0.16.0
@@ -372,4 +372,4 @@ ypy-websocket==0.8.4
 yq==3.1.1
 zappa==0.56.1
 zipp==3.15.0
-zope.interface==5.5.2
+zope.interface==6.0
