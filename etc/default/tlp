@@ -169,7 +169,7 @@ SATA_LINKPWR_ON_BAT="med_power_with_dipm min_power"
 # Exclude host devices from AHCI link power management.
 # Separate multiple hosts with spaces.
 # Default: <none>
-SATA_LINKPWR_BLACKLIST="host0 host1"
+SATA_LINKPWR_BLACKLIST="host1"
 
 # Runtime Power Management for AHCI host and disks devices:
 #   on=disable, auto=enable.
