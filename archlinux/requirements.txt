@@ -32,8 +32,8 @@ beautifulsoup4==4.12.0
 black==23.1.0
 bleach==6.0.0
 blockdiag==3.0.0
-boto3==1.26.96
-botocore==1.29.96
+boto3==1.26.97
+botocore==1.29.97
 bracex==2.3.post1
 btrfsutil==6.2.1
 build==0.10.0
@@ -51,7 +51,7 @@ cleo==2.0.1
 cli-helpers==2.3.0
 click==8.1.3
 colorama==0.4.6
-comm==0.1.2
+comm==0.1.3
 commonmark==0.9.1
 configobj==5.0.8
 constantly==15.1.0
@@ -90,7 +90,7 @@ executing==1.2.0
 fabric==3.0.0
 Faker==18.3.0
 fastjsonschema==2.16.3
-filelock==3.10.0
+filelock==3.10.2
 fluidity-sm==0.2.1
 fonttools==4.39.2
 fqdn==1.5.1
@@ -150,7 +150,7 @@ jupyter_server_ydoc==0.8.0
 jupyterlab==3.5.3
 jupyterlab-pygments==0.2.2
 jupyterlab-widgets==3.0.6
-jupyterlab_server==2.20.0
+jupyterlab_server==2.21.0
 jupyterthemes==0.20.0
 kappa==0.6.0
 keyring==23.13.1
@@ -167,7 +167,7 @@ litecli==1.9.0
 lockfile==0.12.2
 louis==3.25.0
 lxml==4.9.2
-Markdown==3.4.1
+Markdown==3.4.2
 markdown-it-py==2.2.0
 MarkupSafe==2.1.2
 matplotlib==3.7.1
@@ -265,7 +265,7 @@ QtPy==2.3.0
 queuelib==1.6.2
 r7insight-python==1.0.0
 rapidfuzz==2.13.7
-redis==4.5.2
+redis==4.5.3
 requests==2.28.2
 requests-file==1.5.1
 requests-mock==1.10.0
@@ -366,7 +366,7 @@ x256==0.0.3
 xlrd==2.0.1
 xmltodict==0.13.0
 y-py==0.6.0
-yamllint==1.29.0
+yamllint==1.30.0
 youtube-dl==2021.12.17
 ypy-websocket==0.8.4
 yq==3.1.1
