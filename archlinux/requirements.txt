@@ -32,8 +32,8 @@ beautifulsoup4==4.12.0
 black==23.1.0
 bleach==6.0.0
 blockdiag==3.0.0
-boto3==1.26.97
-botocore==1.29.97
+boto3==1.26.98
+botocore==1.29.98
 bracex==2.3.post1
 btrfsutil==6.2.1
 build==0.10.0
@@ -88,9 +88,9 @@ et-xmlfile==1.1.0
 exceptiongroup==1.1.1
 executing==1.2.0
 fabric==3.0.0
-Faker==18.3.0
+Faker==18.3.1
 fastjsonschema==2.16.3
-filelock==3.10.2
+filelock==3.10.3
 fluidity-sm==0.2.1
 fonttools==4.39.2
 fqdn==1.5.1
@@ -167,7 +167,7 @@ litecli==1.9.0
 lockfile==0.12.2
 louis==3.25.0
 lxml==4.9.2
-Markdown==3.4.2
+Markdown==3.4.3
 markdown-it-py==2.2.0
 MarkupSafe==2.1.2
 matplotlib==3.7.1
