@@ -669,6 +669,7 @@ libbsd
 libbytesize
 libcaca
 libcamera
+libcamera-ipa
 libcanberra
 libcap
 libcap-ng
@@ -885,6 +886,8 @@ libtiger
 libtirpc
 libtommath
 libtool
+libtraceevent
+libtracefs
 libunistring
 libunwind
 liburcu
