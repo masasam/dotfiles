@@ -90,7 +90,7 @@ executing==1.2.0
 fabric==3.0.0
 Faker==18.3.1
 fastjsonschema==2.16.3
-filelock==3.10.4
+filelock==3.10.5
 fluidity-sm==0.2.1
 fonttools==4.39.2
 fqdn==1.5.1
@@ -217,7 +217,7 @@ ply==3.11
 poetry==1.4.1
 poetry-core==1.5.2
 poetry-plugin-export==1.3.0
-pre-commit==3.2.0
+pre-commit==3.2.1
 progress==1.6
 progressbar2==4.2.0
 prometheus-client==0.16.0
@@ -257,7 +257,7 @@ python-monkey-business==1.0.0
 python-slugify==8.0.1
 python-utils==3.5.2
 pytimeparse==1.1.8
-pytz==2022.7.1
+pytz==2023.2
 PyYAML==6.0
 pyzmq==25.0.2
 qtconsole==5.4.1
