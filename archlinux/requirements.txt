@@ -5,7 +5,7 @@ agate-sql==0.5.8
 aiofiles==22.1.0
 aiosqlite==0.18.0
 alabaster==0.7.13
-ansible==7.3.0
+ansible==7.4.0
 ansible-compat==3.0.1
 ansible-core==2.14.4
 ansible-lint==6.14.3
@@ -32,8 +32,8 @@ beautifulsoup4==4.12.0
 black==23.1.0
 bleach==6.0.0
 blockdiag==3.0.0
-boto3==1.26.100
-botocore==1.29.100
+boto3==1.26.101
+botocore==1.29.101
 bracex==2.3.post1
 btrfsutil==6.2.2
 build==0.10.0
@@ -92,7 +92,7 @@ Faker==18.3.1
 fastjsonschema==2.16.3
 filelock==3.10.7
 fluidity-sm==0.2.1
-fonttools==4.39.2
+fonttools==4.39.3
 fqdn==1.5.1
 funcparserlib==1.0.1
 future==0.18.2
@@ -121,7 +121,7 @@ invoke==2.0.0
 ipykernel==6.22.0
 ipython==8.11.0
 ipython-genutils==0.2.0
-ipywidgets==8.0.5
+ipywidgets==8.0.6
 isodate==0.6.1
 isoduration==20.11.0
 itemadapter==0.7.0
@@ -149,7 +149,7 @@ jupyter_server_terminals==0.4.4
 jupyter_server_ydoc==0.8.0
 jupyterlab==3.5.3
 jupyterlab-pygments==0.2.2
-jupyterlab-widgets==3.0.6
+jupyterlab-widgets==3.0.7
 jupyterlab_server==2.21.0
 jupyterthemes==0.20.0
 kappa==0.6.0
@@ -261,7 +261,7 @@ pytz==2023.2
 PyYAML==6.0
 pyzmq==25.0.2
 qtconsole==5.4.1
-QtPy==2.3.0
+QtPy==2.3.1
 queuelib==1.6.2
 r7insight-python==1.0.0
 rapidfuzz==2.13.7
@@ -348,7 +348,7 @@ typing_extensions==4.5.0
 uc-micro-py==1.0.1
 uri-template==1.2.0
 urllib3==1.26.13
-validate-pyproject==0.12.1
+validate-pyproject==0.12.2.post1.dev0+g2940279.d20230328
 vimiv==0.9.1
 virtualenv==20.21.0
 virtualenv-clone==0.5.7
@@ -356,11 +356,11 @@ virtualenvwrapper==4.8.4
 w3lib==2.1.1
 wcmatch==8.4.1
 wcwidth==0.2.5
-webcolors==1.12
+webcolors==1.13
 webencodings==0.5.1
 websocket-client==1.5.1
 Werkzeug==2.2.3
-widgetsnbextension==4.0.6
+widgetsnbextension==4.0.7
 wsproto==1.2.0
 x256==0.0.3
 xlrd==2.0.1
