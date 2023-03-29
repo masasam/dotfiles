@@ -95,7 +95,7 @@ fluidity-sm==0.2.1
 fonttools==4.39.3
 fqdn==1.5.1
 funcparserlib==1.0.1
-future==0.18.2
+future==0.18.3
 gif-for-cli==1.1.2
 gitdb==4.0.10
 gitdb2==4.0.2
