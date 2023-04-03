@@ -5,7 +5,7 @@ defkanji utf-8
 defencoding utf-8
 encoding utf-8 utf-8
 defscrollback 10000
-# escape ^Jj
+escape ^Jj
 startup_message off
 vbell off
 altscreen on
