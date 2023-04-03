@@ -181,7 +181,7 @@ msgpack==1.0.4
 multidict==6.0.3
 mypy-extensions==1.0.0
 nbclassic==0.5.4
-nbclient==0.7.2
+nbclient==0.7.3
 nbconvert==7.2.10
 nbformat==5.8.0
 neovim==0.3.1
@@ -214,7 +214,7 @@ pkginfo==1.9.6
 placebo==0.9.0
 platformdirs==2.6.2
 ply==3.11
-poetry==1.4.1
+poetry==1.4.2
 poetry-core==1.5.2
 poetry-plugin-export==1.3.0
 pre-commit==3.2.1
@@ -260,7 +260,7 @@ pytimeparse==1.1.8
 pytz==2023.3
 PyYAML==6.0
 pyzmq==25.0.2
-qtconsole==5.4.1
+qtconsole==5.4.2
 QtPy==2.3.1
 queuelib==1.6.2
 r7insight-python==1.0.0
@@ -291,7 +291,7 @@ seqdiag==3.0.0
 service-identity==21.1.0
 sh==1.14.3
 shellingham==1.5.1
-shtab==1.5.8
+shtab==1.6.0
 six==1.16.0
 smmap==5.0.0
 sniffio==1.3.0
