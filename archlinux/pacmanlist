@@ -1259,6 +1259,7 @@ python-texttable
 python-tlsh
 python-toml
 python-tomli
+python-tomlkit
 python-trove-classifiers
 python-typing_extensions
 python-uc-micro-py
