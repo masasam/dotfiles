@@ -28,12 +28,12 @@ Automat==22.10.0
 Babel==2.12.1
 backcall==0.2.0
 bcrypt==4.0.1
-beautifulsoup4==4.12.0
+beautifulsoup4==4.12.1
 black==23.3.0
 bleach==6.0.0
 blockdiag==3.0.0
-boto3==1.26.106
-botocore==1.29.106
+boto3==1.26.107
+botocore==1.29.107
 bracex==2.3.post1
 btrfsutil==6.2.2
 build==0.10.0
@@ -64,7 +64,7 @@ csvkit==1.0.7
 cycler==0.11.0
 Cython==0.29.33
 dbfread==2.0.7
-debugpy==1.6.6
+debugpy==1.6.7
 decorator==5.1.1
 defusedxml==0.7.1
 diagrams==0.23.3
@@ -370,7 +370,7 @@ y-py==0.6.0
 yamllint==1.30.0
 youtube-dl==2021.12.17
 ypy-websocket==0.8.4
-yq==3.2.0
+yq==3.2.1
 zappa==0.56.1
 zipp==3.15.0
 zope.interface==6.0
