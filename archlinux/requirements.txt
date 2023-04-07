@@ -32,8 +32,8 @@ beautifulsoup4==4.12.1
 black==23.3.0
 bleach==6.0.0
 blockdiag==3.0.0
-boto3==1.26.107
-botocore==1.29.107
+boto3==1.26.108
+botocore==1.29.108
 bracex==2.3.post1
 btrfsutil==6.2.2
 build==0.10.0
@@ -46,7 +46,7 @@ cfn-flip==1.3.0
 chardet==5.1.0
 charset-normalizer==3.1.0
 cheat==2.5.1
-chromedriver-binary==112.0.5615.28.0
+chromedriver-binary==112.0.5615.49.0
 cleo==2.0.1
 cli-helpers==2.3.0
 click==8.1.3
@@ -88,9 +88,9 @@ et-xmlfile==1.1.0
 exceptiongroup==1.1.1
 executing==1.2.0
 fabric==3.0.0
-Faker==18.3.4
+Faker==18.4.0
 fastjsonschema==2.16.3
-filelock==3.10.7
+filelock==3.11.0
 fluidity-sm==0.2.1
 fonttools==4.39.3
 fqdn==1.5.1
@@ -189,7 +189,7 @@ nest-asyncio==1.5.6
 nftables==0.1
 nodeenv==1.7.0
 nose==1.3.7
-notebook==6.5.3
+notebook==6.5.4
 notebook_shim==0.2.2
 nspektr==0.4.0
 numpy==1.24.2
