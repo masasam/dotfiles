@@ -62,7 +62,7 @@ cryptography==40.0.1
 cssselect==1.2.0
 csvkit==1.0.7
 cycler==0.11.0
-Cython==0.29.33
+Cython==0.29.34
 dbfread==2.0.7
 debugpy==1.6.7
 decorator==5.1.1
