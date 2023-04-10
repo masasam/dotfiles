@@ -1,7 +1,7 @@
-agate==1.6.3
+agate==1.7.1
 agate-dbf==0.2.2
 agate-excel==0.2.5
-agate-sql==0.5.8
+agate-sql==0.5.9
 aiofiles==22.1.0
 aiosqlite==0.18.0
 alabaster==0.7.13
@@ -46,7 +46,7 @@ cfn-flip==1.3.0
 chardet==5.1.0
 charset-normalizer==3.1.0
 cheat==2.5.1
-chromedriver-binary==112.0.5615.49.0
+chromedriver-binary==113.0.5672.24.0
 cleo==2.0.1
 cli-helpers==2.3.0
 click==8.1.3
@@ -144,7 +144,7 @@ jupyter-ydoc==0.3.4
 jupyter_client==8.1.0
 jupyter_core==5.3.0
 jupyter_server==2.5.0
-jupyter_server_fileid==0.8.0
+jupyter_server_fileid==0.9.0
 jupyter_server_terminals==0.4.4
 jupyter_server_ydoc==0.8.0
 jupyterlab==3.5.3
