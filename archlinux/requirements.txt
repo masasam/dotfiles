@@ -8,7 +8,7 @@ alabaster==0.7.13
 ansible==7.4.0
 ansible-compat==3.0.2
 ansible-core==2.14.4
-ansible-lint==6.14.6
+ansible-lint==6.15.0
 anyio==3.6.2
 apparmor==3.1.3
 appdirs==1.4.4
@@ -125,7 +125,7 @@ ipywidgets==8.0.6
 isodate==0.6.1
 isoduration==20.11.0
 itemadapter==0.8.0
-itemloaders==1.0.6
+itemloaders==1.1.0
 jaraco.classes==3.2.3
 jaraco.context==4.3.0
 jaraco.functools==3.6.0
@@ -284,7 +284,7 @@ Scrapy==2.8.0
 screenkey==1.5
 seaborn==0.12.2
 SecretStorage==3.3.3
-selenium==4.8.3
+selenium==4.9.0
 Send2Trash==1.8.0
 seqdiag==3.0.0
 service-identity==21.1.0
@@ -366,7 +366,7 @@ x256==0.0.3
 xlrd==2.0.1
 xmltodict==0.13.0
 y-py==0.5.9
-yamllint==1.30.0
+yamllint==1.31.0
 youtube-dl==2021.12.17
 ypy-websocket==0.8.2
 yq==3.2.1
