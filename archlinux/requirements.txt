@@ -32,8 +32,8 @@ beautifulsoup4==4.12.2
 black==23.3.0
 bleach==6.0.0
 blockdiag==3.0.0
-boto3==1.26.119
-botocore==1.29.119
+boto3==1.26.120
+botocore==1.29.120
 bracex==2.3.post1
 btrfsutil==6.2.2
 build==0.10.0
@@ -73,7 +73,7 @@ distlib==0.3.6
 distro==1.8.0
 Django==4.2
 django-nested-admin==4.0.2
-django-ses==3.4.0
+django-ses==3.4.1
 djangorestframework==3.14.0
 dnspython==2.3.0
 docker==6.0.1
@@ -108,7 +108,7 @@ hjson==3.1.0
 html2text==2020.1.16
 html5lib==1.1
 hyperlink==21.0.0
-identify==2.5.22
+identify==2.5.23
 idna==3.4
 imagesize==1.4.1
 importlib-metadata==5.0.0
@@ -180,7 +180,7 @@ msgpack==1.0.4
 multidict==6.0.4
 mypy-extensions==1.0.0
 nbclassic==0.5.5
-nbclient==0.7.3
+nbclient==0.7.4
 nbconvert==7.3.1
 nbformat==5.8.0
 neovim==0.3.1
@@ -297,7 +297,7 @@ snowballstemmer==2.2.0
 sortedcontainers==2.4.0
 soupsieve==2.4.1
 speedtest-cli==2.1.3
-Sphinx==6.2.0
+Sphinx==6.2.1
 sphinx-rtd-theme==1.2.0
 sphinxcontrib-applehelp==1.0.4
 sphinxcontrib-devhelp==1.0.2
@@ -358,7 +358,7 @@ wcwidth==0.2.5
 webcolors==1.13
 webencodings==0.5.1
 websocket-client==1.5.1
-Werkzeug==2.2.3
+Werkzeug==2.3.0
 widgetsnbextension==4.0.7
 wsproto==1.2.0
 x256==0.0.3
