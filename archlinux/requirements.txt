@@ -5,7 +5,7 @@ agate-sql==0.5.9
 aiofiles==22.1.0
 aiosqlite==0.19.0
 alabaster==0.7.13
-ansible==7.4.0
+ansible==7.5.0
 ansible-compat==3.0.2
 ansible-core==2.14.5
 ansible-lint==6.15.0
@@ -32,8 +32,8 @@ beautifulsoup4==4.12.2
 black==23.3.0
 bleach==6.0.0
 blockdiag==3.0.0
-boto3==1.26.120
-botocore==1.29.120
+boto3==1.26.121
+botocore==1.29.121
 bracex==2.3.post1
 btrfsutil==6.2.2
 build==0.10.0
@@ -107,6 +107,7 @@ h11==0.14.0
 hjson==3.1.0
 html2text==2020.1.16
 html5lib==1.1
+httpie==3.2.1
 hyperlink==21.0.0
 identify==2.5.23
 idna==3.4
