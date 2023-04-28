@@ -32,8 +32,8 @@ beautifulsoup4==4.12.2
 black==23.3.0
 bleach==6.0.0
 blockdiag==3.0.0
-boto3==1.26.121
-botocore==1.29.121
+boto3==1.26.122
+botocore==1.29.122
 bracex==2.3.post1
 btrfsutil==6.2.2
 build==0.10.0
@@ -88,7 +88,7 @@ et-xmlfile==1.1.0
 exceptiongroup==1.1.1
 executing==1.2.0
 fabric==3.0.0
-Faker==18.5.1
+Faker==18.6.0
 fastjsonschema==2.16.3
 filelock==3.12.0
 fluidity-sm==0.2.1
@@ -180,7 +180,7 @@ more-itertools==9.1.0
 msgpack==1.0.4
 multidict==6.0.4
 mypy-extensions==1.0.0
-nbclassic==0.5.5
+nbclassic==0.5.6
 nbclient==0.7.4
 nbconvert==7.3.1
 nbformat==5.8.0
@@ -285,7 +285,7 @@ screenkey==1.5
 seaborn==0.12.2
 SecretStorage==3.3.3
 selenium==4.9.0
-Send2Trash==1.8.0
+Send2Trash==1.8.2
 seqdiag==3.0.0
 service-identity==21.1.0
 sh==1.14.3
@@ -324,12 +324,12 @@ terminado==0.17.1
 text-unidecode==1.3
 texttable==1.6.7
 tinycss2==1.2.1
-tldextract==3.4.0
+tldextract==3.4.1
 tldr==3.1.0
 tlsh==4.5.0
 toml==0.10.2
 tomli==2.0.1
-tomlkit==0.11.7
+tomlkit==0.11.8
 tornado==6.3.1
 tqdm==4.65.0
 traitlets==5.9.0
@@ -359,7 +359,7 @@ wcwidth==0.2.5
 webcolors==1.13
 webencodings==0.5.1
 websocket-client==1.5.1
-Werkzeug==2.3.0
+Werkzeug==2.3.1
 widgetsnbextension==4.0.7
 wsproto==1.2.0
 x256==0.0.3
@@ -369,7 +369,7 @@ y-py==0.5.9
 yamllint==1.31.0
 youtube-dl==2021.12.17
 ypy-websocket==0.8.2
-yq==3.2.1
+yq==3.2.2
 zappa==0.56.1
 zipp==3.15.0
 zope.interface==6.0
