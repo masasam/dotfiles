@@ -119,7 +119,7 @@ inflect==6.0.4
 installer==0.7.0
 invoke==2.0.0
 ipykernel==6.22.0
-ipython==8.13.0
+ipython==8.13.1
 ipython-genutils==0.2.0
 ipywidgets==8.0.6
 isodate==0.6.1
@@ -209,7 +209,7 @@ pbr==5.11.1
 pexpect==4.8.0
 pickleshare==0.7.5
 Pillow==9.4.0
-pipenv==2023.4.20
+pipenv==2023.4.29
 pkginfo==1.9.6
 placebo==0.9.0
 platformdirs==2.6.2
