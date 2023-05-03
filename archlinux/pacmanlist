@@ -1260,6 +1260,7 @@ python-tlsh
 python-toml
 python-tomli
 python-tomlkit
+python-tqdm
 python-trove-classifiers
 python-typing_extensions
 python-uc-micro-py
