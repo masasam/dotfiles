@@ -14,6 +14,8 @@ alsa-plugins
 alsa-topology-conf
 alsa-ucm-conf
 alsa-utils
+ansible
+ansible-core
 aom
 apache-orc
 apparmor
@@ -160,6 +162,7 @@ e2fsprogs
 editorconfig-core-c
 efibootmgr
 efivar
+electron
 electron19
 elfutils
 elinks
