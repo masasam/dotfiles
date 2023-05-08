@@ -207,11 +207,11 @@ Command (? for help):n
 
 Format and mount with fat32 and ext4
 
-	mkfs.vfat -F32 /dev/sda1
-	mkfs.ext4 /dev/sda2
-	mount /dev/sda2 /mnt
-	mkdir /mnt/boot
-	mount /dev/sda1 /mnt/boot
+	mkfs.vfat -F32 /dev/nvme0n1p1
+	mkfs.ext4 /dev/nvme0n1p3
+	mount /dev/nvme0n1p3 /mnt
+	mount --mkdir /dev/nvme0n1p1 /mnt/boot
+	swapon /dev/nvme0n1p2
 
 Connect internet with wifi
 
