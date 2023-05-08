@@ -335,7 +335,7 @@ Audio setting
 
 	sudo pacman -S xdg-user-dirs
 	LANG=C xdg-user-dirs-update --force
-	sudo pacman -S zsh git
+	sudo pacman -S zsh git base-devel
 	sudo pacman -S noto-fonts noto-fonts-cjk chromium
 
 Install yay
