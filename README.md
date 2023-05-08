@@ -164,14 +164,6 @@ Change it to boot from usb in BIOS UEFI.
 	[thinkpad x1 carbon gen10]
 	Security > Secure Boot: off
 	
-Partitioning
-
-* Use UEFI and GPT
-
-  Choose according to your hardware.
-
-* Partition / only
-
 Install archlinux
 
 	gdisk /dev/nvme0n1
