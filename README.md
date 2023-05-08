@@ -200,7 +200,7 @@ Command (? for help):n
 
 Format and mount with fat32 and ext4
 
-	mkfs.vfat -F 32 /dev/nvme0n1p1
+	mkfs.vfat -n EFI /dev/nvme0n1p1
 	mkfs.ext4 /dev/nvme0n1p3	
 	mount --mkdir /dev/nvme0n1p1 /mnt/boot
 	mkswap /dev/nvme0n1p2
@@ -292,9 +292,9 @@ Install intel-ucode(install before boot loader)
 	pacman -S intel-ucode
 
 Set boot loader
-
-	pacman -S grub dosfstools efibootmgr
-	grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=arch_grub --recheck --debgu
+	
+	pacman -S grub efibootmgr
+	grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 	grub-mkconfig -o /boot/grub/grub.cfg
 
 #### Prepare drivers and Xorg Gnome
