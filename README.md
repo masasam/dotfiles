@@ -208,7 +208,10 @@ Connect internet with wifi
 	ip link
 	rfkill list
 	rfkill unblock 0
-	wifi-menu wifi0
+	iwctl
+	[iwd]# station wlan0 scan
+	[iwd]# station wlan0 get-networks
+	[iwd]# station wlan0 connect {SSID}
 
 Make sure the earliest mirror is selected.
 Write the closest mirror on the top.
