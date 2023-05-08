@@ -267,7 +267,7 @@ Time adjustment
 
 Generate kernel image
 
-    mkinitcpio -p linux
+    mkinitcpio -P
 
 Generate user
 
