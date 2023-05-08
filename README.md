@@ -200,7 +200,7 @@ Make swap
 Set all the rest to / partition
 	
 Command (? for help):n
-	Permission number: 2
+	Permission number: enter
 	First sector     : enter
 	Last sector      : enter
 	Hex code or GUID : 8300
