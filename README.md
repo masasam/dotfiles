@@ -217,7 +217,7 @@ Connect internet with wifi
 
 Install bese bese-devel of arch
 
-	pacstrap -K /mnt base linux linux-firmware vi vim
+	pacstrap -K /mnt base linux linux-firmware vi
 
 Make sure the earliest mirror is selected.
 Write the closest mirror on the top.
