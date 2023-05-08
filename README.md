@@ -261,7 +261,7 @@ Time zone example
 
 Time adjustment
 
-    timedatectl status
+    hwclock --systohc
 
 Generate kernel image
 
