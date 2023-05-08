@@ -263,6 +263,7 @@ Time zone example
 
 Time adjustment
 
+	timedatectl set-ntp true
     hwclock --systohc
 
 Generate kernel image
@@ -293,7 +294,7 @@ Install intel-ucode(install before boot loader)
 
 Set boot loader
 	
-	pacman -S grub efibootmgr
+	pacman -S grub dosfstools efibootmgr
 	grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 	grub-mkconfig -o /boot/grub/grub.cfg
 
