@@ -166,7 +166,7 @@ Change it to boot from usb in BIOS UEFI.
 	
 Install archlinux
 
-	setfont solar24x32.psfu.gz
+	setfont solar24x32.psfu.gzx
 	gdisk /dev/nvme0n1
 
 clear the partition
@@ -203,6 +203,7 @@ Format and mount with fat32 and ext4
 	mkfs.fat -F 32 /dev/nvme0n1p1
 	mkfs.ext4 /dev/nvme0n1p3	
 	mount --mkdir /dev/nvme0n1p1 /mnt/boot
+	mkswap /dev/nvme0n1p2
 	swapon /dev/nvme0n1p2
 	mount /dev/nvme0n1p3 /mnt
 
