@@ -151,6 +151,7 @@ SSD has only 250G, but it is sufficient for the environment that uses arch linux
 
 Change it to boot from usb in BIOS UEFI.
 
+	[thinkpad x1 carbon gen6]
 	Security > Secure Boot: Disable
 	Set Config -> Sleep State: "linux"(This may be a peculiar setting of my thinkpad x1 gen6).
 	Set Config -> Thunderbolt BIOS Assist Mode: "Enabled"(This may be a peculiar setting of my thinkpad x1 gen6).
@@ -160,6 +161,9 @@ Change it to boot from usb in BIOS UEFI.
 	Config -> Network -> Wake On LAN: Disabled(for power save)
 	Config -> Network -> Wake On LAN from Dock: Disabled(for power save)
 
+	[thinkpad x1 carbon gen10]
+	Security > Secure Boot: off
+	
 Partitioning
 
 * Use UEFI and GPT
