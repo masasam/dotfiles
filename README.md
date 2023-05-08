@@ -172,8 +172,6 @@ Partitioning
 
 * Partition / only
 
-* No swap
-
 Install archlinux
 
 	gdisk /dev/sda
@@ -191,9 +189,17 @@ Because I want to do UEFI boot, I make a FAT32 formatted partition.
 	Last sector      : +512M
 	Hex code or GUID : EF00
 
-Set all the rest to / partition
+Make swap
 
-	Command (? for help):n
+	Command (? for help): n
+	Partition number (2-128, default 2): enter
+	First sector (34-1953525134, default = 206848) or {+-}size{KMGTP}: enter
+	Last sector (206848-1953525134, default = 1953525134) or {+-}size{KMGTP}: +20G
+	Hex code or GUID (L to show codes, Enter = 8300): 8200
+
+Set all the rest to / partition
+	
+Command (? for help):n
 	Permission number: 2
 	First sector     : enter
 	Last sector      : enter
