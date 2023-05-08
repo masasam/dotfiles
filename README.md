@@ -223,23 +223,22 @@ Connect internet with wifi
 	[iwd]# station wlan0 get-networks
 	[iwd]# station wlan0 connect {SSID}
 
+Install bese bese-devel of arch
+
+	pacstrap -K /mnt base linux linux-firmware vi vim
+
 Make sure the earliest mirror is selected.
 Write the closest mirror on the top.
 
-	pacman -S vi vim
 	vi /etc/pacman.d/mirrorlist
-
-Install bese bese-devel of arch
-
-    pacstrap /mnt base base-devel linux linux-firmware
 
 Generate fstab
 
-    genfstab -U -p /mnt >> /mnt/etc/fstab
+    genfstab -U /mnt >> /mnt/etc/fstab
 
 Mount and log in as bash login shell
 
-    arch-chroot /mnt /bin/bash
+    arch-chroot /mnt
 
 Set the host name
 
