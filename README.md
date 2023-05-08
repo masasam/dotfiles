@@ -284,7 +284,7 @@ Uncomment comment out following
 	Defaults env_keep += “ HOME ”
 	%wheel ALL=(ALL) ALL
 
-Install intel-ucode
+Install intel-ucode(install before boot loader)
 
 	pacman -S intel-ucode
 
@@ -299,7 +299,7 @@ Set boot loader
 Install drivers that match your environment
 
 	lspci | grep VGA
-	pacman -S intel-media-driver intel-ucode libva-utils
+	pacman -S intel-media-driver libva-utils
 	pacman -S xorg-server xorg-apps
 
 Gnome can be put as small as necessary
