@@ -284,6 +284,10 @@ Uncomment comment out following
 	Defaults env_keep += “ HOME ”
 	%wheel ALL=(ALL) ALL
 
+Install intel-ucode
+
+	pacman -S intel-ucode
+
 Set boot loader
 
 	pacman -S grub dosfstools efibootmgr
