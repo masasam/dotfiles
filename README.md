@@ -277,6 +277,7 @@ Set password
 
 Set groups and permissions
 
+	pacman -S sudo
     visudo
 
 Uncomment comment out following
