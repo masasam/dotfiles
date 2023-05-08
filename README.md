@@ -145,7 +145,7 @@ Run the following command, replacing /dev/sdx with your drive, e.g. /dev/sdb. (D
 
 ![baobao](https://raw.githubusercontent.com/masasam/image/image/baobao.png)
 
-SSD has only 250G, but it is sufficient for the environment that uses arch linux and emacs.
+SSD has only 512G, but it is sufficient for the environment that uses arch linux and emacs.
 
 #### Boot in USB memory
 
@@ -174,7 +174,7 @@ Partitioning
 
 Install archlinux
 
-	gdisk /dev/sda
+	gdisk /dev/nvme0n1
 
 clear the partition
 
