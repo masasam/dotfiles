@@ -171,12 +171,12 @@ Install archlinux
 
 clear the partition
 
-	Command (? for help):o
+	Command (? for help): o
 
 Make ESP(EFI System Partition).
 Because I want to do UEFI boot, I make a FAT32 formatted partition.
 
-	Command (? for help):n
+	Command (? for help): n
 	Permission number: 1
 	First sector     : enter
 	Last sector      : +512M
@@ -192,7 +192,7 @@ Make swap
 
 Set all the rest to / partition
 	
-Command (? for help):n
+	Command (? for help): n
 	Permission number: enter
 	First sector     : enter
 	Last sector      : enter
