@@ -263,7 +263,6 @@ Time zone example
 
 Time adjustment
 
-	timedatectl set-ntp true
     hwclock --systohc
 
 Generate kernel image
