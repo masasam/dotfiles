@@ -200,12 +200,14 @@ Set all the rest to / partition
 
 Format and mount with fat32 and ext4
 
-	mkfs.vfat -n EFI /dev/nvme0n1p1
+	mkfs.fat -F32 /dev/nvme0n1p1
 	mkfs.ext4 /dev/nvme0n1p3	
-	mount --mkdir /dev/nvme0n1p1 /mnt/boot
 	mkswap /dev/nvme0n1p2
 	swapon /dev/nvme0n1p2
 	mount /dev/nvme0n1p3 /mnt
+	mkdir /mnt/boot
+	mount /dev/nvme0n1p1 /mnt/boot
+	mount | grep /mnt
 
 Connect internet with wifi
 
