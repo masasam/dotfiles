@@ -380,6 +380,7 @@ Run the following after set the ssh key
 	git-crypt unlock
 	make install
 	make init
+	make chrome
 
 	# Below is for posting images of github
 	cd ~/Pictures
