@@ -227,7 +227,7 @@ Make sure the earliest mirror is selected.
 Write the closest mirror on the top.
 
 	vi /etc/pacman.d/mirrorlist
-	Server = http://ftp.jaist.ac.jp/pub/Linux/ArchLinux/$repo/os/$arch
+	Server = https://ftp.jaist.ac.jp/pub/Linux/ArchLinux/$repo/os/$arch
 
 Generate fstab
 
