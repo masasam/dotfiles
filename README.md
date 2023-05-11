@@ -228,7 +228,7 @@ Write the closest mirror on the top.
 
 	vi /etc/pacman.d/mirrorlist
 	Server = http://ftp.jaist.ac.jp/pub/Linux/ArchLinux/$repo/os/$arch
-	sudo pacman -Syuu
+	pacman -Syuu
 
 Generate fstab
 
