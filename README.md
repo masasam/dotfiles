@@ -338,6 +338,8 @@ Audio setting
 
 #### Login with ${USER} to arrange home directory
 
+turn off autosuspend at config
+
 	sudo pacman -S xdg-user-dirs
 	LANG=C xdg-user-dirs-update --force
 	sudo pacman -S zsh git base-devel
