@@ -354,7 +354,7 @@ Install yay
 
 #### Preparing dotfiles
 
-	sudo pacman -S cifs-utils gvfs gvfs-smb git-crypt gnupg openssh
+	sudo pacman -S gvfs gvfs-smb git-crypt gnupg openssh
 
 Import the gpg key that has been backed up.
 
