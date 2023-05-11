@@ -317,7 +317,6 @@ Gnome can be put as small as necessary
 Terminal uses urxvt and termite
 
 	pacman -S rxvt-unicode urxvt-perls
-	pacman -S termite
 
 Enable graphical login with gdm
 
