@@ -29,7 +29,7 @@ PACKAGES	+= jhead peek ncdu gnome-screenshot sshfs fping syncthing terraform bat
 PACKAGES	+= ripgrep stunnel vimiv adapta-gtk-theme gnome-tweaks firejail opencv hexedit discord pv perl-net-ip
 PACKAGES	+= smartmontools gnome-logs wireshark-cli wl-clipboard lsof mapnik editorconfig-core-c watchexec
 PACKAGES	+= gtop gopls convmv mpv browserpass-firefox man-db baobab ioping ruby-irb mkcert code findomain
-PACKAGES	+= guetzli fabric python-language-server detox usleep libvterm bind asunder lame git-lfs hex miller
+PACKAGES	+= guetzli fabric detox usleep libvterm bind asunder lame git-lfs hex miller
 PACKAGES	+= diffoscope dust rbw exa sslscan abiword pyright miniserve fdupes deno serverless mold fx httpie
 PACKAGES	+= bash-language-server gron pyenv typescript-language-server yq ansible
 
