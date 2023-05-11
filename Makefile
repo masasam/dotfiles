@@ -91,6 +91,7 @@ base: ## Install base and base-devel package
 
 install: ## Install arch linux packages using pacman
 	$(PACMAN) $(PACKAGES)
+	$(PACMAN) pkgfile
 	sudo pkgfile --update
 
 pipinstall: ${HOME}/.local ## Install python packages
