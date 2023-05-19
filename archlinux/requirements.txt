@@ -133,7 +133,7 @@ sphinxcontrib-jquery==4.1
 sphinxcontrib-jsmath==1.0.1
 sphinxcontrib-qthelp==1.0.3
 sphinxcontrib-serializinghtml==1.1.5
-SQLAlchemy==2.0.13
+SQLAlchemy==2.0.14
 sshuttle==1.1.1
 tbb==2021.9.0
 tenacity==8.2.3.dev0+g548c5d4.d20230423
