@@ -98,7 +98,7 @@ psutil==5.9.5
 pwquality==1.4.5
 pycairo==1.23.0
 pycparser==2.21
-pydantic==1.10.7
+pydantic==1.10.8
 Pygments==2.15.1
 PyGObject==3.44.1
 PyICU==2.11
