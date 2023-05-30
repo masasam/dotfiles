@@ -1363,6 +1363,7 @@ ruby-psych
 ruby-racc
 ruby-rainbow
 ruby-rake
+ruby-rake-compiler
 ruby-rdoc
 ruby-regexp_parser
 ruby-reline
