@@ -594,9 +594,9 @@ testpath: ## Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: rclone gnupg ssh install init keyring urxvt xterm termite yay tlp pipewire-pulse ttf-cica dnsmasq goinstall ibusmozc neomutt docker lvfs toggle aur beekeeper kind eralchemy mpsyt gh
+allinstall: rclone gnupg ssh install init keyring urxvt xterm termite yay tlp pipewire-pulse ttf-cica dnsmasq goinstall ibusmozc neomutt docker lvfs toggle aur beekeeper kind chrome
 
-nextinstall: chrome rubygem rbenv rustinstall postgresql maria-db mycli pgcli dbeaver pipinstall nodeinstall zeal gcloud awsv2
+nextinstall: rubygem rbenv rustinstall postgresql maria-db mycli pgcli dbeaver pipinstall nodeinstall zeal gcloud awsv2 eralchemy mpsyt gh
 
 allupdate: update pipupdate rustupdate goinstall yarnupdate
 
