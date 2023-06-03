@@ -337,6 +337,10 @@ Audio setting
 	exit
 	reboot
 
+for thinkpad x1 carbon gen10
+
+	pacman -S sof-firmware
+
 #### Login with ${USER} to arrange home directory
 
 turn off autosuspend at config
