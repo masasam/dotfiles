@@ -102,6 +102,9 @@ pipinstall: ${HOME}/.local ## Install python packages
 	pip install --user $(PIP_PKGS)
 	rm -fr get-pip.py
 
+pipinstallarch: ## Install python packages
+	$(PACMAN) python-pip
+
 goinstall: ${HOME}/.local ## Install go packages
 	go install golang.org/x/tools/gopls@latest
 	go install golang.org/x/tools/cmd/goimports@latest
