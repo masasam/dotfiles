@@ -250,7 +250,7 @@ alias df='df -h'
 alias free='free -h --si'
 alias iv='sxiv'
 alias is='whois'
-alias myip="ip -4 a show wlp2s0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}'"
+alias myip="ip -4 a show wlp0s20f3 | grep -oP '(?<=inet\s)\d+(\.\d+){3}'"
 alias e='emacsclient'
 alias testemacs='emacs -q -l ~/.emacs.d/test.el'
 alias open='xdg-open'
@@ -317,8 +317,6 @@ fi
 # export ANDROID_HOME=~/Android/Sdk
 export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
-
-export LOCAL_HOST_IP=`ifconfig wlp2s0 | grep inet | grep -v inet6 | sed -E "s/inet ([0-9]{1,3}.[0-9]{1,3}.[0-9].{1,3}.[0-9]{1,3}) .*$/\1/" | tr -d "\t"`
 
 # cdr
 autoload -Uz is-at-least
