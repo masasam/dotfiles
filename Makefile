@@ -182,6 +182,9 @@ lvfs: ## For Linux Vendor Firmware Service
 uefiupdate: ## Update system firmware and uefi
 	for action in refresh get-updates update; do fwupdmgr $$action; done
 
+gtk-theme: ## Set gtk theme
+	gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark
+
 thinkpad: ## Workaround for Intel throttling issues in Linux
 	$(PACMAN) throttled
 	$(SYSTEMD_ENABLE) throttled
@@ -594,7 +597,7 @@ testpath: ## Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: rclone gnupg ssh install init keyring urxvt xterm termite yay tlp pipewire-pulse ttf-cica dnsmasq goinstall ibusmozc neomutt docker lvfs toggle aur beekeeper kind chrome
+allinstall: rclone gnupg ssh install init keyring urxvt xterm termite yay tlp pipewire-pulse ttf-cica dnsmasq goinstall ibusmozc neomutt docker lvfs toggle aur beekeeper kind gtk-theme chrome
 
 nextinstall: rubygem rbenv rustinstall postgresql maria-db mycli pgcli dbeaver pipinstall nodeinstall zeal gcloud awsv2 eralchemy mpsyt gh
 
