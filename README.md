@@ -339,7 +339,7 @@ Audio setting
 
 for thinkpad x1 carbon gen10
 
-	pacman -S sof-firmware
+	pacman -S sof-firmware fprintd
 
 #### Login with ${USER} to arrange home directory
 
