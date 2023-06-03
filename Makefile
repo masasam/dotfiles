@@ -585,13 +585,13 @@ docker_image: docker
 
 testbackup: docker_image ## Test this Makefile with mount backup directory
 	docker run -it --name make$@ -v /home/${USER}/backup:${HOME}/backup:cached --name makefiletest -d dotfiles:latest /bin/bash
-	for target in install init neomutt aur pipinstall goinstall nodeinstall; do
+	for target in install init neomutt aur pipinstallarch goinstall nodeinstall; do
 		docker exec -it make$@ sh -c "cd ${PWD}; make $${target}"
 	done
 
 test: docker_image ## Test this Makefile with docker without backup directory
 	docker run -it --name make$@ -d dotfiles:latest /bin/bash
-	for target in install init neomutt aur pipinstall goinstall nodeinstall; do
+	for target in install init neomutt aur pipinstallarch goinstall nodeinstall; do
 		docker exec -it make$@ sh -c "cd ${PWD}; make $${target}"
 	done
 
@@ -603,7 +603,7 @@ testpath: ## Echo PATH
 
 allinstall: rclone gnupg ssh install init keyring urxvt xterm termite yay tlp pipewire-pulse ttf-cica dnsmasq goinstall ibusmozc neomutt docker lvfs toggle aur beekeeper kind gtk-theme chrome
 
-nextinstall: rubygem rbenv rustinstall postgresql maria-db mycli pgcli dbeaver pipinstall nodeinstall zeal gcloud awsv2 eralchemy mpsyt gh
+nextinstall: rubygem rbenv rustinstall postgresql maria-db mycli pgcli dbeaver pipinstallarch nodeinstall zeal gcloud awsv2 eralchemy mpsyt gh
 
 allupdate: update pipupdate rustupdate goinstall yarnupdate
 
