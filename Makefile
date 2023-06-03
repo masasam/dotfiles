@@ -186,7 +186,7 @@ gtk-theme: ## Set gtk theme
 	$(PACMAN) gnome-themes-extra arc-gtk-theme
 	gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark
 
-throttled: ## Workaround for Intel throttling issues in Linux
+throttled: ## Workaround for Intel throttling issues in thinkpad x1 carbon gen6
 	$(PACMAN) throttled
 	$(SYSTEMD_ENABLE) throttled
 
