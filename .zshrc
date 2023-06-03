@@ -895,8 +895,6 @@ function dirsum() {
     fi	
 }
 
-# rye
-source "$HOME/.rye/env"
 # zsh-syntax-highlighting(pacman -S zsh-syntax-highlighting)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # zsh-completions for aws
