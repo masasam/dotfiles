@@ -658,7 +658,6 @@ Setting for power save and to prevent battery deterioration.
 	sudo pacman -S tlp powertop
 	sudo ln -vsf ${PWD}/etc/default/tlp /etc/default/tlp
 	systemctl enable tlp.service
-	systemctl enable tlp-sleep.service
 
 ![PowerTop](https://raw.githubusercontent.com/masasam/image/image/powertop.png)
 
