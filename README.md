@@ -669,15 +669,6 @@ Setting for power save and to prevent battery deterioration.
 	fwupdmgr get-updates
 	fwupdmgr update
 
-After you update the UEFI BIOS, you will need to reconfigure grub when next boot. Boot with arch linux usb memory and do as follows.
-This work is not necessary after the second time.
-
-	mount /dev/sda2 /mnt
-	mount /dev/sda1 /mnt/boot
-	arch-chroot /mnt /bin/bash
-	grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=arch_grub --recheck --debug
-	grub-mkconfig -o /boot/grub/grub.cfg
-
 # Enable DNS cache
 
 Install dnsmasq
