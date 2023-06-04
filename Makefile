@@ -603,7 +603,7 @@ testpath: ## Echo PATH
 
 allinstall: rclone gnupg ssh install init keyring urxvt xterm termite yay tlp pipewire-pulse ttf-cica dnsmasq goinstall ibusmozc neomutt docker lvfs toggle aur beekeeper kind gtk-theme chrome
 
-nextinstall: rubygem rbenv rustinstall postgresql maria-db mycli pgcli dbeaver pipinstallarch nodeinstall zeal gcloud awsv2 eralchemy mpsyt gh
+nextinstall: pipinstallarch mycli pgcli nodeinstall rubygem rbenv rustinstall postgresql maria-db dbeaver zeal gcloud awsv2 eralchemy mpsyt gh
 
 allupdate: update pipupdate rustupdate goinstall yarnupdate
 
