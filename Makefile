@@ -175,7 +175,7 @@ dnsmasq: ## Init dnsmasq
 
 tlp: ## Setting for power saving and preventing battery deterioration
 	$(PACMAN) $@ powertop
-	sudo ln -vsf {${PWD},}/etc/default/$@
+	sudo ln -vsf {${PWD},}/etc/$@.conf
 	$(SYSTEMD_ENABLE) $@.service
 
 lvfs: ## For Linux Vendor Firmware Service
