@@ -96,6 +96,7 @@ cups-filters
 cups-pdf
 cups-pk-helper
 curl
+dateutils
 dav1d
 db5.3
 dbus
