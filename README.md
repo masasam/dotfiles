@@ -656,7 +656,7 @@ Terminal uses urxvt
 Setting for power save and to prevent battery deterioration.
 
 	sudo pacman -S tlp powertop
-	sudo ln -vsf ${PWD}/etc/default/tlp /etc/default/tlp
+	sudo ln -vsf ${PWD}/etc/tlp.conf /etc/tlp.conf
 	systemctl enable tlp.service
 
 ![PowerTop](https://raw.githubusercontent.com/masasam/image/image/powertop.png)
