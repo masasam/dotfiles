@@ -182,7 +182,7 @@ Because I want to do UEFI boot, I make a FAT32 formatted partition.
 	Last sector      : +512M
 	Hex code or GUID : EF00
 
-Make swap
+Make swap(Since the memory is 16G, allocate more than that to swap).
 
 	Command (? for help): n
 	Partition number (2-128, default 2): enter
