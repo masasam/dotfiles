@@ -134,6 +134,10 @@ Why Arch linux?
 
 ![top](https://raw.githubusercontent.com/masasam/image/image/top.png)
 
+NVMe SSD has only 512G, but it is sufficient for the environment that uses arch linux and emacs.
+
+![baobao](https://raw.githubusercontent.com/masasam/image/image/baobao.png)
+
 Download Arch linux.
 
 https://www.archlinux.org/releng/releases/
@@ -142,10 +146,6 @@ Create USB installation media.
 Run the following command, replacing /dev/sdx with your drive, e.g. /dev/sdb. (Do not append a partition number, so do not use something like /dev/sdb1)
 
 	sudo dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx status=progress oflag=sync
-
-![baobao](https://raw.githubusercontent.com/masasam/image/image/baobao.png)
-
-NVMe SSD has only 512G, but it is sufficient for the environment that uses arch linux and emacs.
 
 #### Boot in USB memory
 
