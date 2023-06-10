@@ -382,6 +382,11 @@ Run the following after set the ssh key
 	git clone git@github.com:masasam/dotfiles.git
 	cd dotfiles
 	git-crypt unlock
+	make rclone
+	make gnupg
+	make ssh
+	rclone sync drive:backup ${HOME}/backup
+	rclone sync dropbox:backup ${HOME}/backup
 	make install
 	make init
 	make chrome
