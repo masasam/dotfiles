@@ -345,6 +345,7 @@ for thinkpad x1 carbon gen10
 
 turn off autosuspend at config
 
+	urxvt -fn "xft:monospace-18" -fg white -bg black
 	sudo pacman -S xdg-user-dirs
 	LANG=C xdg-user-dirs-update --force
 	sudo pacman -S zsh git base-devel
