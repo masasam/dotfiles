@@ -374,7 +374,6 @@ Import the gpg key that has been backed up.
 Import the ssh key that has been backed up.
 
 	chmod 600 /path/to/private.key
-	ssh-add /path/to/private.key
 
 Run the following after set the ssh key
 
