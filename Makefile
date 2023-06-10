@@ -69,7 +69,6 @@ gnupg: ## Deploy gnupg (Run after rclone)
 ssh: ## Init ssh
 	$(PACMAN) open$@
 	mkdir -p ${HOME}/.$@
-	ln -vsf {${PWD},${HOME}}/.ssh/{config,known_hosts}
 	chmod 600 ${HOME}/.ssh/id_rsa
 
 init: ## Initial deploy dotfiles
