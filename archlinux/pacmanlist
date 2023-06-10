@@ -324,10 +324,15 @@ haskell-commonmark-pandoc
 haskell-comonad
 haskell-conduit
 haskell-conduit-extra
-haskell-connection
 haskell-constraints
 haskell-contravariant
 haskell-cookie
+haskell-crypton
+haskell-crypton-connection
+haskell-crypton-x509
+haskell-crypton-x509-store
+haskell-crypton-x509-system
+haskell-crypton-x509-validation
 haskell-cryptonite
 haskell-data-array-byte
 haskell-data-default
@@ -370,6 +375,8 @@ haskell-hslua-module-version
 haskell-hslua-module-zip
 haskell-hslua-objectorientation
 haskell-hslua-packaging
+haskell-hslua-repl
+haskell-hslua-typing
 haskell-http-api-data
 haskell-http-client
 haskell-http-client-tls
@@ -383,6 +390,7 @@ haskell-indexed-traversable-instances
 haskell-integer-logarithms
 haskell-iproute
 haskell-ipynb
+haskell-isocline
 haskell-jira-wiki-markup
 haskell-juicypixels
 haskell-lexer
@@ -485,9 +493,6 @@ haskell-warp
 haskell-witherable
 haskell-word8
 haskell-x509
-haskell-x509-store
-haskell-x509-system
-haskell-x509-validation
 haskell-xml
 haskell-xml-conduit
 haskell-xml-types
@@ -1120,7 +1125,6 @@ redland
 ripgrep
 rnnoise
 rsync
-rtkit
 rubberband
 ruby
 ruby-abbrev
