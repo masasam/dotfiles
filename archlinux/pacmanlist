@@ -75,7 +75,6 @@ cifs-utils
 clang
 clucene
 cmatrix
-code
 colord
 colord-gtk-common
 colord-gtk4
@@ -136,7 +135,6 @@ e2fsprogs
 editorconfig-core-c
 efibootmgr
 efivar
-electron
 elinks
 emacs
 enchant
@@ -547,7 +545,6 @@ jq
 js102
 json-c
 json-glib
-jsoncpp
 kbd
 keychain
 keyutils
