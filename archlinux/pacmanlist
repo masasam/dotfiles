@@ -1231,10 +1231,14 @@ tdb
 terraform
 tevent
 texinfo
+texlive-basic
 texlive-bin
-texlive-core
+texlive-langcjk
 texlive-langjapanese
+texlive-latex
 texlive-latexextra
+texlive-latexrecommended
+texlive-pictures
 the_silver_searcher
 thin-provisioning-tools
 tig
