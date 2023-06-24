@@ -99,6 +99,7 @@ dateutils
 dav1d
 db
 db5.3
+dbeaver
 dbus
 dbus-glib
 dbus-python
@@ -537,11 +538,14 @@ iw
 jack2
 jansson
 jasper
+java-runtime-common
 jbig2dec
 jemalloc
 jhead
 jpegoptim
 jq
+jre-openjdk
+jre-openjdk-headless
 js102
 json-c
 json-glib
@@ -680,6 +684,7 @@ libmypaint
 libmysofa
 libnautilus-extension
 libndp
+libnet
 libnetfilter_conntrack
 libnewt
 libnfnetlink
