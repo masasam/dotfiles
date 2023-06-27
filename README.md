@@ -127,7 +127,7 @@ Why Arch linux?
 - Arch linux is good because it is difficult for my development environment to be old packages.
 
 - I like customization but if customization is done too much, it is not good because it can not receive the benefit of the community. Since Arch linux is unsuitable for excessive customization, it is fit to me.
-  In principle the package of Arch linux is a policy to build from the source of vanilla (Vanilla means that it does not apply its own patch for arch linux)
+  In principle the package of Arch linux is a policy to build from the source of vanilla (Vanilla means that it does not apply its own patch for arch linux).
   It is good because Arch linux unique problems are unlikely.
 
 - Arch linux is lightweight because there is no extra thing.
