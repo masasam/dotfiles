@@ -638,7 +638,7 @@ minikube with kvm2
 	sudo systemctl enable virtlogd.service
 	minikube config set vm-driver kvm2
 	
-#### rbenv rails
+#### rbenv
 
 	yay -S rbenv
 	yay -S ruby-build
