@@ -467,7 +467,7 @@ You can make install from here
 #### Install using yay
 
 	yay -S appimagelauncher
-	yay -S beekeeper-studio
+	yay -S beekeeper-studio-bin
 	yay -S drone-cli
 	yay -S git-secrets
 	yay -S global
