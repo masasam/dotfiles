@@ -572,6 +572,7 @@ lib2geom
 libabw
 libadwaita
 libaio
+libappindicator-gtk3
 libarchive
 libass
 libassuan
@@ -602,6 +603,8 @@ libcolord
 libcups
 libdaemon
 libdatrie
+libdbusmenu-glib
+libdbusmenu-gtk3
 libdc1394
 libde265
 libdeflate
@@ -1124,7 +1127,6 @@ rasqal
 rav1e
 rbw
 rclone
-re2
 readline
 redland
 ripgrep
