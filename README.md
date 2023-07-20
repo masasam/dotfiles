@@ -573,8 +573,6 @@ You can make install from here
 	yarn global add babel-eslint
 	yarn global add cloc
 	yarn global add create-component-app
-	yarn global add create-nuxt-app
-	yarn global add create-react-app
 	yarn global add dockerfile-language-server-nodejs
 	yarn global add esbuild-linux-64
 	yarn global add eslint
@@ -601,8 +599,6 @@ You can make install from here
 	yarn global add prettier
 	yarn global add parcel-bundler
 	yarn global add @vue/cli
-	yarn global add vue-language-server
-	yarn global add vue-native-cli
 	yarn global add webpack
 
 #### Kubernetes
