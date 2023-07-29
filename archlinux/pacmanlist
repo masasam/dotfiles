@@ -272,6 +272,7 @@ gtk3
 gtk4
 gtkmathview
 gtkmm3
+gtksourceview4
 gtop
 gts
 guetzli
@@ -572,6 +573,7 @@ lib2geom
 libabw
 libadwaita
 libaio
+libao
 libappindicator-gtk3
 libarchive
 libass
@@ -934,6 +936,7 @@ openssh
 openssl
 optipng
 opus
+opusfile
 orc
 otf-ipafont
 p11-kit
@@ -998,17 +1001,22 @@ python-agate
 python-agate-dbf
 python-agate-excel
 python-agate-sql
+python-appdirs
 python-argcomplete
 python-attrs
 python-autocommand
 python-babel
 python-bcrypt
+python-beautifulsoup4
+python-cachecontrol
 python-cachetools
+python-cairo
 python-certifi
 python-cffi
 python-chardet
 python-charset-normalizer
 python-colorama
+python-coverage
 python-cryptography
 python-cssselect
 python-dbfread
@@ -1018,6 +1026,7 @@ python-distro
 python-docutils
 python-et-xmlfile
 python-fastjsonschema
+python-filelock
 python-fluidity
 python-future
 python-gobject
@@ -1041,12 +1050,14 @@ python-jinja
 python-leather
 python-lexicon
 python-libarchive-c
+python-lockfile
 python-lxml
 python-magic
 python-markdown-it-py
 python-markupsafe
 python-mdurl
 python-more-itertools
+python-msgpack
 python-multidict
 python-numpy
 python-oauth2client
@@ -1070,6 +1081,7 @@ python-pygments
 python-pyicu
 python-pynacl
 python-pyparsing
+python-pyserial
 python-pysocks
 python-pytimeparse
 python-pytz
@@ -1084,6 +1096,7 @@ python-simplejson
 python-six
 python-slugify
 python-snowballstemmer
+python-soupsieve
 python-sphinx
 python-sphinx-alabaster-theme
 python-sphinx_rtd_theme
@@ -1110,6 +1123,7 @@ python-wheel
 python-xlrd
 python-xmltodict
 python-yaml
+python-zstandard
 qhull
 qpdf
 qt5-base
@@ -1188,6 +1202,7 @@ rxvt-unicode-terminfo
 rye
 sbc
 sbcl
+scour
 screen
 sdl2
 seahorse
@@ -1288,6 +1303,7 @@ vim-runtime
 vimiv
 vmaf
 volume_key
+vorbis-tools
 vte-common
 vulkan-headers
 vulkan-icd-loader
