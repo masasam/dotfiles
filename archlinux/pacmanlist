@@ -312,7 +312,6 @@ haskell-blaze-html
 haskell-blaze-markup
 haskell-boring
 haskell-bsb-http-chunked
-haskell-byteable
 haskell-byteorder
 haskell-call-stack
 haskell-case-insensitive
@@ -494,7 +493,6 @@ haskell-wai-logger
 haskell-warp
 haskell-witherable
 haskell-word8
-haskell-x509
 haskell-xml
 haskell-xml-conduit
 haskell-xml-types
@@ -1275,6 +1273,7 @@ traceroute
 tracker3
 tre
 tree
+tree-sitter
 tslib
 ttf-liberation
 typescript
