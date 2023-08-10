@@ -1020,6 +1020,7 @@ python-cssselect
 python-dbfread
 python-decorator
 python-defusedxml
+python-deprecated
 python-distro
 python-docutils
 python-et-xmlfile
@@ -1039,6 +1040,7 @@ python-httplib2
 python-idna
 python-imagesize
 python-inflect
+python-iniconfig
 python-invoke
 python-isodate
 python-jaraco.context
@@ -1068,6 +1070,7 @@ python-parsedatetime
 python-pillow
 python-pip
 python-platformdirs
+python-pluggy
 python-ply
 python-prompt_toolkit
 python-protobuf
@@ -1081,6 +1084,7 @@ python-pynacl
 python-pyparsing
 python-pyserial
 python-pysocks
+python-pytest
 python-pytimeparse
 python-pytz
 python-pyxdg
@@ -1118,6 +1122,7 @@ python-urllib3
 python-validate-pyproject
 python-wcwidth
 python-wheel
+python-wrapt
 python-xlrd
 python-xmltodict
 python-yaml
