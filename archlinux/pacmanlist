@@ -43,6 +43,7 @@ bash
 bash-completion
 bash-language-server
 bat
+bazel
 bcg729
 bind
 binutils
@@ -540,14 +541,18 @@ iw
 jack2
 jansson
 jasper
+java-environment-common
 java-runtime-common
 jbig2dec
+jdk11-openjdk
 jemalloc
 jhead
 jpegoptim
 jq
 jre-openjdk
 jre-openjdk-headless
+jre11-openjdk
+jre11-openjdk-headless
 js102
 json-c
 json-glib
