@@ -957,6 +957,7 @@ pangomm
 parallel
 parted
 pass
+passim
 patch
 pciutils
 pcre
@@ -1005,8 +1006,11 @@ python-agate
 python-agate-dbf
 python-agate-excel
 python-agate-sql
+python-aiohttp
+python-aiosignal
 python-appdirs
 python-argcomplete
+python-async-timeout
 python-attrs
 python-autocommand
 python-babel
@@ -1033,6 +1037,7 @@ python-et-xmlfile
 python-fastjsonschema
 python-filelock
 python-fluidity
+python-frozenlist
 python-future
 python-gobject
 python-google-api-core
@@ -1132,6 +1137,7 @@ python-wrapt
 python-xlrd
 python-xmltodict
 python-yaml
+python-yarl
 python-zstandard
 qhull
 qpdf
