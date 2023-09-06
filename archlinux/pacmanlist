@@ -544,6 +544,7 @@ jasper
 java-environment-common
 java-runtime-common
 jbig2dec
+jbigkit
 jdk11-openjdk
 jemalloc
 jhead
@@ -1281,6 +1282,7 @@ texlive-pictures
 the_silver_searcher
 thin-provisioning-tools
 tig
+time
 tinycompress
 tlp
 tmux
