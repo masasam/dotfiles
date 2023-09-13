@@ -510,7 +510,6 @@ You can make install from here
 	pip install --user graph-cli
 	pip install --user importmagic
 	pip install --user ipywidgets
-	pip install --user jedi
 	pip install --user jupyter
 	pip install --user jupyterlab
 	pip install --user jupyterthemes
