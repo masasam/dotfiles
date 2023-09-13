@@ -533,7 +533,6 @@ You can make install from here
 	pip install --user pygments
 	pip install --user pylint
 	pip install --user python-language-server
-	pip install --user r7insight_python
 	pip install --user ranger-fm
 	pip install --user redis
 	pip install --user rope
