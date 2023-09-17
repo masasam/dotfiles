@@ -1009,6 +1009,7 @@ python-agate-excel
 python-agate-sql
 python-aiohttp
 python-aiosignal
+python-annotated-types
 python-appdirs
 python-argcomplete
 python-async-timeout
@@ -1090,6 +1091,7 @@ python-pyasn1
 python-pyasn1-modules
 python-pycparser
 python-pydantic
+python-pydantic-core
 python-pygments
 python-pyicu
 python-pynacl
