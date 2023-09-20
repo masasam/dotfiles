@@ -356,6 +356,7 @@ haskell-erf
 haskell-fast-logger
 haskell-fgl
 haskell-file-embed
+haskell-foldable1-classes-compat
 haskell-generically
 haskell-ghc-bignum-orphans
 haskell-glob
@@ -615,6 +616,7 @@ libdbusmenu-gtk3
 libdc1394
 libde265
 libdeflate
+libdovi
 libdrm
 libdvdnav
 libdvdread
@@ -930,6 +932,7 @@ oath-toolkit
 obs-studio
 ocl-icd
 onetbb
+onevpl
 oniguruma
 opencore-amr
 opencv
