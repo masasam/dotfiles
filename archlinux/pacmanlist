@@ -17,6 +17,7 @@ ansible
 ansible-core
 aom
 apparmor
+appstream
 arc-gtk-theme
 arch-install-scripts
 archlinux-keyring
@@ -712,6 +713,7 @@ libnma-gtk4
 libnotify
 libnsl
 libnumbertext
+libnvme
 libodfgen
 libogg
 libomxil-bellagio
