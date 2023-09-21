@@ -186,6 +186,7 @@ uefiupdate: ## Update system firmware and uefi
 gtk-theme: ## Set gtk theme
 	$(PACMAN) gnome-themes-extra arc-gtk-theme
 	gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark
+	ln -vsf ${PWD}/.profile ${HOME}/.profile
 
 throttled: ## Workaround for Intel throttling issues in thinkpad x1 carbon gen6
 	$(PACMAN) throttled
