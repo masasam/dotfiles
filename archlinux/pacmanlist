@@ -562,7 +562,7 @@ json-glib
 kbd
 keychain
 keyutils
-kguiaddons
+kguiaddons5
 kmod
 krb5
 kyotocabinet
@@ -610,6 +610,7 @@ libcdr
 libcloudproviders
 libcolord
 libcups
+libcupsfilters
 libdaemon
 libdatrie
 libdbusmenu-glib
@@ -736,6 +737,7 @@ libpng
 libportal
 libportal-gtk3
 libportal-gtk4
+libppd
 libproxy
 libpsl
 libptytty
