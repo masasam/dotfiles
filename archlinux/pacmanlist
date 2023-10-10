@@ -557,6 +557,7 @@ jre-openjdk-headless
 jre11-openjdk
 jre11-openjdk-headless
 js102
+js115
 json-c
 json-glib
 kbd
@@ -618,12 +619,15 @@ libdbusmenu-gtk3
 libdc1394
 libde265
 libdeflate
+libdex
+libdisplay-info
 libdovi
 libdrm
 libdvdnav
 libdvdread
 libe-book
 libedit
+libei
 libelf
 libepoxy
 libepubgen
@@ -724,6 +728,7 @@ libotf
 libots
 libp11-kit
 libpagemaker
+libpanel
 libpaper
 libpcap
 libpciaccess
@@ -790,6 +795,7 @@ libtracefs
 libunistring
 libunwind
 liburcu
+liburing
 libusb
 libusbmuxd
 libutempter
@@ -1171,6 +1177,7 @@ redland
 ripgrep
 rnnoise
 rsync
+rtkit
 rubberband
 ruby
 ruby-abbrev
@@ -1277,6 +1284,7 @@ tar
 tcl
 tcpdump
 tdb
+tecla
 terraform
 tevent
 texinfo
@@ -1368,6 +1376,7 @@ xcb-util-renderutil
 xcb-util-wm
 xclip
 xdg-dbus-proxy
+xdg-desktop-portal
 xdg-user-dirs
 xdg-utils
 xdotool
