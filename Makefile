@@ -30,7 +30,7 @@ PACKAGES	+= smartmontools gnome-logs wireshark-cli wl-clipboard lsof mapnik edit
 PACKAGES	+= gtop gopls convmv mpv browserpass-firefox man-db baobab ioping ruby-irb mkcert findomain pyenv
 PACKAGES	+= guetzli fabric detox usleep libvterm bind asunder lame git-lfs hex miller bash-language-server
 PACKAGES	+= diffoscope dust rbw eza sslscan abiword pyright miniserve fdupes deno serverless mold fx httpie
-PACKAGES	+= gron typescript-language-server rye dateutils time xsv mariadb-clients
+PACKAGES	+= gron typescript-language-server rye dateutils time xsv
 
 BASE_PKGS	:= filesystem gcc-libs glibc bash coreutils file findutils gawk grep procps-ng sed tar gettext
 BASE_PKGS	+= pciutils psmisc shadow util-linux bzip2 gzip xz licenses pacman systemd systemd-sysvcompat 
@@ -268,6 +268,9 @@ mariadb: ## Mariadb initial setup
 	sudo mysql -u root < ${PWD}/$@/init.sql
 	mysql_secure_installation
 	mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root mysql
+
+mysql-client: ## mysql-clients tool
+	yay mysql-clients
 
 tailscale: ## tailscale initial setup
 	$(PACMAN) $@
