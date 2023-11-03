@@ -1128,6 +1128,8 @@ python-snowballstemmer
 python-soupsieve
 python-sphinx
 python-sphinx-alabaster-theme
+python-sphinx-basic-ng
+python-sphinx-furo
 python-sphinx_rtd_theme
 python-sphinxcontrib-applehelp
 python-sphinxcontrib-devhelp
