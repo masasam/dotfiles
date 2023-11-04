@@ -102,7 +102,6 @@ dateutils
 dav1d
 db
 db5.3
-dbeaver
 dbus
 dbus-glib
 dbus-python
@@ -552,8 +551,6 @@ jemalloc
 jhead
 jpegoptim
 jq
-jre-openjdk
-jre-openjdk-headless
 jre11-openjdk
 jre11-openjdk-headless
 js102
