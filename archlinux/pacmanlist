@@ -316,6 +316,7 @@ haskell-bsb-http-chunked
 haskell-byteorder
 haskell-call-stack
 haskell-case-insensitive
+haskell-cassava
 haskell-cereal
 haskell-citeproc
 haskell-cmdargs
@@ -346,6 +347,7 @@ haskell-data-fix
 haskell-dec
 haskell-diff
 haskell-digest
+haskell-digits
 haskell-distributive
 haskell-dlist
 haskell-doclayout
@@ -411,7 +413,9 @@ haskell-network-uri
 haskell-old-locale
 haskell-old-time
 haskell-onetuple
+haskell-only
 haskell-optparse-applicative
+haskell-ordered-containers
 haskell-pandoc
 haskell-pandoc-lua-engine
 haskell-pandoc-lua-marshal
@@ -419,6 +423,7 @@ haskell-pandoc-server
 haskell-pandoc-types
 haskell-pem
 haskell-pretty-show
+haskell-prettyprinter
 haskell-primitive
 haskell-psqueues
 haskell-quickcheck
@@ -468,10 +473,12 @@ haskell-these
 haskell-time-compat
 haskell-time-manager
 haskell-tls
+haskell-toml-parser
 haskell-transformers-base
 haskell-transformers-compat
 haskell-type-equality
 haskell-typed-process
+haskell-typst
 haskell-typst-symbols
 haskell-unicode-collation
 haskell-unicode-data
