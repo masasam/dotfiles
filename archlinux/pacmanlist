@@ -151,7 +151,6 @@ expect
 eza
 fabric
 fakeroot
-fcft
 fdupes
 ffcall
 ffmpeg
@@ -169,7 +168,6 @@ flameshot
 flashrom
 flex
 fontconfig
-foot
 fping
 fprintd
 freeglut
@@ -805,7 +803,6 @@ liburing
 libusb
 libusbmuxd
 libutempter
-libutf8proc
 libuv
 libva
 libva-utils
