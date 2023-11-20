@@ -1345,6 +1345,7 @@ util-linux
 util-linux-libs
 v4l-utils
 valgrind
+verdict
 vi
 vid.stab
 vim
