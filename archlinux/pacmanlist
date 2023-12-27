@@ -1398,6 +1398,8 @@ xcb-util-wm
 xclip
 xdg-dbus-proxy
 xdg-desktop-portal
+xdg-desktop-portal-gnome
+xdg-desktop-portal-gtk
 xdg-user-dirs
 xdg-utils
 xdotool
