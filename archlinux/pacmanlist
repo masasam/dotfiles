@@ -619,6 +619,7 @@ libcdr
 libcloudproviders
 libcmis
 libcolord
+libcss
 libcups
 libcupsfilters
 libdaemon
@@ -630,6 +631,7 @@ libde265
 libdeflate
 libdex
 libdisplay-info
+libdom
 libdovi
 libdrm
 libdvdnav
@@ -674,6 +676,7 @@ libgweather-4
 libgxps
 libhandy
 libheif
+libhubbub
 libibus
 libical
 libice
@@ -740,6 +743,7 @@ libp11-kit
 libpagemaker
 libpanel
 libpaper
+libparserutils
 libpcap
 libpciaccess
 libpeas
@@ -820,6 +824,7 @@ libvorbis
 libvpx
 libvterm
 libwacom
+libwapcaplet
 libwbclient
 libwebp
 libwmf
