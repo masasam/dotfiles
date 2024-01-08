@@ -780,6 +780,7 @@ libseccomp
 libsecret
 libsigc++
 libsigsegv
+libsixel
 libsm
 libsmbios
 libsndfile
@@ -960,6 +961,7 @@ ocl-icd
 onetbb
 onevpl
 oniguruma
+openal
 opencore-amr
 opencv
 openexr
@@ -1254,6 +1256,7 @@ ruby-tmpdir
 ruby-uri
 rubygems
 runc
+rust
 rxvt-unicode
 rxvt-unicode-terminfo
 rye
@@ -1356,6 +1359,7 @@ util-linux
 util-linux-libs
 v4l-utils
 valgrind
+vapoursynth
 verdict
 vi
 vid.stab
