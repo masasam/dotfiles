@@ -271,8 +271,11 @@ mariadb: ## Mariadb initial setup
 	mysql_secure_installation
 	mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root mysql
 
-mysql-client: ## mysql-clients tool
-	yay mysql-clients80
+mysql: ## mysql initial setup
+	yay mysql80
+	sudo mysqld --initialize --user=mysql --basedir=/usr --datadir=/var/lib/mysql
+	$(SYSTEMD_ENABLE) mysqld.service
+	mysql_secure_installation
 
 tailscale: ## tailscale initial setup
 	$(PACMAN) $@
