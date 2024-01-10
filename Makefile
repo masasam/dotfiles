@@ -272,7 +272,7 @@ mariadb: ## Mariadb initial setup
 	mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root mysql
 
 mysql-client: ## mysql-clients tool
-	yay mysql-clients
+	yay mysql-clients80
 
 tailscale: ## tailscale initial setup
 	$(PACMAN) $@
