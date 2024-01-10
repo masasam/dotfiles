@@ -105,6 +105,8 @@ dav1d
 db
 db5.3
 dbus
+dbus-broker
+dbus-broker-units
 dbus-glib
 dbus-python
 dconf
