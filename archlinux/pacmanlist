@@ -211,6 +211,7 @@ giflib
 gimp
 git
 git-crypt
+git-delta
 git-lfs
 gjs
 glib-networking
@@ -824,6 +825,7 @@ libvdpau
 libverto
 libvisio
 libvorbis
+libvpl
 libvpx
 libvterm
 libwacom
@@ -961,7 +963,6 @@ oath-toolkit
 obs-studio
 ocl-icd
 onetbb
-onevpl
 oniguruma
 openal
 opencore-amr
