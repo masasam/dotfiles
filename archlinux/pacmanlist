@@ -727,6 +727,8 @@ libnewt
 libnfnetlink
 libnftnl
 libnghttp2
+libnghttp3
+libngtcp2
 libnice
 libnl
 libnm
