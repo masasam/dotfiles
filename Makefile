@@ -8,10 +8,10 @@ NODE_PKGS	+= indium intelephense logo.svg @marp-team/marp-cli jshint
 
 PIP_PKGS	:= ansible-lint beautifulsoup4 black cheat chromedriver-binary diagrams django djangorestframework
 PIP_PKGS	+= django-nested-admin django-ses faker gif-for-cli graph-cli importmagic ipywidgets virtualenvwrapper
-PIP_PKGS	+= jupyter jupyterlab jupyterthemes litecli matplotlib neovim nose pandas pipenv poetry pre-commit
+PIP_PKGS	+= jupyter jupyterlab jupyterthemes litecli matplotlib neovim nose pandas pre-commit termdown jinja2
 PIP_PKGS	+= progressbar2 psycopg2-binary py-spy pydantic pydoc_utils redis requests_mock chromedriver-binary
 PIP_PKGS	+= rtv scipy scrapy seaborn selenium speedtest-cli streamlink tldr trash-cli truffleHog virtualenv
-PIP_PKGS	+= zappa termdown jinja2
+PIP_PKGS	+= zappa
 
 PACKAGES	:= base go zsh git vim tmux keychain evince unrar hugo ethtool zsh-completions xsel emacs gvfs-smb
 PACKAGES	+= unace iperf valgrind noto-fonts-emoji inkscape file-roller xclip atool debootstrap oath-toolkit 
@@ -101,7 +101,7 @@ pipinstall: ${HOME}/.local ## Install python packages
 	rm -fr get-pip.py
 
 pipinstallarch: ## Install python packages
-	$(PACMAN) python-pip python-pipenv
+	$(PACMAN) python-pip python-pipenv python-pdm
 
 goinstall: ${HOME}/.local ## Install go packages
 	go install golang.org/x/tools/gopls@latest
