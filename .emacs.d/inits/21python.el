@@ -14,6 +14,8 @@
 
 (setq-default eglot-workspace-configuration #'my/eglot-workspace-config)
 
+(setq python-indent-guess-indent-offset-verbose nil)
+
 (add-hook 'python-mode-hook 'eglot-ensure)
 ;; (add-hook 'python-mode-hook (lambda ()
 ;;                               (require 'lsp-pyright)
