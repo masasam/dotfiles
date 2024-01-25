@@ -267,7 +267,7 @@ If the region is inactive, `backward-kill-word'."
 
 (bind-key "C-M-y" 'my/duplicate-current-line)
 
-(setq eww-search-prefix "https://www.google.com/search?ie=UTF-8&q=")
+(setq eww-search-prefix "https://www.google.co.jp/search?q=")
 
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
