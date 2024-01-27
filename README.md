@@ -466,7 +466,6 @@ You can make install from here
 
 #### Install using yay
 
-	yay -S appimagelauncher
 	yay -S beekeeper-studio-bin
 	yay -S drone-cli
 	yay -S git-secrets
@@ -483,9 +482,7 @@ You can make install from here
 	yay -S rtags
 	yay -S ruby-build
 	yay -S screenkey
-	yay -S sequeler-git
 	yay -S slack-desktop
-	yay -S tableplus
 	yay -S terraformer
 	yay -S yay
 
