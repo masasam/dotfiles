@@ -627,6 +627,7 @@ libcss
 libcups
 libcupsfilters
 libdaemon
+libdatachannel
 libdatrie
 libdbusmenu-glib
 libdbusmenu-gtk3
@@ -695,6 +696,7 @@ libisl
 libixion
 libjcat
 libjpeg-turbo
+libjuice
 libjxl
 libkeybinder3
 libksba
@@ -797,6 +799,7 @@ libsoxr
 libspatialite
 libspectre
 libspiro
+libsrtp
 libssh
 libssh2
 libstaroffice
