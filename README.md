@@ -547,7 +547,6 @@ You can make install from here
 	pip install --user trash-cli
 	pip install --user truffleHog
 	pip install --user virtualenv
-	pip install --user virtualenvwrapper
 	pip install --user yapf
 	pip install --user youtube-dl
 
