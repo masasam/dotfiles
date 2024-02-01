@@ -427,7 +427,7 @@ You can make install from here
     sudo pacman -S firefox firefox-i18n-ja fping xdotool
     sudo pacman -S sylpheed emacs curl xsel tmux eog lhasa
     sudo pacman -S zsh-completions keychain syncthing lzop
-    sudo pacman -S powertop gimp unrar gnome-screenshot
+    sudo pacman -S powertop gimp unrar gnome-screenshot zellij
     sudo pacman -S file-roller xclip atool evince inkscape
     sudo pacman -S seahorse the_silver_searcher zeal vimiv
     sudo pacman -S cups-pdf htop neovim go pkgfile rsync elixir
