@@ -349,9 +349,6 @@ flutter: ## Install flutter
 	mkdir -p ~/src/github.com/$@
 	wget -O- $(FLUTTER_URL) | tar -C ~/src/github.com/$@ xf-
 
-jdk: ## Install jdk
-	$(PACMAN) jdk8-openjdk
-
 mpsyt: ## Install and deploy mps-youtube
 	pip install --user mps-youtube youtube-dl
 	mkdir -p ${HOME}/.config/mps-youtube
@@ -395,8 +392,9 @@ beekeeper: ## Setup beekeeper-studio
 	ln -vsfn ${HOME}/{backup,.config}/$@-studio
 
 dbeaver: ## Setup dbeaver
+	$(PACMAN) jdk-openjdk
 	$(PACMAN) dbeaver
-	sudo archlinux-java set java-20-openjdk
+	sudo archlinux-java set java-21-openjdk
 
 gh: ## Install and setup github-cli
 	$(PACMAN) github-cli
