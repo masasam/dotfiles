@@ -424,7 +424,7 @@ You can make install from here
 
 #### Install using pacman
 
-    sudo pacman -S firefox firefox-i18n-ja fping xdotool
+    sudo pacman -S firefox firefox-i18n-ja fping xdotool jc
     sudo pacman -S sylpheed emacs curl xsel tmux eog lhasa
     sudo pacman -S zsh-completions keychain syncthing lzop
     sudo pacman -S powertop gimp unrar gnome-screenshot zellij
