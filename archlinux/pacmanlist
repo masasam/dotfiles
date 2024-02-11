@@ -559,6 +559,7 @@ java-environment-common
 java-runtime-common
 jbig2dec
 jbigkit
+jc
 jdk11-openjdk
 jemalloc
 jhead
@@ -1160,6 +1161,8 @@ python-requests-toolbelt
 python-resolvelib
 python-rich
 python-rsa
+python-ruamel-yaml
+python-ruamel.yaml.clib
 python-setuptools
 python-shellingham
 python-simplejson
