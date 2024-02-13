@@ -1,4 +1,5 @@
 # zshrc
+fpath=("$HOME/.zfunc" ${fpath})
 plugins=(… zsh-completions)
 autoload -U compinit promptinit
 compinit
