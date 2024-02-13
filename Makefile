@@ -30,7 +30,7 @@ PACKAGES	+= smartmontools gnome-logs wireshark-cli wl-clipboard lsof mapnik edit
 PACKAGES	+= gtop gopls convmv mpv browserpass-firefox man-db baobab ioping ruby-irb mkcert findomain pyenv
 PACKAGES	+= guetzli fabric detox usleep libvterm bind asunder lame git-lfs hex miller bash-language-server
 PACKAGES	+= diffoscope dust rbw eza sslscan abiword pyright miniserve fdupes deno serverless mold fx httpie
-PACKAGES	+= gron typescript-language-server rye dateutils time xsv rust git-delta gruff zellij jc
+PACKAGES	+= gron typescript-language-server dateutils time xsv rust git-delta gruff zellij jc
 
 BASE_PKGS	:= filesystem gcc-libs glibc bash coreutils file findutils gawk grep procps-ng sed tar gettext
 BASE_PKGS	+= pciutils psmisc shadow util-linux bzip2 gzip xz licenses pacman systemd systemd-sysvcompat 
@@ -102,6 +102,11 @@ pipinstall: ${HOME}/.local ## Install python packages
 
 pipinstallarch: ## Install python packages
 	$(PACMAN) python-pip python-pipenv python-pdm
+
+rye: ## Install rye and setup
+	$(PACMAN) rye
+	mkdir ~/.zfunc
+	rye self completion -s zsh > ~/.zfunc/_rye
 
 goinstall: ${HOME}/.local ## Install go packages
 	go install golang.org/x/tools/gopls@latest
