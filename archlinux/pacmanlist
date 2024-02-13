@@ -653,6 +653,7 @@ libevdev
 libevent
 libexif
 libexttextcat
+libfabric
 libfdk-aac
 libffi
 libfido2
