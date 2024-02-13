@@ -13,12 +13,12 @@
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="smb://192.168.0.51/" added="2023-09-20T13:18:05.288603Z" modified="2023-12-22T02:43:08.410625Z" visited="2023-12-22T02:43:08.410621Z">
+  <bookmark href="smb://192.168.0.51/" added="2023-09-20T13:18:05.288603Z" modified="2024-02-13T06:07:34.427353Z" visited="2024-02-13T06:07:34.427349Z">
     <title>192.168.0.51 上の Windows 共有</title>
     <info>
       <metadata owner="http://freedesktop.org">
         <bookmark:applications>
-          <bookmark:application name="org.gnome.Nautilus" exec="&apos;org.gnome.Nautilus %u&apos;" modified="2023-12-22T02:43:08.410623Z" count="7"/>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;org.gnome.Nautilus %u&apos;" modified="2024-02-13T06:07:34.427351Z" count="8"/>
         </bookmark:applications>
       </metadata>
     </info>
