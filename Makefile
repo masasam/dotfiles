@@ -14,23 +14,23 @@ PIP_PKGS	+= rtv scipy scrapy seaborn selenium speedtest-cli streamlink tldr tras
 PIP_PKGS	+= zappa
 
 PACKAGES	:= base go zsh git vim tmux keychain evince unrar hugo ethtool zsh-completions xsel emacs gvfs-smb
-PACKAGES	+= unace iperf valgrind noto-fonts-emoji inkscape file-roller xclip atool debootstrap oath-toolkit 
+PACKAGES	+= unace iperf valgrind noto-fonts-emoji inkscape file-roller xclip atool debootstrap oath-toolkit
 PACKAGES	+= imagemagick lynx the_silver_searcher cifs-utils elinks flameshot ruby-rdoc ipcalc traceroute
 PACKAGES	+= cups-pdf firefox firefox-i18n-ja gimp strace lhasa hub bookworm tig sysprof pkgfile dconf-editor
-PACKAGES	+= rsync nodejs debian-archive-keyring gauche cpio aria2 nmap poppler-data ffmpeg asciidoc sbcl 
-PACKAGES	+= aspell aspell-en screen mosh diskus gdb wmctrl pwgen linux-docs htop tcpdump gvfs p7zip lzop fzf 
-PACKAGES	+= gpaste optipng arch-install-scripts pandoc jq pkgstats ruby highlight alsa-utils geckodriver
-PACKAGES	+= texlive-langjapanese tokei texlive-latexextra ctags hdparm eog curl parallel npm yq ansible
-PACKAGES	+= typescript llvm llvm-libs lldb tree w3m whois csvkit pass zsh-syntax-highlighting shellcheck
-PACKAGES	+= bash-completion mathjax expect obs-studio cscope postgresql-libs pdfgrep gnu-netcat cmatrix btop
-PACKAGES	+= jpegoptim nethogs mlocate pacman-contrib x11-ssh-askpass libreoffice-fresh-ja python-prompt_toolkit
-PACKAGES	+= jhead peek ncdu gnome-screenshot sshfs fping syncthing terraform bat lshw xdotool sshuttle packer 
-PACKAGES	+= ripgrep stunnel vimiv adapta-gtk-theme gnome-tweaks firejail opencv hexedit discord pv perl-net-ip
-PACKAGES	+= smartmontools gnome-logs wireshark-cli wl-clipboard lsof mapnik editorconfig-core-c watchexec
-PACKAGES	+= gtop gopls convmv mpv browserpass-firefox man-db baobab ioping ruby-irb mkcert findomain pyenv
-PACKAGES	+= guetzli fabric detox usleep libvterm bind asunder lame git-lfs hex miller bash-language-server
-PACKAGES	+= diffoscope dust rbw eza sslscan abiword pyright miniserve fdupes deno serverless mold fx httpie
-PACKAGES	+= gron typescript-language-server dateutils time xsv rust git-delta gruff zellij jc
+PACKAGES	+= rsync nodejs debian-archive-keyring gauche cpio aria2 nmap poppler-data ffmpeg asciidoc sbcl
+PACKAGES	+= aspell aspell-en screen mosh diskus gdb wmctrl pwgen linux-docs htop tcpdump gvfs p7zip lzop fzf
+PACKAGES2	:= gpaste optipng arch-install-scripts pandoc jq pkgstats ruby highlight alsa-utils geckodriver
+PACKAGES2	+= texlive-langjapanese tokei texlive-latexextra ctags hdparm eog curl parallel npm yq ansible
+PACKAGES2	+= typescript llvm llvm-libs lldb tree w3m whois csvkit pass zsh-syntax-highlighting shellcheck
+PACKAGES2	+= bash-completion mathjax expect obs-studio cscope postgresql-libs pdfgrep gnu-netcat cmatrix btop
+PACKAGES2	+= jpegoptim nethogs mlocate pacman-contrib x11-ssh-askpass libreoffice-fresh-ja python-prompt_toolkit
+PACKAGES2	+= jhead peek ncdu gnome-screenshot sshfs fping syncthing terraform bat lshw xdotool sshuttle packer
+PACKAGES3	:= ripgrep stunnel vimiv adapta-gtk-theme gnome-tweaks firejail opencv hexedit discord pv perl-net-ip
+PACKAGES3	+= smartmontools gnome-logs wireshark-cli wl-clipboard lsof mapnik editorconfig-core-c watchexec
+PACKAGES3	+= gtop gopls convmv mpv browserpass-firefox man-db baobab ioping ruby-irb mkcert findomain pyenv
+PACKAGES3	+= guetzli fabric detox usleep libvterm bind asunder lame git-lfs hex miller bash-language-server
+PACKAGES3	+= diffoscope dust rbw eza sslscan abiword pyright miniserve fdupes deno serverless mold fx httpie
+PACKAGES3	+= gron typescript-language-server dateutils time xsv rust git-delta gruff zellij jc
 
 BASE_PKGS	:= filesystem gcc-libs glibc bash coreutils file findutils gawk grep procps-ng sed tar gettext
 BASE_PKGS	+= pciutils psmisc shadow util-linux bzip2 gzip xz licenses pacman systemd systemd-sysvcompat 
@@ -89,6 +89,8 @@ base: ## Install base and base-devel package
 
 install: ## Install arch linux packages using pacman
 	$(PACMAN) $(PACKAGES)
+	$(PACMAN) $(PACKAGES2)
+	$(PACMAN) $(PACKAGES3)
 	$(PACMAN) pkgfile
 	sudo pkgfile --update
 
