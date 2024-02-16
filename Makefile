@@ -311,7 +311,7 @@ mycli: ## Init mycli
 pgcli: ## Init pgcli
 	mkdir -p ${HOME}/backup
 	pip install --user $@
-	test -L ${HOME}/.config/$@ || rm -rf ${HOME}/.config/$@
+	test -L ${HOME}/.config/pgcli || rm -rf ${HOME}/.config/pgcli
 	ln -vsfn ${HOME}/{backup,.config}/$@
 
 gcloud: ## Install google cloud SDK and setting
@@ -404,8 +404,8 @@ dbeaver: ## Setup dbeaver
 
 gh: ## Install and setup github-cli
 	$(PACMAN) github-cli
-	test -L ${HOME}/.config/$@ || rm -rf ${HOME}/.config/$@
-	ln -vsfn ${HOME}/{backup,.config}/$@
+	test -L ${HOME}/.config/gh || rm -rf ${HOME}/.config/gh
+	ln -vsfn ${HOME}/{backup,.config}/gh
 	gh extension install seachicken/gh-poi
 
 aurplus: ## Install arch linux AUR packages using yay
