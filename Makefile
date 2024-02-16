@@ -278,6 +278,7 @@ mariadb: ## Mariadb initial setup
 	mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root mysql
 
 mysql: ## mysql initial setup
+	yay mysql-clients80
 	yay mysql80
 	sudo mysqld --initialize --user=mysql --basedir=/usr --datadir=/var/lib/mysql
 	$(SYSTEMD_ENABLE) mysqld.service
