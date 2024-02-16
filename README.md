@@ -492,14 +492,8 @@ You can make install from here
 	curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 	python get-pip.py --user
 	pip install --user --upgrade pip
-	pip install --user ansible
-	pip install --user ansible-container
-	pip install --user ansible-lint
-	pip install --user autopep8
 	pip install --user awscli
-	pip install --user black
 	pip install --user cheat
-	pip install --user chromedriver-binary
 	pip install --user diagrams
 	pip install --user eralchemy
 	pip install --user faker
@@ -511,34 +505,21 @@ You can make install from here
 	pip install --user jupyterlab
 	pip install --user jupyterthemes
 	pip install --user litecli
-	pip install --user matplotlib
 	pip install --user mps-youtube
 	pip install --user mycli
 	pip install --user neovim
 	pip install --user nose
 	pip install --user opencv-python
-	pip install --user pandas
 	pip install --user pgcli
-	pip install --user pipenv
-	pip install --user poetry
 	pip install --user pre-commit
 	pip install --user progressbar2
 	pip install --user psycopg2-binary
 	pip install --user py-spy
 	pip install --user pydoc_utils
-	pip install --user pyflakes
-	pip install --user pygments
-	pip install --user pylint
-	pip install --user python-language-server
 	pip install --user ranger-fm
-	pip install --user redis
 	pip install --user rope
 	pip install --user rtv
-	pip install --user scikit-learn
-	pip install --user scipy
-	pip install --user scrapy
 	pip install --user seaborn
-	pip install --user selenium
 	pip install --user speedtest-cli
 	pip install --user streamlink
 	pip install --user termdown
@@ -546,8 +527,6 @@ You can make install from here
 	pip install --user tmuxp
 	pip install --user trash-cli
 	pip install --user truffleHog
-	pip install --user virtualenv
-	pip install --user yapf
 	pip install --user youtube-dl
 
 #### Install using golang
@@ -564,21 +543,12 @@ You can make install from here
 #### Install using yarn
 
 	mkdir -p ${HOME}/.node_modules
-	yarn global add babel-eslint
 	yarn global add cloc
-	yarn global add create-component-app
 	yarn global add dockerfile-language-server-nodejs
 	yarn global add esbuild-linux-64
-	yarn global add eslint
-	yarn global add eslint-cli
-	yarn global add eslint-config-vue
-	yarn global add eslint-plugin-react
-	yarn global add eslint-plugin-vue@next
 	yarn global add expo-cli
 	yarn global add firebase-tools
 	yarn global add fx
-	yarn global add gulp
-	yarn global add	gulp-cli
 	yarn global add heroku
 	yarn global add indium
 	yarn global add javascript-typescript-langserver
@@ -592,8 +562,6 @@ You can make install from here
 	yarn global add now
 	yarn global add prettier
 	yarn global add parcel-bundler
-	yarn global add @vue/cli
-	yarn global add webpack
 
 #### Kubernetes
 

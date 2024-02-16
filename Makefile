@@ -82,7 +82,6 @@ init: ## Initial deploy dotfiles
 	ln -vsf {${PWD},${HOME}}/.config/hub
 	sudo ln -vsf {${PWD},}/etc/hosts
 
-
 base: ## Install base and base-devel package
 	$(PACMAN) $(BASE_PKGS)
 
