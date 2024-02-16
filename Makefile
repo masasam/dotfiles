@@ -6,12 +6,11 @@ NODE_PKGS	+= dockerfile-language-server-nodejs eslint eslint-cli eslint-config-v
 NODE_PKGS	+= eslint-plugin-react eslint-plugin-vue@next expo-cli fx heroku ngrok prettier
 NODE_PKGS	+= indium intelephense logo.svg @marp-team/marp-cli jshint
 
-PIP_PKGS	:= ansible-lint beautifulsoup4 black cheat chromedriver-binary diagrams django djangorestframework
-PIP_PKGS	+= django-nested-admin django-ses faker gif-for-cli graph-cli importmagic ipywidgets virtualenvwrapper
-PIP_PKGS	+= jupyter jupyterlab jupyterthemes litecli matplotlib neovim nose pandas pre-commit termdown jinja2
-PIP_PKGS	+= progressbar2 psycopg2-binary py-spy pydantic pydoc_utils redis requests_mock chromedriver-binary
-PIP_PKGS	+= rtv scipy scrapy seaborn selenium speedtest-cli streamlink tldr trash-cli truffleHog virtualenv
-PIP_PKGS	+= zappa
+PIP_PKGS	:= ansible-lint beautifulsoup4 black cheat chromedriver-binary diagrams zappa
+PIP_PKGS	+= faker gif-for-cli graph-cli importmagic ipywidgets virtualenvwrapper pre-commit
+PIP_PKGS	+= jupyter jupyterlab jupyterthemes litecli matplotlib neovim nose pandas termdown
+PIP_PKGS	+= progressbar2 psycopg2-binary py-spy pydantic pydoc_utils redis requests_mock
+PIP_PKGS	+= rtv seaborn selenium speedtest-cli streamlink tldr trash-cli truffleHog
 
 PACKAGES	:= base go zsh git vim tmux keychain evince unrar hugo ethtool zsh-completions xsel emacs gvfs-smb
 PACKAGES	+= unace iperf valgrind noto-fonts-emoji inkscape file-roller xclip atool debootstrap oath-toolkit
