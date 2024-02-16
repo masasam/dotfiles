@@ -1,16 +1,16 @@
 export PATH := ${HOME}/.local/bin:${HOME}/.node_modules/bin:${HOME}/.cargo/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/bin/core_perl:${HOME}/bin:${HOME}/google-cloud-sdk/bin
 export GOPATH := ${HOME}
 
-NODE_PKGS	:= babel-eslint cloc webpack firebase-tools now mermaid mermaid.cli parcel-bundler
+NODE_PKGS	:= babel-eslint cloc firebase-tools now mermaid mermaid.cli parcel-bundler
 NODE_PKGS	+= dockerfile-language-server-nodejs eslint eslint-cli eslint-config-vue netlify-cli
 NODE_PKGS	+= eslint-plugin-react eslint-plugin-vue@next expo-cli fx heroku ngrok prettier
 NODE_PKGS	+= indium intelephense logo.svg @marp-team/marp-cli jshint
 
-PIP_PKGS	:= ansible-lint beautifulsoup4 black cheat chromedriver-binary diagrams zappa
-PIP_PKGS	+= faker gif-for-cli graph-cli importmagic ipywidgets virtualenvwrapper pre-commit
-PIP_PKGS	+= jupyter jupyterlab jupyterthemes litecli matplotlib neovim nose pandas termdown
-PIP_PKGS	+= progressbar2 psycopg2-binary py-spy pydantic pydoc_utils redis requests_mock
-PIP_PKGS	+= rtv seaborn selenium speedtest-cli streamlink tldr trash-cli truffleHog
+PIP_PKGS	:= ansible-lint cheat chromedriver-binary diagrams zappa truffleHog trash-cli
+PIP_PKGS	+= faker gif-for-cli graph-cli importmagic ipywidgets pre-commit termdown
+PIP_PKGS	+= jupyter jupyterlab jupyterthemes litecli matplotlib neovim nose pandas 
+PIP_PKGS	+= progressbar2 psycopg2-binary py-spy pydantic pydoc_utils redis tldr
+PIP_PKGS	+= rtv seaborn selenium speedtest-cli streamlink requests_mock
 
 PACKAGES	:= base go zsh git vim tmux keychain evince unrar hugo ethtool zsh-completions xsel emacs gvfs-smb
 PACKAGES	+= unace iperf valgrind noto-fonts-emoji inkscape file-roller xclip atool debootstrap oath-toolkit
