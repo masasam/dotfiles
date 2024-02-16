@@ -1,16 +1,10 @@
 export PATH := ${HOME}/.local/bin:${HOME}/.node_modules/bin:${HOME}/.cargo/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/bin/core_perl:${HOME}/bin:${HOME}/google-cloud-sdk/bin
 export GOPATH := ${HOME}
 
-NODE_PKGS	:= babel-eslint cloc firebase-tools now mermaid mermaid.cli parcel-bundler
-NODE_PKGS	+= dockerfile-language-server-nodejs eslint eslint-cli eslint-config-vue netlify-cli
-NODE_PKGS	+= eslint-plugin-react eslint-plugin-vue@next expo-cli fx heroku ngrok prettier
-NODE_PKGS	+= indium intelephense logo.svg @marp-team/marp-cli jshint
-
-PIP_PKGS	:= ansible-lint cheat chromedriver-binary diagrams zappa truffleHog trash-cli
-PIP_PKGS	+= faker gif-for-cli graph-cli importmagic ipywidgets pre-commit termdown
-PIP_PKGS	+= jupyter jupyterlab jupyterthemes litecli matplotlib neovim nose pandas 
-PIP_PKGS	+= progressbar2 psycopg2-binary py-spy pydantic pydoc_utils redis tldr
-PIP_PKGS	+= rtv seaborn selenium speedtest-cli streamlink requests_mock
+BASE_PKGS	:= filesystem gcc-libs glibc bash coreutils file findutils gawk grep procps-ng sed tar gettext
+BASE_PKGS	+= pciutils psmisc shadow util-linux bzip2 gzip xz licenses pacman systemd systemd-sysvcompat 
+BASE_PKGS	+= iputils iproute2 autoconf sudo automake binutils bison fakeroot flex gcc groff libtool m4 
+BASE_PKGS	+= make patch pkgconf texinfo which
 
 PACKAGES	:= base go zsh git vim tmux keychain evince unrar hugo ethtool zsh-completions xsel emacs gvfs-smb
 PACKAGES	+= unace iperf valgrind noto-fonts-emoji inkscape file-roller xclip atool debootstrap oath-toolkit
@@ -31,10 +25,16 @@ PACKAGES3	+= guetzli fabric detox usleep libvterm bind asunder lame git-lfs hex 
 PACKAGES3	+= diffoscope dust rbw eza sslscan abiword pyright miniserve fdupes deno serverless mold fx httpie
 PACKAGES3	+= gron typescript-language-server dateutils time xsv rust git-delta gruff zellij jc
 
-BASE_PKGS	:= filesystem gcc-libs glibc bash coreutils file findutils gawk grep procps-ng sed tar gettext
-BASE_PKGS	+= pciutils psmisc shadow util-linux bzip2 gzip xz licenses pacman systemd systemd-sysvcompat 
-BASE_PKGS	+= iputils iproute2 autoconf sudo automake binutils bison fakeroot flex gcc groff libtool m4 
-BASE_PKGS	+= make patch pkgconf texinfo which
+NODE_PKGS	:= babel-eslint cloc firebase-tools now mermaid mermaid.cli parcel-bundler
+NODE_PKGS	+= dockerfile-language-server-nodejs eslint eslint-cli eslint-config-vue netlify-cli
+NODE_PKGS	+= eslint-plugin-react eslint-plugin-vue@next expo-cli fx heroku ngrok prettier
+NODE_PKGS	+= indium intelephense logo.svg @marp-team/marp-cli jshint
+
+PIP_PKGS	:= ansible-lint cheat chromedriver-binary diagrams zappa truffleHog trash-cli
+PIP_PKGS	+= faker gif-for-cli graph-cli importmagic ipywidgets pre-commit termdown
+PIP_PKGS	+= jupyter jupyterlab jupyterthemes litecli matplotlib neovim nose pandas 
+PIP_PKGS	+= progressbar2 psycopg2-binary py-spy pydantic pydoc_utils redis tldr
+PIP_PKGS	+= rtv seaborn selenium speedtest-cli streamlink requests_mock
 
 PACMAN		:= sudo pacman -S 
 SYSTEMD_ENABLE	:= sudo systemctl --now enable
