@@ -531,10 +531,15 @@ rubygem: ## Install rubygem package
 	gem install bundler jekyll sass compass rawler rdoc irb rails
 
 django: ## Create django project from scratch
-	mkdir -p ${HOME}/src/github.com/masasam/djangoproject && cd $$_ && touch Pipfile && \
-	pipenv --python=3.8.6 && \
-	pipenv install $@ && \
-	pipenv run $@-admin startproject config .
+	mkdir -p ${HOME}/src/github.com/masasam && cd $$_ && \
+	rye init newproject && \
+	cd newproject && \
+	rye pin 3.9 && \
+	rye add django && \
+	rye add python-dotenv && \
+	rye sync && \
+	source .venv/bin/activate && \
+	django-admin startproject config .
 
 .ONESHELL:
 rails: rubygem rbenv ## Create rails project from scratch
