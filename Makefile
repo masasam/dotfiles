@@ -23,7 +23,7 @@ PACKAGES	+= smartmontools gnome-logs wireshark-cli wl-clipboard lsof mapnik edit
 PACKAGES	+= gtop gopls convmv mpv browserpass-firefox man-db baobab ioping ruby-irb mkcert findomain pyenv
 PACKAGES	+= guetzli fabric detox usleep libvterm bind asunder lame git-lfs hex miller bash-language-server
 PACKAGES	+= diffoscope dust rbw eza sslscan abiword pyright miniserve fdupes deno serverless mold fx httpie
-PACKAGES	+= gron typescript-language-server dateutils time xsv rust git-delta zellij jc
+PACKAGES	+= gron typescript-language-server dateutils time xsv rust git-delta zellij jc ruff
 
 NODE_PKGS	:= babel-eslint cloc firebase-tools now mermaid mermaid.cli parcel-bundler
 NODE_PKGS	+= dockerfile-language-server-nodejs eslint eslint-cli eslint-config-vue netlify-cli
