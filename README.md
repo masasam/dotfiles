@@ -497,7 +497,6 @@ You can make install from here
 	pip install --user diagrams
 	pip install --user eralchemy
 	pip install --user faker
-	pip install --user flake8
 	pip install --user graph-cli
 	pip install --user importmagic
 	pip install --user ipywidgets
