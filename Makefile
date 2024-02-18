@@ -90,13 +90,16 @@ install: ## Install arch linux packages using pacman
 	$(PACMAN) pkgfile
 	sudo pkgfile --update
 
-pipinstall: ${HOME}/.local ## Install python packages
+pipinstallocal: ${HOME}/.local ## Install pip packages from source code
 	curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 	python ${PWD}/get-pip.py --user
 	sudo ln -vsf ${PWD}/usr/share/zsh/site-functions/_pipenv /usr/share/zsh/site-functions/_pipenv
 	pip install --user --upgrade pip
 	pip install --user $(PIP_PKGS)
 	rm -fr get-pip.py
+
+pipinstall: ## Install python packages
+	pip install --user $(PIP_PKGS)
 
 pipinstallarch: ## Install python packages
 	$(PACMAN) python-pip python-pipenv python-pdm
