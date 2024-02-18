@@ -1254,6 +1254,7 @@ ruby-time
 ruby-tmpdir
 ruby-uri
 rubygems
+ruff
 runc
 rust
 rxvt-unicode
