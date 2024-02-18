@@ -486,47 +486,10 @@ You can make install from here
 	yay -S terraformer
 	yay -S yay
 
-##### Install using pip
+##### Install using python package
 
-	mkdir -p ${HOME}/.local
-	curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-	python get-pip.py --user
-	pip install --user --upgrade pip
-	pip install --user awscli
-	pip install --user cheat
-	pip install --user diagrams
-	pip install --user eralchemy
-	pip install --user faker
-	pip install --user graph-cli
-	pip install --user importmagic
-	pip install --user ipywidgets
-	pip install --user jupyter
-	pip install --user jupyterlab
-	pip install --user jupyterthemes
-	pip install --user litecli
-	pip install --user mps-youtube
-	pip install --user mycli
-	pip install --user neovim
-	pip install --user nose
-	pip install --user opencv-python
-	pip install --user pgcli
-	pip install --user pre-commit
-	pip install --user progressbar2
-	pip install --user psycopg2-binary
-	pip install --user py-spy
-	pip install --user pydoc_utils
-	pip install --user ranger-fm
-	pip install --user rope
-	pip install --user rtv
-	pip install --user seaborn
-	pip install --user speedtest-cli
-	pip install --user streamlink
-	pip install --user termdown
-	pip install --user tldr
-	pip install --user tmuxp
-	pip install --user trash-cli
-	pip install --user truffleHog
-	pip install --user youtube-dl
+	sudo pacman -S python-pip python-pipenv python-pdm python-seaborn python-ipywidgets python-jupyter-client
+	sudo pacman -S python-prompt_toolkit python-faker python-matplotlib python-nose python-pandas
 
 #### Install using golang
 
