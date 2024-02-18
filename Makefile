@@ -16,25 +16,22 @@ PACKAGES	+= gpaste optipng arch-install-scripts pandoc jq pkgstats ruby highligh
 PACKAGES	+= texlive-langjapanese tokei texlive-latexextra ctags hdparm eog curl parallel npm yq ansible
 PACKAGES	+= typescript llvm llvm-libs lldb tree w3m whois csvkit pass zsh-syntax-highlighting shellcheck
 PACKAGES	+= bash-completion mathjax expect obs-studio cscope postgresql-libs pdfgrep gnu-netcat cmatrix btop
-PACKAGES	+= jpegoptim nethogs mlocate pacman-contrib x11-ssh-askpass libreoffice-fresh-ja python-prompt_toolkit
+PACKAGES	+= jpegoptim nethogs mlocate pacman-contrib x11-ssh-askpass libreoffice-fresh-ja tldr streamlink
 PACKAGES	+= jhead peek ncdu gnome-screenshot sshfs fping syncthing terraform bat lshw xdotool sshuttle packer 
 PACKAGES	+= ripgrep stunnel vimiv adapta-gtk-theme gnome-tweaks firejail opencv hexedit discord pv perl-net-ip
 PACKAGES	+= smartmontools gnome-logs wireshark-cli wl-clipboard lsof mapnik editorconfig-core-c watchexec
 PACKAGES	+= gtop gopls convmv mpv browserpass-firefox man-db baobab ioping ruby-irb mkcert findomain pyenv
 PACKAGES	+= guetzli fabric detox usleep libvterm bind asunder lame git-lfs hex miller bash-language-server
 PACKAGES	+= diffoscope dust rbw eza sslscan abiword pyright miniserve fdupes deno serverless mold fx httpie
-PACKAGES	+= gron typescript-language-server dateutils time xsv rust git-delta zellij jc ruff
+PACKAGES	+= gron typescript-language-server dateutils time xsv rust git-delta zellij jc ruff speedtest-cli
+
+PIP_PKGS	:= python-pip python-pipenv python-pdm python-seaborn python-ipywidgets python-jupyter-client
+PIP_PKGS	+= python-prompt_toolkit python-faker python-matplotlib python-nose python-pandas
 
 NODE_PKGS	:= babel-eslint cloc firebase-tools now mermaid mermaid.cli parcel-bundler
 NODE_PKGS	+= dockerfile-language-server-nodejs eslint eslint-cli eslint-config-vue netlify-cli
 NODE_PKGS	+= eslint-plugin-react eslint-plugin-vue@next expo-cli fx heroku ngrok prettier
 NODE_PKGS	+= indium intelephense logo.svg @marp-team/marp-cli jshint
-
-PIP_PKGS	:= ansible-lint cheat chromedriver-binary diagrams zappa truffleHog trash-cli
-PIP_PKGS	+= faker gif-for-cli graph-cli importmagic ipywidgets pre-commit termdown
-PIP_PKGS	+= jupyter jupyterlab jupyterthemes litecli matplotlib neovim nose pandas 
-PIP_PKGS	+= progressbar2 psycopg2-binary py-spy pydantic pydoc_utils redis tldr
-PIP_PKGS	+= rtv seaborn selenium speedtest-cli streamlink requests_mock
 
 PACMAN		:= sudo pacman -S 
 SYSTEMD_ENABLE	:= sudo systemctl --now enable
@@ -90,24 +87,13 @@ install: ## Install arch linux packages using pacman
 	$(PACMAN) pkgfile
 	sudo pkgfile --update
 
-pipinstallocal: ${HOME}/.local ## Install pip packages from source code
-	curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-	python ${PWD}/get-pip.py --user
-	sudo ln -vsf ${PWD}/usr/share/zsh/site-functions/_pipenv /usr/share/zsh/site-functions/_pipenv
-	pip install --user --upgrade pip
-	pip install --user $(PIP_PKGS)
-	rm -fr get-pip.py
-
-pipinstall: ## Install python packages
-	pip install --user $(PIP_PKGS)
-
-pipinstallarch: ## Install python packages
-	$(PACMAN) python-pip python-pipenv python-pdm
-
 rye: ## Install rye and setup
 	$(PACMAN) rye
 	mkdir ~/.zfunc
 	rye self completion -s zsh > ~/.zfunc/_rye
+
+pipinstall: ## Install python packages
+	$(PACMAN) $(PIP_PKGS)
 
 goinstall: ${HOME}/.local ## Install go packages
 	go install golang.org/x/tools/gopls@latest
@@ -579,13 +565,6 @@ pipbackup: ## Backup python packages
 	mkdir -p ${PWD}/archlinux
 	pip freeze > ${PWD}/archlinux/requirements.txt
 
-piprecover: ## Recover python packages
-	mkdir -p ${PWD}/archlinux
-	pip install --user -r ${PWD}/archlinux/requirements.txt
-
-pipupdate: ## Update python packages
-	pip list --user | cut -d" " -f 1 | tail -n +3 | xargs pip install -U --user
-
 rustupdate: ## Update rust packages
 	cargo install-update -a
 
@@ -602,13 +581,13 @@ docker_image: docker
 
 testbackup: docker_image ## Test this Makefile with mount backup directory
 	docker run -it --name make$@ -v /home/${USER}/backup:${HOME}/backup:cached --name makefiletest -d dotfiles:latest /bin/bash
-	for target in install init neomutt aur pipinstallarch goinstall nodeinstall; do
+	for target in install init neomutt aur pipinstall goinstall nodeinstall; do
 		docker exec -it make$@ sh -c "cd ${PWD}; make $${target}"
 	done
 
 test: docker_image ## Test this Makefile with docker without backup directory
 	docker run -it --name make$@ -d dotfiles:latest /bin/bash
-	for target in install init neomutt aur pipinstallarch goinstall nodeinstall; do
+	for target in install init neomutt aur pipinstall goinstall nodeinstall; do
 		docker exec -it make$@ sh -c "cd ${PWD}; make $${target}"
 	done
 
@@ -618,10 +597,10 @@ testpath: ## Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: dconfsetting rclone gnupg ssh install init keyring urxvt xterm termite yay tlp pipewire-pulse ttf-cica dnsmasq goinstall ibusmozc neomutt docker lvfs toggle aur beekeeper kind gtk-theme chrome rye pipinstallarch
+allinstall: dconfsetting rclone gnupg ssh install init keyring urxvt xterm termite yay tlp pipewire-pulse ttf-cica dnsmasq goinstall ibusmozc neomutt docker lvfs toggle aur beekeeper kind gtk-theme chrome rye pipinstall
 
 nextinstall: mysql mycli pgcli nodeinstall rubygem rbenv rustinstall postgresql zeal gcloud awsv2 eralchemy mpsyt gh
 
-allupdate: update pipupdate rustupdate goinstall yarnupdate
+allupdate: update rustupdate goinstall yarnupdate
 
 allbackup: backup pipbackup
