@@ -288,16 +288,16 @@ remotedesktop: ## Install remotedesktop
 
 eralchemy: ## Install eralchemy
 	sudo pacman -S graphviz
-	pip install --user $@
+	yay -S $@
 
 mycli: ## Init mycli
 	mkdir -p ${HOME}/backup/$@
-	pip install --user $@
+	yay -S $@
 	ln -vsf ${HOME}{/backup/$@,}/.$@-history
 
 pgcli: ## Init pgcli
 	mkdir -p ${HOME}/backup
-	pip install --user $@
+	yay -S $@
 	test -L ${HOME}/.config/pgcli || rm -rf ${HOME}/.config/pgcli
 	ln -vsfn ${HOME}/{backup,.config}/$@
 
@@ -341,12 +341,6 @@ dart: ## Install dart and language server
 flutter: ## Install flutter
 	mkdir -p ~/src/github.com/$@
 	wget -O- $(FLUTTER_URL) | tar -C ~/src/github.com/$@ xf-
-
-mpsyt: ## Install and deploy mps-youtube
-	pip install --user mps-youtube youtube-dl
-	mkdir -p ${HOME}/.config/mps-youtube
-	test -L ${HOME}/.config/mps-youtube/playlists || rm -rf ${HOME}/.config/mps-youtube/playlists
-	ln -vsfn ${HOME}/backup/youtube/playlists ${HOME}/.config/mps-youtube/playlists
 
 spotify: ## Install spotify
 	gpg --keyserver hkp://keyserver.ubuntu.com --receive-keys 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
@@ -417,20 +411,17 @@ toggle: ## Prepare command that toggle between emacs and browser
 	sudo install ${PWD}/.$@.sh /usr/local/bin/$@
 
 aws: ${HOME}/.local ## Init aws cli
-	pip install --user awscli
+	$(PACMAN) aws-cli
 	ln -vsfn {${PWD},${HOME}}/.$@
 
 awsv2: ## Init aws cli version 2
-	curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-	unzip awscliv2.zip
-	sudo ./aws/install
+	$(PACMAN) aws-cli-v2
 	test -L ${HOME}/.aws || rm -rf ${HOME}/.aws
 	ln -vsfn ${PWD}/.aws ${HOME}/.aws
-	rm -fr awscliv2.zip aws
-	pip install --user awslogs
+	yay -S awslogs
 
 tmuxp: ${HOME}/.local ## Install tmuxp
-	pip install --user $@
+	$(PACMAN) $@
 	sudo ln -vsf {${PWD},${HOME}}/.config/main.yaml
 
 roswell: ## Install ros and lem
@@ -483,7 +474,7 @@ mongodb: ## Mongodb initial setup
 	$(SYSTEMD_ENABLE) $@.service
 
 gnuglobal: ${HOME}/.local ## Install gnu global
-	pip install --user pygments
+	$(PACMAN) python-pygments
 	yay -S global
 
 .ONESHELL:
