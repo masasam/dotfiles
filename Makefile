@@ -589,7 +589,7 @@ testpath: ## Echo PATH
 
 allinstall: dconfsetting rclone gnupg ssh install init keyring urxvt xterm termite yay tlp pipewire-pulse ttf-cica dnsmasq goinstall ibusmozc neomutt docker lvfs toggle aur beekeeper kind gtk-theme chrome rye pipinstall
 
-nextinstall: mysql mycli pgcli nodeinstall rubygem rbenv rustinstall postgresql zeal gcloud awsv2 eralchemy mpsyt gh
+nextinstall: mysql mycli pgcli nodeinstall rubygem rbenv rustinstall postgresql zeal gcloud awsv2 eralchemy gh
 
 allupdate: update rustupdate goinstall yarnupdate
 
