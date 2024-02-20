@@ -169,7 +169,7 @@ Install archlinux
 	setfont solar24x32.psfu.gz
 	gdisk /dev/nvme0n1
 
-clear the partition
+Clear the partition
 
 	Command (? for help): o
 
@@ -337,13 +337,13 @@ Audio setting
 	exit
 	reboot
 
-for thinkpad x1 carbon gen10
+For thinkpad x1 carbon gen10
 
 	pacman -S sof-firmware fprintd
 
 #### Login with ${USER} to arrange home directory
 
-turn off autosuspend at config
+Turn off autosuspend at config
 
 	urxvt -fn "xft:monospace-18" -fg white -bg black
 	sudo pacman -S xdg-user-dirs
@@ -467,23 +467,16 @@ You can make install from here
 #### Install using yay
 
 	yay -S beekeeper-studio-bin
-	yay -S drone-cli
+	yay -S csvlens
+	yay -S downgrade
 	yay -S git-secrets
 	yay -S global
-	yay -S goobook-git
 	yay -S ibus-mozc
-	yay -S mozc
-	yay -S nkf
 	yay -S nvm
-	yay -S pencil
-	yay -S rbenv
 	yay -S rgxg
-	yay -S ripgrep-all
 	yay -S rtags
-	yay -S ruby-build
-	yay -S screenkey
 	yay -S slack-desktop
-	yay -S terraformer
+	yay -S zoom
 	yay -S yay
 
 ##### Install using python package
@@ -507,7 +500,6 @@ You can make install from here
 	mkdir -p ${HOME}/.node_modules
 	yarn global add cloc
 	yarn global add dockerfile-language-server-nodejs
-	yarn global add esbuild-linux-64
 	yarn global add expo-cli
 	yarn global add firebase-tools
 	yarn global add fx
