@@ -562,7 +562,7 @@ minikube with kvm2
 
 	yay -S rbenv
 	yay -S ruby-build
-	rbenv install 2.5.1
+	rbenv install 3.1.4
 
 #### Install rust and language server
 
