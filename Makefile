@@ -499,7 +499,7 @@ screenkey: ## Init screenkey
 rbenv: ## Install rvenv ruby-build
 	yay -S $@
 	yay -S ruby-build
-	$@ install 2.7.2
+	$@ install 3.1.4
 	$@ rehash
 	gem install bundle
 
@@ -525,12 +525,11 @@ rails: rubygem rbenv ## Create rails project from scratch
 	  export PATH="${RBENV_ROOT}/bin:${PATH}"
 	  eval "$(rbenv init -)"
 	fi
-	rbenv global 2.7.2
 	rbenv rehash
 	mkdir -p ${HOME}/src/github.com/masasam/$@; cd $$_
-	rbenv local 2.7.2
+	rbenv local 3.1.4
 	bundle init
-	echo "gem '$@', '~> 6.0.3.3'" >> Gemfile
+	echo "gem '$@', '~> 7.1.3'" >> Gemfile
 	bundle install --path vendor/bundle
 	bundle exec $@ new . --database=mysql --skip-test --skip-turbolinks
 	bundle exec $@ webpacker:install
