@@ -86,7 +86,7 @@ jsonschema-specifications==2023.12.1
 jupyter_client==8.6.0
 jupyter_core==5.7.1
 kiwisolver==1.4.5
-leather==0.3.4
+leather==0.4.0
 lensfun==0.3.4
 lexicon==2.0.1
 LibAppArmor==3.1.7
@@ -166,7 +166,7 @@ ruamel.yaml==0.17.40
 ruamel.yaml.clib==0.2.8
 scour==0.38.2
 seaborn==0.12.2
-shellingham==1.5.0.post1
+shellingham==1.5.4
 shtab==1.6.5
 simplejson==3.19.2
 six==1.16.0

@@ -859,6 +859,7 @@ libxv
 libxxf86vm
 libyaml
 libyuv
+libzip
 libzmf
 licenses
 lilv
@@ -989,6 +990,7 @@ perl-io-tty
 perl-mailtools
 perl-net-ip
 perl-timedate
+php
 pinentry
 pipewire
 pipewire-audio
