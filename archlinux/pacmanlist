@@ -956,6 +956,7 @@ openmpi
 openpmix
 openssh
 openssl
+openucx
 optipng
 opus
 orc
