@@ -9,7 +9,9 @@ mysql-clients80
 mysql80
 nvm
 pscale-cli
+rbenv
 rgxg
+ruby-build
 slack-desktop
 termite
 trdsql-bin
