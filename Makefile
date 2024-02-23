@@ -107,12 +107,12 @@ goinstall: ${HOME}/.local ## Install go packages
 nodeinstall: ## Install node global packages
 	mkdir -p ${HOME}/.config/yarn/global
 	ln -vsf ${PWD}/archlinux/package.json ${HOME}/.config/yarn/global/package.json
-	sudo pacman -S yarn
+	$(PACMAN) yarn
 	mkdir -p ${HOME}/.node_modules
 	for pkg in $(NODE_PKGS); do yarn global add $$pkg; done
 
 rustinstall: ## Install rust and rust language server
-	sudo pacman -S rustup
+	$(PACMAN) rustup
 	rustup default stable
 	rustup component add rls rust-analysis rust-src
 
@@ -217,7 +217,7 @@ ttf-cica: ## Install Cica font
 	yay -S $@
 
 dconfsetting: # Initial dconf setting
-	sudo pacman -S dconf-editor
+	$(PACMAN) dconf-editor
 	dconf write /org/gnome/desktop/input-sources/xkb-options "['ctrl:nocaps']"
 	dconf write /org/gnome/desktop/interface/gtk-theme "'Adwaita-dark'"
 	dconf write /org/gnome/desktop/interface/gtk-key-theme "'Emacs'"
@@ -289,7 +289,7 @@ remotedesktop: ## Install remotedesktop
 	$(PACMAN) remmina freerdp libvncserver
 
 eralchemy: ## Install eralchemy
-	sudo pacman -S graphviz
+	$(PACMAN) graphviz
 	yay -S $@
 
 mycli: ## Init mycli
@@ -355,7 +355,7 @@ sxiv: ## Init sxiv
 
 zeal: ## Deploy zeal config and docsets
 	yay -S $@
-	sudo pacman -S qt5-styleplugins qt5ct
+	$(PACMAN) qt5-styleplugins qt5ct
 	sudo ln -vsf ${PWD}/etc/environment /etc/environment
 	mkdir -p ${HOME}/.config/Zeal
 	ln -vsf {${PWD},${HOME}}/.config/Zeal/Zeal.conf
@@ -482,7 +482,7 @@ gnuglobal: ${HOME}/.local ## Install gnu global
 .ONESHELL:
 SHELL = /bin/bash
 elixir-ls: ## Install elixir-ls(Recompile if the version of elixir changes)
-	sudo pacman -S elixir
+	$(PACMAN) elixir
 	git clone git@github.com:JakeBecker/elixir-ls.git ${HOME}/src/github.com/JakeBecker/$@
 	cd $$_ && mkdir rel
 	mix deps.get && mix compile
