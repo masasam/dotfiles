@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "@marp-team/marp-cli": "^3.4.0",
+    "babel-eslint": "^10.1.0",
+    "cloc": "^2.0.0-cloc",
+    "dockerfile-language-server-nodejs": "^0.11.0",
+    "eslint": "^8.56.0",
+    "eslint-cli": "^1.1.1",
+    "eslint-config-vue": "^2.0.2",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-vue": "^7.0.0-beta.4",
+    "expo-cli": "^6.3.10",
+    "firebase-tools": "^13.3.0",
+    "fx": "^31.0.0",
+    "indium": "^5.0.0",
+    "intelephense": "^1.10.2",
+    "jshint": "^2.13.6",
+    "logo.svg": "^1.0.1",
+    "mermaid": "^10.8.0",
+    "mermaid.cli": "^0.5.1",
+    "netlify-cli": "^17.16.4",
+    "ngrok": "^5.0.0-beta.2",
+    "now": "^21.0.1",
+    "parcel-bundler": "^1.12.5",
+    "prettier": "^3.2.5"
+  }
+}
