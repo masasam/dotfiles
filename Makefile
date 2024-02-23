@@ -104,7 +104,7 @@ goinstall: ${HOME}/.local ## Install go packages
 	go install github.com/jmhodges/jsonpp@latest
 	go install github.com/mithrandie/csvq@latest
 
-nodeinstall: ## Install node packages
+nodeinstall: ## Install node global packages
 	mkdir -p ${HOME}/.config/yarn/global
 	ln -vsf ${PWD}/archlinux/package.json ${HOME}/.config/yarn/global/package.json
 	sudo pacman -S yarn
