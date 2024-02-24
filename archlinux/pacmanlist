@@ -590,6 +590,14 @@ libavc1394
 libavif
 libb2
 libblockdev
+libblockdev-crypto
+libblockdev-fs
+libblockdev-loop
+libblockdev-mdraid
+libblockdev-nvme
+libblockdev-part
+libblockdev-swap
+libblockdev-utils
 libbluray
 libbpf
 libbs2b

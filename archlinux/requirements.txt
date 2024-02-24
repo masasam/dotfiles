@@ -60,7 +60,7 @@ google-api-python-client==2.111.0
 google-auth==2.28.0
 google-auth-httplib2==0.2.0
 googleapis-common-protos==1.62.0
-greenlet==3.0.1
+greenlet==3.0.3
 html2text==2020.1.16
 httpie==3.2.1
 httplib2==0.22.0
