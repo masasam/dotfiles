@@ -370,7 +370,7 @@ yay: ## Install yay using yay
 	yay -S $@
 
 aur: ## Install arch linux AUR packages using yay
-	yay -S downgrade git-secrets nvm pscale-cli rgxg slack-desktop trdsql-bin zoom csvlens
+	yay -S csvlens downgrade git-secrets nvm pscale-cli rgxg slack-desktop trdsql-bin tree-sitter-rust zoom
 
 sequeler: ## Install gui database tools
 	yay -S $@-git
