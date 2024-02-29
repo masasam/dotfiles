@@ -112,7 +112,7 @@ openpyxl==3.1.2
 ordered-set==4.1.0
 packaging==23.2
 pandas==1.5.3
-paramiko==2.11.1
+paramiko==3.4.0
 parsedatetime==2.6
 parso==0.8.3
 pdm==2.12.4
