@@ -4,8 +4,8 @@ agate-excel==0.4.1
 agate-sql==0.7.2
 alabaster==0.7.16
 annotated-types==0.6.0
-ansible==9.2.0
-ansible-core==2.16.3
+ansible==9.3.0
+ansible-core==2.16.4
 apparmor==3.1.7
 appdirs==1.4.4
 argcomplete==2.0.0
@@ -71,7 +71,7 @@ inflect==7.0.0
 iniconfig==2.0.0
 installer==0.7.0
 invoke==2.2.0
-ipykernel==6.29.2
+ipykernel==6.29.3
 ipython==8.22.1
 ipywidgets==8.1.2
 isodate==0.6.1
@@ -133,7 +133,7 @@ pyasn1==0.5.0
 pyasn1_modules==0.3.0
 pycairo==1.26.0
 pycparser==2.21
-pydantic==2.6.2
+pydantic==2.6.3
 pydantic_core==2.16.3
 Pygments==2.17.2
 PyGObject==3.46.0
@@ -159,7 +159,7 @@ referencing==0.33.0
 requests==2.31.0
 requests-toolbelt==1.0.0
 resolvelib==1.0.1
-rich==13.7.0
+rich==13.7.1
 rpds-py==0.17.1
 rsa==4.9
 ruamel.yaml==0.17.40
@@ -193,12 +193,12 @@ tldr==3.2.0
 tlsh==4.5.0
 tomli==2.0.1
 tomli_w==1.0.0
-tomlkit==0.12.3
+tomlkit==0.12.4
 tornado==6.3.2
 traitlets==5.14.1
-trove-classifiers==2024.2.2
+trove-classifiers==2024.2.28
 truststore==0.8.0
-typing_extensions==4.9.0
+typing_extensions==4.10.0
 uc-micro-py==1.0.3
 unearth==0.14.0
 uritemplate==4.1.1
