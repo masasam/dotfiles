@@ -597,7 +597,6 @@ libblockdev-mdraid
 libblockdev-nvme
 libblockdev-part
 libblockdev-swap
-libblockdev-utils
 libbluray
 libbpf
 libbs2b
