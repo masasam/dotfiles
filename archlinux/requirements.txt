@@ -57,7 +57,7 @@ future==0.18.3
 goobook==3.5.2
 google-api-core==2.15.0
 google-api-python-client==2.111.0
-google-auth==2.28.0
+google-auth==2.28.1
 google-auth-httplib2==0.2.0
 googleapis-common-protos==1.62.0
 greenlet==3.0.3
@@ -149,7 +149,7 @@ pytest==7.4.4
 python-dateutil==2.9.0
 python-dotenv==1.0.1
 python-magic==0.4.27
-python-slugify==8.0.3
+python-slugify==8.0.4
 pytimeparse==1.1.8
 pytz==2024.1
 pyxdg==0.28

@@ -294,6 +294,7 @@ haskell-asn1-types
 haskell-assoc
 haskell-async
 haskell-attoparsec
+haskell-attoparsec-aeson
 haskell-attoparsec-iso8601
 haskell-auto-update
 haskell-base-compat
