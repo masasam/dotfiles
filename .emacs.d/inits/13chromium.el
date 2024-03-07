@@ -27,6 +27,30 @@
 	 (concat "https://translate.google.com/?source=gtx#ja/en/" (url-hexify-string string)))))))
 
 
+(defun chrome-rails (input)
+  "Open rails development server with chromium."
+(interactive (list (read-from-minibuffer "http://127.0.0.1:8000/" nil nil nil nil)))
+  (browse-url (concat "http://127.0.0.1:3000/" input)))
+
+
+(defun chrome-django (input)
+  "Open django development server with chromium."
+  (interactive (list (read-from-minibuffer "http://127.0.0.1:8000/" nil nil nil nil)))
+  (browse-url (concat "http://127.0.0.1:8000/" input)))
+
+
+(defun chrome-django-admin ()
+  "Open django development admin server with chromium."
+  (interactive)
+  (browse-url "http://127.0.0.1:8000/admin/"))
+
+
+(defun chrome-js (input)
+  "Open js development page with chromium."
+  (interactive (list (read-from-minibuffer "http://127.0.0.1:8000/" nil nil nil nil)))
+  (browse-url (concat "http://127.0.0.1:8080/" input)))
+
+
 (defun chrome-calendar ()
   "Open google-calendar with chromium."
   (interactive)
@@ -97,35 +121,5 @@
   "Open new keep with chromium."
   (interactive)
   (browse-url "https://keep.new"))
-
-
-(defun chrome-minikube ()
-  "Open minikube service server with chromium."
-  (interactive)
-  (browse-url "http://localhost:8080"))
-
-
-(defun chrome-rails ()
-  "Open rails development server with chromium."
-  (interactive)
-  (browse-url "http://localhost:3000"))
-
-
-(defun chrome-django ()
-  "Open django development server with chromium."
-  (interactive)
-  (browse-url "http://localhost:8000"))
-
-
-(defun chrome-django-admin ()
-  "Open django development admin server with chromium."
-  (interactive)
-  (browse-url "http://localhost:8000/admin/"))
-
-
-(defun chrome-js ()
-  "Open js development page with chromium."
-  (interactive)
-  (browse-url "http://localhost:8080/"))
 
 ;;; 13chromium.el ends here
