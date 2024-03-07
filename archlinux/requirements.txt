@@ -91,7 +91,7 @@ lensfun==0.3.4
 lexicon==2.0.1
 LibAppArmor==3.1.7
 libarchive-c==4.0
-lit==16.0.6.dev0
+lit==17.0.6.dev0
 lockfile==0.12.2
 lxml==4.9.2
 markdown-it-py==3.0.0
