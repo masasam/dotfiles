@@ -78,6 +78,12 @@
 (defun chrome-github ()
   "Open github with chromium."
   (interactive)
+  (browse-url "https://github.com/masasam"))
+
+
+(defun chrome-github-new ()
+  "Open github with chromium."
+  (interactive)
   (browse-url "https://repo.new/"))
 
 
