@@ -29,7 +29,7 @@ colorama==0.4.6
 comm==0.2.1
 contourpy==1.2.0
 coverage==7.4.1
-cryptography==41.0.7
+cryptography==42.0.5
 cssselect==1.2.0
 csvkit==1.4.0
 cycler==0.12.1
@@ -39,7 +39,7 @@ decorator==5.1.1
 defusedxml==0.7.1
 dep-logic==0.2.0
 Deprecated==1.2.14
-diffoscope==259
+diffoscope==260
 distlib==0.3.8
 distro==1.9.0
 docutils==0.20.1
@@ -72,7 +72,7 @@ iniconfig==2.0.0
 installer==0.7.0
 invoke==2.2.0
 ipykernel==6.29.3
-ipython==8.22.1
+ipython==8.22.2
 ipywidgets==8.1.2
 isodate==0.6.1
 jaraco.context==4.3.0
