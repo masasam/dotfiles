@@ -1244,8 +1244,10 @@ qt5-webchannel
 qt5-webengine
 qt5-x11extras
 qt6-base
+qt6-declarative
 qt6-svg
 qt6-translations
+qt6-wayland
 ragel
 rapidjson
 raptor
@@ -1314,7 +1316,7 @@ ruby-uri
 rubygems
 ruff
 runc
-rust
+rustup
 rxvt-unicode
 rxvt-unicode-terminfo
 rye
@@ -1453,6 +1455,7 @@ x264
 x265
 xapian-core
 xbitmaps
+xcb-imdkit
 xcb-proto
 xcb-util
 xcb-util-cursor
