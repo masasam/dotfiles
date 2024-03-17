@@ -46,12 +46,12 @@ docutils==0.20.1
 et-xmlfile==1.1.0
 executing==2.0.0
 fabric==3.2.2
-Faker==24.0.0
+Faker==24.1.0
 fastjsonschema==2.19.1
 filelock==3.13.1
 findpython==0.4.1
 fluidity-sm==0.2.1
-fonttools==4.49.0
+fonttools==4.50.0
 furo==2024.1.29
 future==0.18.3
 goobook==3.5.2
