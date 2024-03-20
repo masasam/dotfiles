@@ -11,6 +11,10 @@
   (interactive)
   (kill-new (car (cdr (reverse (split-string default-directory "/"))))))
 
+(defun dired-directory ()
+  (interactive)
+  (message default-directory))
+
 ;; Dired files deleted by trash and no ask recursive
 (setq delete-by-moving-to-trash t
       dired-recursive-copies 'always
