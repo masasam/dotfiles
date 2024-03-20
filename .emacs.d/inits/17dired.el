@@ -11,7 +11,7 @@
   (interactive)
   (kill-new (car (cdr (reverse (split-string default-directory "/"))))))
 
-(defun dired-directory ()
+(defun dired-show-directory ()
   (interactive)
   (message default-directory))
 
