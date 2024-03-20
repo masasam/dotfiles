@@ -15,9 +15,7 @@
 		" x86_64 ArchLinux GTK " gtk-version-string))
   ;; Set the banner
   (setq dashboard-startup-banner 'logo)
-  (setq dashboard-items '((recents   . 5)
-                             (bookmarks . 5)
-                             (agenda    . 5)))
+  (setq dashboard-items '((recents   . 5)))
   (dashboard-setup-startup-hook)
   (global-page-break-lines-mode)
   (setq dashboard-page-separator "\n\f\f\n"))
