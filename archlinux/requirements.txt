@@ -57,9 +57,9 @@ future==0.18.3
 goobook==3.5.2
 google-api-core==2.17.1
 google-api-python-client==2.122.0
-google-auth==2.28.1
+google-auth==2.28.2
 google-auth-httplib2==0.2.0
-googleapis-common-protos==1.62.0
+googleapis-common-protos==1.63.0
 greenlet==3.0.3
 html2text==2020.1.16
 httpie==3.2.1
@@ -90,7 +90,7 @@ leather==0.4.0
 lensfun==0.3.4
 lexicon==2.0.1
 LibAppArmor==3.1.7
-libarchive-c==4.0
+libarchive-c==5.1
 lit==17.0.6.dev0
 lockfile==0.12.2
 lxml==5.1.0
@@ -145,7 +145,7 @@ pyproject_hooks==1.0.0
 pyrsistent==0.19.3
 pyserial==3.5
 PySocks==1.7.1
-pytest==7.4.4
+pytest==8.1.1
 python-dateutil==2.9.0
 python-dotenv==1.0.1
 python-magic==0.4.27
