@@ -94,6 +94,7 @@ crypto++
 cryptsetup
 cscope
 csvkit
+csvlens
 ctags
 cups
 cups-filters
@@ -1042,6 +1043,7 @@ python-agate-dbf
 python-agate-excel
 python-agate-sql
 python-annotated-types
+python-anyio
 python-appdirs
 python-argcomplete
 python-asttokens
@@ -1092,8 +1094,11 @@ python-google-auth
 python-google-auth-httplib2
 python-googleapis-common-protos
 python-greenlet
+python-h11
 python-html2text
+python-httpcore
 python-httplib2
+python-httpx
 python-idna
 python-imagesize
 python-importlib-metadata
@@ -1189,6 +1194,7 @@ python-shtab
 python-simplejson
 python-six
 python-slugify
+python-sniffio
 python-snowballstemmer
 python-soupsieve
 python-sphinx

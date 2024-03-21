@@ -6,6 +6,7 @@ alabaster==0.7.16
 annotated-types==0.6.0
 ansible==9.3.0
 ansible-core==2.16.4
+anyio==4.3.0
 apparmor==3.1.7
 appdirs==1.4.4
 argcomplete==2.0.0
@@ -46,7 +47,7 @@ docutils==0.20.1
 et-xmlfile==1.1.0
 executing==2.0.0
 fabric==3.2.2
-Faker==24.1.0
+Faker==24.1.1
 fastjsonschema==2.19.1
 filelock==3.13.1
 findpython==0.4.1
@@ -61,9 +62,12 @@ google-auth==2.28.2
 google-auth-httplib2==0.2.0
 googleapis-common-protos==1.63.0
 greenlet==3.0.3
+h11==0.14.0
 html2text==2020.1.16
+httpcore==1.0.2
 httpie==3.2.1
 httplib2==0.22.0
+httpx==0.26.0
 idna==3.6
 imagesize==1.4.1
 importlib_metadata==5.1.0
@@ -170,6 +174,7 @@ shellingham==1.5.4
 shtab==1.6.5
 simplejson==3.19.2
 six==1.16.0
+sniffio==1.3.1
 snowballstemmer==2.2.0
 soupsieve==2.5
 speedtest-cli==2.1.3
@@ -200,7 +205,7 @@ trove-classifiers==2024.3.6
 truststore==0.8.0
 typing_extensions==4.10.0
 uc-micro-py==1.0.3
-unearth==0.14.0
+unearth==0.15.0
 uritemplate==4.1.1
 urllib3==1.26.18
 validate-pyproject==0.13.post1.dev0+gb752273.d20230520
