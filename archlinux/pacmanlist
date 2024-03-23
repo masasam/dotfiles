@@ -1038,6 +1038,7 @@ pwgen
 pyenv
 pyright
 python
+python-absl
 python-agate
 python-agate-dbf
 python-agate-excel

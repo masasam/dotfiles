@@ -1,3 +1,4 @@
+absl-py==2.1.0
 agate==1.9.1
 agate-dbf==0.2.3
 agate-excel==0.4.1
@@ -105,7 +106,7 @@ matplotlib-inline==0.1.6
 mdurl==0.1.2
 more-itertools==10.2.0
 msgpack==1.0.5
-multidict==6.0.4
+multidict==6.0.5
 nest_asyncio==1.5.9
 nftables==0.1
 nose==1.3.7
