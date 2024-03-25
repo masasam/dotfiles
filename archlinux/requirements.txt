@@ -48,7 +48,7 @@ docutils==0.20.1
 et-xmlfile==1.1.0
 executing==2.0.0
 fabric==3.2.2
-Faker==24.1.1
+Faker==24.2.0
 fastjsonschema==2.19.1
 filelock==3.13.1
 findpython==0.4.1
@@ -100,7 +100,7 @@ lit==17.0.6.dev0
 lockfile==0.12.2
 lxml==5.1.0
 markdown-it-py==3.0.0
-MarkupSafe==2.1.4
+MarkupSafe==2.1.5
 matplotlib==3.8.2
 matplotlib-inline==0.1.6
 mdurl==0.1.2
@@ -202,7 +202,7 @@ tomli_w==1.0.0
 tomlkit==0.12.4
 tornado==6.3.2
 traitlets==5.14.2
-trove-classifiers==2024.3.6
+trove-classifiers==2024.3.25
 truststore==0.8.0
 typing_extensions==4.10.0
 uc-micro-py==1.0.3
