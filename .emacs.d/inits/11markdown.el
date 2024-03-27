@@ -6,7 +6,7 @@
 (setq markdown-fontify-code-blocks-natively t)
 
 (add-hook 'markdown-mode-hook
-          '(lambda () (outline-minor-mode t)))
+          #'(lambda () (outline-minor-mode t)))
 
 
 (defun md2pdf ()
