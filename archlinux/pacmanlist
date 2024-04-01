@@ -689,6 +689,7 @@ libidn2
 libiec61883
 libimagequant
 libimobiledevice
+libimobiledevice-glue
 libinih
 libinput
 libisl
