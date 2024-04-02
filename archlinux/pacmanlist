@@ -1097,6 +1097,7 @@ python-google-auth-httplib2
 python-googleapis-common-protos
 python-greenlet
 python-h11
+python-hishel
 python-html2text
 python-httpcore
 python-httplib2
@@ -1147,6 +1148,7 @@ python-pandas
 python-paramiko
 python-parsedatetime
 python-parso
+python-pbs-installer
 python-pdm
 python-pdm-backend
 python-pexpect
@@ -1223,6 +1225,7 @@ python-tornado
 python-traitlets
 python-trove-classifiers
 python-truststore
+python-typeguard
 python-typing_extensions
 python-uc-micro-py
 python-unearth
