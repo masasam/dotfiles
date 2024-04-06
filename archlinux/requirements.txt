@@ -53,7 +53,7 @@ fastjsonschema==2.19.1
 filelock==3.13.3
 findpython==0.6.0
 fluidity-sm==0.2.1
-fonttools==4.50.0
+fonttools==4.51.0
 furo==2024.1.29
 future==0.18.3
 goobook==3.5.2
@@ -120,7 +120,7 @@ packaging==23.2
 pandas==1.5.3
 paramiko==3.4.0
 parsedatetime==2.6
-parso==0.8.3
+parso==0.8.4
 pbs-installer==2024.4.1
 pdm==2.13.2
 pdm-backend==2.1.8
