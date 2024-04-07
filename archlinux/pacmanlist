@@ -559,8 +559,6 @@ jemalloc
 jhead
 jpegoptim
 jq
-jre11-openjdk
-jre11-openjdk-headless
 js115
 json-c
 json-glib
