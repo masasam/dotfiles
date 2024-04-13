@@ -122,7 +122,7 @@ paramiko==3.4.0
 parsedatetime==2.6
 parso==0.8.4
 pbs-installer==2024.4.1
-pdm==2.13.2
+pdm==2.13.3
 pdm-backend==2.1.8
 pexpect==4.9.0
 pillow==10.2.0
