@@ -1198,6 +1198,7 @@ python-six
 python-slugify
 python-sniffio
 python-snowballstemmer
+python-socksio
 python-soupsieve
 python-sphinx
 python-sphinx-alabaster-theme
