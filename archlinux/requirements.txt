@@ -51,7 +51,7 @@ fabric==3.2.2
 Faker==24.4.0
 fastjsonschema==2.19.1
 filelock==3.13.3
-findpython==0.6.0
+findpython==0.6.1
 fluidity-sm==0.2.1
 fonttools==4.51.0
 furo==2024.1.29
@@ -210,7 +210,7 @@ truststore==0.8.0
 typeguard==4.2.1
 typing_extensions==4.10.0
 uc-micro-py==1.0.3
-unearth==0.15.1
+unearth==0.15.2
 uritemplate==4.1.1
 urllib3==1.26.18
 validate-pyproject==0.13.post1.dev0+gb752273.d20230520
@@ -221,6 +221,6 @@ wcwidth==0.2.13
 wrapt==1.16.0
 xlrd==2.0.1
 xmltodict==0.13.0
-yq==3.3.1
+yq==3.4.1
 zipp==3.17.0
 zstandard==0.22.0
