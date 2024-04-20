@@ -204,7 +204,7 @@ tomli==2.0.1
 tomli_w==1.0.0
 tomlkit==0.12.4
 tornado==6.3.2
-traitlets==5.14.2
+traitlets==5.14.3
 trove-classifiers==2024.3.29
 truststore==0.8.0
 typeguard==4.2.1
