@@ -79,6 +79,7 @@ clang
 clucene
 cmake
 cmatrix
+cmocka
 colord
 colord-gtk-common
 colord-gtk4
