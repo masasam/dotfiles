@@ -73,7 +73,7 @@ httpx==0.26.0
 idna==3.6
 imagesize==1.4.1
 importlib_metadata==5.1.0
-inflect==7.2.0
+inflect==7.2.1
 iniconfig==2.0.0
 installer==0.7.0
 invoke==2.2.0
@@ -140,8 +140,8 @@ pyasn1==0.5.0
 pyasn1_modules==0.3.0
 pycairo==1.26.0
 pycparser==2.22
-pydantic==2.7.0
-pydantic_core==2.18.1
+pydantic==2.7.1
+pydantic_core==2.18.2
 Pygments==2.17.2
 PyGObject==3.48.1
 PyICU==2.12
