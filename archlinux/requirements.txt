@@ -221,6 +221,6 @@ wcwidth==0.2.13
 wrapt==1.16.0
 xlrd==2.0.1
 xmltodict==0.13.0
-yq==3.4.1
+yq==3.4.2
 zipp==3.17.0
 zstandard==0.22.0
