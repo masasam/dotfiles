@@ -44,7 +44,7 @@ Deprecated==1.2.14
 diffoscope==265
 distlib==0.3.8
 distro==1.9.0
-docutils==0.21.1
+docutils==0.21.2
 et_xmlfile==1.1.0
 executing==2.0.0
 fabric==3.2.2
@@ -54,7 +54,7 @@ filelock==3.13.3
 findpython==0.6.1
 fluidity-sm==0.2.1
 fonttools==4.51.0
-furo==2024.1.29
+furo==2024.4.27
 future==1.0.0
 google-api-core==2.18.0
 google-api-python-client==2.123.0
@@ -182,7 +182,7 @@ snowballstemmer==2.2.0
 socksio==1.0.0
 soupsieve==2.5
 speedtest-cli==2.1.3
-Sphinx==7.2.6
+Sphinx==7.3.7
 sphinx_basic_ng==1.0.0b2
 sphinx_rtd_theme==1.3.0
 sphinxcontrib-applehelp==1.0.8
