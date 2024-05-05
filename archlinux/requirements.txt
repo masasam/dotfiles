@@ -19,7 +19,7 @@ Babel==2.14.0
 bcrypt==4.1.2
 beautifulsoup4==4.12.3
 blinker==1.7.0
-btrfsutil==6.8
+btrfsutil==6.8.1
 CacheControl==0.14.0
 cachetools==5.3.2
 certifi==2024.2.2
@@ -81,7 +81,7 @@ ipython==8.24.0
 ipywidgets==8.1.2
 isodate==0.6.1
 jaraco.context==4.3.0
-jaraco.functools==4.0.0
+jaraco.functools==4.0.1
 jaraco.text==3.12.0
 jc==1.25.1
 jedi==0.19.1
