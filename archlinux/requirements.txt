@@ -202,7 +202,7 @@ tldr==3.2.0
 tlsh==4.5.0
 tomli==2.0.1
 tomli_w==1.0.0
-tomlkit==0.12.4
+tomlkit==0.12.5
 tornado==6.4
 traitlets==5.14.3
 trove-classifiers==2024.4.10
