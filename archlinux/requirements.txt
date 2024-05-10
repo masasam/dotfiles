@@ -10,7 +10,7 @@ ansible-core==2.16.6
 anyio==4.3.0
 apparmor==3.1.7
 appdirs==1.4.4
-argcomplete==3.1.2.dev0+ga9059f3.d20240406
+argcomplete==3.1.2.dev0+ga9059f3.d20240510
 asciidoc==10.2.0
 asttokens==2.4.1
 attrs==23.2.1.dev0
@@ -31,7 +31,7 @@ colorama==0.4.6
 comm==0.2.2
 contourpy==1.2.1
 coverage==7.4.4
-cryptography==42.0.5
+cryptography==42.0.6
 cssselect==1.2.0
 csvkit==2.0.0
 cycler==0.12.1
@@ -41,14 +41,14 @@ decorator==5.1.1
 defusedxml==0.7.1
 dep-logic==0.2.0
 Deprecated==1.2.14
-diffoscope==265
+diffoscope==266
 distlib==0.3.8
 distro==1.9.0
 docutils==0.21.2
 et_xmlfile==1.1.0
 executing==2.0.0
 fabric==3.2.2
-Faker==24.11.0
+Faker==24.12.0
 fastjsonschema==2.19.1
 filelock==3.13.3
 findpython==0.6.1
