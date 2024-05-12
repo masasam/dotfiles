@@ -108,7 +108,6 @@ db5.3
 dbus
 dbus-broker
 dbus-broker-units
-dbus-python
 dconf
 dconf-editor
 debian-archive-keyring
@@ -1072,6 +1071,7 @@ python-cssselect
 python-cycler
 python-dateutil
 python-dbfread
+python-dbus
 python-decorator
 python-defusedxml
 python-dep-logic
