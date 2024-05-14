@@ -48,7 +48,7 @@ docutils==0.21.2
 et_xmlfile==1.1.0
 executing==2.0.0
 fabric==3.2.2
-Faker==24.13.0
+Faker==24.14.1
 fastjsonschema==2.19.1
 filelock==3.13.3
 findpython==0.6.1
@@ -120,7 +120,7 @@ pandas==1.5.3
 paramiko==3.4.0
 parsedatetime==2.6
 parso==0.8.4
-pbs-installer==2024.4.1
+pbs-installer==2024.4.24
 pdm==2.15.2
 pdm-backend==2.3.0
 pexpect==4.9.0
