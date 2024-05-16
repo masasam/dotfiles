@@ -30,7 +30,7 @@ click==8.1.7
 colorama==0.4.6
 comm==0.2.2
 contourpy==1.2.1
-coverage==7.4.4
+coverage==7.5.1
 cryptography==42.0.6
 cssselect==1.2.0
 csvkit==2.0.0
@@ -98,7 +98,7 @@ LibAppArmor==3.1.7
 libarchive-c==5.1
 lit==17.0.6.dev0
 lockfile==0.12.2
-lxml==5.1.0
+lxml==5.2.2
 markdown-it-py==3.0.0
 MarkupSafe==2.1.5
 matplotlib==3.8.3
