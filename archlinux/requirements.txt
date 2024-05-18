@@ -41,7 +41,7 @@ decorator==5.1.1
 defusedxml==0.7.1
 dep-logic==0.2.0
 Deprecated==1.2.14
-diffoscope==266
+diffoscope==267
 distlib==0.3.8
 distro==1.9.0
 docutils==0.21.2

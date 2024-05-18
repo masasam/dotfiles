@@ -14,7 +14,6 @@ ruby-build
 slack-desktop
 termite
 trdsql-bin
-tree-sitter-rust
 ttf-cica
 yay
 zoom
