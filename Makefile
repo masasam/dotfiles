@@ -35,7 +35,7 @@ NODE_PKGS	+= indium intelephense logo.svg @marp-team/marp-cli jshint
 
 PACMAN		:= sudo pacman -S 
 SYSTEMD_ENABLE	:= sudo systemctl --now enable
-FLUTTER_URL	:= https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.3.7-stable.tar.xz
+FLUTTER_URL	:= https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.22.0-stable.tar.xz
 
 .DEFAULT_GOAL := help
 .PHONY: all allinstall nextinstall allupdate allbackup
