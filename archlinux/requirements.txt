@@ -4,9 +4,9 @@ agate-dbf==0.2.3
 agate-excel==0.4.1
 agate-sql==0.7.2
 alabaster==0.7.16
-annotated-types==0.6.0
-ansible==9.5.1
-ansible-core==2.16.6
+annotated-types==0.7.0
+ansible==9.6.0
+ansible-core==2.17.0
 anyio==4.3.0
 apparmor==3.1.7
 appdirs==1.4.4
@@ -162,7 +162,7 @@ pyxdg==0.28
 PyYAML==6.0.1
 pyzmq==25.1.2
 referencing==0.33.0
-requests==2.32.0
+requests==2.32.2
 requests-toolbelt==1.0.0
 resolvelib==1.0.1
 rich==13.7.1
@@ -205,7 +205,7 @@ tomli_w==1.0.0
 tomlkit==0.12.5
 tornado==6.4
 traitlets==5.14.3
-trove-classifiers==2024.4.10
+trove-classifiers==2024.5.21
 truststore==0.9.1
 typeguard==4.2.1
 typing_extensions==4.11.0
