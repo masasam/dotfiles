@@ -5,8 +5,8 @@ agate-excel==0.4.1
 agate-sql==0.7.2
 alabaster==0.7.16
 annotated-types==0.7.0
-ansible==9.6.0
-ansible-core==2.17.0
+ansible==9.5.1
+ansible-core==2.16.6
 anyio==4.3.0
 apparmor==3.1.7
 appdirs==1.4.4
@@ -48,7 +48,7 @@ docutils==0.21.2
 et_xmlfile==1.1.0
 executing==2.0.0
 fabric==3.2.2
-Faker==24.14.1
+Faker==25.0.0
 fastjsonschema==2.19.1
 filelock==3.13.3
 findpython==0.6.1
@@ -88,7 +88,7 @@ jedi==0.19.1
 Jinja2==3.1.3
 jsonschema==4.21.1
 jsonschema-specifications==2023.12.1
-jupyter_client==8.6.1
+jupyter_client==8.6.2
 jupyter_core==5.7.2
 kiwisolver==1.4.5
 leather==0.4.0
@@ -205,7 +205,7 @@ tomli_w==1.0.0
 tomlkit==0.12.5
 tornado==6.4
 traitlets==5.14.3
-trove-classifiers==2024.5.21
+trove-classifiers==2024.5.23
 truststore==0.9.1
 typeguard==4.2.1
 typing_extensions==4.11.0
