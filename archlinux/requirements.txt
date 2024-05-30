@@ -162,7 +162,7 @@ pyxdg==0.28
 PyYAML==6.0.1
 pyzmq==25.1.2
 referencing==0.33.0
-requests==2.32.2
+requests==2.32.3
 requests-toolbelt==1.0.0
 resolvelib==1.0.1
 rich==13.7.1
