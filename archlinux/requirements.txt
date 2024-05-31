@@ -121,7 +121,7 @@ paramiko==3.4.0
 parsedatetime==2.6
 parso==0.8.4
 pbs-installer==2024.4.24
-pdm==2.15.3
+pdm==2.15.4
 pdm-backend==2.3.0
 pexpect==4.9.0
 pillow==10.3.0
@@ -139,8 +139,8 @@ pyasn1==0.5.1
 pyasn1_modules==0.3.0
 pycairo==1.26.0
 pycparser==2.22
-pydantic==2.7.1
-pydantic_core==2.18.2
+pydantic==2.7.2
+pydantic_core==2.18.3
 Pygments==2.17.2
 PyGObject==3.48.2
 PyICU==2.12
