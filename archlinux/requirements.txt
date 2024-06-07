@@ -210,7 +210,7 @@ truststore==0.9.1
 typeguard==4.2.1
 typing_extensions==4.12.1
 uc-micro-py==1.0.3
-unearth==0.15.3
+unearth==0.15.4
 uritemplate==4.1.1
 urllib3==1.26.18
 validate-pyproject==0.16
