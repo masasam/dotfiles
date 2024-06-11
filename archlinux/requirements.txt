@@ -129,7 +129,7 @@ pipenv==2024.0.0
 platformdirs==4.2.0
 pluggy==1.5.0
 ply==3.11
-prompt_toolkit==3.0.46
+prompt_toolkit==3.0.47
 protobuf==4.25.3
 psutil==5.9.8
 ptyprocess==0.7.0
