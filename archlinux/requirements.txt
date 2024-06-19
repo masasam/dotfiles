@@ -10,7 +10,7 @@ ansible-core==2.16.6
 anyio==4.4.0
 apparmor==3.1.7
 appdirs==1.4.4
-argcomplete==3.1.2.dev0+ga9059f3.d20240510
+argcomplete==3.1.3.dev0+g140fa51.d20240618
 asciidoc==10.2.0
 asttokens==2.4.1
 attrs==23.2.1.dev0
@@ -49,7 +49,7 @@ et_xmlfile==1.1.0
 executing==2.0.0
 fabric==3.2.2
 Faker==25.3.0
-fastjsonschema==2.19.1
+fastjsonschema==2.20.0
 filelock==3.13.3
 findpython==0.6.1
 fluidity-sm==0.2.1
@@ -82,7 +82,7 @@ ipywidgets==8.1.3
 isodate==0.6.1
 jaraco.context==4.3.0
 jaraco.functools==4.0.1
-jaraco.text==3.12.0
+jaraco.text==3.12.1
 jc==1.25.3
 jedi==0.19.1
 Jinja2==3.1.4
