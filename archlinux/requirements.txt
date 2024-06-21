@@ -207,7 +207,7 @@ tornado==6.4
 traitlets==5.14.3
 trove-classifiers==2024.5.23
 truststore==0.9.1
-typeguard==4.2.1
+typeguard==4.3.0
 typing_extensions==4.12.2
 uc-micro-py==1.0.3
 unearth==0.15.4
