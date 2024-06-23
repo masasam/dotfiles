@@ -63,6 +63,7 @@
   (package-install 'dash)
   (package-install 'dashboard)
   (package-install 'deadgrep)
+  (package-install 'difftastic)
   (package-install 'diff-hl)
   (package-install 'dirvish)
   (package-install 'docker)
