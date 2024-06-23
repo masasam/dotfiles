@@ -7,6 +7,8 @@
 ;; (load-theme 'material t)
 (load-theme 'dracula t)
 
+(setq inhibit-startup-buffer-menu t)
+
 ;; Change part of theme to your liking.
 ;; Investigate by changing 'M-x list-faces-display'
 (custom-set-faces '(cursor ((t (:background "#82c600")))))
