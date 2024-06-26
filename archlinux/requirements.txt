@@ -48,7 +48,7 @@ docutils==0.21.2
 et_xmlfile==1.1.0
 executing==2.0.0
 fabric==3.2.2
-Faker==25.3.0
+Faker==25.4.0
 fastjsonschema==2.20.0
 filelock==3.13.3
 findpython==0.6.1
@@ -101,7 +101,7 @@ lockfile==0.12.2
 lxml==5.2.2
 markdown-it-py==3.0.0
 MarkupSafe==2.1.5
-matplotlib==3.8.3
+matplotlib==3.8.4
 matplotlib-inline==0.1.7
 mdurl==0.1.2
 more-itertools==10.2.0
@@ -110,13 +110,13 @@ multidict==6.0.5
 nest_asyncio==1.6.0
 nftables==0.1
 nose==1.3.7
-numpy==1.26.4
+numpy==2.0.0
 oauth2client==4.1.3
 olefile==0.47
 openpyxl==3.1.3
 ordered-set==4.1.0
 packaging==24.0
-pandas==1.5.3
+pandas==2.2.2
 paramiko==3.4.0
 parsedatetime==2.6
 parso==0.8.4
