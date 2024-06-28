@@ -19,7 +19,7 @@ Babel==2.14.0
 bcrypt==4.1.3
 beautifulsoup4==4.12.3
 blinker==1.7.0
-btrfsutil==6.9
+btrfsutil==6.9.2
 CacheControl==0.14.0
 cachetools==5.3.2
 certifi==2024.6.2
@@ -48,7 +48,7 @@ docutils==0.21.2
 et_xmlfile==1.1.0
 executing==2.0.0
 fabric==3.2.2
-Faker==25.4.0
+Faker==25.6.0
 fastjsonschema==2.20.0
 filelock==3.13.3
 findpython==0.6.1
@@ -64,7 +64,7 @@ googleapis-common-protos==1.63.0
 greenlet==3.0.3
 h11==0.14.0
 hishel==0.0.27
-html2text==2020.1.16
+html2text==2024.2.26
 httpcore==1.0.5
 httpie==3.2.2
 httplib2==0.22.0
