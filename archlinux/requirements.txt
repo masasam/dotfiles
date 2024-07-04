@@ -48,7 +48,7 @@ docutils==0.21.2
 et_xmlfile==1.1.0
 executing==2.0.0
 fabric==3.2.2
-Faker==25.6.0
+Faker==25.7.0
 fastjsonschema==2.20.0
 filelock==3.13.3
 findpython==0.6.1
@@ -69,14 +69,14 @@ httpcore==1.0.5
 httpie==3.2.2
 httplib2==0.22.0
 httpx==0.27.0
-idna==3.6
+idna==3.7
 imagesize==1.4.1
 importlib_metadata==5.1.0
 inflect==7.2.1
 iniconfig==2.0.0
 installer==0.7.0
 invoke==2.2.0
-ipykernel==6.29.4
+ipykernel==6.29.5
 ipython==8.26.0
 ipywidgets==8.1.3
 isodate==0.6.1
@@ -124,9 +124,9 @@ pbs-installer==2024.4.24
 pdm==2.15.4
 pdm-backend==2.3.0
 pexpect==4.9.0
-pillow==10.3.0
+pillow==10.4.0
 pipenv==2024.0.1
-platformdirs==4.2.0
+platformdirs==4.2.2
 pluggy==1.5.0
 ply==3.11
 prompt_toolkit==3.0.47
