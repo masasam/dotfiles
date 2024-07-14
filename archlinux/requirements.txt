@@ -63,7 +63,7 @@ google-auth-httplib2==0.2.0
 googleapis-common-protos==1.63.0
 greenlet==3.0.3
 h11==0.14.0
-hishel==0.0.29
+hishel==0.0.30
 html2text==2024.2.26
 httpcore==1.0.5
 httpie==3.2.3
@@ -210,7 +210,7 @@ truststore==0.9.1
 typeguard==4.3.0
 typing_extensions==4.12.2
 uc-micro-py==1.0.3
-unearth==0.16.0
+unearth==0.16.1
 uritemplate==4.1.1
 urllib3==1.26.18
 validate-pyproject==0.18
