@@ -1433,6 +1433,7 @@ urxvt-perls
 usbmuxd
 usbutils
 usleep
+uthash
 util-linux
 util-linux-libs
 v4l-utils
