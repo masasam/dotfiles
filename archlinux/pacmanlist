@@ -261,6 +261,7 @@ groff
 gron
 grub
 gsettings-desktop-schemas
+gsettings-system-schemas
 gsfonts
 gsl
 gsm
