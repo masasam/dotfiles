@@ -822,6 +822,7 @@ libtool
 libunibreak
 libunistring
 libunwind
+liburcu
 liburing
 libusb
 libusbmuxd
