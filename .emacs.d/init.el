@@ -83,6 +83,7 @@
     (package-install 'eglot))
   (package-install 'elisp-slime-nav)
   (package-install 'elixir-mode)
+  (package-install 'ellama)
   (package-install 'emacsql)
   (package-install 'emacsql-sqlite)
   (package-install 'epl)
