@@ -159,7 +159,6 @@
   (package-install 'org)
   (package-install 'package-lint)
   (package-install 'package-lint-flymake)
-  (package-install 'packed)
   (package-install 'page-break-lines)
   (package-install 'password-generator)
   (package-install 'pcre2el)
