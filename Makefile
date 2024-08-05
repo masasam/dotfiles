@@ -458,7 +458,7 @@ chrome: ## Install chrome and noto-fonts and browserpass
 ollama: ## Init ollama
 	$(PACMAN) $@
 	$(SYSTEMD_ENABLE) $@.service
-	cd ~/Downloads && wget 'https://huggingface.co/elyza/Llama-3-ELYZA-JP-8B-GGUF/resolve/main/Llama-3-ELYZA-JP-8B-q4_k_m.gguf'
+	wget -P ~/Downloads 'https://huggingface.co/elyza/Llama-3-ELYZA-JP-8B-GGUF/resolve/main/Llama-3-ELYZA-JP-8B-q4_k_m.gguf'
 	echo -e 'FROM ./Llama-3-ELYZA-JP-8B-q4_k_m.gguf\nTEMPLATE """{{ if .System }}<|start_header_id|>system<|end_header_id|>\n\n{{ .System }}<|eot_id|>{{ end }}{{ if .Prompt }}<|start_header_id|>user<|end_header_id|>\n\n{{ .Prompt }}<|eot_id|>{{ end }}<|start_header_id|>assistant<|end_header_id|>\n\n{{ .Response }}<|eot_id|>"""\nPARAMETER stop "<|start_header_id|>"\nPARAMETER stop "<|end_header_id|>"\nPARAMETER stop "<|eot_id|>"\nPARAMETER stop "<|reserved_special_token"' > ~/Downloads/Modelfile
 	ollama create elyza:jp8b -f Modelfile
 
