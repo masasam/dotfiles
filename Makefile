@@ -24,7 +24,6 @@ PACKAGES	+= gtop gopls convmv mpv browserpass-firefox man-db baobab ioping ruby-
 PACKAGES	+= guetzli fabric detox usleep libvterm bind asunder lame git-lfs hex miller bash-language-server
 PACKAGES	+= diffoscope dust rbw eza sslscan abiword pyright miniserve fdupes deno serverless mold fx httpie
 PACKAGES	+= gron typescript-language-server dateutils time xsv rust git-delta zellij jc ruff speedtest-cli
-PACKAGES	+= ollama
 
 PIP_PKGS	:= python-pip python-pipenv python-pdm python-seaborn python-ipywidgets python-jupyter-client
 PIP_PKGS	+= python-prompt_toolkit python-faker python-matplotlib python-nose python-pandas
@@ -455,6 +454,11 @@ chrome: ## Install chrome and noto-fonts and browserpass
 	$(MAKE) -C /usr/lib/browserpass hosts-$@-user
 	test -L ${HOME}/.password-store || rm -rf ${HOME}/.password-store
 	ln -vsfn ${HOME}/backup/browserpass ${HOME}/.password-store
+
+ollama: ## Init ollama
+	$(PACMAN) $@
+	$(SYSTEMD_ENABLE) $@.service
+	ollama pull llama3.1
 
 edge: ## Install edge
 	yay -S microsoft-edge-stable-bin
