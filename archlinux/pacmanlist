@@ -8,7 +8,6 @@ adobe-source-code-pro-fonts
 adwaita-cursors
 adwaita-icon-theme
 adwaita-icon-theme-legacy
-aiksaurus
 alsa-card-profiles
 alsa-lib
 alsa-topology-conf
@@ -279,7 +278,6 @@ gtk-update-icon-cache
 gtk2
 gtk3
 gtk4
-gtkmathview
 gtkmm3
 gtksourceview4
 gtop
@@ -751,7 +749,6 @@ libomxil-bellagio
 libopenmpt
 liborcus
 libotf
-libots
 libp11-kit
 libpagemaker
 libpanel
