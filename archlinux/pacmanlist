@@ -421,6 +421,7 @@ haskell-onetuple
 haskell-only
 haskell-optparse-applicative
 haskell-ordered-containers
+haskell-os-string
 haskell-pandoc
 haskell-pandoc-lua-engine
 haskell-pandoc-lua-marshal
