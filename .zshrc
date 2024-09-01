@@ -917,3 +917,11 @@ if [ -f '/home/masa/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/masa/g
 autoload bashcompinit
 bashcompinit
 complete -C '/usr/local/bin/aws_completer' aws
+
+# pnpm
+export PNPM_HOME="/home/masa/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
