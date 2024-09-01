@@ -7,7 +7,7 @@ BASE_PKGS	+= iputils iproute2 autoconf sudo automake binutils bison fakeroot fle
 BASE_PKGS	+= make patch pkgconf texinfo which
 
 PACKAGES	:= base go zsh git vim tmux keychain evince unrar hugo ethtool zsh-completions xsel emacs gvfs-smb difftastic
-PACKAGES	+= unace iperf valgrind noto-fonts-emoji inkscape file-roller xclip atool debootstrap oath-toolkit pnpm
+PACKAGES	+= unace iperf valgrind noto-fonts-emoji inkscape file-roller xclip atool debootstrap oath-toolkit
 PACKAGES	+= imagemagick lynx the_silver_searcher cifs-utils elinks flameshot ruby-rdoc ipcalc traceroute
 PACKAGES	+= cups-pdf firefox firefox-i18n-ja gimp strace lhasa hub bookworm tig sysprof pkgfile dconf-editor
 PACKAGES	+= rsync nodejs debian-archive-keyring gauche cpio aria2 nmap poppler-data ffmpeg asciidoc sbcl 
@@ -104,12 +104,16 @@ goinstall: ${HOME}/.local ## Install go packages
 	go install github.com/jmhodges/jsonpp@latest
 	go install github.com/mithrandie/csvq@latest
 
-nodeinstall: ## Install node global packages
+yarninstall: ## Install yarn global packages
 	mkdir -p ${HOME}/.config/yarn/global
 	ln -vsf ${PWD}/archlinux/package.json ${HOME}/.config/yarn/global/package.json
 	$(PACMAN) yarn
 	mkdir -p ${HOME}/.node_modules
 	for pkg in $(NODE_PKGS); do yarn global add $$pkg; done
+
+pnpminstall: ## Install pnpm global packages
+	$(PACMAN) pnpm
+	for pkg in $(NODE_PKGS); do pnpm add -g $$pkg; done
 
 rustinstall: ## Install rust and rust language server
 	$(PACMAN) rustup
