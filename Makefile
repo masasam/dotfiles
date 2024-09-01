@@ -7,7 +7,7 @@ BASE_PKGS	+= iputils iproute2 autoconf sudo automake binutils bison fakeroot fle
 BASE_PKGS	+= make patch pkgconf texinfo which
 
 PACKAGES	:= base go zsh git vim tmux keychain evince unrar hugo ethtool zsh-completions xsel emacs gvfs-smb difftastic
-PACKAGES	+= unace iperf valgrind noto-fonts-emoji inkscape file-roller xclip atool debootstrap oath-toolkit 
+PACKAGES	+= unace iperf valgrind noto-fonts-emoji inkscape file-roller xclip atool debootstrap oath-toolkit pnpm
 PACKAGES	+= imagemagick lynx the_silver_searcher cifs-utils elinks flameshot ruby-rdoc ipcalc traceroute
 PACKAGES	+= cups-pdf firefox firefox-i18n-ja gimp strace lhasa hub bookworm tig sysprof pkgfile dconf-editor
 PACKAGES	+= rsync nodejs debian-archive-keyring gauche cpio aria2 nmap poppler-data ffmpeg asciidoc sbcl 
