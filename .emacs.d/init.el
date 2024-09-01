@@ -102,7 +102,6 @@
   (package-install 'fullframe)
   (package-install 'ggtags)
   (package-install 'ghub)
-  (package-install 'git-commit)
   (package-install 'git-timemachine)
   (package-install 'github-explorer)
   (package-install 'github-review)
