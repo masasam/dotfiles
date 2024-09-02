@@ -108,6 +108,7 @@ db5.3
 dbus
 dbus-broker
 dbus-broker-units
+dbus-glib
 dconf
 dconf-editor
 debian-archive-keyring
@@ -1025,6 +1026,7 @@ pixman
 pkgconf
 pkgfile
 pkgstats
+pnpm
 polkit
 poppler
 poppler-data
