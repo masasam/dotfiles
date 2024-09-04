@@ -34,7 +34,7 @@
 
 
 ;; font
-(add-to-list 'default-frame-alist '(font . "Cica-24"))
+(add-to-list 'default-frame-alist '(font . "Cica-25"))
 
 
 ;; defalias list
