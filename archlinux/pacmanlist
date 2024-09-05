@@ -294,6 +294,7 @@ harfbuzz-icu
 haskell-aeson
 haskell-aeson-pretty
 haskell-ansi-terminal
+haskell-ansi-terminal-types
 haskell-ansi-wl-pprint
 haskell-appar
 haskell-asn1-encoding
