@@ -444,7 +444,7 @@ You can make install from here
 	sudo pacman -S npm llvm llvm-libs lldb hdparm rxvt-unicode 
 	sudo pacman -S mariadb-clients postgresql-libs tig lsof fzf
 	sudo pacman -S debootstrap tcpdump pdfgrep sshfs stunnel
-	sudo pacman -S alsa-utils mlocate traceroute hugo mpv jhead
+	sudo pacman -S alsa-utils plocate traceroute hugo mpv jhead
 	sudo pacman -S nethogs optipng jpegoptim noto-fonts-emoji
 	sudo pacman -S debian-archive-keyring tree rclone gnome-tweaks
 	sudo pacman -S mathjax strace valgrind p7zip unace postgresql
