@@ -934,7 +934,6 @@ minizip
 mkcert
 mkinitcpio
 mkinitcpio-busybox
-mlocate
 mobile-broadband-provider-info
 mold
 mosh
@@ -1027,6 +1026,7 @@ pixman
 pkgconf
 pkgfile
 pkgstats
+plocate
 pnpm
 polkit
 poppler
