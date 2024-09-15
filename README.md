@@ -469,7 +469,6 @@ You can make install from here
 #### Install using yay
 
 	yay -S beekeeper-studio-bin
-	yay -S csvlens
 	yay -S downgrade
 	yay -S git-secrets
 	yay -S global
