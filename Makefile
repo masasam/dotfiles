@@ -4,9 +4,9 @@ export GOPATH := ${HOME}
 BASE_PKGS	:= filesystem gcc-libs glibc bash coreutils file findutils gawk grep procps-ng sed tar gettext
 BASE_PKGS	+= pciutils psmisc shadow util-linux bzip2 gzip xz licenses pacman systemd systemd-sysvcompat 
 BASE_PKGS	+= iputils iproute2 autoconf sudo automake binutils bison fakeroot flex gcc groff libtool m4 
-BASE_PKGS	+= make patch pkgconf texinfo which
+BASE_PKGS	+= make patch pkgconf texinfo which archlinux-keyring debugedit
 
-PACKAGES	:= base go zsh git vim tmux keychain evince unrar hugo ethtool zsh-completions xsel emacs gvfs-smb
+PACKAGES	:= base base-devel go zsh git vim tmux keychain evince unrar hugo ethtool zsh-completions xsel emacs gvfs-smb
 PACKAGES	+= unace iperf valgrind noto-fonts-emoji inkscape file-roller xclip atool debootstrap oath-toolkit
 PACKAGES	+= imagemagick lynx the_silver_searcher cifs-utils elinks flameshot ruby-rdoc ipcalc traceroute
 PACKAGES	+= cups-pdf firefox firefox-i18n-ja gimp strace lhasa hub bookworm tig sysprof pkgfile p7zip
