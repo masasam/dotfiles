@@ -27,7 +27,7 @@ PACKAGES	+= gron typescript-language-server dateutils time xsv rust git-delta ze
 PACKAGES	+= dconf-editor ghq gopls difftastic csvlens cloc eslint prettier
 
 PIP_PKGS	:= python-pip python-pipenv python-pdm python-seaborn python-ipywidgets python-jupyter-client
-PIP_PKGS	+= python-prompt_toolkit python-faker python-matplotlib python-nose python-pandas
+PIP_PKGS	+= python-prompt_toolkit python-faker python-matplotlib python-nose python-pandas python-numpy
 
 NODE_PKGS	:= firebase-tools now mermaid mermaid.cli parcel-bundler heroku
 NODE_PKGS	+= dockerfile-language-server-nodejs netlify-cli ngrok fx jshint
