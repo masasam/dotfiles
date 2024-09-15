@@ -24,14 +24,13 @@ PACKAGES	+= gtop gopls convmv mpv browserpass-firefox man-db baobab ioping ruby-
 PACKAGES	+= guetzli fabric detox usleep libvterm bind asunder lame git-lfs hex miller bash-language-server
 PACKAGES	+= diffoscope dust rbw eza sslscan abiword pyright miniserve fdupes deno serverless mold fx httpie
 PACKAGES	+= gron typescript-language-server dateutils time xsv rust git-delta zellij jc ruff speedtest-cli
-PACKAGES	+= dconf-editor ghq gopls difftastic csvlens
+PACKAGES	+= dconf-editor ghq gopls difftastic csvlens cloc eslint prettier
 
 PIP_PKGS	:= python-pip python-pipenv python-pdm python-seaborn python-ipywidgets python-jupyter-client
 PIP_PKGS	+= python-prompt_toolkit python-faker python-matplotlib python-nose python-pandas
 
-NODE_PKGS	:= babel-eslint cloc firebase-tools now mermaid mermaid.cli parcel-bundler
-NODE_PKGS	+= dockerfile-language-server-nodejs eslint eslint-cli eslint-config-vue netlify-cli
-NODE_PKGS	+= eslint-plugin-react eslint-plugin-vue@next expo-cli fx heroku ngrok prettier
+NODE_PKGS	:= babel-eslint firebase-tools now mermaid mermaid.cli parcel-bundler
+NODE_PKGS	+= dockerfile-language-server-nodejs netlify-cli ngrok fx heroku
 NODE_PKGS	+= indium intelephense logo.svg @marp-team/marp-cli jshint
 
 PACMAN		:= sudo pacman -S 
