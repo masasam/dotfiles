@@ -489,7 +489,6 @@ You can make install from here
 #### Install using golang
 
 	mkdir -p ${HOME}/{bin,src}
-	go install golang.org/x/tools/gopls@latest
 	go install golang.org/x/tools/cmd/goimports@latest
 	go install github.com/kyoshidajp/ghkw@latest
 	go install github.com/simeji/jid/cmd/jid@latest
