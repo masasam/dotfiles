@@ -462,7 +462,7 @@ You can make install from here
 	sudo pacman -S perl-net-ip hex miller btop diffoscope dust yq
 	sudo pacman -S sslscan abiword pyright miniserve fdupes deno
 	sudo pacman -S serverless mold fx httpie bash-language-server
-	sudo pacman -S difftastic ollama
+	sudo pacman -S difftastic ollama ghq
 
 ![activity](https://raw.githubusercontent.com/masasam/image/image/activity.png)
 
@@ -491,7 +491,6 @@ You can make install from here
 	mkdir -p ${HOME}/{bin,src}
 	go install golang.org/x/tools/gopls@latest
 	go install golang.org/x/tools/cmd/goimports@latest
-	go install github.com/x-motemen/ghq@latest
 	go install github.com/kyoshidajp/ghkw@latest
 	go install github.com/simeji/jid/cmd/jid@latest
 	go install github.com/jmhodges/jsonpp@latest
