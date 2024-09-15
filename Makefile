@@ -485,7 +485,7 @@ mongodb: ## Mongodb initial setup
 
 gnuglobal: ${HOME}/.local ## Install gnu global
 	$(PACMAN) python-pygments
-	yay -S global
+	$(PACMAN) global
 
 .ONESHELL:
 SHELL = /bin/bash
