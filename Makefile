@@ -24,7 +24,7 @@ PACKAGES	+= gtop gopls convmv mpv browserpass-firefox man-db baobab ioping ruby-
 PACKAGES	+= guetzli fabric detox usleep libvterm bind asunder lame git-lfs hex miller bash-language-server
 PACKAGES	+= diffoscope dust rbw eza sslscan abiword pyright miniserve fdupes deno serverless mold fx httpie
 PACKAGES	+= gron typescript-language-server dateutils time xsv rust git-delta zellij jc ruff speedtest-cli
-PACKAGES	+= dconf-editor ghq gopls difftastic csvlens cloc eslint prettier
+PACKAGES	+= dconf-editor ghq gopls difftastic csvlens cloc eslint prettier trivy
 
 PIP_PKGS	:= python-pip python-pipenv python-pdm python-seaborn python-ipywidgets python-jupyter-client
 PIP_PKGS	+= python-prompt_toolkit python-faker python-matplotlib python-nose python-pandas python-numpy
@@ -394,7 +394,7 @@ gh: ## Install and setup github-cli
 	gh extension install seachicken/gh-poi
 
 aurplus: ## Install arch linux AUR packages using yay
-	yay -S appimagelauncher drone-cli nkf pencil rtags skypeforlinux-stable-bin trivy-bin
+	yay -S appimagelauncher nkf rtags
 
 terraformer: ## Install terraformer
 	curl -LO https://github.com/GoogleCloudPlatform/$@/releases/download/`curl -s https://api.github.com/repos/GoogleCloudPlatform/$@/releases/latest | grep tag_name | cut -d '"' -f 4`/$@-aws-linux-amd64
