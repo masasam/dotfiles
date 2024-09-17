@@ -394,11 +394,7 @@ gh: ## Install and setup github-cli
 	gh extension install seachicken/gh-poi
 
 aurplus: ## Install arch linux AUR packages using yay
-	yay -S appimagelauncher nkf rtags
-
-terraformer: ## Install terraformer
-	curl -LO https://github.com/GoogleCloudPlatform/$@/releases/download/`curl -s https://api.github.com/repos/GoogleCloudPlatform/$@/releases/latest | grep tag_name | cut -d '"' -f 4`/$@-aws-linux-amd64
-	sudo install -m 755 $@-aws-linux-amd64 /usr/local/bin/$@ && rm $@-aws-linux-amd64
+	yay -S appimagelauncher nkf rtags terraformer-bin
 
 bluetooth: # Setup bluetooth
 	$(PACMAN) bluez bluez-utils
