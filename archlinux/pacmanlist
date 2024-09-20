@@ -571,6 +571,7 @@ jhead
 jpegoptim
 jq
 js115
+js128
 json-c
 json-glib
 jsoncpp
@@ -633,6 +634,7 @@ libcloudproviders
 libcmis
 libcolord
 libcss
+libcue
 libcups
 libcupsfilters
 libdaemon
@@ -701,6 +703,7 @@ libimobiledevice
 libimobiledevice-glue
 libinih
 libinput
+libiptcdata
 libisl
 libixion
 libjcat
@@ -753,6 +756,7 @@ libogg
 libomxil-bellagio
 libopenmpt
 liborcus
+libosinfo
 libotf
 libp11-kit
 libpagemaker
@@ -900,6 +904,7 @@ llvm
 llvm-libs
 lm_sensors
 lmdb
+localsearch
 loudmouth
 lpsolve
 lshw
@@ -989,6 +994,7 @@ openucx
 optipng
 opus
 orc
+osinfo-db
 otf-ipafont
 p11-kit
 p7zip
@@ -1389,13 +1395,14 @@ the_silver_searcher
 thin-provisioning-tools
 tig
 time
+tinysparql
 tldr
 tlp
 tmux
 tokei
+totem-pl-parser
 tpm2-tss
 traceroute
-tracker3
 tre
 tree
 tree-sitter
