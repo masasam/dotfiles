@@ -87,6 +87,9 @@ install: ## Install arch linux packages using pacman
 	$(PACMAN) pkgfile
 	sudo pkgfile --update
 
+uv: ## Install uv and setup
+	$(PACMAN) uv
+
 rye: ## Install rye and setup
 	$(PACMAN) rye
 	mkdir ~/.zfunc
