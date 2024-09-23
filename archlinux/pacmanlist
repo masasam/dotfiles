@@ -1427,6 +1427,7 @@ usleep
 uthash
 util-linux
 util-linux-libs
+uv
 v4l-utils
 valgrind
 vapoursynth
