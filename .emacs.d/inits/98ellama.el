@@ -6,6 +6,7 @@
 (with-eval-after-load 'llm
   (require 'llm-ollama)
   (setopt ellama-language "Japanese")
+  (setopt ellama-long-lines-length 80)
   (setopt ellama-provider (make-llm-ollama
                            :chat-model "llama3.2"
                            :embedding-model "llama3.2")))
