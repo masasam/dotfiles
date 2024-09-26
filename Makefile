@@ -459,7 +459,7 @@ chrome: ## Install chrome and noto-fonts and browserpass
 ollama: ## Init ollama
 	$(PACMAN) $@
 	$(SYSTEMD_ENABLE) $@.service
-	ollama run lucas2024/llama-3-elyza-jp-8b:q5_k_m
+	ollama run llama3.2:1b
 
 edge: ## Install edge
 	yay -S microsoft-edge-stable-bin

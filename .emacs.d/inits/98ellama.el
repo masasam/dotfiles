@@ -7,8 +7,8 @@
   (require 'llm-ollama)
   (setopt ellama-language "Japanese")
   (setopt ellama-provider (make-llm-ollama
-                           :chat-model "lucas2024/llama-3-elyza-jp-8b:q5_k_m"
-                           :embedding-model "lucas2024/llama-3-elyza-jp-8b:q5_k_m")))
+                           :chat-model "llama3.2:1b"
+                           :embedding-model "llama3.2:1b")))
 
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
