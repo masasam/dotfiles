@@ -1194,7 +1194,6 @@ python-pynacl
 python-pyparsing
 python-pyproject-hooks
 python-pyproject-metadata
-python-pyrsistent
 python-pyserial
 python-pysocks
 python-pytest
