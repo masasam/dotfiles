@@ -11,7 +11,7 @@
 This dotfiles is for Arch linux.
 Since there is no such as a distribution without make,
 if you make [Makefile](https://github.com/masasam/dotfiles/blob/master/Makefile),
-you can correspond to any distribution.
+you can correspond to any linux distribution.
 Let's make a [Makefile](https://github.com/masasam/dotfiles/blob/master/Makefile) immediately.
 
 ### With Makefile, such a good thing
