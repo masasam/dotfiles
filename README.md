@@ -225,7 +225,7 @@ Install bese bese-devel of arch
 	pacstrap -K /mnt base linux linux-firmware vi
 
 Make sure the nearest mirror is selected.
-Write the nearest mirror on the top.
+Comment out the nearest mirror.
 
 	vi /etc/pacman.d/mirrorlist
 	Server = http://ftp.tsukuba.wide.ad.jp/Linux/archlinux/$repo/os/$arch
