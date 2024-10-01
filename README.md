@@ -256,7 +256,7 @@ Shell is in English environment
 
     export LANG=C
 
-This neighborhood will be UTF-8
+This will be UTF-8
 
     echo LANG=ja_JP.UTF-8 > /etc/locale.conf
 
