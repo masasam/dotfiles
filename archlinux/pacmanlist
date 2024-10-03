@@ -1122,6 +1122,7 @@ python-html2text
 python-httpcore
 python-httplib2
 python-httpx
+python-hypothesis
 python-idna
 python-imagesize
 python-importlib-metadata
@@ -1220,6 +1221,7 @@ python-slugify
 python-sniffio
 python-snowballstemmer
 python-socksio
+python-sortedcontainers
 python-soupsieve
 python-sphinx
 python-sphinx-alabaster-theme
