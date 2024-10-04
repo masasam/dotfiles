@@ -18,4 +18,4 @@
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:
-;;; 34java ends here
+;;; 98ellama.el ends here

@@ -9,4 +9,4 @@
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:
-;;; 34java ends here
+;;; 34java.el ends here
