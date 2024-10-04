@@ -1,4 +1,4 @@
-;;; 98ellama.el
+;;; package --- 98ellama.el
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)
