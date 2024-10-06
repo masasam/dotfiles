@@ -569,6 +569,9 @@ rustupdate: ## Update rust packages
 yarnupdate: ## Update yarn packages
 	yarn global upgrade
 
+pnpmupdate: ## Update pnpm packages
+	pnpm -g upgrade
+
 mysite: ## My site and blogs source(This is private repository)
 	ghq get -p masasam/solist
 	ghq get -p masasam/solistblog
@@ -599,6 +602,6 @@ allinstall: dconfsetting rclone gnupg ssh install init keyring urxvt xterm termi
 
 nextinstall: mysql mycli pgcli pnpminstall rubygem rbenv rustinstall postgresql zeal gcloud awsv2 eralchemy gh
 
-allupdate: update rustupdate goinstall yarnupdate
+allupdate: update rustupdate goinstall pnpmupdate
 
 allbackup: backup pipbackup
