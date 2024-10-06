@@ -19,7 +19,6 @@
     "mermaid": "^10.8.0",
     "mermaid.cli": "^0.5.1",
     "netlify-cli": "^17.16.4",
-    "ngrok": "^5.0.0-beta.2",
     "now": "^21.0.1",
     "parcel-bundler": "^1.12.5",
     "prettier": "^3.2.5"
