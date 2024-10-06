@@ -29,9 +29,9 @@ PACKAGES	+= dconf-editor ghq gopls difftastic csvlens cloc eslint prettier trivy
 PIP_PKGS	:= python-pip python-pipenv python-seaborn python-ipywidgets python-jupyter-client
 PIP_PKGS	+= python-prompt_toolkit python-faker python-matplotlib python-nose python-pandas python-numpy
 
-NODE_PKGS	:= firebase-tools now mermaid mermaid.cli parcel-bundler heroku
-NODE_PKGS	+= dockerfile-language-server-nodejs netlify-cli ngrok fx jshint
-NODE_PKGS	+= indium intelephense logo.svg @marp-team/marp-cli
+NODE_PKGS	:= vite firebase-tools now mermaid mermaid.cli parcel-bundler fx
+NODE_PKGS	+= dockerfile-language-server-nodejs netlify-cli ngrok heroku
+NODE_PKGS	+= indium intelephense logo.svg @marp-team/marp-cli jshint
 
 PACMAN		:= sudo pacman -S 
 SYSTEMD_ENABLE	:= sudo systemctl --now enable
