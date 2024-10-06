@@ -570,6 +570,7 @@ yarnupdate: ## Update yarn packages
 	yarn global upgrade
 
 pnpmupdate: ## Update pnpm packages
+	pnpm self-update
 	pnpm -g upgrade
 
 mysite: ## My site and blogs source(This is private repository)
