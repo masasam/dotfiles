@@ -26,7 +26,7 @@ PACKAGES	+= diffoscope dust rbw eza sslscan abiword pyright miniserve fdupes den
 PACKAGES	+= gron typescript-language-server dateutils time xsv rust git-delta zellij jc ruff speedtest-cli
 PACKAGES	+= dconf-editor ghq gopls difftastic csvlens cloc eslint prettier trivy
 
-PIP_PKGS	:= python-pip python-pipenv python-pdm python-seaborn python-ipywidgets python-jupyter-client
+PIP_PKGS	:= python-pip python-pipenv python-seaborn python-ipywidgets python-jupyter-client
 PIP_PKGS	+= python-prompt_toolkit python-faker python-matplotlib python-nose python-pandas python-numpy
 
 NODE_PKGS	:= firebase-tools now mermaid mermaid.cli parcel-bundler heroku

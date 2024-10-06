@@ -481,7 +481,7 @@ You can make install from here
 
 ##### Install using python package
 
-	sudo pacman -S python-pip python-pipenv python-pdm python-seaborn python-ipywidgets python-jupyter-client
+	sudo pacman -S python-pip python-pipenv python-seaborn python-ipywidgets python-jupyter-client
 	sudo pacman -S python-prompt_toolkit python-faker python-matplotlib python-nose python-pandas
 
 #### Install using golang
