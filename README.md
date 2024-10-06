@@ -493,27 +493,24 @@ You can make install from here
 	go install github.com/jmhodges/jsonpp@latest
 	go install github.com/mithrandie/csvq@latest
 
-#### Install using yarn
+#### Install using global pnpm package
 
-	mkdir -p ${HOME}/.node_modules
-	yarn global add cloc
-	yarn global add dockerfile-language-server-nodejs
-	yarn global add expo-cli
-	yarn global add firebase-tools
-	yarn global add fx
-	yarn global add heroku
-	yarn global add indium
-	yarn global add javascript-typescript-langserver
-	yarn global add jshint
-	yarn global add logo.svg
-	yarn global add @marp-team/marp-cli
-	yarn global add mermaid
-	yarn global add mermaid.cli
-	yarn global add netlify-cli
-	yarn global add ngrok
-	yarn global add now
-	yarn global add prettier
-	yarn global add parcel-bundler
+	pnpm -g add vite
+	pnpm -g add cloc
+	pnpm -g add dockerfile-language-server-nodejs
+	pnpm -g add firebase-tools
+	pnpm -g add fx
+	pnpm -g add heroku
+	pnpm -g add indium
+	pnpm -g add logo.svg
+    pnpm -g add @marp-team/marp-cli
+	pnpm -g add mermaid
+	pnpm -g add @mermaid-js/mermaid-cli
+	pnpm -g add netlify-cli
+	pnpm -g add ngrok
+	pnpm -g add now
+	pnpm -g add prettier
+	pnpm -g add parcel-bundler
 
 #### Kubernetes
 
