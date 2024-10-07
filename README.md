@@ -503,6 +503,7 @@ You can make install from here
 	pnpm -g add heroku
 	pnpm -g add indium
 	pnpm -g add logo.svg
+	pnpm -g add jshint
     pnpm -g add @marp-team/marp-cli
 	pnpm -g add mermaid
 	pnpm -g add @mermaid-js/mermaid-cli
