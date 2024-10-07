@@ -559,17 +559,17 @@ backup: ## Backup arch linux packages
 update: ## Update arch linux packages and save packages cache 3 generations
 	yay -Syu; paccache -ruk0
 
-pipbackup: ## Backup python packages
+pipbackup: ## Backup python global packages
 	mkdir -p ${PWD}/archlinux
 	pip freeze > ${PWD}/archlinux/requirements.txt
 
-rustupdate: ## Update rust packages
+rustupdate: ## Update rust global packages
 	cargo install-update -a
 
-yarnupdate: ## Update yarn packages
+yarnupdate: ## Update yarn global packages
 	yarn global upgrade
 
-pnpmupdate: ## Update pnpm packages
+pnpmupdate: ## Update pnpm global packages
 	pnpm self-update
 	pnpm -g upgrade
 
