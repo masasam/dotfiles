@@ -16,4 +16,4 @@
 	     ("j" . deadgrep-forward)
 	     ("k" . deadgrep-backward)))
 
-;;; 19wgrep ends here
+;;; 19wgrep.el ends here

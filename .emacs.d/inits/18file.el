@@ -24,4 +24,4 @@
             (list (openwith-make-extension-regexp '("odp" "pps" "ppt" "pptx"))
                   "libreoffice" '("--impress" file))))
 
-;;; 18file ends here
+;;; 18file.el ends here
