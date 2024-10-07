@@ -479,7 +479,7 @@ You can make install from here
 	yay -S zoom
 	yay -S yay
 
-##### Install using python package
+##### Install using global python package
 
 	sudo pacman -S python-pip python-pipenv python-seaborn python-ipywidgets python-jupyter-client
 	sudo pacman -S python-prompt_toolkit python-faker python-matplotlib python-nose python-pandas
