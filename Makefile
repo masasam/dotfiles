@@ -108,8 +108,6 @@ goinstall: ${HOME}/.local ## Install go packages
 	go install github.com/mithrandie/csvq@latest
 
 yarninstall: ## Install yarn global packages
-	mkdir -p ${HOME}/.config/yarn/global
-	ln -vsf ${PWD}/archlinux/package.json ${HOME}/.config/yarn/global/package.json
 	$(PACMAN) yarn
 	mkdir -p ${HOME}/.node_modules
 	for pkg in $(NODE_PKGS); do yarn global add $$pkg; done
