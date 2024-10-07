@@ -472,7 +472,6 @@ You can make install from here
 	yay -S downgrade
 	yay -S git-secrets
 	yay -S ibus-mozc
-	yay -S nvm
 	yay -S rgxg
 	yay -S rtags
 	yay -S slack-desktop
