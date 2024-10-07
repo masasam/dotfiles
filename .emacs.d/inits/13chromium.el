@@ -5,8 +5,8 @@
 
 (require 'url-util)
 
-(defun chromium-translate ()
-  "Open google translate with chromium."
+(defun chrome-translate ()
+  "Open google translate with chrome."
   (interactive)
   (if (use-region-p)
       (let ((string (buffer-substring-no-properties (region-beginning) (region-end))))
@@ -28,103 +28,103 @@
 
 
 (defun chrome-rails (input)
-  "Open rails development server with chromium."
+  "Open rails development server with chrome."
 (interactive (list (read-from-minibuffer "http://127.0.0.1:8000/" nil nil nil nil)))
   (browse-url (concat "http://127.0.0.1:3000/" input)))
 
 
 (defun chrome-django (input)
-  "Open django development server with chromium."
+  "Open django development server with chrome."
   (interactive (list (read-from-minibuffer "http://127.0.0.1:8000/" nil nil nil nil)))
   (browse-url (concat "http://127.0.0.1:8000/" input)))
 
 
 (defun chrome-django-admin ()
-  "Open django development admin server with chromium."
+  "Open django development admin server with chrome."
   (interactive)
   (browse-url "http://127.0.0.1:8000/admin/"))
 
 
 (defun chrome-js (input)
-  "Open js development page with chromium."
+  "Open js development page with chrome."
   (interactive (list (read-from-minibuffer "http://127.0.0.1:8000/" nil nil nil nil)))
   (browse-url (concat "http://127.0.0.1:8080/" input)))
 
 
 (defun chrome-calendar ()
-  "Open google-calendar with chromium."
+  "Open google-calendar with chrome."
   (interactive)
   (browse-url "https://calendar.google.com/calendar/r"))
 
 
 (defun chrome-meeting ()
-  "Open meeting.new with chromium."
+  "Open meeting.new with chrome."
   (interactive)
   (browse-url "https://meeting.new"))
 
 
 (defun chrome-gmail ()
-  "Open gmail with chromium."
+  "Open gmail with chrome."
   (interactive)
   (browse-url "https://mail.google.com/mail/u/0/#inbox"))
 
 
 (defun chrome-drive ()
-  "Open google-drive with chromium."
+  "Open google-drive with chrome."
   (interactive)
   (browse-url "https://drive.google.com/drive/u/0/my-drive"))
 
 
 (defun chrome-github ()
-  "Open github with chromium."
+  "Open github with chrome."
   (interactive)
   (browse-url "https://github.com/masasam"))
 
 
 (defun chrome-github-new ()
-  "Open github with chromium."
+  "Open github with chrome."
   (interactive)
   (browse-url "https://repo.new/"))
 
 
 (defun chrome-reddit ()
-  "Open reddit with chromium."
+  "Open reddit with chrome."
   (interactive)
   (browse-url "https://www.reddit.com"))
 
 
 (defun chrome-hackernews ()
-  "Open hackernews with chromium."
+  "Open hackernews with chrome."
   (interactive)
   (browse-url "https://news.ycombinator.com"))
 
 
 (defun chrome-maps ()
-  "Open google-maps with chromium."
+  "Open google-maps with chrome."
   (interactive)
   (browse-url "https://www.google.co.jp/maps"))
 
 
 (defun chrome-pocket ()
-  "Open pocket with chromium."
+  "Open pocket with chrome."
   (interactive)
   (browse-url "https://getpocket.com/a/queue/"))
 
 
 (defun chrome-twitter ()
-  "Open twitter with chromium."
+  "Open twitter with chrome."
   (interactive)
   (browse-url "https://twitter.com"))
 
 
 (defun chrome-keep ()
-  "Open keep with chromium."
+  "Open keep with chrome."
   (interactive)
   (browse-url "https://keep.google.com/u/0/"))
 
 
 (defun chrome-keep-new ()
-  "Open new keep with chromium."
+  "Open new keep with chrome."
   (interactive)
   (browse-url "https://keep.new"))
 
