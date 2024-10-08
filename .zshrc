@@ -902,9 +902,6 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 # password
 source ~/backup/zsh/env.sh
 
-# nvm
-source /usr/share/nvm/init-nvm.sh
-
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/masa/google-cloud-sdk/path.zsh.inc' ]; then . '/home/masa/google-cloud-sdk/path.zsh.inc'; fi
 
