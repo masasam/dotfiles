@@ -30,10 +30,9 @@ PIP_PKGS	:= python-pip python-pipenv python-seaborn python-ipywidgets python-jup
 PIP_PKGS	+= python-prompt_toolkit python-faker python-matplotlib python-nose python-pandas
 PIP_PKGS	+= python-numpy python-beautifulsoup4
 
-NODE_PKGS	:= vite firebase-tools now mermaid @mermaid-js/mermaid-cli fx
+NODE_PKGS	:= vite now mermaid @mermaid-js/mermaid-cli fx parcel-bundler
 NODE_PKGS	+= dockerfile-language-server-nodejs netlify-cli ngrok heroku
 NODE_PKGS	+= indium intelephense logo.svg @marp-team/marp-cli jshint
-NODE_PKGS	+= parcel-bundler
 
 PACMAN		:= sudo pacman -S 
 SYSTEMD_ENABLE	:= sudo systemctl --now enable
@@ -375,7 +374,7 @@ yay: ## Install yay using yay
 	yay -S $@
 
 aur: ## Install arch linux AUR packages using yay
-	yay -S duckdb-bin downgrade git-secrets pscale-cli rgxg slack-desktop trdsql-bin tree-sitter-rust zoom
+	yay -S duckdb-bin downgrade git-secrets firebase-tools-bin pscale-cli rgxg slack-desktop trdsql-bin tree-sitter-rust zoom
 
 sequeler: ## Install gui database tools
 	yay -S $@-git
