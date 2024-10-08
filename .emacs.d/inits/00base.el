@@ -245,6 +245,8 @@ If the region is inactive, `backward-kill-word'."
 (defun firebase-deploy ()
   "Firebase deploy command."
   (interactive)
+  (shell-command-to-string "firebase login")
+  (message "Logined")
   (shell-command-to-string "firebase deploy")
   (message "Published"))
 
