@@ -1,6 +1,7 @@
 beekeeper-studio-bin
 downgrade
 duckdb-bin
+firebase-tools-bin
 git-secrets
 goobook-git
 google-chrome
@@ -16,5 +17,6 @@ slack-desktop
 termite
 trdsql-bin
 ttf-cica
+volta-bin
 yay
 zoom
