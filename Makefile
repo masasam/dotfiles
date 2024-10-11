@@ -30,9 +30,9 @@ PIP_PKGS	:= python-pip python-pipenv python-seaborn python-ipywidgets python-jup
 PIP_PKGS	+= python-prompt_toolkit python-faker python-matplotlib python-nose python-pandas
 PIP_PKGS	+= python-numpy python-beautifulsoup4
 
-NODE_PKGS	:= vite now mermaid @mermaid-js/mermaid-cli fx intelephense
-NODE_PKGS	+= dockerfile-language-server-nodejs netlify-cli ngrok heroku
-NODE_PKGS	+= indium logo.svg @marp-team/marp-cli jshint
+NODE_PKGS	:= now mermaid @mermaid-js/mermaid-cli fx intelephense
+NODE_PKGS	+= dockerfile-language-server-nodejs netlify-cli ngrok
+NODE_PKGS	+= indium logo.svg @marp-team/marp-cli jshint tslint
 
 PACMAN		:= sudo pacman -S 
 SYSTEMD_ENABLE	:= sudo systemctl --now enable
