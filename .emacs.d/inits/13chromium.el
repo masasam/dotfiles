@@ -84,7 +84,7 @@
 (defun chrome-maps ()
   "Open google-maps with chrome."
   (interactive)
-  (browse-url "https://www.google.co.jp/maps"))
+  (browse-url "https://www.google.com/maps/"))
 
 (defun chrome-pocket ()
   "Open pocket with chrome."
