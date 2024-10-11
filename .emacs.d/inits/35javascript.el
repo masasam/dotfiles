@@ -1,4 +1,4 @@
-;;; 26javascript.el --- 26javascript.el
+;;; 35javascript.el --- 35javascript.el
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)
@@ -14,4 +14,4 @@
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:
-;;; 26javascript.el ends here
+;;; 35javascript.el ends here
