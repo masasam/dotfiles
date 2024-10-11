@@ -27,6 +27,11 @@
 	 (concat "https://translate.google.com/?source=gtx#ja/en/" (url-hexify-string string)))))))
 
 
+(defun chrome-remix (input)
+  "Open rails development server with chrome."
+  (interactive (list (read-from-minibuffer "http://localhost:5173/" nil nil nil nil)))
+  (browse-url (concat "http://localhost:5173/" input)))
+
 (defun chrome-rails (input)
   "Open rails development server with chrome."
 (interactive (list (read-from-minibuffer "http://127.0.0.1:8000/" nil nil nil nil)))
