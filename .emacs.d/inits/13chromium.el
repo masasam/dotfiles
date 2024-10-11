@@ -28,7 +28,7 @@
 
 
 (defun chrome-remix (input)
-  "Open rails development server with chrome."
+  "Open remix development server with chrome."
   (interactive (list (read-from-minibuffer "http://localhost:5173/" nil nil nil nil)))
   (browse-url (concat "http://localhost:5173/" input)))
 
