@@ -182,7 +182,6 @@
   (package-install 'restclient)
   (package-install 'restclient-test)
   (package-install 'rg)
-  (package-install 'rjsx-mode)
   (package-install 'rspec-mode)
   (package-install 'rust-mode)
   (package-install 's)

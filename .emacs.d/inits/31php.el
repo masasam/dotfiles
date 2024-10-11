@@ -3,7 +3,7 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
-(add-hook 'php-mode-hook #'lsp-deferred)
+(add-hook 'php-mode-hook #'lsp)
 
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
