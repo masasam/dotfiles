@@ -33,7 +33,7 @@
   :after tree-sitter
   :config
   (tree-sitter-require 'tsx)
-  (add-to-list 'tree-sitter-major-mode-language-alist '(tsx-ts-mode . tsx)))
+  (add-to-list 'tree-sitter-major-mode-language-alist '(typescript-ts-mode . tsx)))
 
 
 (add-hook 'typescript-ts-mode-hook #'lsp)
