@@ -495,12 +495,8 @@ You can make install from here
 
 #### Install using global pnpm package
 
-	pnpm -g add vite
-	pnpm -g add cloc
 	pnpm -g add dockerfile-language-server-nodejs
-	pnpm -g add firebase-tools
 	pnpm -g add fx
-	pnpm -g add heroku
 	pnpm -g add indium
 	pnpm -g add logo.svg
 	pnpm -g add jshint
@@ -510,8 +506,6 @@ You can make install from here
 	pnpm -g add netlify-cli
 	pnpm -g add ngrok
 	pnpm -g add now
-	pnpm -g add prettier
-	pnpm -g add parcel-bundler
 
 #### Kubernetes
 
