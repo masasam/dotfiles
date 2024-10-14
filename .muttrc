@@ -35,9 +35,9 @@ set mailcap_path = ~/.mutt/mailcap
 auto_view text/html
 
 # emacs
-#set editor="emacsclient -a \"\" -t"
+set editor="emacsclient"
 # vim
-set editor="vim"
+# set editor="vim"
 
 # notify-send
 set new_mail_command="notify-send --icon=mail-message-new 'New Email' '%n new messages, %u unread.' &"
