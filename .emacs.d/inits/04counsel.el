@@ -41,8 +41,16 @@
 (bind-key "C-r" 'avy-goto-word-1)
 
 
+(defun swiper-region ()
+  "If region is selected, `swiper-thing-at-point' with the keyword selected in region.
+If the region isn't selected, `swiper'."
+  (interactive)
+  (if (not (use-region-p))
+      (swiper)
+    (swiper-thing-at-point)))
+
 (defun swiper-isearch-region ()
-  "If region is selected, `swiper-isearch' with the keyword selected in region.
+  "If region is selected, `swiper-isearch-thing-at-point' with the keyword selected in region.
 If the region isn't selected, `swiper-isearch'."
   (interactive)
   (if (not (use-region-p))
