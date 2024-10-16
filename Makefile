@@ -131,8 +131,9 @@ neomutt: ## Init neomutt mail client
 
 alacritty: ## Init alacritty
 	$(PACMAN) $@
-	test -L ${HOME}/.config/$@/$@.yml || rm -rf ${HOME}/.config/$@/$@.yml
-	ln -vsf {${PWD},${HOME}}/.config/$@/$@.yml
+	test -L ${HOME}/.config/$@/$@.yml || rm -rf ${HOME}/.config/$@/$@.toml
+	mkdir ${HOME}/.config/$@
+	ln -vsf {${PWD},${HOME}}/.config/$@/$@.toml
 
 urxvt: ## Init rxvt-unicode terminal
 	$(PACMAN) $@-perls rxvt-unicode
