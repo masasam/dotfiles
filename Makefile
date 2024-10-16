@@ -165,6 +165,8 @@ termite: ## Init termite terminal
 
 zellij: ## Init zellij terminal
 	$(PACMAN) $@
+	mkdir -p ${HOME}/.config/zellij
+	ln -vsf {${PWD},${HOME}}/.config/$@/config.kdl
 
 dnsmasq: ## Init dnsmasq
 	$(PACMAN) $@
