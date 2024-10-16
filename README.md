@@ -317,9 +317,9 @@ Gnome can be put as small as necessary
 	pacman -S gnome-keyring
 	pacman -S nautilus
 
-Terminal uses urxvt and termite
+Terminal uses alacritty
 
-	pacman -S rxvt-unicode urxvt-perls
+	pacman -S alacritty
 
 Enable graphical login with gdm
 
@@ -346,7 +346,6 @@ For thinkpad x1 carbon gen10
 
 Turn off autosuspend at config
 
-	urxvt -fn "xft:monospace-18" -fg white -bg black
 	sudo pacman -S xdg-user-dirs
 	LANG=C xdg-user-dirs-update --force
 	sudo pacman -S zsh git base-devel
@@ -556,7 +555,7 @@ minikube with kvm2
 
 ![terminal](https://raw.githubusercontent.com/masasam/image/image/tmux.png)
 
-Terminal uses urxvt
+Terminal uses alacritty and termite
 
 # TLP
 
