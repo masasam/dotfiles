@@ -609,7 +609,7 @@ testpath: ## Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: dconfsetting rclone gnupg ssh install init keyring termite alacritty zellij yay tlp pipewire-pulse ttf-cica dnsmasq goinstall ibusmozc neomutt docker lvfs toggle aur beekeeper kind gtk-theme chrome rye pipinstall
+allinstall: dconfsetting rclone gnupg ssh install init keyring termite alacritty wezterm yay tlp pipewire-pulse ttf-cica dnsmasq goinstall ibusmozc neomutt docker lvfs toggle aur beekeeper kind gtk-theme chrome rye pipinstall
 
 nextinstall: mysql mycli pgcli pnpminstall rubygem rbenv rustinstall postgresql zeal gcloud awsv2 eralchemy gh
 
