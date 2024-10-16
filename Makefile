@@ -500,7 +500,7 @@ elixir-ls: ## Install elixir-ls(Recompile if the version of elixir changes)
 	mix elixir_ls.release -o rel
 
 emacs-devel: ## Install development version of emacs
-	git clone -b emacs-29 git@github.com:emacs-mirror/emacs.git ${HOME}/src/github.com/masasam/emacs
+	git clone -b emacs-30 git@github.com:emacs-mirror/emacs.git ${HOME}/src/github.com/masasam/emacs
 	cd ${HOME}/src/github.com/masasam/emacs && ./autogen.sh && ./configure && make && sudo make install && make clean
 	rm -rf ${HOME}/.emacs.d/elpa
 
