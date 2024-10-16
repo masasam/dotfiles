@@ -317,9 +317,9 @@ Gnome can be put as small as necessary
 	pacman -S gnome-keyring
 	pacman -S nautilus
 
-Terminal uses alacritty and termite and zellij
+Terminal uses alacritty and wezterm and termite
 
-	pacman -S alacritty zellij
+	pacman -S alacritty wezterm
 
 Enable graphical login with gdm
 
