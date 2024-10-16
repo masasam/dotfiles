@@ -41,7 +41,7 @@ You can see argument on this Makefile with this command.
 	make allinstall
 
 You can install all with this command.
-You can install anything written after allinstall in the makefile.
+You can install anything written after allinstall in the [Makefile](https://github.com/masasam/dotfiles/blob/master/Makefile).
 
     make backup
 
