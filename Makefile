@@ -163,6 +163,9 @@ termite: ## Init termite terminal
 	mkdir -p ${HOME}/.config/$@
 	ln -vsf {${PWD},${HOME}}/.config/$@/config
 
+zellij: ## Init zellij terminal
+	$(PACMAN) $@
+
 dnsmasq: ## Init dnsmasq
 	$(PACMAN) $@
 	sudo ln -vsf ${PWD}/etc/$@/resolv.$@.conf /etc/resolv.$@.conf

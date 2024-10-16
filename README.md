@@ -317,9 +317,9 @@ Gnome can be put as small as necessary
 	pacman -S gnome-keyring
 	pacman -S nautilus
 
-Terminal uses alacritty
+Terminal uses alacritty and termite and zellij
 
-	pacman -S alacritty
+	pacman -S alacritty zellij
 
 Enable graphical login with gdm
 
@@ -555,7 +555,7 @@ minikube with kvm2
 
 ![terminal](https://raw.githubusercontent.com/masasam/image/image/tmux.png)
 
-Terminal uses alacritty and termite
+Terminal uses alacritty and termite and zellij
 
 # TLP
 
