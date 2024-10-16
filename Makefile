@@ -163,9 +163,14 @@ termite: ## Init termite terminal
 	mkdir -p ${HOME}/.config/$@
 	ln -vsf {${PWD},${HOME}}/.config/$@/config
 
-zellij: ## Init zellij terminal
+wezterm: ## Init wezterm terminal
 	$(PACMAN) $@
-	mkdir -p ${HOME}/.config/zellij
+	mkdir -p ${HOME}/.config/$@
+	ln -vsf {${PWD},${HOME}}/.config/$@/$@.lua
+
+zellij: ## Init zellij
+	$(PACMAN) $@
+	mkdir -p ${HOME}/.config/$@
 	ln -vsf {${PWD},${HOME}}/.config/$@/config.kdl
 
 dnsmasq: ## Init dnsmasq
