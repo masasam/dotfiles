@@ -561,7 +561,7 @@ minikube with kvm2
 
 ![terminal](https://raw.githubusercontent.com/masasam/image/image/tmux.png)
 
-Terminal uses alacritty and termite and zellij
+Terminal uses alacritty and wezterm and termite
 
 # TLP
 
