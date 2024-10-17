@@ -469,13 +469,19 @@ You can make install from here
 
 	yay -S beekeeper-studio-bin
 	yay -S downgrade
+	yay -S duckdb-bin
+	yay -S firebase-tools-bin
 	yay -S git-secrets
 	yay -S ibus-mozc
+	yay -S pscale-cli
 	yay -S rgxg
 	yay -S rtags
 	yay -S slack-desktop
-	yay -S zoom
+	yay -S trdsql-bin
+	yay -S tree-sitter-rust
+	yay -S volta-bin
 	yay -S yay
+	yay -S zoom
 
 ##### Install using global python package
 
