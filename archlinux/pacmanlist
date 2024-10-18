@@ -8,6 +8,7 @@ adobe-source-code-pro-fonts
 adwaita-cursors
 adwaita-icon-theme
 adwaita-icon-theme-legacy
+alacritty
 alsa-card-profiles
 alsa-lib
 alsa-topology-conf
@@ -241,7 +242,6 @@ gnome-screenshot
 gnome-session
 gnome-settings-daemon
 gnome-shell
-gnome-terminal
 gnome-themes-extra
 gnome-tweaks
 gnu-netcat
@@ -564,7 +564,6 @@ java-runtime-common
 jbig2dec
 jbigkit
 jc
-jdk11-openjdk
 jdk21-openjdk
 jemalloc
 jhead
@@ -779,7 +778,6 @@ libportal-gtk4
 libppd
 libproxy
 libpsl
-libptytty
 libpulse
 libpwquality
 libqmi
@@ -915,7 +913,6 @@ lua-lpeg
 lua52
 lua53
 luajit
-luit
 lv2
 lvm2
 lynx
@@ -1307,8 +1304,6 @@ rubygems
 ruff
 runc
 rustup
-rxvt-unicode
-rxvt-unicode-terminfo
 rye
 sbc
 sbcl
@@ -1390,7 +1385,9 @@ tree
 tree-sitter
 tree-sitter-rust
 tslib
+ttf-jetbrains-mono
 ttf-liberation
+ttf-roboto
 typescript
 typescript-language-server
 tzdata
@@ -1402,7 +1399,6 @@ unixodbc
 unrar
 unzip
 upower
-urxvt-perls
 usbmuxd
 usbutils
 usleep
@@ -1421,7 +1417,6 @@ vimiv
 vmaf
 volume_key
 vte-common
-vte3
 vulkan-headers
 vulkan-icd-loader
 w3m
@@ -1433,6 +1428,7 @@ webkit2gtk-4.1
 webkitgtk-6.0
 webp-pixbuf-loader
 webrtc-audio-processing-1
+wezterm
 wget
 which
 whois
@@ -1448,7 +1444,6 @@ x11-ssh-askpass
 x264
 x265
 xapian-core
-xbitmaps
 xcb-imdkit
 xcb-proto
 xcb-util
@@ -1513,7 +1508,6 @@ xorg-xwud
 xorgproto
 xsel
 xsv
-xterm
 xvidcore
 xxhash
 xz
