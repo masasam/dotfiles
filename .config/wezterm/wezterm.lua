@@ -16,5 +16,15 @@ config.show_new_tab_button_in_tab_bar = false
 -- For example, changing the color scheme:
 config.color_scheme = 'Solarized (dark) (terminal.sexy)'
 
+-- window
+config.initial_cols = 150
+config.initial_rows = 52
+config.window_padding = {
+  left = 0,
+  right = 0,
+  top = 0,
+  bottom = 0,
+}
+
 -- and finally, return the configuration to wezterm
 return config
