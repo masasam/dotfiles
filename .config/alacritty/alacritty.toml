@@ -1,4 +1,4 @@
-live_config_reload = true
+general.live_config_reload = true
 working_directory = "None"
 
 [colors]
