@@ -292,6 +292,8 @@ alias djangoinit='python manage.py create_required_buckets && python manage.py c
 
 
 # PATH
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
 export GOPATH=$HOME
 export PATH="$PATH:$GOPATH/bin"
 export PATH="$PATH":"$HOME/.pub-cache/bin"
