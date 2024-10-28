@@ -5,8 +5,8 @@
 
 ;; theme
 ;; (load-theme 'material t)
-;; (load-theme 'dracula t)
-(load-theme 'catppuccin :no-confirm)
+(load-theme 'dracula t)
+;; (load-theme 'catppuccin :no-confirm)
 
 (setq inhibit-startup-buffer-menu t)
 
