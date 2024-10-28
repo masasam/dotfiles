@@ -46,6 +46,7 @@
   (package-install 'beginend)
   (package-install 'bind-key)
   (package-install 'browse-at-remote)
+  (package-install 'catppuccin-theme)
   (package-install 'closql)
   (package-install 'color-identifiers-mode)
   (package-install 'company)
