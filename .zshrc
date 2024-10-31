@@ -921,4 +921,8 @@ case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
+
+# uv
+echo 'eval "$(uv generate-shell-completion zsh)"'
+
 # pnpm end
