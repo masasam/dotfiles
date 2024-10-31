@@ -527,12 +527,13 @@ rubygem: ## Install rubygem package
 
 django: ## Create django project from scratch
 	mkdir -p ${HOME}/src/github.com/masasam && cd $$_ && \
+	uv python install 3.9 && \
+	uv python pin 3.9 && \
 	uv init newproject && \
 	cd newproject && \
-	uv pin 3.9 && \
+	uv sync && \
 	uv add django && \
 	uv add python-dotenv && \
-	uv sync && \
 	source .venv/bin/activate && \
 	django-admin startproject config .
 
