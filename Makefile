@@ -527,12 +527,12 @@ rubygem: ## Install rubygem package
 
 django: ## Create django project from scratch
 	mkdir -p ${HOME}/src/github.com/masasam && cd $$_ && \
-	rye init newproject && \
+	uv init newproject && \
 	cd newproject && \
-	rye pin 3.9 && \
-	rye add django && \
-	rye add python-dotenv && \
-	rye sync && \
+	uv pin 3.9 && \
+	uv add django && \
+	uv add python-dotenv && \
+	uv sync && \
 	source .venv/bin/activate && \
 	django-admin startproject config .
 
@@ -609,7 +609,7 @@ testpath: ## Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: dconfsetting rclone gnupg ssh install init keyring termite alacritty wezterm yay tlp pipewire-pulse ttf-cica dnsmasq goinstall ibusmozc neomutt docker lvfs toggle aur beekeeper kind gtk-theme chrome rye pipinstall
+allinstall: dconfsetting rclone gnupg ssh install init keyring termite alacritty wezterm yay tlp pipewire-pulse ttf-cica dnsmasq goinstall ibusmozc neomutt docker lvfs toggle aur beekeeper kind gtk-theme chrome uv pipinstall
 
 nextinstall: mysql mycli pgcli pnpminstall rubygem rbenv rustinstall postgresql zeal gcloud awsv2 eralchemy gh
 
