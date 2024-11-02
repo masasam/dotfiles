@@ -1155,7 +1155,6 @@ python-pandas
 python-paramiko
 python-parsedatetime
 python-parso
-python-pdm-backend
 python-pexpect
 python-pillow
 python-pip
@@ -1177,7 +1176,6 @@ python-pygments
 python-pyicu
 python-pynacl
 python-pyparsing
-python-pyproject-metadata
 python-pyserial
 python-pysocks
 python-pytest
@@ -1221,7 +1219,6 @@ python-termcolor
 python-text-unidecode
 python-tlsh
 python-tomli
-python-tomli-w
 python-tomlkit
 python-tornado
 python-traitlets
