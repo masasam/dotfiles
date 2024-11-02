@@ -67,7 +67,7 @@ print_events = false
 render_timer = false
 
 [font]
-size = 29
+size = 29.5
 
 [font.bold]
 family = "Cica"
