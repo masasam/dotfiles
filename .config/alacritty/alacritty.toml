@@ -89,13 +89,14 @@ y = 0
 
 [[keyboard.bindings]]
 action = "Paste"
-  key = "V"
-  mods= "Control"
+key = "V"
+mods= "Control|Shift"
 
 [[keyboard.bindings]]
 action = "Copy"
-key = "Copy"
-
+key = "C"
+mods= "Control|Shift"
+  
 [[keyboard.bindings]]
 action = "ClearLogNotice"
 key = "L"
