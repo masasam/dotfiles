@@ -1119,6 +1119,7 @@ python-invoke
 python-ipykernel
 python-ipywidgets
 python-isodate
+python-jaraco.collections
 python-jaraco.context
 python-jaraco.functools
 python-jaraco.text
