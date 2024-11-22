@@ -86,7 +86,6 @@
   (package-install 'elixir-mode)
   (package-install 'ellama)
   (package-install 'emacsql)
-  (package-install 'emacsql-sqlite)
   (package-install 'epl)
   (package-install 'espy)
   (package-install 'exec-path-from-shell)
