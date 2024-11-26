@@ -479,6 +479,7 @@ You can make install from here
 	yay -S slack-desktop
 	yay -S trdsql-bin
 	yay -S tree-sitter-rust
+	yay -S turso-cli-bin
 	yay -S volta-bin
 	yay -S yay
 	yay -S zoom
