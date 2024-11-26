@@ -1240,8 +1240,11 @@ python-xmltodict
 python-yaml
 python-zipp
 python-zstandard
+qcustomplot
+qhexedit2
 qhull
 qpdf
+qscintilla-qt5
 qt5-base
 qt5-declarative
 qt5-location
@@ -1331,7 +1334,9 @@ speedtest-cli
 speex
 speexdsp
 spirv-tools
+sqlcipher
 sqlite
+sqlitebrowser
 sratom
 srt
 sshfs
