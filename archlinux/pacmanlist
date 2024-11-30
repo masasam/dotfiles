@@ -242,6 +242,7 @@ gnome-screenshot
 gnome-session
 gnome-settings-daemon
 gnome-shell
+gnome-sound-recorder
 gnome-themes-extra
 gnome-tweaks
 gnu-netcat
@@ -275,6 +276,7 @@ gssdp
 gst-plugins-bad-libs
 gst-plugins-base
 gst-plugins-base-libs
+gst-plugins-good
 gstreamer
 gtest
 gtk-update-icon-cache
@@ -543,6 +545,7 @@ iio-sensor-proxy
 ijs
 imagemagick
 imath
+imlib2
 inkscape
 intel-gmmlib
 intel-media-driver
@@ -619,6 +622,7 @@ libbpf
 libbs2b
 libbsd
 libbytesize
+libcaca
 libcamera
 libcamera-ipa
 libcanberra
@@ -650,6 +654,7 @@ libdisplay-info
 libdom
 libdovi
 libdrm
+libdv
 libdvdnav
 libdvdread
 libe-book
@@ -796,6 +801,7 @@ libsamplerate
 libsasl
 libseccomp
 libsecret
+libshout
 libsigc++
 libsigsegv
 libsixel
@@ -1354,6 +1360,7 @@ systemd
 systemd-libs
 systemd-sysvcompat
 t1lib
+taglib
 talloc
 tar
 tcl
@@ -1391,6 +1398,7 @@ tslib
 ttf-jetbrains-mono
 ttf-liberation
 ttf-roboto
+twolame
 typescript
 typescript-language-server
 tzdata
