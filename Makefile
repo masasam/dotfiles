@@ -261,10 +261,6 @@ podman: ## Podman initial setup
 	$(PACMAN) $@
 	$(SYSTEMD_ENABLE) io.$@.service
 
-php: ## Init php setting
-	$(PACMAN) $@ $@-intl
-	sudo ln -vsf {${PWD},}/etc/php/php.ini
-
 circle-ci-cli: ## Install circle ci cli and setup
 	curl -fLSs https://circle.ci/cli | sudo bash
 	circleci update install
