@@ -396,11 +396,6 @@ beekeeper: ## Setup beekeeper-studio
 	test -L ${HOME}/.config/$@-studio || rm -rf ${HOME}/.config/$@-studio
 	ln -vsfn ${HOME}/{backup,.config}/$@-studio
 
-dbeaver: ## Setup dbeaver
-	$(PACMAN) jdk-openjdk
-	$(PACMAN) dbeaver
-	sudo archlinux-java set java-21-openjdk
-
 gh: ## Install and setup github-cli
 	$(PACMAN) github-cli
 	test -L ${HOME}/.config/gh || rm -rf ${HOME}/.config/gh
