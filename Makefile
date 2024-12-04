@@ -37,7 +37,6 @@ NODE_PKGS	+= indium logo.svg @marp-team/marp-cli jshint
 
 PACMAN		:= sudo pacman -S 
 SYSTEMD_ENABLE	:= sudo systemctl --now enable
-FLUTTER_URL	:= https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.22.0-stable.tar.xz
 
 .DEFAULT_GOAL := help
 .PHONY: all allinstall nextinstall allupdate allbackup
@@ -355,10 +354,6 @@ android: ## Install android-studio
 dart: ## Install dart and language server
 	$(PACMAN) $@
 	pub global activate $@_language_server
-
-flutter: ## Install flutter
-	mkdir -p ~/src/github.com/$@
-	wget -O- $(FLUTTER_URL) | tar -C ~/src/github.com/$@ xf-
 
 spotify: ## Install spotify
 	gpg --keyserver hkp://keyserver.ubuntu.com --receive-keys 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
