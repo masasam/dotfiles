@@ -457,6 +457,7 @@ ollama: ## Init ollama
 	$(PACMAN) $@
 	$(SYSTEMD_ENABLE) $@.service
 	ollama pull llama3.2
+	ollama pull incept5/llama3.1-claude
 	ollama pull lucas2024/gemma-2-2b-jpn-it:q8_0
 
 edge: ## Install edge
