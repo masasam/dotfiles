@@ -460,8 +460,8 @@ You can make install from here
 	sudo pacman -S guetzli fabric gtop pass github-cli libvterm ruff
 	sudo pacman -S perl-net-ip hex miller btop diffoscope dust yq
 	sudo pacman -S sslscan abiword pyright miniserve fdupes deno
-	sudo pacman -S serverless mold fx httpie bash-language-server
-	sudo pacman -S difftastic ollama ghq sqlitebrowser gnome-sound-recorder
+	sudo pacman -S mold fx httpie bash-language-server sqlitebrowser
+	sudo pacman -S difftastic ollama ghq gnome-sound-recorder
 
 ![activity](https://raw.githubusercontent.com/masasam/image/image/activity.png)
 
