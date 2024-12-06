@@ -236,13 +236,6 @@ If the region is inactive, `backward-kill-word'."
 (setq auto-mode-alist (append '(("/tmp/mutt.*" . mail-mode)) auto-mode-alist))
 
 
-;; Set buffer that can not be killed
-(with-current-buffer "*scratch*"
-  (emacs-lock-mode 'kill))
-(with-current-buffer "*Messages*"
-  (emacs-lock-mode 'kill))
-
-
 (defun firebase-deploy ()
   "Firebase deploy command."
   (interactive)
