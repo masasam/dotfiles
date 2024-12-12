@@ -377,7 +377,7 @@ yay: ## Install yay using yay
 	yay -S $@
 
 aur: ## Install arch linux AUR packages using yay
-	yay -S duckdb-bin downgrade git-secrets firebase-tools-bin pscale-cli rgxg slack-desktop trdsql-bin tree-sitter-rust turso-cli-bin volta-bin zoom
+	yay -S duckdb-bin downgrade git-secrets firebase-tools-bin limbo-bin pscale-cli rgxg slack-desktop trdsql-bin tree-sitter-rust turso-cli-bin volta-bin zoom
 
 sequeler: ## Install gui database tools
 	yay -S $@-git
