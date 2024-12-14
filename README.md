@@ -468,6 +468,7 @@ You can make install from here
 #### Install using yay
 
 	yay -S beekeeper-studio-bin
+	yay -S bun-bin
 	yay -S downgrade
 	yay -S duckdb-bin
 	yay -S firebase-tools-bin
