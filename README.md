@@ -534,7 +534,7 @@ Google Kubernetes Engine
 
 kind(Kubernetes IN Docker)
 
-	go install sigs.k8s.io/kind@v0.25.0
+	go install sigs.k8s.io/kind@v0.26.0
 	sudo sh -c "kind completion zsh > /usr/share/zsh/site-functions/_kind"
 
 minikube with kvm2
