@@ -1,3 +1,4 @@
+7zip
 aalib
 abiword
 abseil-cpp
@@ -999,7 +1000,6 @@ orc
 osinfo-db
 otf-ipafont
 p11-kit
-p7zip
 packer
 pacman
 pacman-contrib
@@ -1102,7 +1102,6 @@ python-fastjsonschema
 python-filelock
 python-fluidity
 python-fonttools
-python-future
 python-gobject
 python-google-api-core
 python-google-api-python-client
@@ -1134,6 +1133,7 @@ python-jupyter-client
 python-jupyter-core
 python-kiwisolver
 python-leather
+python-legacy-cgi
 python-lexicon
 python-libarchive-c
 python-lockfile
