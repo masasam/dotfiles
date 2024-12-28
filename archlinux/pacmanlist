@@ -1268,6 +1268,7 @@ rapidjson
 raptor
 rasqal
 rav1e
+rbenv
 rbw
 rclone
 re2
@@ -1281,6 +1282,7 @@ rsync
 rtkit
 rubberband
 ruby
+ruby-build
 ruby-bundled-gems
 ruby-bundler
 ruby-debug
