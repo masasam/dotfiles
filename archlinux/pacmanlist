@@ -154,7 +154,6 @@ exempi
 exiv2
 expat
 expect
-ext4magic
 eza
 fabric
 fakeroot
@@ -181,7 +180,6 @@ freeglut
 freetype2
 fribidi
 fuse-common
-fuse2
 fuse3
 fwupd
 fwupd-efi
@@ -979,7 +977,6 @@ npm
 npth
 nspr
 nss
-ntfs-3g
 numactl
 oath-toolkit
 obs-studio
@@ -1370,7 +1367,6 @@ tcpdump
 tdb
 tecla
 terraform
-testdisk
 tevent
 texinfo
 texlive-basic
