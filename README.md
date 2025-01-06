@@ -317,7 +317,7 @@ Gnome can be put as small as necessary
 	pacman -S gnome-keyring
 	pacman -S nautilus
 
-Terminal uses [alacritty](https://github.com/alacritty/alacritty) and [wezterm](https://github.com/wez/wezterm) and [termite](https://github.com/aperezdc/termite)
+Terminal uses [ghostty](https://github.com/ghostty-org/ghostty) and [alacritty](https://github.com/alacritty/alacritty) and [wezterm](https://github.com/wez/wezterm) and [termite](https://github.com/aperezdc/termite)
 
 	pacman -S alacritty wezterm
 
@@ -564,7 +564,7 @@ minikube with kvm2
 
 ![terminal](https://raw.githubusercontent.com/masasam/image/image/tmux.png)
 
-Terminal uses [alacritty](https://github.com/alacritty/alacritty) and [wezterm](https://github.com/wez/wezterm) and [termite](https://github.com/aperezdc/termite)
+Terminal uses [ghostty](https://github.com/ghostty-org/ghostty) and [alacritty](https://github.com/alacritty/alacritty) and [wezterm](https://github.com/wez/wezterm) and [termite](https://github.com/aperezdc/termite)
 
 # TLP
 
