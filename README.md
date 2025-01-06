@@ -319,7 +319,7 @@ Gnome can be put as small as necessary
 
 Terminal uses [ghostty](https://github.com/ghostty-org/ghostty) and [alacritty](https://github.com/alacritty/alacritty) and [wezterm](https://github.com/wez/wezterm) and [termite](https://github.com/aperezdc/termite)
 
-	pacman -S alacritty wezterm
+	pacman -S ghostty alacritty wezterm
 
 Enable graphical login with gdm
 
@@ -437,8 +437,8 @@ You can make install from here
 	sudo pacman -S linux-docs pwgen gauche screen ipcalc rbw
 	sudo pacman -S arch-install-scripts ctags parallel opencv
 	sudo pacman -S pandoc texlive-langjapanese texlive-latexextra
-	sudo pacman -S shellcheck cscope typescript packer alacritty
-	sudo pacman -S noto-fonts-cjk arc-gtk-theme jq dnsmasq eza
+	sudo pacman -S shellcheck cscope typescript packer eza
+	sudo pacman -S noto-fonts-cjk arc-gtk-theme jq dnsmasq
 	sudo pacman -S zsh-syntax-highlighting terraform wl-clipboard
 	sudo pacman -S npm llvm llvm-libs lldb hdparm rxvt-unicode 
 	sudo pacman -S mariadb-clients postgresql-libs tig lsof fzf
