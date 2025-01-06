@@ -1,0 +1,20 @@
+font-family = Cica
+font-style = Regular
+font-size = 26
+font-thicken = true
+
+cursor-style = block
+cursor-style-blink = true
+
+window-width = 120
+window-height = 45
+window-padding-x = 4
+
+theme = catppuccin-mocha
+window-padding-x = 20
+window-padding-y = 5
+window-padding-balance = true
+window-theme = ghostty
+background-opacity = 0.85
+background-blur-radius = 20
+macos-titlebar-style = transparent

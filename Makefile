@@ -135,6 +135,12 @@ alacritty: ## Init alacritty
 	mkdir ${HOME}/.config/$@
 	ln -vsf {${PWD},${HOME}}/.config/$@/$@.toml
 
+ghostty: ## Init ghostty
+	$(PACMAN) $@
+	test -L ${HOME}/.config/$@/config || rm -rf ${HOME}/.config/$@/config
+	mkdir ${HOME}/.config/$@
+	ln -vsf {${PWD},${HOME}}/.config/$@/config
+
 urxvt: ## Init rxvt-unicode terminal
 	$(PACMAN) $@-perls rxvt-unicode
 	ln -vsf ${PWD}/.Xresources ${HOME}/.Xresources
@@ -598,7 +604,7 @@ testpath: ## Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: dconfsetting rclone gnupg ssh install init keyring termite alacritty wezterm yay tlp pipewire-pulse ttf-cica dnsmasq goinstall ibusmozc neomutt docker lvfs toggle aur beekeeper kind gtk-theme chrome uv pipinstall
+allinstall: dconfsetting rclone gnupg ssh install init keyring termite ghostty alacritty wezterm yay tlp pipewire-pulse ttf-cica dnsmasq goinstall ibusmozc neomutt docker lvfs toggle aur beekeeper kind gtk-theme chrome uv pipinstall
 
 nextinstall: mysql mycli pgcli pnpminstall rubygem rbenv rustinstall postgresql zeal gcloud awsv2 eralchemy gh
 
