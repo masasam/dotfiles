@@ -208,6 +208,9 @@ geos
 gettext
 ghc-libs
 ghostscript
+ghostty
+ghostty-shell-integration
+ghostty-terminfo
 ghq
 giflib
 gimp
