@@ -1095,7 +1095,6 @@ python-dbus
 python-decorator
 python-defusedxml
 python-deprecated
-python-distlib
 python-distro
 python-docutils
 python-et-xmlfile
@@ -1165,7 +1164,6 @@ python-parso
 python-pexpect
 python-pillow
 python-pip
-python-pipenv
 python-platformdirs
 python-pluggy
 python-ply
@@ -1236,8 +1234,6 @@ python-uc-micro-py
 python-uritemplate
 python-urllib3
 python-validate-pyproject
-python-virtualenv
-python-virtualenv-clone
 python-wcwidth
 python-wheel
 python-wrapt
