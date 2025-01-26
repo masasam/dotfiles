@@ -908,6 +908,7 @@ linux-docs
 linux-firmware
 linux-firmware-whence
 lldb
+llhttp
 llvm
 llvm-libs
 lm_sensors
