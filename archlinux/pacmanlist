@@ -1316,7 +1316,7 @@ sbc
 sbcl
 scour
 screen
-sdl2
+sdl3
 seahorse
 sed
 semver
@@ -1455,7 +1455,6 @@ x11-ssh-askpass
 x264
 x265
 xapian-core
-xcb-imdkit
 xcb-proto
 xcb-util
 xcb-util-cursor
