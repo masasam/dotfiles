@@ -1316,6 +1316,7 @@ sbc
 sbcl
 scour
 screen
+sdl2-compat
 sdl3
 seahorse
 sed
