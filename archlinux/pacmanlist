@@ -1083,6 +1083,7 @@ python-cachetools
 python-cairo
 python-certifi
 python-cffi
+python-cgi
 python-chardet
 python-charset-normalizer
 python-colorama
