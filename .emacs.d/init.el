@@ -210,7 +210,6 @@
   (package-install 'web-mode)
   (package-install 'wgrep)
   (package-install 'wgrep-ag)
-  (package-install 'which-key)
   (package-install 'with-editor)
   (package-install 'yaml-mode)
   (package-install 'yasnippet)
