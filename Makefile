@@ -6,7 +6,7 @@ BASE_PKGS	+= pciutils psmisc shadow util-linux bzip2 gzip xz licenses pacman sys
 BASE_PKGS	+= iputils iproute2 autoconf sudo automake binutils bison fakeroot flex gcc groff libtool m4 
 BASE_PKGS	+= make patch pkgconf texinfo which archlinux-keyring debugedit
 
-PACKAGES	:= base base-devel go zsh git vim tmux keychain evince unrar hugo ethtool zsh-completions xsel emacs libgccjit gvfs-smb
+PACKAGES	:= base base-devel go zsh git vim tmux keychain evince unrar hugo ethtool zsh-completions xsel emacs gvfs-smb
 PACKAGES	+= unace iperf valgrind noto-fonts-emoji inkscape file-roller xclip atool debootstrap oath-toolkit
 PACKAGES	+= imagemagick lynx the_silver_searcher cifs-utils elinks flameshot ruby-rdoc ipcalc traceroute
 PACKAGES	+= cups-pdf firefox firefox-i18n-ja gimp strace lhasa hub bookworm tig sysprof pkgfile p7zip
@@ -25,7 +25,7 @@ PACKAGES	+= guetzli fabric detox usleep libvterm bind asunder lame git-lfs hex m
 PACKAGES	+= diffoscope dust rbw eza sslscan abiword pyright miniserve fdupes deno mold fx httpie
 PACKAGES	+= gron typescript-language-server dateutils time xsv rust git-delta zellij jc ruff speedtest-cli
 PACKAGES	+= dconf-editor ghq gopls difftastic csvlens cloc eslint prettier trivy sqlitebrowser
-PACKAGES	+= gnome-sound-recorder
+PACKAGES	+= gnome-sound-recorder libgccjit
 
 PIP_PKGS	:= python-pip python-pipenv python-seaborn python-ipywidgets python-jupyter-client
 PIP_PKGS	+= python-prompt_toolkit python-faker python-matplotlib python-nose python-pandas
