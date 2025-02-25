@@ -1198,6 +1198,7 @@ python-requests
 python-requests-toolbelt
 python-resolvelib
 python-rich
+python-roman-numerals-py
 python-rpds-py
 python-rsa
 python-ruamel-yaml
