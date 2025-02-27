@@ -7,7 +7,7 @@
 (require 'flymake-diagnostic-at-point)
 (with-eval-after-load 'flymake
   (add-hook 'flymake-mode-hook #'flymake-diagnostic-at-point-mode)
-  (add-hook 'emacs-lisp-mode-hook #'package-lint-flymake-setup)
+  ;; (add-hook 'emacs-lisp-mode-hook #'package-lint-flymake-setup)
   (set-face-attribute 'popup-tip-face nil
 		      :background "dark slate gray" :foreground "white" :underline nil))
 (remove-hook 'flymake-diagnostic-functions 'flymake-proc-legacy-flymake)
