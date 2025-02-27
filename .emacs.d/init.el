@@ -78,7 +78,6 @@
   (package-install 'easy-hugo)
   (package-install 'easy-jekyll)
   (package-install 'edit-indirect)
-  (package-install 'editorconfig)
   (package-install 'editorconfig-generate)
   (when (< emacs-major-version 29)
     (package-install 'eglot))
