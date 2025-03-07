@@ -614,6 +614,7 @@ libatomic_ops
 libavc1394
 libavif
 libb2
+libblake3
 libblockdev
 libblockdev-crypto
 libblockdev-fs
