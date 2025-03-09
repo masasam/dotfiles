@@ -1127,6 +1127,7 @@ python-inflect
 python-iniconfig
 python-invoke
 python-ipykernel
+python-ipython-pygments-lexers
 python-ipywidgets
 python-isodate
 python-jaraco.collections
