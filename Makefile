@@ -463,7 +463,7 @@ ollama: ## Init ollama
 	$(PACMAN) $@
 	$(SYSTEMD_ENABLE) $@.service
 	ollama pull gemma3:12b
-	ollama pull deepseek-r1:8b
+	ollama pull deepseek-r1:14b
 
 edge: ## Install edge
 	yay -S microsoft-edge-stable-bin
