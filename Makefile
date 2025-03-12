@@ -462,10 +462,8 @@ chrome: ## Install chrome and noto-fonts and browserpass
 ollama: ## Init ollama
 	$(PACMAN) $@
 	$(SYSTEMD_ENABLE) $@.service
-	ollama pull deepseek-r1:1.5b
-	ollama pull llama3.2
-	ollama pull incept5/llama3.1-claude
-	ollama pull lucas2024/gemma-2-2b-jpn-it:q8_0
+	ollama pull gemma3:12b
+	ollama pull deepseek-r1:8b
 
 edge: ## Install edge
 	yay -S microsoft-edge-stable-bin
