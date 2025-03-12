@@ -7,7 +7,7 @@
 (autoload 'magit-status "magit" nil t)
 (bind-key "C-x g" 'magit-status)
 (bind-key "C-x G" 'magit-blame)
-
+(setq magit-show-long-lines-warning nil)
 
 ;; keychain-environment
 (keychain-refresh-environment)
