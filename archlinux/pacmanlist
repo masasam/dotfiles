@@ -20,6 +20,7 @@ ansible-core
 aom
 apparmor
 appstream
+appstream-glib
 arc-gtk-theme
 arch-install-scripts
 archlinux-keyring
