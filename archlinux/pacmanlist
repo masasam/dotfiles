@@ -7,6 +7,7 @@ acl
 adapta-gtk-theme
 adobe-source-code-pro-fonts
 adwaita-cursors
+adwaita-fonts
 adwaita-icon-theme
 adwaita-icon-theme-legacy
 alacritty
@@ -144,6 +145,8 @@ e2fsprogs
 editorconfig-core-c
 efibootmgr
 efivar
+egl-wayland
+eglexternalplatform
 elinks
 emacs
 enchant
@@ -293,6 +296,7 @@ gtop
 guetzli
 guile
 gupnp
+gupnp-dlna
 gupnp-igd
 gvfs
 gvfs-smb
