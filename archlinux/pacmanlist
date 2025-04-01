@@ -22,7 +22,6 @@ aom
 apparmor
 appstream
 appstream-glib
-arc-gtk-theme
 arch-install-scripts
 archlinux-keyring
 argon2
@@ -188,7 +187,6 @@ fwupd
 fwupd-efi
 fx
 fzf
-gauche
 gawk
 gc
 gcab
@@ -1065,7 +1063,6 @@ proj
 protobuf
 protobuf-c
 prrte
-psiconv
 psmisc
 pulse-native-provider
 pv
@@ -1342,7 +1339,6 @@ shared-mime-info
 shellcheck
 simdjson
 slang
-slib
 smartmontools
 smbclient
 snappy
