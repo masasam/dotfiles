@@ -1240,6 +1240,7 @@ python-tornado
 python-traitlets
 python-trove-classifiers
 python-typeguard
+python-typing-inspection
 python-typing_extensions
 python-tzdata
 python-uc-micro-py
