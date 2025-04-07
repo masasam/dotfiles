@@ -241,6 +241,7 @@ gnome-desktop-common
 gnome-keybindings
 gnome-keyring
 gnome-logs
+gnome-mimeapps
 gnome-online-accounts
 gnome-screenshot
 gnome-session
