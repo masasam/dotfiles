@@ -259,6 +259,7 @@ go
 gobject-introspection-runtime
 goffice
 gopls
+gparted
 gpaste
 gperftools
 gpgme
@@ -355,7 +356,6 @@ haskell-crypton-x509
 haskell-crypton-x509-store
 haskell-crypton-x509-system
 haskell-crypton-x509-validation
-haskell-data-array-byte
 haskell-data-default
 haskell-data-default-class
 haskell-data-default-instances-containers
