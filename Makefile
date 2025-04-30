@@ -463,6 +463,7 @@ ollama: ## Init ollama
 	$(PACMAN) $@
 	$(SYSTEMD_ENABLE) $@.service
 	ollama pull gemma3:12b
+	ollama pull qwen3:14b
 	ollama pull deepseek-r1:14b
 
 edge: ## Install edge
