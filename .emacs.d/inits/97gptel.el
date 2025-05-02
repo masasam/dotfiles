@@ -9,6 +9,8 @@
                       :stream t
                       :models '(qwen3:30b-a3b)))
 
+(load "~/backup/emacs/gemini.el")
+
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:
