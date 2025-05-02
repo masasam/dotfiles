@@ -11,7 +11,7 @@
                            :chat-model "qwen3:30b-a3b"
                            :embedding-model "qwen3:30b-a3b"))
   (setopt ellama-providers
-        '(("llama3.2" . (make-llm-ollama
+        '(("gemma3" . (make-llm-ollama
                          :chat-model "gemma3:12b"
                          :embedding-model "gemma3:12b")))))
 
