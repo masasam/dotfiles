@@ -108,6 +108,7 @@
   (package-install 'google-c-style)
   (package-install 'google-this)
   (package-install 'google-translate)
+  (package-install 'gptel)
   (package-install 'graphql-mode)
   (package-install 'groovy-mode)
   (package-install 'haml-mode)
