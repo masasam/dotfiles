@@ -9,7 +9,7 @@
                       :stream t
                       :models '(qwen3:30b-a3b)))
 
-  ;; Local Variables:
-  ;; byte-compile-warnings: (not free-vars)
-  ;; End:
+;; Local Variables:
+;; byte-compile-warnings: (not free-vars)
+;; End:
 ;;; 97gptel.el ends here
