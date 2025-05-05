@@ -14,7 +14,7 @@ PACKAGES	+= rsync nodejs debian-archive-keyring gauche cpio aria2 nmap poppler-d
 PACKAGES	+= aspell aspell-en screen mosh diskus gdb wmctrl pwgen linux-docs htop tcpdump gvfs lzop fzf
 PACKAGES	+= gpaste optipng arch-install-scripts pandoc jq pkgstats ruby highlight alsa-utils geckodriver
 PACKAGES	+= texlive-langjapanese tokei texlive-latexextra ctags hdparm eog curl parallel npm yq ansible
-PACKAGES	+= typescript llvm llvm-libs lldb tree w3m whois csvkit pass zsh-syntax-highlighting shellcheck
+PACKAGES	+= typescript llvm llvm-libs lldb tree w3m whois csvkit zsh-syntax-highlighting shellcheck
 PACKAGES	+= bash-completion mathjax expect obs-studio cscope postgresql-libs pdfgrep gnu-netcat cmatrix btop
 PACKAGES	+= jpegoptim nethogs plocate pacman-contrib x11-ssh-askpass libreoffice-fresh-ja tldr streamlink
 PACKAGES	+= jhead peek ncdu gnome-screenshot sshfs fping syncthing terraform bat lshw xdotool sshuttle packer 
@@ -25,7 +25,7 @@ PACKAGES	+= guetzli fabric detox usleep libvterm bind asunder lame git-lfs hex m
 PACKAGES	+= diffoscope dust rbw eza sslscan abiword pyright miniserve fdupes deno mold fx httpie
 PACKAGES	+= gron typescript-language-server dateutils time xsv rust git-delta zellij jc ruff speedtest-cli
 PACKAGES	+= dconf-editor ghq gopls difftastic csvlens cloc eslint prettier trivy sqlitebrowser
-PACKAGES	+= gnome-sound-recorder
+PACKAGES	+= gnome-sound-recorder pass pass-otp
 
 PIP_PKGS	:= python-pip python-pipenv python-seaborn python-ipywidgets python-jupyter-client
 PIP_PKGS	+= python-prompt_toolkit python-faker python-matplotlib python-nose python-pandas
