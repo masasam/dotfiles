@@ -157,6 +157,7 @@
   ;; (package-install 'package-lint)
   ;; (package-install 'package-lint-flymake)
   (package-install 'page-break-lines)
+  (package-install 'pass)
   (package-install 'password-generator)
   (package-install 'pcre2el)
   (package-install 'php-mode)
