@@ -464,7 +464,6 @@ ollama: ## Init ollama
 	$(SYSTEMD_ENABLE) $@.service
 	ollama pull gemma3:12b
 	ollama pull qwen3:30b-a3b
-	ollama pull hf.co/Aratako/Qwen3-30B-A3B-ERP-v0.1-GGUF
 
 edge: ## Install edge
 	yay -S microsoft-edge-stable-bin
