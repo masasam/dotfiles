@@ -25,7 +25,7 @@ PACKAGES	+= guetzli fabric detox usleep libvterm bind asunder lame git-lfs hex m
 PACKAGES	+= diffoscope dust rbw eza sslscan abiword pyright miniserve fdupes deno mold fx httpie
 PACKAGES	+= gron typescript-language-server dateutils time xsv rust git-delta zellij jc ruff speedtest-cli
 PACKAGES	+= dconf-editor ghq gopls difftastic csvlens cloc eslint prettier trivy sqlitebrowser
-PACKAGES	+= gnome-sound-recorder pass html-xml-utils
+PACKAGES	+= gnome-sound-recorder pass
 
 PIP_PKGS	:= python-pip python-pipenv python-seaborn python-ipywidgets python-jupyter-client
 PIP_PKGS	+= python-prompt_toolkit python-faker python-matplotlib python-nose python-pandas
@@ -389,6 +389,7 @@ sequeler: ## Install gui database tools
 	yay -S $@-git
 
 beekeeper: ## Setup beekeeper-studio
+	$(PACMAN) html-xml-utils
 	yay -S $@-studio-bin
 	test -L ${HOME}/.config/$@-studio || rm -rf ${HOME}/.config/$@-studio
 	ln -vsfn ${HOME}/{backup,.config}/$@-studio
