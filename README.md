@@ -457,11 +457,11 @@ You can make install from here
 	sudo pacman -S obs-studio wireshark-cli browserpass-chromium
 	sudo pacman -S editorconfig-core-c watchexec browserpass-firefox
 	sudo pacman -S man-db baobab ioping mkcert detox git-lfs xsv
-	sudo pacman -S guetzli fabric gtop pass pass-otp github-cli libvterm ruff
+	sudo pacman -S guetzli fabric gtop pass github-cli libvterm ruff
 	sudo pacman -S perl-net-ip hex miller btop diffoscope dust yq
-	sudo pacman -S sslscan abiword pyright miniserve fdupes deno
+	sudo pacman -S sslscan abiword pyright miniserve fdupes deno ghq
 	sudo pacman -S mold fx httpie bash-language-server sqlitebrowser
-	sudo pacman -S difftastic ollama ghq gnome-sound-recorder
+	sudo pacman -S difftastic ollama gnome-sound-recorder html-xml-utils
 
 ![activity](https://raw.githubusercontent.com/masasam/image/image/activity.png)
 
