@@ -537,6 +537,7 @@ hidapi
 highlight
 highway
 hslua-cli
+html-xml-utils
 htop
 http-parser
 httpie
@@ -1025,7 +1026,6 @@ pangomm
 parallel
 parted
 pass
-pass-otp
 passim
 patch
 pciutils
@@ -1261,7 +1261,6 @@ qcustomplot
 qhexedit2
 qhull
 qpdf
-qrencode
 qscintilla-qt5
 qt5-base
 qt5-declarative
