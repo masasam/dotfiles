@@ -1386,7 +1386,6 @@ sysprof
 systemd
 systemd-libs
 systemd-sysvcompat
-t1lib
 taglib
 talloc
 tar
