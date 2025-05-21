@@ -511,7 +511,7 @@ screenkey: ## Init screenkey
 rbenv: ## Install rvenv ruby-build
 	yay -S $@
 	yay -S ruby-build
-	$@ install 3.1.4
+	$@ install 3.4.3
 	$@ rehash
 	gem install bundle
 
@@ -540,7 +540,7 @@ rails: rubygem rbenv ## Create rails project from scratch
 	fi
 	rbenv rehash
 	mkdir -p ${HOME}/src/github.com/masasam/$@; cd $$_
-	rbenv local 3.1.4
+	rbenv local 3.4.3
 	bundle init
 	echo "gem '$@', '~> 7.1.3'" >> Gemfile
 	bundle install --path vendor/bundle
