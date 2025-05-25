@@ -480,6 +480,7 @@ haskell-string-conversions
 haskell-syb
 haskell-tagged
 haskell-tagsoup
+haskell-tasty
 haskell-temporary
 haskell-texmath
 haskell-text-conversions
