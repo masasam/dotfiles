@@ -1236,6 +1236,7 @@ python-sqlalchemy
 python-stack-data
 python-termcolor
 python-text-unidecode
+python-tinycss2
 python-tlsh
 python-tomli
 python-tomlkit
@@ -1251,6 +1252,7 @@ python-uritemplate
 python-urllib3
 python-validate-pyproject
 python-wcwidth
+python-webencodings
 python-wheel
 python-wrapt
 python-xlrd
