@@ -55,6 +55,7 @@ blas
 blosc
 bluez
 bluez-libs
+bluez-obex
 bolt
 bookworm
 boost-libs
