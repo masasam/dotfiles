@@ -918,6 +918,15 @@ linux
 linux-api-headers
 linux-docs
 linux-firmware
+linux-firmware-amdgpu
+linux-firmware-atheros
+linux-firmware-broadcom
+linux-firmware-intel
+linux-firmware-mediatek
+linux-firmware-nvidia
+linux-firmware-other
+linux-firmware-radeon
+linux-firmware-realtek
 linux-firmware-whence
 lldb
 llhttp
