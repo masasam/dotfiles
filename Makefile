@@ -461,7 +461,7 @@ chrome: ## Install chrome and noto-fonts and browserpass
 	ln -vsfn ${HOME}/backup/browserpass ${HOME}/.password-store
 
 gemini: ## Init gemini-cli
-	pnpm install -g @google/gemini-cli
+	pnpm -g add @google/gemini-cli
 
 ollama: ## Init ollama
 	$(PACMAN) $@

@@ -514,7 +514,7 @@ You can make install from here
 	pnpm -g add netlify-cli
 	pnpm -g add ngrok
 	pnpm -g add now
-	pnpm -g @google/gemini-cli
+	pnpm -g add @google/gemini-cli
 
 #### Kubernetes
 
