@@ -460,6 +460,9 @@ chrome: ## Install chrome and noto-fonts and browserpass
 	test -L ${HOME}/.password-store || rm -rf ${HOME}/.password-store
 	ln -vsfn ${HOME}/backup/browserpass ${HOME}/.password-store
 
+gemini: ## Init gemini-cli
+	pnpm install -g @google/gemini-cli
+
 ollama: ## Init ollama
 	$(PACMAN) $@
 	$(SYSTEMD_ENABLE) $@.service
