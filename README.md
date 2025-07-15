@@ -454,7 +454,7 @@ You can make install from here
 	sudo pacman -S dart sxiv adapta-gtk-theme podman firejail
 	sudo pacman -S hexedit tokei aria2 discord pv findomain
 	sudo pacman -S gnome-logs qreator diskus sysprof bat mapnik
-	sudo pacman -S obs-studio wireshark-cli browserpass-chromium
+	sudo pacman -S obs-studio wireshark-cli gitui
 	sudo pacman -S editorconfig-core-c watchexec browserpass-firefox
 	sudo pacman -S man-db baobab ioping mkcert detox git-lfs xsv
 	sudo pacman -S guetzli fabric gtop pass github-cli libvterm ruff
