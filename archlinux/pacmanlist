@@ -222,6 +222,7 @@ git
 git-crypt
 git-delta
 git-lfs
+gitui
 gjs
 glib-networking
 glib2
