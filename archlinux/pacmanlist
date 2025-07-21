@@ -1090,6 +1090,7 @@ pwgen
 pyright
 python
 python-absl
+python-accessible-pygments
 python-agate
 python-agate-dbf
 python-agate-excel
