@@ -466,6 +466,7 @@ gemini: ## Init gemini-cli
 ollama: ## Init ollama
 	$(PACMAN) $@
 	$(SYSTEMD_ENABLE) $@.service
+	ollama pull gemma3n:latest
 	ollama pull gemma3:12b
 	ollama pull qwen3:30b-a3b
 
