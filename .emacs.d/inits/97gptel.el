@@ -3,11 +3,11 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
-(setq gptel-model 'qwen3:30b-a3b
+(setq gptel-model 'gemma3n:latest
       gptel-backend (gptel-make-ollama "Ollama"
                       :host "localhost:11434"
                       :stream t
-                      :models '(qwen3:30b-a3b)))
+                      :models '(gemma3n:latest)))
 
 (load "~/backup/emacs/gemini.el")
 
