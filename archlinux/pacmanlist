@@ -1109,7 +1109,6 @@ python-cachetools
 python-cairo
 python-certifi
 python-cffi
-python-cgi
 python-chardet
 python-charset-normalizer
 python-colorama
@@ -1252,6 +1251,7 @@ python-sphinxcontrib-qthelp
 python-sphinxcontrib-serializinghtml
 python-sqlalchemy
 python-stack-data
+python-standard-cgi
 python-termcolor
 python-text-unidecode
 python-tinycss2
