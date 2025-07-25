@@ -15,7 +15,7 @@
 ;; (bind-key "C-c C-r" 'ivy-resume)
 (bind-key "C-x C-c" 'counsel-M-x)
 ;; (bind-key "M-x" 'counsel-M-x)
-(bind-key "C-x C-f" 'counsel-find-file)
+;; (bind-key "C-x C-f" 'counsel-find-file)
 ;; (bind-key "M-y" 'counsel-yank-pop)
 ;; (bind-key "C-x m" 'counsel-mark-ring)
 ;; (bind-key "C-x F" 'find-file-in-project)
