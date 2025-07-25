@@ -267,6 +267,9 @@ If the region is inactive, `backward-kill-word'."
 
 (setq eww-search-prefix "https://www.google.co.jp/search?q=")
 
+;; avy
+(bind-key "C-r" 'avy-goto-word-1)
+
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:

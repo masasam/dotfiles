@@ -37,10 +37,6 @@
 ;; (setq swiper-include-line-number-in-search t)
 
 
-;; avy
-(bind-key "C-r" 'avy-goto-word-1)
-
-
 (defun swiper-region ()
   "If region is selected, `swiper-thing-at-point' with the keyword selected in region.
 If the region isn't selected, `swiper'."
