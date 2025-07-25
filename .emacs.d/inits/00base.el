@@ -8,6 +8,8 @@
 (load-theme 'dracula t)
 ;; (load-theme 'catppuccin :no-confirm)
 
+(setq-default tab-width 4)
+
 (setq inhibit-startup-buffer-menu t)
 
 ;; Change part of theme to your liking.
