@@ -150,6 +150,10 @@
 )
 
 
+(use-package marginalia
+  :init (marginalia-mode))
+
+
 (defun consult-line-or-swiper ()
   "If region is selected, `swiper-isearch-thing-at-point' with the keyword selected in region.
 If the region isn't selected, `swiper-isearch'."

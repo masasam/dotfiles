@@ -147,6 +147,7 @@
   (package-install 'macrostep)
   (package-install 'magit)
   (package-install 'magit-popup)
+  (package-install 'marginalia)
   (package-install 'markdown-mode)
   (package-install 'markdown-toc)
   (package-install 'material-theme)
