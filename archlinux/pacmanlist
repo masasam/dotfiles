@@ -448,6 +448,8 @@ haskell-pandoc-types
 haskell-pem
 haskell-pretty-show
 haskell-prettyprinter
+haskell-prettyprinter-ansi-terminal
+haskell-prettyprinter-compat-ansi-wl-pprint
 haskell-primitive
 haskell-psqueues
 haskell-quickcheck
