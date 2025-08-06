@@ -467,7 +467,7 @@ ollama: ## Init ollama
 	$(PACMAN) $@
 	$(SYSTEMD_ENABLE) $@.service
 	ollama pull gemma3n:latest
-	ollama pull gemma3:12b
+	ollama pull gpt-oss:latest
 	ollama pull qwen3:30b-a3b
 
 edge: ## Install edge
