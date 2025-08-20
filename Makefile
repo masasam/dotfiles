@@ -29,7 +29,7 @@ PACKAGES	+= gnome-sound-recorder pass gitui
 
 PIP_PKGS	:= python-pip python-pipenv python-seaborn python-ipywidgets python-jupyter-client
 PIP_PKGS	+= python-prompt_toolkit python-faker python-matplotlib python-nose python-pandas
-PIP_PKGS	+= python-numpy python-beautifulsoup4
+PIP_PKGS	+= python-numpy python-beautifulsoup4 mise
 
 NODE_PKGS	:= mermaid @mermaid-js/mermaid-cli fx intelephense
 NODE_PKGS	+= dockerfile-language-server-nodejs netlify-cli ngrok

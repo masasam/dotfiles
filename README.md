@@ -461,7 +461,7 @@ You can make install from here
 	sudo pacman -S perl-net-ip hex miller btop diffoscope dust yq
 	sudo pacman -S sslscan abiword pyright miniserve fdupes deno
 	sudo pacman -S mold fx httpie bash-language-server sqlitebrowser
-	sudo pacman -S difftastic ollama ghq gnome-sound-recorder
+	sudo pacman -S difftastic ollama ghq gnome-sound-recorder mise
 
 ![activity](https://raw.githubusercontent.com/masasam/image/image/activity.png)
 
