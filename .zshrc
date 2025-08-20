@@ -923,6 +923,10 @@ case ":$PATH:" in
 esac
 
 # uv
-echo 'eval "$(uv generate-shell-completion zsh)"'
+eval "$(uv generate-shell-completion zsh)"
+
+# mise
+eval "$(mise activate zsh)"
+export PATH="$HOME/.local/share/mise/shims:$PATH"
 
 # pnpm end
