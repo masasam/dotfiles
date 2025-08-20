@@ -29,7 +29,7 @@ PACKAGES	+= gnome-sound-recorder pass gitui
 
 PIP_PKGS	:= python-pip python-pipenv python-seaborn python-ipywidgets python-jupyter-client
 PIP_PKGS	+= python-prompt_toolkit python-faker python-matplotlib python-nose python-pandas
-PIP_PKGS	+= python-numpy python-beautifulsoup4 mise
+PIP_PKGS	+= python-numpy python-beautifulsoup4
 
 NODE_PKGS	:= mermaid @mermaid-js/mermaid-cli fx intelephense
 NODE_PKGS	+= dockerfile-language-server-nodejs netlify-cli ngrok
@@ -110,6 +110,11 @@ yarninstall: ## Install yarn global packages
 	$(PACMAN) yarn
 	mkdir -p ${HOME}/.node_modules
 	for pkg in $(NODE_PKGS); do yarn global add $$pkg; done
+
+mise: ## Setup mise
+	$(PACMAN) mise
+	mise use -g node
+	mise use -g usage
 
 pnpminstall: ## Install pnpm global packages
 	$(PACMAN) pnpm
