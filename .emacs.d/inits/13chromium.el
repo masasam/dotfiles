@@ -33,7 +33,7 @@
 
 (defun chrome-rails (input)
   "Open rails development server with chrome."
-(interactive (list (read-from-minibuffer "http://127.0.0.1:8000/" nil nil nil nil)))
+(interactive (list (read-from-minibuffer "http://127.0.0.1:3000/" nil nil nil nil)))
   (browse-url (concat "http://127.0.0.1:3000/" input)))
 
 (defun chrome-django (input)
