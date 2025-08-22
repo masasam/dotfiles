@@ -272,6 +272,13 @@ If the region is inactive, `backward-kill-word'."
 ;; avy
 (bind-key "C-r" 'avy-goto-word-1)
 
+;; dmacro
+(use-package dmacro
+  :ensure t
+  :init
+  (setq dmacro-key (kbd "C-t"))
+  (global-dmacro-mode))
+
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:

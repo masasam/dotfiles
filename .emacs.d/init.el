@@ -64,6 +64,7 @@
   (package-install 'dart-mode)
   (package-install 'dash)
   (package-install 'dashboard)
+  (package-install 'dmacro)
   (package-install 'deadgrep)
   (package-install 'difftastic)
   (package-install 'diff-hl)
