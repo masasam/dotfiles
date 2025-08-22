@@ -204,7 +204,6 @@
   (package-install 'transient)
   (package-install 'tree-mode)
   (package-install 'tree-sitter)
-  (package-install 'treesit-auto)
   (package-install 'tree-sitter-langs)
   (package-install 'typescript-mode)
   (package-install 'vertico)
