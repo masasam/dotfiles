@@ -3,10 +3,8 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
-(setup typescript-ts-mode
-  (:file-match "\\.ts\\'")
-  (:hook dprint-on-save-mode
-         eglot-ensure))
+(add-to-list 'auto-mode-alist (cons "\\.ts\\'" 'typescript-ts-mode))
+(add-hook 'dprint-on-save-mode 'eglot-ensure)
 
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
