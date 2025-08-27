@@ -417,6 +417,7 @@ haskell-http2
 haskell-hunit
 haskell-indexed-traversable
 haskell-indexed-traversable-instances
+haskell-integer-conversion
 haskell-integer-logarithms
 haskell-iproute
 haskell-ipynb
@@ -494,6 +495,7 @@ haskell-temporary
 haskell-texmath
 haskell-text-conversions
 haskell-text-icu
+haskell-text-iso8601
 haskell-text-short
 haskell-th-abstraction
 haskell-th-compat
