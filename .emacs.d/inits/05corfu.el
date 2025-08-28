@@ -6,9 +6,8 @@
 (use-package corfu
   :ensure t
   :custom ((corfu-auto t)
-           (corfu-auto-prefix 1)
-           (corfu-auto-delay 0.4)
-		   (corfu-popupinfo-delay 0))
+           (corfu-auto-prefix 1))
+  :bind ((:map corfu-map ("C-s" . corfu-insert-separator)))
   :init
   (global-corfu-mode)
   (corfu-popupinfo-mode))
