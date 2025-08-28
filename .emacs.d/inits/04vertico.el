@@ -9,6 +9,8 @@
   ;; (vertico-count 20) ;; Show more candidates
   ;; (vertico-resize t) ;; Grow and shrink the Vertico minibuffer
   (vertico-cycle nil) ;; Enable cycling for `vertico-next/previous'
+  :bind
+  ((:map vertico-map ("C-l" . vertico-directory-up)))
   :init
   (vertico-mode))
 ;; Persist history over Emacs restarts. Vertico sorts by history position.
