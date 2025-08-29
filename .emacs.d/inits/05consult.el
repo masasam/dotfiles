@@ -122,6 +122,10 @@ If the region isn't selected, `consult-line'."
     (consult-line (thing-at-point 'symbol))))
 
 
+;; Turn goto-line into consult-goto-line
+(defalias 'goto-line 'consult-goto-line)
+
+
 ;;;  consult-ghq
 (setq consult-ghq-find-function #'consult-find)
 (setq consult-ghq-grep-function #'consult-grep)
