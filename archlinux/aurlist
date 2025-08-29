@@ -5,7 +5,6 @@ bun-bin
 downgrade
 duckdb-bin
 firebase-tools-bin
-gauche
 git-secrets
 goobook-git
 google-chrome
