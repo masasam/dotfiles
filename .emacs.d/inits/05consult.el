@@ -45,7 +45,7 @@
          ("C-c G" . consult-grep)
          ("C-c g" . consult-git-grep)
          ("C-c r" . consult-ripgrep)
-         ("C-s" . consult-line-or-swiper)
+         ("C-s" . consult-line-or-region)
          ("M-s L" . consult-line-multi)
          ("M-s k" . consult-keep-lines)
          ("M-s u" . consult-focus-lines)
@@ -113,13 +113,13 @@
   :init (marginalia-mode))
 
 
-(defun consult-line-or-swiper ()
-  "If region is selected, `swiper-isearch-thing-at-point' with the keyword selected in region.
-If the region isn't selected, `swiper-isearch'."
+(defun consult-line-or-region ()
+  "If region is selected, `consult-line' with the keyword selected in region.
+If the region isn't selected, `consult-line'."
   (interactive)
   (if (not (use-region-p))
       (consult-line)
-    (swiper-isearch-thing-at-point)))
+    (consult-line (thing-at-point 'symbol))))
 
 
 ;;;  consult-ghq
