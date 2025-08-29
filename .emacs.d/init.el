@@ -55,6 +55,7 @@
   (package-install 'company-quickhelp)
   (package-install 'company-restclient)
   (package-install 'consult)
+  (package-install 'consult-ghq)
   (package-install 'corfu)
   (package-install 'counsel)
   (package-install 'counsel-chrome-bm)

@@ -164,6 +164,11 @@ If the region isn't selected, `swiper-isearch'."
       (consult-line)
     (swiper-isearch-thing-at-point)))
 
+
+;;;  consult-ghq
+(setq consult-ghq-find-function #'consult-find)
+(setq consult-ghq-grep-function #'consult-grep)
+
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:
