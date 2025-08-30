@@ -13,6 +13,8 @@
          ("C-c k" . consult-kmacro)
          ("C-c m" . consult-man)
          ("C-c i" . consult-info)
+		 ("C-x l" . consult-ghq-find)
+		 ("C-x C-l" . consult-ghq-switch-project)
          ([remap Info-search] . consult-info)
          ;; C-x bindings in `ctl-x-map'
          ("C-x M-:" . consult-complex-command) ;; orig. repeat-complex-command

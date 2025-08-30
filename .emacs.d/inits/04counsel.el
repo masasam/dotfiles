@@ -84,8 +84,8 @@ If the region isn't selected, `swiper-isearch'."
   (interactive)
   (counsel-find-file (ivy-read "ghq list: " (counsel-ghq--list-candidates))))
 
-(bind-key "C-x l" 'counsel-ghq)
-(bind-key "C-x C-l" 'counsel-projectile-switch-project)
+;; (bind-key "C-x l" 'counsel-ghq)
+;; (bind-key "C-x C-l" 'counsel-projectile-switch-project)
 
 
 ;; Local Variables:
