@@ -90,6 +90,8 @@
   (package-install 'elixir-mode)
   (package-install 'ellama)
   (package-install 'emacsql)
+  (package-install 'embark)
+  (package-install 'embark-consult)
   (package-install 'epl)
   (package-install 'espy)
   (package-install 'exec-path-from-shell)
@@ -238,3 +240,4 @@
 
 (provide 'init)
 ;;; init.el ends here
+(put 'dired-find-alternate-file 'disabled nil)
