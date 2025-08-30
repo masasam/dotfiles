@@ -113,13 +113,16 @@
   :init (marginalia-mode))
 
 
-(defun consult-line-or-region ()
-  "If region is selected, `consult-line' with the keyword selected in region.
+(defun consult-line-or-region (&optional at-point)
+  "When C-u is added, use the string at the cursor position. If region is selected, `consult-line' with the keyword selected in region.
 If the region isn't selected, `consult-line'."
-  (interactive)
-  (if (not (use-region-p))
+  (interactive "P")
+  (if at-point
+	  (consult-line (thing-at-point 'symbol))
+	(if (not (use-region-p))
       (consult-line)
-    (consult-line (thing-at-point 'symbol))))
+    (consult-line (buffer-substring-no-properties
+                   (region-beginning) (region-end))))))
 
 
 ;; Turn goto-line into consult-goto-line
