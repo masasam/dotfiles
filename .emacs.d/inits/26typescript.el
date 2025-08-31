@@ -7,10 +7,19 @@
   :config
   (setq treesit-font-lock-level 4))
 
-(add-to-list 'auto-mode-alist (cons "\\.tsx\\'" 'tsx-ts-mode))
-(add-to-list 'auto-mode-alist (cons "\\.ts\\'" 'typescript-ts-mode))
-(add-hook 'tsx-ts-mode 'eglot-ensure)
-(add-hook 'typescript-ts-mode 'eglot-ensure)
+(use-package eglot
+  :ensure t
+  :hook
+  (tsx-ts-mode . eglot-ensure)
+  ;; :config
+  ;; (add-to-list 'eglot-server-programs '((bitbake-mode) "bitbake-language-server"))
+  )
+
+(use-package tsx-ts-mode
+  :mode (("\\.ts[x]?\\'" . tsx-ts-mode)
+         ("\\.[m]ts\\'" . tsx-ts-mode)
+         ("\\.js[x]?\\'" . tsx-ts-mode)
+         ("\\.[mc]js\\'" . tsx-ts-mode)))
 
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
