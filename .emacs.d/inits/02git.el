@@ -17,7 +17,6 @@
   :ensure t
   :init
   (global-diff-hl-mode)
-  (diff-hl-margin-mode)
   (add-hook 'dired-mode-hook 'diff-hl-dired-mode)
   (unless (window-system) (diff-hl-margin-mode))
   :config
