@@ -13,9 +13,15 @@
 (keychain-refresh-environment)
 
 
-;; diff-hl
-(global-diff-hl-mode)
-(diff-hl-margin-mode)
-(add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
+(use-package diff-hl
+  :ensure t
+  :init
+  (global-diff-hl-mode)
+  (diff-hl-margin-mode)
+  (add-hook 'dired-mode-hook 'diff-hl-dired-mode)
+  (unless (window-system) (diff-hl-margin-mode))
+  :config
+  (add-hook 'magit-pre-refresh-hook 'diff-hl-magit-pre-refresh)
+  (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh))
 
 ;;; 02git.el ends here
