@@ -384,6 +384,7 @@ haskell-fgl
 haskell-file-embed
 haskell-foldable1-classes-compat
 haskell-generically
+haskell-generics-sop
 haskell-ghc-bignum-orphans
 haskell-glob
 haskell-gridtables
@@ -1002,6 +1003,7 @@ neomutt
 neon
 net-tools
 nethogs
+netscanner
 nettle
 networkmanager
 nftables
