@@ -53,15 +53,11 @@
 (add-hook 'term-mode-hook #'puni-disable-puni-mode)
 
 
-;; eldoc
-(setq eldoc-idle-delay 0.50)
-(setq eldoc-echo-area-use-multiline-p t)
-(add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
-(add-hook 'lisp-interaction-mode-hook 'turn-on-eldoc-mode)
-(add-hook 'ielm-mode-hook 'turn-on-eldoc-mode)
-
 (use-package eldoc-box
-  :hook (eglot-managed-mode . eldoc-box-hover-at-point-mode))
+  :hook ((eglot-managed-mode . eldoc-box-hover-mode)
+		 (emacs-lisp-mode-hook . eldoc-box-hover-mode)
+		 (lisp-interaction-mode-hook . eldoc-box-hover-mode)
+		 (ielm-mode-hook . eldoc-box-hover-mode)))
 
 
 ;; Local Variables:
