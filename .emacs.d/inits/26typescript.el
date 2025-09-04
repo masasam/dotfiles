@@ -10,6 +10,10 @@
          ("\\.[mc]js\\'" . tsx-ts-mode))
   :hook (tsx-ts-mode . eglot-ensure))
 
+(use-package json-ts-mode
+  :mode
+  ("\\.json\\'" . json-ts-mode))
+
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:
