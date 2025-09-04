@@ -3,10 +3,12 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
-(setq python-indent-guess-indent-offset-verbose nil)
-
-(add-hook 'python-mode-hook 'eglot-ensure)
-(add-hook 'eglot-managed-mode-hook 'flymake-ruff-load)
+(use-package python-ts-mode
+  :mode ("\\.py$" . python-ts-mode)
+  :config
+  (setq python-indent-guess-indent-offset-verbose nil)
+  :hook
+  (python-ts-mode . eglot-ensure))
 
 ;; (add-hook 'python-mode-hook (lambda ()
 ;;                               (require 'lsp-pyright)

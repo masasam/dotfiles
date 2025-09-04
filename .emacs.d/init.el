@@ -101,7 +101,6 @@
   (package-install 'find-file-in-project)
   (package-install 'flymake)
   (package-install 'flymake-diagnostic-at-point)
-  (package-install 'flymake-ruff)
   (package-install 'flyspell-correct)
   (package-install 'flyspell-correct-ivy)
   (package-install 'forge)
