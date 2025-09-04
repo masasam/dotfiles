@@ -4,10 +4,8 @@
 ;;(setq debug-on-error t)
 
 (use-package python-ts-mode
-  :mode
-  ("\\.py$" . python-ts-mode)
-  :hook
-  (python-ts-mode . eglot-ensure))
+  :mode ("\\.py$" . python-ts-mode)
+  :hook (python-ts-mode . eglot-ensure))
 
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
