@@ -5,7 +5,7 @@
 
 (use-package python-ts-mode
   :mode ("\\.py$" . python-ts-mode)
-  :config
+  ;; :config
   ;; (setq python-indent-guess-indent-offset-verbose nil)
   :hook
   (python-ts-mode . eglot-ensure))
