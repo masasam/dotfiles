@@ -3,10 +3,11 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
-(add-hook 'go-mode-hook 'eglot-ensure)
-(setq gofmt-command "goimports")
-(add-hook 'before-save-hook #'gofmt-before-save)
-(with-eval-after-load 'eglot
-  (add-to-list 'eglot-server-programs '(go-mode . ("gopls"))))
+(use-package go-ts-mode
+  :mode
+  (("\\.go$" . go-ts-mode)
+   ("/go\\.mod\\'" . go-mod-ts-mode))
+  :hook
+  (go-ts-mode . eglot-ensure))
 
 ;;; 23go.el ends here
