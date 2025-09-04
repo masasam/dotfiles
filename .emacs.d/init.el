@@ -86,6 +86,7 @@
   (package-install 'editorconfig-generate)
   (when (< emacs-major-version 29)
     (package-install 'eglot))
+  (package-install 'eldoc-box)
   (package-install 'elisp-slime-nav)
   (package-install 'elixir-mode)
   (package-install 'ellama)
