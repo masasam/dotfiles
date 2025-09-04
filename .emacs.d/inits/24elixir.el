@@ -7,4 +7,7 @@
   :mode ("\\.ex\\'" . elixir-ts-mode)
   :hook (elixir-ts-mode . eglot-ensure))
 
+;; Local Variables:
+;; byte-compile-warnings: (not free-vars)
+;; End:
 ;;; 24elixir.el ends here

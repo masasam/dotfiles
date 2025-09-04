@@ -16,4 +16,7 @@
 	     ("j" . deadgrep-forward)
 	     ("k" . deadgrep-backward)))
 
+;; Local Variables:
+;; byte-compile-warnings: (not free-vars)
+;; End:
 ;;; 19wgrep.el ends here

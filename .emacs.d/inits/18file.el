@@ -26,4 +26,7 @@
             (list (openwith-make-extension-regexp '("odp" "pps" "ppt" "pptx"))
                   "libreoffice" '("--impress" file))))
 
+;; Local Variables:
+;; byte-compile-warnings: (not free-vars)
+;; End:
 ;;; 18file.el ends here

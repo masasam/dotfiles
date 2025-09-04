@@ -44,4 +44,7 @@
   (interactive)
   (shell-command "xdg-open ~/Pictures"))
 
+;; Local Variables:
+;; byte-compile-warnings: (not free-vars)
+;; End:
 ;;; 12nautilus.el ends here

@@ -29,4 +29,7 @@
   (put 'cl-labels 'common-lisp-indent-function
        (get 'labels 'common-lisp-indent-function)))
 
+;; Local Variables:
+;; byte-compile-warnings: (not free-vars)
+;; End:
 ;;; 20elisp.el ends here

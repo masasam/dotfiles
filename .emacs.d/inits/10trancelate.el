@@ -52,4 +52,7 @@
 (defun google-translate--get-b-d1 ()
   (list 427110 1469889687))
 
+;; Local Variables:
+;; byte-compile-warnings: (not free-vars)
+;; End:
 ;;; 10trancelate.el ends here

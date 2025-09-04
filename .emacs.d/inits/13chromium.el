@@ -106,4 +106,7 @@
   (interactive)
   (browse-url "https://keep.new"))
 
+;; Local Variables:
+;; byte-compile-warnings: (not free-vars)
+;; End:
 ;;; 13chromium.el ends here

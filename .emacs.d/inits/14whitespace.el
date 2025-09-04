@@ -30,4 +30,7 @@
       (goto-char (point-max))
       (delete-blank-lines))))
 
+;; Local Variables:
+;; byte-compile-warnings: (not free-vars)
+;; End:
 ;;; 17whitespace.el ends here
