@@ -8,7 +8,8 @@
   (setq treesit-font-lock-level 4))
 
 (setq treesit-language-source-alist
-      '((json "https://github.com/tree-sitter/tree-sitter-json")))
+      '((json "https://github.com/tree-sitter/tree-sitter-json")
+		(rust "https://github.com/tree-sitter/tree-sitter-rust")))
 
 (dolist (element treesit-language-source-alist)
   (let* ((lang (car element)))

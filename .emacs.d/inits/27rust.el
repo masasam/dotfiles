@@ -3,7 +3,9 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
-(add-hook 'rust-mode-hook 'eglot-ensure)
+(use-package rust-ts-mode
+  :mode ("\\.rs\\'" . rust-ts-mode)
+  :hook (rust-ts-mode . eglot-ensure))
 
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
