@@ -23,7 +23,7 @@ PACKAGES	+= smartmontools gnome-logs wireshark-cli wl-clipboard lsof mapnik edit
 PACKAGES	+= gtop gopls convmv mpv browserpass-firefox man-db baobab ioping ruby-irb mkcert findomain
 PACKAGES	+= guetzli fabric detox usleep libvterm bind asunder lame git-lfs hex miller bash-language-server
 PACKAGES	+= diffoscope dust rbw eza sslscan abiword pyright miniserve fdupes deno mold fx httpie
-PACKAGES	+= gron typescript-language-server dateutils time xsv rust git-delta zellij jc ruff speedtest-cli
+PACKAGES	+= gron typescript-language-server dateutils time xsv rust rust-analyzer git-delta zellij jc ruff speedtest-cli
 PACKAGES	+= dconf-editor ghq gopls difftastic csvlens cloc eslint prettier trivy sqlitebrowser
 PACKAGES	+= gnome-sound-recorder pass gitui
 
@@ -119,11 +119,6 @@ mise: ## Setup mise
 pnpminstall: ## Install pnpm global packages
 	$(PACMAN) pnpm
 	for pkg in $(NODE_PKGS); do pnpm add -g $$pkg; done
-
-rustinstall: ## Install rust and rust language server
-	$(PACMAN) rustup
-	rustup default stable
-	rustup component add rls rust-analysis rust-src
 
 neomutt: ## Init neomutt mail client
 	$(PACMAN) neomutt
@@ -610,7 +605,7 @@ testpath: ## Echo PATH
 
 allinstall: dconfsetting rclone gnupg ssh install init keyring termite ghostty alacritty wezterm yay tlp pipewire-pulse ttf-cica dnsmasq goinstall ibusmozc neomutt docker lvfs toggle aur beekeeper kind gtk-theme chrome uv pipinstall
 
-nextinstall: mysql mycli pgcli pnpminstall rubygem rbenv rustinstall postgresql zeal gcloud awsv2 eralchemy gh
+nextinstall: mysql mycli pgcli pnpminstall rubygem rbenv postgresql zeal gcloud awsv2 eralchemy gh
 
 allupdate: update rustupdate goinstall pnpmupdate
 
