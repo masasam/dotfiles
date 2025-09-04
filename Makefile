@@ -498,14 +498,9 @@ mongodb: ## Mongodb initial setup
 gnuglobal: ${HOME}/.local ## Install gnu global
 	$(PACMAN) global python-pygments
 
-.ONESHELL:
-SHELL = /bin/bash
-elixir-ls: ## Install elixir-ls(Recompile if the version of elixir changes)
+elixir-ls: ## Install elixir-ls
 	$(PACMAN) elixir
-	git clone git@github.com:JakeBecker/elixir-ls.git ${HOME}/src/github.com/JakeBecker/$@
-	cd $$_ && mkdir rel
-	mix deps.get && mix compile
-	mix elixir_ls.release -o rel
+	yay -S $@
 
 emacs-devel: ## Install development version of emacs
 	git clone -b emacs-30 git@github.com:emacs-mirror/emacs.git ${HOME}/src/github.com/masasam/emacs

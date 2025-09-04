@@ -3,6 +3,8 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
-(add-hook 'elixir-mode-hook 'eglot-ensure)
+(use-package elixir-ts-mode
+  :mode ("\\.ex\\'" . elixir-ts-mode)
+  :hook (elixir-ts-mode . eglot-ensure))
 
 ;;; 24elixir.el ends here
