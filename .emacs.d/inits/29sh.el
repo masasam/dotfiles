@@ -3,11 +3,11 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
-(add-to-list 'major-mode-remap-alist '(sh-mode . bash-ts-mode))
-
 (use-package bash-ts-mode
   :hook
-  (bash-ts-mode . eglot-ensure))
+  (bash-ts-mode . eglot-ensure)
+  :init
+  (add-to-list 'major-mode-remap-alist '(sh-mode . bash-ts-mode)))
 
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)

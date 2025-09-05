@@ -3,11 +3,11 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
-(add-to-list 'major-mode-remap-alist '(javascript-mode . js-ts-mode))
-
 (use-package js-ts-mode
   :hook
-  (js-ts-mode . eglot-ensure))
+  (js-ts-mode . eglot-ensure)
+  :init
+  (add-to-list 'major-mode-remap-alist '(javascript-mode . js-ts-mode)))
 
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
