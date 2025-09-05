@@ -10,7 +10,8 @@
 
 (use-package json-ts-mode
   :mode
-  ("\\.json\\'" . json-ts-mode))
+  ("\\.json\\'" . json-ts-mode)
+  :hook (json-ts-mode . eglot-ensure))
 
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
