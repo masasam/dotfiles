@@ -25,7 +25,7 @@ PACKAGES	+= guetzli fabric detox usleep libvterm bind asunder lame git-lfs hex m
 PACKAGES	+= diffoscope dust rbw eza sslscan abiword pyright miniserve fdupes deno mold fx httpie
 PACKAGES	+= gron typescript-language-server dateutils time xsv rust rust-analyzer git-delta zellij jc ruff speedtest-cli
 PACKAGES	+= dconf-editor ghq gopls difftastic csvlens cloc eslint prettier trivy sqlitebrowser
-PACKAGES	+= gnome-sound-recorder pass gitui
+PACKAGES	+= gnome-sound-recorder pass gitui yaml-language-server
 
 PIP_PKGS	:= python-pip python-pipenv python-seaborn python-ipywidgets python-jupyter-client
 PIP_PKGS	+= python-prompt_toolkit python-faker python-matplotlib python-nose python-pandas
