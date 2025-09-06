@@ -1,4 +1,4 @@
-;;; 32repl.el --- 32repl.el
+;;; 40repl.el --- 40repl.el
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)
@@ -45,4 +45,4 @@ Python process.  This allows the process to start up."
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:
-;;; 32repl.el ends here
+;;; 40repl.el ends here
