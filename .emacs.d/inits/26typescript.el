@@ -4,9 +4,12 @@
 ;;(setq debug-on-error t)
 
 (use-package tsx-ts-mode
-  :mode (("\\.ts[x]?\\'" . tsx-ts-mode)
-         ("\\.[m]ts\\'" . tsx-ts-mode))
+  :mode ("\\.tsx\\'" . tsx-ts-mode)
   :hook (tsx-ts-mode . eglot-ensure))
+
+(use-package typescript-ts-mode
+  :mode ("\\.ts\\'" . typescript-ts-mode)
+  :hook (typescript-ts-mode . eglot-ensure))
 
 (use-package json-ts-mode
   :mode
