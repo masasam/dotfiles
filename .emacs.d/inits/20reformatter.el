@@ -10,6 +10,9 @@
   (reformatter-define web-format
     :program "prettier"
     :args `("--write" "--stdin-filepath" ,buffer-file-name))
+  ;; (reformatter-define web-format
+  ;; 	:program "biome"
+  ;; 	:args `("format" "--stdin-file-path" ,(buffer-file-name)))
   (reformatter-define python-format
     :program "ruff"
     :args `("format" "--stdin-filename" ,buffer-file-name))
