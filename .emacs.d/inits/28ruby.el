@@ -3,16 +3,14 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
-(setq ruby-insert-encoding-magic-comment nil)
-
-(add-hook 'ruby-mode-hook 'eglot-ensure)
-
-;; projectile rails
-(projectile-rails-global-mode)
-
-;; (add-to-list 'auto-mode-alist
-;;              '("\\(?:\\.rb\\|ru\\|rake\\|thor\\|jbuilder\\|gemspec\\|podspec\\|/\\(?:Gem\\|Rake\\|Cap\\|Thor\\|Vagrant\\|Guard\\|Pod\\)file\\)\\'" . enh-ruby-mode))
-;; (setq enh-ruby-add-encoding-comment-on-save nil)
+(use-package ruby-ts-mode
+  :hook
+  (ruby-ts-mode . eglot-ensure)
+  :init
+  (add-to-list 'major-mode-remap-alist '(ruby-mode . ruby-ts-mode))
+  :config
+  (setq ruby-insert-encoding-magic-comment nil)
+  (projectile-rails-global-mode))
 
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
