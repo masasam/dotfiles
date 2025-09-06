@@ -51,6 +51,7 @@ bazel
 bcg729
 bind
 binutils
+biome
 bison
 blas
 blosc
@@ -77,6 +78,7 @@ cairo
 cairomm
 cantarell-fonts
 cblas
+ccls
 cdparanoia
 cifs-utils
 clang
