@@ -4,6 +4,7 @@ abiword
 abseil-cpp
 accountsservice
 acl
+acorn
 adapta-gtk-theme
 adobe-source-code-pro-fonts
 adwaita-cursors
@@ -151,6 +152,7 @@ elinks
 emacs
 enchant
 eog
+eslint
 ethtool
 evince
 exempi
@@ -1090,6 +1092,7 @@ portaudio
 postgresql-libs
 potrace
 powertop
+prettier
 procps-ng
 proj
 protobuf
@@ -1584,6 +1587,7 @@ xterm
 xvidcore
 xxhash
 xz
+yaml-language-server
 yarn
 yq
 zellij
