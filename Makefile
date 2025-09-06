@@ -490,7 +490,7 @@ mongodb: ## Mongodb initial setup
 	$(PACMAN) $@ $@-tools
 	$(SYSTEMD_ENABLE) $@.service
 
-solargraph: ## ruby language server
+solargraph: ## Ruby language server
 	yay -S $@
 
 gnuglobal: ${HOME}/.local ## Install gnu global
