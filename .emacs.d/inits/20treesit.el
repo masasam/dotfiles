@@ -9,6 +9,7 @@
   (setq treesit-language-source-alist
 		'((json "https://github.com/tree-sitter/tree-sitter-json")
 		  (css "https://github.com/tree-sitter/tree-sitter-css")
+		  (html "https://github.com/tree-sitter/tree-sitter-html")
 		  (rust "https://github.com/tree-sitter/tree-sitter-rust")))
   (dolist (element treesit-language-source-alist)
 	(let* ((lang (car element)))
