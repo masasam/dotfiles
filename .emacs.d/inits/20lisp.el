@@ -1,4 +1,4 @@
-;;; 25lisp.el --- 25lisp.el
+;;; 20lisp.el --- 20lisp.el
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)
@@ -10,4 +10,4 @@
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:
-;;; 25lisp.el ends here
+;;; 20lisp.el ends here
