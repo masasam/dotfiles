@@ -20,7 +20,7 @@ PACKAGES	+= jpegoptim nethogs plocate pacman-contrib x11-ssh-askpass libreoffice
 PACKAGES	+= jhead peek ncdu gnome-screenshot sshfs fping syncthing terraform bat lshw xdotool sshuttle packer 
 PACKAGES	+= ripgrep stunnel vimiv adapta-gtk-theme gnome-tweaks firejail opencv hexedit pv perl-net-ip
 PACKAGES	+= smartmontools gnome-logs wireshark-cli wl-clipboard lsof mapnik editorconfig-core-c watchexec
-PACKAGES	+= gtop gopls convmv mpv browserpass-firefox man-db baobab ioping ruby-irb mkcert findomain
+PACKAGES	+= gtop gopls convmv mpv man-db baobab ioping ruby-irb mkcert findomain
 PACKAGES	+= guetzli fabric detox usleep libvterm bind asunder lame git-lfs hex miller bash-language-server
 PACKAGES	+= diffoscope dust rbw eza sslscan abiword pyright miniserve fdupes deno mold fx httpie
 PACKAGES	+= gron typescript-language-server dateutils time xsv rust rust-analyzer git-delta zellij jc ruff speedtest-cli
@@ -447,16 +447,16 @@ psd: ## Profile-Sync-Daemon initial setup
 	echo "${USER} ALL=(ALL) NOPASSWD: /usr/bin/psd-overlay-helper" | sudo EDITOR='tee -a' visudo
 	systemctl --user --now enable psd.service
 
-chromium: ## Install chromium and noto-fonts and browserpass
-	$(PACMAN) $@ browserpass-$@ noto-fonts noto-fonts-cjk
-	make -C /usr/lib/browserpass hosts-$@-user
-	test -L ${HOME}/.password-store || rm -rf ${HOME}/.password-store
-	ln -vsfn ${HOME}/backup/browserpass ${HOME}/.password-store
+chromium: ## Install chromium and noto-fonts
+	$(PACMAN) $@ noto-fonts noto-fonts-cjk
 
-chrome: ## Install chrome and noto-fonts and browserpass
+chrome: ## Install chrome and noto-fonts
 	yay -S google-$@
-	$(PACMAN) browserpass noto-fonts noto-fonts-cjk
-	$(MAKE) -C /usr/lib/browserpass hosts-$@-user
+	$(PACMAN) noto-fonts noto-fonts-cjk
+
+browserpass:  ## Setup browserpass with firefox
+	$(PACMAN) browserpass-firefox
+	make -C /usr/lib/browserpass hosts-firefox-user
 	test -L ${HOME}/.password-store || rm -rf ${HOME}/.password-store
 	ln -vsfn ${HOME}/backup/browserpass ${HOME}/.password-store
 
