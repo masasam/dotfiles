@@ -449,20 +449,20 @@ psd: ## Profile-Sync-Daemon initial setup
 
 chromium: ## Install chromium and noto-fonts and browserpass
 	$(PACMAN) $@ browserpass-$@ noto-fonts noto-fonts-cjk
-	$(MAKE) -C /usr/lib/browserpass hosts-$@-user
+	make -C /usr/lib/browserpass hosts-$@-user
 	test -L ${HOME}/.password-store || rm -rf ${HOME}/.password-store
 	ln -vsfn ${HOME}/backup/browserpass ${HOME}/.password-store
 
 chrome: ## Install chrome and noto-fonts and browserpass
 	yay -S google-$@
 	$(PACMAN) browserpass noto-fonts noto-fonts-cjk
-	$(MAKE) -C /usr/lib/browserpass hosts-$@-user
+	make -C /usr/lib/browserpass hosts-$@-user
 	test -L ${HOME}/.password-store || rm -rf ${HOME}/.password-store
 	ln -vsfn ${HOME}/backup/browserpass ${HOME}/.password-store
 
 browserpass-firefox:  ## Setup browserpass with firefox
 	$(PACMAN) browserpass-firefox
-	$(MAKE) -C /usr/lib/browserpass hosts-firefox-user
+	make -C /usr/lib/browserpass hosts-firefox-user
 	test -L ${HOME}/.password-store || rm -rf ${HOME}/.password-store
 	ln -vsfn ${HOME}/backup/browserpass ${HOME}/.password-store
 
