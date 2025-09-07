@@ -448,13 +448,19 @@ psd: ## Profile-Sync-Daemon initial setup
 	systemctl --user --now enable psd.service
 
 chromium: ## Install chromium and noto-fonts
-	$(PACMAN) $@ noto-fonts noto-fonts-cjk
+	$(PACMAN) $@ browserpass-$@ noto-fonts noto-fonts-cjk
+	make -C /usr/lib/browserpass hosts-$@-user
+	test -L ${HOME}/.password-store || rm -rf ${HOME}/.password-store
+	ln -vsfn ${HOME}/backup/browserpass ${HOME}/.password-store
 
 chrome: ## Install chrome and noto-fonts
 	yay -S google-$@
-	$(PACMAN) noto-fonts noto-fonts-cjk
+	$(PACMAN) browserpass noto-fonts noto-fonts-cjk
+	$(MAKE) -C /usr/lib/browserpass hosts-$@-user
+	test -L ${HOME}/.password-store || rm -rf ${HOME}/.password-store
+	ln -vsfn ${HOME}/backup/browserpass ${HOME}/.password-store
 
-browserpass:  ## Setup browserpass with firefox
+browserpass-firefox:  ## Setup browserpass with firefox
 	$(PACMAN) browserpass-firefox
 	make -C /usr/lib/browserpass hosts-firefox-user
 	test -L ${HOME}/.password-store || rm -rf ${HOME}/.password-store
