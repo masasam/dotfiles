@@ -447,13 +447,13 @@ psd: ## Profile-Sync-Daemon initial setup
 	echo "${USER} ALL=(ALL) NOPASSWD: /usr/bin/psd-overlay-helper" | sudo EDITOR='tee -a' visudo
 	systemctl --user --now enable psd.service
 
-chromium: ## Install chromium and noto-fonts
+chromium: ## Install chromium and noto-fonts and browserpass
 	$(PACMAN) $@ browserpass-$@ noto-fonts noto-fonts-cjk
-	make -C /usr/lib/browserpass hosts-$@-user
+	$(MAKE) -C /usr/lib/browserpass hosts-$@-user
 	test -L ${HOME}/.password-store || rm -rf ${HOME}/.password-store
 	ln -vsfn ${HOME}/backup/browserpass ${HOME}/.password-store
 
-chrome: ## Install chrome and noto-fonts
+chrome: ## Install chrome and noto-fonts and browserpass
 	yay -S google-$@
 	$(PACMAN) browserpass noto-fonts noto-fonts-cjk
 	$(MAKE) -C /usr/lib/browserpass hosts-$@-user
@@ -462,7 +462,7 @@ chrome: ## Install chrome and noto-fonts
 
 browserpass-firefox:  ## Setup browserpass with firefox
 	$(PACMAN) browserpass-firefox
-	make -C /usr/lib/browserpass hosts-firefox-user
+	$(MAKE) -C /usr/lib/browserpass hosts-firefox-user
 	test -L ${HOME}/.password-store || rm -rf ${HOME}/.password-store
 	ln -vsfn ${HOME}/backup/browserpass ${HOME}/.password-store
 
