@@ -187,6 +187,7 @@ freeglut
 freetype2
 fribidi
 fuse-common
+fuse2
 fuse3
 fwupd
 fwupd-efi
@@ -627,6 +628,7 @@ libabw
 libadwaita
 libaec
 libaio
+libappimage
 libappindicator-gtk3
 libarchive
 libass
@@ -1137,7 +1139,6 @@ python-cssselect
 python-cycler
 python-dateutil
 python-dbfread
-python-dbus
 python-decorator
 python-defusedxml
 python-deprecated
@@ -1409,6 +1410,7 @@ spirv-tools
 sqlcipher
 sqlite
 sqlitebrowser
+squashfuse
 sratom
 srt
 sshfs
