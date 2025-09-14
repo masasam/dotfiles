@@ -6,6 +6,7 @@ downgrade
 duckdb-bin
 firebase-tools-bin
 git-secrets
+gnu-netcat
 goobook-git
 google-chrome
 ibus-mozc
