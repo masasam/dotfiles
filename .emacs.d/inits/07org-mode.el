@@ -22,18 +22,20 @@
 
 (setq org-capture-templates
       '(("e" "Experiment" entry (file+headline "~/backup/emacs/org/experiment.org" "Experiment")
-	 "* %? %U %i\n
+		 "* %? %U %i\n
 #+BEGIN_SRC emacs-lisp
 
 #+END_SRC")
-	("i" "Idea" entry (file+headline "~/backup/emacs/org/idea.org" "Idea")
-	 "* %? %U %i")
-	("r" "Remember" entry (file+headline "~/backup/emacs/org/remember.org" "Remember")
-	 "* %? %U %i")
-	("m" "Memo" entry (file+headline "~/backup/emacs/org/memo.org" "Memo")
-	 "* %? %U %i")
-	("t" "Task" entry (file+headline "~/backup/emacs/org/task.org" "Task")
-	 "** TODO %? \n   SCHEDULED: %^t \n")))
+		("i" "Idea" entry (file+headline "~/backup/emacs/org/idea.org" "Idea")
+		 "* %? %U %i")
+		("r" "Remember" entry (file+headline "~/backup/emacs/org/remember.org" "Remember")
+		 "* %? %U %i")
+		("m" "Memo" entry (file+headline "~/backup/emacs/org/memo.org" "Memo")
+		 "* %? %U %i")
+		("j" "Journal" entry (file+datetree "~/backup/kanban/journal.org")
+         "* %?\n  %a")
+		("t" "Task" entry (file+headline "~/backup/emacs/org/task.org" "Task")
+		 "** TODO %? \n   SCHEDULED: %^t \n")))
 
 (setq org-refile-targets
       (quote (("~/backup/emacs/org/archives.org" :level . 1)
