@@ -12,6 +12,7 @@
 (setq org-src-fontify-natively t)
 (setq org-agenda-files '("~/backup/emacs/org/task.org"))
 (setq calendar-holidays nil)
+(setq org-startup-truncated nil)
 (setq org-clock-clocked-in-display 'frame-title)
 
 (bind-key "C-c a" 'org-agenda)
