@@ -41,7 +41,7 @@
 		 "* %?")
 		("j" "Journal" entry
 		 (file+datetree "~/backup/kanban/journal.org")
-         "* %?\n")
+         "* %?")
 		("t" "Task" entry
 		 (file+headline "~/backup/emacs/org/task.org" "Task")
 		 "** TODO %? \n   SCHEDULED: %^t \n")))
