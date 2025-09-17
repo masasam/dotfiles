@@ -33,7 +33,7 @@
 		("m" "Memo" entry (file+headline "~/backup/emacs/org/memo.org" "Memo")
 		 "* %? %U %i")
 		("j" "Journal" entry (file+datetree "~/backup/kanban/journal.org")
-         "* %?\n  %a")
+         "* %?\n")
 		("t" "Task" entry (file+headline "~/backup/emacs/org/task.org" "Task")
 		 "** TODO %? \n   SCHEDULED: %^t \n")))
 
