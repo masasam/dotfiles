@@ -21,20 +21,29 @@
   (define-key org-mode-map (kbd "C-'") #'hydra-pinky/body))
 
 (setq org-capture-templates
-      '(("e" "Experiment" entry (file+headline "~/backup/emacs/org/experiment.org" "Experiment")
+      '(("e" "Experiment" entry
+		 (file+headline "~/backup/emacs/org/experiment.org" "Experiment")
 		 "* %? %U %i\n
 #+BEGIN_SRC emacs-lisp
 
 #+END_SRC")
-		("i" "Idea" entry (file+headline "~/backup/emacs/org/idea.org" "Idea")
+		("i" "Idea" entry
+		 (file+headline "~/backup/emacs/org/idea.org" "Idea")
 		 "* %? %U %i")
-		("r" "Remember" entry (file+headline "~/backup/emacs/org/remember.org" "Remember")
+		("r" "Remember" entry
+		 (file+headline "~/backup/emacs/org/remember.org" "Remember")
 		 "* %? %U %i")
-		("m" "Memo" entry (file+headline "~/backup/emacs/org/memo.org" "Memo")
-		 "* %? %U %i")
-		("j" "Journal" entry (file+datetree "~/backup/kanban/journal.org")
+		("n" "Note" entry
+		 (file+headline "~/backup/kanban/note.org" "note")
+		 "* %?")
+		("c" "Contemplation" entry
+		 (file+headline "~/backup/kanban/contemplation.org" "memo")
+		 "* %?")
+		("j" "Journal" entry
+		 (file+datetree "~/backup/kanban/journal.org")
          "* %?\n")
-		("t" "Task" entry (file+headline "~/backup/emacs/org/task.org" "Task")
+		("t" "Task" entry
+		 (file+headline "~/backup/emacs/org/task.org" "Task")
 		 "** TODO %? \n   SCHEDULED: %^t \n")))
 
 (setq org-refile-targets
