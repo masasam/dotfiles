@@ -298,6 +298,7 @@ gtk-update-icon-cache
 gtk2
 gtk3
 gtk4
+gtk4-layer-shell
 gtkmm3
 gtksourceview4
 gtop
@@ -440,6 +441,7 @@ haskell-monad-control
 haskell-mono-traversable
 haskell-network
 haskell-network-byte-order
+haskell-network-control
 haskell-network-uri
 haskell-old-locale
 haskell-old-time
@@ -1086,7 +1088,6 @@ pkgconf
 pkgfile
 pkgstats
 plocate
-pnpm
 polkit
 poppler
 poppler-data
