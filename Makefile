@@ -106,17 +106,17 @@ goinstall: ${HOME}/.local ## Install go packages
 	go install github.com/jmhodges/jsonpp@latest
 	go install github.com/mithrandie/csvq@latest
 
-yarninstall: ## Install yarn global packages
-	$(PACMAN) yarn
-	mkdir -p ${HOME}/.node_modules
-	for pkg in $(NODE_PKGS); do yarn global add $$pkg; done
-
 mise: ## Setup mise
 	$(PACMAN) mise
 	mise use -g node
 	mise use -g usage
 	mise use -g gemini-cli
 	mise use -g marp-cli
+
+yarninstall: ## Install yarn global packages
+	$(PACMAN) yarn
+	mkdir -p ${HOME}/.node_modules
+	for pkg in $(NODE_PKGS); do yarn global add $$pkg; done
 
 pnpminstall: ## Install pnpm global packages
 	$(PACMAN) pnpm
