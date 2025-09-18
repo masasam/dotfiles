@@ -115,7 +115,8 @@ mise: ## Setup mise
 	$(PACMAN) mise
 	mise use -g node
 	mise use -g usage
-	for pkg in $(NODE_PKGS); do mise use -g $$pkg; done
+	mise use -g gemini-cli
+	mise use -g marp-cli
 
 pnpminstall: ## Install pnpm global packages
 	$(PACMAN) pnpm
