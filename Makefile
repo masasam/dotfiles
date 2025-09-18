@@ -112,6 +112,7 @@ mise: ## Setup mise
 	mise use -g usage
 	mise use -g gemini-cli
 	mise use -g marp-cli
+	mise use -g pnpm
 
 yarninstall: ## Install yarn global packages
 	$(PACMAN) yarn
