@@ -115,6 +115,7 @@ mise: ## Setup mise
 	$(PACMAN) mise
 	mise use -g node
 	mise use -g usage
+	for pkg in $(NODE_PKGS); do mise use -g $$pkg; done
 
 pnpminstall: ## Install pnpm global packages
 	$(PACMAN) pnpm
@@ -467,7 +468,7 @@ browserpass-firefox:  ## Setup browserpass with firefox
 	ln -vsfn ${HOME}/backup/browserpass ${HOME}/.password-store
 
 gemini: ## Init gemini-cli
-	pnpm -g add @google/gemini-cli
+	mise use -g gemini-cli
 
 ollama: ## Init ollama
 	$(PACMAN) $@
