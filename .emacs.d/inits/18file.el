@@ -11,7 +11,7 @@
 (openwith-mode t)
 (setq openwith-associations
       (list (list (openwith-make-extension-regexp '("pdf"))
-                  "evince" '(file))
+                  "papers" '(file))
 			(list (openwith-make-extension-regexp '("svg"))
                   "inkscape" '(file))
             (list (openwith-make-extension-regexp '("flac" "mp3" "wav"))
