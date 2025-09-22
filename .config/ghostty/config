@@ -6,9 +6,10 @@ font-thicken = true
 cursor-style = block
 cursor-style-blink = true
 
-window-width = 120
-window-height = 45
-window-padding-x = 4
+maximize = true
+# window-width = 120
+# window-height = 45
+# window-padding-x = 4
 
 theme = Catppuccin Mocha
 window-padding-x = 20
