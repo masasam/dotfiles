@@ -156,7 +156,6 @@ enchant
 eog
 eslint
 ethtool
-evince
 exempi
 exiv2
 expat
@@ -236,6 +235,7 @@ glibmm
 global
 glslang
 glu
+glycin
 gmime3
 gmp
 gnome-autoar
@@ -249,7 +249,6 @@ gnome-desktop-common
 gnome-keybindings
 gnome-keyring
 gnome-logs
-gnome-mimeapps
 gnome-online-accounts
 gnome-screenshot
 gnome-session
@@ -282,7 +281,6 @@ gron
 grub
 gsettings-desktop-schemas
 gsettings-system-schemas
-gsfonts
 gsl
 gsm
 gsound
@@ -301,6 +299,7 @@ gtk4
 gtk4-layer-shell
 gtkmm3
 gtksourceview4
+gtksourceview5
 gtop
 guetzli
 guile
@@ -601,6 +600,7 @@ jpegoptim
 jq
 js115
 js128
+js140
 json-c
 json-glib
 jsoncpp
@@ -848,6 +848,7 @@ libsoup3
 libsoxr
 libspatialite
 libspectre
+libspelling
 libspiro
 libsrtp
 libssh
@@ -963,7 +964,6 @@ lua-lpeg
 lua52
 lua53
 luajit
-luit
 lv2
 lvm2
 lynx
@@ -1060,6 +1060,7 @@ pambase
 pandoc-cli
 pango
 pangomm
+papers
 parallel
 parted
 pass
@@ -1139,6 +1140,7 @@ python-cssselect
 python-cycler
 python-dateutil
 python-dbfread
+python-dbus
 python-decorator
 python-defusedxml
 python-deprecated
@@ -1464,6 +1466,7 @@ ttf-roboto
 twolame
 typescript
 typescript-language-server
+typst
 tzdata
 uchardet
 udisks2
@@ -1518,7 +1521,6 @@ x11-ssh-askpass
 x264
 x265
 xapian-core
-xbitmaps
 xcb-proto
 xcb-util
 xcb-util-cursor
@@ -1583,7 +1585,6 @@ xorg-xwud
 xorgproto
 xsel
 xsv
-xterm
 xvidcore
 xxhash
 xz
