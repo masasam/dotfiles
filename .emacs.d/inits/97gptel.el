@@ -3,6 +3,8 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
+(setq gptel-default-mode 'org-mode)
+
 (setq gptel-model 'gemma3n:latest
       gptel-backend (gptel-make-ollama "Ollama"
                       :host "localhost:11434"
