@@ -8,7 +8,7 @@
   :hook (tsx-ts-mode . eglot-ensure))
 
 (use-package typescript-ts-mode
-  :mode ("\\.ts\\'" . typescript-ts-mode)
+  :mode ("\\.[m]ts\\'" . typescript-ts-mode)
   :hook (typescript-ts-mode . eglot-ensure))
 
 (use-package json-ts-mode
