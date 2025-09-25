@@ -317,10 +317,6 @@ Gnome can be put as small as necessary
 	pacman -S gnome-keyring
 	pacman -S nautilus
 
-Terminal uses [ghostty](https://github.com/ghostty-org/ghostty) and [alacritty](https://github.com/alacritty/alacritty) and [wezterm](https://github.com/wez/wezterm) and [termite](https://github.com/aperezdc/termite)
-
-	pacman -S ghostty alacritty wezterm
-
 Enable graphical login with gdm
 
 	pacman -S gdm
@@ -332,6 +328,10 @@ Preparing the net environment
 	systemctl enable NetworkManager.service
 	pacman -S otf-ipafont
 
+Terminal
+
+	pacman -S ghostty alacritty wezterm
+	
 Audio setting
 
 	pacman -S pipewire-pulse
@@ -351,11 +351,10 @@ Turn off autosuspend at config
 	sudo pacman -S zsh git base-devel
 	sudo pacman -S noto-fonts noto-fonts-cjk
 
-Install mise and yay and terminal
+Install mise and yay
 
-	sudo pacman -S mise ghostty alacritty wezterm
+	sudo pacman -S mise
 	mise use -g yay
-	yay -S termite
 
 #### Preparing dotfiles
 
@@ -549,6 +548,9 @@ minikube with kvm2
 ![terminal](https://raw.githubusercontent.com/masasam/image/image/tmux.png)
 
 Terminal uses [ghostty](https://github.com/ghostty-org/ghostty) and [alacritty](https://github.com/alacritty/alacritty) and [wezterm](https://github.com/wez/wezterm) and [termite](https://github.com/aperezdc/termite)
+
+	pacman -S ghostty alacritty wezterm
+	yay -S termite
 
 # TLP
 
