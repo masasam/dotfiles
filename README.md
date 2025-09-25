@@ -524,7 +524,7 @@ Google Kubernetes Engine
 	test -L ${HOME}/.config/gcloud || rm -rf ${HOME}/.config/gcloud
 	ln -vsfn ${HOME}/backup/gcloud   ${HOME}/.config/gcloud
 	sudo pacman -S kubectl kubectx kustomize helm
-	yay -S stern-bin
+	mise use -g stern
 
 kind(Kubernetes IN Docker)
 
@@ -541,12 +541,6 @@ minikube with kvm2
 	sudo systemctl start virtlogd.service
 	sudo systemctl enable virtlogd.service
 	minikube config set vm-driver kvm2
-	
-#### rbenv
-
-	yay -S rbenv
-	yay -S ruby-build
-	rbenv install 3.1.4
 
 #### Install rust and language server
 

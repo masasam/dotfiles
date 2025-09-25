@@ -515,13 +515,6 @@ screenkey: ## Init screenkey
 	mkdir -p ${HOME}/.config
 	ln -vsf ${PWD}/.config/screenkey.json ${HOME}/.config/screenkey.json
 
-rbenv: ## Install rvenv ruby-build
-	yay -S $@
-	yay -S ruby-build
-	$@ install 3.4.3
-	$@ rehash
-	gem install bundle
-
 rubygem: ## Install rubygem package
 	yay -S ruby-solargraph
 	gem install bundler jekyll sass compass rawler rdoc irb rails
