@@ -540,9 +540,7 @@ minikube with kvm2
 
 #### Install rust and language server
 
-	sudo pacman -S rustup
-	rustup default stable
-	rustup component add rls rust-analysis rust-src
+	sudo pacman -S rust rust-analyzer
 
 # Terminal
 
