@@ -468,6 +468,7 @@ You can make install from here
 	yay -S downgrade
 	yay -S firebase-tools-bin
 	yay -S git-secrets
+	yay -S gnu-netcat
 	yay -S limbo-bin
 	yay -S ibus-mozc
 	yay -S pscale-cli
