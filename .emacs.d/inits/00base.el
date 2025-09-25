@@ -27,6 +27,7 @@
 (global-unset-key [C-mouse-5])
 
 ;; exec-path-from-shell
+(setq exec-path-from-shell-shell-name "/bin/zsh")
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
 (setq exec-path-from-shell-check-startup-files nil)

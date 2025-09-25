@@ -16,7 +16,6 @@ alias urxvtsetup='xrdb -merge $HOME/.Xresources; exit'
 export HISTCONTROL=ignoredups
 export GOPATH=$HOME
 export PATH="$PATH:$GOPATH/bin"
-export PATH="$HOME/.local/share/mise/shims:$PATH"
 export PATH="$PATH:$HOME/src/github.com/JakeBecker/elixir-ls/rel/"
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 export EDITOR='emacsclient'
