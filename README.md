@@ -351,13 +351,10 @@ Turn off autosuspend at config
 	sudo pacman -S zsh git base-devel
 	sudo pacman -S noto-fonts noto-fonts-cjk
 
-Install yay
+Install mise and yay and terminal
 
-	mkdir -p ~/src/github.com
-	cd src/github.com
-	git clone https://aur.archlinux.org/yay.git
-	cd yay
-	makepkg -si
+	sudo pacman -S mise ghostty alacritty wezterm
+	mise use -g yay
 	yay -S termite
 
 #### Preparing dotfiles
@@ -461,7 +458,7 @@ You can make install from here
 	sudo pacman -S perl-net-ip hex miller btop diffoscope dust yq
 	sudo pacman -S sslscan abiword pyright miniserve fdupes deno
 	sudo pacman -S mold fx httpie bash-language-server sqlitebrowser
-	sudo pacman -S difftastic ollama ghq gnome-sound-recorder mise
+	sudo pacman -S difftastic ollama ghq gnome-sound-recorder
 
 ![activity](https://raw.githubusercontent.com/masasam/image/image/activity.png)
 
@@ -499,7 +496,6 @@ You can make install from here
 
 #### Install using mise
 
-	sudo pacman -S mise
 	mise use -g bun
 	mise use -g duckdb
 	mise use -g gemini-cli

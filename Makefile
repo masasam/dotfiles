@@ -332,7 +332,7 @@ gcloud: ## Install google cloud SDK and setting
 	curl https://sdk.cloud.google.com | bash
 	test -L ${HOME}/.config/gcloud || rm -rf ${HOME}/.config/gcloud
 	ln -vsfn ${HOME}/{backup,.config}/gcloud
-	yay -S stern-bin
+	mise use -g stern
 
 minikube: ## Setup minikube with kvm2
 	$(PACMAN) $@ libvirt qemu-headless ebtables docker-machine
