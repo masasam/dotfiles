@@ -433,7 +433,7 @@ You can make install from here
     sudo pacman -S cups-pdf htop neovim go pkgfile rsync elixir
 	sudo pacman -S nodejs whois nmap poppler-data ffmpeg gron
 	sudo pacman -S aspell aspell-en httperf asciidoc sbcl rye uv
-	sudo pacman -S gdb hub wmctrl gpaste pkgstats ripgrep pnpm
+	sudo pacman -S gdb hub wmctrl gpaste pkgstats ripgrep
 	sudo pacman -S linux-docs pwgen gauche screen ipcalc rbw
 	sudo pacman -S arch-install-scripts ctags parallel opencv
 	sudo pacman -S pandoc texlive-langjapanese texlive-latexextra
