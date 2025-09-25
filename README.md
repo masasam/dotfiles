@@ -463,6 +463,7 @@ You can make install from here
 
 #### Install using yay
 
+	yay -S asunder
 	yay -S beekeeper-studio-bin
 	yay -S downgrade
 	yay -S firebase-tools-bin

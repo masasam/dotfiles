@@ -21,7 +21,7 @@ PACKAGES	+= jhead peek ncdu gnome-screenshot sshfs fping syncthing terraform bat
 PACKAGES	+= ripgrep stunnel vimiv adapta-gtk-theme gnome-tweaks firejail opencv hexedit pv perl-net-ip
 PACKAGES	+= smartmontools gnome-logs wireshark-cli wl-clipboard lsof mapnik editorconfig-core-c watchexec
 PACKAGES	+= gtop gopls convmv mpv man-db baobab ioping ruby-irb mkcert findomain
-PACKAGES	+= guetzli fabric detox usleep libvterm bind asunder lame git-lfs hex miller bash-language-server
+PACKAGES	+= guetzli fabric detox usleep libvterm bind lame git-lfs hex miller bash-language-server
 PACKAGES	+= diffoscope dust rbw eza sslscan abiword pyright miniserve fdupes mold fx httpie
 PACKAGES	+= gron typescript-language-server dateutils time xsv rust rust-analyzer git-delta zellij jc ruff speedtest-cli
 PACKAGES	+= dconf-editor ghq gopls difftastic csvlens cloc eslint prettier trivy sqlitebrowser
@@ -390,7 +390,7 @@ yay: ## Install yay using yay
 	yay -S $@
 
 aur: ## Install arch linux AUR packages using yay
-	yay -S downgrade git-secrets firebase-tools-bin limbo-bin pscale-cli rgxg slack-desktop turso-cli-bin volta-bin vscode-langservers-extracted zoom
+	yay -S asunder downgrade git-secrets firebase-tools-bin limbo-bin pscale-cli rgxg slack-desktop turso-cli-bin volta-bin vscode-langservers-extracted zoom
 
 sequeler: ## Install gui database tools
 	yay -S $@-git
