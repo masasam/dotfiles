@@ -501,20 +501,13 @@ You can make install from here
 	go install github.com/jmhodges/jsonpp@latest
 	go install github.com/mithrandie/csvq@latest
 
-#### Install using global pnpm package
+#### Install using mise
 
-	pnpm -g add dockerfile-language-server-nodejs
-	pnpm -g add fx
-	pnpm -g add indium
-	pnpm -g add logo.svg
-	pnpm -g add jshint
-    pnpm -g add @marp-team/marp-cli
-	pnpm -g add mermaid
-	pnpm -g add @mermaid-js/mermaid-cli
-	pnpm -g add netlify-cli
-	pnpm -g add ngrok
-	pnpm -g add now
-	pnpm -g add @google/gemini-cli
+	mise use -g node
+	mise use -g usage
+	mise use -g gemini-cli
+	mise use -g marp-cli
+	mise use -g pnpm
 
 #### Kubernetes
 
