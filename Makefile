@@ -206,7 +206,7 @@ uefiupdate: ## Update system firmware and uefi
 	for action in refresh get-updates update; do fwupdmgr $$action; done
 
 gtk-theme: ## Set gtk theme
-	$(PACMAN) gnome-themes-extra arc-gtk-theme xdg-desktop-portal-gnome
+	$(PACMAN) gnome-themes-extra xdg-desktop-portal-gnome
 	gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark
 	sudo ln -vsf ${PWD}/.xprofile ${HOME}/.xprofile
 	test -L ${HOME}/.config/gtk-4.0 || rm -rf ${HOME}/.config/gtk-4.0
