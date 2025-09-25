@@ -122,7 +122,6 @@ debootstrap
 debugedit
 debuginfod
 default-cursors
-deno
 desktop-file-utils
 detox
 device-mapper
@@ -361,6 +360,7 @@ haskell-contravariant
 haskell-cookie
 haskell-crypton
 haskell-crypton-connection
+haskell-crypton-socks
 haskell-crypton-x509
 haskell-crypton-x509-store
 haskell-crypton-x509-system
@@ -439,6 +439,7 @@ haskell-mmorph
 haskell-monad-control
 haskell-mono-traversable
 haskell-network
+haskell-network-bsd
 haskell-network-byte-order
 haskell-network-control
 haskell-network-uri
@@ -1043,7 +1044,6 @@ openmpi
 openpmix
 openssh
 openssl
-openssl-1.1
 openucx
 optipng
 opus

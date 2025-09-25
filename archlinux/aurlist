@@ -1,9 +1,7 @@
 arc-gtk-theme
 asunder
 beekeeper-studio-bin
-bun-bin
 downgrade
-duckdb-bin
 firebase-tools-bin
 git-secrets
 gnu-netcat
@@ -13,7 +11,6 @@ ibus-mozc
 pscale-cli
 rgxg
 termite
-trdsql-bin
 ttf-cica
 volta-bin
 vscode-langservers-extracted
