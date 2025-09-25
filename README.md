@@ -479,6 +479,17 @@ You can make install from here
 	yay -S yay
 	yay -S zoom
 
+#### Install using mise
+
+	mise use -g bun
+	mise use -g duckdb
+	mise use -g gemini-cli
+	mise use -g marp-cli
+	mise use -g node
+	mise use -g pnpm
+	mise use -g trdsql
+	mise use -g usage
+
 ##### Install using global python package
 
 	sudo pacman -S python-pip python-pipenv python-seaborn python-ipywidgets python-jupyter-client
@@ -493,17 +504,6 @@ You can make install from here
 	go install github.com/simeji/jid/cmd/jid@latest
 	go install github.com/jmhodges/jsonpp@latest
 	go install github.com/mithrandie/csvq@latest
-
-#### Install using mise
-
-	mise use -g bun
-	mise use -g duckdb
-	mise use -g gemini-cli
-	mise use -g marp-cli
-	mise use -g node
-	mise use -g pnpm
-	mise use -g trdsql
-	mise use -g usage
 
 #### Kubernetes
 
