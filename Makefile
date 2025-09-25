@@ -425,14 +425,9 @@ toggle: ## Prepare command that toggle between emacs and browser
 	sudo install ${PWD}/.$@.sh /usr/local/bin/$@
 
 aws: ${HOME}/.local ## Init aws cli
-	$(PACMAN) aws-cli
-	ln -vsfn {${PWD},${HOME}}/.$@
-
-awsv2: ## Init aws cli version 2
-	$(PACMAN) aws-cli-v2
+	mise use -g aws-cli
 	test -L ${HOME}/.aws || rm -rf ${HOME}/.aws
-	ln -vsfn ${PWD}/.aws ${HOME}/.aws
-	yay -S awslogs
+	ln -vsfn {${PWD},${HOME}}/.$@
 
 tmuxp: ${HOME}/.local ## Install tmuxp
 	$(PACMAN) $@
