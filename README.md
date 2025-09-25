@@ -468,9 +468,7 @@ You can make install from here
 #### Install using yay
 
 	yay -S beekeeper-studio-bin
-	yay -S bun-bin
 	yay -S downgrade
-	yay -S duckdb-bin
 	yay -S firebase-tools-bin
 	yay -S git-secrets
 	yay -S limbo-bin
@@ -479,8 +477,6 @@ You can make install from here
 	yay -S rgxg
 	yay -S rtags
 	yay -S slack-desktop
-	yay -S trdsql-bin
-	yay -S tree-sitter-rust
 	yay -S turso-cli-bin
 	yay -S volta-bin
 	yay -S yay
