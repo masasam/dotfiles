@@ -15,9 +15,9 @@ PACKAGES	+= aspell aspell-en screen mosh diskus gdb wmctrl pwgen linux-docs htop
 PACKAGES	+= gpaste optipng arch-install-scripts pandoc jq pkgstats ruby highlight alsa-utils geckodriver
 PACKAGES	+= texlive-langjapanese tokei texlive-latexextra ctags hdparm eog curl parallel npm yq ansible
 PACKAGES	+= typescript llvm llvm-libs lldb tree w3m whois csvkit zsh-syntax-highlighting shellcheck
-PACKAGES	+= bash-completion mathjax expect obs-studio cscope postgresql-libs pdfgrep gnu-netcat cmatrix btop
+PACKAGES	+= bash-completion mathjax expect obs-studio cscope postgresql-libs pdfgrep cmatrix btop
 PACKAGES	+= jpegoptim nethogs plocate pacman-contrib x11-ssh-askpass libreoffice-fresh-ja tldr streamlink
-PACKAGES	+= jhead peek ncdu gnome-screenshot sshfs fping syncthing terraform bat lshw xdotool sshuttle packer 
+PACKAGES	+= jhead peek ncdu gnome-screenshot sshfs fping syncthing terraform bat lshw xdotool sshuttle packer
 PACKAGES	+= ripgrep stunnel vimiv adapta-gtk-theme gnome-tweaks firejail opencv hexedit pv perl-net-ip
 PACKAGES	+= smartmontools gnome-logs wireshark-cli wl-clipboard lsof mapnik editorconfig-core-c watchexec
 PACKAGES	+= gtop gopls convmv mpv man-db baobab ioping ruby-irb mkcert findomain
@@ -390,7 +390,7 @@ yay: ## Install yay using yay
 	yay -S $@
 
 aur: ## Install arch linux AUR packages using yay
-	yay -S asunder downgrade git-secrets firebase-tools-bin limbo-bin pscale-cli rgxg slack-desktop turso-cli-bin volta-bin vscode-langservers-extracted zoom
+	yay -S asunder downgrade git-secrets gnu-netcat firebase-tools-bin limbo-bin pscale-cli rgxg slack-desktop turso-cli-bin volta-bin vscode-langservers-extracted zoom
 
 sequeler: ## Install gui database tools
 	yay -S $@-git
