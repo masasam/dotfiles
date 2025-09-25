@@ -504,6 +504,8 @@ You can make install from here
 #### Install using mise
 
 	sudo pacman -S mise
+	mise use -g bun
+	mise use -g duckdb
 	mise use -g gemini-cli
 	mise use -g marp-cli
 	mise use -g node
