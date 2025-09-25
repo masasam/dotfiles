@@ -108,11 +108,12 @@ goinstall: ${HOME}/.local ## Install go packages
 
 mise: ## Setup mise
 	$(PACMAN) mise
-	mise use -g node
-	mise use -g usage
 	mise use -g gemini-cli
 	mise use -g marp-cli
+	mise use -g node
 	mise use -g pnpm
+	mise use -g trdsql
+	mise use -g usage
 
 yarninstall: ## Install yarn global packages
 	$(PACMAN) yarn
@@ -386,7 +387,7 @@ yay: ## Install yay using yay
 	yay -S $@
 
 aur: ## Install arch linux AUR packages using yay
-	yay -S bun-bin duckdb-bin downgrade git-secrets firebase-tools-bin limbo-bin pscale-cli rgxg slack-desktop trdsql-bin turso-cli-bin volta-bin vscode-langservers-extracted zoom
+	yay -S bun-bin duckdb-bin downgrade git-secrets firebase-tools-bin limbo-bin pscale-cli rgxg slack-desktop turso-cli-bin volta-bin vscode-langservers-extracted zoom
 
 sequeler: ## Install gui database tools
 	yay -S $@-git

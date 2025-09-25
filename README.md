@@ -503,11 +503,13 @@ You can make install from here
 
 #### Install using mise
 
-	mise use -g node
-	mise use -g usage
+	sudo pacman -S mise
 	mise use -g gemini-cli
 	mise use -g marp-cli
+	mise use -g node
 	mise use -g pnpm
+	mise use -g trdsql
+	mise use -g usage
 
 #### Kubernetes
 
