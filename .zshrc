@@ -288,7 +288,7 @@ alias fontlist='fc-list | cut -d: -f1 | less'
 alias fontlistja='fc-list :lang=ja | cut -d: -f1 | less'
 alias jupytertheme='jt -t chesterish -T -f roboto -fs 9 -tf merriserif -tfs 11 -nf ptsans -nfs 11 -dfs 8 -ofs 8'
 alias myvpn='cd ~/backup/openvpn; sudo openvpn --config client.conf'
-alias allupdate='time archupdate && time melpabackup && time zshbackup && time archbackup && time backupcloud && time pnpmupdate && time goupdate'
+alias allupdate='time archupdate && time melpabackup && time zshbackup && time archbackup && time backupcloud && time goupdate'
 alias djangoinit='python manage.py create_required_buckets && python manage.py collectstatic && python manage.py migrate && python manage.py createsuperuser && python manage.py runserver'
 
 
