@@ -117,6 +117,7 @@ mise: ## Setup mise
 	mise use -g pnpm
 	mise use -g trdsql
 	mise use -g usage
+	mise use -g yay
 
 yarninstall: ## Install yarn global packages
 	$(PACMAN) yarn
