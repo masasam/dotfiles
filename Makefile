@@ -125,7 +125,6 @@ yarninstall: ## Install yarn global packages
 	for pkg in $(NODE_PKGS); do yarn global add $$pkg; done
 
 pnpminstall: ## Install pnpm global packages
-	mise use -g pnpm
 	for pkg in $(NODE_PKGS); do pnpm add -g $$pkg; done
 
 neomutt: ## Init neomutt mail client
