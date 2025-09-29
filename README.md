@@ -437,7 +437,7 @@ You can make install from here
 	sudo pacman -S noto-fonts-cjk jq dnsmasq
 	sudo pacman -S zsh-syntax-highlighting terraform wl-clipboard
 	sudo pacman -S npm llvm llvm-libs lldb hdparm rxvt-unicode 
-	sudo pacman -S mariadb-clients postgresql-libs tig lsof fzf
+	sudo pacman -S mariadb-clients tig lsof fzf
 	sudo pacman -S debootstrap tcpdump pdfgrep sshfs stunnel
 	sudo pacman -S alsa-utils plocate traceroute hugo mpv jhead
 	sudo pacman -S nethogs optipng jpegoptim noto-fonts-emoji
@@ -449,7 +449,7 @@ You can make install from here
 	sudo pacman -S bookworm ruby ruby-rdoc pacman-contrib ncdu
 	sudo pacman -S dart sxiv adapta-gtk-theme podman firejail
 	sudo pacman -S hexedit tokei aria2 discord pv findomain biome
-	sudo pacman -S gnome-logs qreator diskus sysprof bat mapnik
+	sudo pacman -S gnome-logs qreator diskus sysprof bat
 	sudo pacman -S obs-studio wireshark-cli gitui yaml-language-server
 	sudo pacman -S editorconfig-core-c watchexec browserpass-firefox
 	sudo pacman -S man-db baobab ioping mkcert detox git-lfs xsv
