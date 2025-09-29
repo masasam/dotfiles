@@ -54,7 +54,6 @@ binutils
 biome
 bison
 blas
-blosc
 bluez
 bluez-libs
 bluez-obex
@@ -83,7 +82,6 @@ cdparanoia
 cifs-utils
 clang
 clucene
-cmake
 cmatrix
 cmocka
 colord
@@ -95,9 +93,7 @@ containerd
 convmv
 coreutils
 cpio
-cppdap
 cracklib
-crypto++
 cryptsetup
 cscope
 csvkit
@@ -201,7 +197,6 @@ gcc-libs
 gcr
 gcr-4
 gd
-gdal
 gdb
 gdb-common
 gdbm
@@ -212,7 +207,6 @@ gegl
 geoclue
 geocode-glib-2
 geocode-glib-common
-geos
 gettext
 ghc-libs
 ghostscript
@@ -605,7 +599,6 @@ js128
 js140
 json-c
 json-glib
-jsoncpp
 kbd
 keychain
 keyutils
@@ -628,7 +621,6 @@ lhasa
 lib2geom
 libabw
 libadwaita
-libaec
 libaio
 libappimage
 libappindicator-gtk3
@@ -710,14 +702,12 @@ libfontenc
 libfprint
 libfreeaptx
 libfreehand
-libfreexl
 libftdi
 libfyaml
 libgccjit
 libgcrypt
 libgdm
 libgee
-libgeotiff
 libgexiv2
 libgirepository
 libgit2
@@ -832,7 +822,6 @@ libreoffice-fresh-ja
 librest
 librevenge
 librsvg
-librttopo
 libsamplerate
 libsasl
 libseccomp
@@ -848,7 +837,6 @@ libsodium
 libsoup
 libsoup3
 libsoxr
-libspatialite
 libspectre
 libspelling
 libspiro
@@ -978,7 +966,6 @@ m4
 mailcap
 make
 man-db
-mapnik
 mathjax
 mbedtls
 mbedtls2
@@ -988,7 +975,6 @@ mesa
 miller
 mimalloc
 miniserve
-minizip
 mise
 mkcert
 mkinitcpio
@@ -1002,7 +988,6 @@ mpg123
 mpv
 mtdev
 mujs
-muparser
 mutter
 mypaint-brushes1
 nautilus
@@ -1095,12 +1080,10 @@ poppler-data
 poppler-glib
 popt
 portaudio
-postgresql-libs
 potrace
 powertop
 prettier
 procps-ng
-proj
 protobuf
 protobuf-c
 prrte
@@ -1326,7 +1309,6 @@ rclone
 re2
 readline
 redland
-rhash
 ripgrep
 rnnoise
 rpcsvc-proto
@@ -1473,7 +1455,6 @@ uchardet
 udisks2
 unace
 unarchiver
-unixodbc
 unrar
 unzip
 upower
@@ -1538,7 +1519,6 @@ xdg-user-dirs
 xdg-user-dirs-gtk
 xdg-utils
 xdotool
-xerces-c
 xf86-input-libinput
 xkeyboard-config
 xmlsec
