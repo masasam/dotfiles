@@ -532,9 +532,6 @@ pipbackup: ## Backup python global packages
 	mkdir -p ${PWD}/archlinux
 	pip freeze > ${PWD}/archlinux/requirements.txt
 
-rustupdate: ## Update rust global packages
-	cargo install-update -a
-
 yarnupdate: ## Update yarn global packages
 	yarn global upgrade
 
