@@ -256,6 +256,7 @@ alias myip="ip -4 a show wlp0s20f3 | grep -oP '(?<=inet\s)\d+(\.\d+){3}'"
 alias e='emacsclient'
 alias testemacs='emacs -q -l ~/.emacs.d/test.el'
 alias open='xdg-open'
+alias bgm='mpv --loop=inf --shuffle --no-video ~/Music/ &'
 alias mysql="mysql --pager='less -S -n -i -F -X'"
 alias syncdropbox='time rclone sync ${HOME}/backup dropbox:backup'
 alias syncdrive='time rclone sync ${HOME}/backup drive:backup'
