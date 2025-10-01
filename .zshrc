@@ -790,7 +790,7 @@ function bgm() {
     if [ $# = 0 ]; then
 		mpv --loop=inf --shuffle --no-video ~/Music/ &
 	elif [ $1 = select ]; then
-		mpv --no-video `ls ~/Music/* | fzf-tmux -d --reverse --prompt="bgm > "`
+		mpv --no-video "`ls ~/Music/* | fzf-tmux -d --reverse --prompt="bgm > "`"
     elif [ $# = 2 ] && [ $1 = get ]; then
 		cd ~/Music/
 		yt-dlp_linux -x --audio-format mp3 $2
