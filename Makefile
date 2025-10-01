@@ -569,6 +569,6 @@ allinstall: dconfsetting rclone gnupg ssh install init keyring mise termite ghos
 
 nextinstall: mysql mycli pgcli rubygem postgresql zeal gcloud eralchemy gh
 
-allupdate: update goinstall pnpmupdate
+allupdate: update goinstall
 
 allbackup: backup pipbackup
