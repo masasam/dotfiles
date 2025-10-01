@@ -1,10 +1,11 @@
 export PATH := ${HOME}/.local/bin:$HOME/.local/share/mise/shims:${HOME}/.cargo/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/bin/core_perl:${HOME}/bin:${HOME}/google-cloud-sdk/bin
 export GOPATH := ${HOME}
 
-BASE_PKGS	:= filesystem gcc-libs glibc bash coreutils file findutils gawk grep procps-ng sed tar gettext
-BASE_PKGS	+= pciutils psmisc shadow util-linux bzip2 gzip xz licenses pacman systemd systemd-sysvcompat 
-BASE_PKGS	+= iputils iproute2 autoconf sudo automake binutils bison fakeroot flex gcc groff libtool m4 
-BASE_PKGS	+= make patch pkgconf texinfo which archlinux-keyring debugedit
+BASE_PKGS	:= filesystem gcc-libs glibc bash coreutils file findutils gawk grep
+BASE_PKGS	+= util-linux bzip2 gzip xz licenses pacman systemd systemd-sysvcompat
+BASE_PKGS	+= iputils iproute2 autoconf automake binutils bison fakeroot flex gcc
+BASE_PKGS	+= make patch pkgconf texinfo which archlinux-keyring debugedit libtool
+BASE_PKGS	+= m4 groff sudo pciutils psmisc shadow procps-ng sed tar gettext
 
 PACKAGES	:= base base-devel go zsh git vim tmux keychain unrar hugo ethtool zsh-completions xsel emacs gvfs-smb
 PACKAGES	+= unace iperf valgrind noto-fonts-emoji inkscape file-roller xclip atool debootstrap oath-toolkit
@@ -30,9 +31,9 @@ PACKAGES	+= mission-center pass gitui sqlitebrowser git-delta ruff speedtest-cli
 PACKAGES	+= zellij jc fx httpie bash-language-server editorconfig-core-c hexedit
 PACKAGES	+= pv perl-net-ip lshw xdotool sshuttle packer libreoffice-fresh-ja tldr
 
-PIP_PKGS	:= python-pip python-pipenv python-seaborn python-ipywidgets python-jupyter-client
-PIP_PKGS	+= python-prompt_toolkit python-faker python-matplotlib python-nose python-pandas
-PIP_PKGS	+= python-numpy python-beautifulsoup4
+PIP_PKGS	:= python-pipenv python-seaborn python-ipywidgets python-jupyter-client
+PIP_PKGS	+= python-prompt_toolkit python-faker python-matplotlib python-pandas
+PIP_PKGS	+= python-numpy python-beautifulsoup4 python-pip python-nose
 
 NODE_PKGS	:= mermaid @mermaid-js/mermaid-cli fx intelephense
 NODE_PKGS	+= dockerfile-language-server-nodejs netlify-cli ngrok
