@@ -787,6 +787,17 @@ function mpv-quit() {
 }
 
 
+function bgm-get() {
+    if [ $# = 0 ]; then
+		echo 'usage: bgm-get [youtube-url]'
+    elif [ $# = 1 ]; then
+		yt-dlp_linux -x --audio-format mp3 $1
+    else
+		echo 'usage: bgm-get [youtube-url]'
+    fi
+}
+
+
 function postgres-backup() {
     if [ $# = 1 ]; then
 	pg_dump $1 > ~/backup/postgresql/`date '+%Y%m%d%H%M%S'`
