@@ -256,7 +256,6 @@ alias myip="ip -4 a show wlp0s20f3 | grep -oP '(?<=inet\s)\d+(\.\d+){3}'"
 alias e='emacsclient'
 alias testemacs='emacs -q -l ~/.emacs.d/test.el'
 alias open='xdg-open'
-alias bgm='mpv --loop=inf --shuffle --no-video ~/Music/ &'
 alias mysql="mysql --pager='less -S -n -i -F -X'"
 alias syncdropbox='time rclone sync ${HOME}/backup dropbox:backup'
 alias syncdrive='time rclone sync ${HOME}/backup drive:backup'
@@ -787,13 +786,15 @@ function mpv-quit() {
 }
 
 
-function bgm-get() {
+function bgm() {
     if [ $# = 0 ]; then
-		echo 'usage: bgm-get [youtube-url]'
-    elif [ $# = 1 ]; then
-		yt-dlp_linux -x --audio-format mp3 $1
+		mpv --loop=inf --shuffle --no-video ~/Music/ &
+	elif [ $1 = select ]; then
+		mpv --no-video `ls ~/Music/* | fzf-tmux -d --reverse --prompt="bgm > "`
+    elif [ $1 = get ]; then
+		yt-dlp_linux -x --audio-format mp3 $2
     else
-		echo 'usage: bgm-get [youtube-url]'
+		echo -e 'usage: bgm\nusage: bgm select\nusage: bgm get [youtube-url]'		
     fi
 }
 
