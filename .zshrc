@@ -793,7 +793,7 @@ function bgm() {
 		mpv --no-video "`ls ~/Music/* | fzf-tmux -d --reverse --prompt="bgm > "`" &
 	elif [ $1 = quit ]; then
 		pkill -SIGUSR1 -f mpv
-    elif [ $# = 2 ] && [ $1 = get ]; then
+    elif [ $1 = get ] && [ $# = 2 ]; then
 		cd ~/Music/
 		yt-dlp_linux -x --audio-format mp3 $2
 		cd -
