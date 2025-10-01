@@ -91,11 +91,6 @@ install: ## Install arch linux packages using pacman
 uv: ## Install uv and setup
 	$(PACMAN) uv
 
-rye: ## Install rye and setup
-	$(PACMAN) rye
-	mkdir ~/.zfunc
-	rye self completion -s zsh > ~/.zfunc/_rye
-
 pipinstall: ## Install python packages
 	$(PACMAN) $(PIP_PKGS)
 
