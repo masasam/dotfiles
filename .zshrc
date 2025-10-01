@@ -28,7 +28,8 @@ zshaddhistory() {
        && ${cmd} != ll
        && ${cmd} != ls
        && ${cmd} != la
-       && ${cmd} != cd
+	   && ${cmd} != cd
+	   && ${cmd} != bgm
        && ${cmd} != man
        && ${cmd} != scp
        && ${cmd} != ssh
