@@ -118,6 +118,7 @@ mise: ## Setup mise
 	mise use -g trdsql
 	mise use -g usage
 	mise use -g yay
+	mise use -g youtube-dl
 
 yarninstall: ## Install yarn global packages
 	$(PACMAN) yarn
@@ -515,34 +516,6 @@ screenkey: ## Init screenkey
 rubygem: ## Install rubygem package
 	yay -S ruby-solargraph
 	gem install bundler jekyll sass compass rawler rdoc irb rails
-
-django: ## Create django project from scratch
-	mkdir -p ${HOME}/src/github.com/masasam && cd $$_ && \
-	uv python install 3.9 && \
-	uv python pin 3.9 && \
-	uv init newproject && \
-	cd newproject && \
-	uv sync && \
-	uv add django && \
-	uv add python-dotenv && \
-	source .venv/bin/activate && \
-	django-admin startproject config .
-
-.ONESHELL:
-rails: rubygem rbenv ## Create rails project from scratch
-	export RBENV_ROOT="${HOME}/.rbenv"
-	if [ -d "${RBENV_ROOT}" ]; then
-	  export PATH="${RBENV_ROOT}/bin:${PATH}"
-	  eval "$(rbenv init -)"
-	fi
-	rbenv rehash
-	mkdir -p ${HOME}/src/github.com/masasam/$@; cd $$_
-	rbenv local 3.4.3
-	bundle init
-	echo "gem '$@', '~> 7.1.3'" >> Gemfile
-	bundle install --path vendor/bundle
-	bundle exec $@ new . --database=mysql --skip-test --skip-turbolinks
-	bundle exec $@ webpacker:install
 
 dvd: # Backup dvd media
 	$(PACMAN) libdvdcss dvdbackup
