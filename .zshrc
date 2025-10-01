@@ -796,7 +796,7 @@ function bgm() {
 		yt-dlp_linux -x --audio-format mp3 $2
 		cd -
     else
-		echo -e 'usage: bgm\nusage: bgm select\nusage: bgm get [youtube-url]'		
+		echo -e 'usage: bgm - Shuffle play from ~/Music\nusage: bgm select - Select a song from ~/Music and play it\nusage: bgm get [youtube-url] - Download music'		
     fi
 }
 
