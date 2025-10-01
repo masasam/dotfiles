@@ -520,12 +520,6 @@ rubygem: ## Install rubygem package
 dvd: # Backup dvd media
 	$(PACMAN) libdvdcss dvdbackup
 
-tym: ## Init tym terminal
-	yay -S $@
-	mkdir -p ${HOME}/.config/$@
-	ln -vsf {${PWD},${HOME}}/.config/$@/config.lua
-	sudo ln -vsf {${PWD},}/usr/share/applications/$@.desktop
-
 backup: ## Backup arch linux packages
 	mkdir -p ${PWD}/archlinux
 	pacman -Qnq > ${PWD}/archlinux/pacmanlist
