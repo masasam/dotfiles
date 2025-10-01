@@ -434,7 +434,7 @@ You can make install from here
 	sudo pacman -S arch-install-scripts ctags parallel opencv
 	sudo pacman -S pandoc texlive-langjapanese texlive-latexextra
 	sudo pacman -S shellcheck cscope typescript packer eza
-	sudo pacman -S noto-fonts-cjk jq dnsmasq
+	sudo pacman -S noto-fonts-cjk jq dnsmasq mission-center
 	sudo pacman -S zsh-syntax-highlighting terraform wl-clipboard
 	sudo pacman -S npm llvm llvm-libs lldb hdparm rxvt-unicode 
 	sudo pacman -S mariadb-clients tig lsof fzf
