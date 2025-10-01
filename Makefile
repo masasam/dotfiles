@@ -369,10 +369,6 @@ dart: ## Install dart and language server
 	$(PACMAN) $@
 	pub global activate $@_language_server
 
-spotify: ## Install spotify
-	gpg --keyserver hkp://keyserver.ubuntu.com --receive-keys 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
-	yay -S spotify
-
 sxiv: ## Init sxiv
 	$(PACMAN) $@
 	mkdir -p ${HOME}/.config/$@/exec
