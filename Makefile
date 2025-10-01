@@ -114,6 +114,7 @@ mise: ## Setup mise
 	mise use -g usage
 	mise use -g yay
 	mise use -g youtube-dl
+	mise use -g yt-dlp
 
 yarninstall: ## Install yarn global packages
 	$(PACMAN) yarn
