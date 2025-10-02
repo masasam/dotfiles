@@ -976,6 +976,7 @@ miller
 mimalloc
 miniserve
 mise
+mission-center
 mkcert
 mkinitcpio
 mkinitcpio-busybox
@@ -1014,6 +1015,7 @@ npth
 nspr
 nss
 numactl
+nvtop
 oath-toolkit
 obs-studio
 ocl-icd
