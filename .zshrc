@@ -792,14 +792,14 @@ function bgm() {
 		mpv --loop=inf --shuffle --no-video ~/Music/ &
 	elif [ $1 = one ]; then
 		mpv --no-video "`ls ~/Music/* | fzf-tmux -d --reverse --prompt="bgm > "`" &
-	elif [ $1 = quit ]; then
+	elif [ $1 = stop ]; then
 		pkill -SIGUSR1 -f mpv
     elif [ $1 = get ] && [ $# = 2 ]; then
 		cd ~/Music/
 		yt-dlp_linux -x --audio-format mp3 $2
 		cd -
     else
-		echo -e 'usage: bgm - Shuffle play from ~/Music\nusage: bgm one - Select a song from ~/Music and play it\nusage: bgm get [youtube-url] - Download music\nusage: bgm quit - Stop bgm'
+		echo -e 'usage: bgm - Shuffle play from ~/Music\nusage: bgm one - Select a song from ~/Music and play it\nusage: bgm get [youtube-url] - Download music\nusage: bgm stop - Stop bgm'
     fi
 }
 
