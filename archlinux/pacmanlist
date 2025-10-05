@@ -162,6 +162,7 @@ fakeroot
 fdupes
 ffcall
 ffmpeg
+ffmpeg4.4
 fftw
 file
 file-roller
@@ -753,6 +754,7 @@ libmanette
 libmaxminddb
 libmbim
 libmd
+libmfx
 libmicrohttpd
 libmm-glib
 libmng
@@ -1381,6 +1383,7 @@ shaderc
 shadow
 shared-mime-info
 shellcheck
+simde
 simdjson
 slang
 smartmontools
