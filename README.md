@@ -444,7 +444,7 @@ You can make install from here
 	sudo pacman -S debian-archive-keyring tree rclone gnome-tweaks
 	sudo pacman -S mathjax strace valgrind p7zip unace postgresql
 	sudo pacman -S yarn geckodriver w3m neomutt iperf redis convmv
-	sudo pacman -S highlight lynx elinks mediainfo cpio flameshot
+	sudo pacman -S highlight lynx elinks mediainfo cpio satty
 	sudo pacman -S oath-toolkit imagemagick peek sshuttle lshw
 	sudo pacman -S bookworm ruby ruby-rdoc pacman-contrib ncdu
 	sudo pacman -S dart sxiv adapta-gtk-theme podman firejail
