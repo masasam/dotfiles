@@ -449,7 +449,7 @@ You can make install from here
 	sudo pacman -S bookworm ruby ruby-rdoc pacman-contrib ncdu
 	sudo pacman -S dart sxiv adapta-gtk-theme podman firejail
 	sudo pacman -S hexedit tokei aria2 discord pv findomain biome
-	sudo pacman -S gnome-logs qreator diskus sysprof bat
+	sudo pacman -S gnome-logs qreator diskus sysprof bat bluetui
 	sudo pacman -S obs-studio wireshark-cli gitui yaml-language-server
 	sudo pacman -S editorconfig-core-c watchexec browserpass-firefox
 	sudo pacman -S man-db baobab ioping mkcert detox git-lfs xsv
