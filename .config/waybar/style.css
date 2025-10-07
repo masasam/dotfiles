@@ -19,9 +19,9 @@
 
 #workspaces button {
   all: initial;
-  padding: 0 6px;
+  padding: 0 8px;
   margin: 0 1.5px;
-  min-width: 9px;
+  min-width: 10px;
 }
 
 #workspaces button.empty {
@@ -42,11 +42,11 @@
 }
 
 #custom-expand-icon {
-  margin-right: 7px;
+	margin-right: 7px;
 }
 
 tooltip {
-  padding: 2px;
+  padding: 8px;
 }
 
 #custom-update {
