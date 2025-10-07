@@ -162,29 +162,6 @@ ghostty: ## Init ghostty
 	mkdir -p ${HOME}/.config/$@
 	ln -vsf {${PWD},${HOME}}/.config/$@/config
 
-urxvt: ## Init rxvt-unicode terminal
-	$(PACMAN) $@-perls rxvt-unicode
-	ln -vsf ${PWD}/.Xresources ${HOME}/.Xresources
-	for item in urxvt{,c,-tabbed}; do sudo ln -vsf {${PWD},}/usr/share/applications/$$item.desktop; done
-	mkdir -p ${HOME}/.config/autostart
-	chmod a+x ${PWD}/.auto_start.sh
-	ln -vsf {${PWD},${HOME}}/.auto_start.sh
-	ln -vsf ${PWD}/.config/autostart/autostart.desktop ${HOME}/.config/autostart/autostart.desktop
-
-xterm: ## Init xterm terminal
-	$(PACMAN) $@
-	ln -vsf {${PWD},${HOME}}/.Xresources
-	for item in {,u}term; do sudo ln -vsf {${PWD},}/usr/share/applications/$$item.desktop; done
-
-mlterm: ## Init mlterm terminal
-	yay -S $@
-	mkdir -p ${HOME}/.$@
-	for item in main color aafont key; do
-		ln -vsf {${PWD},${HOME}}/.$@/$$item
-	done
-	sudo ln -vsf {${PWD},}/usr/share/applications/$@.desktop
-	sudo ln -vsf {${PWD},}/usr/share/applications/mlclient.desktop
-
 termite: ## Init termite terminal
 	yay -S $@
 	mkdir -p ${HOME}/.config/$@
@@ -417,11 +394,6 @@ bluetooth: # Setup bluetooth
 	$(PACMAN) bluez bluez-utils
 	$(SYSTEMD_ENABLE) bluetooth.service
 	sudo ln -vsf ${PWD}/etc/bluetooth/main.conf /etc/bluetooth/main.conf
-
-desktop: ## Update desktop entry
-	for item in vim xterm uxterm urxvt urxvtc urxvt-tabbed; do
-		sudo ln -vsf {${PWD},}/usr/share/applications/$${item}.desktop
-	done
 
 toggle: ## Prepare command that toggle between emacs and browser
 	sudo ln -vsf {${PWD},}/usr/share/applications/$@.desktop
