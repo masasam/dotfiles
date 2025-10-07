@@ -96,6 +96,13 @@ install: ## Install arch linux packages using pacman
 	$(PACMAN) pkgfile
 	sudo pkgfile --update
 
+hyprland: ## hyprland
+	$(PACMAN) hyprland rofi-wayland wlr-randr waybar
+	yay -S wdisplays
+	test -L ${HOME}/.config/hypr/hyprland.conf || rm -rf ${HOME}/.config/hypr/hyprland.conf
+	mkdir -p ${HOME}/.config/hypr
+	ln -vsf {${PWD},${HOME}}/.config/hypr/hyprland.conf
+
 uv: ## Install uv and setup
 	$(PACMAN) uv
 
@@ -144,13 +151,13 @@ neomutt: ## Init neomutt mail client
 alacritty: ## Init alacritty
 	$(PACMAN) $@
 	test -L ${HOME}/.config/$@/$@.toml || rm -rf ${HOME}/.config/$@/$@.toml
-	mkdir ${HOME}/.config/$@
+	mkdir -p ${HOME}/.config/$@
 	ln -vsf {${PWD},${HOME}}/.config/$@/$@.toml
 
 ghostty: ## Init ghostty
 	$(PACMAN) $@
 	test -L ${HOME}/.config/$@/config || rm -rf ${HOME}/.config/$@/config
-	mkdir ${HOME}/.config/$@
+	mkdir -p ${HOME}/.config/$@
 	ln -vsf {${PWD},${HOME}}/.config/$@/config
 
 urxvt: ## Init rxvt-unicode terminal
