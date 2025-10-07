@@ -6,7 +6,7 @@
   border-radius: 0;
   min-height: 0;
   font-family: CaskaydiaMono Nerd Font;
-	font-size: 24px;
+	font-size: 26px;
 }
 
 .modules-left {
@@ -37,7 +37,7 @@
 #custom-omarchy,
 #custom-screenrecording-indicator,
 #custom-update {
-  min-width: 20px;
+  min-width: 22px;
   margin: 0 7.5px;
 }
 
@@ -62,7 +62,7 @@ tooltip {
 }
 
 #custom-screenrecording-indicator {
-  min-width: 20px;
+  min-width: 22px;
   margin-left: 8.75px;
   font-size: 10px;
 }
