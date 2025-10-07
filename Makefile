@@ -248,10 +248,10 @@ ibusmozc: ## Install ibus-mozc
 	ibus-daemon -drx
 
 fcitx-mozc: ## Install fcitx-mozc
-	$(PACMAN) $@
+	$(PACMAN) fcitx5-im fcitx5-mozc
 	sudo ln -vsf ${PWD}/etc/environment /etc/environment
-	mkdir -p ${HOME}/.config/fcitx/addon
-	ln -vsf {${PWD},${HOME}}/.config/fcitx/addon/fcitx-clipboard.conf
+	mkdir -p ${HOME}/.config/fcitx5/conf
+	ln -vsf {${PWD},${HOME}}/.config/fcitx5/conf/clipboard.conf
 	test -L ${HOME}/.mozc || rm -rf ${HOME}/.mozc
 	ln -vsfn ${HOME}/backup/mozc ${HOME}/.mozc
 
