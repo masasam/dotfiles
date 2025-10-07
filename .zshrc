@@ -240,6 +240,7 @@ compdef mosh=ssh
 
 
 # aliases
+alias tmuxstart='tmux new -s main'
 alias ls='ls -v -F --color=auto'
 alias ll='ls -al'
 alias la='ls -A'
