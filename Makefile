@@ -96,7 +96,7 @@ install: ## Install arch linux packages using pacman
 	$(PACMAN) pkgfile
 	sudo pkgfile --update
 
-hyprland: ## hyprland
+hyprland: ## Setup hyprland
 	$(PACMAN) hyprland rofi-wayland wlr-randr waybar
 	yay -S wdisplays
 	test -L ${HOME}/.config/hypr/hyprland.conf || rm -rf ${HOME}/.config/hypr/hyprland.conf
