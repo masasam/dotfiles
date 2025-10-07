@@ -98,11 +98,10 @@ install: ## Install arch linux packages using pacman
 
 hyprland: ## Setup hyprland
 	$(PACMAN) hyprland rofi-wayland wlr-randr waybar brightnessctl
-	$(PACMAN) xdg-desktop-portal-hyprland
+	$(PACMAN) xdg-desktop-portal-hyprland hyprlock
 	yay -S wdisplays
-	test -L ${HOME}/.config/hypr/hyprland.conf || rm -rf ${HOME}/.config/hypr/hyprland.conf
-	mkdir -p ${HOME}/.config/hypr
-	ln -vsf {${PWD},${HOME}}/.config/hypr/hyprland.conf
+	test -L ${HOME}/.config/hypr || rm -rf ${HOME}/.config/hypr
+	ln -vsfn ${PWD}/.config/hypr ${HOME}/.config/hypr
 	test -L ${HOME}/.config/waybar || rm -rf ${HOME}/.config/waybar
 	ln -vsfn ${PWD}/.config/waybar ${HOME}/.config/waybar
 
