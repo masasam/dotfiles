@@ -110,6 +110,7 @@
         // }
     },
     "clock": {
+		"format": "{:L%m/%d(%a) %H:%M}", // この行を変更
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"

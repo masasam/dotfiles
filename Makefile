@@ -234,6 +234,7 @@ fcitx-mozc: ## Install fcitx-mozc
 	ln -vsfn ${HOME}/backup/mozc ${HOME}/.mozc
 	test -L ${HOME}/.config/fcitx5/conf/classicui.conf || rm -rf ${HOME}/.config/fcitx5/conf/classicui.conf
 	ln -vsf {${PWD},${HOME}}/.config/fcitx5/conf/classicui.conf
+	yay -S gnome-shell-extension-kimpanel-git
 
 ttf-cica: ## Install Cica font
 	yay -S $@
