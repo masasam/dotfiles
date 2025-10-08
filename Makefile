@@ -127,6 +127,8 @@ mise: ## Setup mise
 	mise use -g deno
 	mise use -g duckdb
 	mise use -g gemini-cli
+	mise use -g gh
+	gh completion -s zsh > ${HOME}/.zfunc/_gh
 	mise use -g marp-cli
 	mise use -g node
 	mise use -g pnpm
