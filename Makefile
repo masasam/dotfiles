@@ -99,6 +99,7 @@ install: ## Install arch linux packages using pacman
 hyprland: ## Setup hyprland
 	$(PACMAN) hyprland rofi-wayland wlr-randr waybar brightnessctl hyprlock
 	$(PACMAN) xdg-desktop-portal-hyprland hypridle network-manager-applet
+	$(PACMAN) mako hyprshot
 	yay -S wdisplays
 	test -L ${HOME}/.config/hypr || rm -rf ${HOME}/.config/hypr
 	ln -vsfn ${PWD}/.config/hypr ${HOME}/.config/hypr
