@@ -226,11 +226,14 @@ ibusmozc: ## Install ibus-mozc
 
 fcitx-mozc: ## Install fcitx-mozc
 	$(PACMAN) fcitx5-im fcitx5-mozc
+	yay -S fcitx5-skin-adwaita-dark
 	sudo ln -vsf ${PWD}/etc/environment /etc/environment
 	test -L ${HOME}/.config/fcitx5/conf/clipboard.conf || rm -rf ${HOME}/.config/fcitx5/conf/clipboard.conf
 	ln -vsf {${PWD},${HOME}}/.config/fcitx5/conf/clipboard.conf
 	test -L ${HOME}/.mozc || rm -rf ${HOME}/.mozc
 	ln -vsfn ${HOME}/backup/mozc ${HOME}/.mozc
+	test -L ${HOME}/.config/fcitx5/conf/classicui.conf || rm -rf ${HOME}/.config/fcitx5/conf/classicui.conf
+	ln -vsf {${PWD},${HOME}}/.config/fcitx5/conf/classicui.conf
 
 ttf-cica: ## Install Cica font
 	yay -S $@
