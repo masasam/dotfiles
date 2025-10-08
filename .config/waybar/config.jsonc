@@ -110,8 +110,8 @@
     },
     "clock": {
 		"format": "{:L%m/%d (%a) %H:%M}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+        // "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
         "format": " {usage}%",
