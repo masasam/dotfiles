@@ -9,7 +9,6 @@
     "modules-left": [
         "hyprland/workspaces",
         "hyprland/submap",
-        "sway/scratchpad",
         "custom/media"
     ],
     "modules-center": [
@@ -103,36 +102,35 @@
     },
     "tray": {
         // "icon-size": 21,
-        "spacing": 14,
+        "spacing": 18,
         // "icons": {
         //   "blueman": "bluetooth",
         //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
         // }
     },
     "clock": {
-		"format": "{:L%m/%d(%a) %H:%M}", // この行を変更
-        // "timezone": "America/New_York",
+		"format": "{:L%m/%d(%a) %H:%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
-        "format": "{usage}% ",
+        "format": " {usage}%",
         "tooltip": false
     },
     "memory": {
-        "format": "{}% "
+        "format": " {}%"
     },
     "temperature": {
         // "thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
+        "format": "{icon} {temperatureC}°C",
         "format-icons": ["", "", ""]
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
+        "format": "{icon} {percent}%",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "battery": {
@@ -141,11 +139,11 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}% {icon}",
-        "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
+        "format": "{icon} {capacity}%",
+        "format-full": "{icon} {capacity}%",
+        "format-charging": "⚡ {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{icon} {time}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
@@ -175,16 +173,16 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
+        "format": "{icon} {volume}% {format_source}",
+        "format-bluetooth": "{icon} {volume}%  {format_source}",
+        "format-bluetooth-muted": "{icon}  {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": " {volume}%",
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
-            "hands-free": "",
-            "headset": "",
+            "hands-free": "📱",
+            "headset": "",
             "phone": "",
             "portable": "",
             "car": "",
@@ -205,7 +203,7 @@
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
     "custom/power": {
-        "format" : "⏻ ",
+        "format" : " ⏻ ",
 		"tooltip": false,
 		"menu": "on-click",
 		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
