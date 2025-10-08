@@ -105,6 +105,8 @@ hyprland: ## Setup hyprland
 	ln -vsfn ${PWD}/.config/hypr ${HOME}/.config/hypr
 	test -L ${HOME}/.config/waybar || rm -rf ${HOME}/.config/waybar
 	ln -vsfn ${PWD}/.config/waybar ${HOME}/.config/waybar
+	mkdir -p ${HOME}/.config/mako
+	ln -vsf {${PWD},${HOME}}/.config/mako/config
 
 uv: ## Install uv and setup
 	$(PACMAN) uv
