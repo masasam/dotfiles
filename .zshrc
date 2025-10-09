@@ -504,11 +504,6 @@ zle -N ansible-fzf
 bindkey '^x^a' ansible-fzf
 
 
-function weather-fzf() {
-    curl wttr.in/$(echo -e "Sapporo\nSendai\nTokyo\nYokohama\nKawasaki\nNagano\nNagoya\nKanazawa\nKyoto\nOsaka-shi\nKobe\nOkayama-Shi\nHiroshima-Shi\nTakamatsu\nMatsuyama\nHakata" | fzf-tmux -d --reverse --prompt="Weather > ") | less -R
-}
-
-
 function gitlog-fzf() {
   git log --graph --color=always \
       --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" | \
@@ -916,6 +911,16 @@ function dirsum() {
 	echo 'usage: dirsum [directory]'
     fi	
 }
+
+
+function tenki() {
+	if [ $# = 1 ]; then
+		curl -H "Accept-Language: ja" --compressed wttr.in/$1 | less -R
+    else
+		echo 'usage: tenki [location]'
+    fi
+}
+
 
 # zsh-syntax-highlighting(pacman -S zsh-syntax-highlighting)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
