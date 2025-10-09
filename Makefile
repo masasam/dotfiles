@@ -107,7 +107,6 @@ hyprland: ## Setup hyprland
 	ln -vsfn ${PWD}/.config/waybar ${HOME}/.config/waybar
 	mkdir -p ${HOME}/.config/mako
 	ln -vsf {${PWD},${HOME}}/.config/mako/config
-	$(SYSTEMD_ENABLE) polkit.service
 
 uv: ## Install uv and setup
 	$(PACMAN) uv
