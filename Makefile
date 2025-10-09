@@ -33,7 +33,7 @@ PACKAGES	+= gnome-sound-recorder yaml-language-server biome papers typst discord
 PACKAGES	+= mission-center pass gitui sqlitebrowser git-delta ruff speedtest-cli
 PACKAGES	+= zellij jc fx httpie bash-language-server editorconfig-core-c hexedit
 PACKAGES	+= pv perl-net-ip lshw xdotool sshuttle packer libreoffice-fresh-ja tldr
-PACKAGES	+= hugo ethtool
+PACKAGES	+= hugo ethtool noto-fonts-extra
 
 PIP_PKGS	:= python-pipenv python-seaborn python-ipywidgets python-jupyter-client
 PIP_PKGS	+= python-prompt_toolkit python-faker python-matplotlib python-pandas
@@ -127,8 +127,6 @@ mise: ## Setup mise
 	mise use -g deno
 	mise use -g duckdb
 	mise use -g gemini-cli
-	mise use -g gh
-	gh completion -s zsh > ${HOME}/.zfunc/_gh
 	mise use -g marp-cli
 	mise use -g node
 	mise use -g pnpm
@@ -137,6 +135,10 @@ mise: ## Setup mise
 	mise use -g yay
 	mise use -g youtube-dl
 	mise use -g yt-dlp
+
+githubcli: ## Setup gh
+	$(PACMAN) github-cli
+	gh completion -s zsh > ${HOME}/.zfunc/_gh
 
 yarninstall: ## Install yarn global packages
 	$(PACMAN) yarn
