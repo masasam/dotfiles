@@ -81,6 +81,7 @@ cantarell-fonts
 cblas
 ccls
 cdparanoia
+chafa
 cifs-utils
 clang
 clucene
@@ -161,6 +162,7 @@ expect
 eza
 fabric
 fakeroot
+fcft
 fcitx5
 fcitx5-configtool
 fcitx5-gtk
@@ -184,6 +186,7 @@ flashrom
 flex
 fmt
 fontconfig
+foot
 fping
 fprintd
 freeglut
@@ -228,6 +231,7 @@ git
 git-crypt
 git-delta
 git-lfs
+github-cli
 gitui
 gjs
 glib-networking
@@ -584,6 +588,7 @@ hyprland-qtutils
 hyprlang
 hyprlock
 hyprshot
+hyprsunset
 hyprutils
 hyprwayland-scanner
 iana-etc
@@ -897,6 +902,7 @@ liburing
 libusb
 libusbmuxd
 libutempter
+libutf8proc
 libuv
 libva
 libva-utils
@@ -1052,6 +1058,7 @@ notmuch-runtime
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
+noto-fonts-extra
 npm
 npth
 nspr
@@ -1121,6 +1128,7 @@ pkgstats
 playerctl
 plocate
 polkit
+polkit-gnome
 poppler
 poppler-data
 poppler-glib
@@ -1322,6 +1330,7 @@ python-tzdata
 python-uc-micro-py
 python-uritemplate
 python-urllib3
+python-urwid
 python-validate-pyproject
 python-wcwidth
 python-webencodings
@@ -1523,6 +1532,7 @@ unace
 unrar
 unzip
 upower
+urlscan
 usbmuxd
 usbutils
 usleep
