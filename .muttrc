@@ -88,8 +88,8 @@ color attachment    color254        color234
 color search        color61         color234        
 #color status        J_black         J_status        
 color status        color241        color235        
-color indicator     color255        color13        
-color tree          color13        color255                                    # arrow in thread
+color indicator     color255        color17       
+color tree          color17        color234                                    # arrow in thread
 
 # basic monocolor screen
 mono  bold          bold
