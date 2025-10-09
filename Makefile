@@ -99,7 +99,7 @@ install: ## Install arch linux packages using pacman
 hyprland: ## Setup hyprland
 	$(PACMAN) hyprland rofi-wayland wlr-randr waybar brightnessctl hyprlock
 	$(PACMAN) xdg-desktop-portal-hyprland hypridle network-manager-applet
-	$(PACMAN) mako hyprshot qt5ct qt6ct kvantum kvantum-qt5
+	$(PACMAN) mako hyprshot qt5ct qt6ct kvantum kvantum-qt5 polkit-gnome
 	yay -S wdisplays
 	test -L ${HOME}/.config/hypr || rm -rf ${HOME}/.config/hypr
 	ln -vsfn ${PWD}/.config/hypr ${HOME}/.config/hypr
@@ -107,6 +107,7 @@ hyprland: ## Setup hyprland
 	ln -vsfn ${PWD}/.config/waybar ${HOME}/.config/waybar
 	mkdir -p ${HOME}/.config/mako
 	ln -vsf {${PWD},${HOME}}/.config/mako/config
+	$(SYSTEMD_ENABLE) polkit.service
 
 uv: ## Install uv and setup
 	$(PACMAN) uv
