@@ -109,9 +109,6 @@ hyprland: ## Setup hyprland
 	mkdir -p ${HOME}/.config/mako
 	ln -vsf {${PWD},${HOME}}/.config/mako/config
 
-uv: ## Install uv and setup
-	$(PACMAN) uv
-
 pipinstall: ## Install python packages
 	$(PACMAN) $(PIP_PKGS)
 
@@ -133,6 +130,7 @@ mise: ## Setup mise
 	mise use -g pnpm
 	mise use -g trdsql
 	mise use -g usage
+	mise use -g uv
 	mise use -g yay
 	mise use -g youtube-dl
 	mise use -g yt-dlp
@@ -541,7 +539,7 @@ testpath: ## Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: dconfsetting rclone gnupg ssh install init keyring mise ghostty alacritty wezterm tlp pipewire-pulse ttf-cica hyprland dnsmasq goinstall fcitx-mozc neomutt docker lvfs toggle aur beekeeper kind gtk-theme chrome uv pipinstall ccls gh
+allinstall: dconfsetting rclone gnupg ssh install init keyring mise ghostty alacritty wezterm tlp pipewire-pulse ttf-cica hyprland dnsmasq goinstall fcitx-mozc neomutt docker lvfs toggle aur beekeeper kind gtk-theme chrome pipinstall ccls gh
 
 allupdate: update goinstall
 
