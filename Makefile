@@ -253,10 +253,6 @@ dconfsetting: # Initial dconf setting
 	dconf write /org/gnome/shell/keybindings/toggle-overview "['<Alt>space']"
 	dconf write /org/gnome/mutter/dynamic-workspaces false
 
-localhostssl: # Set ssl for localhost
-	mkcert -install
-	mkcert localhost
-
 docker: ## Docker initial setup
 	$(PACMAN) $@ $@-compose
 	sudo usermod -aG $@ ${USER}
