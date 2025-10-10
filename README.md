@@ -1,4 +1,4 @@
-n# My dotfiles based on Makefile
+# My dotfiles based on Makefile
 
 ## Synopsis
 
