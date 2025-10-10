@@ -374,9 +374,6 @@ zeal: ## Deploy zeal config and docsets
 emacspeak: ## Install emacspeak for blind person
 	yay -S $@
 
-intel: ## Setup Intel Graphics
-	sudo ln -vsf {${PWD},}/etc/X11/xorg.conf.d/20-intel.conf
-
 aur: ## Install arch linux AUR packages using yay
 	yay -S asunder downgrade git-secrets gnu-netcat firebase-tools-bin limbo-bin pscale-cli rgxg slack-desktop turso-cli-bin volta-bin vscode-langservers-extracted zoom
 
