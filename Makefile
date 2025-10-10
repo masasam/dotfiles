@@ -47,14 +47,14 @@ PACMAN		:= sudo pacman -S
 SYSTEMD_ENABLE	:= sudo systemctl --now enable
 
 .DEFAULT_GOAL := help
-.PHONY: all allinstall nextinstall allupdate allbackup
+.PHONY: all allinstall allupdate allbackup
 
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
 	| sort \
 	| awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
-all: allinstall nextinstall allupdate allbackup
+all: allinstall allupdate allbackup
 
 ${HOME}/.local:
 	mkdir -p $<
@@ -550,9 +550,7 @@ testpath: ## Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: dconfsetting rclone gnupg ssh install init keyring mise ghostty alacritty wezterm tlp pipewire-pulse ttf-cica dnsmasq goinstall fcitx-mozc neomutt docker lvfs toggle aur beekeeper kind gtk-theme chrome uv pipinstall ccls gh
-
-nextinstall: mysql mycli postgresql pgcli rubygem zeal gcloud eralchemy
+allinstall: dconfsetting rclone gnupg ssh install init keyring mise ghostty alacritty wezterm tlp pipewire-pulse ttf-cica hyprland dnsmasq goinstall fcitx-mozc neomutt docker lvfs toggle aur beekeeper kind gtk-theme chrome uv pipinstall ccls gh
 
 allupdate: update goinstall
 
