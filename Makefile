@@ -550,9 +550,9 @@ testpath: ## Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: dconfsetting rclone gnupg ssh install init keyring mise termite ghostty alacritty wezterm yay tlp pipewire-pulse ttf-cica dnsmasq goinstall fcitx-mozc neomutt docker lvfs toggle aur beekeeper kind gtk-theme chrome uv pipinstall ccls
+allinstall: dconfsetting rclone gnupg ssh install init keyring mise ghostty alacritty wezterm tlp pipewire-pulse ttf-cica dnsmasq goinstall fcitx-mozc neomutt docker lvfs toggle aur beekeeper kind gtk-theme chrome uv pipinstall ccls gh
 
-nextinstall: mysql mycli postgresql pgcli rubygem zeal gcloud eralchemy gh
+nextinstall: mysql mycli postgresql pgcli rubygem zeal gcloud eralchemy
 
 allupdate: update goinstall
 
