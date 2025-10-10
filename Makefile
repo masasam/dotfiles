@@ -31,7 +31,7 @@ PACKAGES	+= gron typescript-language-server dateutils time xsv rust rust-analyze
 PACKAGES	+= dconf-editor ghq gopls difftastic csvlens cloc eslint prettier trivy
 PACKAGES	+= gnome-sound-recorder yaml-language-server biome papers typst discord
 PACKAGES	+= mission-center pass gitui sqlitebrowser git-delta ruff speedtest-cli
-PACKAGES	+= zellij jc fx httpie bash-language-server editorconfig-core-c hexedit
+PACKAGES	+= jc fx httpie bash-language-server editorconfig-core-c hexedit
 PACKAGES	+= pv perl-net-ip lshw xdotool sshuttle packer libreoffice-fresh-ja tldr
 PACKAGES	+= hugo noto-fonts-extra
 
@@ -175,11 +175,6 @@ wezterm: ## Init wezterm terminal
 	$(PACMAN) $@
 	mkdir -p ${HOME}/.config/$@
 	ln -vsf {${PWD},${HOME}}/.config/$@/$@.lua
-
-zellij: ## Init zellij
-	$(PACMAN) $@
-	mkdir -p ${HOME}/.config/$@
-	ln -vsf {${PWD},${HOME}}/.config/$@/config.kdl
 
 dnsmasq: ## Init dnsmasq
 	$(PACMAN) $@
