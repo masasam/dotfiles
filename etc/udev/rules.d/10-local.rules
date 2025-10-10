@@ -1,2 +1,0 @@
-# Set bluetooth power up
-ACTION=="add", SUBSYSTEM=="bluetooth", RUN+="/usr/bin/bluetoothctl power on"
