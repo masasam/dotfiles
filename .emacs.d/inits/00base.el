@@ -3,6 +3,9 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
+;; Turn off context-menu-mode
+(context-menu-mode 0)
+
 ;; theme
 ;; (load-theme 'material t)
 (load-theme 'dracula t)
