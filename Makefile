@@ -456,7 +456,6 @@ ollama: ## Init ollama
 	$(SYSTEMD_ENABLE) $@.service
 	ollama pull gemma3n:latest
 	ollama pull gpt-oss:latest
-	ollama pull qwen3:30b-a3b
 
 edge: ## Install edge
 	yay -S microsoft-edge-stable-bin
