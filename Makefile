@@ -137,10 +137,6 @@ mise: ## Setup mise
 	mise use -g youtube-dl
 	mise use -g yt-dlp
 
-githubcli: ## Setup gh
-	$(PACMAN) github-cli
-	gh completion -s zsh > ${HOME}/.zfunc/_gh
-
 yarninstall: ## Install yarn global packages
 	$(PACMAN) yarn
 	mkdir -p ${HOME}/.node_modules
@@ -397,7 +393,7 @@ gh: ## Install and setup github-cli
 	$(PACMAN) github-cli
 	test -L ${HOME}/.config/gh || rm -rf ${HOME}/.config/gh
 	ln -vsfn ${HOME}/{backup,.config}/gh
-	gh extension install seachicken/gh-poi
+	gh completion -s zsh > ${HOME}/.zfunc/_gh
 
 aurplus: ## Install arch linux AUR packages using yay
 	yay -S appimagelauncher nkf rtags terraformer-bin
