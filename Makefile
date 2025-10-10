@@ -11,7 +11,7 @@ PACKAGES	:= base base-devel go zsh git vim tmux keychain unrar xsel emacs atool
 PACKAGES	+= unace iperf valgrind noto-fonts-emoji inkscape file-roller xclip
 PACKAGES	+= ipcalc traceroute debootstrap oath-toolkit gvfs-smb zsh-completions
 PACKAGES	+= imagemagick lynx the_silver_searcher cifs-utils elinks satty bluetui
-PACKAGES	+= cups-pdf firefox firefox-i18n-ja gimp strace lhasa hub bookworm tig
+PACKAGES	+= cups-pdf firefox firefox-i18n-ja gimp strace lhasa hub tig ethtool
 PACKAGES	+= rsync nodejs debian-archive-keyring aria2 nmap ffmpeg asciidoc sbcl
 PACKAGES	+= aspell aspell-en screen mosh diskus gdb wmctrl pwgen linux-docs htop
 PACKAGES	+= tcpdump gvfs lzop poppler-data cpio sysprof pkgfile p7zip ruby-rdoc
@@ -33,7 +33,7 @@ PACKAGES	+= gnome-sound-recorder yaml-language-server biome papers typst discord
 PACKAGES	+= mission-center pass gitui sqlitebrowser git-delta ruff speedtest-cli
 PACKAGES	+= zellij jc fx httpie bash-language-server editorconfig-core-c hexedit
 PACKAGES	+= pv perl-net-ip lshw xdotool sshuttle packer libreoffice-fresh-ja tldr
-PACKAGES	+= hugo ethtool noto-fonts-extra
+PACKAGES	+= hugo noto-fonts-extra
 
 PIP_PKGS	:= python-pipenv python-seaborn python-ipywidgets python-jupyter-client
 PIP_PKGS	+= python-prompt_toolkit python-faker python-matplotlib python-pandas
