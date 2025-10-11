@@ -1520,6 +1520,8 @@ tree-sitter
 tslib
 ttf-jetbrains-mono
 ttf-liberation
+ttf-nerd-fonts-symbols
+ttf-nerd-fonts-symbols-common
 ttf-roboto
 twolame
 typescript
@@ -1652,8 +1654,8 @@ xxhash
 xz
 yaml-language-server
 yarn
+yazi
 yq
-zellij
 zeromq
 zimg
 zip
