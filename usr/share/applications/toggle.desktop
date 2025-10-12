@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=Toggle
-GenericName=Toggle Script
-Comment=no comment
-Exec=${HOME}/src/github.com/masasam/dotfiles/.toggle.sh
-Icon=utilities-terminal
-Terminal=true
-Type=Application
-StartupNotify=false
