@@ -10,7 +10,7 @@ BASE_PKGS	+= m4 groff sudo pciutils psmisc shadow procps-ng sed tar gettext
 PACKAGES	:= base base-devel go zsh git vim tmux keychain unrar xsel emacs atool
 PACKAGES	+= unace iperf valgrind noto-fonts-emoji inkscape file-roller xclip
 PACKAGES	+= ipcalc traceroute debootstrap oath-toolkit gvfs-smb zsh-completions
-PACKAGES	+= imagemagick lynx the_silver_searcher cifs-utils elinks satty bluetui
+PACKAGES	+= imagemagick lynx the_silver_searcher cifs-utils elinks satty
 PACKAGES	+= cups-pdf firefox firefox-i18n-ja gimp strace lhasa hub tig ethtool
 PACKAGES	+= rsync nodejs debian-archive-keyring aria2 nmap ffmpeg asciidoc sbcl
 PACKAGES	+= aspell aspell-en screen mosh diskus gdb wmctrl pwgen linux-docs htop
@@ -100,7 +100,7 @@ hyprland: ## Setup hyprland
 	$(PACMAN) hyprland rofi-wayland wlr-randr waybar brightnessctl hyprlock
 	$(PACMAN) xdg-desktop-portal-hyprland hypridle network-manager-applet
 	$(PACMAN) mako hyprshot qt5ct qt6ct kvantum kvantum-qt5 polkit-gnome
-	$(PACMAN) hyprsunset foot chafa
+	$(PACMAN) hyprsunset foot chafa pavucontrol
 	yay -S wdisplays
 	yay -S wlogout
 	test -L ${HOME}/.config/hypr || rm -rf ${HOME}/.config/hypr
@@ -386,7 +386,7 @@ aurplus: ## Install arch linux AUR packages using yay
 	yay -S appimagelauncher nkf rtags terraformer-bin
 
 bluetooth: # Setup bluetooth
-	$(PACMAN) bluez bluez-utils
+	$(PACMAN) bluez bluez-utils bluetui
 	$(SYSTEMD_ENABLE) bluetooth.service
 	sudo ln -vsf ${PWD}/etc/bluetooth/main.conf /etc/bluetooth/main.conf
 
