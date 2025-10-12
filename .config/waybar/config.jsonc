@@ -101,8 +101,8 @@
         }
     },
     "tray": {
-        // "icon-size": 21,
-        "spacing": 18,
+        "icon-size": 24,
+        "spacing": 20,
         // "icons": {
         //   "blueman": "bluetooth",
         //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
@@ -110,7 +110,8 @@
     },
     "clock": {
 		"format": "{:L%m/%d (%a) %H:%M}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+		"tooltip": false
+        // "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
         // "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
