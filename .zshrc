@@ -947,11 +947,10 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 
-# uv
-eval "$(uv generate-shell-completion zsh)"
-
 # mise
 eval "$(mise activate zsh)"
 export PATH="$HOME/.local/share/mise/shims:$PATH"
 
-# pnpm end
+# uv
+eval "$(uv generate-shell-completion zsh)"
+
