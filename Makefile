@@ -102,6 +102,7 @@ hyprland: ## Setup hyprland
 	$(PACMAN) mako hyprshot qt5ct qt6ct kvantum kvantum-qt5 polkit-gnome
 	$(PACMAN) hyprsunset foot chafa
 	yay -S wdisplays
+	yay -S wlogout
 	test -L ${HOME}/.config/hypr || rm -rf ${HOME}/.config/hypr
 	ln -vsfn ${PWD}/.config/hypr ${HOME}/.config/hypr
 	test -L ${HOME}/.config/waybar || rm -rf ${HOME}/.config/waybar
