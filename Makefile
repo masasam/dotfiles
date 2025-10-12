@@ -109,6 +109,7 @@ hyprland: ## Setup hyprland
 	ln -vsfn ${PWD}/.config/waybar ${HOME}/.config/waybar
 	mkdir -p ${HOME}/.config/mako
 	ln -vsf {${PWD},${HOME}}/.config/mako/config
+	sudo ln -vsf ${PWD}/usr/share/applications/wlogout.desktop /usr/share/applications/wlogout.desktop
 
 pipinstall: ## Install python packages
 	$(PACMAN) $(PIP_PKGS)

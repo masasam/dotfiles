@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=wlogout
+Exec=wlogout
+Terminal=false
+Keywords=System
