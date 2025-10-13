@@ -59,6 +59,7 @@ bluetui
 bluez
 bluez-libs
 bluez-obex
+bluez-utils
 bolt
 boost-libs
 box2d
@@ -77,6 +78,7 @@ ca-certificates-mozilla
 ca-certificates-utils
 cairo
 cairomm
+cairomm-1.16
 cantarell-fonts
 cblas
 ccls
@@ -239,6 +241,7 @@ glib2
 glib2-docs
 glibc
 glibmm
+glibmm-2.68
 global
 glslang
 glu
@@ -309,6 +312,7 @@ gtk2
 gtk3
 gtk4
 gtk4-layer-shell
+gtkmm-4.0
 gtkmm3
 gtksourceview4
 gtksourceview5
@@ -599,6 +603,7 @@ ijs
 imagemagick
 imath
 imlib2
+imv
 inkscape
 intel-gmmlib
 intel-media-driver
@@ -648,6 +653,7 @@ l-smash
 lame
 lapack
 lasem
+lazygit
 lcms2
 ldb
 ldns
@@ -868,6 +874,7 @@ libseccomp
 libsecret
 libshout
 libsigc++
+libsigc++-3.0
 libsigsegv
 libsixel
 libsm
@@ -1098,12 +1105,14 @@ pamixer
 pandoc-cli
 pango
 pangomm
+pangomm-2.48
 papers
 parallel
 parted
 pass
 passim
 patch
+pavucontrol
 pciutils
 pcre
 pcre2
@@ -1541,7 +1550,6 @@ usleep
 uthash
 util-linux
 util-linux-libs
-uv
 v4l-utils
 vala
 valgrind
