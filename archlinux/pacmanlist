@@ -55,10 +55,12 @@ binutils
 biome
 bison
 blas
+blueberry
 bluetui
 bluez
 bluez-libs
 bluez-obex
+bluez-tools
 bluez-utils
 bolt
 boost-libs
@@ -84,6 +86,7 @@ cblas
 ccls
 cdparanoia
 chafa
+check
 cifs-utils
 clang
 clucene
@@ -221,6 +224,7 @@ geoclue
 geocode-glib-2
 geocode-glib-common
 gettext
+gexiv2
 ghc-libs
 ghostscript
 ghostty
@@ -250,6 +254,7 @@ gmime3
 gmp
 gnome-autoar
 gnome-backgrounds
+gnome-bluetooth
 gnome-bluetooth-3.0
 gnome-color-manager
 gnome-control-center
@@ -754,6 +759,7 @@ libgexiv2
 libgirepository
 libgit2
 libglvnd
+libgnomekbd
 libgoa
 libgpg-error
 libgsf
@@ -950,6 +956,7 @@ libxinerama
 libxkbcommon
 libxkbcommon-x11
 libxkbfile
+libxklavier
 libxml2
 libxmlb
 libxmu
@@ -1299,6 +1306,7 @@ python-rsa
 python-ruamel-yaml
 python-ruamel.yaml.clib
 python-seaborn
+python-setproctitle
 python-setuptools
 python-shtab
 python-simplejson
@@ -1527,6 +1535,7 @@ tre
 tree
 tree-sitter
 tslib
+ttf-hack-nerd
 ttf-jetbrains-mono
 ttf-liberation
 ttf-nerd-fonts-symbols
@@ -1584,6 +1593,7 @@ wl-clipboard
 wlr-randr
 wmctrl
 woff2
+woff2-font-awesome
 wpa_supplicant
 wpebackend-fdo
 wv
@@ -1591,6 +1601,7 @@ x11-ssh-askpass
 x264
 x265
 xapian-core
+xapp
 xcb-imdkit
 xcb-proto
 xcb-util
