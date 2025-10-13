@@ -28,6 +28,7 @@
         "sway/language",
         "battery",
         "battery#bat2",
+		"bluetooth",
         "tray",
         "custom/power"
     ],
@@ -172,6 +173,13 @@
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
+	"bluetooth": {
+		"format": "",
+		"format-disabled": "",
+		"format-connected": "",
+		// "tooltip-format": "Devices connected: {num_connections}",
+		"on-click": "blueberry"
+	},
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{icon} {volume}% {format_source}",
