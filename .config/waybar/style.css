@@ -28,6 +28,17 @@
   opacity: 0.5;
 }
 
+#tray {
+	padding: 0px 0px;
+}
+#tray menu {
+    background: #121111;
+	opacity: 0.85;
+    border: 2px solid @border;
+    border-radius: 6px;
+	border-color: #33ccff;
+}
+
 #tray,
 #cpu,
 #battery,
