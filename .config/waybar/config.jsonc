@@ -12,13 +12,8 @@
     ],
     "modules-right": [
         "mpd",
-        // "idle_inhibitor",
         "pulseaudio",
-        // "network",
         "power-profiles-daemon",
-        // "cpu",
-        // "memory",
-        // "temperature",
         "backlight",
         "keyboard-state",
         "sway/language",
@@ -28,50 +23,8 @@
         "tray",
         "custom/power"
     ],
-    // Modules configuration
-	// "hyprland/workspaces": {
-    //     "on-click": "activate",
-    //     "format": "{icon}",
-    //     "format-icons": {
-    //         "default": "☆",
-    //         "1": "1",
-    //         "2": "2",
-    //         "3": "3",
-    //         "4": "4",
-    //         "5": "5",
-    //         "6": "6",
-    //         "7": "7",
-    //         "8": "8",
-    //         "9": "9",
-    //         "active": "☆",
-    //         "urgent": "☆"
-    //     },
-    //     "persistent-workspaces": {
-    //         "1": [],
-    //         "2": [],
-    //         "3": [],
-    //         "4": [],
-    //         "5": []
-    //     }
-    // },
-    "keyboard-state": {
-        "numlock": true,
-        "capslock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
-    },
     "hyprland/submap": {
         "format": "<span style=\"italic\">{}</span>"
-    },
-    "sway/scratchpad": {
-        "format": "{icon} {count}",
-        "show-empty": false,
-        "format-icons": ["", ""],
-        "tooltip": true,
-        "tooltip-format": "{app}: {title}"
     },
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
@@ -109,16 +62,10 @@
     "tray": {
         "icon-size": 20,
         "spacing": 18,
-        // "icons": {
-        //   "blueman": "bluetooth",
-        //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
-        // }
     },
     "clock": {
 		"format": "{:L%m/%d (%a) %H:%M}",
 		"tooltip": false
-        // "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
-        // "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
         "format": " {usage}%",
@@ -128,21 +75,16 @@
         "format": " {}%"
     },
     "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
         "format": "{icon} {temperatureC}°C",
         "format-icons": ["", "", ""]
     },
     "backlight": {
-        // "device": "acpi_video1",
         "format": "{icon} {percent}%",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "battery": {
         "states": {
-            // "good": 95,
             "warning": 30,
             "critical": 15
         },
@@ -151,8 +93,6 @@
         "format-charging": "⚡ {capacity}%",
         "format-plugged": " {capacity}%",
         "format-alt": "{icon} {time}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
     "battery#bat2": {
@@ -170,7 +110,6 @@
       }
     },
     "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%) ",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
@@ -182,11 +121,10 @@
 		"format": "",
 		"format-disabled": "",
 		"format-connected": "",
-		// "tooltip-format": "Devices connected: {num_connections}",
+		"tooltip-format": "Devices connected: {num_connections}",
 		"on-click": "blueberry"
 	},
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
         "format": "{icon} {volume}% {format_source}",
         "format-bluetooth": "{icon} {volume}%  {format_source}",
         "format-bluetooth-muted": "{icon}  {format_source}",
@@ -203,18 +141,6 @@
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
-    },
-    "custom/media": {
-        "format": "{icon} {text}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜"
-        },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
     "custom/power": {
         "format" : " ⏻ ",
