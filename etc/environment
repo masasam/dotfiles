@@ -3,6 +3,7 @@
 #
 # Syntax: simple "KEY=VAL" pairs on separate lines
 #
+LANG="ja_JP.UTF-8"
 QT_QPA_PLATFORMTHEME=qt5ct
 
 export GTK_IM_MODULE=fcitx
