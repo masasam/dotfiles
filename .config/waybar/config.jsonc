@@ -34,7 +34,7 @@
         "custom/power"
     ],
     // Modules configuration
- "hyprland/workspaces": {
+	"hyprland/workspaces": {
         "on-click": "activate",
         "format": "{icon}",
         "format-icons": {
