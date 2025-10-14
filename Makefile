@@ -392,10 +392,6 @@ bluetooth: # Setup bluetooth
 	$(SYSTEMD_ENABLE) bluetooth.service
 	sudo ln -vsf ${PWD}/etc/bluetooth/main.conf /etc/bluetooth/main.conf
 
-toggle: ## Prepare command that toggle between emacs and browser
-	sudo ln -vsf {${PWD},}/usr/share/applications/$@.desktop
-	sudo install ${PWD}/.$@.sh /usr/local/bin/$@
-
 aws: ${HOME}/.local ## Init aws cli
 	mise use -g aws-cli
 	test -L ${HOME}/.aws || rm -rf ${HOME}/.aws
@@ -455,7 +451,6 @@ neovim: ## Init neovim
 	for item in init installer; do \
 		ln -vsf {${PWD},${HOME}}/.config/nvim/$$item.vim
 	bash ${HOME}/.config/nvim/installer.sh ${HOME}/.config/nvim
-	sudo ln -vsf {${PWD},}/usr/share/applications/nvim.desktop
 
 varnish: ## Varnish inital setup
 	$(PACMAN) $@
@@ -538,7 +533,7 @@ testpath: ## Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: dconfsetting rclone gnupg ssh install init keyring mise ghostty alacritty wezterm tlp pipewire-pulse ttf-cica hyprland dnsmasq goinstall fcitx-mozc neomutt docker lvfs toggle aur beekeeper kind gtk-theme chrome pipinstall ccls gh
+allinstall: dconfsetting rclone gnupg ssh install init keyring mise ghostty alacritty wezterm tlp pipewire-pulse ttf-cica hyprland dnsmasq goinstall fcitx-mozc neomutt docker lvfs aur beekeeper kind gtk-theme chrome pipinstall ccls gh
 
 allupdate: update goinstall
 
