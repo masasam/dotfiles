@@ -103,6 +103,7 @@ hyprland: ## Setup hyprland
 	$(PACMAN) hyprsunset pavucontrol
 	yay -S wdisplays
 	yay -S wlogout
+	yay -S wl-screenrec
 	test -L ${HOME}/.config/hypr || rm -rf ${HOME}/.config/hypr
 	ln -vsfn ${PWD}/.config/hypr ${HOME}/.config/hypr
 	test -L ${HOME}/.config/waybar || rm -rf ${HOME}/.config/waybar
