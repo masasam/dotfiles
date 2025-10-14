@@ -310,7 +310,7 @@ Install drivers that match your environment
 	pacman -S intel-media-driver libva-utils
 	pacman -S xorg-server xorg-apps
 
-Gnome can be put as small as necessary
+Set up with Gnome once and then install [Hyprland](https://github.com/hyprwm/Hyprland)
 
 	pacman -S gnome-backgrounds
 	pacman -S gnome-control-center
