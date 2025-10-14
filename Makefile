@@ -100,7 +100,7 @@ hyprland: ## Setup hyprland
 	$(PACMAN) hyprland rofi-wayland wlr-randr waybar brightnessctl hyprlock
 	$(PACMAN) xdg-desktop-portal-hyprland hypridle network-manager-applet
 	$(PACMAN) mako hyprshot qt5ct qt6ct kvantum kvantum-qt5 polkit-gnome
-	$(PACMAN) hyprsunset foot chafa pavucontrol
+	$(PACMAN) hyprsunset pavucontrol
 	yay -S wdisplays
 	yay -S wlogout
 	test -L ${HOME}/.config/hypr || rm -rf ${HOME}/.config/hypr
