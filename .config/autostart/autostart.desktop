@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=AutoStart
-GenericName=Auto Start Script
-Comment=no comment
-Exec=/home/masa/.auto_start.sh
-Icon=utilities-terminal
-Terminal=true
-Type=Application
-StartupNotify=false
