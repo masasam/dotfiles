@@ -85,7 +85,6 @@ cantarell-fonts
 cblas
 ccls
 cdparanoia
-chafa
 check
 cifs-utils
 clang
@@ -167,7 +166,6 @@ expect
 eza
 fabric
 fakeroot
-fcft
 fcitx5
 fcitx5-configtool
 fcitx5-gtk
@@ -191,7 +189,6 @@ flashrom
 flex
 fmt
 fontconfig
-foot
 fping
 fprintd
 freeglut
@@ -915,7 +912,6 @@ liburing
 libusb
 libusbmuxd
 libutempter
-libutf8proc
 libuv
 libva
 libva-utils
@@ -993,6 +989,7 @@ linux-firmware-other
 linux-firmware-radeon
 linux-firmware-realtek
 linux-firmware-whence
+lld
 lldb
 llhttp
 llvm
@@ -1440,8 +1437,7 @@ ruby-typeprof
 rubygems
 ruff
 runc
-rust-analyzer
-rustup
+rust
 rye
 satty
 sbc
@@ -1535,7 +1531,6 @@ tre
 tree
 tree-sitter
 tslib
-ttf-hack-nerd
 ttf-jetbrains-mono
 ttf-liberation
 ttf-nerd-fonts-symbols
