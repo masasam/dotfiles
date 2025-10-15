@@ -459,8 +459,6 @@ You can make install from here
 	sudo pacman -S mold fx httpie bash-language-server sqlitebrowser
 	sudo pacman -S difftastic ollama ghq gnome-sound-recorder
 
-![activity](https://raw.githubusercontent.com/masasam/image/image/activity.png)
-
 #### Install using yay
 
 	yay -S asunder
