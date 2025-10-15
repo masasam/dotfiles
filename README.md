@@ -541,15 +541,6 @@ minikube with kvm2
 
 	sudo pacman -S rust rust-analyzer
 
-# Terminal
-
-![terminal](https://raw.githubusercontent.com/masasam/image/image/tmux.png)
-
-Terminal uses [ghostty](https://github.com/ghostty-org/ghostty) and [alacritty](https://github.com/alacritty/alacritty) and [wezterm](https://github.com/wez/wezterm) and [termite](https://github.com/aperezdc/termite)
-
-	pacman -S ghostty alacritty wezterm
-	yay -S termite
-
 # TLP
 
 Setting for power save and to prevent battery deterioration.
