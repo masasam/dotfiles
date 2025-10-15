@@ -12,7 +12,6 @@ PS1='[\u@\h \W]\$ '
 alias screenstart='screen -D -RR'
 alias tmuxstart='tmux new -s main'
 alias tmuxdev='tmuxp load main'
-alias urxvtsetup='xrdb -merge $HOME/.Xresources; exit'
 export HISTCONTROL=ignoredups
 export EDITOR='emacsclient'
 export XDG_CONFIG_HOME=$HOME/.config
