@@ -201,13 +201,19 @@ If the region is inactive, `backward-kill-word'."
 ;; (customize-set-variable 'tramp-use-ssh-controlmaster-options nil)
 
 
-(defun my/copy-path ()
+(defun pwd-copy ()
+  "Return pwd copy"
+  (interactive)
+  (kill-new (car (cdr (split-string (pwd) " ")))))
+
+
+(defun copy-path ()
   "Return the currently open file name or directory name."
   (interactive)
   (if buffer-file-name
       (progn
-	(kill-new (file-truename buffer-file-name))
-	(message (buffer-file-name)))
+		(kill-new (file-truename buffer-file-name))
+		(message (buffer-file-name)))
     (progn
       (kill-new default-directory)
       (message default-directory))))
