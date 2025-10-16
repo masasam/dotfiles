@@ -207,7 +207,7 @@ If the region is inactive, `backward-kill-word'."
   (kill-new (car (cdr (split-string (pwd) " ")))))
 
 
-(defun copy-path ()
+(defun my/path-copy ()
   "Return the currently open file name or directory name."
   (interactive)
   (if buffer-file-name
