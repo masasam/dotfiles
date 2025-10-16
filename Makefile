@@ -137,6 +137,9 @@ mise: ## Setup mise
 	mise use -g yay
 	mise use -g youtube-dl
 	mise use -g yt-dlp
+	mise use -g npm:@github/copilot-language-server
+	mise use -g npm:ts-node
+	mise use -g npm:typescript
 
 yarninstall: ## Install yarn global packages
 	$(PACMAN) yarn
