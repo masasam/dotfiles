@@ -5,7 +5,7 @@
 
 (use-package copilot
   :bind
-  ((:map copilot-mode-map ("<tab>" . copilot-accept-completion))))
+  ((:map copilot-completion-map ("<tab>" . copilot-accept-completion))))
 
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
