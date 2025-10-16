@@ -258,6 +258,7 @@ alias myip="ip -4 a show wlp0s20f3 | grep -oP '(?<=inet\s)\d+(\.\d+){3}'"
 alias e='emacsclient'
 alias testemacs='emacs -q -l ~/.emacs.d/test.el'
 alias open='xdg-open'
+alias soundrecord='ffmpeg -f pulse -i "alsa_input.pci-0000_00_1f.3-platform-skl_hda_dsp_generic.HiFi__Mic1__source" "$(xdg-user-dir VIDEOS)/$(date +'%Y-%m-%d-%H%M%S.mp3')"'
 alias mysql="mysql --pager='less -S -n -i -F -X'"
 alias syncdropbox='time rclone sync ${HOME}/backup dropbox:backup'
 alias syncdrive='time rclone sync ${HOME}/backup drive:backup'
