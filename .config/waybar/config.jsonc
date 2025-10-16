@@ -8,7 +8,8 @@
         "hyprland/submap"
     ],
     "modules-center": [
-        "clock"
+        "clock",
+		// "custom/recorder"
     ],
     "modules-right": [
         "mpd",
@@ -25,6 +26,12 @@
     ],
     "hyprland/submap": {
         "format": "<span style=\"italic\">{}</span>"
+    },
+	"custom/recorder": {
+        "format": "",
+        "on-click": "$HOME/.config/waybar/scripts/start_recording.sh",
+		"tooltip": false,
+        "class": "recorder"
     },
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
