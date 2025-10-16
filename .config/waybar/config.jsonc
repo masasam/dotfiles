@@ -8,7 +8,7 @@
         "hyprland/submap"
     ],
     "modules-center": [
-        "clock",
+        "clock"
 		// "custom/recorder"
     ],
     "modules-right": [
