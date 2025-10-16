@@ -1438,6 +1438,8 @@ rubygems
 ruff
 runc
 rust
+rust-analyzer
+rust-src
 rye
 satty
 sbc
