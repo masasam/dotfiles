@@ -130,6 +130,10 @@ mise: ## Setup mise
 	mise use -g gemini-cli
 	mise use -g marp-cli
 	mise use -g node
+	mise use -g npm:@github/copilot-language-server
+	mise use -g npm:@github/copilot
+	mise use -g npm:ts-node
+	mise use -g npm:typescript
 	mise use -g pnpm
 	mise use -g trdsql
 	mise use -g usage
@@ -137,9 +141,6 @@ mise: ## Setup mise
 	mise use -g yay
 	mise use -g youtube-dl
 	mise use -g yt-dlp
-	mise use -g npm:@github/copilot-language-server
-	mise use -g npm:ts-node
-	mise use -g npm:typescript
 
 yarninstall: ## Install yarn global packages
 	$(PACMAN) yarn
