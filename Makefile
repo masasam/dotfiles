@@ -299,9 +299,6 @@ postgresql: ## PostgreSQL initial setup
 	$(SYSTEMD_ENABLE) postgresql.service
 	sudo -u postgres createuser --interactive
 
-remotedesktop: ## Install remotedesktop
-	$(PACMAN) remmina freerdp libvncserver
-
 eralchemy: ## Install eralchemy
 	$(PACMAN) graphviz
 	yay -S $@
