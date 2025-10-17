@@ -97,7 +97,7 @@ workspaces button {
     min-width: 10px;
 }
 
-#workspaces button:hover { /* This is optional */
+#workspaces button:hover {
 	border-radius: 150px;
     background-color: #88bbff;
 }
