@@ -82,3 +82,20 @@ tooltip {
 #custom-recorder.active {
   color: #a55555;
 }
+
+workspaces button {
+    border-radius: 150px;
+    background-color: #333333;
+    min-height: 5px;
+    min-width: 5px;
+}
+
+#workspaces button.active {
+    background-color: #88bbff;
+    min-height: 5px;
+    min-width: 10px;
+}
+
+#workspaces button:hover { /* This is optional */
+    background-color: #88bbff;
+}
