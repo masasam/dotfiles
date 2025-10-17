@@ -91,11 +91,13 @@ workspaces button {
 }
 
 #workspaces button.active {
+	border-radius: 150px;
     background-color: #115111;
 	min-height: 5px;
     min-width: 10px;
 }
 
 #workspaces button:hover { /* This is optional */
+	border-radius: 150px;
     background-color: #88bbff;
 }
