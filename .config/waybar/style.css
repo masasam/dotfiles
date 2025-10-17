@@ -85,14 +85,14 @@ tooltip {
 
 workspaces button {
     border-radius: 150px;
-    background-color: #333333;
+    background-color: @background;
     min-height: 5px;
     min-width: 5px;
 }
 
 #workspaces button.active {
     background-color: #88bbff;
-    min-height: 5px;
+	min-height: 5px;
     min-width: 10px;
 }
 
