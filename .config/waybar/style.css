@@ -91,7 +91,7 @@ workspaces button {
 }
 
 #workspaces button.active {
-    background-color: #88bbff;
+    background-color: #115111;
 	min-height: 5px;
     min-width: 10px;
 }
