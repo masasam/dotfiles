@@ -47,7 +47,8 @@ zshaddhistory() {
        && ${cmd} != pacman
        && ${cmd} != blog-jpg
        && ${cmd} != xdg-open
-       && ${cmd} != mpv-music
+	   && ${cmd} != mpv-music
+	   && ${cmd} != tmuxstart
        && ${cmd} != mpv-video
        && ${cmd} != traceroute
        && ${cmd} != speedtest-cli
