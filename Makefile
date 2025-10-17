@@ -203,7 +203,6 @@ uefiupdate: ## Update system firmware and uefi
 gtk-theme: ## Set gtk theme
 	$(PACMAN) gnome-themes-extra xdg-desktop-portal-gnome
 	gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark
-	sudo ln -vsf ${PWD}/.xprofile ${HOME}/.xprofile
 	test -L ${HOME}/.config/gtk-4.0 || rm -rf ${HOME}/.config/gtk-4.0
 	ln -vsfn ${PWD}/.config/gtk-4.0 ${HOME}/.config/gtk-4.0
 
