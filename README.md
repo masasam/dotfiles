@@ -330,7 +330,7 @@ Preparing the net environment
 
 Terminal
 
-	pacman -S ghostty alacritty wezterm
+	pacman -S alacritty foot ghostty
 	
 Audio setting
 
