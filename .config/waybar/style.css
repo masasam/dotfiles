@@ -92,7 +92,7 @@ workspaces button {
 
 #workspaces button.active {
 	border-radius: 150px;
-    background-color: #115111;
+    background-color: #88bbff;
 	min-height: 5px;
     min-width: 10px;
 }
