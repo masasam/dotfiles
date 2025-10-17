@@ -92,12 +92,12 @@ workspaces button {
 
 #workspaces button.active {
 	border-radius: 150px;
-    background-color: #88bbff;
+    background-color: #8899ff;
 	min-height: 5px;
     min-width: 10px;
 }
 
 #workspaces button:hover {
 	border-radius: 150px;
-    background-color: #88bbff;
+    background-color: #8899ff;
 }
