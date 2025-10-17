@@ -166,6 +166,7 @@ expect
 eza
 fabric
 fakeroot
+fcft
 fcitx5
 fcitx5-configtool
 fcitx5-gtk
@@ -189,6 +190,7 @@ flashrom
 flex
 fmt
 fontconfig
+foot
 fping
 fprintd
 freeglut
@@ -897,6 +899,7 @@ libstemmer
 libsynctex
 libsysprof-capture
 libtasn1
+libtatsu
 libteam
 libthai
 libtheora
@@ -912,6 +915,7 @@ liburing
 libusb
 libusbmuxd
 libutempter
+libutf8proc
 libuv
 libva
 libva-utils
@@ -1047,6 +1051,7 @@ mujs
 mutter
 mypaint-brushes1
 nautilus
+navi
 ncdu
 ncurses
 neomutt
@@ -1576,7 +1581,6 @@ wavpack
 waybar
 wayland
 wayland-protocols
-webkit2gtk-4.1
 webkitgtk-6.0
 webp-pixbuf-loader
 webrtc-audio-processing-1
