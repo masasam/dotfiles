@@ -394,10 +394,6 @@ tmuxp: ${HOME}/.local ## Install tmuxp
 	$(PACMAN) $@
 	sudo ln -vsf {${PWD},${HOME}}/.config/main.yaml
 
-roswell: ## Install ros and lem
-	$(PACMAN) $@
-	ros install cxxxr/lem
-
 sylpheed: ## Init sylpheed
 	$(PACMAN) $@
 	test -L ${HOME}/.sylpheed-2.0 || rm -rf ${HOME}/.sylpheed-2.0
