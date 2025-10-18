@@ -207,7 +207,6 @@
   (package-install 'toml-mode)
   (package-install 'trashed)
   (package-install 'transient)
-  (package-install 'tree-mode)
   (package-install 'tree-sitter)
   (package-install 'tree-sitter-langs)
   (package-install 'typescript-mode)
