@@ -55,7 +55,6 @@
   (package-install 'counsel)
   (package-install 'counsel-tramp)
   (package-install 'csv-mode)
-  (package-install 'daemons)
   (package-install 'dashboard)
   (package-install 'dmacro)
   (package-install 'deadgrep)
