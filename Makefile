@@ -344,13 +344,6 @@ dingo: ## Install dingo Google DNS over HTTPS
 ccls: ## Install c,c++ language server
 	$(PACMAN) $@
 
-android: ## Install android-studio
-	yay -S android-studio
-
-dart: ## Install dart and language server
-	$(PACMAN) $@
-	pub global activate $@_language_server
-
 sxiv: ## Init sxiv
 	$(PACMAN) $@
 	mkdir -p ${HOME}/.config/$@/exec
