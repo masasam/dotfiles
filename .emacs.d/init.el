@@ -201,7 +201,6 @@
   (package-install 'shackle)
   (package-install 'swiper)
   (package-install 'symbol-overlay)
-  (package-install 'tablist)
   (package-install 'terraform-mode)
   (package-install 'test-simple)
   (package-install 'tldr)
