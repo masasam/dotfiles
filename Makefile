@@ -100,7 +100,7 @@ hyprland: ## Setup hyprland
 	$(PACMAN) hyprland rofi-wayland wlr-randr waybar brightnessctl hyprlock
 	$(PACMAN) xdg-desktop-portal-hyprland hypridle network-manager-applet
 	$(PACMAN) mako hyprshot qt5ct qt6ct kvantum kvantum-qt5 polkit-gnome
-	$(PACMAN) hyprsunset pavucontrol foot
+	$(PACMAN) hyprsunset pavucontrol
 	yay -S wdisplays
 	yay -S wlogout
 	yay -S wl-screenrec
@@ -110,8 +110,6 @@ hyprland: ## Setup hyprland
 	ln -vsfn ${PWD}/.config/waybar ${HOME}/.config/waybar
 	mkdir -p ${HOME}/.config/mako
 	ln -vsf {${PWD},${HOME}}/.config/mako/config
-	mkdir -p ${HOME}/.config/foot
-	ln -vsf {${PWD},${HOME}}/.config/foot/foot.ini
 	sudo ln -vsf ${PWD}/usr/share/applications/wlogout.desktop /usr/share/applications/wlogout.desktop
 
 pipinstall: ## Install python packages
