@@ -147,7 +147,6 @@
   (package-install 'lispy)
   (package-install 'load-relative)
   (package-install 'loc-changes)
-  (package-install 'lsp-java)
   (package-install 'lsp-mode)
   (package-install 'lsp-pyright)
   (package-install 'lv)
