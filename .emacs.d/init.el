@@ -35,7 +35,6 @@
 (unless (file-directory-p "~/.emacs.d/elpa")
   (package-refresh-contents)
   (package-install 'ace-window)
-  (package-install 'add-node-modules-path)
   (package-install 'ag)
   (package-install 'aggressive-indent)
   (package-install 'alarm-clock)
