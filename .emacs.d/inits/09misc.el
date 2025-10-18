@@ -76,8 +76,8 @@
 
 
 ;; projectile
-(projectile-mode)
-(counsel-projectile-mode)
+;; (projectile-mode)
+;; (counsel-projectile-mode)
 
 ;; How to clear cache (M-x projectile-invalidate-cache)
 (setq projectile-enable-caching t)
