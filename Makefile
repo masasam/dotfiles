@@ -161,13 +161,18 @@ neomutt: ## Init neomutt mail client
 	yay -S goobook-git
 	goobook authenticate
 
-alacritty: ## Init alacritty
+alacritty: ## Init alacritty terminal
 	$(PACMAN) $@
 	test -L ${HOME}/.config/$@/$@.toml || rm -rf ${HOME}/.config/$@/$@.toml
 	mkdir -p ${HOME}/.config/$@
 	ln -vsf {${PWD},${HOME}}/.config/$@/$@.toml
 
-ghostty: ## Init ghostty
+foot: ## Init foot terminal
+	$(PACMAN) $@
+	mkdir -p ${HOME}/.config/foot
+	ln -vsf {${PWD},${HOME}}/.config/foot/foot.ini
+
+ghostty: ## Init ghostty terminal
 	$(PACMAN) $@
 	test -L ${HOME}/.config/$@/config || rm -rf ${HOME}/.config/$@/config
 	mkdir -p ${HOME}/.config/$@
