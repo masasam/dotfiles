@@ -213,7 +213,6 @@
   (package-install 'vertico)
   (package-install 'visual-regexp)
   (package-install 'volatile-highlights)
-  (package-install 'vterm)
   (package-install 'vundo)
   (package-install 'web-mode)
   (package-install 'wgrep)
