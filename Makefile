@@ -161,9 +161,8 @@ neomutt: ## Init neomutt mail client
 
 alacritty: ## Init alacritty terminal
 	$(PACMAN) $@
-	test -L ${HOME}/.config/$@/$@.toml || rm -rf ${HOME}/.config/$@/$@.toml
-	mkdir -p ${HOME}/.config/$@
-	ln -vsf {${PWD},${HOME}}/.config/$@/$@.toml
+	test -L ${HOME}/.config/$@ || rm -rf ${HOME}/.config/$@
+	ln -vsf {${PWD},${HOME}}/.config/$@
 
 foot: ## Init foot terminal
 	$(PACMAN) $@

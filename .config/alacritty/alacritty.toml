@@ -1,60 +1,11 @@
 general.live_config_reload = true
 working_directory = "None"
+general.import = [
+  "~/.config/alacritty/catppuccin-mocha.toml"
+]
 
-[colors]
-draw_bold_text_with_bright_colors = true
-
-[[colors.indexed_colors]]
-color = "0xcb4b16"
-index = 16
-
-[[colors.indexed_colors]]
-color = "0xd33682"
-index = 17
-
-[[colors.indexed_colors]]
-color = "0x073642"
-index = 18
-
-[[colors.indexed_colors]]
-color = "0x586e75"
-index = 19
-
-[[colors.indexed_colors]]
-color = "0x839496"
-index = 20
-
-[[colors.indexed_colors]]
-color = "0xeee8d5"
-index = 21
-
-[colors.bright]
-black = "0x002b36"
-blue = "0x839496"
-cyan = "0x93a1a1"
-green = "0x586e75"
-magenta = "0x6c71c4"
-red = "0xcb4b16"
-white = "0xfdf6e3"
-yellow = "0x657b83"
-
-[colors.cursor]
-cursor = "0x93a1a1"
-text = "0x002b36"
-
-[colors.normal]
-black = "0x073642"
-blue = "0x268bd2"
-cyan = "0x2aa198"
-green = "0x859900"
-magenta = "0xd33682"
-red = "0xdc322f"
-white = "0xeee8d5"
-yellow = "0xb58900"
-
-[colors.primary]
-background = "0x002b36"
-foreground = "0x839496"
+[env]
+TERM = "xterm-256color"
 
 [cursor]
 style = "Block"
@@ -67,7 +18,7 @@ print_events = false
 render_timer = false
 
 [font]
-size = 29.5
+size = 24
 
 [font.bold]
 family = "Cica"
@@ -624,6 +575,7 @@ semantic_escape_chars = ",│`|:\"' ()[]{}<>"
 decorations = "full"
 dynamic_padding = false
 startup_mode = "Maximized"
+opacity=0.8
 
 [window.dimensions]
 columns = 0
