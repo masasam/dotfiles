@@ -177,7 +177,7 @@ ghostty: ## Init ghostty terminal
 	ln -vsf {${PWD},${HOME}}/.config/$@/config
 
 kitty: # Init kitty terminal
-	$(PACMAN) $@ ttf-fira-code
+	$(PACMAN) $@
 	test -L ${HOME}/.config/$@/$@.conf || rm -rf ${HOME}/.config/$@/$@.conf
 	mkdir -p ${HOME}/.config/$@
 	ln -vsf {${PWD},${HOME}}/.config/$@/$@.conf
