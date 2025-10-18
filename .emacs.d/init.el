@@ -53,7 +53,6 @@
   (package-install 'copilot)
   (package-install 'corfu)
   (package-install 'counsel)
-  (package-install 'counsel-chrome-bm)
   (package-install 'counsel-css)
   (package-install 'counsel-projectile)
   (package-install 'counsel-tramp)
