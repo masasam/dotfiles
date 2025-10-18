@@ -44,7 +44,6 @@
   (package-install 'browse-at-remote)
   (package-install 'cape)
   (package-install 'catppuccin-theme)
-  (package-install 'color-identifiers-mode)
   (package-install 'company)
   (package-install 'company-prescient)
   (package-install 'company-quickhelp)
