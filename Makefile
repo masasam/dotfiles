@@ -182,11 +182,6 @@ kitty: # Init kitty terminal
 	ln -vsf {${PWD},${HOME}}/.config/$@/$@.conf
 	ln -vsf {${PWD},${HOME}}/.config/kitty/current-theme.conf
 
-wezterm: ## Init wezterm terminal
-	$(PACMAN) $@
-	mkdir -p ${HOME}/.config/$@
-	ln -vsf {${PWD},${HOME}}/.config/$@/$@.lua
-
 dnsmasq: ## Init dnsmasq
 	$(PACMAN) $@
 	sudo ln -vsf ${PWD}/etc/$@/resolv.$@.conf /etc/resolv.$@.conf
