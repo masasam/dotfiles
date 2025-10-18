@@ -48,7 +48,6 @@ bash
 bash-completion
 bash-language-server
 bat
-bazel
 bcg729
 bind
 binutils
@@ -624,12 +623,9 @@ iw
 jack2
 jansson
 jasper
-java-environment-common
-java-runtime-common
 jbig2dec
 jbigkit
 jc
-jdk21-openjdk
 jemalloc
 jhead
 jpegoptim
@@ -646,6 +642,9 @@ keychain
 keyutils
 kguiaddons5
 kitemviews
+kitty
+kitty-shell-integration
+kitty-terminfo
 kmod
 krb5
 kvantum
@@ -815,7 +814,6 @@ libmypaint
 libmysofa
 libnautilus-extension
 libndp
-libnet
 libnetfilter_conntrack
 libnewt
 libnfnetlink
@@ -873,6 +871,7 @@ libreoffice-fresh-ja
 librest
 librevenge
 librsvg
+librsync
 libsamplerate
 libsasl
 libseccomp
@@ -1538,7 +1537,6 @@ tre
 tree
 tree-sitter
 tslib
-ttf-jetbrains-mono
 ttf-liberation
 ttf-nerd-fonts-symbols
 ttf-nerd-fonts-symbols-common
@@ -1584,12 +1582,12 @@ wayland-protocols
 webkitgtk-6.0
 webp-pixbuf-loader
 webrtc-audio-processing-1
-wezterm
 wget
 which
 whois
 wireplumber
 wireshark-cli
+wl-clip-persist
 wl-clipboard
 wlr-randr
 wmctrl
