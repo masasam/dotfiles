@@ -176,6 +176,12 @@ ghostty: ## Init ghostty terminal
 	mkdir -p ${HOME}/.config/$@
 	ln -vsf {${PWD},${HOME}}/.config/$@/config
 
+kitty: # Init kitty terminal
+	$(PACMAN) $@ ttf-fira-code
+	test -L ${HOME}/.config/$@/$@.conf || rm -rf ${HOME}/.config/$@/$@.conf
+	mkdir -p ${HOME}/.config/$@
+	ln -vsf {${PWD},${HOME}}/.config/$@/$@.conf
+
 wezterm: ## Init wezterm terminal
 	$(PACMAN) $@
 	mkdir -p ${HOME}/.config/$@
