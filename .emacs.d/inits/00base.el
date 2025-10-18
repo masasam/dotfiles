@@ -201,6 +201,12 @@ If the region is inactive, `backward-kill-word'."
 ;; (customize-set-variable 'tramp-use-ssh-controlmaster-options nil)
 
 
+(defun foot ()
+  "open current directly with foot"
+  (interactive)
+  (shell-command (concat "foot -D " (car (cdr (split-string (pwd) " "))))))
+
+
 (defun pwd-copy ()
   "Return pwd copy"
   (interactive)
@@ -254,12 +260,6 @@ If the region is inactive, `backward-kill-word'."
   (message "Logined")
   (shell-command-to-string "firebase deploy")
   (message "Published"))
-
-
-(defun sylpheed ()
-  "Open sylpheed."
-  (interactive)
-  (shell-command-to-string "sylpheed %u"))
 
 
 (defun my/duplicate-current-line (&optional n)
