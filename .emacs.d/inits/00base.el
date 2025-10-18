@@ -204,13 +204,13 @@ If the region is inactive, `backward-kill-word'."
 (defun foot ()
   "open current directly with foot"
   (interactive)
-  (shell-command "foot"))
+  (shell-command "foot -L /bin/zsh"))
 
 
 (defun foot-home ()
   "open home directly with foot"
   (interactive)
-  (shell-command "foot -D ~/"))
+  (shell-command "foot -D ~/ -L /bin/zsh"))
 
 
 (defun pwd-copy ()
