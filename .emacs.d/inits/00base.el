@@ -204,7 +204,13 @@ If the region is inactive, `backward-kill-word'."
 (defun foot ()
   "open current directly with foot"
   (interactive)
-  (shell-command (concat "foot -D " (car (cdr (split-string (pwd) " "))))))
+  (shell-command "foot"))
+
+
+(defun foot-home ()
+  "open home directly with foot"
+  (interactive)
+  (shell-command "foot -D ~/"))
 
 
 (defun pwd-copy ()
