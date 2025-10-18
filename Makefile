@@ -173,11 +173,6 @@ ghostty: ## Init ghostty
 	mkdir -p ${HOME}/.config/$@
 	ln -vsf {${PWD},${HOME}}/.config/$@/config
 
-termite: ## Init termite terminal
-	yay -S $@
-	mkdir -p ${HOME}/.config/$@
-	ln -vsf {${PWD},${HOME}}/.config/$@/config
-
 wezterm: ## Init wezterm terminal
 	$(PACMAN) $@
 	mkdir -p ${HOME}/.config/$@
