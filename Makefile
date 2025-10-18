@@ -181,6 +181,7 @@ kitty: # Init kitty terminal
 	test -L ${HOME}/.config/$@/$@.conf || rm -rf ${HOME}/.config/$@/$@.conf
 	mkdir -p ${HOME}/.config/$@
 	ln -vsf {${PWD},${HOME}}/.config/$@/$@.conf
+	ln -vsf {${PWD},${HOME}}/.config/kitty/current-theme.conf
 
 wezterm: ## Init wezterm terminal
 	$(PACMAN) $@
