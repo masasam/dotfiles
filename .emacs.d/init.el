@@ -132,7 +132,6 @@
   (package-install 'know-your-http-well)
   (package-install 'kubernetes)
   (package-install 'let-alist)
-  (package-install 'lispy)
   (package-install 'load-relative)
   (package-install 'loc-changes)
   (package-install 'lsp-mode)
