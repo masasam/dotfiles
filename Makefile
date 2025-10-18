@@ -465,11 +465,6 @@ emacs-devel: ## Install development version of emacs
 	cd ${HOME}/src/github.com/masasam/emacs && ./autogen.sh && ./configure && make && sudo make install && make clean
 	rm -rf ${HOME}/.emacs.d/elpa
 
-screenkey: ## Init screenkey
-	$(PACMAN) $@
-	mkdir -p ${HOME}/.config
-	ln -vsf ${PWD}/.config/screenkey.json ${HOME}/.config/screenkey.json
-
 rubygem: ## Install rubygem package
 	yay -S ruby-solargraph
 	gem install bundler jekyll sass compass rawler rdoc irb rails
