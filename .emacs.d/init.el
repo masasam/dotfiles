@@ -37,7 +37,6 @@
   (package-install 'ace-window)
   (package-install 'aggressive-indent)
   (package-install 'alarm-clock)
-  (package-install 'async)
   (package-install 'auto-compile)
   (package-install 'auto-minor-mode)
   (package-install 'avy)
