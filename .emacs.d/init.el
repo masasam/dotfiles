@@ -96,8 +96,6 @@
   (package-install 'google-this)
   (package-install 'google-translate)
   (package-install 'gptel)
-  (package-install 'haml-mode)
-  (package-install 'hcl-mode)
   (package-install 'htmlize)
   (package-install 'hydra)
   (package-install 'iedit)
