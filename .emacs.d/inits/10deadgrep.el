@@ -1,4 +1,4 @@
-;;; 19wgrep.el --- 19wgrep.el
+;;; 19deadgrep.el --- 19deadgrep.el
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)
@@ -14,4 +14,4 @@
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:
-;;; 19wgrep.el ends here
+;;; 19deadgrep.el ends here
