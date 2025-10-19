@@ -104,11 +104,6 @@
 ;; alarm-clock
 (setq alarm-clock-sound-file "~/backup/emacs/alarm.mp3")
 
-
-;; color-identifiers-mode
-(add-hook 'after-init-hook 'global-color-identifiers-mode)
-
-
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:

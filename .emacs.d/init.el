@@ -68,7 +68,7 @@
   (package-install 'easy-hugo)
   (package-install 'easy-jekyll)
   (package-install 'edit-indirect)
-  (when (< emacs-version 27)
+  (when (< emacs-major-version 27)
 	(package-install 'editorconfig))
   (package-install 'editorconfig-generate)
   (when (< emacs-major-version 29)
