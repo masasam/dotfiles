@@ -13,6 +13,7 @@
          ("C-c k" . consult-kmacro)
          ("C-c m" . consult-man)
          ("C-c i" . consult-info)
+		 ("C-x C-c" . execute-extended-command)
 		 ("C-x l" . consult-ghq-switch-project)
 		 ("C-x C-l" . consult-ghq-switch-project)
          ([remap Info-search] . consult-info)
