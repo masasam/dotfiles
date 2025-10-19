@@ -81,7 +81,6 @@
   (package-install 'exec-path-from-shell)
   (package-install 'expand-region)
   (package-install 'fill-column-indicator)
-  (package-install 'find-file-in-project)
   (package-install 'flymake)
   (package-install 'flymake-diagnostic-at-point)
   (package-install 'flyspell-correct)
