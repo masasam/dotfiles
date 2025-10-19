@@ -88,7 +88,6 @@
   (package-install 'flyspell-correct)
   (package-install 'flyspell-correct-ivy)
   (package-install 'ggtags)
-  (package-install 'ghub)
   (package-install 'git-timemachine)
   (package-install 'github-explorer)
   (package-install 'github-review)
