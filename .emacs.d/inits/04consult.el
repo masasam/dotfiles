@@ -42,7 +42,7 @@
          ("M-g i" . consult-imenu)
          ("M-g I" . consult-imenu-multi)
          ;; M-s bindings in `search-map'
-         ;; ("C-x C-f" . consult-find) ;; Alternative: consult-fd
+         ("C-c f" . find-file-in-project)
          ("C-c l" . consult-locate)
          ("C-c G" . consult-grep)
          ("C-c g" . consult-git-grep)
