@@ -131,8 +131,6 @@
   (package-install 'pcre2el)
   (package-install 'php-mode)
   (package-install 'posframe)
-  (package-install 'projectile)
-  (package-install 'projectile-rails)
   (package-install 'puni)
   (package-install 'python-mode)
   (package-install 'quickrun)

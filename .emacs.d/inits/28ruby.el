@@ -9,8 +9,7 @@
   :init
   (add-to-list 'major-mode-remap-alist '(ruby-mode . ruby-ts-mode))
   :config
-  (setq ruby-insert-encoding-magic-comment nil)
-  (projectile-rails-global-mode))
+  (setq ruby-insert-encoding-magic-comment nil))
 
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)

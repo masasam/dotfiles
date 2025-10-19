@@ -80,10 +80,10 @@
 ;; (counsel-projectile-mode)
 
 ;; How to clear cache (M-x projectile-invalidate-cache)
-(setq projectile-enable-caching t)
+;; (setq projectile-enable-caching t)
 ;; require ggtags
-(setq projectile-tags-file-name "GTAGS")
-(setq projectile-tags-command "gtags")
+;; (setq projectile-tags-file-name "GTAGS")
+;; (setq projectile-tags-command "gtags")
 
 
 ;; ggtags
