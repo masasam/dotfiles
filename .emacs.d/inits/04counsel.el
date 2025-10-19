@@ -79,10 +79,10 @@ If the region isn't selected, `swiper-isearch'."
         (forward-line 1))
       (reverse paths))))
 
-(defun counsel-ghq ()
-  "Counsel interface for ghq."
-  (interactive)
-  (counsel-find-file (ivy-read "ghq list: " (counsel-ghq--list-candidates))))
+;; (defun counsel-ghq ()
+;;   "Counsel interface for ghq."
+;;   (interactive)
+;;   (counsel-find-file (ivy-read "ghq list: " (counsel-ghq--list-candidates))))
 
 ;; (bind-key "C-x l" 'counsel-ghq)
 ;; (bind-key "C-x C-l" 'counsel-projectile-switch-project)

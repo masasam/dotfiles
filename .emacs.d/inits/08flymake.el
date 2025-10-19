@@ -41,9 +41,9 @@
 
 
 ;; flyspell-correct
-(require 'flyspell-correct-ivy)
-(define-key flyspell-mode-map (kbd "C-M-;") #'flyspell-correct-previous-word-generic)
-(define-key flyspell-mode-map (kbd "C-;") #'counsel-switch-buffer)
+;; (require 'flyspell-correct-ivy)
+;; (define-key flyspell-mode-map (kbd "C-M-;") #'flyspell-correct-previous-word-generic)
+;; (define-key flyspell-mode-map (kbd "C-;") #'counsel-switch-buffer)
 ;; (add-hook 'prog-mode-hook 'flyspell-mode)
 (add-hook 'text-mode-hook 'flyspell-mode)
 

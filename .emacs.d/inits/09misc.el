@@ -15,9 +15,9 @@
 
 
 ;; prescient
-(ivy-prescient-mode 1)
-(company-prescient-mode 1)
-(prescient-persist-mode 1)
+;; (ivy-prescient-mode 1)
+;; (company-prescient-mode 1)
+;; (prescient-persist-mode 1)
 
 
 ;; expand-region
@@ -63,7 +63,7 @@
 
 ;; dumb-jump
 (dumb-jump-mode)
-(setq dumb-jump-selector 'ivy)
+(setq dumb-jump-selector 'completing-read)
 
 
 ;; smart-jump
