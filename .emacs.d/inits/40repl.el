@@ -36,8 +36,7 @@ Python process.  This allows the process to start up."
 ;; repl-toggle
 (setq rtog/fullscreen t)
 (require 'repl-toggle)
-(setq rtog/mode-repl-alist '((js2-mode . nodejs-repl)
-			     (emacs-lisp-mode . ielm)
+(setq rtog/mode-repl-alist '((emacs-lisp-mode . ielm)
 			     (ruby-mode . inf-ruby)
 			     (lisp-mode. slime)
 			     (python-mode . my/python-shell-switch-to-shell)))
