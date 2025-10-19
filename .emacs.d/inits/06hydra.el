@@ -46,7 +46,7 @@ If there are two or more windows, it will go to another window."
    ("o" other-window-or-split)
    ("r" avy-goto-word-1)
    ("l" recenter-top-bottom)
-   ("s" swiper-isearch-region)
+   ("s" consult-line-or-region)
    ("S" window-swap-states)
    ("q" kill-buffer)
    ("w" clipboard-kill-ring-save)
@@ -59,7 +59,7 @@ If there are two or more windows, it will go to another window."
    ("3" split-window-right)
    ("0" delete-window)
    ("x" delete-window)
-   (";" counsel-switch-buffer)
+   (";" consult-buffer)
    ("M-n" next-buffer)
    ("M-p" previous-buffer)))
 

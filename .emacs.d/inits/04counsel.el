@@ -38,21 +38,21 @@
 ;; (setq swiper-include-line-number-in-search t)
 
 
-(defun swiper-region ()
-  "If region is selected, `swiper-thing-at-point' with the keyword selected in region.
-If the region isn't selected, `swiper'."
-  (interactive)
-  (if (not (use-region-p))
-      (swiper)
-    (swiper-thing-at-point)))
+;; (defun swiper-region ()
+;;   "If region is selected, `swiper-thing-at-point' with the keyword selected in region.
+;; If the region isn't selected, `swiper'."
+;;   (interactive)
+;;   (if (not (use-region-p))
+;;       (swiper)
+;;     (swiper-thing-at-point)))
 
-(defun swiper-isearch-region ()
-  "If region is selected, `swiper-isearch-thing-at-point' with the keyword selected in region.
-If the region isn't selected, `swiper-isearch'."
-  (interactive)
-  (if (not (use-region-p))
-      (swiper-isearch)
-    (swiper-isearch-thing-at-point)))
+;; (defun swiper-isearch-region ()
+;;   "If region is selected, `swiper-isearch-thing-at-point' with the keyword selected in region.
+;; If the region isn't selected, `swiper-isearch'."
+;;   (interactive)
+;;   (if (not (use-region-p))
+;;       (swiper-isearch)
+;;     (swiper-isearch-thing-at-point)))
 
 ;; counsel-tramp
 (setq tramp-default-method "ssh")
@@ -62,21 +62,21 @@ If the region isn't selected, `swiper-isearch'."
 				      (editorconfig-mode 1)))
 
 
-(defun counsel-ghq--list-candidates ()
-  "Candidates list for `counsel-ghq'."
-  (with-temp-buffer
-    (unless (zerop (apply #'call-process
-			  "ghq" nil t nil
-			  '("list" "--full-path")))
-      (error "Failed: Can't get ghq list candidates"))
-    (let ((paths))
-      (goto-char (point-min))
-      (while (not (eobp))
-	(push (buffer-substring-no-properties
-	       (line-beginning-position) (line-end-position))
-	      paths)
-        (forward-line 1))
-      (reverse paths))))
+;; (defun counsel-ghq--list-candidates ()
+;;   "Candidates list for `counsel-ghq'."
+;;   (with-temp-buffer
+;;     (unless (zerop (apply #'call-process
+;; 			  "ghq" nil t nil
+;; 			  '("list" "--full-path")))
+;;       (error "Failed: Can't get ghq list candidates"))
+;;     (let ((paths))
+;;       (goto-char (point-min))
+;;       (while (not (eobp))
+;; 	(push (buffer-substring-no-properties
+;; 	       (line-beginning-position) (line-end-position))
+;; 	      paths)
+;;         (forward-line 1))
+;;       (reverse paths))))
 
 ;; (defun counsel-ghq ()
 ;;   "Counsel interface for ghq."

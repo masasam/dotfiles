@@ -34,12 +34,12 @@
 
 
 ;; repl-toggle
-(setq rtog/fullscreen t)
-(require 'repl-toggle)
-(setq rtog/mode-repl-alist '((emacs-lisp-mode . ielm)
-			     (ruby-mode . inf-ruby)
-			     (lisp-mode. slime)
-			     (python-mode . my/python-shell-switch-to-shell)))
+;; (setq rtog/fullscreen t)
+;; (require 'repl-toggle)
+;; (setq rtog/mode-repl-alist '((emacs-lisp-mode . ielm)
+;; 			     (ruby-mode . inf-ruby)
+;; 			     (lisp-mode. slime)
+;; 			     (python-mode . my/python-shell-switch-to-shell)))
 
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)

@@ -47,18 +47,26 @@
 
 
 ;; volatile-highlights
-(require 'volatile-highlights)
-(volatile-highlights-mode t)
+(use-package volatile-highlights
+  :ensure t
+  :custom
+  ;; Keep static (non-animated) highlights (default)
+  (vhl/animation-style 'static)
+  ;; Ensure xref integration is on (definitions)
+  (vhl/use-xref-extension-p t)
+  :config
+  (volatile-highlights-mode 1)
+  (with-eval-after-load 'xref
+    ;; Disable the built-in xref pulse to keep static highlights.
+    ;; Use customize-set-variable (or setopt on Emacs 29.1+).
+    (customize-set-variable 'xref-pulse-on-jump nil)
+    ;; On Emacs 29.1+ you can instead use:
+    ;; (setopt xref-pulse-on-jump nil)
+    ))
 
 
 ;; quickrun
 (bind-key "<f5>" 'quickrun)
-
-
-;; pcre
-(require 'pcre2el)
-(add-hook 'prog-mode-hook 'rxt-mode)
-(setq reb-re-syntax 'pcre)
 
 
 ;; dumb-jump
