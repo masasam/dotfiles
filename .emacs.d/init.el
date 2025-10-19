@@ -99,7 +99,6 @@
   (package-install 'htmlize)
   (package-install 'hydra)
   (package-install 'iedit)
-  (package-install 'imenu-anywhere)
   (package-install 'inf-ruby)
   (package-install 'inflections)
   (package-install 'init-loader)
