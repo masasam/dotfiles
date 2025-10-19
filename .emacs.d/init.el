@@ -80,7 +80,6 @@
   (package-install 'espy)
   (package-install 'exec-path-from-shell)
   (package-install 'expand-region)
-  (package-install 'f)
   (package-install 'fill-column-indicator)
   (package-install 'find-file-in-project)
   (package-install 'flymake)
