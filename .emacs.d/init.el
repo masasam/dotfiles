@@ -88,7 +88,6 @@
   (package-install 'flymake-diagnostic-at-point)
   (package-install 'flyspell-correct)
   (package-install 'flyspell-correct-ivy)
-  (package-install 'forge)
   (package-install 'fullframe)
   (package-install 'ggtags)
   (package-install 'ghub)
