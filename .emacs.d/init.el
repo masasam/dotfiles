@@ -77,7 +77,6 @@
   (package-install 'ellama)
   (package-install 'embark)
   (package-install 'embark-consult)
-  (package-install 'epl)
   (package-install 'espy)
   (package-install 'exec-path-from-shell)
   (package-install 'expand-region)
