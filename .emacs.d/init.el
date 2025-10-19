@@ -100,7 +100,6 @@
   (package-install 'hydra)
   (package-install 'iedit)
   (package-install 'inf-ruby)
-  (package-install 'inflections)
   (package-install 'init-loader)
   (package-install 'ivy)
   (package-install 'ivy-prescient)
