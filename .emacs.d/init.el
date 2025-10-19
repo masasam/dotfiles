@@ -60,7 +60,6 @@
   (package-install 'deadgrep)
   (package-install 'difftastic)
   (package-install 'diff-hl)
-  (package-install 'docker)
   (when (< emacs-major-version 29)
     (package-install 'docker-tramp))
   (package-install 'dockerfile-mode)
