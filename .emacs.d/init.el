@@ -65,7 +65,6 @@
   (package-install 'dockerfile-mode)
   (package-install 'dracula-theme)
   (package-install 'dumb-jump)
-  (package-install 'easy-escape)
   (package-install 'easy-hugo)
   (package-install 'easy-jekyll)
   (package-install 'edit-indirect)
