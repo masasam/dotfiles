@@ -137,7 +137,6 @@
   (package-install 'smart-jump)
   (package-install 'shackle)
   (package-install 'symbol-overlay)
-  (package-install 'terraform-mode)
   (package-install 'tldr)
   (package-install 'toml-mode)
   (package-install 'trashed)
