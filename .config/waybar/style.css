@@ -85,19 +85,19 @@ tooltip {
 
 workspaces button {
     background-color: @background;
-	border-radius: 15px;
-	padding: 1px 5px;
-    margin: 4px 3px;
+	border-radius: 5px;
+	padding: 1px 1px;
+    margin: 1px 1px;
     border: 0px;
 }
 
 #workspaces button.active {
 	background-color: #8899ff;
-	border-radius: 15px;
-	min-width: 40px;
+	border-radius: 5px;
+	min-width: 10px;
 }
 
 #workspaces button:hover {
     background-color: #8899ff;
-	border-radius: 15px;
+	border-radius: 5px;
 }
