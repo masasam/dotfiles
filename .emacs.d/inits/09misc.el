@@ -14,12 +14,6 @@
   (bind-key "p" 'previous-line tldr-mode-map))
 
 
-;; prescient
-;; (ivy-prescient-mode 1)
-;; (company-prescient-mode 1)
-;; (prescient-persist-mode 1)
-
-
 ;; expand-region
 (require 'expand-region)
 (push 'er/mark-outside-pairs er/try-expand-list)
@@ -83,20 +77,7 @@
 (yas-global-mode 1)
 
 
-;; projectile
-;; (projectile-mode)
-;; (counsel-projectile-mode)
-
-;; How to clear cache (M-x projectile-invalidate-cache)
-;; (setq projectile-enable-caching t)
-;; require ggtags
-;; (setq projectile-tags-file-name "GTAGS")
-;; (setq projectile-tags-command "gtags")
-
-
 ;; ggtags
-;; (add-hook 'php-mode-hook 'ggtag-setting)
-;; ;;(add-hook 'enh-ruby-mode-hook 'ggtag-setting)
 ;; (add-hook 'c-mode-common-hook 'ggtag-setting)
 ;; (add-hook 'js2-mode-hook 'ggtag-setting)
 ;; (add-hook 'js2-jsx-mode-hook 'ggtag-setting)
