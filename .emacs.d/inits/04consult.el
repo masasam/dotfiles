@@ -12,15 +12,22 @@
          ("C-c h" . consult-history)
          ("C-c k" . consult-kmacro)
          ("C-c m" . consult-man)
+		 ("C-c f" . project-find-file)
+         ("C-c l" . consult-locate)
+         ("C-c G" . consult-grep)
+         ("C-c g" . consult-git-grep)
+         ("C-c r" . consult-ripgrep)
          ("C-c i" . consult-info)
+		 ([remap Info-search] . consult-info)
+		 ;; C-x bindings in `ctl-x-map'
 		 ("C-x C-c" . execute-extended-command)
 		 ("C-x l" . consult-ghq-switch-project)
 		 ("C-x C-l" . consult-ghq-switch-project)
-         ([remap Info-search] . consult-info)
-         ;; C-x bindings in `ctl-x-map'
          ("C-x M-:" . consult-complex-command) ;; orig. repeat-complex-command
          ("C-;" . consult-buffer) ;; orig. switch-to-buffer
 		 ("C-x b" . consult-buffer)
+		 ("C-x m" . consult-mark)
+         ("C-x C-m" . consult-global-mark)
          ("C-x 4 b" . consult-buffer-other-window) ;; orig. switch-to-buffer-other-window
          ("C-x 5 b" . consult-buffer-other-frame) ;; orig. switch-to-buffer-other-frame
          ("C-x t b" . consult-buffer-other-tab)	;; orig. switch-to-buffer-other-tab
@@ -38,16 +45,9 @@
          ("M-g g" . consult-goto-line)	 ;; orig. goto-line
          ("M-g M-g" . consult-goto-line) ;; orig. goto-line
          ("M-g o" . consult-outline) ;; Alternative: consult-org-heading
-         ("C-x m" . consult-mark)
-         ("C-x C-m" . consult-global-mark)
          ("M-g i" . consult-imenu)
          ("M-g I" . consult-imenu-multi)
          ;; M-s bindings in `search-map'
-         ("C-c f" . project-find-file)
-         ("C-c l" . consult-locate)
-         ("C-c G" . consult-grep)
-         ("C-c g" . consult-git-grep)
-         ("C-c r" . consult-ripgrep)
          ("C-s" . consult-line-or-region)
          ("M-s L" . consult-line-multi)
          ("M-s k" . consult-keep-lines)
