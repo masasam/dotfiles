@@ -86,11 +86,6 @@
   (interactive)
   (browse-url "https://www.google.com/maps/"))
 
-(defun chrome-pocket ()
-  "Open pocket with chrome."
-  (interactive)
-  (browse-url "https://getpocket.com/a/queue/"))
-
 (defun chrome-x ()
   "Open twitter with chrome."
   (interactive)
