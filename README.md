@@ -495,15 +495,6 @@ You can make install from here
 	sudo pacman -S python-prompt_toolkit python-faker python-matplotlib python-nose python-pandas
 	sudo pacman -S python-numpy python-beautifulsoup4
 
-#### Install using golang
-
-	mkdir -p ${HOME}/{bin,src}
-	go install golang.org/x/tools/cmd/goimports@latest
-	go install github.com/kyoshidajp/ghkw@latest
-	go install github.com/simeji/jid/cmd/jid@latest
-	go install github.com/jmhodges/jsonpp@latest
-	go install github.com/mithrandie/csvq@latest
-
 #### Kubernetes
 
 docker

@@ -518,7 +518,7 @@ testpath: ## Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: dconfsetting rclone gnupg ssh install init keyring mise foot ghostty alacritty tlp pipewire-pulse ttf-cica hyprland dnsmasq goinstall fcitx-mozc neomutt lvfs aur beekeeper kind gtk-theme chrome pipinstall ccls gh
+allinstall: dconfsetting rclone gnupg ssh install init keyring mise foot ghostty alacritty tlp pipewire-pulse ttf-cica hyprland dnsmasq fcitx-mozc neomutt lvfs aur beekeeper kind gtk-theme chrome pipinstall ccls gh
 
 allupdate: update goinstall
 
