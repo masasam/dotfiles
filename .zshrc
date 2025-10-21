@@ -290,8 +290,6 @@ alias allupdate='time archupdate && time melpabackup && time zshbackup && time a
 
 
 # PATH
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
 export GOPATH=$HOME
 export PATH="$PATH:$GOPATH/bin"
 export EDITOR='emacsclient'
