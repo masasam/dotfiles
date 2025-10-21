@@ -286,7 +286,7 @@ alias fontlist='fc-list | cut -d: -f1 | less'
 alias fontlistja='fc-list :lang=ja | cut -d: -f1 | less'
 alias jupytertheme='jt -t chesterish -T -f roboto -fs 9 -tf merriserif -tfs 11 -nf ptsans -nfs 11 -dfs 8 -ofs 8'
 alias myvpn='cd ~/backup/openvpn; sudo openvpn --config client.conf'
-alias allupdate='time archupdate && time melpabackup && time zshbackup && time archbackup && time backupcloud && time goupdate'
+alias allupdate='time archupdate && time melpabackup && time zshbackup && time archbackup && time backupcloud'
 
 
 # PATH
@@ -294,7 +294,6 @@ export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 export GOPATH=$HOME
 export PATH="$PATH:$GOPATH/bin"
-export PATH="$PATH":"$HOME/.pub-cache/bin"
 export EDITOR='emacsclient'
 export XDG_CONFIG_HOME=$HOME/.config
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
@@ -302,8 +301,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 PATH="$HOME/.node_modules/bin:$PATH"
 unset npm_config_prefix
 PATH="$HOME/.local/bin:$PATH"
-export PATH="$PATH:$HOME/src/github.com/flutter/flutter/bin"
-export PATH=$PATH:$HOME/.roswell/bin
 export LIBVA_DRIVER_NAME=iHD
 export GTAGSCONF=/usr/share/gtags/gtags.conf
 export GTAGSLABEL=pygments
