@@ -294,11 +294,11 @@ export GOPATH=$HOME
 export PATH="$PATH:$GOPATH/bin"
 export EDITOR='emacsclient'
 export XDG_CONFIG_HOME=$HOME/.config
-PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
-PATH="$HOME/.node_modules/bin:$PATH"
+export PATH="$HOME/.node_modules/bin:$PATH"
 unset npm_config_prefix
-PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 export LIBVA_DRIVER_NAME=iHD
 export GTAGSCONF=/usr/share/gtags/gtags.conf
 export GTAGSLABEL=pygments
