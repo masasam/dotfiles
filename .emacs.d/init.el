@@ -48,8 +48,6 @@
   (package-install 'consult-ghq)
   (package-install 'copilot)
   (package-install 'corfu)
-  (package-install 'counsel)
-  (package-install 'counsel-tramp)
   (package-install 'csv-mode)
   (package-install 'dashboard)
   (package-install 'dmacro)

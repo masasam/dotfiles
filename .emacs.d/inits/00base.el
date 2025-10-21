@@ -44,7 +44,7 @@
 
 
 ;; defalias list
-(defalias 'my/key-binding 'counsel-descbinds)
+(defalias 'my/key-binding 'describe-bindings)
 (defalias 'my/github-show 'browse-at-remote)
 (defalias 'my/ruler-show 'fci-mode)
 (defalias 'my/kukei-mark-mode 'rectangle-mark-mode)
