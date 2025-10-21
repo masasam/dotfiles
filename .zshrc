@@ -304,11 +304,6 @@ export GTAGSCONF=/usr/share/gtags/gtags.conf
 export GTAGSLABEL=pygments
 export PAGER=less
 export LESS='-g -i -M -R -S -W -z-4 -x4'
-export RBENV_ROOT="${HOME}/.rbenv"
-if [ -d "${RBENV_ROOT}" ]; then
-  export PATH="${RBENV_ROOT}/bin:${PATH}"
-  eval "$(rbenv init -)"
-fi
 
 # cdr
 autoload -Uz is-at-least
@@ -922,10 +917,10 @@ if [ -f '/home/masa/google-cloud-sdk/path.zsh.inc' ]; then . '/home/masa/google-
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/masa/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/masa/google-cloud-sdk/completion.zsh.inc'; fi
 
-# zsh-completions for aws v2
+# zsh-completions for aws
 autoload bashcompinit
 bashcompinit
-complete -C '/usr/local/bin/aws_completer' aws
+complete -C 'aws_completer' aws
 
 # pnpm
 export PNPM_HOME="/home/masa/.local/share/pnpm"
