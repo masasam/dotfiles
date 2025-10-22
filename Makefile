@@ -1,4 +1,4 @@
-export PATH := ${HOME}/.local/bin:$HOME/.local/share/mise/shims:${HOME}/.cargo/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/bin/core_perl:${HOME}/bin:${HOME}/google-cloud-sdk/bin
+export PATH := ${HOME}/.local/bin:$HOME/.local/share/mise/shims:/usr/local/bin:/usr/local/sbin:/usr/bin
 export GOPATH := ${HOME}
 
 BASE_PKGS	:= filesystem gcc-libs glibc bash coreutils file findutils gawk grep
