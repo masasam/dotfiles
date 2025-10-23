@@ -466,28 +466,32 @@ You can make install from here
 	yay -S downgrade
 	yay -S firebase-tools-bin
 	yay -S git-secrets
-	yay -S gnu-netcat
-	yay -S limbo-bin
-	yay -S ibus-mozc
 	yay -S pscale-cli
 	yay -S rgxg
-	yay -S rtags
 	yay -S slack-desktop
 	yay -S turso-cli-bin
-	yay -S volta-bin
 	yay -S yay
 	yay -S zoom
 
 #### Install using mise
 
 	mise use -g bun
+	mise use -g deno
 	mise use -g duckdb
 	mise use -g gemini-cli
 	mise use -g marp-cli
 	mise use -g node
+	mise use -g npm:@github/copilot-language-server
+	mise use -g npm:@github/copilot
+	mise use -g npm:ts-node
+	mise use -g npm:typescript
 	mise use -g pnpm
 	mise use -g trdsql
 	mise use -g usage
+	mise use -g uv
+	mise use -g yay
+	mise use -g youtube-dl
+	mise use -g yt-dlp
 
 ##### Install using global python package
 
