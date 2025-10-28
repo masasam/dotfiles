@@ -311,7 +311,6 @@ gtest
 gtk-doc
 gtk-layer-shell
 gtk-update-icon-cache
-gtk2
 gtk3
 gtk4
 gtk4-layer-shell
@@ -669,7 +668,7 @@ libabw
 libadwaita
 libaio
 libappimage
-libappindicator-gtk3
+libappindicator
 libarchive
 libass
 libassuan
