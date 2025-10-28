@@ -6,43 +6,43 @@
 (defun nautilus-open ()
   "Open current directry with nautilus."
   (interactive)
-  (shell-command (concat "xdg-open " default-directory)))
+  (shell-command (concat "nautilus " default-directory)))
 
 
 (defun nautilus-backup ()
   "Open backup directry with nautilus."
   (interactive)
-  (shell-command "xdg-open ~/backup"))
+  (shell-command "nautilus ~/backup"))
 
 
 (defun nautilus-work ()
   "Open work directry with nautilus."
   (interactive)
-  (shell-command "xdg-open ~/backup/work"))
+  (shell-command "nautilus ~/backup/work"))
 
 
 (defun nautilus-cash ()
   "Open cash directry with nautilus."
   (interactive)
-  (shell-command "xdg-open ~/backup/cash"))
+  (shell-command "nautilus ~/backup/cash"))
 
 
 (defun nautilus-downloads ()
   "Open downloads directry with nautilus."
   (interactive)
-  (shell-command "xdg-open ~/Downloads"))
+  (shell-command "nautilus ~/Downloads"))
 
 
 (defun nautilus-documents ()
   "Open documents directry with nautilus."
   (interactive)
-  (shell-command "xdg-open ~/Documents"))
+  (shell-command "nautilus ~/Documents"))
 
 
 (defun nautilus-pictures ()
   "Open pictures directry with nautilus."
   (interactive)
-  (shell-command "xdg-open ~/Pictures"))
+  (shell-command "nautilus ~/Pictures"))
 
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
