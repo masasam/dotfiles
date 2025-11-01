@@ -19,6 +19,10 @@
   :custom
   (gptel-commit-stream t))
 
+(with-eval-after-load 'magit
+  (define-key git-commit-mode-map (kbd "C-c g") #'gptel-commit)
+  (define-key git-commit-mode-map (kbd "C-c G") #'gptel-commit-rationale))
+
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:
