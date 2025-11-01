@@ -8,7 +8,7 @@ BASE_PKGS	+= make patch pkgconf texinfo which archlinux-keyring debugedit libtoo
 BASE_PKGS	+= m4 groff sudo pciutils psmisc shadow procps-ng sed tar gettext
 
 PACKAGES	:= base base-devel go zsh git vim tmux keychain unrar xsel emacs atool
-PACKAGES	+= unace iperf valgrind noto-fonts-emoji inkscape file-roller xclip
+PACKAGES	+= unace iperf valgrind noto-fonts-emoji inkscape file-roller xclip fd
 PACKAGES	+= ipcalc traceroute debootstrap oath-toolkit gvfs-smb zsh-completions
 PACKAGES	+= imagemagick lynx the_silver_searcher cifs-utils elinks satty mold
 PACKAGES	+= cups-pdf firefox firefox-i18n-ja gimp strace lhasa hub tig ethtool
