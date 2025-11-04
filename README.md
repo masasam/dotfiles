@@ -308,13 +308,10 @@ Install drivers that match your environment
 
 	lspci | grep VGA
 	pacman -S intel-media-driver libva-utils
-	pacman -S xorg-server xorg-apps
 
-Set up with Gnome once and then install [Hyprland](https://github.com/hyprwm/Hyprland)
+Install [Hyprland](https://github.com/hyprwm/Hyprland)
 
-	pacman -S gnome-backgrounds
-	pacman -S gnome-control-center
-	pacman -S gnome-keyring
+	pacman -S hyprland rofi-wayland
 	pacman -S nautilus
 
 Enable graphical login with gdm
