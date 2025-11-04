@@ -388,25 +388,6 @@ Run the following after set the ssh key
 	cd ~/Pictures
 	git clone -b image git@github.com:masasam/image.git
 
-### dconf setting
-
-    sudo pacman -S dconf-editor
-
-	dconf write /org/gnome/desktop/input-sources/xkb-options "['ctrl:nocaps']"
-	dconf write /org/gnome/desktop/interface/gtk-theme "'Adwaita-dark'"
-	dconf write /org/gnome/desktop/interface/gtk-key-theme "'Emacs'"
-	dconf write /org/gnome/desktop/interface/text-scaling-factor 1.25
-	dconf write /org/gnome/desktop/interface/cursor-size 30
-	dconf write /org/gnome/desktop/interface/clock-show-date true
-	dconf write /org/gnome/desktop/interface/clock-show-weekday true
-	dconf write /org/gnome/desktop/interface/show-battery-percentage true
-	dconf write /org/gnome/desktop/wm/preferences/num-workspaces 1
-	dconf write /org/gnome/desktop/wm/keybindings/activate-window-menu "['']"
-	dconf write /org/gnome/desktop/search-providers/disable-external true
-	dconf write /org/gnome/desktop/privacy/remember-recent-files false
-	dconf write /org/gnome/shell/keybindings/toggle-overview "['<Alt>space']"
-	dconf write /org/gnome/mutter/dynamic-workspaces false
-
 --------------------------------------
 
 You can make install from here
