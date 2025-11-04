@@ -302,7 +302,7 @@ Set boot loader
 	grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 	grub-mkconfig -o /boot/grub/grub.cfg
 
-#### Prepare drivers and Xorg Gnome
+#### Prepare drivers
 
 Install drivers that match your environment
 
