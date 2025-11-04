@@ -182,6 +182,15 @@ kitty: # Init kitty terminal
 	ln -vsf {${PWD},${HOME}}/.config/$@/$@.conf
 	ln -vsf {${PWD},${HOME}}/.config/kitty/current-theme.conf
 
+tree-sitter: ## Install tree-sitter
+	$(PACMAN) tree-sitter tree-sitter-rust tree-sitter-bash tree-sitter-python
+	$(PACMAN) tree-sitter-javascript tree-sitter-c
+	yay -S tree-sitter-typescript
+	yay -S tree-sitter-json
+	yay -S tree-sitter-css
+	yay -S tree-sitter-yaml
+	yay -S tree-sitter-html
+
 dnsmasq: ## Init dnsmasq
 	$(PACMAN) $@
 	sudo ln -vsf ${PWD}/etc/$@/resolv.$@.conf /etc/resolv.$@.conf
@@ -518,7 +527,7 @@ testpath: ## Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: dconfsetting rclone gnupg ssh install init keyring mise foot ghostty alacritty tlp pipewire-pulse ttf-cica hyprland dnsmasq fcitx-mozc neomutt lvfs aur beekeeper kind gtk-theme chrome pipinstall ccls gh
+allinstall: dconfsetting rclone gnupg ssh install init keyring mise foot ghostty alacritty tlp pipewire-pulse ttf-cica hyprland dnsmasq fcitx-mozc neomutt lvfs aur beekeeper kind gtk-theme chrome pipinstall ccls gh tree-sitter
 
 allupdate: update goinstall
 
