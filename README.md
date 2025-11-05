@@ -401,7 +401,7 @@ You can make install from here
     sudo pacman -S firefox firefox-i18n-ja fping xdotool jc
     sudo pacman -S sylpheed emacs curl xsel tmux eog lhasa
     sudo pacman -S zsh-completions keychain syncthing lzop
-    sudo pacman -S powertop gimp unrar gnome-screenshot zellij
+    sudo pacman -S powertop gimp unrar
     sudo pacman -S file-roller xclip atool evince inkscape
     sudo pacman -S seahorse the_silver_searcher zeal vimiv
     sudo pacman -S cups-pdf htop neovim go pkgfile rsync elixir
@@ -419,7 +419,7 @@ You can make install from here
 	sudo pacman -S debootstrap tcpdump pdfgrep sshfs stunnel
 	sudo pacman -S alsa-utils plocate traceroute hugo mpv jhead
 	sudo pacman -S nethogs optipng jpegoptim noto-fonts-emoji
-	sudo pacman -S debian-archive-keyring tree rclone gnome-tweaks
+	sudo pacman -S debian-archive-keyring tree rclone
 	sudo pacman -S mathjax strace valgrind p7zip unace postgresql
 	sudo pacman -S yarn geckodriver w3m neomutt iperf redis convmv
 	sudo pacman -S highlight lynx elinks mediainfo cpio satty
@@ -427,7 +427,7 @@ You can make install from here
 	sudo pacman -S bookworm ruby ruby-rdoc pacman-contrib ncdu
 	sudo pacman -S dart sxiv adapta-gtk-theme podman firejail
 	sudo pacman -S hexedit tokei aria2 discord pv findomain biome
-	sudo pacman -S gnome-logs qreator diskus sysprof bat bluetui
+	sudo pacman -S qreator diskus sysprof bat bluetui
 	sudo pacman -S obs-studio wireshark-cli gitui yaml-language-server
 	sudo pacman -S editorconfig-core-c watchexec browserpass-firefox
 	sudo pacman -S man-db baobab ioping mkcert detox git-lfs xsv
