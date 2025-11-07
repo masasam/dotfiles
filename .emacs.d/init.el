@@ -70,7 +70,6 @@
   (package-install 'eldoc-box)
   (package-install 'elisp-slime-nav)
   (package-install 'elixir-mode)
-  (package-install 'ellama)
   (package-install 'embark)
   (package-install 'embark-consult)
   (package-install 'espy)
