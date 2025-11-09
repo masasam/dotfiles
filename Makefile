@@ -325,11 +325,10 @@ pgcli: ## Init pgcli
 	ln -vsfn ${HOME}/{backup,.config}/$@
 
 gcloud: ## Install google cloud SDK and setting
-	$(PACMAN) $@ kubectl kubectx kustomize helm
+	$(PACMAN) $@ kubectl kubectx kustomize helm stern
 	curl https://sdk.cloud.google.com | bash
 	test -L ${HOME}/.config/gcloud || rm -rf ${HOME}/.config/gcloud
 	ln -vsfn ${HOME}/{backup,.config}/gcloud
-	mise use -g stern
 
 minikube: ## Setup minikube with kvm2
 	$(PACMAN) $@ libvirt qemu-headless ebtables docker-machine

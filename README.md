@@ -491,8 +491,7 @@ Google Kubernetes Engine
 	curl https://sdk.cloud.google.com | bash
 	test -L ${HOME}/.config/gcloud || rm -rf ${HOME}/.config/gcloud
 	ln -vsfn ${HOME}/backup/gcloud   ${HOME}/.config/gcloud
-	sudo pacman -S kubectl kubectx kustomize helm
-	mise use -g stern
+	sudo pacman -S kubectl kubectx kustomize helm stern
 
 kind(Kubernetes IN Docker)
 
