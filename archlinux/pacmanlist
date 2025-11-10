@@ -587,12 +587,13 @@ hyprcursor
 hyprgraphics
 hypridle
 hyprland
+hyprland-guiutils
 hyprland-qt-support
-hyprland-qtutils
 hyprlang
 hyprlock
 hyprshot
 hyprsunset
+hyprtoolkit
 hyprutils
 hyprwayland-scanner
 iana-etc
@@ -604,6 +605,7 @@ imagemagick
 imath
 imlib2
 imv
+iniparser
 inkscape
 intel-gmmlib
 intel-media-driver
@@ -1365,12 +1367,9 @@ qscintilla-qt5
 qt5-base
 qt5-declarative
 qt5-location
-qt5-remoteobjects
 qt5-svg
 qt5-translations
 qt5-wayland
-qt5-webchannel
-qt5-webengine
 qt5-x11extras
 qt5ct
 qt6-base
