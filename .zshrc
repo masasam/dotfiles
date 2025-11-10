@@ -936,3 +936,5 @@ export PATH="$HOME/.local/share/mise/shims:$PATH"
 # uv
 eval "$(uv generate-shell-completion zsh)"
 
+# Turso
+export PATH="$PATH:/home/masa/.turso"
