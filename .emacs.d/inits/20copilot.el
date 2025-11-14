@@ -4,7 +4,8 @@
 ;;(setq debug-on-error t)
 
 (use-package copilot
-  :hook   ((prog-mode-hook .  copilot-mode))
+  :hook   ((typescript-ts-mode .  copilot-mode)
+		   (tsx-ts-mode .  copilot-mode))
   :bind
   ((:map copilot-completion-map ("<tab>" . copilot-accept-completion))))
 
