@@ -4,6 +4,7 @@
 ;;(setq debug-on-error t)
 
 (use-package copilot
+  :hook   ((prog-mode-hook .  copilot-mode))
   :bind
   ((:map copilot-completion-map ("<tab>" . copilot-accept-completion))))
 
