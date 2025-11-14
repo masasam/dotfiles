@@ -827,6 +827,7 @@ libnma
 libnma-common
 libnma-gtk4
 libnotify
+libnsbmp
 libnsl
 libnumbertext
 libnvme
@@ -1361,6 +1362,7 @@ python-zstandard
 qcustomplot
 qhexedit2
 qhull
+qoi
 qpdf
 qrcodegencpp-cmake
 qscintilla-qt5
