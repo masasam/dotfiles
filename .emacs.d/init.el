@@ -45,6 +45,7 @@
   (package-install 'cape)
   (package-install 'catppuccin-theme)
   (package-install 'consult)
+  (package-install 'consult-dir)
   (package-install 'consult-ghq)
   (package-install 'copilot)
   (package-install 'corfu)

@@ -157,6 +157,14 @@
   (embark-collect-mode . consult-preview-at-point-mode))
 
 
+(use-package consult-dir
+  :ensure t
+  :bind (("C-x C-d" . consult-dir)
+         :map minibuffer-local-completion-map
+         ("C-x C-d" . consult-dir)
+         ("C-x C-j" . consult-dir-jump-file)))
+
+
 (defun consult-line-or-region (&optional at-point)
   "When C-u is added, use the string at the cursor position. If region is selected, `consult-line' with the keyword selected in region.
 If the region isn't selected, `consult-line'."
