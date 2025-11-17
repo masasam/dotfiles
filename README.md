@@ -548,34 +548,6 @@ When restarting NetworkManager, dnsmasq is set to be automatically usable.
 
 ![dnsmasq](https://raw.githubusercontent.com/masasam/image/image/dnsmasq.png)
 
-# Mozc
-
-ibus-mozc
-
-Make input sources mozc only for region and language.
-My key setting is based on Kotoeri (closest to emacs key binding).
-
->「Input before conversion」「Shift+Space」「Disable IME」
->「Converting」「Shift+Space」「Disable IME」
->「Direct input」「Shift+Space」「Enable IME」
->「No input character」「Shift+Space」「Disable IME」
->Delete other Shift-space entangled shortcuts.
->「Converting」cansel Ctrl-g
-
-reboot
-
-Once mozc is set up
-
-    ln -sfn ~/backup/mozc ~/.mozc
-
-And set the mozc setting to backup directory.
-With this it will not have to be set again.
-
-    ibus-setup
-
-Open the emoji tab
-Since <Control>semicolon is set in the shortcut of emoji ruby, delete it.
-
 ## How to test Makefile
 
 #### When using Makefile
