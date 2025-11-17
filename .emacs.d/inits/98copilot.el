@@ -1,4 +1,4 @@
-;;; 20copilot.el --- 20copilot.el
+;;; 98copilot.el --- 98copilot.el
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)
@@ -12,4 +12,4 @@
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:
-;;; 20copilot.el ends here
+;;; 98copilot.el ends here
