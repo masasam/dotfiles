@@ -1,4 +1,4 @@
-;;; 04consult.el --- 04consult.el
+;;; 03consult.el --- 03consult.el
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)
@@ -189,4 +189,4 @@ If the region isn't selected, `consult-line'."
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:
-;;; 04consult.el ends here
+;;; 03consult.el ends here
