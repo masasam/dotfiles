@@ -1,4 +1,5 @@
 7zip
+a52dec
 aalib
 abiword
 abseil-cpp
@@ -300,11 +301,14 @@ gsm
 gsound
 gspell
 gssdp
+gst-plugin-pipewire
 gst-plugins-bad-libs
 gst-plugins-base
 gst-plugins-base-libs
 gst-plugins-good
+gst-plugins-ugly
 gstreamer
+gstreamer-vaapi
 gtest
 gtk-doc
 gtk-layer-shell
@@ -645,6 +649,7 @@ kitty
 kitty-shell-integration
 kitty-terminfo
 kmod
+kooha
 krb5
 kvantum
 kvantum-qt5
@@ -686,6 +691,7 @@ libblockdev-loop
 libblockdev-mdraid
 libblockdev-nvme
 libblockdev-part
+libblockdev-smart
 libblockdev-swap
 libbluray
 libbpf
@@ -786,7 +792,6 @@ libjcat
 libjpeg-turbo
 libjuice
 libjxl
-libkeybinder3
 libksba
 liblangtag
 liblc3
@@ -807,6 +812,7 @@ libmnl
 libmodplug
 libmpc
 libmpdclient
+libmpeg2
 libmspub
 libmwaw
 libmypaint
@@ -1126,7 +1132,6 @@ pcre
 pcre2
 pcsclite
 pdfgrep
-peek
 perl
 perl-error
 perl-io-tty
