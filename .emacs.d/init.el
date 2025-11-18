@@ -119,6 +119,7 @@
   (package-install 'page-break-lines)
   (package-install 'pass)
   (package-install 'password-generator)
+  (package-install 'popper)
   (package-install 'posframe)
   (package-install 'puni)
   (package-install 'python-mode)

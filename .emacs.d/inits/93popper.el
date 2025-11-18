@@ -29,7 +29,11 @@
 		  "\\*quickrun\\*"
           "\\*Async Shell Command\\*"
           help-mode
-          compilation-mode))
+          compilation-mode
+		  "^\\*eshell.*\\*$" eshell-mode
+		  "^\\*shell.*\\*$"  shell-mode
+		  "^\\*term.*\\*$"   term-mode
+		  "^\\*vterm.*\\*$"  vterm-mode))
   (popper-mode +1)
   (popper-echo-mode +1))                ; For echo area hints
 
