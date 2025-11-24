@@ -9,7 +9,7 @@
 ;; theme
 ;; (load-theme 'material t)
 (load-theme 'dracula t)
-;; (load-theme 'catppuccin :no-confirm)
+;; (load-theme 'catppuccin)
 
 (setq-default tab-width 4)
 
