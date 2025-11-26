@@ -834,6 +834,7 @@ libnma-common
 libnma-gtk4
 libnotify
 libnsbmp
+libnsgif
 libnsl
 libnumbertext
 libnvme
