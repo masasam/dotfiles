@@ -85,12 +85,16 @@ cantarell-fonts
 cblas
 ccls
 cdparanoia
+cfitsio
 check
 cifs-utils
 clang
 clucene
+clutter
+clutter-gtk
 cmatrix
 cmocka
+cogl
 colord
 colord-gtk-common
 colord-gtk4
@@ -177,6 +181,7 @@ fdupes
 ffcall
 ffmpeg
 ffmpeg4.4
+ffmpegthumbnailer
 fftw
 file
 file-roller
@@ -219,6 +224,7 @@ gdbm
 gdk-pixbuf2
 gdm
 geckodriver
+geeqie
 gegl
 geoclue
 geocode-glib-2
@@ -709,6 +715,7 @@ libcddb
 libcdio
 libcdio-paranoia
 libcdr
+libchamplain
 libcloudproviders
 libcmis
 libcolord
