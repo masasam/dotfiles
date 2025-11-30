@@ -124,6 +124,7 @@ goinstall: ${HOME}/.local ## Install go packages
 
 mise: ## Setup mise
 	$(PACMAN) mise
+	mise use -g atlas
 	mise use -g bun
 	mise use -g deno
 	mise use -g duckdb

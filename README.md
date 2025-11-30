@@ -454,6 +454,7 @@ You can make install from here
 
 #### Install using mise
 
+	mise use -g atlas
 	mise use -g bun
 	mise use -g deno
 	mise use -g duckdb
