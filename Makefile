@@ -404,11 +404,6 @@ tmuxp: ${HOME}/.local ## Install tmuxp
 	$(PACMAN) $@
 	sudo ln -vsf {${PWD},${HOME}}/.config/main.yaml
 
-sylpheed: ## Init sylpheed
-	$(PACMAN) $@
-	test -L ${HOME}/.sylpheed-2.0 || rm -rf ${HOME}/.sylpheed-2.0
-	ln -vsfn ${HOME}/{backup/sylpheed,}/.sylpheed-2.0
-
 psd: ## Profile-Sync-Daemon initial setup
 	yay -S profile-sync-daemon
 	mkdir -p ${HOME}/.config/psd

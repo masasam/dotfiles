@@ -115,7 +115,7 @@ After cloning a repository with encrypted files, unlock with gnupg at this comma
 
 - Those that can not be opened but need to protect data
 
-   Sylpheed configuration file and mail data etc.
+   Secret configuration file and mail data etc.
 
 # Arch Linux install
 
@@ -399,7 +399,7 @@ You can make install from here
 #### Install using pacman
 
     sudo pacman -S firefox firefox-i18n-ja fping xdotool jc
-    sudo pacman -S sylpheed emacs curl xsel tmux eog lhasa
+    sudo pacman -S emacs curl xsel tmux eog lhasa
     sudo pacman -S zsh-completions keychain syncthing lzop
     sudo pacman -S powertop gimp unrar
     sudo pacman -S file-roller xclip atool evince inkscape
