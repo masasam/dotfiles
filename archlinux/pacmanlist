@@ -806,6 +806,7 @@ libldac
 libldap
 libliftoff
 liblqr
+libmakepkg-dropins
 libmalcontent
 libmanette
 libmaxminddb
