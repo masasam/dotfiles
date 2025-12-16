@@ -63,14 +63,24 @@
 
 
 ;; wl-copy integration for Wayland clipboard
-(when (executable-find "wl-copy")
+(when (equal "wayland"
+			 (car (split-string (shell-command-to-string
+								 "echo $XDG_SESSION_TYPE"))))
+  (setq wl-copy-process nil)
   (defun wl-copy (text)
-    (let ((p (make-process :name "wl-copy"
-                           :command '("wl-copy")
-                           :connection-type 'pipe)))
-      (process-send-string p text)
-      (process-send-eof p)))
-  (setq interprogram-cut-function 'wl-copy))
+	(setq wl-copy-process (make-process :name "wl-copy"
+										:buffer nil
+										:command '("wl-copy" "-f" "-n")
+										:connection-type 'pipe
+										:noquery t))
+	(process-send-string wl-copy-process text)
+	(process-send-eof wl-copy-process))
+  (defun wl-paste ()
+	(if (and wl-copy-process (process-live-p wl-copy-process))
+		nil ; should return nil if we're the current paste owner
+      (shell-command-to-string "wl-paste -n | tr -d \r")))
+  (setq interprogram-cut-function 'wl-copy)
+  (setq interprogram-paste-function 'wl-paste))
 
 
 ;; Do not make a backup file like *.~
