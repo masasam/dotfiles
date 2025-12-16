@@ -62,10 +62,8 @@
   (server-start))
 
 
-;; wl-copy integration for Wayland clipboard
-(when (equal "wayland"
-			 (car (split-string (shell-command-to-string
-								 "echo $XDG_SESSION_TYPE"))))
+;; wl-copy integration for Wayland clipboard(need wl-clipboard package)
+(when (string= (getenv "XDG_SESSION_TYPE") "wayland")
   (setq wl-copy-process nil)
   (defun wl-copy (text)
 	(setq wl-copy-process (make-process :name "wl-copy"
