@@ -63,13 +63,13 @@
 
 
 ;; wl-copy integration for Wayland clipboard
-(defun wl-copy (text)
+(when (executable-find "wl-copy")
+  (defun wl-copy (text)
     (let ((p (make-process :name "wl-copy"
                            :command '("wl-copy")
                            :connection-type 'pipe)))
       (process-send-string p text)
       (process-send-eof p)))
-(when (executable-find "wl-copy")
   (setq interprogram-cut-function 'wl-copy))
 
 
