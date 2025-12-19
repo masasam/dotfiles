@@ -398,44 +398,38 @@ You can make install from here
 
 #### Install using pacman
 
-    sudo pacman -S firefox firefox-i18n-ja fping xdotool jc
-    sudo pacman -S emacs curl xsel tmux eog lhasa
-    sudo pacman -S zsh-completions keychain syncthing lzop
-    sudo pacman -S powertop gimp unrar
-    sudo pacman -S file-roller xclip atool evince inkscape
-    sudo pacman -S seahorse the_silver_searcher zeal vimiv
-    sudo pacman -S cups-pdf htop neovim go pkgfile rsync elixir
-	sudo pacman -S nodejs whois nmap poppler-data ffmpeg gron
-	sudo pacman -S aspell aspell-en httperf asciidoc sbcl rye uv
-	sudo pacman -S gdb hub wmctrl gpaste pkgstats ripgrep
-	sudo pacman -S linux-docs pwgen gauche screen ipcalc rbw
-	sudo pacman -S arch-install-scripts ctags parallel opencv
-	sudo pacman -S pandoc texlive-langjapanese texlive-latexextra
-	sudo pacman -S shellcheck cscope typescript packer eza
-	sudo pacman -S noto-fonts-cjk jq dnsmasq mission-center
-	sudo pacman -S zsh-syntax-highlighting terraform wl-clipboard
-	sudo pacman -S npm llvm llvm-libs lldb hdparm rxvt-unicode 
-	sudo pacman -S mariadb-clients tig lsof fzf
-	sudo pacman -S debootstrap tcpdump pdfgrep sshfs stunnel
-	sudo pacman -S alsa-utils plocate traceroute hugo mpv jhead
-	sudo pacman -S nethogs optipng jpegoptim noto-fonts-emoji
-	sudo pacman -S debian-archive-keyring tree rclone
-	sudo pacman -S mathjax strace valgrind p7zip unace postgresql
-	sudo pacman -S yarn geckodriver w3m neomutt iperf redis convmv
-	sudo pacman -S highlight lynx elinks mediainfo cpio satty
-	sudo pacman -S oath-toolkit imagemagick peek sshuttle lshw
-	sudo pacman -S bookworm ruby ruby-rdoc pacman-contrib ncdu
-	sudo pacman -S dart sxiv adapta-gtk-theme podman firejail
-	sudo pacman -S hexedit tokei aria2 discord pv findomain biome
-	sudo pacman -S qreator diskus sysprof bat bluetui
-	sudo pacman -S obs-studio wireshark-cli gitui yaml-language-server
-	sudo pacman -S editorconfig-core-c watchexec browserpass-firefox
-	sudo pacman -S man-db baobab ioping mkcert detox git-lfs xsv
-	sudo pacman -S guetzli fabric gtop pass github-cli libvterm ruff
-	sudo pacman -S perl-net-ip hex miller btop diffoscope dust yq
-	sudo pacman -S sslscan abiword pyright miniserve fdupes
-	sudo pacman -S mold fx httpie bash-language-server sqlitebrowser
-	sudo pacman -S difftastic ollama ghq gnome-sound-recorder
+	sudo pacman -S filesystem gcc-libs glibc bash coreutils file findutils gawk grep
+	sudo pacman -S util-linux bzip2 gzip xz licenses pacman systemd systemd-sysvcompat
+	sudo pacman -S iputils iproute2 autoconf automake binutils bison fakeroot flex gcc
+	sudo pacman -S make patch pkgconf texinfo which archlinux-keyring debugedit libtool
+	sudo pacman -S m4 groff sudo pciutils psmisc shadow procps-ng sed tar gettext
+	sudo pacman -S base base-devel go zsh git vim tmux keychain unrar xsel emacs atool
+	sudo pacman -S unace iperf valgrind noto-fonts-emoji inkscape file-roller xclip fd
+	sudo pacman -S ipcalc traceroute debootstrap oath-toolkit gvfs-smb zsh-completions
+	sudo pacman -S imagemagick lynx the_silver_searcher cifs-utils elinks satty mold
+	sudo pacman -S cups-pdf firefox firefox-i18n-ja gimp strace lhasa hub tig ethtool
+	sudo pacman -S rsync nodejs debian-archive-keyring aria2 nmap ffmpeg asciidoc sbcl
+	sudo pacman -S aspell aspell-en screen mosh diskus gdb wmctrl pwgen linux-docs htop
+	sudo pacman -S tcpdump gvfs lzop poppler-data cpio sysprof pkgfile p7zip ruby-rdoc
+	sudo pacman -S gpaste optipng arch-install-scripts pandoc jq pkgstats ruby highlight
+	sudo pacman -S texlive-langjapanese tokei texlive-latexextra ctags hdparm eog curl
+	sudo pacman -S typescript llvm llvm-libs lldb tree w3m whois csvkit shellcheck fzf
+	sudo pacman -S zsh-syntax-highlighting npm yq ansible parallel alsa-utils geckodriver
+	sudo pacman -S bash-completion mathjax expect obs-studio cscope pdfgrep cmatrix btop
+	sudo pacman -S jpegoptim nethogs plocate pacman-contrib x11-ssh-askpass streamlink
+	sudo pacman -S jhead ncdu sshfs fping syncthing terraform bat ttf-font-awesome kooha
+	sudo pacman -S ripgrep stunnel vimiv adapta-gtk-theme firejail imv noto-fonts-extra
+	sudo pacman -S smartmontools wireshark-cli wl-clipboard lsof watchexec lazygit yazi
+	sudo pacman -S gtop gopls convmv mpv man-db baobab ioping ruby-irb mkcert findomain
+	sudo pacman -S guetzli fabric detox usleep libvterm bind lame git-lfs hex miller
+	sudo pacman -S diffoscope dust rbw eza sslscan abiword pyright miniserve fdupes xsv
+	sudo pacman -S gron typescript-language-server dateutils time rust rust-analyzer
+	sudo pacman -S dconf-editor ghq gopls difftastic csvlens cloc eslint prettier trivy
+	sudo pacman -S gnome-sound-recorder yaml-language-server biome papers typst discord
+	sudo pacman -S mission-center pass gitui sqlitebrowser git-delta ruff speedtest-cli
+	sudo pacman -S jc fx httpie bash-language-server editorconfig-core-c hexedit hugo
+	sudo pacman -S pv perl-net-ip lshw xdotool sshuttle packer libreoffice-fresh-ja tldr
+	sudo pacman -S opencv
 
 #### Install using yay
 
