@@ -906,10 +906,6 @@ function tenki() {
 
 # zsh-syntax-highlighting(pacman -S zsh-syntax-highlighting)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# zsh-completions for aws
-# source ~/.local/bin/aws_zsh_completer.sh
-# password
-source ~/backup/zsh/env.sh
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/masa/google-cloud-sdk/path.zsh.inc' ]; then . '/home/masa/google-cloud-sdk/path.zsh.inc'; fi
