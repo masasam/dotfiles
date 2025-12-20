@@ -4,8 +4,8 @@ image/jpg; eog %s
 image/jpeg; eog %s
 image/png; eog %s
 image/gif; eog %s
-application/pdf; evince %s
-application/x-pdf; evince %s
+application/pdf; papers %s
+application/x-pdf; papers %s
 application/zip; file-roller %s
 application/gzip; file-roller %s
 application/x-rar-compressed; file-roller %s
