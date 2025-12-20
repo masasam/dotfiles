@@ -429,7 +429,7 @@ You can make install from here
 	sudo pacman -S mission-center pass gitui sqlitebrowser git-delta ruff speedtest-cli
 	sudo pacman -S jc fx httpie bash-language-server editorconfig-core-c hexedit hugo
 	sudo pacman -S pv perl-net-ip lshw xdotool sshuttle packer libreoffice-fresh-ja tldr
-	sudo pacman -S opencv
+	sudo pacman -S opencv bat
 
 #### Install using yay
 
