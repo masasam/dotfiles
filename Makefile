@@ -129,6 +129,7 @@ mise: ## Setup mise
 	mise use -g atlas
 	mise use -g bun
 	mise use -g claude-code
+	mise use -g codex
 	mise use -g deno
 	mise use -g duckdb
 	mise use -g gemini-cli

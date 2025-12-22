@@ -452,6 +452,7 @@ You can make install from here
 	mise use -g bun
 	mise use -g deno
 	mise use -g claude-code
+	mise use -g codex
 	mise use -g duckdb
 	mise use -g gemini-cli
 	mise use -g marp-cli
