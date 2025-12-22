@@ -327,7 +327,7 @@ Preparing the net environment
 
 Terminal
 
-	pacman -S alacritty foot ghostty
+	pacman -S alacritty foot ghostty kitty rio
 	
 Audio setting
 
