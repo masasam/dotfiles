@@ -187,6 +187,11 @@ kitty: # Init kitty terminal
 	ln -vsf {${PWD},${HOME}}/.config/$@/$@.conf
 	ln -vsf {${PWD},${HOME}}/.config/kitty/current-theme.conf
 
+rio: # Init reo terminal
+	$(PACMAN) $@
+	test -L ${HOME}/.config/$@ || rm -rf ${HOME}/.config/$@
+	ln -vsfn {${PWD},${HOME}}/.config/$@
+
 tree-sitter: ## Install tree-sitter
 	$(PACMAN) tree-sitter tree-sitter-rust tree-sitter-bash tree-sitter-python
 	$(PACMAN) tree-sitter-javascript tree-sitter-c
