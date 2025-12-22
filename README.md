@@ -442,7 +442,7 @@ You can make install from here
 	yay -S pscale-cli
 	yay -S rgxg
 	yay -S slack-desktop
-	yay -S turso-cli-bin
+	yay -S turso-bin
 	yay -S yay
 	yay -S zoom
 
