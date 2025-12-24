@@ -1,12 +1,11 @@
 * {
   background-color: @background;
   color: @foreground;
-
   border: none;
   border-radius: 0;
   min-height: 0;
   font-family: CaskaydiaMono Nerd Font;
-	font-size: 22px;
+  font-size: 22px;
 }
 
 .modules-left {
@@ -29,14 +28,14 @@
 }
 
 #tray {
-	padding: 0px 0px;
+  padding: 0px 0px;
 }
 #tray menu {
-    background: #121111;
-	opacity: 0.85;
-    border: 2px solid @border;
-    border-radius: 6px;
-	border-color: #33ccff;
+  background: #121111;
+  opacity: 0.85;
+  border: 2px solid @border;
+  border-radius: 6px;
+  border-color: #33ccff;
 }
 
 #tray,
@@ -53,7 +52,7 @@
 }
 
 #custom-expand-icon {
-	margin-right: 7px;
+  margin-right: 7px;
 }
 
 tooltip {
@@ -65,8 +64,8 @@ tooltip {
 }
 
 #clock {
-	margin-left: 8.75px;
-	margin-right: 8.75px;
+  margin-left: 8.75px;
+  margin-right: 8.75px;
 }
 
 .hidden {
@@ -84,20 +83,20 @@ tooltip {
 }
 
 workspaces button {
-    background-color: @background;
-	border-radius: 5px;
-	padding: 1px 1px;
-    margin: 1px 1px;
-    border: 0px;
+  background-color: @background;
+  border-radius: 5px;
+  padding: 1px 1px;
+  margin: 1px 1px;
+  border: 0px;
 }
 
 #workspaces button.active {
-	background-color: #8899ff;
-	border-radius: 5px;
-	min-width: 10px;
+  background-color: #8899ff;
+  border-radius: 5px;
+  min-width: 10px;
 }
 
 #workspaces button:hover {
-    background-color: #8899ff;
-	border-radius: 5px;
+  background-color: #8899ff;
+  border-radius: 5px;
 }
