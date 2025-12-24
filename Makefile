@@ -139,6 +139,7 @@ mise: ## Setup mise
 	mise use -g npm:@github/copilot
 	mise use -g npm:ts-node
 	mise use -g npm:typescript
+	mise use -g oxlint
 	mise use -g pnpm
 	mise use -g trdsql
 	mise use -g usage
