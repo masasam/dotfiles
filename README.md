@@ -6,6 +6,8 @@
 
 ![mutt](https://raw.githubusercontent.com/masasam/image/image/mutt.png)
 
+![codex](https://raw.githubusercontent.com/masasam/image/image/codex.png)
+
 ## Let's build environment with Makefile
 
 This dotfiles is for Arch linux.
