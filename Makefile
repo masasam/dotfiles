@@ -403,7 +403,8 @@ aurplus: ## Install arch linux AUR packages using yay
 	yay -S appimagelauncher nkf rtags terraformer-bin
 
 bluetooth: # Setup bluetooth
-	$(PACMAN) bluez bluez-utils blueberry bluetui
+	$(PACMAN) bluez bluez-utils bluetui
+	yay -S blueberry
 	$(SYSTEMD_ENABLE) bluetooth.service
 	sudo ln -vsf ${PWD}/etc/bluetooth/main.conf /etc/bluetooth/main.conf
 

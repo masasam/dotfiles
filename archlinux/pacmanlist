@@ -55,7 +55,6 @@ binutils
 biome
 bison
 blas
-blueberry
 bluetui
 bluez
 bluez-libs
@@ -205,6 +204,7 @@ fribidi
 fuse-common
 fuse2
 fuse3
+fuzzel
 fwupd
 fwupd-efi
 fx
@@ -260,7 +260,6 @@ gmime3
 gmp
 gnome-autoar
 gnome-backgrounds
-gnome-bluetooth
 gnome-bluetooth-3.0
 gnome-color-manager
 gnome-control-center
