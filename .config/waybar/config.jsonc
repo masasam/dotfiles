@@ -73,7 +73,7 @@
     "clock": {
 		"format": "{:L%m/%d (%a) %H:%M}",
 		"tooltip": false,
-		"on-click": "xdg-open 'https://calendar.google.com/calendar/u/0/r'",
+		"on-click": "xdg-open 'https://calendar.google.com/calendar/u/0/r'; hyprctl dispatch focuswindow 'class:^(google-chrome)$'",
     },
     "cpu": {
         "format": " {usage}%",
