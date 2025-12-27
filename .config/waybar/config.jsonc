@@ -72,7 +72,8 @@
     },
     "clock": {
 		"format": "{:L%m/%d (%a) %H:%M}",
-		"tooltip": false
+		"tooltip": false,
+		"on-click": "xdg-open 'https://calendar.google.com/calendar/u/0/r'",
     },
     "cpu": {
         "format": " {usage}%",
