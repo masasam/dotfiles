@@ -435,7 +435,6 @@ You can make install from here
 
 #### Install using yay
 
-	yay -S antigravity-bin
 	yay -S asunder
 	yay -S beekeeper-studio-bin
 	yay -S downgrade
