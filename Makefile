@@ -109,8 +109,8 @@ hyprland: ## Setup hyprland
 	test -L ${HOME}/.config/waybar || rm -rf ${HOME}/.config/waybar
 	ln -vsfn {${PWD},${HOME}}/.config/waybar
 	mkdir -p ${HOME}/.config/mako
-	test -L ${HOME}/.config/mako/config || ln -vsf {${PWD},${HOME}}/.config/mako/config
-	test -L /usr/share/applications/wlogout.desktop || sudo ln -vsf ${PWD}/usr/share/applications/wlogout.desktop /usr/share/applications/wlogout.desktop
+	ln -vsf {${PWD},${HOME}}/.config/mako/config
+	sudo ln -vsf ${PWD}/usr/share/applications/wlogout.desktop /usr/share/applications/wlogout.desktop
 	test -L ${HOME}/.config/fuzzel || rm -rf ${HOME}/.config/fuzzel
 	ln -vsfn {${PWD},${HOME}}/.config/fuzzel
 
