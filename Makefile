@@ -97,7 +97,7 @@ install: ## Install arch linux packages using pacman
 	sudo pkgfile --update
 
 hyprland: ## Setup hyprland
-	$(PACMAN) hyprland rofi-wayland wlr-randr waybar brightnessctl hyprlock
+	$(PACMAN) hyprland fuzzel wlr-randr waybar brightnessctl hyprlock
 	$(PACMAN) xdg-desktop-portal-hyprland hypridle network-manager-applet
 	$(PACMAN) mako hyprshot qt5ct qt6ct kvantum kvantum-qt5 polkit-gnome
 	$(PACMAN) hyprsunset pavucontrol wl-clip-persist
@@ -105,12 +105,14 @@ hyprland: ## Setup hyprland
 	yay -S wlogout
 	yay -S wl-screenrec
 	test -L ${HOME}/.config/hypr || rm -rf ${HOME}/.config/hypr
-	ln -vsfn ${PWD}/.config/hypr ${HOME}/.config/hypr
+	ln -vsfn {${PWD},${HOME}}/.config/hypr
 	test -L ${HOME}/.config/waybar || rm -rf ${HOME}/.config/waybar
-	ln -vsfn ${PWD}/.config/waybar ${HOME}/.config/waybar
+	ln -vsfn {${PWD},${HOME}}/.config/waybar
 	mkdir -p ${HOME}/.config/mako
-	ln -vsf {${PWD},${HOME}}/.config/mako/config
-	sudo ln -vsf ${PWD}/usr/share/applications/wlogout.desktop /usr/share/applications/wlogout.desktop
+	test -L ${HOME}/.config/mako/config || ln -vsf {${PWD},${HOME}}/.config/mako/config
+	test -L /usr/share/applications/wlogout.desktop || sudo ln -vsf ${PWD}/usr/share/applications/wlogout.desktop /usr/share/applications/wlogout.desktop
+	test -L ${HOME}/.config/fuzzel || rm -rf ${HOME}/.config/fuzzel
+	ln -vsfn {${PWD},${HOME}}/.config/fuzzel
 
 pipinstall: ## Install python packages
 	$(PACMAN) $(PIP_PKGS)
