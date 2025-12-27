@@ -12,7 +12,6 @@
 		// "custom/recorder"
     ],
     "modules-right": [
-        "mpd",
         "pulseaudio",
         "power-profiles-daemon",
         "backlight",
@@ -69,6 +68,7 @@
     "tray": {
         "icon-size": 20,
         "spacing": 18,
+		"tooltip": false,
     },
     "clock": {
 		"format": "{:L%m/%d (%a) %H:%M}",
@@ -89,7 +89,8 @@
     },
     "backlight": {
         "format": "{icon} {percent}%",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
+		"tooltip": false,
     },
     "battery": {
         "states": {
@@ -101,7 +102,8 @@
         "format-charging": "⚡ {capacity}%",
         "format-plugged": " {capacity}%",
         "format-alt": "{icon} {time}",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["", "", "", "", ""],
+		"tooltip": false,
     },
     "battery#bat2": {
         "bat": "BAT2"
@@ -109,7 +111,7 @@
     "power-profiles-daemon": {
       "format": "{icon}",
       "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-      "tooltip": true,
+      "tooltip": false,
       "format-icons": {
         "default": "",
         "performance": "",
@@ -123,14 +125,16 @@
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+		"tooltip": false,
     },
 	"bluetooth": {
 		"format": "",
 		"format-disabled": "",
 		"format-connected": "",
 		"tooltip-format": "Devices connected: {num_connections}",
-		"on-click": "blueberry"
+		"on-click": "blueberry",
+		"tooltip": false,
 	},
     "pulseaudio": {
         "format": "{icon} {volume}% {format_source}",
@@ -148,7 +152,8 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol"
+        "on-click": "pavucontrol",
+		"tooltip": false,
     },
     "custom/power": {
         "format" : " ⏻ ",
