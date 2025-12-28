@@ -248,6 +248,7 @@ gitui
 gjs
 glib-networking
 glib2
+glib2-devel
 glib2-docs
 glibc
 glibmm
@@ -1211,6 +1212,7 @@ python-cycler
 python-dateutil
 python-dbfread
 python-dbus
+python-dbusmock
 python-decorator
 python-defusedxml
 python-deprecated
