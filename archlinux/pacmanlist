@@ -55,6 +55,7 @@ binutils
 biome
 bison
 blas
+blueman
 bluetui
 bluez
 bluez-libs
@@ -135,6 +136,7 @@ diffoscope
 difftastic
 diffutils
 discord
+discount
 diskus
 distro-info
 distro-info-data
@@ -606,6 +608,7 @@ hyprsunset
 hyprtoolkit
 hyprutils
 hyprwayland-scanner
+hyprwire
 iana-etc
 ibus
 icu
@@ -765,6 +768,7 @@ libfyaml
 libgccjit
 libgcrypt
 libgdm
+libgee
 libgexiv2
 libgirepository
 libgit2
@@ -1062,6 +1066,7 @@ mpg123
 mpv
 mtdev
 mujs
+muparser
 mutter
 mypaint-brushes1
 nautilus
@@ -1141,6 +1146,7 @@ pcre
 pcre2
 pcsclite
 pdfgrep
+pdfpc
 perl
 perl-error
 perl-io-tty
@@ -1380,6 +1386,7 @@ qhull
 qoi
 qpdf
 qrcodegencpp-cmake
+qrencode
 qscintilla-qt5
 qt5-base
 qt5-declarative
@@ -1597,6 +1604,7 @@ wavpack
 waybar
 wayland
 wayland-protocols
+webkit2gtk-4.1
 webkitgtk-6.0
 webp-pixbuf-loader
 webrtc-audio-processing-1
