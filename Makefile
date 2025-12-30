@@ -270,7 +270,7 @@ dconfsetting: # Initial dconf setting
 	dconf write /org/gnome/desktop/input-sources/xkb-options "['ctrl:nocaps']"
 	dconf write /org/gnome/desktop/interface/gtk-theme "'Adwaita-dark'"
 	dconf write /org/gnome/desktop/interface/gtk-key-theme "'Emacs'"
-	dconf write /org/gnome/desktop/interface/text-scaling-factor 1.25
+	dconf write /org/gnome/desktop/interface/text-scaling-factor 1
 	dconf write /org/gnome/desktop/interface/cursor-size 30
 	dconf write /org/gnome/desktop/interface/clock-show-date true
 	dconf write /org/gnome/desktop/interface/clock-show-weekday true
