@@ -90,11 +90,8 @@ check
 cifs-utils
 clang
 clucene
-clutter
-clutter-gtk
 cmatrix
 cmocka
-cogl
 colord
 colord-gtk-common
 colord-gtk4
@@ -718,7 +715,6 @@ libcddb
 libcdio
 libcdio-paranoia
 libcdr
-libchamplain
 libcloudproviders
 libcmis
 libcolord
@@ -1415,7 +1411,6 @@ redland
 rio
 ripgrep
 rnnoise
-rofi
 rpcsvc-proto
 rsync
 rtkit
