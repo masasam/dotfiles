@@ -40,18 +40,18 @@ dec_volume() {
 # Toggle Mute
 toggle_mute() {
 	if [ "$(pamixer --get-mute)" == "false" ]; then
-		pamixer -m && notify-send -h string:x-canonical-private-synchronous:sys-notify -u low -i "/usr/share/icons/AdwaitaLegacy/16x16/legacy/audio-volume-muted.png" "Volume Switched OFF"
+		pamixer -m && notify-send -h string:x-canonical-private-synchronous:sys-notify -u low -i "$iDIR/audio-volume-muted.png" "Volume Switched OFF"
 	elif [ "$(pamixer --get-mute)" == "true" ]; then
-		pamixer -u && notify-send -h string:x-canonical-private-synchronous:sys-notify -u low -i "/usr/share/icons/AdwaitaLegacy/16x16/legacy/audio-volume-high.png" "Volume Switched ON"
+		pamixer -u && notify-send -h string:x-canonical-private-synchronous:sys-notify -u low -i "$iDIR/audio-volume-high.png" "Volume Switched ON"
 	fi
 }
 
 # Toggle Mic
 toggle_mic() {
 	if [ "$(pamixer --default-source --get-mute)" == "false" ]; then
-		pamixer --default-source -m && notify-send -h string:x-canonical-private-synchronous:sys-notify -u low -i "/usr/share/icons/AdwaitaLegacy/16x16/legacy/microphone-sensitivity-muted.png" "Microphone Switched OFF"
+		pamixer --default-source -m && notify-send -h string:x-canonical-private-synchronous:sys-notify -u low -i "$iDIR/microphone-sensitivity-muted.png" "Microphone Switched OFF"
 	elif [ "$(pamixer --default-source --get-mute)" == "true" ]; then
-		pamixer -u --default-source u && notify-send -h string:x-canonical-private-synchronous:sys-notify -u low -i "/usr/share/icons/AdwaitaLegacy/16x16/legacy/microphone-sensitivity-high.png" "Microphone Switched ON"
+		pamixer -u --default-source u && notify-send -h string:x-canonical-private-synchronous:sys-notify -u low -i "$iDIR/microphone-sensitivity-high.png" "Microphone Switched ON"
 	fi
 }
 # Get icons
