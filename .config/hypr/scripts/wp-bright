@@ -3,4 +3,4 @@
 # Get the brightness percentage
 bright=$(brightnessctl -m -d intel_backlight | cut -d, -f4 | tr -d %)
 
-notify-send -t 1000 -a 'wp-bright' -h string:x-canonical-private-synchronous:bright -h int:value:$bright "Brightness: ${bright}%"
+notify-send -i "/usr/share/icons/AdwaitaLegacy/16x16/devices/computer.png" -t 1000 -a 'wp-bright' -h string:x-canonical-private-synchronous:bright -h int:value:$bright "Brightness: ${bright}%"
