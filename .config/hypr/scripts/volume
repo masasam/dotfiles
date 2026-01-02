@@ -40,9 +40,9 @@ dec_volume() {
 # Toggle Mute
 toggle_mute() {
 	if [ "$(pamixer --get-mute)" == "false" ]; then
-		pamixer -m && notify-send -h string:x-canonical-private-synchronous:sys-notify -u low -i "$iDIR/volume-mute.png" "Volume Switched OFF"
+		pamixer -m && notify-send -h string:x-canonical-private-synchronous:sys-notify -u low -i "/usr/share/icons/AdwaitaLegacy/16x16/legacy/audio-volume-muted.png" "Volume Switched OFF"
 	elif [ "$(pamixer --get-mute)" == "true" ]; then
-		pamixer -u && notify-send -h string:x-canonical-private-synchronous:sys-notify -u low -i "$(get_icon)" "Volume Switched ON"
+		pamixer -u && notify-send -h string:x-canonical-private-synchronous:sys-notify -u low -i "/usr/share/icons/AdwaitaLegacy/16x16/legacy/audio-volume-high.png" "Volume Switched ON"
 	fi
 }
 
