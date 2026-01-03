@@ -26,14 +26,14 @@ PACKAGES	+= ripgrep stunnel vimiv adapta-gtk-theme firejail imv noto-fonts-extra
 PACKAGES	+= smartmontools wireshark-cli wl-clipboard lsof watchexec lazygit yazi
 PACKAGES	+= gtop gopls convmv mpv man-db baobab ioping ruby-irb mkcert findomain
 PACKAGES	+= guetzli fabric detox usleep libvterm bind lame git-lfs hex miller
-PACKAGES	+= diffoscope dust rbw eza sslscan abiword pyright miniserve fdupes xsv
+PACKAGES	+= diffoscope dust rbw eza sslscan pyright miniserve fdupes xsv opencv
 PACKAGES	+= gron typescript-language-server dateutils time rust rust-analyzer
 PACKAGES	+= dconf-editor ghq gopls difftastic csvlens cloc eslint prettier trivy
 PACKAGES	+= gnome-sound-recorder yaml-language-server biome papers typst discord
 PACKAGES	+= mission-center pass gitui sqlitebrowser git-delta ruff speedtest-cli
 PACKAGES	+= jc fx httpie bash-language-server editorconfig-core-c hexedit hugo
 PACKAGES	+= pv perl-net-ip lshw xdotool sshuttle packer libreoffice-fresh-ja tldr
-PACKAGES	+= opencv bat pdfpc bc
+PACKAGES	+= bat pdfpc bc
 
 PIP_PKGS	:= python-pipenv python-seaborn python-ipywidgets python-jupyter-client
 PIP_PKGS	+= python-prompt_toolkit python-faker python-matplotlib python-pandas

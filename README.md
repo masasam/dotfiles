@@ -426,14 +426,14 @@ You can make install from here
 	sudo pacman -S smartmontools wireshark-cli wl-clipboard lsof watchexec lazygit yazi
 	sudo pacman -S gtop gopls convmv mpv man-db baobab ioping ruby-irb mkcert findomain
 	sudo pacman -S guetzli fabric detox usleep libvterm bind lame git-lfs hex miller
-	sudo pacman -S diffoscope dust rbw eza sslscan abiword pyright miniserve fdupes xsv
+	sudo pacman -S diffoscope dust rbw eza sslscan pyright miniserve fdupes xsv opencv
 	sudo pacman -S gron typescript-language-server dateutils time rust rust-analyzer
 	sudo pacman -S dconf-editor ghq gopls difftastic csvlens cloc eslint prettier trivy
 	sudo pacman -S gnome-sound-recorder yaml-language-server biome papers typst discord
 	sudo pacman -S mission-center pass gitui sqlitebrowser git-delta ruff speedtest-cli
 	sudo pacman -S jc fx httpie bash-language-server editorconfig-core-c hexedit hugo
 	sudo pacman -S pv perl-net-ip lshw xdotool sshuttle packer libreoffice-fresh-ja tldr
-	sudo pacman -S opencv bat pdfpc bc
+	sudo pacman -S bat pdfpc bc
 
 #### Install using yay
 
