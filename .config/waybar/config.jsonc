@@ -91,6 +91,7 @@
         "format": "{icon} {percent}%",
         "format-icons": ["", "", "", "", "", "", "", "", ""],
 		"tooltip": false,
+		"on-click": "wdisplays",
     },
     "battery": {
         "states": {
@@ -104,6 +105,7 @@
         "format-alt": "{icon} {time}",
         "format-icons": ["", "", "", "", ""],
 		"tooltip": false,
+		"on-click": "gnome-calculator",
     },
     "battery#bat2": {
         "bat": "BAT2"
