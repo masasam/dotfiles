@@ -13,6 +13,9 @@ default-timeout=5000
 ignore-timeout=1
 font="Noto Sans CJK SC" 14
 
+[urgency=critical]
+default-timeout=0
+
 [app-name=wp-vol]
 layer=overlay
 history=0
