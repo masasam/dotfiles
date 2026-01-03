@@ -4,66 +4,24 @@
     "height": 30,
     "spacing": 4,
     "modules-left": [
-        "hyprland/workspaces",
-        "hyprland/submap"
+        "hyprland/workspaces"
     ],
     "modules-center": [
         "clock"
-		// "custom/recorder"
     ],
     "modules-right": [
         "pulseaudio",
-        "power-profiles-daemon",
         "backlight",
-        "keyboard-state",
-        "sway/language",
         "battery",
-        "battery#bat2",
 		"bluetooth",
         "tray",
         "custom/power"
     ],
-    "hyprland/submap": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
 	"custom/recorder": {
         "format": "",
         "on-click": "$HOME/.config/waybar/scripts/start_recording.sh",
 		"tooltip": false,
         "class": "recorder"
-    },
-    "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-        "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-        "unknown-tag": "N/A",
-        "interval": 5,
-        "consume-icons": {
-            "on": " "
-        },
-        "random-icons": {
-            "off": "<span color=\"#f53c3c\"></span> ",
-            "on": " "
-        },
-        "repeat-icons": {
-            "on": " "
-        },
-        "single-icons": {
-            "on": "1 "
-        },
-        "state-icons": {
-            "paused": "",
-            "playing": ""
-        },
-        "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)"
-    },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        }
     },
     "tray": {
         "icon-size": 20,
@@ -74,18 +32,6 @@
 		"format": "{:L%m/%d (%a) %H:%M}",
 		"tooltip": false,
 		"on-click": "xdg-open 'https://calendar.google.com/calendar/u/0/r'; hyprctl dispatch focuswindow 'class:^(google-chrome)$'",
-    },
-    "cpu": {
-        "format": " {usage}%",
-        "tooltip": false
-    },
-    "memory": {
-        "format": " {}%"
-    },
-    "temperature": {
-        "critical-threshold": 80,
-        "format": "{icon} {temperatureC}°C",
-        "format-icons": ["", "", ""]
     },
     "backlight": {
         "format": "{icon} {percent}%",
@@ -107,34 +53,10 @@
 		"tooltip": false,
 		"on-click": "gnome-calculator",
     },
-    "battery#bat2": {
-        "bat": "BAT2"
-    },
-    "power-profiles-daemon": {
-      "format": "{icon}",
-      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-      "tooltip": false,
-      "format-icons": {
-        "default": "",
-        "performance": "",
-        "balanced": "",
-        "power-saver": ""
-      }
-    },
-    "network": {
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}",
-		"tooltip": false,
-    },
 	"bluetooth": {
 		"format": "",
 		"format-disabled": "",
 		"format-connected": "",
-		"tooltip-format": "Devices connected: {num_connections}",
 		"on-click": "blueman-manager",
 		"tooltip": false,
 	},
