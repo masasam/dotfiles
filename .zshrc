@@ -904,6 +904,15 @@ function tenki() {
 }
 
 
+function timer() {
+	if [ $# = 2 ]; then
+		(sleep $(($1*60)) && notify-send -u critical "$2") &
+    else
+		echo 'usage: timger [minutes] [message]'
+    fi
+}
+
+
 # zsh-syntax-highlighting(pacman -S zsh-syntax-highlighting)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
