@@ -117,6 +117,7 @@ hyprland: ## Setup hyprland
 greetd: ## Setup greetd
 	$(PACMAN) $@ greetd-tuigreet
 	sudo ln -vsf ${PWD}/etc/$@/config.toml /etc/$@/config.toml
+	sudo ln -vsf ${PWD}/etc/pam.d/greetd /etc/pam.d/greetd
 	systemctl enable greetd.service
 
 pipinstall: ## Install python packages
