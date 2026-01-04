@@ -140,6 +140,7 @@ docbook-xml
 docbook-xsl
 docker
 docker-compose
+dotslash
 double-conversion
 duktape
 dust
@@ -216,7 +217,6 @@ gdb
 gdb-common
 gdbm
 gdk-pixbuf2
-gdm
 geckodriver
 geeqie
 gegl
@@ -282,6 +282,9 @@ graphene
 graphicsmagick
 graphite
 graphviz
+greetd
+greetd-agreety
+greetd-tuigreet
 grep
 grim
 groff
@@ -588,6 +591,7 @@ hyprland-guiutils
 hyprland-qt-support
 hyprlang
 hyprlock
+hyprpolkitagent
 hyprshot
 hyprsunset
 hyprtoolkit
@@ -1078,12 +1082,14 @@ nspr
 nss
 numactl
 nvtop
+nwg-displays
 oath-toolkit
 obs-studio
 ocl-icd
 ollama
 onetbb
 oniguruma
+openai-codex
 openal
 opencore-amr
 opencv
@@ -1143,7 +1149,7 @@ pkgstats
 playerctl
 plocate
 polkit
-polkit-gnome
+polkit-qt6
 poppler
 poppler-data
 poppler-glib
@@ -1218,6 +1224,7 @@ python-googleapis-common-protos
 python-greenlet
 python-httplib2
 python-hypothesis
+python-i3ipc
 python-idna
 python-imagesize
 python-importlib-metadata
@@ -1353,6 +1360,7 @@ python-wcwidth
 python-webencodings
 python-wheel
 python-wrapt
+python-xlib
 python-xlrd
 python-xmltodict
 python-yaml
