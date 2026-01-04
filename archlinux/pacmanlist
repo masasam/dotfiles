@@ -1,7 +1,6 @@
 7zip
 a52dec
 aalib
-abiword
 abseil-cpp
 accountsservice
 acl
@@ -60,10 +59,8 @@ blueman
 bluetui
 bluez
 bluez-libs
-bluez-obex
 bluez-tools
 bluez-utils
-bolt
 boost-libs
 box2d
 bridge-utils
@@ -94,8 +91,6 @@ clucene
 cmatrix
 cmocka
 colord
-colord-gtk-common
-colord-gtk4
 compiler-rt
 confuse
 containerd
@@ -111,7 +106,6 @@ ctags
 cups
 cups-filters
 cups-pdf
-cups-pk-helper
 curl
 dateutils
 dav1d
@@ -260,16 +254,11 @@ glycin
 gmime3
 gmp
 gnome-autoar
-gnome-backgrounds
-gnome-bluetooth-3.0
-gnome-color-manager
-gnome-control-center
+gnome-calculator
 gnome-desktop
 gnome-desktop-4
 gnome-desktop-common
-gnome-keybindings
 gnome-keyring
-gnome-online-accounts
 gnome-session
 gnome-settings-daemon
 gnome-shell
@@ -281,7 +270,6 @@ gnutls
 go
 gobject-introspection
 gobject-introspection-runtime
-goffice
 gopls
 gparted
 gpaste
@@ -304,7 +292,6 @@ gsettings-system-schemas
 gsfonts
 gsl
 gsm
-gsound
 gspell
 gssdp
 gst-plugin-pipewire
@@ -666,7 +653,6 @@ kyotocabinet
 l-smash
 lame
 lapack
-lasem
 lazygit
 lcms2
 ldb
@@ -771,10 +757,8 @@ libgirepository
 libgit2
 libglvnd
 libgnomekbd
-libgoa
 libgpg-error
 libgsf
-libgtop
 libgudev
 libgusb
 libgweather-4
@@ -808,7 +792,6 @@ libldap
 libliftoff
 liblqr
 libmakepkg-dropins
-libmalcontent
 libmanette
 libmaxminddb
 libmbim
@@ -884,7 +867,6 @@ libraw
 libraw1394
 libreoffice-fresh
 libreoffice-fresh-ja
-librest
 librevenge
 librsvg
 librsync
@@ -903,7 +885,6 @@ libsndfile
 libsodium
 libsoup3
 libsoxr
-libspectre
 libspelling
 libspiro
 libsrtp
@@ -1523,7 +1504,6 @@ tar
 tcl
 tcpdump
 tdb
-tecla
 terraform
 tevent
 texinfo
@@ -1617,7 +1597,6 @@ woff2
 woff2-font-awesome
 wpa_supplicant
 wpebackend-fdo
-wv
 x11-ssh-askpass
 x264
 x265
