@@ -315,13 +315,17 @@ Install drivers that match your environment
 
 Install [Hyprland](https://github.com/hyprwm/Hyprland)
 
-	pacman -S hyprland rofi-wayland
+	pacman -S hyprland fuzzel
 	pacman -S nautilus
 
-Enable graphical login with gdm
+Enable graphical login with greetd
 
-	pacman -S gdm
-	systemctl enable gdm.service
+	pacman -S greetd greetd-tuigreet
+	systemctl enable greetd.service
+
+vim /etc/greetd/config.toml
+
+	command = "tuigreet --remember-session --asterisks --theme 'border=cyan;prompt=green;button=cyan;container=black' --cmd start-hyprland"
 
 Preparing the net environment
 
