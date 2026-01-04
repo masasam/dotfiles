@@ -114,6 +114,11 @@ hyprland: ## Setup hyprland
 	test -L ${HOME}/.config/fuzzel || rm -rf ${HOME}/.config/fuzzel
 	ln -vsfn {${PWD},${HOME}}/.config/fuzzel
 
+greetd: ## Setup greetd
+	$(PACMAN) $@ greetd-tuigreet
+	sudo ln -vsf ${PWD}/etc/$@/config.toml /etc/$@/config.toml
+	systemctl enable greetd.service
+
 pipinstall: ## Install python packages
 	$(PACMAN) $(PIP_PKGS)
 
