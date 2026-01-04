@@ -272,20 +272,16 @@ alias melpabackup='rm -rf ${HOME}/backup/emacs/elpa/`ls -rt ${HOME}/backup/emacs
 alias melpacleanup='rm -rf ${HOME}/.emacs.d/elpa'
 alias dockercleanup='docker system df; docker container prune; docker volume prune; docker image prune; docker network prune; docker system prune -a; docker system df'
 alias yaycleanup='yay -Sc --aur'
-alias goupdate='cd ${HOME}/src/github.com/masasam/dotfiles; make goinstall; cd -'
 alias kindstart='kind create cluster; export KUBECONFIG="$(kind get kubeconfig-path --name="kind")"; kubectl cluster-info'
 alias kindstop='unset KUBECONFIG; kind delete cluster'
-alias yarncleanupcash='yarn cache clean'
 alias archupdate='yay -Syu; paccache -r; paccache -ruk0'
 alias archbackup='cd ${HOME}/src/github.com/masasam/dotfiles; make backup; cd -'
 alias gcloudupdate='gcloud components update'
 alias battery='sudo tlp-stat -b'
-alias ibusrestart='ibus-daemon -drx'
 alias uefiupdate='fwupdmgr refresh --force; fwupdmgr get-updates; fwupdmgr update'
 alias fontlist='fc-list | cut -d: -f1 | less'
 alias fontlistja='fc-list :lang=ja | cut -d: -f1 | less'
 alias jupytertheme='jt -t chesterish -T -f roboto -fs 9 -tf merriserif -tfs 11 -nf ptsans -nfs 11 -dfs 8 -ofs 8'
-alias myvpn='cd ~/backup/openvpn; sudo openvpn --config client.conf'
 alias allupdate='time archupdate && time melpabackup && time zshbackup && time archbackup && time backupcloud'
 
 
@@ -694,16 +690,6 @@ function clip-file() {
 	cat $1 | xsel -bi
     else
 	echo 'usage: clip-file file'
-    fi
-}
-
-
-function screenshot-window-delay() {
-    if [ $# = 1 ]; then
-	gnome-screenshot --window --delay=$1
-	notify-send 'Screenshot' 'Done' -i camera-photo
-    else
-	echo 'usage: screenshot-window-delay 5'
     fi
 }
 

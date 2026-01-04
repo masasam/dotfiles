@@ -463,11 +463,6 @@ neovim: ## Init neovim
 		ln -vsf {${PWD},${HOME}}/.config/nvim/$$item.vim
 	bash ${HOME}/.config/nvim/installer.sh ${HOME}/.config/nvim
 
-varnish: ## Varnish inital setup
-	$(PACMAN) $@
-	sudo ln -vsf {${PWD},}/etc/$@/default.vcl
-	$(SYSTEMD_ENABLE) $@.service
-
 mongodb: ## Mongodb initial setup
 	$(PACMAN) $@ $@-tools
 	$(SYSTEMD_ENABLE) $@.service
