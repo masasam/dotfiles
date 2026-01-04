@@ -451,6 +451,7 @@ You can make install from here
 	yay -S downgrade
 	yay -S firebase-tools-bin
 	yay -S git-secrets
+	yay -S opencode
 	yay -S pscale-cli
 	yay -S rgxg
 	yay -S slack-desktop
