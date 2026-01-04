@@ -442,7 +442,7 @@ You can make install from here
 	sudo pacman -S mission-center pass gitui sqlitebrowser git-delta ruff speedtest-cli
 	sudo pacman -S jc fx httpie bash-language-server editorconfig-core-c hexedit hugo
 	sudo pacman -S pv perl-net-ip lshw xdotool sshuttle packer libreoffice-fresh-ja tldr
-	sudo pacman -S bat pdfpc bc gnome-calculator
+	sudo pacman -S bat pdfpc bc gnome-calculator openai-codex
 
 #### Install using yay
 
@@ -463,7 +463,6 @@ You can make install from here
 	mise use -g atlas
 	mise use -g bun
 	mise use -g claude-code
-	mise use -g codex
 	mise use -g deno
 	mise use -g duckdb
 	mise use -g gemini-cli

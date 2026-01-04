@@ -33,7 +33,7 @@ PACKAGES	+= gnome-sound-recorder yaml-language-server biome papers typst discord
 PACKAGES	+= mission-center pass gitui sqlitebrowser git-delta ruff speedtest-cli
 PACKAGES	+= jc fx httpie bash-language-server editorconfig-core-c hexedit hugo
 PACKAGES	+= pv perl-net-ip lshw xdotool sshuttle packer libreoffice-fresh-ja tldr
-PACKAGES	+= bat pdfpc bc gnome-calculator
+PACKAGES	+= bat pdfpc bc gnome-calculator openai-codex
 
 PIP_PKGS	:= python-pipenv python-seaborn python-ipywidgets python-jupyter-client
 PIP_PKGS	+= python-prompt_toolkit python-faker python-matplotlib python-pandas
@@ -137,7 +137,6 @@ mise: ## Setup mise
 	mise use -g atlas
 	mise use -g bun
 	mise use -g claude-code
-	mise use -g codex
 	mise use -g deno
 	mise use -g duckdb
 	mise use -g gemini-cli
