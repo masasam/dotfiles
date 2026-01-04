@@ -349,6 +349,11 @@ For thinkpad x1 carbon gen10
 
 #### Login with ${USER} to arrange home directory
 
+	nmcli radio wifi on
+	nmcli device wifi list
+	nmcli device wifi connect {SSID} --ask
+	nmcli connection up {SSID}
+
 Turn off autosuspend at config
 
 	sudo pacman -S xdg-user-dirs
