@@ -1,38 +1,35 @@
 #!/usr/bin/env bash
 
-# --- CONFIGURATION ---
 # Change this to your internal monitor name (use 'hyprctl monitors' to find it)
 INTERNAL_DISPLAY="eDP-1"
 
-# --- MODES ---
 mode_close() {
-  # Only disable internal screen if an external monitor is connected
-  MONITORS_COUNT=$(hyprctl monitors all | grep -c "Monitor")
-  if [[ $MONITORS_COUNT -gt 1 ]]; then
-    hyprctl keyword monitor "$INTERNAL_DISPLAY, disable"
-	notify-send -u critical "Clamshell Mode" "External monitor active. Laptop screen disabled."
-  else
-	hyprctl dispatch dpms off
-  fi
+	# Only disable internal screen if an external monitor is connected
+	MONITORS_COUNT=$(hyprctl monitors all | grep -c "Monitor")
+	if [[ $MONITORS_COUNT -gt 1 ]]; then
+		hyprctl keyword monitor "$INTERNAL_DISPLAY, disable"
+		notify-send -u critical "Clamshell Mode" "External monitor active. Laptop screen disabled."
+	else
+		hyprctl dispatch dpms off
+	fi
 }
 
 mode_open() {
-  MONITORS_COUNT=$(hyprctl monitors all | grep -c "Monitor")
-  if [[ $MONITORS_COUNT -gt 1 ]]; then
-    # Force enable internal screen
-	hyprctl keyword monitor "$INTERNAL_DISPLAY, preferred, auto, 1"
-	notify-send -u critical "Laptop Mode" "Laptop screen enabled."
-  else
-	hyprctl dispatch dpms on
-  fi
+	MONITORS_COUNT=$(hyprctl monitors all | grep -c "Monitor")
+	if [[ $MONITORS_COUNT -gt 1 ]]; then
+		# Force enable internal screen
+		hyprctl keyword monitor "$INTERNAL_DISPLAY, preferred, auto, 1"
+		notify-send -u critical "Laptop Mode" "Laptop screen enabled."
+	else
+		hyprctl dispatch dpms on
+	fi
 }
 
-# --- LOGIC ---
 if [[ "$1" == "close" ]]; then
-  mode_close
+	mode_close
 elif [[ "$1" == "open" ]]; then
-  mode_open
+	mode_open
 else
-  echo "Usage: $0 [open|close]"
-  exit 1
+	echo "Usage: $0 [open|close]"
+	exit 1
 fi
