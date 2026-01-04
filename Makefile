@@ -100,7 +100,7 @@ hyprland: ## Setup hyprland
 	$(PACMAN) hyprland fuzzel wlr-randr waybar brightnessctl hyprlock
 	$(PACMAN) xdg-desktop-portal-hyprland hypridle network-manager-applet
 	$(PACMAN) mako hyprshot qt5ct qt6ct kvantum kvantum-qt5 hyprpolkitagent
-	$(PACMAN) hyprsunset pavucontrol wl-clip-persist
+	$(PACMAN) hyprsunset pavucontrol wl-clip-persist nwg-displays
 	yay -S wdisplays
 	yay -S wlogout
 	yay -S wl-screenrec
