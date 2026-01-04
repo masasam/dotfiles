@@ -99,7 +99,7 @@ install: ## Install arch linux packages using pacman
 hyprland: ## Setup hyprland
 	$(PACMAN) hyprland fuzzel wlr-randr waybar brightnessctl hyprlock
 	$(PACMAN) xdg-desktop-portal-hyprland hypridle network-manager-applet
-	$(PACMAN) mako hyprshot qt5ct qt6ct kvantum kvantum-qt5 polkit-gnome
+	$(PACMAN) mako hyprshot qt5ct qt6ct kvantum kvantum-qt5 hyprpolkitagent
 	$(PACMAN) hyprsunset pavucontrol wl-clip-persist
 	yay -S wdisplays
 	yay -S wlogout
