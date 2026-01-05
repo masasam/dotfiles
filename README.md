@@ -343,7 +343,7 @@ For thinkpad x1 carbon gen10
 
 Audio setting
 
-	pacman -S pipewire-pulse
+	pacman -S pipewire-pulse wireplumber
 	exit
 	reboot
 
