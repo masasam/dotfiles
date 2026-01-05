@@ -336,30 +336,28 @@ Preparing the net environment
 Terminal
 
 	pacman -S alacritty foot ghostty kitty rio
-	
+
+For thinkpad x1 carbon gen10
+
+	pacman -S sof-firmware fprintd
+
 Audio setting
 
 	pacman -S pipewire-pulse
 	exit
 	reboot
 
-For thinkpad x1 carbon gen10
-
-	pacman -S sof-firmware fprintd
-
 #### Login with ${USER} to arrange home directory
+
+	sudo pacman -S xdg-user-dirs
+	LANG=C xdg-user-dirs-update --force
+
+Set networkmanager
 
 	nmcli radio wifi on
 	nmcli device wifi list
 	nmcli device wifi connect {SSID} --ask
 	nmcli connection up {SSID}
-
-Turn off autosuspend at config
-
-	sudo pacman -S xdg-user-dirs
-	LANG=C xdg-user-dirs-update --force
-	sudo pacman -S zsh git base-devel
-	sudo pacman -S noto-fonts noto-fonts-cjk
 
 Install mise and yay
 
@@ -368,6 +366,8 @@ Install mise and yay
 
 #### Preparing dotfiles
 
+	sudo pacman -S zsh git base-devel
+	sudo pacman -S noto-fonts noto-fonts-cjk
 	sudo pacman -S gvfs gvfs-smb git-crypt gnupg openssh
 
 Import the gpg key that has been backed up.
