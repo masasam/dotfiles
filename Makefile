@@ -35,10 +35,6 @@ PACKAGES	+= jc fx httpie bash-language-server editorconfig-core-c hexedit hugo
 PACKAGES	+= pv perl-net-ip lshw xdotool sshuttle packer libreoffice-fresh-ja tldr
 PACKAGES	+= bat pdfpc bc gnome-calculator openai-codex
 
-PIP_PKGS	:= python-pipenv python-seaborn python-ipywidgets python-jupyter-client
-PIP_PKGS	+= python-prompt_toolkit python-faker python-matplotlib python-pandas
-PIP_PKGS	+= python-numpy python-beautifulsoup4 python-pip python-nose
-
 NODE_PKGS	:= mermaid @mermaid-js/mermaid-cli fx intelephense
 NODE_PKGS	+= dockerfile-language-server-nodejs netlify-cli ngrok
 NODE_PKGS	+= indium logo.svg @marp-team/marp-cli jshint
@@ -120,9 +116,6 @@ greetd: ## Setup greetd
 	sudo ln -vsf ${PWD}/etc/$@/config.toml /etc/$@/config.toml
 	sudo ln -vsf ${PWD}/etc/pam.d/greetd /etc/pam.d/greetd
 	systemctl enable greetd.service
-
-pipinstall: ## Install python packages
-	$(PACMAN) $(PIP_PKGS)
 
 goinstall: ${HOME}/.local ## Install go packages
 	go install golang.org/x/tools/cmd/goimports@latest
@@ -494,10 +487,6 @@ backup: ## Backup arch linux packages
 update: ## Update arch linux packages and save packages cache 3 generations
 	yay -Syu; paccache -ruk0
 
-pipbackup: ## Backup python global packages
-	mkdir -p ${PWD}/archlinux
-	pip freeze > ${PWD}/archlinux/requirements.txt
-
 yarnupdate: ## Update yarn global packages
 	yarn global upgrade
 
@@ -531,8 +520,8 @@ testpath: ## Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: dconfsetting rclone gnupg ssh install init keyring mise foot ghostty alacritty tlp ttf-cica hyprland greetd dnsmasq fcitx-mozc neomutt lvfs aur beekeeper kind gtk-theme chrome pipinstall ccls gh tree-sitter
+allinstall: dconfsetting rclone gnupg ssh install init keyring mise foot ghostty alacritty tlp ttf-cica hyprland greetd dnsmasq fcitx-mozc neomutt lvfs aur beekeeper kind gtk-theme chrome ccls gh tree-sitter
 
 allupdate: update goinstall
 
-allbackup: backup pipbackup
+allbackup: backup
