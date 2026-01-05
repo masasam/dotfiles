@@ -76,7 +76,7 @@
   (defun wl-paste ()
 	(if (and wl-copy-process (process-live-p wl-copy-process))
 		nil ; should return nil if we're the current paste owner
-      (shell-command-to-string "wl-paste -n | tr -d \r")))
+      (call-process-shell-command "wl-paste -n | tr -d \r")))
   (setq interprogram-cut-function 'wl-copy)
   (setq interprogram-paste-function 'wl-paste))
 
@@ -223,13 +223,13 @@ If the region is inactive, `backward-kill-word'."
 (defun foot ()
   "open current directly with foot"
   (interactive)
-  (shell-command "foot -L /bin/zsh"))
+  (call-process-shell-command "foot -L /bin/zsh"))
 
 
 (defun foot-home ()
   "open home directly with foot"
   (interactive)
-  (shell-command "foot -D ~/ -L /bin/zsh"))
+  (call-process-shell-command "foot -D ~/ -L /bin/zsh"))
 
 
 (defun pwd-copy ()
@@ -281,9 +281,9 @@ If the region is inactive, `backward-kill-word'."
 (defun firebase-deploy ()
   "Firebase deploy command."
   (interactive)
-  (shell-command-to-string "firebase login")
+  (call-process-shell-command "firebase login")
   (message "Logined")
-  (shell-command-to-string "firebase deploy")
+  (call-process-shell-command "firebase deploy")
   (message "Published"))
 
 

@@ -13,13 +13,13 @@
   "Generate pdf from currently open markdown."
   (interactive)
   (let ((filename (buffer-file-name (current-buffer))))
-    (shell-command-to-string
+    (call-process-shell-command
      (concat "pandoc "
 	     filename
 	     " -o "
 	     (file-name-sans-extension filename)
 	     ".pdf -V mainfont=IPAPGothic -V geometry:margin=20mm -V fontsize=14pt --pdf-engine=lualatex"))
-    (shell-command-to-string
+    (call-process-shell-command
      (concat "xdg-open "
 	     (file-name-sans-extension filename)
 	     ".pdf"))))
@@ -29,13 +29,13 @@
   "Generate docx from currently open markdown."
   (interactive)
   (let ((filename (buffer-file-name (current-buffer))))
-    (shell-command-to-string
+    (call-process-shell-command
      (concat "pandoc "
 	     filename
 	     " -t docx -o "
 	     (file-name-sans-extension filename)
 	     ".docx -V mainfont=IPAPGothic -V fontsize=16pt --toc --highlight-style=zenburn"))
-    (shell-command-to-string
+    (call-process-shell-command
      (concat "xdg-open "
 	     (file-name-sans-extension filename)
 	     ".docx"))))
