@@ -325,7 +325,7 @@ Enable graphical login with greetd
 
 vim /etc/greetd/config.toml
 
-	command = "tuigreet --remember-session --asterisks --theme 'border=cyan;prompt=green;button=cyan;container=black' --cmd start-hyprland"
+	command = "tuigreet --theme 'container=black' --cmd start-hyprland"
 
 Preparing the net environment
 
