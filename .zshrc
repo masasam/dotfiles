@@ -25,6 +25,7 @@ zshaddhistory() {
 
     # Only those that satisfy all of the following conditions are added to the history
 	[[ ${#line} -ge 5
+     	   && ${cmd} != tm
 		   && ${cmd} != ll
 		   && ${cmd} != ls
 		   && ${cmd} != la
@@ -48,7 +49,6 @@ zshaddhistory() {
 		   && ${cmd} != blog-jpg
 		   && ${cmd} != xdg-open
 		   && ${cmd} != mpv-music
-		   && ${cmd} != tmuxstart
 		   && ${cmd} != mpv-video
 		   && ${cmd} != traceroute
 		   && ${cmd} != speedtest-cli
@@ -241,7 +241,7 @@ compdef mosh=ssh
 
 
 # aliases
-alias tmuxstart='tmux new -s main'
+alias tm='tmux new -s main'
 alias ls='ls -v -F --color=auto'
 alias ll='ls -al'
 alias la='ls -A'
