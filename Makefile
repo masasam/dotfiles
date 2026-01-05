@@ -35,10 +35,6 @@ PACKAGES	+= jc fx httpie bash-language-server editorconfig-core-c hexedit hugo
 PACKAGES	+= pv perl-net-ip lshw xdotool sshuttle packer libreoffice-fresh-ja tldr
 PACKAGES	+= bat pdfpc bc gnome-calculator openai-codex
 
-NODE_PKGS	:= mermaid @mermaid-js/mermaid-cli fx intelephense
-NODE_PKGS	+= dockerfile-language-server-nodejs netlify-cli ngrok
-NODE_PKGS	+= indium logo.svg @marp-team/marp-cli jshint
-
 PACMAN		:= sudo pacman -S 
 SYSTEMD_ENABLE	:= sudo systemctl --now enable
 
@@ -149,14 +145,6 @@ mise: ## Setup mise
 	mise use -g youtube-dl
 	mise use -g yt-dlp
 
-yarninstall: ## Install yarn global packages
-	$(PACMAN) yarn
-	mkdir -p ${HOME}/.node_modules
-	for pkg in $(NODE_PKGS); do yarn global add $$pkg; done
-
-pnpminstall: ## Install pnpm global packages
-	for pkg in $(NODE_PKGS); do pnpm add -g $$pkg; done
-
 neomutt: ## Init neomutt mail client
 	$(PACMAN) neomutt
 	mkdir -p ${HOME}/.mutt
@@ -223,7 +211,7 @@ uefiupdate: ## Update system firmware and uefi
 	for action in refresh get-updates update; do fwupdmgr $$action; done
 
 gtk-theme: ## Set gtk theme
-	$(PACMAN) gnome-themes-extra xdg-desktop-portal-gnome
+	$(PACMAN) gnome-themes-extra
 	gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark
 	test -L ${HOME}/.config/gtk-4.0 || rm -rf ${HOME}/.config/gtk-4.0
 	ln -vsfn ${PWD}/.config/gtk-4.0 ${HOME}/.config/gtk-4.0
@@ -270,7 +258,6 @@ dconfsetting: # Initial dconf setting
 	dconf write /org/gnome/desktop/interface/clock-show-date true
 	dconf write /org/gnome/desktop/interface/clock-show-weekday true
 	dconf write /org/gnome/desktop/interface/show-battery-percentage true
-	dconf write /org/gnome/desktop/wm/preferences/num-workspaces 1
 	dconf write /org/gnome/desktop/wm/keybindings/activate-window-menu "['']"
 	dconf write /org/gnome/desktop/search-providers/disable-external true
 	dconf write /org/gnome/desktop/privacy/remember-recent-files false
@@ -486,13 +473,6 @@ backup: ## Backup arch linux packages
 
 update: ## Update arch linux packages and save packages cache 3 generations
 	yay -Syu; paccache -ruk0
-
-yarnupdate: ## Update yarn global packages
-	yarn global upgrade
-
-pnpmupdate: ## Update pnpm global packages
-	pnpm self-update
-	pnpm -g upgrade
 
 mysite: ## My site and blogs source(This is private repository)
 	ghq get -p masasam/solist
