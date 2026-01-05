@@ -101,7 +101,7 @@ hyprland: ## Setup hyprland
 	$(PACMAN) xdg-desktop-portal-hyprland hypridle network-manager-applet
 	$(PACMAN) mako hyprshot qt5ct qt6ct kvantum kvantum-qt5 hyprpolkitagent
 	$(PACMAN) hyprsunset pavucontrol wl-clip-persist nwg-displays pipewire
-	$(PACMAN) wireplumber pipewire-pulse pcmanfm
+	$(PACMAN) wireplumber pipewire-pulse pcmanfm xdg-desktop-portal-gtk
 	yay -S wdisplays
 	yay -S wlogout
 	yay -S wl-screenrec
