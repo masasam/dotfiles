@@ -427,7 +427,7 @@ You can make install from here
 	sudo pacman -S gpaste optipng arch-install-scripts pandoc jq pkgstats ruby highlight
 	sudo pacman -S texlive-langjapanese tokei texlive-latexextra ctags hdparm eog curl
 	sudo pacman -S typescript llvm llvm-libs lldb tree w3m whois csvkit shellcheck fzf
-	sudo pacman -S zsh-syntax-highlighting npm yq ansible parallel alsa-utils geckodriver
+	sudo pacman -S zsh-syntax-highlighting yq ansible parallel alsa-utils geckodriver
 	sudo pacman -S bash-completion mathjax expect obs-studio cscope pdfgrep cmatrix btop
 	sudo pacman -S jpegoptim nethogs plocate pacman-contrib x11-ssh-askpass streamlink
 	sudo pacman -S jhead ncdu sshfs fping syncthing terraform bat ttf-font-awesome kooha
