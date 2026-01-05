@@ -14,19 +14,6 @@
   (interactive)
   (call-process-shell-command "pcmanfm ~/backup"))
 
-
-(defun pcmanfm-work ()
-  "Open work directry with pcmanfm."
-  (interactive)
-  (call-process-shell-command "pcmanfm ~/backup/work"))
-
-
-(defun pcmanfm-cash ()
-  "Open cash directry with pcmanfm."
-  (interactive)
-  (call-process-shell-command "pcmanfm ~/backup/cash"))
-
-
 (defun pcmanfm-downloads ()
   "Open downloads directry with pcmanfm."
   (interactive)
