@@ -100,7 +100,8 @@ hyprland: ## Setup hyprland
 	$(PACMAN) hyprland fuzzel wlr-randr waybar brightnessctl hyprlock
 	$(PACMAN) xdg-desktop-portal-hyprland hypridle network-manager-applet
 	$(PACMAN) mako hyprshot qt5ct qt6ct kvantum kvantum-qt5 hyprpolkitagent
-	$(PACMAN) hyprsunset pavucontrol wl-clip-persist nwg-displays
+	$(PACMAN) hyprsunset pavucontrol wl-clip-persist nwg-displays pipewire
+	$(PACMAN) wireplumber pipewire-pulse pcmanfm
 	yay -S wdisplays
 	yay -S wlogout
 	yay -S wl-screenrec
@@ -238,9 +239,6 @@ throttled: ## Workaround for Intel throttling issues in thinkpad x1 carbon gen6
 	$(PACMAN) throttled
 	$(SYSTEMD_ENABLE) throttled
 
-pipewire-pulse: ## Install pipewire-pulse
-	$(PACMAN) pipewire-pulse
-
 keyring: ${HOME}/.local ## Init gnome keyrings
 	$(PACMAN) seahorse
 	test -L ${HOME}/.local/share/keyrings || rm -rf ${HOME}/.local/share/keyrings
@@ -265,7 +263,6 @@ fcitx-mozc: ## Install fcitx-mozc
 	ln -vsfn ${HOME}/backup/mozc ${HOME}/.mozc
 	test -L ${HOME}/.config/fcitx5/conf/classicui.conf || rm -rf ${HOME}/.config/fcitx5/conf/classicui.conf
 	ln -vsf {${PWD},${HOME}}/.config/fcitx5/conf/classicui.conf
-	yay -S gnome-shell-extension-kimpanel-git
 
 ttf-cica: ## Install Cica font
 	yay -S $@
@@ -534,7 +531,7 @@ testpath: ## Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: dconfsetting rclone gnupg ssh install init keyring mise foot ghostty alacritty tlp pipewire-pulse ttf-cica hyprland greetd dnsmasq fcitx-mozc neomutt lvfs aur beekeeper kind gtk-theme chrome pipinstall ccls gh tree-sitter
+allinstall: dconfsetting rclone gnupg ssh install init keyring mise foot ghostty alacritty tlp ttf-cica hyprland greetd dnsmasq fcitx-mozc neomutt lvfs aur beekeeper kind gtk-theme chrome pipinstall ccls gh tree-sitter
 
 allupdate: update goinstall
 
