@@ -22,7 +22,7 @@ PACKAGES	+= zsh-syntax-highlighting yq ansible parallel alsa-utils geckodriver
 PACKAGES	+= bash-completion mathjax expect obs-studio cscope pdfgrep cmatrix btop
 PACKAGES	+= jpegoptim nethogs plocate pacman-contrib x11-ssh-askpass streamlink
 PACKAGES	+= jhead ncdu sshfs fping syncthing terraform bat ttf-font-awesome kooha
-PACKAGES	+= ripgrep stunnel vimiv adapta-gtk-theme firejail imv noto-fonts-extra
+PACKAGES	+= ripgrep stunnel vimiv firejail noto-fonts-extra gnome-calculator
 PACKAGES	+= smartmontools wireshark-cli wl-clipboard lsof watchexec lazygit yazi
 PACKAGES	+= gtop gopls convmv mpv man-db baobab ioping ruby-irb mkcert findomain
 PACKAGES	+= guetzli fabric detox usleep libvterm bind lame git-lfs hex miller
@@ -33,7 +33,7 @@ PACKAGES	+= gnome-sound-recorder yaml-language-server biome papers typst discord
 PACKAGES	+= mission-center pass gitui sqlitebrowser git-delta ruff speedtest-cli
 PACKAGES	+= jc fx httpie bash-language-server editorconfig-core-c hexedit hugo
 PACKAGES	+= pv perl-net-ip lshw xdotool sshuttle packer libreoffice-fresh-ja tldr
-PACKAGES	+= bat pdfpc bc gnome-calculator openai-codex
+PACKAGES	+= bat pdfpc bc openai-codex
 
 PACMAN		:= sudo pacman -S 
 SYSTEMD_ENABLE	:= sudo systemctl --now enable

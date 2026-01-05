@@ -431,7 +431,7 @@ You can make install from here
 	sudo pacman -S bash-completion mathjax expect obs-studio cscope pdfgrep cmatrix btop
 	sudo pacman -S jpegoptim nethogs plocate pacman-contrib x11-ssh-askpass streamlink
 	sudo pacman -S jhead ncdu sshfs fping syncthing terraform bat ttf-font-awesome kooha
-	sudo pacman -S ripgrep stunnel vimiv adapta-gtk-theme firejail imv noto-fonts-extra
+	sudo pacman -S ripgrep stunnel vimiv firejail noto-fonts-extra gnome-calculator
 	sudo pacman -S smartmontools wireshark-cli wl-clipboard lsof watchexec lazygit yazi
 	sudo pacman -S gtop gopls convmv mpv man-db baobab ioping ruby-irb mkcert findomain
 	sudo pacman -S guetzli fabric detox usleep libvterm bind lame git-lfs hex miller
@@ -442,7 +442,7 @@ You can make install from here
 	sudo pacman -S mission-center pass gitui sqlitebrowser git-delta ruff speedtest-cli
 	sudo pacman -S jc fx httpie bash-language-server editorconfig-core-c hexedit hugo
 	sudo pacman -S pv perl-net-ip lshw xdotool sshuttle packer libreoffice-fresh-ja tldr
-	sudo pacman -S bat pdfpc bc gnome-calculator openai-codex
+	sudo pacman -S bat pdfpc bc openai-codex
 
 #### Install using yay
 
