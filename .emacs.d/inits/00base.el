@@ -14,6 +14,9 @@
 (setq-default tab-width 4)
 
 (setq inhibit-startup-buffer-menu t)
+(setq use-dialog-box nil)
+(setq use-file-dialog nil)
+(setq inhibit-x-resources t)
 
 ;; Change part of theme to your liking.
 ;; Investigate by changing 'M-x list-faces-display'
