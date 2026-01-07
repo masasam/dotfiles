@@ -255,7 +255,6 @@ go
 gobject-introspection
 gobject-introspection-runtime
 gopls
-gparted
 gpaste
 gperftools
 gpgme
