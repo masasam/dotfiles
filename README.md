@@ -316,7 +316,7 @@ Install drivers that match your environment
 Install [Hyprland](https://github.com/hyprwm/Hyprland)
 
 	pacman -S hyprland fuzzel
-	pacman -S pcmanfm
+	pacman -S pcmanfm-qt
 
 Enable graphical login with greetd
 
