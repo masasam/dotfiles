@@ -103,10 +103,10 @@ hyprland: ## Setup hyprland
 	ln -vsfn {${PWD},${HOME}}/.config/waybar
 	test -L ${HOME}/.config/mako || rm -rf ${HOME}/.config/mako
 	ln -vsfn {${PWD},${HOME}}/.config/mako
-	sudo ln -vsf ${PWD}/usr/share/applications/wlogout.desktop /usr/share/applications/wlogout.desktop
 	test -L ${HOME}/.config/fuzzel || rm -rf ${HOME}/.config/fuzzel
 	ln -vsfn {${PWD},${HOME}}/.config/fuzzel
 	mkdir -p ${HOME}/.config/wlogout
+	sudo ln -vsf ${PWD}/usr/share/applications/wlogout.desktop /usr/share/applications/wlogout.desktop
 	ln -vsf {${PWD},${HOME}}/.config/wlogout/style.css
 
 greetd: ## Setup greetd
