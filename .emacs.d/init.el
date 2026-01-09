@@ -149,8 +149,7 @@
   (package-install 'web-mode)
   (package-install 'yaml-mode)
   (package-install 'yasnippet)
-  (package-install 'yasnippet-snippets)
-  (package-install 'zeal-at-point))
+  (package-install 'yasnippet-snippets))
 
 ;; auto-compile
 (setq load-prefer-newer t)
