@@ -635,6 +635,7 @@ kyotocabinet
 l-smash
 lame
 lapack
+layer-shell-qt
 lazygit
 lcms2
 ldb
@@ -723,9 +724,8 @@ libfabric
 libfdk-aac
 libffi
 libfido2
-libfm
 libfm-extra
-libfm-gtk3
+libfm-qt
 libfontenc
 libfprint
 libfreeaptx
@@ -976,7 +976,7 @@ lua53
 luajit
 lv2
 lvm2
-lxmenu-data
+lxqt-menu-data
 lynx
 lz4
 lzo
@@ -1086,7 +1086,7 @@ passim
 patch
 pavucontrol
 pciutils
-pcmanfm
+pcmanfm-qt
 pcre
 pcre2
 pcsclite
