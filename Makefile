@@ -356,13 +356,6 @@ sxiv: ## Init sxiv
 	mkdir -p ${HOME}/.config/$@/exec
 	ln -vsf {${PWD},${HOME}}/.config/$@/exec/image-info && chmod +x $$_
 
-zeal: ## Deploy zeal config and docsets
-	yay -S $@
-	$(PACMAN) qt5-styleplugins qt5ct
-	sudo ln -vsf ${PWD}/etc/environment /etc/environment
-	mkdir -p ${HOME}/.config/Zeal
-	ln -vsf {${PWD},${HOME}}/.config/Zeal/Zeal.conf
-
 emacspeak: ## Install emacspeak for blind person
 	yay -S $@
 
