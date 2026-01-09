@@ -91,7 +91,6 @@
   (package-install 'gptel)
   (package-install 'gptel-agent)
   (package-install 'gptel-commit)
-  (package-install 'gptel-magit)
   (package-install 'htmlize)
   (package-install 'hydra)
   (package-install 'iedit)

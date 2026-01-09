@@ -23,10 +23,6 @@
   (define-key git-commit-mode-map (kbd "C-c g") #'gptel-commit)
   (define-key git-commit-mode-map (kbd "C-c G") #'gptel-commit-rationale))
 
-(use-package gptel-magit
-  :ensure t
-  :hook (magit-mode . gptel-magit-install))
-
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:
