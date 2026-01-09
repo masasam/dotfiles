@@ -89,10 +89,6 @@
 ;; Fill-Column-Indicator
 (setq fci-rule-column 100)
 
-
-;; alarm-clock
-(setq alarm-clock-sound-file "~/backup/emacs/alarm.mp3")
-
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:
