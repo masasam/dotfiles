@@ -11,8 +11,6 @@
                       :stream t
                       :models '(gemma3n:latest)))
 
-(bind-key "C-c C-g" 'gptel-send)
-
 (load "~/backup/emacs/gemini.el")
 
 (use-package gptel-commit
