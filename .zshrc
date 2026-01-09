@@ -461,27 +461,6 @@ zle -N keybind-fzf
 bindkey '^xB' keybind-fzf
 
 
-function ansible-fzf() {
-    local repositoryname='ansible-setup-server'
-    ghq root && cat ~/.config/hub | grep user && \
-	cd $(ghq root)/github.com/$(cat ~/.config/hub | grep user | awk '{print $3}')/${repositoryname}
-    if [ $? = 0 ]; then
-	local selected_yml=$(ls | grep .yml$ | fzf-tmux -d --reverse --prompt="Ansible > ")
-	if [ -n "$selected_yml" ]; then
-	    ansible-playbook --ask-vault-pass ${selected_yml}
-	    if [ $? = 0 ]; then
-		notify-send -u critical 'Ansible' 'Your playbook execution ended' -i utilities-terminal
-	    else
-		notify-send -u critical 'Ansible' 'Error has occured' -i dialog-error
-	    fi
-	fi
-	cd -
-    fi
-}
-zle -N ansible-fzf
-bindkey '^x^a' ansible-fzf
-
-
 function gitlog-fzf() {
   git log --graph --color=always \
       --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" | \
