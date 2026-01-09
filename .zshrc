@@ -395,8 +395,8 @@ function ghs-import-fzf() {
 
 
 function github-issue-fzf() {
-    hub issue | fzf-tmux -d --reverse --prompt="github issue > " | \
-	sed -e "s/\].*//" | xargs -Inum git checkout -b feature/num
+    gh issue list | fzf-tmux -d --reverse --prompt="github issue > " | \
+	awk '{print $1}' | xargs -Inum git checkout -b feature/num
 }
 zle -N github-issue-fzf
 bindkey '^x^i' github-issue-fzf
