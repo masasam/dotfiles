@@ -11,7 +11,7 @@ PACKAGES	:= base base-devel go zsh git vim tmux keychain unrar xsel emacs atool
 PACKAGES	+= unace iperf valgrind noto-fonts-emoji inkscape file-roller xclip fd
 PACKAGES	+= ipcalc traceroute debootstrap oath-toolkit gvfs-smb zsh-completions
 PACKAGES	+= imagemagick lynx the_silver_searcher cifs-utils elinks satty mold
-PACKAGES	+= cups-pdf firefox firefox-i18n-ja gimp strace lhasa hub tig ethtool
+PACKAGES	+= cups-pdf firefox firefox-i18n-ja gimp strace lhasa tig ethtool
 PACKAGES	+= rsync nodejs debian-archive-keyring aria2 nmap ffmpeg asciidoc sbcl
 PACKAGES	+= aspell aspell-en screen mosh diskus gdb wmctrl pwgen linux-docs htop
 PACKAGES	+= tcpdump gvfs lzop poppler-data cpio sysprof pkgfile p7zip ruby-rdoc
@@ -77,7 +77,6 @@ init: ## Initial deploy dotfiles
 	done
 	mkdir -p ${HOME}/.config/mpv
 	ln -vsf {${PWD},${HOME}}/.config/mpv/mpv.conf
-	ln -vsf {${PWD},${HOME}}/.config/hub
 	sudo ln -vsf {${PWD},}/etc/hosts
 
 base: ## Install base and base-devel package
