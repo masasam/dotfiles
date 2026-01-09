@@ -513,26 +513,6 @@ function gitroot() {
 }
 
 
-function github-new() {
-    if [ $# = 1 ]; then
-	ghq root && cat ~/.config/hub | grep user \
-	    && cd $(ghq root)/github.com/$(cat ~/.config/hub \
-					       | grep user | awk '{print $3}') && mkdir $1
-	if [ $? = 0 ]; then
-	    cd $1
-	    git init .
-	    hub create
-	    touch README.md
-	    git add README.md
-	    git commit -m 'first commit'
-	    git push origin master
-	fi
-    else
-	echo 'usage: github-new reponame'
-    fi
-}
-
-
 function ipsort() {
     if [ $# = 1 ]; then
 	cat $1 | sort -n -t'.' -k1,1 -k2,2 -k3,3 -k4,4
