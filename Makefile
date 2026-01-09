@@ -107,6 +107,8 @@ hyprland: ## Setup hyprland
 	sudo ln -vsf ${PWD}/usr/share/applications/wlogout.desktop /usr/share/applications/wlogout.desktop
 	test -L ${HOME}/.config/fuzzel || rm -rf ${HOME}/.config/fuzzel
 	ln -vsfn {${PWD},${HOME}}/.config/fuzzel
+	mkdir -p ${HOME}/.config/wlogout
+	ln -vsf {${PWD},${HOME}}/.config/wlogout/style.css
 
 greetd: ## Setup greetd
 	$(PACMAN) $@ greetd-tuigreet
