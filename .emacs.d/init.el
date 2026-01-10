@@ -98,7 +98,6 @@
   (package-install 'json-reformat)
   (package-install 'key-chord)
   (package-install 'keycast)
-  (package-install 'keypression)
   (package-install 'keychain-environment)
   (package-install 'macrostep)
   (package-install 'magit)
