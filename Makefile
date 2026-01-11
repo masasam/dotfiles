@@ -351,11 +351,6 @@ dingo: ## Install dingo Google DNS over HTTPS
 ccls: ## Install c,c++ language server
 	$(PACMAN) $@
 
-sxiv: ## Init sxiv
-	$(PACMAN) $@
-	mkdir -p ${HOME}/.config/$@/exec
-	ln -vsf {${PWD},${HOME}}/.config/$@/exec/image-info && chmod +x $$_
-
 emacspeak: ## Install emacspeak for blind person
 	yay -S $@
 

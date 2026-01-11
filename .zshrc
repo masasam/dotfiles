@@ -252,7 +252,6 @@ alias rm='rm -i'
 alias du='du -h'
 alias df='df -h'
 alias free='free -h --si'
-alias iv='sxiv'
 alias is='whois'
 alias pn='pnpm'
 alias myip="ip -4 a show wlp0s20f3 | grep -oP '(?<=inet\s)\d+(\.\d+){3}'"
