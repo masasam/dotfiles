@@ -1,3 +1,21 @@
+window#waybar {
+    background: transparent;
+}
+
+#clock,
+#battery,
+#pulseaudio,
+#backlight,
+#tray,
+#bluetooth,
+#custom-power,
+#workspaces {
+    border: 1px solid #8899ff;
+    border-radius: 10px;
+    padding: 0 5px;
+    margin: 0px;
+}
+
 * {
   background-color: @background;
   color: @foreground;
@@ -28,7 +46,7 @@
 }
 
 #tray {
-  padding: 0px 0px;
+  padding: 5px 5px;
 }
 #tray menu {
   background: #121111;
@@ -57,10 +75,6 @@
 
 tooltip {
   padding: 8px;
-}
-
-#custom-update {
-  font-size: 10px;
 }
 
 #clock {
