@@ -80,7 +80,6 @@ tooltip {
 }
 
 workspaces button {
-  background-color: @background;
   border-radius: 5px;
   padding: 1px 1px;
   margin: 1px 1px;
