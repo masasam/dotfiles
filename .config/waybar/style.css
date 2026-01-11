@@ -10,10 +10,11 @@ window#waybar {
 #bluetooth,
 #custom-power,
 #workspaces {
+	background: #121111;
     border: 1px solid #8899ff;
     border-radius: 10px;
     padding: 0 5px;
-    margin: 0px;
+    margin: 10px 0 0 0; 
 }
 
 * {
@@ -27,11 +28,11 @@ window#waybar {
 }
 
 .modules-left {
-  margin-left: 8px;
+  margin-left: 10px;
 }
 
 .modules-right {
-  margin-right: 8px;
+  margin-right: 10px;
 }
 
 #workspaces button {
@@ -45,28 +46,12 @@ window#waybar {
   opacity: 0.5;
 }
 
-#tray {
-  padding: 5px 5px;
-}
 #tray menu {
   background: #121111;
   opacity: 0.85;
   border: 2px solid;
   border-radius: 6px;
   border-color: #33ccff;
-}
-
-#tray,
-#cpu,
-#battery,
-#network,
-#bluetooth,
-#pulseaudio,
-#custom-omarchy,
-#custom-screenrecording-indicator,
-#custom-update {
-  min-width: 22px;
-  margin: 0 7.5px;
 }
 
 #custom-expand-icon {
