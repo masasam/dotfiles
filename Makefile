@@ -31,8 +31,8 @@ PACKAGES	+= gron typescript-language-server dateutils time rust rust-analyzer
 PACKAGES	+= dconf-editor ghq gopls difftastic csvlens cloc eslint prettier trivy
 PACKAGES	+= gnome-sound-recorder yaml-language-server biome papers typst discord
 PACKAGES	+= mission-center pass gitui sqlitebrowser git-delta ruff speedtest-cli
-PACKAGES	+= jc fx httpie bash-language-server editorconfig-core-c hexedit hugo
-PACKAGES	+= pv perl-net-ip lshw xdotool sshuttle packer libreoffice-fresh-ja tldr
+PACKAGES	+= jc fx httpie bash-language-server editorconfig-core-c hexedit tldr
+PACKAGES	+= pv perl-net-ip lshw xdotool sshuttle packer libreoffice-fresh-ja
 PACKAGES	+= openai-codex
 
 PACMAN		:= sudo pacman -S 
@@ -133,6 +133,7 @@ mise: ## Setup mise
 	mise use -g deno
 	mise use -g duckdb
 	mise use -g gemini-cli
+	mise use -g hugo
 	mise use -g marp-cli
 	mise use -g node
 	mise use -g npm:@github/copilot-language-server

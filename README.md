@@ -467,6 +467,7 @@ You can make install from here
 	mise use -g deno
 	mise use -g duckdb
 	mise use -g gemini-cli
+	mise use -g hugo
 	mise use -g marp-cli
 	mise use -g node
 	mise use -g npm:@github/copilot-language-server
