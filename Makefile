@@ -229,15 +229,6 @@ keyring: ${HOME}/.local ## Init gnome keyrings
 	test -L ${HOME}/.local/share/keyrings || rm -rf ${HOME}/.local/share/keyrings
 	ln -vsfn ${HOME}/{backup,.local/share}/keyrings
 
-ibusmozc: ## Install ibus-mozc
-	sudo ln -vsf ${PWD}/etc/environment /etc/environment
-	test -L ${HOME}/.mozc || rm -rf ${HOME}/.mozc
-	ln -vsfn ${HOME}/backup/mozc ${HOME}/.mozc
-	mkdir -p ${HOME}/.config/autostart
-	ln -vsf {${PWD},${HOME}}/.config/autostart/ibus.desktop
-	yay -S ibus-mozc
-	ibus-daemon -drx
-
 fcitx-mozc: ## Install fcitx-mozc
 	$(PACMAN) fcitx5-im fcitx5-mozc
 	yay -S fcitx5-skin-adwaita-dark
