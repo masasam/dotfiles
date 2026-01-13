@@ -559,7 +559,6 @@ hslua-cli
 html-xml-utils
 htop
 httpie
-hugo
 hunspell
 hwdata
 hwloc
@@ -609,7 +608,6 @@ jemalloc
 jhead
 jpegoptim
 jq
-js115
 js128
 js140
 json-c
