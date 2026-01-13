@@ -3,8 +3,8 @@
 COUNT=$(hyprctl activeworkspace | grep 'windows:'| cut -d ' ' -f 2)
 
 if [[ $COUNT = 1 ]]; then
-	hyprctl dispatch movetoworkspacesilent 2,'class:^(google-chrome)$'
+	hyprctl dispatch movetoworkspacesilent 2,'class:^(org.gnome.Papers)$'
 	hyprctl dispatch swapwindow r
 else
-	hyprctl dispatch movetoworkspacesilent 1,'class:^(google-chrome)$'
+	hyprctl dispatch movetoworkspacesilent 3,'class:^(org.gnome.Papers)$'
 fi
