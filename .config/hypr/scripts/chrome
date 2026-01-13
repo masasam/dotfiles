@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+COUNT=$(hyprctl activeworkspace | grep 'windows:'| cut -d ' ' -f 2)
+
+if [[ $COUNT = 1 ]]; then
+	hyprctl dispatch movetoworkspacesilent 2,'class:^(google-chrome)$'
+else
+	hyprctl dispatch movetoworkspacesilent 1,'class:^(google-chrome)$'
+fi
