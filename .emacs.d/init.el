@@ -74,7 +74,7 @@
   (package-install 'embark-consult)
   (package-install 'espy)
   (package-install 'exec-path-from-shell)
-  (package-install 'expand-region)
+  (package-install 'expreg)
   (package-install 'fill-column-indicator)
   (package-install 'flymake)
   (package-install 'flymake-diagnostic-at-point)
