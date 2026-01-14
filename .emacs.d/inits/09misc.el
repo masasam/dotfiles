@@ -34,10 +34,10 @@
       'editorconfig-core-get-properties-hash)
 
 
-;; ediff
-(setq ediff-window-setup-function 'ediff-setup-windows-plain
-      ediff-split-window-function 'split-window-horizontally
-      ediff-diff-options "-twB")
+(use-package ediff
+  :ensure nil
+  :config
+  (setopt ediff-split-window-function 'split-window-horizontally))
 
 
 ;; volatile-highlights
