@@ -4,6 +4,9 @@ general.import = [
   "~/.config/alacritty/catppuccin-mocha.toml"
 ]
 
+[terminal]
+shell = { program = "/bin/zsh", args = ["-l"] }
+
 [env]
 TERM = "xterm-256color"
 
