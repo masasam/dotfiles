@@ -14,14 +14,13 @@
 
 
 (use-package diff-hl
-  :ensure t
+  :hook ((magit-pre-refresh . diff-hl-magit-pre-refresh)
+         (magit-post-refresh . diff-hl-magit-post-refresh))
   :init
+  (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
   (global-diff-hl-mode)
-  (add-hook 'dired-mode-hook 'diff-hl-dired-mode)
-  (unless (window-system) (diff-hl-margin-mode))
-  :config
-  (add-hook 'magit-pre-refresh-hook 'diff-hl-magit-pre-refresh)
-  (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh))
+  (global-diff-hl-show-hunk-mouse-mode)
+  (diff-hl-margin-mode))
 
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
