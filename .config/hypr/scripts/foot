@@ -6,6 +6,7 @@ WINDOW=$(hyprctl activeworkspace | grep 'windows:'| cut -d ' ' -f 2)
 if [[ $WINDOW = 1 ]]; then
 	hyprctl dispatch movetoworkspacesilent $CURRENTWORKSPACE,'class:^(foot)$'
 	hyprctl dispatch swapwindow r
+	hyprctl dispatch focuswindow 'class:^(foot)$'
 else
 	hyprctl dispatch movetoworkspacesilent  special:scratchpad,'class:^(foot)$'
 fi

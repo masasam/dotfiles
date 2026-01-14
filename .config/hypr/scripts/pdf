@@ -6,6 +6,7 @@ WINDOW=$(hyprctl activeworkspace | grep 'windows:'| cut -d ' ' -f 2)
 if [[ $WINDOW = 1 ]]; then
 	hyprctl dispatch movetoworkspacesilent $CURRENTWORKSPACE,'class:^(org.gnome.Papers)$'
 	hyprctl dispatch swapwindow r
+	hyprctl dispatch focuswindow 'class:^(org.gnome.Papers)$'
 else
 	hyprctl dispatch movetoworkspacesilent 3,'class:^(org.gnome.Papers)$'
 fi
