@@ -3,9 +3,18 @@
 CURRENTWORKSPACE=$(hyprctl activeworkspace | grep workspace | cut -d ' ' -f 3)
 WINDOW=$(hyprctl activeworkspace | grep 'windows:'| cut -d ' ' -f 2)
 
-if [[ $WINDOW = 1 ]]; then
-	hyprctl dispatch movetoworkspace $CURRENTWORKSPACE,'class:^(google-chrome)$'
-	hyprctl dispatch swapwindow l
-else
-	hyprctl dispatch movetoworkspacesilent 1,'class:^(google-chrome)$'
+if [[ $CURRENTWORKSPACE = 1 ]]; then
+	if [[ $WINDOW = 1 ]]; then
+		hyprctl dispatch movetoworkspace $CURRENTWORKSPACE,'class:^(Emacs)$'
+		hyprctl dispatch swapwindow r
+	else
+		hyprctl dispatch movetoworkspacesilent 2,'class:^(Emacs)$'
+	fi
+elif [[ $CURRENTWORKSPACE = 2 ]]; then
+	if [[ $WINDOW = 1 ]]; then
+		hyprctl dispatch movetoworkspace $CURRENTWORKSPACE,'class:^(google-chrome)$'
+		hyprctl dispatch swapwindow l
+	else
+		hyprctl dispatch movetoworkspacesilent 1,'class:^(google-chrome)$'
+	fi
 fi
