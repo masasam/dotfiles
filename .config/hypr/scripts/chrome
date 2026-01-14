@@ -10,7 +10,7 @@ if [[ "$CURRENTWORKSPACE" = 1 ]]; then
 	else
 		hyprctl dispatch movetoworkspacesilent 2,'class:^(Emacs)$'
 	fi
-elif [[ $CURRENTWORKSPACE = 2 ]]; then
+elif [[ "$CURRENTWORKSPACE" = 2 ]]; then
 	if [[ $WINDOW = 1 ]]; then
 		hyprctl dispatch movetoworkspace "$CURRENTWORKSPACE",'class:^(google-chrome)$'
 		hyprctl dispatch swapwindow l
