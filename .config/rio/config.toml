@@ -35,7 +35,7 @@ padding-x = 5
 # (default is [0, 0])
 #
 # Example:
-padding-y = [10, -10]
+padding-y = [5, -5]
 
 # Option as Alt
 #
