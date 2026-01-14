@@ -4,9 +4,8 @@ CURRENTWORKSPACE=$(hyprctl activeworkspace | grep workspace | cut -d ' ' -f 3)
 WINDOW=$(hyprctl activeworkspace | grep 'windows:'| cut -d ' ' -f 2)
 
 if [[ $WINDOW = 1 ]]; then
-	hyprctl dispatch movetoworkspacesilent $CURRENTWORKSPACE,'class:^(google-chrome)$'
-	hyprctl dispatch swapwindow r
-	hyprctl dispatch focuswindow 'class:^(google-chrome)$'
+	hyprctl dispatch movetoworkspace $CURRENTWORKSPACE,'class:^(google-chrome)$'
+	hyprctl dispatch swapwindow l
 else
 	hyprctl dispatch movetoworkspacesilent 1,'class:^(google-chrome)$'
 fi
