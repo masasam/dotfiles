@@ -3,10 +3,22 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
+(use-package gt
+  :defer t
+  :bind (("C-c t" . gt-translate))
+  :config
+  (setopt gt-langs '(en ja))
+  (setopt gt-default-translator
+          (gt-translator
+           :taker   (gt-taker :text 'buffer :pick 'paragraph)
+           :engines (list (gt-bing-engine))
+           :render  (gt-buffer-render))))
+
+
 (require 'google-translate)
 (require 'google-translate-default-ui)
 
-(bind-key "C-c t" 'google-translate-auto)
+;; (bind-key "C-c t" 'google-translate-auto)
 
 (defvar toggle-translate-flg nil
   "Toggle flg.")

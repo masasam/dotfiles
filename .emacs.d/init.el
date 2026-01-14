@@ -89,6 +89,7 @@
   (package-install 'google-translate)
   (package-install 'gptel)
   (package-install 'gptel-commit)
+  (package-install 'gt)
   (package-install 'htmlize)
   (package-install 'hydra)
   (package-install 'iedit)

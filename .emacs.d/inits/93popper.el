@@ -24,6 +24,7 @@
   :init
   (setq popper-reference-buffers
         '("\\*Messages\\*"
+		  "\\*gt-result\\*"
           "Output\\*$"
 		  "\\*Google Translate\\*$"
 		  "\\*quickrun\\*"
