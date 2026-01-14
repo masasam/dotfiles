@@ -7,7 +7,7 @@ WINDOW=$(hyprctl activeworkspace | rg 'windows:'| cut -d ' ' -f 2)
 
 if [[ $WINDOW = 1 ]]; then
 	hyprctl dispatch movetoworkspace "$CURRENTWORKSPACE",pid:"$PID"
-	hyprctl dispatch swapwindow r
+	hyprctl dispatch swapwindow l
 else
 	hyprctl dispatch movetoworkspace 1,pid:"$HiD"
 fi
