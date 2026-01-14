@@ -3,11 +3,12 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
-;; magit
-(autoload 'magit-status "magit" nil t)
-(bind-key "C-x g" 'magit-status)
-(bind-key "C-x G" 'magit-blame)
-(setq magit-show-long-lines-warning nil)
+(use-package magit
+  :config
+  (require 'magit-extras)
+  :bind
+  (("C-x g" . magit-status)
+   ("C-x G" . magit-blame)))
 
 ;; keychain-environment
 (keychain-refresh-environment)
@@ -21,6 +22,11 @@
   (global-diff-hl-mode)
   (global-diff-hl-show-hunk-mouse-mode)
   (diff-hl-margin-mode))
+
+
+(use-package difftastic
+  :config
+  (difftastic-bindings-mode))
 
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
