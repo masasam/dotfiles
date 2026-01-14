@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-CURRENTWORKSPACE=$(hyprctl activeworkspace | grep workspace | cut -d ' ' -f 3)
-WINDOW=$(hyprctl activeworkspace | grep 'windows:'| cut -d ' ' -f 2)
+CURRENTWORKSPACE=$(hyprctl activeworkspace | rg workspace | cut -d ' ' -f 3)
+WINDOW=$(hyprctl activeworkspace | rg 'windows:'| cut -d ' ' -f 2)
 
 if [[ $WINDOW = 1 ]]; then
 	hyprctl dispatch movetoworkspace $CURRENTWORKSPACE,'class:^(foot)$'
