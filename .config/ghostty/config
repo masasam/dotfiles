@@ -11,6 +11,8 @@ maximize = true
 # window-height = 45
 # window-padding-x = 4
 
+command = /bin/zsh --login --interactive
+
 theme = Catppuccin Mocha
 window-padding-x = 20
 window-padding-y = 5
