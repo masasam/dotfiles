@@ -27,7 +27,7 @@ theme = "catppuccin-mocha"
 # define x axis padding (default is 0)
 #
 # Example:
-padding-x = 10
+padding-x = 5
 
 # Padding-y
 #
@@ -35,7 +35,7 @@ padding-x = 10
 # (default is [0, 0])
 #
 # Example:
-padding-y = [10, 0]
+padding-y = [10, -10]
 
 # Option as Alt
 #
@@ -223,7 +223,7 @@ opacity = 0.8
 #
 # Simple example:
 [fonts]
-size = 27
+size = 32
 #
 [fonts.regular]
 family = "Cica"
