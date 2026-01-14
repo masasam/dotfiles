@@ -3,9 +3,18 @@
 CURRENTWORKSPACE=$(hyprctl activeworkspace | rg workspace | cut -d ' ' -f 3)
 WINDOW=$(hyprctl activeworkspace | rg 'windows:'| cut -d ' ' -f 2)
 
-if [[ $WINDOW = 1 ]]; then
-	hyprctl dispatch movetoworkspace "$CURRENTWORKSPACE",'class:^(org.gnome.Papers)$'
-	hyprctl dispatch swapwindow l
-else
-	hyprctl dispatch movetoworkspacesilent 3,'class:^(org.gnome.Papers)$'
+if [[ "$CURRENTWORKSPACE" = 1 ]]; then
+	if [[ $WINDOW = 1 ]]; then
+		hyprctl dispatch movetoworkspace "$CURRENTWORKSPACE",'class:^(org.gnome.Papers)$'
+		hyprctl dispatch swapwindow r
+	else
+		hyprctl dispatch movetoworkspacesilent 3,'class:^(org.gnome.Papers)$'
+	fi
+elif [[ $CURRENTWORKSPACE = 2 ]]; then
+	if [[ $WINDOW = 1 ]]; then
+		hyprctl dispatch movetoworkspace "$CURRENTWORKSPACE",'class:^(org.gnome.Papers)$'
+		hyprctl dispatch swapwindow l
+	else
+		hyprctl dispatch movetoworkspacesilent 3,'class:^(org.gnome.Papers)$'
+	fi
 fi
