@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-HiD=$(hyprctl clients | rg -A 19 'focusHistoryID: 1' | rg pid | cut -d ' ' -f 2)
+HID=$(hyprctl clients | rg -A 19 'focusHistoryID: 1' | rg pid | cut -d ' ' -f 2)
 PID=$(hyprctl clients | rg -A 8 'workspace: 1' | rg pid | cut -d ' ' -f 2)
 CURRENTWORKSPACE=$(hyprctl activeworkspace | rg workspace | cut -d ' ' -f 3)
 WINDOW=$(hyprctl activeworkspace | rg 'windows:'| cut -d ' ' -f 2)
@@ -9,5 +9,5 @@ if [[ $WINDOW = 1 ]]; then
 	hyprctl dispatch movetoworkspace "$CURRENTWORKSPACE",pid:"$PID"
 	hyprctl dispatch swapwindow l
 else
-	hyprctl dispatch movetoworkspacesilent 1,pid:"$HiD"
+	hyprctl dispatch movetoworkspacesilent 1,pid:"$HID"
 fi
