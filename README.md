@@ -466,6 +466,7 @@ You can make install from here
 	mise use -g claude-code
 	mise use -g deno
 	mise use -g duckdb
+	mise use -g firebase
 	mise use -g gemini-cli
 	mise use -g hugo
 	mise use -g marp-cli

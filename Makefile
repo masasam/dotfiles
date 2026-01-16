@@ -132,6 +132,7 @@ mise: ## Setup mise
 	mise use -g claude-code
 	mise use -g deno
 	mise use -g duckdb
+	mise use -g firebase
 	mise use -g gemini-cli
 	mise use -g hugo
 	mise use -g marp-cli
@@ -347,7 +348,7 @@ emacspeak: ## Install emacspeak for blind person
 	yay -S $@
 
 aur: ## Install arch linux AUR packages using yay
-	yay -S asunder downgrade firebase-tools-bin geeqie git-secrets pscale-cli rgxg slack-desktop turso-bin vscode-langservers-extracted zoom
+	yay -S asunder downgrade geeqie git-secrets pscale-cli rgxg slack-desktop turso-bin vscode-langservers-extracted zoom
 
 sequeler: ## Install gui database tools
 	yay -S $@-git
