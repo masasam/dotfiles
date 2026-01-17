@@ -155,6 +155,8 @@ neomutt: ## Init neomutt mail client
 	$(PACMAN) neomutt urlscan
 	mkdir -p ${HOME}/.mutt
 	ln -vsf ${PWD}/.muttrc ${HOME}/.muttrc
+	mkdir -p ${HOME}/.config/urlscan
+	ln -vsf {${PWD},${HOME}}/.config/urlscan/config.json
 	for item in mailcap certifcates aliases signature; do ln -vsf {${PWD},${HOME}}/.mutt/$$item; done
 	ln -vsf {${PWD},${HOME}}/.goobookrc
 	yay -S goobook-git
