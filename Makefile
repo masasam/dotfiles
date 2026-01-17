@@ -33,7 +33,7 @@ PACKAGES	+= gnome-sound-recorder yaml-language-server biome papers typst discord
 PACKAGES	+= mission-center pass gitui sqlitebrowser git-delta ruff speedtest-cli
 PACKAGES	+= jc fx httpie bash-language-server editorconfig-core-c hexedit tldr
 PACKAGES	+= pv perl-net-ip lshw xdotool sshuttle packer libreoffice-fresh-ja
-PACKAGES	+= openai-codex urlscan
+PACKAGES	+= openai-codex
 
 PACMAN		:= sudo pacman -S 
 SYSTEMD_ENABLE	:= sudo systemctl --now enable
@@ -152,7 +152,7 @@ mise: ## Setup mise
 	mise use -g yt-dlp
 
 neomutt: ## Init neomutt mail client
-	$(PACMAN) neomutt
+	$(PACMAN) neomutt urlscan
 	mkdir -p ${HOME}/.mutt
 	ln -vsf ${PWD}/.muttrc ${HOME}/.muttrc
 	for item in mailcap certifcates aliases signature; do ln -vsf {${PWD},${HOME}}/.mutt/$$item; done
@@ -485,7 +485,7 @@ testpath: ## Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: dconfsetting rclone gnupg ssh install init keyring mise foot ghostty rio alacritty tlp ttf-cica hyprland greetd dnsmasq fcitx-mozc neomutt lvfs aur beekeeper kind gtk-theme chrome ccls gh tree-sitter
+allinstall: dconfsetting rclone gnupg ssh install init keyring mise foot ghostty rio alacritty tlp ttf-cica hyprland greetd dnsmasq fcitx-mozc neomutt lvfs aur beekeeper kind gtk-theme chrome ccls gh tree-sitter tailscale
 
 allupdate: update goinstall
 
