@@ -66,6 +66,7 @@ ssh: ## Init ssh
 	$(PACMAN) open$@
 	mkdir -p ${HOME}/.$@
 	chmod 600 ${HOME}/.ssh/id_rsa
+	sudo ln -vsf {${PWD},}/etc/ssh/sshd_config
 
 init: ## Initial deploy dotfiles
 	test -L ${HOME}/.emacs.d || rm -rf ${HOME}/.emacs.d
