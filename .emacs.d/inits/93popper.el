@@ -17,7 +17,6 @@
 ;; 					  ("Trash Can" :align below :select t)))
 
 (use-package popper
-  :ensure t ; or :straight t
   :bind (("C-`"   . popper-toggle)
          ("M-`"   . popper-cycle)
          ("C-M-`" . popper-toggle-type))

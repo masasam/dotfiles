@@ -311,7 +311,6 @@ If the region is inactive, `backward-kill-word'."
 
 ;; dmacro
 (use-package dmacro
-  :ensure t
   :init
   (setq dmacro-key (kbd "C-t"))
   (global-dmacro-mode))

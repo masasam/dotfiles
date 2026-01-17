@@ -14,7 +14,6 @@
 (load "~/backup/emacs/gemini.el")
 
 (use-package gptel-commit
-  :ensure t
   :after (gptel magit)
   :custom
   (gptel-commit-stream t))

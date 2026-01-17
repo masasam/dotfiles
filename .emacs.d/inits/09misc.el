@@ -34,14 +34,12 @@
 
 
 (use-package ediff
-  :ensure nil
   :config
   (setopt ediff-split-window-function 'split-window-horizontally))
 
 
 ;; volatile-highlights
 (use-package volatile-highlights
-  :ensure t
   :custom
   ;; Keep static (non-animated) highlights (default)
   (vhl/animation-style 'static)

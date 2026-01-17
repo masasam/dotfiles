@@ -4,7 +4,6 @@
 ;;(setq debug-on-error t)
 
 (use-package corfu
-  :ensure t
   :custom ((corfu-auto t)
            (corfu-auto-prefix 1))
   :bind ((:map corfu-map ("C-s" . corfu-insert-separator)))
