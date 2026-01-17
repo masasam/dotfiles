@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+PID=$(hyprctl clients | rg -A 8 'special:scratchpad' | rg pid | cut -d ' ' -f 2)
+CURRENTWORKSPACE=$(hyprctl activeworkspace | rg workspace | cut -d ' ' -f 3)
+WINDOW=$(hyprctl activeworkspace | rg 'windows:'| cut -d ' ' -f 2)
+
+if [[ $WINDOW = 1 ]]; then
+	hyprctl dispatch movetoworkspace "$CURRENTWORKSPACE",pid:"$PID"
+	hyprctl dispatch swapwindow r
+	echo "$PID" > ~/.config/hypr/scripts/PID0
+else
+	ID=$(cat ~/.config/hypr/scripts/PID0)
+	hyprctl dispatch movetoworkspacesilent special:scratchpad,pid:"$ID"
+	rm ~/.config/hypr/scripts/PID0
+fi

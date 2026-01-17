@@ -7,5 +7,5 @@ if [[ $WINDOW = 1 ]]; then
 	hyprctl dispatch movetoworkspace "$CURRENTWORKSPACE",'class:^(foot)$'
 	hyprctl dispatch swapwindow l
 else
-	hyprctl dispatch movetoworkspacesilent  special:scratchpad,'class:^(foot)$'
+	hyprctl dispatch movetoworkspacesilent special:scratchpad,'class:^(foot)$'
 fi
