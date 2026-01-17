@@ -28,6 +28,8 @@ hdr_order Date From To Cc
 set pager_index_lines=8
 bind editor ^T complete
 bind editor <space> noop
+# Press Ctrl-b to display the list of URLs
+macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs"
 
 # mailcap
 alternative_order text/plain text/html *
