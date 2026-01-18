@@ -422,10 +422,8 @@ edge: ## Install edge
 
 neovim: ## Init neovim
 	$(PACMAN) $@
-	mkdir -p ${HOME}/.config/nvim
-	for item in init installer; do \
-		ln -vsf {${PWD},${HOME}}/.config/nvim/$$item.vim
-	bash ${HOME}/.config/nvim/installer.sh ${HOME}/.config/nvim
+	test -L ${HOME}/.config/nvim || rm -rf ${HOME}/.config/nvim
+	ln -vsfn {${PWD},${HOME}}/.config/nvim
 
 mongodb: ## Mongodb initial setup
 	$(PACMAN) $@ $@-tools
