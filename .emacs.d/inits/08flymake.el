@@ -40,11 +40,6 @@
 (advice-add 'flymake-diagnostic-at-point-display-popup :override 'my/flymake-diagnostic-at-point-display-popup)
 
 
-;; flyspell-correct
-(define-key flyspell-mode-map (kbd "C-;") #'flyspell-correct-wrapper)
-(setenv "DICTIONARY" "en_US")
-
-
 (require 'puni)
 (puni-global-mode)
 (add-hook 'term-mode-hook #'puni-disable-puni-mode)

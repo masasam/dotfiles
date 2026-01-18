@@ -78,7 +78,6 @@
   (package-install 'fill-column-indicator)
   (package-install 'flymake)
   (package-install 'flymake-diagnostic-at-point)
-  (package-install 'flyspell-correct)
   (package-install 'ggtags)
   (package-install 'git-timemachine)
   (package-install 'github-explorer)
