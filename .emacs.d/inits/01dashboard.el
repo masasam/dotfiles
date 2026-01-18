@@ -14,7 +14,7 @@
 		(car (split-string (shell-command-to-string "uname -r") "-"))
 		" x86_64 ArchLinux Hyprland " (car (cdr (split-string (shell-command-to-string "hyprland --version") " ")))))
   ;; Set the banner
-  (setq dashboard-startup-banner 'logo)
+  (setq dashboard-startup-banner "~/.emacs.d/emacs.xpm")
   (setq dashboard-items '((recents   . 5)))
   (dashboard-setup-startup-hook)
   (global-page-break-lines-mode)

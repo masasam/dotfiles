@@ -3,6 +3,9 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
+(set-frame-parameter nil 'alpha-background 80) ; For current frame
+(add-to-list 'default-frame-alist '(alpha-background . 80)) ; For all new frames henceforth
+
 ;; Turn off context-menu-mode
 (context-menu-mode 0)
 
