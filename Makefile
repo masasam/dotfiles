@@ -71,6 +71,8 @@ ssh: ## Init ssh
 init: ## Initial deploy dotfiles
 	test -L ${HOME}/.emacs.d || rm -rf ${HOME}/.emacs.d
 	ln -vsfn {${PWD},${HOME}}/.emacs.d
+	test -L ${HOME}/.config/btop || rm -rf ${HOME}/.config/btop
+	ln -vsfn {${PWD},${HOME}}/.config/btop
 	ln -vsf {${PWD},${HOME}}/.lesskey
 	lesskey
 	for item in zshrc vimrc bashrc myclirc tmux.conf screenrc aspell.conf gitconfig netrc authinfo; do
