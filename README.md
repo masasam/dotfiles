@@ -10,6 +10,8 @@
 
 ![terminal](https://raw.githubusercontent.com/masasam/image/image/terminal.png)
 
+![gif](https://raw.githubusercontent.com/masasam/image/image/output.gif)
+
 ## Let's build environment with Makefile
 
 This dotfiles is for Arch linux.
