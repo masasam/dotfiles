@@ -185,7 +185,7 @@ kitty: # Init kitty terminal
 	ln -vsf {${PWD},${HOME}}/.config/$@/$@.conf
 	ln -vsf {${PWD},${HOME}}/.config/kitty/current-theme.conf
 
-rio: # Init reo terminal
+rio: # Init rio terminal
 	$(PACMAN) $@
 	test -L ${HOME}/.config/$@ || rm -rf ${HOME}/.config/$@
 	ln -vsfn {${PWD},${HOME}}/.config/$@
@@ -429,8 +429,8 @@ mongodb: ## Mongodb initial setup
 	$(PACMAN) $@ $@-tools
 	$(SYSTEMD_ENABLE) $@.service
 
-solargraph: ## Ruby language server
-	yay -S $@
+solargraph: ## Ruby language server and jekyll
+	yay -S ruby-$@ jekyll
 
 gnuglobal: ${HOME}/.local ## Install gnu global
 	$(PACMAN) global python-pygments
@@ -443,10 +443,6 @@ emacs-devel: ## Install development version of emacs
 	git clone -b emacs-30 git@github.com:emacs-mirror/emacs.git ${HOME}/src/github.com/masasam/emacs
 	cd ${HOME}/src/github.com/masasam/emacs && ./autogen.sh && ./configure && make && sudo make install && make clean
 	rm -rf ${HOME}/.emacs.d/elpa
-
-rubygem: ## Install rubygem package
-	yay -S ruby-solargraph
-	gem install bundler jekyll sass compass rawler rdoc irb rails
 
 dvd: # Backup dvd media
 	$(PACMAN) libdvdcss dvdbackup
