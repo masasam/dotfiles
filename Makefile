@@ -55,7 +55,7 @@ rclone: ## Init rclone
 	$(PACMAN) $@
 	chmod 600 ${PWD}/.config/rclone/rclone.conf
 	test -L ${HOME}/.config/rclone || rm -rf ${HOME}/.config/rclone
-	ln -vsfn ${PWD}/.config/rclone ${HOME}/.config/rclone
+	ln -vsfn {${PWD},${HOME}}/.config/rclone
 
 gnupg: ## Deploy gnupg (Run after rclone)
 	$(PACMAN) $@ git-crypt
@@ -70,8 +70,8 @@ ssh: ## Init ssh
 
 init: ## Initial deploy dotfiles
 	test -L ${HOME}/.emacs.d || rm -rf ${HOME}/.emacs.d
-	ln -vsfn ${PWD}/.emacs.d ${HOME}/.emacs.d
-	ln -vsf ${PWD}/.lesskey ${HOME}/.lesskey
+	ln -vsfn {${PWD},${HOME}}/.emacs.d
+	ln -vsf {${PWD},${HOME}}/.lesskey
 	lesskey
 	for item in zshrc vimrc bashrc myclirc tmux.conf screenrc aspell.conf gitconfig netrc authinfo; do
 		ln -vsf {${PWD},${HOME}}/.$$item
@@ -154,7 +154,7 @@ mise: ## Setup mise
 neomutt: ## Init neomutt mail client
 	$(PACMAN) neomutt urlscan
 	mkdir -p ${HOME}/.mutt
-	ln -vsf ${PWD}/.muttrc ${HOME}/.muttrc
+	ln -vsf {${PWD},${HOME}}/.muttrc
 	mkdir -p ${HOME}/.config/urlscan
 	ln -vsf {${PWD},${HOME}}/.config/urlscan/config.json
 	for item in mailcap certifcates aliases signature; do ln -vsf {${PWD},${HOME}}/.mutt/$$item; done
@@ -222,7 +222,7 @@ gtk-theme: ## Set gtk theme
 	$(PACMAN) gnome-themes-extra
 	gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark
 	test -L ${HOME}/.config/gtk-4.0 || rm -rf ${HOME}/.config/gtk-4.0
-	ln -vsfn ${PWD}/.config/gtk-4.0 ${HOME}/.config/gtk-4.0
+	ln -vsfn {${PWD},${HOME}}/.config/gtk-4.0
 
 throttled: ## Workaround for Intel throttling issues in thinkpad x1 carbon gen6
 	$(PACMAN) throttled
@@ -388,7 +388,7 @@ tmuxp: ${HOME}/.local ## Install tmuxp
 psd: ## Profile-Sync-Daemon initial setup
 	yay -S profile-sync-daemon
 	mkdir -p ${HOME}/.config/psd
-	ln -vsf ${PWD}/.config/psd/psd.conf ${HOME}/.config/psd/psd.conf
+	ln -vsf {${PWD},${HOME}}/.config/psd/psd.conf
 	echo "${USER} ALL=(ALL) NOPASSWD: /usr/bin/psd-overlay-helper" | sudo EDITOR='tee -a' visudo
 	systemctl --user --now enable psd.service
 
