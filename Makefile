@@ -112,8 +112,8 @@ hyprland: ## Setup hyprland
 
 greetd: ## Setup greetd
 	$(PACMAN) $@ greetd-tuigreet
-	sudo ln -vsf ${PWD}/etc/$@/config.toml /etc/$@/config.toml
-	sudo ln -vsf ${PWD}/etc/pam.d/greetd /etc/pam.d/greetd
+	sudo ln -vsf {${PWD},}/etc/$@/config.toml
+	sudo ln -vsf {${PWD},}/etc/pam.d/greetd
 	systemctl enable greetd.service
 
 goinstall: ${HOME}/.local ## Install go packages
@@ -236,7 +236,7 @@ keyring: ${HOME}/.local ## Init gnome keyrings
 fcitx-mozc: ## Install fcitx-mozc
 	$(PACMAN) fcitx5-im fcitx5-mozc
 	yay -S fcitx5-skin-adwaita-dark
-	sudo ln -vsf ${PWD}/etc/environment /etc/environment
+	sudo ln -vsf {${PWD},}/etc/environment
 	test -L ${HOME}/.config/fcitx5/conf/clipboard.conf || rm -rf ${HOME}/.config/fcitx5/conf/clipboard.conf
 	ln -vsf {${PWD},${HOME}}/.config/fcitx5/conf/clipboard.conf
 	test -L ${HOME}/.mozc || rm -rf ${HOME}/.mozc
@@ -374,7 +374,7 @@ aurplus: ## Install arch linux AUR packages using yay
 bluetooth: # Setup bluetooth
 	$(PACMAN) bluez bluez-utils blueman bluetui
 	$(SYSTEMD_ENABLE) bluetooth.service
-	sudo ln -vsf ${PWD}/etc/bluetooth/main.conf /etc/bluetooth/main.conf
+	sudo ln -vsf {${PWD},}/etc/bluetooth/main.conf
 
 aws: ${HOME}/.local ## Init aws cli
 	mise use -g aws-cli
