@@ -75,10 +75,6 @@ tooltip {
   font-size: 22px;
 }
 
-#custom-recorder.active {
-  color: #a55555;
-}
-
 workspaces button {
   border-radius: 5px;
   padding: 1px 1px;
