@@ -822,8 +822,12 @@ function s3-download() {
 }
 
 
-function yarncleanup() {
-    yarn global remove $(yarn global list | grep info | sed 's/^info "\(.*\)@.*".*$/\1/')
+function rec() {
+	if [ $# = 1 ]; then
+		sleep $1 && wf-recorder -f "$(xdg-user-dir VIDEOS)/$(date +'%Y-%m-%d-%H%M%S.mp4')"
+    else
+		echo 'usage: rec [seconds]'
+    fi
 }
 
 

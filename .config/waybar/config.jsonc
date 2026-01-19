@@ -17,12 +17,6 @@
         "tray",
         "custom/power"
     ],
-	"custom/recorder": {
-        "format": "",
-        "on-click": "$HOME/.config/waybar/scripts/start_recording.sh",
-		"tooltip": false,
-        "class": "recorder"
-    },
     "tray": {
         "icon-size": 20,
         "spacing": 18,
@@ -37,7 +31,7 @@
         "format": "{icon} {percent}%",
         "format-icons": ["", "", "", "", "", "", "", "", ""],
 		"tooltip": false,
-		"on-click": "wdisplays",
+		"on-click": "nwg-displays",
     },
     "battery": {
         "states": {

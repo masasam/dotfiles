@@ -96,10 +96,8 @@ hyprland: ## Setup hyprland
 	$(PACMAN) mako hyprshot qt5ct qt6ct kvantum kvantum-qt5 hyprpolkitagent
 	$(PACMAN) hyprsunset pavucontrol wl-clip-persist nwg-displays pipewire
 	$(PACMAN) wireplumber pipewire-pulse pcmanfm-qt xdg-desktop-portal-gtk
-	$(PACMAN) wl-clipboard hyprpaper
-	yay -S wdisplays
+	$(PACMAN) wl-clipboard hyprpaper wf-recorder
 	yay -S wlogout
-	yay -S wl-screenrec
 	test -L ${HOME}/.config/hypr || rm -rf ${HOME}/.config/hypr
 	ln -vsfn {${PWD},${HOME}}/.config/hypr
 	test -L ${HOME}/.config/waybar || rm -rf ${HOME}/.config/waybar
