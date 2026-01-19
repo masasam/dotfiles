@@ -5,8 +5,8 @@
 ;; Package-Requires: ((emacs "25.1"))
 ;;(setq debug-on-error t)
 
-(set-frame-parameter nil 'alpha-background 80) ; For current frame
-(add-to-list 'default-frame-alist '(alpha-background . 80)) ; For all new frames henceforth
+(set-frame-parameter nil 'alpha-background 85) ; For current frame
+(add-to-list 'default-frame-alist '(alpha-background . 85)) ; For all new frames henceforth
 (menu-bar-mode 0)
 (tool-bar-mode 0)
 (scroll-bar-mode 0)
