@@ -1518,6 +1518,7 @@ wayland
 wayland-protocols
 webkit2gtk-4.1
 webrtc-audio-processing-1
+wf-recorder
 wget
 which
 whois
