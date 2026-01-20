@@ -831,6 +831,17 @@ function rec() {
 }
 
 
+function rec2gif() {
+	if [ $# = 1 ]; then
+		fname_ext=$1
+		fname="${fname_ext%.*}"
+		ffmpeg -i ${fname_ext} -vf scale=1280:-1 -r 24 ${fname}.gif 
+    else
+		echo 'usage: rec2gif [file.mp4]'
+    fi
+}
+
+
 function dirsum() {
     if [ $# = 1 ]; then
 	find $1 -type f -print0 | xargs -0 shasum | awk '{print $1}' | sort | shasum
