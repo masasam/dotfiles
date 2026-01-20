@@ -518,17 +518,6 @@ function ipsort() {
 }
 
 
-function webm2gif() {
-    if [ $# = 1 ]; then
-	fname_ext=$1
-	fname="${fname_ext%.*}"
-	ffmpeg -i $1 -pix_fmt rgb24 $fname.gif
-    else
-	echo 'usage: webm2gif file.webm'
-    fi
-}
-
-
 function md2pdf() {
     if [ $# = 1 ]; then
 	fname_ext=$1
