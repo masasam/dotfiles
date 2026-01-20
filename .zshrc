@@ -837,7 +837,7 @@ function rec2gif() {
 		fname="${fname_ext%.*}"
 		ffmpeg -i ${fname_ext} -vf scale=1280:-1 -r 24 ${fname}.gif 
     else
-		echo 'usage: rec2gif [file.mp4]'
+		echo 'usage: rec2gif [file]'
     fi
 }
 
