@@ -12,7 +12,7 @@ if [[ $WINDOW = 1 && $CURRENTWORKSPACE != 9 ]]; then
 		hyprctl dispatch swapwindow l
 	fi
 	echo "$PID" > ~/.config/hypr/scripts/PID9
-elif [[ $CURRENTWORKSPACE != 9 ]]; then
+elif [[ $WINDOW = 2 && $CURRENTWORKSPACE != 9 ]]; then
 	ID=$(cat ~/.config/hypr/scripts/PID9)
 	hyprctl dispatch movetoworkspacesilent 9,pid:"$ID"
 	rm ~/.config/hypr/scripts/PID9

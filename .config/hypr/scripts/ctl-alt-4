@@ -12,7 +12,7 @@ if [[ $WINDOW = 1 && $CURRENTWORKSPACE != 4 ]]; then
 		hyprctl dispatch swapwindow l
 	fi
 	echo "$PID" > ~/.config/hypr/scripts/PID4
-elif [[ $CURRENTWORKSPACE != 4 ]]; then
+elif [[ $WINDOW = 2 && $CURRENTWORKSPACE != 4 ]]; then
 	ID=$(cat ~/.config/hypr/scripts/PID4)
 	hyprctl dispatch movetoworkspacesilent 4,pid:"$ID"
 	rm ~/.config/hypr/scripts/PID4
