@@ -4,11 +4,15 @@ PID=$(hyprctl clients | rg -A 8 'workspace: 3' | rg pid | cut -d ' ' -f 2)
 CURRENTWORKSPACE=$(hyprctl activeworkspace | rg workspace | cut -d ' ' -f 3)
 WINDOW=$(hyprctl activeworkspace | rg 'windows:'| cut -d ' ' -f 2)
 
-if [[ $WINDOW = 1 ]]; then
+if [[ $WINDOW = 1 && $CURRENTWORKSPACE != 3 ]]; then
 	hyprctl dispatch movetoworkspace "$CURRENTWORKSPACE",pid:"$PID"
-	hyprctl dispatch swapwindow r
+	if [[ $CURRENTWORKSPACE -lt 3 ]]; then
+		hyprctl dispatch swapwindow r
+	elif [[ $CURRENTWORKSPACE -gt 3 ]]; then
+		hyprctl dispatch swapwindow l
+	fi
 	echo "$PID" > ~/.config/hypr/scripts/PID3
-else
+elif [[ $CURRENTWORKSPACE != 3 ]]; then
 	ID=$(cat ~/.config/hypr/scripts/PID3)
 	hyprctl dispatch movetoworkspacesilent 3,pid:"$ID"
 	rm ~/.config/hypr/scripts/PID3
