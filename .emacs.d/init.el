@@ -38,6 +38,7 @@
   (package-refresh-contents)
   (package-install 'ace-window)
   (package-install 'aggressive-indent)
+  (package-install 'ast-grep)
   (package-install 'auto-compile)
   (package-install 'avy)
   (package-install 'beginend)
