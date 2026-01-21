@@ -7,23 +7,23 @@ BASE_PKGS	+= iputils iproute2 autoconf automake binutils bison fakeroot flex gcc
 BASE_PKGS	+= make patch pkgconf texinfo which archlinux-keyring debugedit libtool
 BASE_PKGS	+= m4 groff sudo pciutils psmisc shadow procps-ng sed tar gettext
 
-PACKAGES	:= base base-devel go zsh git vim tmux keychain unrar xsel emacs atool
-PACKAGES	+= unace iperf valgrind noto-fonts-emoji inkscape file-roller xclip fd
+PACKAGES	:= base base-devel go zsh git vim tmux keychain unrar xsel atool fd
+PACKAGES	+= unace iperf valgrind noto-fonts-emoji inkscape file-roller xclip
 PACKAGES	+= ipcalc traceroute debootstrap oath-toolkit gvfs-smb zsh-completions
 PACKAGES	+= imagemagick lynx the_silver_searcher cifs-utils elinks satty mold
-PACKAGES	+= cups-pdf firefox firefox-i18n-ja gimp strace lhasa tig ethtool
+PACKAGES	+= cups-pdf firefox firefox-i18n-ja gimp strace lhasa tig highlight
 PACKAGES	+= rsync nodejs debian-archive-keyring aria2 nmap ffmpeg asciidoc sbcl
 PACKAGES	+= aspell aspell-en screen mosh diskus gdb wmctrl pwgen linux-docs htop
 PACKAGES	+= tcpdump gvfs lzop poppler-data cpio sysprof pkgfile p7zip ruby-rdoc
-PACKAGES	+= gpaste optipng arch-install-scripts pandoc jq pkgstats ruby highlight
+PACKAGES	+= gpaste optipng arch-install-scripts pandoc jq pkgstats ruby ethtool
 PACKAGES	+= texlive-langjapanese tokei texlive-latexextra ctags hdparm eog curl
 PACKAGES	+= typescript llvm llvm-libs lldb tree w3m whois csvkit shellcheck fzf
 PACKAGES	+= zsh-syntax-highlighting yq ansible parallel alsa-utils geckodriver
 PACKAGES	+= bash-completion mathjax expect obs-studio cscope pdfgrep cmatrix btop
 PACKAGES	+= jpegoptim nethogs plocate pacman-contrib x11-ssh-askpass streamlink
 PACKAGES	+= jhead ncdu sshfs fping syncthing terraform bat ttf-font-awesome kooha
-PACKAGES	+= ripgrep stunnel vimiv firejail noto-fonts-extra gnome-calculator
-PACKAGES	+= smartmontools wireshark-cli lsof watchexec lazygit yazi bat pdfpc bc
+PACKAGES	+= ripgrep stunnel vimiv firejail noto-fonts-extra gnome-calculator bc
+PACKAGES	+= smartmontools wireshark-cli lsof watchexec lazygit yazi bat pdfpc
 PACKAGES	+= gtop gopls convmv mpv man-db baobab ioping ruby-irb mkcert findomain
 PACKAGES	+= guetzli fabric detox usleep libvterm bind lame git-lfs hex miller
 PACKAGES	+= diffoscope dust rbw eza sslscan pyright miniserve fdupes xsv opencv
@@ -68,9 +68,12 @@ ssh: ## Init ssh
 	chmod 600 ${HOME}/.ssh/id_rsa
 	sudo ln -vsf {${PWD},}/etc/ssh/sshd_config
 
-init: ## Initial deploy dotfiles
+emacs: ## Init emacs
+	$(PACMAN) emacs
 	test -L ${HOME}/.emacs.d || rm -rf ${HOME}/.emacs.d
 	ln -vsfn {${PWD},${HOME}}/.emacs.d
+
+init: ## Initial deploy dotfiles
 	test -L ${HOME}/.config/btop || rm -rf ${HOME}/.config/btop
 	ln -vsfn {${PWD},${HOME}}/.config/btop
 	ln -vsf {${PWD},${HOME}}/.lesskey
@@ -481,7 +484,7 @@ testpath: ## Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: dconfsetting rclone gnupg ssh install init keyring mise foot ghostty rio alacritty tlp ttf-cica hyprland greetd dnsmasq fcitx-mozc neomutt lvfs aur beekeeper kind gtk-theme chrome ccls gh tree-sitter tailscale
+allinstall: dconfsetting rclone gnupg ssh install emacs init keyring mise foot ghostty rio alacritty tlp ttf-cica hyprland greetd dnsmasq fcitx-mozc neomutt lvfs aur beekeeper kind gtk-theme chrome ccls gh tree-sitter tailscale
 
 allupdate: update goinstall
 
