@@ -11,11 +11,11 @@
                       :stream t
                       :models '(gemma3n:latest)))
 
-(setq
- gptel-model 'gemini-flash-lite-latest
- gptel-backend (gptel-make-gemini "Gemini"
-                 :key (exec-path-from-shell-copy-env "GEMINIAPIKEY")
-                 :stream t))
+;; (setq
+;;  gptel-model 'gemini-flash-lite-latest
+;;  gptel-backend (gptel-make-gemini "Gemini"
+;;                  :key (exec-path-from-shell-copy-env "GEMINIAPIKEY")
+;;                  :stream t))
 
 (use-package gptel-commit
   :after (gptel magit)
