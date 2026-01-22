@@ -81,6 +81,7 @@ init: ## Initial deploy dotfiles
 	for item in zshrc vimrc bashrc myclirc tmux.conf screenrc aspell.conf gitconfig netrc authinfo; do
 		ln -vsf {${PWD},${HOME}}/.$$item
 	done
+	chmod 600 ${PWD}/.netrc
 	mkdir -p ${HOME}/.config/mpv
 	ln -vsf {${PWD},${HOME}}/.config/mpv/mpv.conf
 	sudo ln -vsf {${PWD},}/etc/hosts
@@ -112,6 +113,7 @@ hyprland: ## Setup hyprland
 	mkdir -p ${HOME}/.config/wlogout
 	sudo ln -vsf ${PWD}/usr/share/applications/wlogout.desktop /usr/share/applications/wlogout.desktop
 	ln -vsf {${PWD},${HOME}}/.config/wlogout/style.css
+	chmod +x ${PWD}/.config/hypr/scripts/*
 
 greetd: ## Setup greetd
 	$(PACMAN) $@ greetd-tuigreet
