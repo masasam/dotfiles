@@ -479,6 +479,7 @@ You can make install from here
 	mise use -g npm:typescript
 	mise use -g oxlint
 	mise use -g pnpm
+	mise use -g ruff
 	mise use -g trdsql
 	mise use -g usage
 	mise use -g uv

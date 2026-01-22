@@ -30,7 +30,7 @@ PACKAGES	+= diffoscope dust rbw eza sslscan pyright miniserve fdupes xsv opencv
 PACKAGES	+= gron typescript-language-server dateutils time rust rust-analyzer
 PACKAGES	+= dconf-editor ghq gopls difftastic csvlens cloc eslint prettier trivy
 PACKAGES	+= gnome-sound-recorder yaml-language-server biome papers typst discord
-PACKAGES	+= mission-center pass gitui sqlitebrowser git-delta ruff speedtest-cli
+PACKAGES	+= mission-center pass gitui sqlitebrowser git-delta speedtest-cli
 PACKAGES	+= jc fx httpie bash-language-server editorconfig-core-c hexedit tldr
 PACKAGES	+= pv perl-net-ip lshw xdotool sshuttle packer libreoffice-fresh-ja
 PACKAGES	+= openai-codex ast-grep
@@ -149,6 +149,7 @@ mise: ## Setup mise
 	mise use -g npm:typescript
 	mise use -g oxlint
 	mise use -g pnpm
+	mise use -g ruff
 	mise use -g trdsql
 	mise use -g usage
 	mise use -g uv
