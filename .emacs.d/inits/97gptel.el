@@ -3,7 +3,7 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
-(setq gptel-default-mode 'org-mode)
+(setq gptel-default-mode 'markdown-mode)
 
 (setq gptel-model 'gemma3n:latest
       gptel-backend (gptel-make-ollama "Ollama"
@@ -11,7 +11,11 @@
                       :stream t
                       :models '(gemma3n:latest)))
 
-(load "~/backup/emacs/gemini.el")
+(setq
+ gptel-model 'gemini-flash-lite-latest
+ gptel-backend (gptel-make-gemini "Gemini"
+                 :key (exec-path-from-shell-copy-env "GEMINIAPIKEY")
+                 :stream t))
 
 (use-package gptel-commit
   :after (gptel magit)
