@@ -1372,7 +1372,6 @@ ruby-syslog
 ruby-test-unit
 ruby-typeprof
 rubygems
-ruff
 runc
 rust
 rust-analyzer
