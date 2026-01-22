@@ -5,17 +5,18 @@
 
 (setq gptel-default-mode 'markdown-mode)
 
+;; You can switch models with getel-menu using the -m option.
+;; The one at the bottom defaults.
 (setq gptel-model 'gemma3n:latest
       gptel-backend (gptel-make-ollama "Ollama"
                       :host "localhost:11434"
                       :stream t
                       :models '(gemma3n:latest)))
 
-;; (setq
-;;  gptel-model 'gemini-flash-lite-latest
-;;  gptel-backend (gptel-make-gemini "Gemini"
-;;                  :key (exec-path-from-shell-copy-env "GEMINIAPIKEY")
-;;                  :stream t))
+(setq gptel-model 'gemini-flash-lite-latest
+	  gptel-backend (gptel-make-gemini "Gemini"
+                 :key (exec-path-from-shell-copy-env "GEMINIAPIKEY")
+                 :stream t))
 
 (use-package gptel-commit
   :after (gptel magit)
