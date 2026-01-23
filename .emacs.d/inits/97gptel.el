@@ -13,6 +13,7 @@
                       :stream t
                       :models '(gemma3n:latest)))
 
+;; Use gemini-flash-lite only for Magit commit messages
 (setq gptel-model 'gemini-flash-lite-latest
 	  gptel-backend (gptel-make-gemini "Gemini"
                  :key (exec-path-from-shell-copy-env "GEMINIAPIKEY")
