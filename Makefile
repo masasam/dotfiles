@@ -111,7 +111,7 @@ hyprland: ## Setup hyprland
 	test -L ${HOME}/.config/fuzzel || rm -rf ${HOME}/.config/fuzzel
 	ln -vsfn {${PWD},${HOME}}/.config/fuzzel
 	mkdir -p ${HOME}/.config/wlogout
-	sudo ln -vsf ${PWD}/usr/share/applications/wlogout.desktop /usr/share/applications/wlogout.desktop
+	sudo ln -vsf ${PWD}/.config/wlogout/wlogout.desktop /usr/share/applications/wlogout.desktop
 	ln -vsf {${PWD},${HOME}}/.config/wlogout/style.css
 	chmod +x ${PWD}/.config/hypr/scripts/*
 
