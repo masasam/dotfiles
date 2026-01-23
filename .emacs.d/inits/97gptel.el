@@ -6,7 +6,7 @@
 (setq gptel-default-mode 'markdown-mode)
 
 ;; You can switch models with getel-menu using the -m option.
-;; The one at the bottom defaults.
+;; The one at the bottom defaults. gemma3n is for offline use only.
 (setq gptel-model 'gemma3n:latest
       gptel-backend (gptel-make-ollama "Ollama"
                       :host "localhost:11434"
