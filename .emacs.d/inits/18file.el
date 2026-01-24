@@ -12,8 +12,6 @@
 (setq openwith-associations
       (list (list (openwith-make-extension-regexp '("pdf"))
                   "papers" '(file))
-			(list (openwith-make-extension-regexp '("svg"))
-                  "inkscape" '(file))
             (list (openwith-make-extension-regexp '("flac" "mp3" "wav"))
                   "mpv" '(file))
             (list (openwith-make-extension-regexp '("avi" "flv" "mov" "mp4"
