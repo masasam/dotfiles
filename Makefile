@@ -33,7 +33,7 @@ PACKAGES	+= gnome-sound-recorder yaml-language-server biome papers typst discord
 PACKAGES	+= mission-center pass gitui sqlitebrowser git-delta speedtest-cli
 PACKAGES	+= jc fx httpie bash-language-server editorconfig-core-c hexedit tldr
 PACKAGES	+= pv perl-net-ip lshw xdotool sshuttle packer libreoffice-fresh-ja
-PACKAGES	+= openai-codex ast-grep
+PACKAGES	+= ast-grep
 
 PACMAN		:= sudo pacman -S 
 SYSTEMD_ENABLE	:= sudo systemctl --now enable
@@ -136,6 +136,7 @@ mise: ## Setup mise
 	mise use -g atlas
 	mise use -g bun
 	mise use -g claude-code
+	mise use -g codex
 	mise use -g deno
 	mise use -g duckdb
 	mise use -g firebase
