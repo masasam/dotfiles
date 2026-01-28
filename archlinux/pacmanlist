@@ -139,6 +139,7 @@ docbook-xml
 docbook-xsl
 docker
 docker-compose
+dosfstools
 dotslash
 double-conversion
 duktape
