@@ -170,6 +170,11 @@ neomutt: ## Init neomutt mail client
 	yay -S goobook-git
 	goobook authenticate
 
+codex: ## Setup openai codex
+	mise use -g codex
+	test -L ${HOME}/.codex/config.toml || rm -rf ${HOME}/.codex/config.toml
+	ln -vsf ${PWD}/.config/codex/config.toml ${HOME}/.codex/config.toml
+
 alacritty: ## Init alacritty terminal
 	$(PACMAN) $@
 	test -L ${HOME}/.config/$@ || rm -rf ${HOME}/.config/$@
