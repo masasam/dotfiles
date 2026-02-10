@@ -154,13 +154,10 @@ mise: ## Setup mise
 	mise use -g ruff
 	mise use -g trdsql
 	mise use -g usage
+	mise use -g uv
 	mise use -g yay
 	mise use -g youtube-dl
 	mise use -g yt-dlp
-
-uv: # Setup uv
-	mise use -g uv
-	uv generate-shell-completion zsh | sudo tee /usr/share/zsh/site-functions/_uv
 
 neomutt: ## Init neomutt mail client
 	$(PACMAN) neomutt urlscan
