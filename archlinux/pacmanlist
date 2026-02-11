@@ -650,10 +650,12 @@ libaio
 libappimage
 libappindicator
 libarchive
+libasan
 libass
 libassuan
 libasyncns
 libatasmart
+libatomic
 libatomic_ops
 libavc1394
 libavif
@@ -731,13 +733,16 @@ libfreeaptx
 libfreehand
 libftdi
 libfyaml
+libgcc
 libgccjit
 libgcrypt
 libgee
 libgexiv2
+libgfortran
 libgirepository
 libgit2
 libglvnd
+libgomp
 libgpg-error
 libgudev
 libgusb
@@ -766,6 +771,7 @@ libldac
 libldap
 libliftoff
 liblqr
+liblsan
 libluv
 libmakepkg-dropins
 libmanette
@@ -803,6 +809,7 @@ libnotify
 libnsl
 libnumbertext
 libnvme
+libobjc
 libodfgen
 libogg
 libomxil-bellagio
@@ -831,6 +838,7 @@ libpulse
 libpwquality
 libqmi
 libqrtr-glib
+libquadmath
 libqxp
 libraqm
 libraw
@@ -861,6 +869,7 @@ libsrtp
 libssh
 libssh2
 libstaroffice
+libstdc++
 libstemmer
 libsynctex
 libsysprof-capture
@@ -873,6 +882,8 @@ libtiff
 libtirpc
 libtommath
 libtool
+libtsan
+libubsan
 libunibreak
 libunistring
 libunwind
@@ -1574,6 +1585,7 @@ yazi
 yq
 zeromq
 zimg
+zint
 zix
 zlib
 zlib-ng
