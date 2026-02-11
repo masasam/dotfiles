@@ -1219,6 +1219,7 @@ python-paramiko
 python-parsedatetime
 python-pillow
 python-pip
+python-pkg_resources
 python-platformdirs
 python-pluggy
 python-ply
