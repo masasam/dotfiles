@@ -85,6 +85,7 @@ init: ## Initial deploy dotfiles
 	mkdir -p ${HOME}/.config/mpv
 	ln -vsf {${PWD},${HOME}}/.config/mpv/mpv.conf
 	sudo ln -vsf {${PWD},}/etc/hosts
+	sudo ln -vsf {${PWD},/root}/.vimrc
 
 base: ## Install base and base-devel package
 	$(PACMAN) $(BASE_PKGS)
