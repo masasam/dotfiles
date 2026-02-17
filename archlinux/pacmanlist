@@ -282,13 +282,13 @@ gsm
 gspell
 gssdp
 gst-plugin-pipewire
+gst-plugin-va
 gst-plugins-bad-libs
 gst-plugins-base
 gst-plugins-base-libs
 gst-plugins-good
 gst-plugins-ugly
 gstreamer
-gstreamer-vaapi
 gtest
 gtk-doc
 gtk-layer-shell
