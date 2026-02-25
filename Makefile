@@ -428,7 +428,7 @@ browserpass-firefox:  ## Setup browserpass with firefox
 ollama: ## Init ollama
 	$(PACMAN) $@
 	$(SYSTEMD_ENABLE) $@.service
-	ollama pull fauxpaslife/nanbeige4.1:latest
+	ollama pull gemma3n:latest
 
 edge: ## Install edge
 	yay -S microsoft-edge-stable-bin
