@@ -7,11 +7,11 @@
 
 ;; You can switch models with getel-menu using the -m option.
 ;; The one at the bottom defaults. gemma3n is for offline use only.
-(setq gptel-model 'gemma3n:latest
+(setq gptel-model 'qwen3.5:9b
       gptel-backend (gptel-make-ollama "Ollama"
                       :host "localhost:11434"
                       :stream t
-                      :models '(gemma3n:latest)))
+                      :models '(qwen3.5:9b)))
 
 ;; Use gemini-flash-lite only for Magit commit messages
 (setq gptel-model 'gemini-flash-lite-latest
