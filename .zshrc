@@ -858,6 +858,18 @@ function timer() {
 }
 
 
+function topdf() {
+	for filein in $@; do
+		opt=${2:-Portrait}
+		vim ${filein} -c 'colorscheme default | set number | TOhtml | w tmp.html | qa!'
+		wkhtmltopdf --page-size B4 -O ${opt} --footer-left "[date] [time] ${filein}" \
+					--footer-right "[page]/[topage]" --no-background --margin-top 4 --margin-right 3 \
+					--margin-left 4 --margin-bottom 10 tmp.html ${filein}.pdf 
+		rm -f tmp.html
+	done
+}
+
+
 # zsh-syntax-highlighting(pacman -S zsh-syntax-highlighting)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
