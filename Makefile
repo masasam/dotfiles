@@ -145,8 +145,10 @@ mise: ## Setup mise
 	mise use -g hugo
 	mise use -g marp-cli
 	mise use -g node
+	mise use -g npm:gcloud
 	mise use -g npm:@github/copilot-language-server
 	mise use -g npm:@github/copilot
+	mise use -g npm:@googleworkspace/cli
 	mise use -g npm:oxlint
 	mise use -g npm:ts-node
 	mise use -g npm:typescript
