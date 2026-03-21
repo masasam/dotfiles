@@ -87,10 +87,12 @@ cfitsio
 check
 cifs-utils
 clang
+clang20
 clucene
 cmatrix
 cmocka
 compiler-rt
+compiler-rt20
 confuse
 containerd
 convmv
@@ -971,10 +973,12 @@ linux-firmware-radeon
 linux-firmware-realtek
 linux-firmware-whence
 lld
+lld20
 lldb
 llhttp
 llvm
 llvm-libs
+llvm20-libs
 lm_sensors
 lmdb
 loudmouth
@@ -1319,7 +1323,6 @@ qrencode
 qscintilla-qt5
 qt5-base
 qt5-declarative
-qt5-location
 qt5-svg
 qt5-translations
 qt5-wayland
@@ -1589,11 +1592,13 @@ yazi
 yoga
 yq
 zeromq
+zig
 zimg
 zint
 zix
 zlib
 zlib-ng
+zls
 zsh
 zsh-completions
 zsh-syntax-highlighting
