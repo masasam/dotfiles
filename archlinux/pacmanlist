@@ -990,6 +990,8 @@ lua-lpeg
 lua51-lpeg
 lua52
 lua53
+lua54
+lua54-lpeg
 luajit
 lv2
 lvm2
