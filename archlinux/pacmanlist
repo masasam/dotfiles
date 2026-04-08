@@ -91,6 +91,7 @@ clang20
 clucene
 cmatrix
 cmocka
+colm
 compiler-rt
 compiler-rt20
 confuse
