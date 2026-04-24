@@ -117,9 +117,10 @@ hyprland: ## Setup hyprland
 	chmod +x ${PWD}/.config/hypr/scripts/*
 
 greetd: ## Setup greetd
-	$(PACMAN) $@ greetd-tuigreet
+	$(PACMAN) $@ greetd-tuigreet terminus-font
 	sudo ln -vsf {${PWD},}/etc/$@/config.toml
 	sudo ln -vsf {${PWD},}/etc/pam.d/greetd
+	sudo ln -vsf {${PWD},}/etc/vconsole.conf
 	systemctl enable greetd.service
 
 goinstall: ${HOME}/.local ## Install go packages
