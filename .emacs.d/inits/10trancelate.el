@@ -11,7 +11,7 @@
   (setopt gt-default-translator
           (gt-translator
            :taker   (gt-taker :text 'buffer :pick 'paragraph)
-           :engines (list (gt-bing-engine))
+           :engines (list (gt-google-engine))
            :render  (gt-buffer-render))))
 
 
