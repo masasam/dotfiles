@@ -119,7 +119,7 @@ hyprland: ## Setup hyprland
 hyprwhspr: ## Setup hyprwhspr for voice input
 	yay -S hyprwhspr
 	hyprwhspr setup
-	systemctl --user enable --now hyprwhspr.service 
+	systemctl --user enable --now hyprwhspr.service
 
 greetd: ## Setup greetd
 	$(PACMAN) $@ greetd-tuigreet terminus-font
