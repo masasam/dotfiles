@@ -90,6 +90,7 @@ cifs-utils
 clang
 clang20
 clucene
+cmake
 cmatrix
 cmocka
 colm
@@ -100,6 +101,7 @@ containerd
 convmv
 coreutils
 cpio
+cppdap
 cracklib
 cryptsetup
 cscope
@@ -1125,6 +1127,7 @@ perl-net-ip
 perl-timedate
 pinentry
 pipewire
+pipewire-alsa
 pipewire-audio
 pipewire-pulse
 pipewire-session-manager
@@ -1189,6 +1192,7 @@ python-deprecated
 python-distro
 python-docutils
 python-et-xmlfile
+python-evdev
 python-fastjsonschema
 python-filelock
 python-fluidity
@@ -1245,7 +1249,9 @@ python-pkg_resources
 python-platformdirs
 python-pluggy
 python-ply
+python-pooch
 python-protobuf
+python-psutil
 python-pyasn1
 python-pyasn1-modules
 python-pycparser
@@ -1255,11 +1261,13 @@ python-pygments
 python-pyicu
 python-pynacl
 python-pyparsing
+python-pyperclip
 python-pyserial
 python-pysocks
 python-pytest
 python-pytimeparse
 python-pytz
+python-pyudev
 python-pyxdg
 python-referencing
 python-requests
@@ -1271,6 +1279,7 @@ python-rpds-py
 python-rsa
 python-ruamel-yaml
 python-ruamel.yaml.clib
+python-scipy
 python-setuptools
 python-shtab
 python-simplejson
@@ -1349,6 +1358,7 @@ re2
 readline
 redland
 resvg
+rhash
 rio
 ripgrep
 rnnoise
@@ -1433,6 +1443,7 @@ spdlog
 speedtest-cli
 speex
 speexdsp
+spirv-headers
 spirv-tools
 sqlcipher
 sqlite
@@ -1534,7 +1545,9 @@ vim-runtime
 vimiv
 vmaf
 volume_key
+vulkan-headers
 vulkan-icd-loader
+vulkan-tools
 w3m
 watchexec
 wavpack
@@ -1557,6 +1570,7 @@ woff2
 woff2-font-awesome
 wpa_supplicant
 wpebackend-fdo
+wtype
 x11-ssh-askpass
 x264
 x265
@@ -1594,6 +1608,7 @@ xxhash
 xz
 yaml-language-server
 yazi
+ydotool
 yoga
 yq
 zeromq
