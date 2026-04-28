@@ -1443,7 +1443,6 @@ spdlog
 speedtest-cli
 speex
 speexdsp
-spirv-headers
 spirv-tools
 sqlcipher
 sqlite
@@ -1545,9 +1544,7 @@ vim-runtime
 vimiv
 vmaf
 volume_key
-vulkan-headers
 vulkan-icd-loader
-vulkan-tools
 w3m
 watchexec
 wavpack
@@ -1570,7 +1567,6 @@ woff2
 woff2-font-awesome
 wpa_supplicant
 wpebackend-fdo
-wtype
 x11-ssh-askpass
 x264
 x265
