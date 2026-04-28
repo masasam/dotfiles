@@ -116,11 +116,10 @@ hyprland: ## Setup hyprland
 	ln -vsf {${PWD},${HOME}}/.config/wlogout/style.css
 	chmod +x ${PWD}/.config/hypr/scripts/*
 
-hyprvoice: ## Setup hyprvoice for voice input
-	yay -S whisper.cpp
-	yay -S hyprvoice-bin
-	hyprvoice onboarding
-	systemctl --user enable --now hyprvoice.service
+hyprwhspr: ## Setup hyprwhspr for voice input
+	yay -S hyprwhspr
+	hyprwhspr setup
+	systemctl --user enable --now hyprwhspr.service 
 
 greetd: ## Setup greetd
 	$(PACMAN) $@ greetd-tuigreet terminus-font
