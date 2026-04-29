@@ -461,7 +461,6 @@ You can make install from here
 
 #### Install using mise
 
-	mise use -g amp
 	mise use -g atlas
 	mise use -g bun
 	mise use -g claude-code
@@ -473,13 +472,16 @@ You can make install from here
 	mise use -g hugo
 	mise use -g marp-cli
 	mise use -g node
+	mise use -g npm:gcloud
 	mise use -g npm:@github/copilot-language-server
 	mise use -g npm:@github/copilot
+	mise use -g npm:@googleworkspace/cli
 	mise use -g npm:oxlint
+	mise use -g npm:pnpm
+	mise use -g npm:playwright
 	mise use -g npm:ts-node
 	mise use -g npm:typescript
 	mise use -g opencode
-	mise use -g pnpm
 	mise use -g ruff
 	mise use -g trdsql
 	mise use -g usage
