@@ -483,6 +483,7 @@ You can make install from here
 	mise use -g npm:typescript
 	mise use -g opencode
 	mise use -g ruff
+	mise use -g stripe-cli
 	mise use -g trdsql
 	mise use -g usage
 	mise use -g uv
