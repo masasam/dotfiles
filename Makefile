@@ -139,7 +139,6 @@ mise: ## Setup mise
 	$(PACMAN) mise
 	test -L ${HOME}/.config/mise/config.toml || rm -rf ${HOME}/.config/mise/config.toml
 	ln -vsf {${PWD},${HOME}}/.config/mise/config.toml
-	mise use -g amp
 	mise use -g atlas
 	mise use -g bun
 	mise use -g claude-code
