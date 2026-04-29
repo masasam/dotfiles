@@ -156,11 +156,11 @@ mise: ## Setup mise
 	mise use -g npm:@github/copilot
 	mise use -g npm:@googleworkspace/cli
 	mise use -g npm:oxlint
+	mise use -g npm:pnpm
 	mise use -g npm:playwright
 	mise use -g npm:ts-node
 	mise use -g npm:typescript
 	mise use -g opencode
-	mise use -g pnpm
 	mise use -g ruff
 	mise use -g trdsql
 	mise use -g usage
