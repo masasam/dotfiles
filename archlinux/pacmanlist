@@ -1078,6 +1078,7 @@ onetbb
 oniguruma
 openai-codex
 openal
+openblas
 opencore-amr
 opencv
 openexr
@@ -1544,7 +1545,11 @@ vim-runtime
 vimiv
 vmaf
 volume_key
+vulkan-headers
 vulkan-icd-loader
+vulkan-intel
+vulkan-mesa-implicit-layers
+vulkan-tools
 w3m
 watchexec
 wavpack
