@@ -177,7 +177,7 @@ neomutt: ## Init neomutt mail client
 	ln -vsf {${PWD},${HOME}}/.config/urlscan/config.json
 	for item in mailcap certifcates aliases signature; do ln -vsf {${PWD},${HOME}}/.mutt/$$item; done
 	ln -vsf {${PWD},${HOME}}/.goobookrc
-	yay -S goobook-git
+	yay -S goobook
 	goobook authenticate
 
 codex: ## Setup openai codex
