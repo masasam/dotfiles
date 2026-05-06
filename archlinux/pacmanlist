@@ -89,6 +89,7 @@ check
 cifs-utils
 clang
 clang20
+clang21
 clucene
 cmake
 cmatrix
@@ -96,6 +97,7 @@ cmocka
 colm
 compiler-rt
 compiler-rt20
+compiler-rt21
 confuse
 containerd
 convmv
@@ -237,6 +239,7 @@ git-crypt
 git-delta
 git-lfs
 github-cli
+gitleaks
 gitui
 gjs
 glib-networking
@@ -978,11 +981,13 @@ linux-firmware-realtek
 linux-firmware-whence
 lld
 lld20
+lld21
 lldb
 llhttp
 llvm
 llvm-libs
 llvm20-libs
+llvm21-libs
 lm_sensors
 lmdb
 loudmouth
