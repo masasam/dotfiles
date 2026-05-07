@@ -357,6 +357,7 @@ haskell-case-insensitive
 haskell-cassava
 haskell-cborg
 haskell-cereal
+haskell-character-ps
 haskell-citeproc
 haskell-cmdargs
 haskell-colour
