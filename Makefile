@@ -371,7 +371,7 @@ emacspeak: ## Install emacspeak for blind person
 	yay -S $@
 
 aur: ## Install arch linux AUR packages using yay
-	yay -S asunder downgrade geeqie git-secrets pscale-cli rgxg turso-bin vscode-langservers-extracted wkhtmltopdf-bin zoom
+	yay -S asunder downgrade geeqie git-secrets hermes-agent pscale-cli rgxg turso-bin vscode-langservers-extracted wkhtmltopdf-bin zoom
 
 sequeler: ## Install gui database tools
 	yay -S $@-git
