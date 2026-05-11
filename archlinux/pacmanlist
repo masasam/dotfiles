@@ -157,6 +157,7 @@ e2fsprogs
 editorconfig-core-c
 efibootmgr
 efivar
+elfutils
 elinks
 emacs
 enchant
