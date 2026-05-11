@@ -449,14 +449,15 @@ You can make install from here
 #### Install using yay
 
 	yay -S asunder
-	yay -S beekeeper-studio-bin
 	yay -S downgrade
-	yay -S firebase-tools-bin
+	yay -S geeqie
 	yay -S git-secrets
+	yay -S hermes-agent
 	yay -S pscale-cli
 	yay -S rgxg
 	yay -S turso-bin
-	yay -S yay
+	yay -S vscode-langservers-extracted
+	yay -S wkhtmltopdf-bin
 	yay -S zoom
 
 #### Install using mise
