@@ -270,8 +270,8 @@ hl.bind("SUPER + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind("SUPER + SHIFT + V", hl.dsp.layout("togglesplit"))    -- dwindle only
 hl.bind("SUPER + P", hl.dsp.window.pseudo())
 
-hl.bind(mainMod .. " + space", hl.dsp.exec_cmd("pkill fuzzel || fuzzel"))
-hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("foot"))
+hl.bind(mainMod .. " + space", hl.dsp.exec_cmd(menu))
+hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("hyprwhspr record toggle"))
 
 hl.bind(mainMod .. " + Control_L + 0", hl.dsp.exec_cmd("~/.config/hypr/scripts/ctl-alt-0"))
