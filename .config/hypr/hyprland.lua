@@ -65,6 +65,10 @@ end)
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
 
+hl.env("XMODIFIERS", "@im=fcitx")
+hl.env("QT_IM_MODULE", "fcitx")
+hl.env("GTK_IM_MODULE", "fcitx")
+
 
 -----------------------
 ----- PERMISSIONS -----
@@ -484,4 +488,84 @@ hl.window_rule({
     name  = "emacs",
     match = { class = "^(Emacs)$" },
 	workspace = 3,
+})
+
+hl.window_rule({
+    name  = "pdf",
+    match = { class = "^(org.gnome.Papers)$" },
+	workspace = 4,
+})
+
+hl.window_rule({
+    name  = "beekeeper-studio",
+    match = { class = "^(beekeeper-studio)$" },
+	workspace = 4,
+})
+
+hl.window_rule({
+    name  = "sqlitebrowser",
+    match = { class = "^(sqlitebrowser)$" },
+	workspace = 4,
+})
+
+hl.window_rule({
+    name  = "libreoffice-writer",
+    match = { class = "^(libreoffice-writer)$" },
+	workspace = 4,
+})
+
+hl.window_rule({
+    name  = "libreoffice-calc",
+    match = { class = "^(libreoffice-calc)$" },
+	workspace = 4,
+})
+
+hl.window_rule({
+    name  = "pcmanfm",
+    match = { class = "^(pcmanfm-qt)$" },
+	workspace = 5,
+})
+
+hl.window_rule({
+    name  = "inkscape",
+    match = { class = "^(org.inkscape.Inkscape)$" },
+	float = true,
+	workspace = 6,
+})
+
+hl.window_rule({
+    name  = "gimp",
+    match = { class = "^(gimp)$" },
+	float = true,
+	workspace = 6,
+})
+
+hl.window_rule({
+    name  = "discord",
+    match = { class = "^(discord)$" },
+	workspace = 7,
+})
+
+hl.window_rule({
+    name  = "zoom",
+    match = { class = "^(zoom)$" },
+	workspace = 8,
+})
+
+hl.window_rule({
+    name  = "SoundRecorder",
+    match = { class = "^(org.gnome.SoundRecorder)$" },
+	workspace = 9,
+})
+
+hl.window_rule({
+    name  = "OBS Studio",
+    match = { class = "^(com.obsproject.Studio)$" },
+	workspace = 9,
+})
+
+hl.window_rule({
+    name  = "firefox",
+    match = { class = "^(firefox)$" },
+	workspace = 10,
 })
