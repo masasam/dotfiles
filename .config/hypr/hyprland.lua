@@ -385,3 +385,50 @@ hl.window_rule({
     move  = "20 monitor_h-120",
     float = true,
 })
+
+hl.window_rule({
+    name  = "terminal transparent in the scratchpad",
+    match = { workspace = "special:magic" },
+	opacity = 0.9 0.1,
+    no_blur = on,
+})
+
+hl.window_rule({
+    name  = "center-pavucontrol",
+    match = { class = "^(org.pulseaudio.pavucontrol)$" },
+	float = true,
+    center = true,
+	size = 800 600,
+})
+
+hl.window_rule({
+    name  = "center-blueman-manager",
+    match = { class = "^(blueman-manager)$" },
+	float = true,
+    center = true,
+	size = 800 600,
+})
+
+hl.window_rule({
+    name  = "center-nwg-displays",
+    match = { class = "^(nwg-displays)$" },
+	float = true,
+    center = true,
+	size = 950 600,
+})
+
+hl.window_rule({
+    name  = "center-nm-connection-editor",
+    match = { class = "^(nm-connection-editor)$" },
+	float = true,
+    center = true,
+	size = 800 600,
+})
+
+hl.window_rule({
+    name  = "center-calculator",
+    match = { class = "^(org.gnome.Calculator)$" },
+	float = true,
+    center = true,
+	size = 800 600,
+})
