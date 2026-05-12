@@ -336,7 +336,7 @@ hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = tr
 hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
 
-# clamshell mode
+-- clamshell mode
 hl.bind("switch:on:Lid Switch", hl.dsp.exec_cmd("~/.config/hypr/scripts/clamshell close"), { locked = true })
 hl.bind("switch:off:Lid Switch", hl.dsp.exec_cmd("~/.config/hypr/scripts/clamshell open"), { locked = true })
 
@@ -393,8 +393,8 @@ hl.window_rule({
 hl.window_rule({
     name  = "terminal transparent in the scratchpad",
     match = { workspace = "special:magic" },
-	opacity = 0.9 0.1,
-    no_blur = on,
+	opacity = "0.9 0.1",
+    no_blur = true,
 })
 
 hl.window_rule({
@@ -402,7 +402,7 @@ hl.window_rule({
     match = { class = "^(org.pulseaudio.pavucontrol)$" },
 	float = true,
     center = true,
-	size = 800 600,
+	size = {800, 600},
 })
 
 hl.window_rule({
@@ -410,7 +410,7 @@ hl.window_rule({
     match = { class = "^(blueman-manager)$" },
 	float = true,
     center = true,
-	size = 800 600,
+	size = {800, 600},
 })
 
 hl.window_rule({
@@ -418,7 +418,7 @@ hl.window_rule({
     match = { class = "^(nwg-displays)$" },
 	float = true,
     center = true,
-	size = 950 600,
+	size = {950, 600},
 })
 
 hl.window_rule({
@@ -426,7 +426,7 @@ hl.window_rule({
     match = { class = "^(nm-connection-editor)$" },
 	float = true,
     center = true,
-	size = 800 600,
+	size = {800, 600},
 })
 
 hl.window_rule({
@@ -434,7 +434,7 @@ hl.window_rule({
     match = { class = "^(org.gnome.Calculator)$" },
 	float = true,
     center = true,
-	size = 800 600,
+	size = {800, 600},
 })
 
 hl.window_rule({
@@ -443,7 +443,7 @@ hl.window_rule({
 	match = { title = "^(ファイルを開く)$" },
 	float = true,
     center = true,
-	size = 800 600,
+	size = {800, 600},
 })
 
 hl.window_rule({
@@ -452,7 +452,7 @@ hl.window_rule({
 	match = { title = "^(すべてのファイル)$" },
 	float = true,
     center = true,
-	size = 800 600,
+	size = {800, 600},
 })
 
 hl.window_rule({
@@ -460,7 +460,7 @@ hl.window_rule({
     match = { class = "^(org.gnome.baobab)$" },
 	float = true,
     center = true,
-	size = 1280 800,
+	size = {1280, 800},
 })
 
 hl.window_rule({
