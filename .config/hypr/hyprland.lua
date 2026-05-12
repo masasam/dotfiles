@@ -432,3 +432,56 @@ hl.window_rule({
     center = true,
 	size = 800 600,
 })
+
+hl.window_rule({
+    name  = "center-pcmanfm-open-file",
+    match = { class = "^(xdg-desktop-portal-gtk)$" },
+	match = { title = "^(ファイルを開く)$" },
+	float = true,
+    center = true,
+	size = 800 600,
+})
+
+hl.window_rule({
+    name  = "center-pcmanfm-open-all-file",
+    match = { class = "^(xdg-desktop-portal-gtk)$" },
+	match = { title = "^(すべてのファイル)$" },
+	float = true,
+    center = true,
+	size = 800 600,
+})
+
+hl.window_rule({
+    name  = "center-baobab",
+    match = { class = "^(org.gnome.baobab)$" },
+	float = true,
+    center = true,
+	size = 1280 800,
+})
+
+hl.window_rule({
+    name  = "maximize-vimiv",
+    match = { class = "^(vimiv)$" },
+	float = true,
+    center = true,
+	maximize = true,
+})
+
+hl.window_rule({
+    name  = "fullscreen-mpv",
+    match = { class = "^(mpv)$" },
+	float = true,
+	fullscreen = true,
+})
+
+hl.window_rule({
+    name  = "google-chrome",
+    match = { class = "^(google-chrome)$" },
+	workspace = 2,
+})
+
+hl.window_rule({
+    name  = "emacs",
+    match = { class = "^(Emacs)$" },
+	workspace = 3,
+})
