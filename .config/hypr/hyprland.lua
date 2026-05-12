@@ -311,7 +311,7 @@ hl.bind(mainMod .. " + SHIFT + Return", hl.dsp.window.move({ workspace = "specia
 
 -- Scroll through existing workspaces with mainMod + scroll
 hl.bind(mainMod .. " + Tab", hl.dsp.focus({ workspace = "e+1" }))
-hl.bind(mainMod .. " + Shift_L + Tab", hl.dsp.focus({ workspace = "e-1" }))
+hl.bind(mainMod .. " + SHIFT + Tab", hl.dsp.focus({ workspace = "e-1" }))
 hl.bind(mainMod .. " + Left", hl.dsp.focus({ workspace = "-1" }))
 hl.bind(mainMod .. " + Right", hl.dsp.focus({ workspace = "+1" }))
 hl.bind(mainMod .. " + J", hl.dsp.focus({ workspace = "e-1" }))
