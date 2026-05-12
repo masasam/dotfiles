@@ -263,10 +263,10 @@ hl.device({
 ---- KEYBINDINGS ----
 ---------------------
 
-local mainMod = "Alt_L"
+local mainMod = "SUPER"
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
-hl.bind(mainMod .. " + Q", hl.dsp.killactive())
+-- hl.bind(mainMod .. " + Q", hl.dsp.killactive())
 local closeWindowBind = hl.bind(mainMod .. " + C", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
@@ -275,7 +275,7 @@ hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 
-hl.bind(mainMod .. " + space", hl.dsp.exec_cmd("fuzzel"))
+hl.bind(mainMod .. " + space", hl.dsp.exec_cmd("pkill fuzzel || fuzzel"))
 bind = SUPER, Tab, cyclenext, bringactivetotop
 hl.bind("SUPER + Tab", hl.dsp.layout("cyclenext"))
 hl.bind(mainMod .. " + L", hl.dsp.layout("swapnext"))
