@@ -49,10 +49,10 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd("systemctl --user start hyprpolkitagent")
   hl.exec_cmd("systemctl --user start hyprwhspr.service")
   hl.exec_cmd("wl-clip-persist --clipboard regular")
-  hl.exec_cmd("hyprctl dispatch exec [workspace 1 silent] foot")
-  hl.exec_cmd("hyprctl dispatch exec [workspace 2 silent] google-chrome-stable")
-  hl.exec_cmd("hyprctl dispatch exec [workspace 3 silent] emacs")
-  hl.exec_cmd("hyprctl dispatch exec [workspace special:magic silent] foot")
+  hl.exec_cmd("hyprctl dispatch exec foot")
+  hl.exec_cmd("hyprctl dispatch exec google-chrome-stable")
+  hl.exec_cmd("hyprctl dispatch exec emacs")
+  hl.exec_cmd("hyprctl dispatch exec '[workspace special:magic silent] foot'")
 end)
 
 
@@ -314,11 +314,11 @@ hl.bind(mainMod .. " + Shift_L + Return", hl.dsp.window.move({ workspace = "spec
 
 -- Scroll through existing workspaces with mainMod + scroll
 hl.bind(mainMod .. " + Tab", hl.dsp.focus({ workspace = "e+1" }))
-hl.bind(mainMod .. " + Shift_L + Tab",   hl.dsp.focus({ workspace = "e-1" }))
-hl.bind(mainMod .. " + Left",   hl.dsp.focus({ workspace = "-1" }))
-hl.bind(mainMod .. " + Right",   hl.dsp.focus({ workspace = "+1" }))
-hl.bind(mainMod .. " + J",   hl.dsp.focus({ workspace = "e-1" }))
-hl.bind(mainMod .. " + K",   hl.dsp.focus({ workspace = "e+1" }))
+hl.bind(mainMod .. " + Shift_L + Tab", hl.dsp.focus({ workspace = "e-1" }))
+hl.bind(mainMod .. " + Left", hl.dsp.focus({ workspace = "-1" }))
+hl.bind(mainMod .. " + Right", hl.dsp.focus({ workspace = "+1" }))
+hl.bind(mainMod .. " + J", hl.dsp.focus({ workspace = "e-1" }))
+hl.bind(mainMod .. " + K", hl.dsp.focus({ workspace = "e+1" }))
 
 -- Move/resize windows with mainMod + LMB/RMB and dragging
 -- hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(),   { mouse = true })
