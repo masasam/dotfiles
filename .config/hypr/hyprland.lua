@@ -280,7 +280,8 @@ bind = SUPER, TAB, cyclenext, bringactivetotop
 hl.bind("SUPER + TAB", hl.dsp.layout("cyclenext"))
 hl.bind(mainMod .. " + L", hl.dsp.layout("swapnext"))
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("foot"))
-hl.bind(mainMod .. " + Q", hl.dsp.killactive())
+hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd("hyprctl dispatch killactive"))
+
 hl.bind("SUPER + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("hyprwhspr record toggle"))
 
