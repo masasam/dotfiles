@@ -276,12 +276,7 @@ hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 
 hl.bind(mainMod .. " + space", hl.dsp.exec_cmd("pkill fuzzel || fuzzel"))
-bind = SUPER, Tab, cyclenext, bringactivetotop
-hl.bind("SUPER + Tab", hl.dsp.layout("cyclenext"))
-hl.bind(mainMod .. " + L", hl.dsp.layout("swapnext"))
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("foot"))
-hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd("hyprctl dispatch killactive"))
-hl.bind("Super_L + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("hyprwhspr record toggle"))
 
 hl.bind(mainMod .. " + Control_L + 0", hl.dsp.exec_cmd("~/.config/hypr/scripts/ctl-alt-0"))
