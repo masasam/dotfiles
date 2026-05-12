@@ -1,0 +1,7 @@
+{
+  "$schema": "https://raw.githubusercontent.com/goodroot/hyprwhspr/main/share/config.schema.json",
+  "use_hypr_bindings": true,
+  "model": "small",
+  "transcription_backend": "vulkan",
+  "whisper_prompt": "こんにちは。今日は、とても良い天気ですね。これから、音声入力を開始します。"
+}

@@ -118,6 +118,7 @@ hyprland: ## Setup hyprland
 
 hyprwhspr: ## Setup hyprwhspr for voice input
 	yay -S hyprwhspr
+	ln -vsf {${PWD},${HOME}}/.config/hyprwhspr/config.json
 	hyprwhspr setup
 	systemctl --user enable --now hyprwhspr.service
 
