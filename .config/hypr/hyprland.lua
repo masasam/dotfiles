@@ -306,8 +306,8 @@ hl.bind("SUPER + j", hl.dsp.focus({ direction = "down" }))
 -- end
 
 -- Example special workspace (scratchpad)
-hl.bind(mainMod .. " + Return",         hl.dsp.workspace.toggle_special("magic"))
-hl.bind(mainMod .. " + Shift_L + Return", hl.dsp.window.move({ workspace = "special:magic" }))
+hl.bind(mainMod .. " + Return", hl.dsp.workspace.toggle_special("magic"))
+hl.bind(mainMod .. " + SHIFT + Return", hl.dsp.window.move({ workspace = "special:magic" }))
 
 -- Scroll through existing workspaces with mainMod + scroll
 hl.bind(mainMod .. " + Tab", hl.dsp.focus({ workspace = "e+1" }))
