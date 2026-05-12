@@ -49,10 +49,7 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd("systemctl --user start hyprpolkitagent")
   hl.exec_cmd("systemctl --user start hyprwhspr.service")
   hl.exec_cmd("wl-clip-persist --clipboard regular")
-  hl.exec_cmd("hyprctl dispatch exec foot")
-  hl.exec_cmd("hyprctl dispatch exec google-chrome-stable")
-  hl.exec_cmd("hyprctl dispatch exec emacs")
-  hl.exec_cmd("hyprctl dispatch exec '[workspace special:magic silent] foot'")
+  hl.exec_cmd("foot & google-chrome-stable & emacs")
 end)
 
 
