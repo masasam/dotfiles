@@ -415,7 +415,7 @@ hl.window_rule({
     match = { class = "^(nwg-displays)$" },
 	float = true,
     center = true,
-	size = {950, 600},
+	size = {1000, 600},
 })
 
 hl.window_rule({
