@@ -101,7 +101,9 @@ hyprland: ## Setup hyprland
 	$(PACMAN) mako hyprshot qt5ct qt6ct kvantum kvantum-qt5 hyprpolkitagent
 	$(PACMAN) hyprsunset pavucontrol wl-clip-persist nwg-displays pipewire
 	$(PACMAN) wireplumber pipewire-pulse pcmanfm-qt xdg-desktop-portal-gtk
-	$(PACMAN) wl-clipboard hyprpaper wf-recorder
+	$(PACMAN) wl-clipboard hyprpaper wf-recorder xdg-desktop-portal-lxqt
+	mkdir -p ${HOME}/.config/xdg-desktop-portal
+	ln -vsf {${PWD},${HOME}}/.config/xdg-desktop-portal/hyprland-portals.conf
 	yay -S wlogout
 	test -L ${HOME}/.config/hypr || rm -rf ${HOME}/.config/hypr
 	ln -vsfn {${PWD},${HOME}}/.config/hypr
