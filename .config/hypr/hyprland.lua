@@ -289,6 +289,13 @@ hl.bind(mainMod .. " + CTRL + 7", hl.dsp.exec_cmd("~/.config/hypr/scripts/ctl-al
 hl.bind(mainMod .. " + CTRL + 8", hl.dsp.exec_cmd("~/.config/hypr/scripts/ctl-alt-8"))
 hl.bind(mainMod .. " + CTRL + 9", hl.dsp.exec_cmd("~/.config/hypr/scripts/ctl-alt-9"))
 
+-- Screenshot a window
+hl.bind(mainMod .. " + Print", hl.dsp.exec_cmd("hyprshot -m window -o 'Pictures/Screenshots'"))
+-- Screenshot a monitor
+hl.bind("Print", hl.dsp.exec_cmd("hyprshot -m output -o 'Pictures/Screenshots'"))
+-- Screenshot a region with satty
+-- hl.bind(mainMod .. " + SHIFT + Print", hl.dsp.exec_cmd("pkill slurp || hyprshot -m ${1:-region} --raw | satty --filename - --output-filename "~/Pictures/Screenshots/$(date +'%Y-%m-%d-%H%M%S')_hyprshot.png" --early-exit --actions-on-enter save-to-clipboard --save-after-copy --copy-command 'wl-copy'"))
+
 -- Move focus with mainMod + arrow keys
 hl.bind("SUPER + Left",  hl.dsp.focus({ direction = "left" }))
 hl.bind("SUPER + Right", hl.dsp.focus({ direction = "right" }))
