@@ -1537,6 +1537,8 @@ vmaf
 volume_key
 vulkan-headers
 vulkan-icd-loader
+vulkan-intel
+vulkan-mesa-implicit-layers
 vulkan-tools
 w3m
 watchexec
