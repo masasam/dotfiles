@@ -52,7 +52,7 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd("foot", { workspace = "1" })
   hl.exec_cmd("google-chrome-stable", { workspace = "2" })
   hl.exec_cmd("emacs", { workspace = "3" })
-  hl.exec_cmd("foot", { workspace = "special:magic" })
+  hl.exec_cmd("foot", { workspace = "special:magic silent" })
 end)
 
 
