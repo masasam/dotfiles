@@ -274,7 +274,7 @@ hl.bind("SUPER + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind("SUPER + SHIFT + V", hl.dsp.layout("togglesplit"))    -- dwindle only
 hl.bind("SUPER + P", hl.dsp.window.pseudo())
 hl.bind("SUPER + F", hl.dsp.window.fullscreen({ mode = "fullscreen" }), { description = "Full screen" })
-hl.bind("SUPER + SHIFT + F", hl.dsp.window.fullscreen({ mode = "maximized" }), { description = "Full width" })
+hl.bind("SUPER + M", hl.dsp.window.fullscreen({ mode = "maximized" }), { description = "Full width" })
 
 
 hl.bind(mainMod .. " + space", hl.dsp.exec_cmd(menu))
