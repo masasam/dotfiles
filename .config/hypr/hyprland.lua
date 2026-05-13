@@ -277,7 +277,8 @@ hl.bind("SUPER + F", hl.dsp.window.fullscreen({ mode = "fullscreen" }), { descri
 hl.bind("SUPER + M", hl.dsp.window.fullscreen({ mode = "maximized" }), { description = "Full width" })
 hl.bind("SUPER + TAB", hl.dsp.window.cycle_next(), { description = "Focus on next window" })
 hl.bind("SUPER + SHIFT + TAB", hl.dsp.window.cycle_next({ next = false }), { description = "Focus on previous window" })
-
+hl.bind("CTRL + ALT + TAB", hl.dsp.focus({ monitor = "+1" }), { description = "Focus on next monitor" })
+hl.bind("CTRL + ALT + SHIFT + TAB", hl.dsp.focus({ monitor = "-1" }), { description = "Focus on previous monitor" })
 
 hl.bind(mainMod .. " + space", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
