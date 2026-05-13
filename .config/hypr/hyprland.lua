@@ -294,7 +294,7 @@ hl.bind(mainMod .. " + Print", hl.dsp.exec_cmd("hyprshot -m window -o 'Pictures/
 -- Screenshot a monitor
 hl.bind("Print", hl.dsp.exec_cmd("hyprshot -m output -o 'Pictures/Screenshots'"))
 -- Screenshot a region with satty
--- hl.bind(mainMod .. " + SHIFT + Print", hl.dsp.exec_cmd("pkill slurp || hyprshot -m ${1:-region} --raw | satty --filename - --output-filename "~/Pictures/Screenshots/$(date +'%Y-%m-%d-%H%M%S')_hyprshot.png" --early-exit --actions-on-enter save-to-clipboard --save-after-copy --copy-command 'wl-copy'"))
+hl.bind("SUPER + Print", hl.dsp.exec_cmd("~/.config/hypr/scripts/satty"))
 
 -- Move focus with mainMod + arrow keys
 hl.bind("SUPER + Left",  hl.dsp.focus({ direction = "left" }))

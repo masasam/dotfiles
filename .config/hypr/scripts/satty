@@ -1,0 +1,3 @@
+#!/bin/sh
+
+pkill slurp || hyprshot -m ${1:-region} --raw | satty --filename - --output-filename "~/Pictures/Screenshots/$(date +'%Y-%m-%d-%H%M%S')_hyprshot.png" --early-exit --actions-on-enter save-to-clipboard --save-after-copy --copy-command 'wl-copy'
