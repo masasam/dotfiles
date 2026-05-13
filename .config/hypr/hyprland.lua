@@ -275,6 +275,8 @@ hl.bind("SUPER + SHIFT + V", hl.dsp.layout("togglesplit"))    -- dwindle only
 hl.bind("SUPER + P", hl.dsp.window.pseudo())
 hl.bind("SUPER + F", hl.dsp.window.fullscreen({ mode = "fullscreen" }), { description = "Full screen" })
 hl.bind("SUPER + M", hl.dsp.window.fullscreen({ mode = "maximized" }), { description = "Full width" })
+hl.bind("SUPER + TAB", hl.dsp.window.cycle_next(), { description = "Focus on next window" })
+hl.bind("SUPER + SHIFT + TAB", hl.dsp.window.cycle_next({ next = false }), { description = "Focus on previous window" })
 
 
 hl.bind(mainMod .. " + space", hl.dsp.exec_cmd(menu))
