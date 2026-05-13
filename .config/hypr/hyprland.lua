@@ -50,6 +50,7 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd("systemctl --user start hyprwhspr.service")
   hl.exec_cmd("wl-clip-persist --clipboard regular")
   hl.exec_cmd("foot & google-chrome-stable & emacs")
+  hl.exec_cmd("foot", { workspace = "special:magic" })
 end)
 
 
