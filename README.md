@@ -443,6 +443,7 @@ You can make install from here
 	sudo pacman -S jc fx httpie bash-language-server editorconfig-core-c hexedit hugo
 	sudo pacman -S pv perl-net-ip lshw xdotool sshuttle packer libreoffice-fresh-ja tldr
 	sudo pacman -S bat pdfpc bc ast-grep dosfstools unzip openai-codex gitleaks reflector
+	sudo pacman -S spotify-launcher
 
 #### Install using yay
 
