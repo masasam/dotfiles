@@ -567,6 +567,12 @@ hl.window_rule({
 })
 
 hl.window_rule({
+    name  = "Spotify",
+    match = { class = "^(Spotify)$" },
+	workspace = "9",
+})
+
+hl.window_rule({
     name  = "SoundRecorder",
     match = { class = "^(org.gnome.SoundRecorder)$" },
 	workspace = "9",
