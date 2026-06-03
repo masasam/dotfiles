@@ -40,6 +40,7 @@ autoconf
 autogen
 automake
 avahi
+ayatana-ido
 babl
 baobab
 base
@@ -671,6 +672,8 @@ libatomic
 libatomic_ops
 libavc1394
 libavif
+libayatana-appindicator
+libayatana-indicator
 libb2
 libblake3
 libblockdev
@@ -704,6 +707,7 @@ libcolord
 libcss
 libcups
 libcupsfilters
+libcurl-gnutls
 libdaemon
 libdatachannel
 libdatrie
@@ -1059,6 +1063,7 @@ nethogs
 netpbm
 netscanner
 nettle
+nettle3
 network-manager-applet
 networkmanager
 nftables
@@ -1411,6 +1416,7 @@ seahorse
 seatd
 sed
 semver
+sequoia-sqv
 serd
 sfsexp
 shaderc
@@ -1435,6 +1441,7 @@ speedtest-cli
 speex
 speexdsp
 spirv-tools
+spotify-launcher
 sqlcipher
 sqlite
 sqlitebrowser
@@ -1603,6 +1610,7 @@ yazi
 ydotool
 yoga
 yq
+zenity
 zeromq
 zig
 zimg
