@@ -573,12 +573,6 @@ hl.window_rule({
 })
 
 hl.window_rule({
-    name  = "SoundRecorder",
-    match = { class = "^(org.gnome.SoundRecorder)$" },
-	workspace = "9",
-})
-
-hl.window_rule({
     name  = "OBS Studio",
     match = { class = "^(com.obsproject.Studio)$" },
 	workspace = "9",
