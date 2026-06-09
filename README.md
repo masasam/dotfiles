@@ -456,7 +456,6 @@ You can make install from here
 	yay -S rgxg
 	yay -S turso-bin
 	yay -S vscode-langservers-extracted
-	yay -S wkhtmltopdf-bin
 	yay -S zoom
 
 #### Install using mise
