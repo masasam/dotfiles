@@ -359,7 +359,7 @@ kind: ## Setup kind (Kubernetes In Docker)
 	mise use -g kind
 	sudo sh -c "kind completion zsh > /usr/share/zsh/site-functions/_kind"
 
-redis: ## Redis inital setup
+valkey: ## Valkey inital setup
 	$(PACMAN) $@
 	$(SYSTEMD_ENABLE) $@.service
 
