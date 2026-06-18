@@ -128,7 +128,6 @@
   (package-install 'reformatter)
   (package-install 'restclient)
   (package-install 'restclient-test)
-  (package-install 'rspec-mode)
   (package-install 'rust-mode)
   (package-install 'sly)
   (package-install 'sly-macrostep)
