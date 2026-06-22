@@ -372,6 +372,7 @@ haskell-conduit-extra
 haskell-constraints
 haskell-contravariant
 haskell-cookie
+haskell-cryptohash-md5
 haskell-crypton
 haskell-crypton-connection
 haskell-crypton-socks
