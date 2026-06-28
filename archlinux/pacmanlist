@@ -766,6 +766,7 @@ libgusb
 libhandy
 libheif
 libhubbub
+libhwasan
 libice
 libidn
 libidn2
