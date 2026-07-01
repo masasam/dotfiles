@@ -149,7 +149,6 @@ mise: ## Setup mise
 	mise use -g duckdb
 	mise use -g firebase
 	mise use -g gemini-cli
-	mise use -g herdr
 	mise use -g hugo
 	mise use -g marp-cli
 	mise use -g node
@@ -172,6 +171,10 @@ mise: ## Setup mise
 	mise use -g yay
 	mise use -g youtube-dl
 	mise use -g yt-dlp
+
+herdr: ## Setup herdr
+	mise use -g herdr
+	ln -vsf {${PWD},${HOME}}/.config/herdr/config.toml
 
 neomutt: ## Init neomutt mail client
 	$(PACMAN) neomutt urlscan
