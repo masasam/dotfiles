@@ -468,6 +468,7 @@ You can make install from here
 	mise use -g duckdb
 	mise use -g firebase
 	mise use -g gemini-cli
+	mise use -g herdr
 	mise use -g hugo
 	mise use -g marp-cli
 	mise use -g node
