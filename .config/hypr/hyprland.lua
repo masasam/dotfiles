@@ -350,12 +350,42 @@ hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = tr
 hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
 
--- clamshell mode
--- hl.bind("switch:on:Lid Switch", hl.dsp.exec_cmd("~/.config/hypr/scripts/clamshell close"), { locked = true })
--- hl.bind("switch:off:Lid Switch", hl.dsp.exec_cmd("~/.config/hypr/scripts/clamshell open"), { locked = true })
-hl.bind("SUPER + SHIFT + H", hl.dsp.window.move({ monitor = "l", follow = true }))
-hl.bind("SUPER + SHIFT + L", hl.dsp.window.move({ monitor = "r", follow = true }))
-hl.bind("SUPER + M", hl.dsp.focus({ monitor = "+1" }))
+-- Use either your laptop or an external monitor as your primary monitor
+local laptop = "eDP-1"
+local external = "DP-3"
+
+hl.bind("SUPER + N", function()
+  hl.monitor({
+    output = external,
+    mode = "preferred",
+    position = "0x0",
+    scale = "1.25",
+  })
+
+  hl.monitor({
+    output = laptop,
+    disabled = true,
+  })
+end)
+
+hl.bind("SUPER + SHIFT + N", function()
+  hl.monitor({
+    output = laptop,
+    disabled = false,
+  })
+
+  hl.monitor({
+    output = laptop,
+    mode = "preferred",
+    position = "0x0",
+    scale = "1.25                    ",
+  })
+
+  hl.monitor({
+    output = external,
+    disabled = true,
+  })
+end)
 
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
