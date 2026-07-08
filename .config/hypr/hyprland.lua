@@ -351,8 +351,11 @@ hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = tr
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
 
 -- clamshell mode
-hl.bind("switch:on:Lid Switch", hl.dsp.exec_cmd("~/.config/hypr/scripts/clamshell close"), { locked = true })
-hl.bind("switch:off:Lid Switch", hl.dsp.exec_cmd("~/.config/hypr/scripts/clamshell open"), { locked = true })
+-- hl.bind("switch:on:Lid Switch", hl.dsp.exec_cmd("~/.config/hypr/scripts/clamshell close"), { locked = true })
+-- hl.bind("switch:off:Lid Switch", hl.dsp.exec_cmd("~/.config/hypr/scripts/clamshell open"), { locked = true })
+hl.bind("SUPER + SHIFT + H", hl.dsp.window.move({ monitor = "l", follow = true }))
+hl.bind("SUPER + SHIFT + L", hl.dsp.window.move({ monitor = "r", follow = true }))
+
 
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
