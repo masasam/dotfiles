@@ -355,7 +355,7 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = tr
 -- hl.bind("switch:off:Lid Switch", hl.dsp.exec_cmd("~/.config/hypr/scripts/clamshell open"), { locked = true })
 hl.bind("SUPER + SHIFT + H", hl.dsp.window.move({ monitor = "l", follow = true }))
 hl.bind("SUPER + SHIFT + L", hl.dsp.window.move({ monitor = "r", follow = true }))
-
+hl.bind("SUPER + M", hl.dsp.focus({ monitor = "+1" }))
 
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
