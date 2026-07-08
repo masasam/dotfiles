@@ -332,6 +332,10 @@ hl.bind(mainMod .. " + Right", hl.dsp.focus({ workspace = "+1" }))
 hl.bind(mainMod .. " + J", hl.dsp.focus({ workspace = "e-1" }))
 hl.bind(mainMod .. " + K", hl.dsp.focus({ workspace = "e+1" }))
 
+-- Swap left and right windows
+hl.bind("SUPER + SHIFT + H", hl.dsp.window.swap({ direction = "l" }))
+hl.bind("SUPER + SHIFT + L", hl.dsp.window.swap({ direction = "r" }))
+
 -- Move/resize windows with mainMod + LMB/RMB and dragging
 -- hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(),   { mouse = true })
 -- hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
