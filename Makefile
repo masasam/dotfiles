@@ -130,6 +130,9 @@ greetd: ## Setup greetd
 	sudo ln -vsf {${PWD},}/etc/vconsole.conf
 	systemctl enable greetd.service
 
+logicool: ## Setup logicool mouse
+	$(PACMAN) solaar
+
 goinstall: ${HOME}/.local ## Install go packages
 	go install golang.org/x/tools/cmd/goimports@latest
 	go install github.com/kyoshidajp/ghkw@latest
@@ -510,7 +513,7 @@ testpath: ## Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: dconfsetting rclone gnupg ssh install emacs init keyring mise foot ghostty rio alacritty tlp ttf-cica hyprland greetd dnsmasq fcitx-mozc neomutt lvfs aur beekeeper kind gtk-theme chrome ccls gh tree-sitter tailscale codex hyprwhspr
+allinstall: dconfsetting rclone gnupg ssh install emacs init keyring mise foot ghostty rio alacritty tlp ttf-cica hyprland greetd dnsmasq fcitx-mozc neomutt lvfs aur beekeeper kind gtk-theme chrome ccls gh tree-sitter tailscale codex hyprwhspr logicool
 
 allupdate: update goinstall
 
