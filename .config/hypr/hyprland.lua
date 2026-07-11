@@ -358,7 +358,7 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = tr
 local laptop = "eDP-1"
 local external = "DP-3"
 
-hl.bind("SUPER + N", function()
+hl.bind("CTRL + ALT + SUPER + N", function()
   hl.monitor({
     output = external,
     mode = "preferred",
@@ -372,7 +372,7 @@ hl.bind("SUPER + N", function()
   })
 end)
 
-hl.bind("SUPER + SHIFT + N", function()
+hl.bind("CTRL + ALT + SUPER + SHIFT + N", function()
   hl.monitor({
     output = laptop,
     disabled = false,
