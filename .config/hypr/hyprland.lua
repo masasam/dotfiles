@@ -354,13 +354,53 @@ hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = tr
 hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
 
--- Use either your laptop or an external monitor as your primary monitor
+-------------------------------------------------------------------------
+---- Use only the laptop or external monitor as your primary monitor ----
+-------------------------------------------------------------------------
+
 local laptop = "eDP-1"
 local external = "DP-3"
 
+local function escape_lua_pattern(value)
+  return (value:gsub("([^%w])", "%%%1"))
+end
+
+-- Check if the monitor is physically recognized, including disabled monitors
+local function is_monitor_connected(output)
+  local handle = io.popen(
+    "hyprctl monitors all 2>/dev/null",
+    "r"
+  )
+
+  if handle == nil then
+    return false
+  end
+
+  local result = handle:read("*a") or ""
+  handle:close()
+
+  local escaped_output =
+    escape_lua_pattern(output)
+
+  return result:match(
+    "Monitor%s+" .. escaped_output .. "%s"
+  ) ~= nil
+end
+
+-- Switch to DP-3
 hl.bind("CTRL + ALT + SUPER + N", function()
+  if not is_monitor_connected(external) then
+    hl.notification.create({
+      text = external .. " is not connected",
+      timeout = 2500,
+    })
+
+    return
+  end
+
   hl.monitor({
     output = external,
+    disabled = false,
     mode = "preferred",
     position = "0x0",
     scale = "1.25",
@@ -372,24 +412,27 @@ hl.bind("CTRL + ALT + SUPER + N", function()
   })
 end)
 
-hl.bind("CTRL + ALT + SUPER + SHIFT + N", function()
-  hl.monitor({
-    output = laptop,
-    disabled = false,
-  })
+-- Return to built-in monitor
+hl.bind(
+  "CTRL + ALT + SUPER + SHIFT + N",
+  function()
+    hl.monitor({
+      output = laptop,
+      disabled = false,
+      mode = "preferred",
+      position = "0x0",
+      scale = "1.25",
+    })
 
-  hl.monitor({
-    output = laptop,
-    mode = "preferred",
-    position = "0x0",
-    scale = "1.25                    ",
-  })
-
-  hl.monitor({
-    output = external,
-    disabled = true,
-  })
-end)
+    -- Disabled only when DP-3 is connected
+    if is_monitor_connected(external) then
+      hl.monitor({
+        output = external,
+        disabled = true,
+      })
+    end
+  end
+)
 
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
