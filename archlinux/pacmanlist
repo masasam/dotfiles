@@ -1287,6 +1287,7 @@ python-slugify
 python-snowballstemmer
 python-sortedcontainers
 python-soupsieve
+python-soxr
 python-sphinx
 python-sphinx-alabaster-theme
 python-sphinx-basic-ng
