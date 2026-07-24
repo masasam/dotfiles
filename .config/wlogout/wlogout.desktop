@@ -4,3 +4,4 @@ Name=wlogout
 Exec=wlogout
 Terminal=false
 Keywords=System
+Icon=system-shutdown
