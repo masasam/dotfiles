@@ -1,7 +1,7 @@
 // -*- mode: jsonc -*-
 {
 	"reload_style_on_change": true,
-    "height": 30,
+    "height": 34,
     "spacing": 4,
     "modules-left": [
         "hyprland/workspaces"
