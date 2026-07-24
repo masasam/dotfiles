@@ -10,13 +10,19 @@
         "clock"
     ],
     "modules-right": [
-        "pulseaudio",
-        "backlight",
-        "battery",
-		"bluetooth",
-        "tray",
-        "custom/power"
+        "group/status"
     ],
+    "group/status": {
+        "orientation": "horizontal",
+        "modules": [
+            "pulseaudio",
+            "backlight",
+            "battery",
+            "bluetooth",
+            "tray",
+            "custom/power"
+        ]
+    },
     "tray": {
         "icon-size": 20,
         "spacing": 18,

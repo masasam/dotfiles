@@ -3,18 +3,32 @@ window#waybar {
 }
 
 #clock,
-#battery,
-#pulseaudio,
-#backlight,
-#tray,
-#bluetooth,
-#custom-power,
-#workspaces {
-	background: #121111;
+#workspaces,
+#status {
+    background: #121111;
     border: 1px solid #8899ff;
     border-radius: 10px;
     padding: 0 7px;
-    margin: 3 0 0 0;
+    margin: 3px 0 0 0;
+}
+
+/* Display entire modules-right as one rounded box */
+#status {
+    padding: 0;
+}
+
+/* Do not add individual frames, rounded corners, or gaps to each module within a group. */
+#status #pulseaudio,
+#status #backlight,
+#status #battery,
+#status #bluetooth,
+#status #tray,
+#status #custom-power {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 0 7px;
 }
 
 * {
