@@ -493,11 +493,6 @@ backup: ## Backup arch linux packages
 update: ## Update arch linux packages and save packages cache 3 generations
 	yay -Syu; paccache -ruk0
 
-mysite: ## My site and blogs source(This is private repository)
-	ghq get -p masasam/solist
-	ghq get -p masasam/solistblog
-	ghq get -p masasam/PPAP
-
 docker_image: docker
 	docker build -t dotfiles ${PWD}
 
