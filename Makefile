@@ -11,30 +11,30 @@ PACKAGES	:= base base-devel go zsh git vim tmux keychain unrar xsel atool fd
 PACKAGES	+= unace iperf valgrind noto-fonts-emoji inkscape file-roller xclip
 PACKAGES	+= ipcalc traceroute debootstrap oath-toolkit gvfs-smb zsh-completions
 PACKAGES	+= imagemagick lynx the_silver_searcher cifs-utils elinks satty mold
-PACKAGES	+= cups-pdf firefox firefox-i18n-ja gimp strace lhasa tig highlight
+PACKAGES	+= firefox firefox-i18n-ja gimp strace lhasa tig highlight pwgen btop
 PACKAGES	+= rsync nodejs debian-archive-keyring aria2 nmap ffmpeg asciidoc sbcl
-PACKAGES	+= aspell aspell-en screen mosh diskus gdb wmctrl pwgen linux-docs htop
+PACKAGES	+= aspell aspell-en screen mosh diskus gdb wmctrl linux-docs htop ncdu
 PACKAGES	+= tcpdump gvfs lzop poppler-data cpio sysprof pkgfile p7zip ruby-rdoc
 PACKAGES	+= gpaste optipng arch-install-scripts pandoc jq pkgstats ruby ethtool
 PACKAGES	+= texlive-langjapanese tokei texlive-latexextra ctags hdparm eog curl
 PACKAGES	+= typescript llvm llvm-libs lldb tree w3m whois csvkit shellcheck fzf
 PACKAGES	+= zsh-syntax-highlighting yq ansible parallel alsa-utils geckodriver
-PACKAGES	+= bash-completion mathjax expect obs-studio cscope pdfgrep cmatrix btop
+PACKAGES	+= bash-completion mathjax expect obs-studio cscope pdfgrep cmatrix
 PACKAGES	+= jpegoptim nethogs plocate pacman-contrib x11-ssh-askpass streamlink
-PACKAGES	+= jhead ncdu sshfs fping syncthing terraform bat ttf-font-awesome kooha
+PACKAGES	+= jhead sshfs fping syncthing terraform bat ttf-font-awesome kooha
 PACKAGES	+= ripgrep stunnel vimiv firejail noto-fonts-extra gnome-calculator bc
 PACKAGES	+= smartmontools wireshark-cli lsof watchexec lazygit yazi bat pdfpc
-PACKAGES	+= gtop gopls convmv mpv man-db baobab ioping ruby-irb mkcert findomain
+PACKAGES	+= gtop gopls convmv man-db baobab ioping ruby-irb mkcert findomain
 PACKAGES	+= guetzli fabric detox usleep libvterm bind lame git-lfs hex miller
 PACKAGES	+= diffoscope dust rbw eza sslscan pyright miniserve fdupes xsv opencv
 PACKAGES	+= gron typescript-language-server dateutils time rust rust-analyzer
-PACKAGES	+= dconf-editor ghq gopls difftastic csvlens cloc eslint prettier trivy
-PACKAGES	+= gnome-sound-recorder yaml-language-server biome papers typst discord
+PACKAGES	+= dconf-editor gopls difftastic csvlens cloc eslint prettier trivy
+PACKAGES	+= gnome-sound-recorder yaml-language-server papers typst discord
 PACKAGES	+= mission-center pass gitui sqlitebrowser git-delta speedtest-cli
 PACKAGES	+= jc fx httpie bash-language-server editorconfig-core-c hexedit tldr
 PACKAGES	+= pv perl-net-ip lshw xdotool sshuttle packer libreoffice-fresh-ja
 PACKAGES	+= ast-grep dosfstools unzip openai-codex zig zls gitleaks reflector
-PACKAGES	+= spotify-launcher
+PACKAGES	+= spotify-launcher mpv ghq biome
 
 PACMAN		:= sudo pacman -S 
 SYSTEMD_ENABLE	:= sudo systemctl --now enable
@@ -292,6 +292,12 @@ dconfsetting: # Initial dconf setting
 	dconf write /org/gnome/desktop/privacy/remember-recent-files false
 	dconf write /org/gnome/shell/keybindings/toggle-overview "['<Alt>space']"
 	dconf write /org/gnome/mutter/dynamic-workspaces false
+
+printer: ## Setup printer
+	sudo pacman -S cups cups-pdf avahi nss-mdns
+	sudo ln -vsf {${PWD},}/etc/nsswitch.conf
+	$(SYSTEMD_ENABLE) cups.service
+	$(SYSTEMD_ENABLE) avahi-daemon.service
 
 docker: ## Docker initial setup
 	$(PACMAN) $@ $@-compose
