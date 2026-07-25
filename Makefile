@@ -4,8 +4,8 @@ export GOPATH := ${HOME}
 BASE_PKGS	:= filesystem gcc-libs glibc bash coreutils file findutils gawk grep
 BASE_PKGS	+= util-linux bzip2 gzip xz licenses pacman systemd systemd-sysvcompat
 BASE_PKGS	+= iputils iproute2 autoconf automake binutils bison fakeroot flex gcc
-BASE_PKGS	+= make patch pkgconf texinfo which archlinux-keyring debugedit libtool
-BASE_PKGS	+= m4 groff sudo pciutils psmisc shadow procps-ng sed tar gettext
+BASE_PKGS	+= m4 patch pkgconf texinfo which archlinux-keyring debugedit libtool
+BASE_PKGS	+= make groff sudo pciutils psmisc shadow procps-ng sed tar gettext
 
 PACKAGES	:= base base-devel go zsh git vim tmux keychain unrar xsel atool fd
 PACKAGES	+= unace iperf valgrind noto-fonts-emoji inkscape file-roller xclip
