@@ -237,9 +237,10 @@ dnsmasq: ## Init dnsmasq
 	sudo ln -vsf {${PWD},}/etc/NetworkManager/NetworkManager.conf
 
 tlp: ## Setting for power saving and preventing battery deterioration
-	$(PACMAN) $@ powertop
+	$(PACMAN) $@ tlp-pd powertop
 	sudo ln -vsf {${PWD},}/etc/$@.conf
 	$(SYSTEMD_ENABLE) $@.service
+	$(SYSTEMD_ENABLE) tlp-pd.service
 
 lvfs: ## For Linux Vendor Firmware Service
 	$(PACMAN) fwupd dmidecode
