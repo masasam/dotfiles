@@ -140,6 +140,7 @@
   (package-install 'tree-sitter)
   (package-install 'tree-sitter-langs)
   (package-install 'typescript-mode)
+  (package-install 'verb)
   (package-install 'vertico)
   (package-install 'volatile-highlights)
   (package-install 'vundo)
