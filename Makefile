@@ -176,7 +176,11 @@ mise: ## Setup mise
 	mise use -g yt-dlp
 
 codex: ## Setup openai codex
-	$(PACMAN) openai-codex
+	mise use -g codex
+	test -L ${HOME}/.codex/config.toml || rm -rf ${HOME}/.codex/config.toml
+	ln -vsf ${PWD}/.config/codex/config.toml ${HOME}/.codex/config.toml
+
+codexapp: ## Setup openai codex app
 	yay -S openai-codex-desktop
 
 herdr: ## Setup herdr
@@ -190,11 +194,6 @@ neomutt: ## Init neomutt mail client
 	mkdir -p ${HOME}/.config/urlscan
 	ln -vsf {${PWD},${HOME}}/.config/urlscan/config.json
 	for item in mailcap certifcates aliases signature; do ln -vsf {${PWD},${HOME}}/.mutt/$$item; done
-
-codex: ## Setup openai codex
-	mise use -g codex
-	test -L ${HOME}/.codex/config.toml || rm -rf ${HOME}/.codex/config.toml
-	ln -vsf ${PWD}/.config/codex/config.toml ${HOME}/.codex/config.toml
 
 alacritty: ## Init alacritty terminal
 	$(PACMAN) $@
@@ -519,7 +518,7 @@ testpath: ## Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: dconfsetting rclone gnupg ssh install emacs init keyring mise foot ghostty rio alacritty tlp ttf-cica hyprland greetd dnsmasq fcitx-mozc neomutt lvfs aur beekeeper kind gtk-theme chrome ccls gh tree-sitter tailscale codex hyprwhspr logicool
+allinstall: dconfsetting rclone gnupg ssh install emacs init keyring mise foot ghostty rio alacritty tlp ttf-cica hyprland greetd dnsmasq fcitx-mozc neomutt lvfs aur beekeeper kind gtk-theme chrome ccls gh tree-sitter tailscale codex codexapp hyprwhspr logicool
 
 allupdate: update goinstall
 
