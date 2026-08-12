@@ -34,7 +34,7 @@ PACKAGES	+= mission-center pass gitui sqlitebrowser git-delta speedtest-cli
 PACKAGES	+= jc fx httpie bash-language-server editorconfig-core-c hexedit tldr
 PACKAGES	+= pv perl-net-ip lshw xdotool sshuttle packer libreoffice-fresh-ja
 PACKAGES	+= ast-grep dosfstools unzip openai-codex zig zls gitleaks reflector
-PACKAGES	+= spotify-launcher mpv ghq biome
+PACKAGES	+= spotify-launcher mpv ghq biome geeqie
 
 PACMAN		:= sudo pacman -S 
 SYSTEMD_ENABLE	:= sudo systemctl --now enable
@@ -388,7 +388,7 @@ emacspeak: ## Install emacspeak for blind person
 	yay -S $@
 
 aur: ## Install arch linux AUR packages using yay
-	yay -S asunder downgrade geeqie git-secrets grok-build hermes-agent pscale-cli rgxg turso-bin vscode-langservers-extracted zoom
+	yay -S asunder downgrade git-secrets grok-build hermes-agent pscale-cli rgxg turso-bin vscode-langservers-extracted zoom
 
 wkhtmltopdf: ## Install wkhtmltopdf
 	yay -S wkhtmltopdf-bin
