@@ -388,7 +388,7 @@ emacspeak: ## Install emacspeak for blind person
 	yay -S $@
 
 aur: ## Install arch linux AUR packages using yay
-	yay -S asunder downgrade git-secrets grok-build hermes-agent pscale-cli rgxg turso-bin vscode-langservers-extracted zoom
+	yay -S asunder downgrade git-secrets grok-build pscale-cli turso-bin vscode-langservers-extracted zoom
 
 wkhtmltopdf: ## Install wkhtmltopdf
 	yay -S wkhtmltopdf-bin
@@ -409,7 +409,7 @@ gh: ## Install and setup github-cli
 	gh completion -s zsh > ${HOME}/.zfunc/_gh
 
 aurplus: ## Install arch linux AUR packages using yay
-	yay -S appimagelauncher nkf rtags terraformer-bin
+	yay -S appimagelauncher hermes-agent nkf rgxg rtags terraformer-bin
 
 bluetooth: # Setup bluetooth
 	$(PACMAN) bluez bluez-utils blueman bluetui
