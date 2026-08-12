@@ -33,8 +33,8 @@ PACKAGES	+= gnome-sound-recorder yaml-language-server papers typst discord
 PACKAGES	+= mission-center pass gitui sqlitebrowser git-delta speedtest-cli
 PACKAGES	+= jc fx httpie bash-language-server editorconfig-core-c hexedit tldr
 PACKAGES	+= pv perl-net-ip lshw xdotool sshuttle packer libreoffice-fresh-ja
-PACKAGES	+= ast-grep dosfstools unzip openai-codex zig zls gitleaks reflector
-PACKAGES	+= spotify-launcher mpv ghq biome geeqie
+PACKAGES	+= ast-grep dosfstools unzip zig zls gitleaks reflector geeqie ghq
+PACKAGES	+= spotify-launcher mpv biome
 
 PACMAN		:= sudo pacman -S 
 SYSTEMD_ENABLE	:= sudo systemctl --now enable
@@ -174,6 +174,10 @@ mise: ## Setup mise
 	mise use -g yay
 	mise use -g youtube-dl
 	mise use -g yt-dlp
+
+codex: ## Setup openai codex
+	$(PACMAN) openai-codex
+	yay -S openai-codex-desktop
 
 herdr: ## Setup herdr
 	mise use -g herdr
