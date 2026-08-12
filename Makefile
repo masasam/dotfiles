@@ -394,7 +394,7 @@ wkhtmltopdf: ## Install wkhtmltopdf
 	yay -S wkhtmltopdf-bin
 
 sequeler: ## Install gui database tools
-	yay -S $@-git
+	yay -S $@
 
 beekeeper: ## Setup beekeeper-studio
 	$(PACMAN) html-xml-utils
