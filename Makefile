@@ -312,17 +312,6 @@ podman: ## Podman initial setup
 	$(PACMAN) $@
 	$(SYSTEMD_ENABLE) io.$@.service
 
-maria-db: mariadb
-mariadb: ## Mariadb initial setup
-	sudo ln -vsf {${PWD},}/etc/sysctl.d/40-max-user-watches.conf
-	$(PACMAN) $@ $@-clients
-	sudo ln -vsf {${PWD},}/etc/my.cnf
-	sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
-	$(SYSTEMD_ENABLE) $@.service
-	sudo mysql -u root < ${PWD}/$@/init.sql
-	mysql_secure_installation
-	mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root mysql
-
 mysql: ## mysql initial setup
 	yay mysql-clients80
 	yay mysql80
