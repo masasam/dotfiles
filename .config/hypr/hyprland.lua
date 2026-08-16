@@ -295,7 +295,7 @@ hl.bind(mainMod .. " + CTRL + 7", hl.dsp.exec_cmd("~/.config/hypr/scripts/ctl-al
 hl.bind(mainMod .. " + CTRL + 8", hl.dsp.exec_cmd("~/.config/hypr/scripts/ctl-alt-8"))
 hl.bind(mainMod .. " + CTRL + 9", hl.dsp.exec_cmd("~/.config/hypr/scripts/ctl-alt-9"))
 
--- drag window
+-- Drag window
 hl.bind(
   "SUPER + mouse:272",
   hl.dsp.window.drag(),
