@@ -330,6 +330,7 @@ haskell-ansi-terminal
 haskell-ansi-terminal-types
 haskell-ansi-wl-pprint
 haskell-appar
+haskell-asciidoc
 haskell-asn1-encoding
 haskell-asn1-parse
 haskell-asn1-types
@@ -449,6 +450,7 @@ haskell-lexer
 haskell-libyaml
 haskell-lpeg
 haskell-lua
+haskell-lua-arbitrary
 haskell-memory
 haskell-mime-types
 haskell-mmorph
@@ -501,6 +503,7 @@ haskell-skylighting-format-ansi
 haskell-skylighting-format-blaze-html
 haskell-skylighting-format-context
 haskell-skylighting-format-latex
+haskell-skylighting-format-typst
 haskell-socks
 haskell-some
 haskell-sop-core
@@ -514,6 +517,8 @@ haskell-syb
 haskell-tagged
 haskell-tagsoup
 haskell-tasty
+haskell-tasty-hunit
+haskell-tasty-lua
 haskell-temporary
 haskell-texmath
 haskell-text-conversions
@@ -1030,6 +1035,7 @@ mako
 man-db
 mathjax
 mbedtls
+mbedtls3
 md4c
 mdadm
 menu-cache

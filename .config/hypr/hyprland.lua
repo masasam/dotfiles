@@ -361,6 +361,12 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = tr
 local laptop = "eDP-1"
 local external = "DP-3"
 
+hl.config({
+    debug = {
+        disable_scale_checks = true,
+    },
+})
+
 -- Switch to DP-3
 hl.bind("CTRL + ALT + SUPER + N", function()
   hl.monitor({
@@ -368,7 +374,7 @@ hl.bind("CTRL + ALT + SUPER + N", function()
     disabled = false,
     mode = "preferred",
     position = "0x0",
-    scale = "1.4",
+    scale = 1.4,
   })
 
   hl.monitor({
