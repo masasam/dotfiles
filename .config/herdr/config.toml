@@ -1,3 +1,4 @@
+onboarding = false
 # herdr configuration
 # Place this file at ~/.config/herdr/config.toml
 
@@ -41,7 +42,8 @@
 
 [update]
 # Update channel used by background version checks and `herdr update`.
-# Use "stable" for normal releases or "preview" for opt-in preview builds.
+# Defaults to "stable" on Linux/macOS and "preview" on Windows.
+# Set explicitly to choose stable releases or opt-in preview builds.
 # channel = "stable"
 
 # Check herdr.dev for new Herdr versions in the background.
@@ -116,10 +118,15 @@ prefix = "ctrl+j"
 # Custom commands use the same binding syntax.
 # type = "shell" runs detached in the background.
 # type = "pane" opens a temporary pane and closes it when the command exits.
+# type = "popup" opens a session-modal terminal without changing the tab layout.
+# Popup width and height accept terminal cells or percentages such as "80%".
+# On Windows, command strings run through cmd.exe /d /c.
 # [[keys.command]]
 # key = "prefix+alt+g"
-# type = "pane"
+# type = "popup"
 # command = "lazygit"
+# width = "80%"
+# height = "80%"
 
 # Legacy indexed shortcut config is still parsed for compatibility.
 # Prefer switch_tab, switch_workspace, and focus_agent for new configs.
@@ -141,6 +148,12 @@ prefix = "ctrl+j"
 # Maximum sidebar width when expanded (columns)
 # sidebar_max_width = 36
 
+# Start with the sidebar collapsed. Changes take effect on the next launch.
+# sidebar_start_collapsed = false
+
+# Collapsed sidebar presentation: "compact" keeps the narrow status rail, "hidden" uses zero width.
+# sidebar_collapsed_mode = "compact"
+
 # Terminal width at or below which Herdr uses the mobile single-column layout.
 # Increase this for foldables, tablets, or wide phone terminals.
 # mobile_width_threshold = 64
@@ -149,6 +162,16 @@ prefix = "ctrl+j"
 # Set false to let the terminal handle normal clicks, such as Cmd-clicking URLs.
 # Pane apps like lazygit and btop can still receive mouse when they request it.
 # mouse_capture = true
+
+# Automatically copy text selected with the mouse.
+# Set false to retain drag or double-click word selection until Ctrl+C,
+# or Cmd+C when the host forwards it, copies and clears it.
+# copy_on_select = true
+
+# Host cursor policy: "auto", "native", or "drawn".
+# "auto" draws Herdr's own cursor on native Windows builds and WSL to avoid ConPTY cursor flicker, and uses the native terminal cursor elsewhere.
+# "native" always uses the outer terminal cursor. "drawn" always draws Herdr's cursor as terminal cell content.
+# host_cursor = "auto"
 
 # Optional modifier that forwards right-click hold/drag gestures to pane apps instead of opening Herdr's pane menu.
 # Empty/off disables this. Shift is intentionally unsupported because terminals commonly reserve Shift+mouse.
@@ -169,8 +192,15 @@ prefix = "ctrl+j"
 # Set false to create tabs immediately with generated names.
 # prompt_new_tab_name = true
 
+# Ask for a workspace name before interactive creation.
+# prompt_new_workspace_name = false
+
 # Draw borders around split panes.
 # pane_borders = true
+
+# Draw interactive scrollbars beside terminal panes.
+# Set false to reclaim the scrollbar column and keep it out of terminal-native selections.
+# pane_scrollbars = true
 
 # Keep split panes visually separated instead of sharing divider borders.
 # pane_gaps = true
@@ -178,9 +208,37 @@ prefix = "ctrl+j"
 # Show detected/reported agent labels in split pane borders when no manual pane name is set.
 # show_agent_labels_on_pane_borders = false
 
+# Hide the tab row when a workspace has exactly one tab.
+# New tabs can still be created with the configured keybinding.
+# hide_tab_bar_when_single_tab = false
+
+# Desktop tab row placement: "top" or "bottom".
+# tab_bar_position = "top"
+
 # Agent panel ordering: "spaces" (grouped by space) or "priority" (attention queue).
 # "workspaces" is accepted as an alias for "spaces".
 # agent_panel_sort = "spaces"
+
+# Expanded agent rows. Built-ins are state_icon, state_text, workspace, tab, pane, agent,
+# terminal_title, and terminal_title_stripped.
+# Custom values reported through pane metadata use a $name token.
+# A token occurrence may be styled with { token = "workspace", fg = "#89b4fa", bold = true, dim = false }.
+# Omitted style fields preserve the contextual default.
+# [ui.sidebar.agents]
+# Blank rows between agent entries. Set to 1 to restore the previous spacing.
+# row_gap = 0
+# rows = [["state_icon", "workspace", "tab"], ["agent"]]
+# Optional canonical agent IDs replace the default rows for matching agents.
+# [ui.sidebar.agents.rows_by_agent]
+# claude = [["state_icon", "workspace", "tab"], ["terminal_title_stripped"], ["agent"]]
+
+# Expanded space rows. Built-ins are state_icon, state_text, workspace, branch, and git_status.
+# Custom values reported through workspace metadata use a $name token, for example $jj_status.
+# Inline token styles accept strict #RGB/#RRGGBB foregrounds plus bold and dim booleans.
+# [ui.sidebar.spaces]
+# Blank rows between space entries. Set to 1 to restore the previous spacing.
+# row_gap = 0
+# rows = [["state_icon", "workspace"], ["branch", "git_status"]]
 
 # Accent color for highlights, borders, and navigation UI.
 # Accepts: hex (#89b4fa), named colors (cyan, blue, magenta), or rgb(r,g,b)
@@ -221,13 +279,14 @@ prefix = "ctrl+j"
 # resume_agents_on_restore = true
 
 [remote]
-# Whether herdr manages the ssh config used for the `herdr --remote` bridge.
-# When true (default), herdr runs the bridge ssh through a generated config that
+# Whether herdr manages the ssh config used for `herdr --remote`.
+# When true (default), herdr runs remote ssh through a generated config that
 # includes your ~/.ssh/config first and adds ServerAliveInterval/
-# ServerAliveCountMax as a fallback (so any keepalive you set yourself still
-# wins) to survive idle network/NAT timeouts. Set false to run plain ssh against
-# your ssh config unchanged — this does not force keepalive off, it only stops
-# herdr from adding its own.
+# ServerAliveCountMax as fallbacks (so any keepalive values you set yourself
+# still win) to survive idle network/NAT timeouts. Herdr also uses a private
+# per-attach OpenSSH control socket to reuse the first authenticated connection.
+# Set false to run plain ssh against your ssh config unchanged — this does not
+# force keepalive or multiplexing off, it only stops herdr from adding its own.
 # manage_ssh_config = true
 
 [experimental]
@@ -238,10 +297,12 @@ prefix = "ctrl+j"
 # kitty_graphics = false
 # Save recent pane screen history across full server restarts.
 pane_history = false
-# While prefix mode is active, temporarily switch the macOS host input
-# source to an ASCII-capable keyboard layout so prefix commands register
-# even when a CJK IME is active, then restore the previous input source
-# when prefix mode exits. macOS only; best-effort. Default: false.
+# While prefix mode is active, temporarily switch the host input source to
+# an ASCII-capable mode so prefix commands register even when an IME is
+# active, then restore the previous input source when prefix mode exits. On
+# macOS this selects the ASCII-capable keyboard layout; on Windows it toggles
+# a Korean IME between Hangul and English (other IME languages are left
+# unchanged). macOS and Windows only; best-effort. Default: false.
 # switch_ascii_input_source_in_prefix = false
 # Expose the focused pane's cursor to the outer terminal so macOS input
 # methods keep tracking the candidate window when TUIs paint their own
