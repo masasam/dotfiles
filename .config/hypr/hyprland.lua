@@ -295,6 +295,19 @@ hl.bind(mainMod .. " + CTRL + 7", hl.dsp.exec_cmd("~/.config/hypr/scripts/ctl-al
 hl.bind(mainMod .. " + CTRL + 8", hl.dsp.exec_cmd("~/.config/hypr/scripts/ctl-alt-8"))
 hl.bind(mainMod .. " + CTRL + 9", hl.dsp.exec_cmd("~/.config/hypr/scripts/ctl-alt-9"))
 
+-- drag window
+hl.bind(
+  "SUPER + mouse:272",
+  hl.dsp.window.drag(),
+  { mouse = true }
+)
+
+hl.bind(
+  "SUPER + mouse:273",
+  hl.dsp.window.resize(),
+  { mouse = true }
+)
+
 -- Screenshot a window
 hl.bind(mainMod .. " + Print", hl.dsp.exec_cmd("hyprshot -m window -o 'Pictures/Screenshots'"))
 -- Screenshot a monitor
