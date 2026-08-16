@@ -185,6 +185,7 @@ codexapp: ## Setup openai codex app
 
 herdr: ## Setup herdr
 	mise use -g herdr
+	test -L ${HOME}/.config/herdr/config.toml || rm -rf ${HOME}/.config/herdr/config.toml
 	ln -vsf {${PWD},${HOME}}/.config/herdr/config.toml
 
 neomutt: ## Init neomutt mail client
