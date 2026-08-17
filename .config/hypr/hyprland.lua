@@ -9,6 +9,18 @@
 -- Create your files separately and then require them like this:
 -- require("myColors")
 
+local WORKSPACE = {
+    terminal = "1",
+    web      = "2",
+    code     = "3",
+    docs     = "4",
+    files    = "5",
+    graphics = "6",
+    chat     = "7",
+    meeting  = "8",
+    media    = "9",
+    firefox  = "10",
+}
 
 ------------------
 ---- MONITORS ----
@@ -605,37 +617,37 @@ hl.window_rule({
 
 local workspaceApps = {
     -- Workspace 2: Browser
-    { name = "google-chrome",      class = "^(google-chrome)$",          workspace = "2" },
+    { name = "google-chrome",      class = "^(google-chrome)$",          workspace = WORKSPACE.web },
 
     -- Workspace 3: Editor
-    { name = "emacs",              class = "^(Emacs)$",                  workspace = "3" },
+    { name = "emacs",              class = "^(Emacs)$",                  workspace = WORKSPACE.code },
 
     -- Workspace 4: Documents / DB
-    { name = "pdf",                class = "^(org.gnome.Papers)$",       workspace = "4" },
-    { name = "beekeeper-studio",   class = "^(beekeeper-studio)$",      workspace = "4" },
-    { name = "sqlitebrowser",      class = "^(sqlitebrowser)$",          workspace = "4" },
-    { name = "libreoffice-writer", class = "^(libreoffice-writer)$",     workspace = "4" },
-    { name = "libreoffice-calc",   class = "^(libreoffice-calc)$",       workspace = "4" },
+    { name = "pdf",                class = "^(org.gnome.Papers)$",       workspace = WORKSPACE.docs },
+    { name = "beekeeper-studio",   class = "^(beekeeper-studio)$",      workspace = WORKSPACE.docs },
+    { name = "sqlitebrowser",      class = "^(sqlitebrowser)$",          workspace = WORKSPACE.docs },
+    { name = "libreoffice-writer", class = "^(libreoffice-writer)$",     workspace = WORKSPACE.docs },
+    { name = "libreoffice-calc",   class = "^(libreoffice-calc)$",       workspace = WORKSPACE.docs },
 
     -- Workspace 5: Files
-    { name = "pcmanfm",            class = "^(pcmanfm-qt)$",             workspace = "5" },
+    { name = "pcmanfm",            class = "^(pcmanfm-qt)$",             workspace = WORKSPACE.files },
 
     -- Workspace 6: Graphics
-    { name = "inkscape",           class = "^(org.inkscape.Inkscape)$", workspace = "6", float = true },
-    { name = "gimp",               class = "^(gimp)$",                   workspace = "6", float = true },
+    { name = "inkscape",           class = "^(org.inkscape.Inkscape)$", workspace = WORKSPACE.graphics, float = true },
+    { name = "gimp",               class = "^(gimp)$",                   workspace = WORKSPACE.graphics, float = true },
 
     -- Workspace 7: Chat
-    { name = "discord",            class = "^(discord)$",                workspace = "7" },
+    { name = "discord",            class = "^(discord)$",                workspace = WORKSPACE.chat },
 
     -- Workspace 8: Meeting
-    { name = "zoom",               class = "^(zoom)$",                   workspace = "8" },
+    { name = "zoom",               class = "^(zoom)$",                   workspace = WORKSPACE.meeting },
 
     -- Workspace 9: Media
-    { name = "spotify",            class = "^(Spotify)$",                workspace = "9" },
-    { name = "obs",                class = "^(com.obsproject.Studio)$", workspace = "9" },
+    { name = "spotify",            class = "^(Spotify)$",                workspace = WORKSPACE.media },
+    { name = "obs",                class = "^(com.obsproject.Studio)$", workspace = WORKSPACE.media },
 
     -- Workspace 10: Secondary browser
-    { name = "firefox",            class = "^(firefox)$",                workspace = "10" },
+    { name = "firefox",            class = "^(firefox)$",                workspace = WORKSPACE.firefox },
 }
 
 for _, app in ipairs(workspaceApps) do
