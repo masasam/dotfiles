@@ -114,8 +114,8 @@ hl.env("GTK_IM_MODULE", "fcitx")
 -- Refer to https://wiki.hypr.land/Configuring/Basics/Variables/
 hl.config({
     general = {
-        gaps_in  = 3,
-        gaps_out = 3,
+        gaps_in  = 5,
+        gaps_out = 5,
 
         border_size = 2,
 
@@ -159,6 +159,25 @@ hl.config({
     animations = {
         enabled = true,
     },
+})
+
+-- Setting to erase gaps, borders, and rounding only when there is only one window in Workspace
+hl.workspace_rule({
+    workspace = "w[tv1]s[false]",
+    gaps_out = 3,
+    gaps_in = 3,
+})
+
+hl.window_rule({
+    name = "single-window-no-border",
+
+    match = {
+        float = false,
+        workspace = "w[tv1]s[false]",
+    },
+
+    border_size = 2,
+    rounding = 10,
 })
 
 -- Default curves and animations, see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Animations/
