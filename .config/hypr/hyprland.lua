@@ -71,7 +71,6 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd("foot", { workspace = WORKSPACE.terminal })
   hl.exec_cmd("google-chrome-stable", { workspace = WORKSPACE.web .. " silent" })
   hl.exec_cmd("emacs", { workspace = WORKSPACE.code .. " silent" })
-  hl.exec_cmd("foot", { workspace = "special:magic silent" })
 end)
 
 
@@ -693,6 +692,12 @@ hl.bind(
     "SUPER + SHIFT + period",
     hl.dsp.layout("swapcol r")
 )
+
+-- Opening specialscratchpad launches foot
+hl.workspace_rule({
+    workspace = "special:magic",
+    on_created_empty = "foot",
+})
 
 local workspaceApps = {
     -- Workspace 2: Browser
