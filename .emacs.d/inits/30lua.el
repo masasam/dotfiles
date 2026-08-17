@@ -1,4 +1,4 @@
-;;; 34lua.el --- 34lua.el
+;;; 30lua.el --- 30lua.el
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)
@@ -13,4 +13,4 @@
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:
-;;; 34lua.el ends here
+;;; 30lua.el ends here
