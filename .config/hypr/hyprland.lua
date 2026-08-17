@@ -438,6 +438,25 @@ hl.on("monitor.removed", function(monitor)
     end
 end)
 
+-- Case where DP-3 is stuck from the time of startup
+local function externalConnected()
+    for _, monitor in ipairs(hl.get_monitors()) do
+        if monitor.name == external then
+            return true
+        end
+    end
+
+    return false
+end
+
+hl.on("hyprland.start", function()
+    if externalConnected() then
+        useExternal()
+    else
+        useLaptop()
+    end
+end)
+
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
 --------------------------------
