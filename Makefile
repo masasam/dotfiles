@@ -183,7 +183,7 @@ codex: ## Setup openai codex
 	ln -vsf ${PWD}/.config/codex/codex_notify.py ${HOME}/.codex/hooks/codex_notify.py
 	${HOME}/.codex/hooks/codex_notify.py
 
-codexapp: ## Setup openai codex app
+codexdesktop: ## Setup openai codex app
 	yay -S openai-codex-desktop
 
 herdr: ## Setup herdr
