@@ -747,3 +747,11 @@ hl.bind(
         workspace = "previous_per_monitor"
     })
 )
+
+-- Hide the mouse cursor while using the keyboard
+hl.config({
+    cursor = {
+        hide_on_key_press = true,
+        inactive_timeout = 5,
+    },
+})
