@@ -513,18 +513,26 @@ hl.window_rule({
 })
 
 hl.window_rule({
-    name  = "center-pcmanfm-open-file",
-    match = { class = "^(xdg-desktop-portal-gtk)$" },
-	match = { title = "^(ファイルを開く)$" },
-	float = true,
+    name = "center-pcmanfm-open-file",
+
+    match = {
+        class = "^(xdg-desktop-portal-gtk)$",
+        title = "^(ファイルを開く)$",
+    },
+
+    float = true,
     center = true,
-	size = {800, 600},
+    size = {800, 600},
 })
 
 hl.window_rule({
     name  = "center-pcmanfm-open-all-file",
-    match = { class = "^(xdg-desktop-portal-gtk)$" },
-	match = { title = "^(すべてのファイル)$" },
+	
+	match = {
+	    class = "^(xdg-desktop-portal-gtk)$",
+		    title = "^(すべてのファイル)$",
+	},
+	
 	float = true,
     center = true,
 	size = {800, 600},
