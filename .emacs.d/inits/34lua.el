@@ -4,6 +4,8 @@
 ;;(setq debug-on-error t)
 
 (use-package lua-ts-mode
+  :mode
+  ("\\.lua\\'" . lua-ts-mode)
   :hook
   (lua-ts-mode . eglot-ensure)
 )
