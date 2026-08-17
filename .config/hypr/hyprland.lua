@@ -371,49 +371,72 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = tr
 ---- Use only the laptop or external monitor as your primary monitor ----
 -------------------------------------------------------------------------
 
-local laptop = "eDP-1"
-local external = "DP-3"
-
 hl.config({
     debug = {
         disable_scale_checks = true,
     },
 })
 
--- Switch to DP-3
-hl.bind("CTRL + ALT + SUPER + N", function()
-  hl.monitor({
-    output = external,
-    disabled = false,
-    mode = "preferred",
-    position = "0x0",
-    scale = 1.3973799127,
-  })
+local laptop = "eDP-1"
+local external = "DP-3"
 
-  hl.monitor({
-    output = laptop,
-    disabled = true,
-  })
+local laptopScale = 1.25
+local externalScale = 1.3973799126637554
+
+local function useExternal()
+    hl.monitor({
+        output = external,
+        disabled = false,
+        mode = "preferred",
+        position = "0x0",
+        scale = externalScale,
+    })
+
+    hl.monitor({
+        output = laptop,
+        disabled = true,
+    })
+end
+
+local function useLaptop()
+    hl.monitor({
+        output = laptop,
+        disabled = false,
+        mode = "preferred",
+        position = "0x0",
+        scale = laptopScale,
+    })
+
+    hl.monitor({
+        output = external,
+        disabled = true,
+    })
+end
+
+-- Manual switching
+hl.bind(
+    "CTRL + ALT + SUPER + N",
+    useExternal
+)
+
+hl.bind(
+    "CTRL + ALT + SUPER + SHIFT + N",
+    useLaptop
+)
+
+-- Automatic switching when DP-3 is connected
+hl.on("monitor.added", function(monitor)
+    if monitor.name == external then
+        useExternal()
+    end
 end)
 
--- Return to built-in monitor
-hl.bind(
-  "CTRL + ALT + SUPER + SHIFT + N",
-  function()
-    hl.monitor({
-      output = laptop,
-      disabled = false,
-      mode = "preferred",
-      position = "0x0",
-      scale = 1.25,
-    })
-
-    hl.monitor({
-      output = external,
-      disabled = true,
-    })
-  end
-)
+-- After unplugging DP-3, return to built-in display
+hl.on("monitor.removed", function(monitor)
+    if monitor.name == external then
+        useLaptop()
+    end
+end)
 
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
