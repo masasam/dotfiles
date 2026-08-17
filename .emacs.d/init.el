@@ -129,6 +129,7 @@
   (package-install 'restclient)
   (package-install 'restclient-test)
   (package-install 'rust-mode)
+  (package-install 'lua-ts-mode)
   (package-install 'sly)
   (package-install 'sly-macrostep)
   (package-install 'smart-jump)
