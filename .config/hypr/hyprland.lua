@@ -603,94 +603,48 @@ hl.window_rule({
 	fullscreen = true,
 })
 
-hl.window_rule({
-    name  = "google-chrome",
-    match = { class = "^(google-chrome)$" },
-	workspace = "2",
-})
+local workspaceApps = {
+    -- Workspace 2: Browser
+    { name = "google-chrome",      class = "^(google-chrome)$",          workspace = "2" },
 
-hl.window_rule({
-    name  = "emacs",
-    match = { class = "^(Emacs)$" },
-	workspace = "3",
-})
+    -- Workspace 3: Editor
+    { name = "emacs",              class = "^(Emacs)$",                  workspace = "3" },
 
-hl.window_rule({
-    name  = "pdf",
-    match = { class = "^(org.gnome.Papers)$" },
-	workspace = "4",
-})
+    -- Workspace 4: Documents / DB
+    { name = "pdf",                class = "^(org.gnome.Papers)$",       workspace = "4" },
+    { name = "beekeeper-studio",   class = "^(beekeeper-studio)$",      workspace = "4" },
+    { name = "sqlitebrowser",      class = "^(sqlitebrowser)$",          workspace = "4" },
+    { name = "libreoffice-writer", class = "^(libreoffice-writer)$",     workspace = "4" },
+    { name = "libreoffice-calc",   class = "^(libreoffice-calc)$",       workspace = "4" },
 
-hl.window_rule({
-    name  = "beekeeper-studio",
-    match = { class = "^(beekeeper-studio)$" },
-	workspace = "4",
-})
+    -- Workspace 5: Files
+    { name = "pcmanfm",            class = "^(pcmanfm-qt)$",             workspace = "5" },
 
-hl.window_rule({
-    name  = "sqlitebrowser",
-    match = { class = "^(sqlitebrowser)$" },
-	workspace = "4",
-})
+    -- Workspace 6: Graphics
+    { name = "inkscape",           class = "^(org.inkscape.Inkscape)$", workspace = "6", float = true },
+    { name = "gimp",               class = "^(gimp)$",                   workspace = "6", float = true },
 
-hl.window_rule({
-    name  = "libreoffice-writer",
-    match = { class = "^(libreoffice-writer)$" },
-	workspace = "4",
-})
+    -- Workspace 7: Chat
+    { name = "discord",            class = "^(discord)$",                workspace = "7" },
 
-hl.window_rule({
-    name  = "libreoffice-calc",
-    match = { class = "^(libreoffice-calc)$" },
-	workspace = "4",
-})
+    -- Workspace 8: Meeting
+    { name = "zoom",               class = "^(zoom)$",                   workspace = "8" },
 
-hl.window_rule({
-    name  = "pcmanfm",
-    match = { class = "^(pcmanfm-qt)$" },
-	workspace = "5",
-})
+    -- Workspace 9: Media
+    { name = "spotify",            class = "^(Spotify)$",                workspace = "9" },
+    { name = "obs",                class = "^(com.obsproject.Studio)$", workspace = "9" },
 
-hl.window_rule({
-    name  = "inkscape",
-    match = { class = "^(org.inkscape.Inkscape)$" },
-	float = true,
-	workspace = "6",
-})
+    -- Workspace 10: Secondary browser
+    { name = "firefox",            class = "^(firefox)$",                workspace = "10" },
+}
 
-hl.window_rule({
-    name  = "gimp",
-    match = { class = "^(gimp)$" },
-	float = true,
-	workspace = "6",
-})
-
-hl.window_rule({
-    name  = "discord",
-    match = { class = "^(discord)$" },
-	workspace = "7",
-})
-
-hl.window_rule({
-    name  = "zoom",
-    match = { class = "^(zoom)$" },
-	workspace = "8",
-})
-
-hl.window_rule({
-    name  = "Spotify",
-    match = { class = "^(Spotify)$" },
-	workspace = "9",
-})
-
-hl.window_rule({
-    name  = "OBS Studio",
-    match = { class = "^(com.obsproject.Studio)$" },
-	workspace = "9",
-})
-
-hl.window_rule({
-    name  = "firefox",
-    match = { class = "^(firefox)$" },
-	workspace = "10",
-})
+for _, app in ipairs(workspaceApps) do
+    hl.window_rule({
+        name = app.name,
+        match = {
+            class = app.class,
+        },
+        workspace = app.workspace,
+        float = app.float,
+    })
+end
