@@ -6,6 +6,7 @@ compinit
 promptinit
 
 export LANG=ja_JP.UTF-8
+export CODEX_NOTIFY_ONLY_WHEN_UNFOCUSED=0
 
 autoload -Uz colors
 colors
