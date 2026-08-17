@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "sh -lc 'cat >/dev/null; notify-send -a Codex -u normal -i dialog-information \"Codex\" \"タスクが完了しました\"; printf \"{\\\"continue\\\":true}\\n\"'"
+            "command": "sh -lc 'cat >/dev/null; notify-send -a Codex -u normal -i ~/.config/mako/icons/ChatGPT.png \"Codex\" \"タスクが完了しました\"; printf \"{\\\"continue\\\":true}\\n\"'"
           }
         ]
       }
@@ -17,7 +17,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "sh -lc 'cat >/dev/null; notify-send -a Codex -u critical -i dialog-warning \"Codex\" \"承認が必要です\"; printf \"{}\\n\"'"
+            "command": "sh -lc 'cat >/dev/null; notify-send -a Codex -u critical -i ~/.config/mako/icons/ChatGPT.png \"Codex\" \"承認が必要です\"; printf \"{}\\n\"'"
           }
         ]
       }

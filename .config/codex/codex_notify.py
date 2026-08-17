@@ -119,7 +119,7 @@ def notify(title: str, body: str, *, urgency: str, timeout_ms: int) -> None:
             [
                 "notify-send",
                 "-a", "Codex",
-                "-i", "utilities-terminal-symbolic",
+                "-i", "~/.config/mako/icons/ChatGPT.png",
                 "-u", urgency,
                 "-t", str(timeout_ms),
                 html.escape(title, quote=False),
