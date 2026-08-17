@@ -387,7 +387,7 @@ hl.bind("CTRL + ALT + SUPER + N", function()
     disabled = false,
     mode = "preferred",
     position = "0x0",
-    scale = 1.4,
+    scale = 1.3973799127,
   })
 
   hl.monitor({
