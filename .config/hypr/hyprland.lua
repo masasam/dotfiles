@@ -527,6 +527,13 @@ hl.window_rule({
     float = true,
 })
 
+-- Press the same ALT+number again to return to the previous Workspace
+hl.config({
+    binds = {
+        workspace_back_and_forth = true,
+    },
+})
+
 hl.window_rule({
     name  = "terminal transparent in the scratchpad",
     match = { workspace = "special:magic" },
