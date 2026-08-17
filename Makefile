@@ -178,8 +178,6 @@ codex: ## Setup openai codex
 	mise use -g codex
 	test -L ${HOME}/.codex/config.toml || rm -rf ${HOME}/.codex/config.toml
 	ln -vsf ${PWD}/.config/codex/config.toml ${HOME}/.codex/config.toml
-	test -L ${HOME}/.codex/hooks.json || rm -rf ${HOME}/.codex/hooks.json
-	ln -vsf ${PWD}/.config/codex/hooks.json ${HOME}/.codex/hooks.json
 	mkdir -p ${HOME}/.codex/hooks
 	chmod a+x ${PWD}/.config/codex/codex_notify.py
 	ln -vsf ${PWD}/.config/codex/codex_notify.py ${HOME}/.codex/hooks/codex_notify.py
