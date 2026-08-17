@@ -147,7 +147,6 @@ mise: ## Setup mise
 	mise use -g atlas
 	mise use -g bun
 	mise use -g claude-code
-	mise use -g codex
 	mise use -g deno
 	mise use -g duckdb
 	mise use -g firebase
@@ -179,6 +178,8 @@ codex: ## Setup openai codex
 	mise use -g codex
 	test -L ${HOME}/.codex/config.toml || rm -rf ${HOME}/.codex/config.toml
 	ln -vsf ${PWD}/.config/codex/config.toml ${HOME}/.codex/config.toml
+	test -L ${HOME}/.codex/hooks.json || rm -rf ${HOME}/.codex/hooks.json
+	ln -vsf ${PWD}/.config/codex/hooks.json ${HOME}/.codex/hooks.json
 
 codexapp: ## Setup openai codex app
 	yay -S openai-codex-desktop
