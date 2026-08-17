@@ -315,11 +315,29 @@ hl.bind(mainMod .. " + CTRL + 7", hl.dsp.exec_cmd("~/.config/hypr/scripts/ctl-al
 hl.bind(mainMod .. " + CTRL + 8", hl.dsp.exec_cmd("~/.config/hypr/scripts/ctl-alt-8"))
 hl.bind(mainMod .. " + CTRL + 9", hl.dsp.exec_cmd("~/.config/hypr/scripts/ctl-alt-9"))
 
--- Drag window
+-- Click-drag and long-drag
+hl.config({
+    binds = {
+        drag_threshold = 10,
+    },
+})
+
 hl.bind(
-  "SUPER + mouse:272",
-  hl.dsp.window.drag(),
-  { mouse = true }
+    "SUPER + mouse:272",
+    hl.dsp.window.drag(),
+    {
+        mouse = true,
+        drag = true,
+    }
+)
+
+hl.bind(
+    "SUPER + mouse:272",
+    hl.dsp.window.float(),
+    {
+        mouse = true,
+        click = true,
+    }
 )
 
 hl.bind(
