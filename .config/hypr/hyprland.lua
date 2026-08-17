@@ -623,6 +623,13 @@ hl.window_rule({
 	fullscreen = true,
 })
 
+hl.config({
+    misc = {
+        enable_swallow = true,
+        swallow_regex = "^(foot)$",
+    },
+})
+
 hl.workspace_rule({
     workspace = "4",
     layout = "scrolling",
