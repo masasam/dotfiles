@@ -378,6 +378,13 @@ for i = 1, 10 do
     hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
 end
 
+-- Automatically hide scratchpad when changing Workspace
+hl.config({
+    binds = {
+        hide_special_on_workspace_change = true,
+    },
+})
+
 -- Example special workspace (scratchpad)
 hl.bind(mainMod .. " + Return", hl.dsp.workspace.toggle_special("magic"))
 hl.bind(mainMod .. " + SHIFT + Return", hl.dsp.window.move({ workspace = "special:magic" }))
