@@ -34,6 +34,13 @@ hl.monitor({
     scale    = 1.25,
 })
 
+-- When there is only one window at 3840 x 1600, prevent it from stretching too much horizontally
+hl.config({
+    layout = {
+        single_window_aspect_ratio = { 16, 10 },
+        single_window_aspect_ratio_tolerance = 0.1,
+    },
+})
 
 ---------------------
 ---- MY PROGRAMS ----
