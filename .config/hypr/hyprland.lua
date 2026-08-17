@@ -739,3 +739,11 @@ for _, app in ipairs(workspaceApps) do
         float = app.float,
     })
 end
+
+-- Return to "Previous Workspace" by monitor
+hl.bind(
+    "ALT + grave",
+    hl.dsp.focus({
+        workspace = "previous_per_monitor"
+    })
+)
