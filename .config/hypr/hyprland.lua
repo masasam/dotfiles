@@ -64,6 +64,7 @@ local menu        = "pkill fuzzel || fuzzel"
 hl.on("hyprland.start", function ()
   hl.exec_cmd("waybar & hypridle & hyprpaper & hyprsunset")
   hl.exec_cmd("nm-applet --indicator")
+  hl.exec_cmd("snappy-switcher --daemon")
   hl.exec_cmd("fcitx5-remote -r & fcitx5 -d --replace")
   hl.exec_cmd("systemctl --user start hyprpolkitagent")
   hl.exec_cmd("systemctl --user start hyprwhspr.service")
@@ -408,7 +409,8 @@ hl.bind(mainMod .. " + Return", hl.dsp.workspace.toggle_special("magic"))
 hl.bind(mainMod .. " + SHIFT + Return", hl.dsp.window.move({ workspace = "special:magic" }))
 
 -- Scroll through existing workspaces with mainMod + scroll
-hl.bind(mainMod .. " + Tab", hl.dsp.focus({ workspace = "e+1" }))
+hl.bind("ALT + Tab", hl.dsp.exec_cmd("snappy-switcher next --mod alt"))
+-- hl.bind(mainMod .. " + Tab", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mainMod .. " + SHIFT + Tab", hl.dsp.focus({ workspace = "e-1" }))
 hl.bind(mainMod .. " + Left", hl.dsp.focus({ workspace = "-1" }))
 hl.bind(mainMod .. " + Right", hl.dsp.focus({ workspace = "+1" }))
