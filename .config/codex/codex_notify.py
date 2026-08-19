@@ -109,9 +109,32 @@ def codex_terminal_is_focused() -> bool:
     return active_pid is not None and active_pid in parent_pids(os.getpid())
 
 
-def notify(title: str, body: str, *, urgency: str, timeout_ms: int) -> None:
+def play_sound(sound_name: str) -> None:
+    if not which("canberra-gtk-play"):
+        return
+    try:
+        subprocess.run(
+            ["canberra-gtk-play", "-i", sound_name, "-d", "Codex"],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+            timeout=2,
+            check=False,
+        )
+    except Exception:
+        pass
+
+
+def notify(
+    title: str,
+    body: str,
+    *,
+    urgency: str,
+    timeout_ms: int,
+    sound_name: str,
+) -> None:
     if ONLY_WHEN_UNFOCUSED and codex_terminal_is_focused():
         return
+    play_sound(sound_name)
     if not which("notify-send"):
         return
     try:
@@ -156,15 +179,36 @@ def permission_body(event: dict[str, Any]) -> str:
     return "\n".join(parts)
 
 
-def main() -> int:
+def load_event() -> dict[str, Any] | None:
     try:
-        event = json.load(sys.stdin)
+        if len(sys.argv) > 1:
+            event = json.loads(sys.argv[1])
+        else:
+            event = json.load(sys.stdin)
     except Exception:
+        return None
+    return event if isinstance(event, dict) else None
+
+
+def main() -> int:
+    event = load_event()
+    if event is None:
         print(json.dumps({"continue": True}))
         return 0
 
     hook = str(event.get("hook_event_name") or "")
     project = project_name(event.get("cwd"))
+
+    if event.get("type") == "agent-turn-complete":
+        message = compact(event.get("last-assistant-message")) or "タスクが完了しました。"
+        notify(
+            f"Codex · {project}",
+            message,
+            urgency="normal",
+            timeout_ms=DONE_TIMEOUT,
+            sound_name="complete",
+        )
+        return 0
 
     if hook == "PermissionRequest":
         notify(
@@ -172,6 +216,7 @@ def main() -> int:
             permission_body(event),
             urgency="critical",
             timeout_ms=APPROVAL_TIMEOUT,
+            sound_name="dialog-warning",
         )
         return 0
 
@@ -182,6 +227,7 @@ def main() -> int:
             message,
             urgency="normal",
             timeout_ms=DONE_TIMEOUT,
+            sound_name="complete",
         )
         print(json.dumps({"continue": True}, ensure_ascii=False))
         return 0
