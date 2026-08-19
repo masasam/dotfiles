@@ -116,6 +116,9 @@ hyprland: ## Setup hyprland
 	sudo ln -vsf ${PWD}/.config/wlogout/wlogout.desktop /usr/share/applications/wlogout.desktop
 	ln -vsf {${PWD},${HOME}}/.config/wlogout/style.css
 	chmod +x ${PWD}/.config/hypr/scripts/*
+	yay -S snappy-switcher
+	test -L ${HOME}/.config/snappy-switcher/config.ini || rm -rf ${HOME}/.config/snappy-switcher/config.ini
+	ln -vsf {${PWD},${HOME}}/.config/snappy-switcher/config.ini
 
 hyprwhspr: ## Setup hyprwhspr for voice input
 	yay -S hyprwhspr
