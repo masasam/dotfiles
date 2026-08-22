@@ -70,7 +70,7 @@ ssh: ## Init ssh
 	sudo ln -vsf {${PWD},}/etc/ssh/sshd_config
 
 emacs: ## Init emacs
-	$(PACMAN) emacs
+	$(PACMAN) emacs-wayland
 	test -L ${HOME}/.emacs.d || rm -rf ${HOME}/.emacs.d
 	ln -vsfn {${PWD},${HOME}}/.emacs.d
 
