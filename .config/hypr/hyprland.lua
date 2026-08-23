@@ -460,6 +460,21 @@ local function externalActive()
     return false
 end
 
+-- hl.get_monitors() only returns active outputs.  During startup DP-3 may not
+-- be active yet, so check the DRM connector state before choosing a profile.
+local function externalConnected()
+    local pipe = io.popen("grep -l ^connected$ /sys/class/drm/card*-DP-3/status 2>/dev/null")
+
+    if not pipe then
+        return externalActive()
+    end
+
+    local connectedPath = pipe:read("*l")
+    pipe:close()
+
+    return connectedPath ~= nil
+end
+
 -- hl.monitor() itself emits monitor.added/removed events.  Remember the
 -- selected profile so those events do not recursively apply the same setup.
 local activeMonitorProfile = nil
@@ -508,7 +523,7 @@ end
 
 -- Register the selected rules while the config is being evaluated.  Runtime
 -- hl.monitor() calls are temporary and are reset by a config reload.
-if externalActive() then
+if externalConnected() then
     useExternal()
 else
     useLaptop()
@@ -525,31 +540,44 @@ hl.bind(
     useLaptop
 )
 
--- Hotplug events can arrive before the DRM state has settled.  Debounce them
--- and derive the profile from the final set of active outputs.
+-- Hotplug events can arrive before the DRM state has settled.  Debounce them.
+local pendingMonitorProfile = nil
+
 local reconcileTimer = hl.timer(function()
-    if externalActive() then
+    local profile = pendingMonitorProfile
+    pendingMonitorProfile = nil
+
+    if profile == "external" then
         useExternal()
-    else
+    elseif profile == "laptop" then
         useLaptop()
     end
 end, { timeout = 500, type = "oneshot" })
 
 reconcileTimer:set_enabled(false)
 
-local function scheduleMonitorReconcile(monitor)
-    if monitor.name == laptop or monitor.name == external then
-        reconcileTimer:set_enabled(false)
-        reconcileTimer:set_enabled(true)
-    end
+local function scheduleMonitorReconcile(profile)
+    pendingMonitorProfile = profile
+    reconcileTimer:set_enabled(false)
+    reconcileTimer:set_enabled(true)
 end
 
-hl.on("monitor.added", scheduleMonitorReconcile)
-hl.on("monitor.removed", scheduleMonitorReconcile)
+hl.on("monitor.added", function(monitor)
+    if monitor.name == external then
+        scheduleMonitorReconcile("external")
+    end
+end)
+
+hl.on("monitor.removed", function(monitor)
+    -- useLaptop() disables DP-3 itself; do not treat that as a physical unplug.
+    if monitor.name == external and activeMonitorProfile ~= "laptop" then
+        scheduleMonitorReconcile("laptop")
+    end
+end)
 
 -- Also reconcile after every config load; hyprland.start is not emitted on a
--- reload, which otherwise leaves both outputs enabled by the fallback rule.
-reconcileTimer:set_enabled(true)
+-- reload.  The physical DRM state is already available at this point.
+scheduleMonitorReconcile(externalConnected() and "external" or "laptop")
 
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
