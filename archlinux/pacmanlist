@@ -160,7 +160,7 @@ efibootmgr
 efivar
 elfutils
 elinks
-emacs
+emacs-wayland
 enchant
 eslint
 ethtool
