@@ -26,13 +26,8 @@ local WORKSPACE = {
 ---- MONITORS ----
 ------------------
 
--- See https://wiki.hypr.land/Configuring/Basics/Monitors/
-hl.monitor({
-    output   = "",
-    mode     = "preferred",
-    position = "auto",
-    scale    = 1.25,
-})
+-- Monitor rules are applied by the single-output profile below.  A catch-all
+-- rule here would continuously re-enable the output that profile disables.
 
 -- When there is only one window at 3840 x 1600, prevent it from stretching too much horizontally
 hl.config({
@@ -455,7 +450,27 @@ local external = "DP-3"
 local laptopScale = 1.25
 local externalScale = 1.3973799126637554
 
+local function externalActive()
+    for _, monitor in ipairs(hl.get_monitors()) do
+        if monitor.name == external then
+            return true
+        end
+    end
+
+    return false
+end
+
+-- hl.monitor() itself emits monitor.added/removed events.  Remember the
+-- selected profile so those events do not recursively apply the same setup.
+local activeMonitorProfile = nil
+
 local function useExternal()
+    if activeMonitorProfile == "external" then
+        return
+    end
+
+    activeMonitorProfile = "external"
+
     hl.monitor({
         output = external,
         disabled = false,
@@ -471,6 +486,12 @@ local function useExternal()
 end
 
 local function useLaptop()
+    if activeMonitorProfile == "laptop" then
+        return
+    end
+
+    activeMonitorProfile = "laptop"
+
     hl.monitor({
         output = laptop,
         disabled = false,
@@ -485,6 +506,14 @@ local function useLaptop()
     })
 end
 
+-- Register the selected rules while the config is being evaluated.  Runtime
+-- hl.monitor() calls are temporary and are reset by a config reload.
+if externalActive() then
+    useExternal()
+else
+    useLaptop()
+end
+
 -- Manual switching
 hl.bind(
     "CTRL + ALT + SUPER + N",
@@ -496,38 +525,31 @@ hl.bind(
     useLaptop
 )
 
--- Automatic switching when DP-3 is connected
-hl.on("monitor.added", function(monitor)
-    if monitor.name == external then
-        useExternal()
-    end
-end)
-
--- After unplugging DP-3, return to built-in display
-hl.on("monitor.removed", function(monitor)
-    if monitor.name == external then
-        useLaptop()
-    end
-end)
-
--- Case where DP-3 is stuck from the time of startup
-local function externalConnected()
-    for _, monitor in ipairs(hl.get_monitors()) do
-        if monitor.name == external then
-            return true
-        end
-    end
-
-    return false
-end
-
-hl.on("hyprland.start", function()
-    if externalConnected() then
+-- Hotplug events can arrive before the DRM state has settled.  Debounce them
+-- and derive the profile from the final set of active outputs.
+local reconcileTimer = hl.timer(function()
+    if externalActive() then
         useExternal()
     else
         useLaptop()
     end
-end)
+end, { timeout = 500, type = "oneshot" })
+
+reconcileTimer:set_enabled(false)
+
+local function scheduleMonitorReconcile(monitor)
+    if monitor.name == laptop or monitor.name == external then
+        reconcileTimer:set_enabled(false)
+        reconcileTimer:set_enabled(true)
+    end
+end
+
+hl.on("monitor.added", scheduleMonitorReconcile)
+hl.on("monitor.removed", scheduleMonitorReconcile)
+
+-- Also reconcile after every config load; hyprland.start is not emitted on a
+-- reload, which otherwise leaves both outputs enabled by the fallback rule.
+reconcileTimer:set_enabled(true)
 
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
