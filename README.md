@@ -494,7 +494,6 @@ You can make install from here
 	mise use -g ruff
 	mise use -g stripe-cli
 	mise use -g trdsql
-	mise use -g usage
 	mise use -g uv
 	mise use -g yay
 	mise use -g youtube-dl
