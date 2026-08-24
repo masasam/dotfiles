@@ -14,7 +14,7 @@
 
 ![codex](https://raw.githubusercontent.com/masasam/image/image/codex.png)
 
-### screencast
+### screencast(Just connect FlexScan EV3895 with USB Type-C)
 
 ![gif](https://raw.githubusercontent.com/masasam/image/image/output.gif)
 
