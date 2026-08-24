@@ -2,13 +2,19 @@
 
 ## Synopsis
 
+### laptop
+
 ![emacs](https://raw.githubusercontent.com/masasam/image/image/emacs.png)
+
+![terminal](https://raw.githubusercontent.com/masasam/image/image/terminal.png)
+
+### desktop
 
 ![mutt](https://raw.githubusercontent.com/masasam/image/image/mutt.png)
 
 ![codex](https://raw.githubusercontent.com/masasam/image/image/codex.png)
 
-![terminal](https://raw.githubusercontent.com/masasam/image/image/terminal.png)
+### screencast
 
 ![gif](https://raw.githubusercontent.com/masasam/image/image/output.gif)
 
