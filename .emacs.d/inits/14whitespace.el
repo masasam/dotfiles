@@ -1,4 +1,4 @@
-;;; 17whitespace.el --- 17whitespace.el
+;;; 17whitespace.el --- 17whitespace.el -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)

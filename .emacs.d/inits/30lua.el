@@ -1,4 +1,4 @@
-;;; 30lua.el --- 30lua.el
+;;; 30lua.el --- 30lua.el -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)

@@ -1,4 +1,4 @@
-;;; 11markdown.el --- 11markdown.el
+;;; 11markdown.el --- 11markdown.el -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)

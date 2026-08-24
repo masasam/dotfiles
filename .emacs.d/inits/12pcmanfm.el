@@ -1,4 +1,4 @@
-;;; 12pcmanfm.el --- 12pcmanfm.el
+;;; 12pcmanfm.el --- 12pcmanfm.el -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)

@@ -1,4 +1,4 @@
-;;; 13chromium.el --- 13chromium.el
+;;; 13chromium.el --- 13chromium.el -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)

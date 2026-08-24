@@ -1,4 +1,4 @@
-;;; package --- 97gptel.el
+;;; package --- 97gptel.el -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)

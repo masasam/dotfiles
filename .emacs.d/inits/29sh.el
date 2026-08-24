@@ -1,4 +1,4 @@
-;;; 29sh.el --- 29sh.el
+;;; 29sh.el --- 29sh.el -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)

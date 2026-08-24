@@ -1,4 +1,4 @@
-;;; 04vertico.el --- 04vertico.el
+;;; 04vertico.el --- 04vertico.el -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)

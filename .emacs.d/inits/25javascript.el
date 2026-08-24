@@ -1,4 +1,4 @@
-;;; 25javascript.el --- 25javascript.el
+;;; 25javascript.el --- 25javascript.el -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)

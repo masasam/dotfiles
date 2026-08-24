@@ -1,4 +1,4 @@
-;;; 34css.el --- 34css.el
+;;; 34css.el --- 34css.el -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)

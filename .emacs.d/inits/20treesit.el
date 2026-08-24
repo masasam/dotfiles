@@ -1,4 +1,4 @@
-;;; 20treesit.el --- 20treesit.el
+;;; 20treesit.el --- 20treesit.el -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)

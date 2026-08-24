@@ -1,4 +1,4 @@
-;;; 98copilot.el --- 98copilot.el
+;;; 98copilot.el --- 98copilot.el -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)

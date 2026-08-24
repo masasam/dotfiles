@@ -1,4 +1,4 @@
-;;; 28ruby.el --- 28ruby.el
+;;; 28ruby.el --- 28ruby.el -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)

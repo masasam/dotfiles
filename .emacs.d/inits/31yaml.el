@@ -1,4 +1,4 @@
-;;; 31yaml.el --- 31yaml.el
+;;; 31yaml.el --- 31yaml.el -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)

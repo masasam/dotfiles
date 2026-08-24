@@ -1,4 +1,4 @@
-;;; 32html.el --- 32html.el
+;;; 32html.el --- 32html.el -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)

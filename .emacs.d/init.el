@@ -1,4 +1,4 @@
-;;; init.el --- init.el
+;;; init.el --- init.el -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;; URL: https://github.com/masasam/dotfiles
 ;;; Code:
@@ -131,7 +131,6 @@
   (package-install 'rust-mode)
   (package-install 'lua-ts-mode)
   (package-install 'sly)
-  (package-install 'sly-macrostep)
   (package-install 'smart-jump)
   (package-install 'shackle)
   (package-install 'symbol-overlay)

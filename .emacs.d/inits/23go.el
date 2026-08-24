@@ -1,4 +1,4 @@
-;;; 23go.el --- 23go.el
+;;; 23go.el --- 23go.el -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)

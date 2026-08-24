@@ -1,4 +1,4 @@
-;;; 06hydra.el --- 06hydra.el
+;;; 06hydra.el --- 06hydra.el -*- lexical-binding: t; -*-
 
 ;;; Code:
 ;;(setq debug-on-error t)

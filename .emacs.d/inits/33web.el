@@ -1,4 +1,4 @@
-;;; 33web.el --- 33web.el
+;;; 33web.el --- 33web.el -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)

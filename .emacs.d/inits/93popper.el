@@ -1,4 +1,4 @@
-;;; 93popper.el --- 93popper.el
+;;; 93popper.el --- 93popper.el -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)

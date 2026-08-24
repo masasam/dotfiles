@@ -1,4 +1,4 @@
-;;; 99which-key.el --- 99which-key.el
+;;; 99which-key.el --- 99which-key.el -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)

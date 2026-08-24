@@ -1,4 +1,4 @@
-;;; 16easy-jekyll.el --- 16easy-jekyll.el
+;;; 16easy-jekyll.el --- 16easy-jekyll.el -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)

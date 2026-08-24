@@ -1,4 +1,4 @@
-;;; 26typescript.el --- 26typescript.el
+;;; 26typescript.el --- 26typescript.el -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)

@@ -1,4 +1,4 @@
-;;; 01dashboard.el --- 01dashboard.el
+;;; 01dashboard.el --- 01dashboard.el -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)

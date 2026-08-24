@@ -1,4 +1,4 @@
-;;; 03consult.el --- 03consult.el
+;;; 03consult.el --- 03consult.el -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)

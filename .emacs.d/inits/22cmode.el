@@ -1,4 +1,4 @@
-;;; 22cmode.el --- 22cmode.el
+;;; 22cmode.el --- 22cmode.el -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)

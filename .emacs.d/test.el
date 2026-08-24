@@ -1,4 +1,4 @@
-;;; test.el --- test.el
+;;; test.el --- test.el -*- lexical-binding: t; -*-
 ;;; Commentary:
 
 ;; This will start with typing testemacs at shell with minimal emacs.

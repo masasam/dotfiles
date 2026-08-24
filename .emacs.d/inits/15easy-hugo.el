@@ -1,4 +1,4 @@
-;;; 15easy-hugo.el --- 15easy-hugo.el
+;;; 15easy-hugo.el --- 15easy-hugo.el -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)

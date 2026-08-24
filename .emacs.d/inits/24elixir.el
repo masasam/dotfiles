@@ -1,5 +1,4 @@
-
-;;; 24elixir.el --- 24elixir.el
+;;; 24elixir.el --- 24elixir.el -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)

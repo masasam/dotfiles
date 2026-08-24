@@ -1,4 +1,4 @@
-;;; 95elisp.el --- 95elisp.el
+;;; 95elisp.el --- 95elisp.el -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)

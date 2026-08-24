@@ -1,4 +1,4 @@
-;;; 09misc.el --- 09misc.el
+;;; 09misc.el --- 09misc.el -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)

@@ -1,4 +1,4 @@
-;;; 19deadgrep.el --- 19deadgrep.el
+;;; 19deadgrep.el --- 19deadgrep.el -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)

@@ -1,4 +1,4 @@
-;;; 18file.el --- 18file
+;;; 18file.el --- 18file -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)

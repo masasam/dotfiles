@@ -1,4 +1,4 @@
-;;; 07org-mode.el --- 07org-mode.el
+;;; 07org-mode.el --- 07org-mode.el -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 ;;(setq debug-on-error t)
