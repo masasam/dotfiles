@@ -293,6 +293,14 @@ hl.gesture({
     action = "workspace"
 })
 
+-- Hide the mouse cursor while using the keyboard
+hl.config({
+    cursor = {
+        hide_on_key_press = true,
+        inactive_timeout = 5,
+    },
+})
+
 -- Example per-device config
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Devices/ for more
 hl.device({
@@ -815,19 +823,3 @@ for _, app in ipairs(workspaceApps) do
         float = app.float,
     })
 end
-
--- Return to "Previous Workspace" by monitor
-hl.bind(
-    "ALT + grave",
-    hl.dsp.focus({
-        workspace = "previous_per_monitor"
-    })
-)
-
--- Hide the mouse cursor while using the keyboard
-hl.config({
-    cursor = {
-        hide_on_key_press = true,
-        inactive_timeout = 5,
-    },
-})
