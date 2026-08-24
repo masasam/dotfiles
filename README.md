@@ -10,11 +10,13 @@
 
 ### desktop
 
+Just connect FlexScan EV3895 with USB Type-C!
+
 ![mutt](https://raw.githubusercontent.com/masasam/image/image/mutt.png)
 
 ![codex](https://raw.githubusercontent.com/masasam/image/image/codex.png)
 
-### screencast(Just connect FlexScan EV3895 with USB Type-C)
+### screencast
 
 ![gif](https://raw.githubusercontent.com/masasam/image/image/output.gif)
 
