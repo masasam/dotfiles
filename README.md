@@ -10,7 +10,7 @@
 
 ### desktop
 
-Just connect FlexScan EV3895 with USB Type-C!
+Just connect FlexScan EV3895 with USB Type-C.
 
 ![mutt](https://raw.githubusercontent.com/masasam/image/image/mutt.png)
 
