@@ -2,13 +2,13 @@
 
 ## Synopsis
 
-### laptop
+### Laptop
 
 ![emacs](https://raw.githubusercontent.com/masasam/image/image/emacs.png)
 
 ![terminal](https://raw.githubusercontent.com/masasam/image/image/terminal.png)
 
-### desktop
+### Desktop
 
 Just connect FlexScan EV3895 with USB Type-C.
 
@@ -16,7 +16,7 @@ Just connect FlexScan EV3895 with USB Type-C.
 
 ![codex](https://raw.githubusercontent.com/masasam/image/image/codex.png)
 
-### screencast
+### Screencast
 
 ![gif](https://raw.githubusercontent.com/masasam/image/image/output.gif)
 
