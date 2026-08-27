@@ -15,7 +15,7 @@ local WORKSPACE = {
     code     = "3",
     docs     = "4",
     files    = "5",
-    graphics = "6",
+    docs2    = "6",
     chat     = "7",
     meeting  = "8",
     media    = "9",
@@ -784,19 +784,17 @@ local workspaceApps = {
     -- Workspace 3: Editor
     { name = "emacs",              class = "^(Emacs)$",                  workspace = WORKSPACE.code },
 
-    -- Workspace 4: Documents / DB
+    -- Workspace pool 4 -> 6 -> 11...: Documents / DB / Graphics
     { name = "pdf",                class = "^(org.gnome.Papers)$",       workspace = WORKSPACE.docs },
     { name = "beekeeper-studio",   class = "^(beekeeper-studio)$",      workspace = WORKSPACE.docs },
     { name = "sqlitebrowser",      class = "^(sqlitebrowser)$",          workspace = WORKSPACE.docs },
     { name = "libreoffice-writer", class = "^(libreoffice-writer)$",     workspace = WORKSPACE.docs },
     { name = "libreoffice-calc",   class = "^(libreoffice-calc)$",       workspace = WORKSPACE.docs },
+    { name = "inkscape",           class = "^(org.inkscape.Inkscape)$", workspace = WORKSPACE.docs, float = true },
+    { name = "gimp",               class = "^(gimp)$",                   workspace = WORKSPACE.docs, float = true },
 
     -- Workspace 5: Files
     { name = "pcmanfm",            class = "^(pcmanfm-qt)$",             workspace = WORKSPACE.files },
-
-    -- Workspace 6: Graphics
-    { name = "inkscape",           class = "^(org.inkscape.Inkscape)$", workspace = WORKSPACE.graphics, float = true },
-    { name = "gimp",               class = "^(gimp)$",                   workspace = WORKSPACE.graphics, float = true },
 
     -- Workspace 7: Chat
     { name = "discord",            class = "^(discord)$",                workspace = WORKSPACE.chat },
@@ -823,18 +821,29 @@ for _, app in ipairs(workspaceApps) do
     })
 end
 
--- Keep the first Documents / DB app on Workspace 4.  Move additional apps to
--- unused numeric workspaces starting at 11, since Workspaces 5-10 are reserved
--- above for other applications.
-local docsAppClasses = {
+-- Place Documents / DB / Graphics apps on Workspaces 4, 6, then unused numeric
+-- workspaces starting at 11.  Workspaces 5 and 7-10 remain reserved above.
+local workspacePoolAppClasses = {
     ["org.gnome.Papers"] = true,
     ["beekeeper-studio"] = true,
     ["sqlitebrowser"] = true,
     ["libreoffice-writer"] = true,
     ["libreoffice-calc"] = true,
+    ["org.inkscape.Inkscape"] = true,
+    ["gimp"] = true,
 }
 
-local function nextDocsOverflowWorkspace()
+local workspacePoolFloatingClasses = {
+    ["org.inkscape.Inkscape"] = true,
+    ["gimp"] = true,
+}
+
+local workspacePoolSlots = {
+    tonumber(WORKSPACE.docs),
+    tonumber(WORKSPACE.docs2),
+}
+
+local function nextWorkspacePoolOverflow()
     local workspace = 11
 
     while hl.get_workspace(workspace) ~= nil do
@@ -844,25 +853,29 @@ local function nextDocsOverflowWorkspace()
     return workspace
 end
 
-local function docsAppCountOnWorkspace(workspace)
-    local count = 0
-
+local function workspacePoolSlotOccupied(workspace, openingWindow)
     for _, candidate in ipairs(hl.get_workspace_windows(workspace)) do
-        if not candidate.floating and docsAppClasses[candidate.class] then
-            count = count + 1
+        if candidate.address ~= openingWindow.address
+            and workspacePoolAppClasses[candidate.class]
+            and (not candidate.floating or workspacePoolFloatingClasses[candidate.class]) then
+            return true
         end
     end
 
-    return count
+    return false
 end
 
-local function placeDocsApp(window)
-    if window == nil or window.floating or not docsAppClasses[window.class] then
+local function placeWorkspacePoolApp(window)
+    if window == nil or not workspacePoolAppClasses[window.class] then
+        return
+    end
+
+    -- Ignore transient floating dialogs from the non-graphics applications.
+    if window.floating and not workspacePoolFloatingClasses[window.class] then
         return
     end
 
     local currentWorkspace = window.workspace
-    local docsWorkspace = tonumber(WORKSPACE.docs)
 
     -- Workspaces 11 and above are the overflow area managed by this function.
     -- Do not move a window again when a later class event is received.
@@ -870,19 +883,38 @@ local function placeDocsApp(window)
         return
     end
 
-    local targetWorkspace
-    if currentWorkspace ~= nil and currentWorkspace.id == docsWorkspace then
-        -- The newly opened window is already included in the count.
-        if docsAppCountOnWorkspace(WORKSPACE.docs) <= 1 then
-            return
+    -- Keep additional windows belonging to the same floating graphics process
+    -- beside its main window instead of consuming another workspace slot.
+    if workspacePoolFloatingClasses[window.class] then
+        for _, candidate in ipairs(hl.get_windows()) do
+            if candidate.address ~= window.address
+                and candidate.pid == window.pid
+                and candidate.class == window.class
+                and candidate.workspace ~= nil then
+                if currentWorkspace == nil or currentWorkspace.id ~= candidate.workspace.id then
+                    hl.dispatch(hl.dsp.window.move({
+                        workspace = candidate.workspace.id,
+                        follow = false,
+                        window = window,
+                    }))
+                end
+                return
+            end
         end
-        targetWorkspace = nextDocsOverflowWorkspace()
-    elseif docsAppCountOnWorkspace(WORKSPACE.docs) == 0 then
-        -- Correct windows that inherited Emacs's workspace or whose class was
-        -- not final when the static window rule was evaluated.
-        targetWorkspace = docsWorkspace
-    else
-        targetWorkspace = nextDocsOverflowWorkspace()
+    end
+
+    local targetWorkspace = nil
+    for _, workspace in ipairs(workspacePoolSlots) do
+        if not workspacePoolSlotOccupied(workspace, window) then
+            targetWorkspace = workspace
+            break
+        end
+    end
+
+    targetWorkspace = targetWorkspace or nextWorkspacePoolOverflow()
+
+    if currentWorkspace ~= nil and currentWorkspace.id == targetWorkspace then
+        return
     end
 
     hl.dispatch(hl.dsp.window.move({
@@ -895,5 +927,5 @@ end
 -- window.open handles normal launches after static rules have run.  Some apps,
 -- notably LibreOffice, can finalize their class after mapping, so class changes
 -- must run through the same placement logic as well.
-hl.on("window.open", placeDocsApp)
-hl.on("window.class", placeDocsApp)
+hl.on("window.open", placeWorkspacePoolApp)
+hl.on("window.class", placeWorkspacePoolApp)

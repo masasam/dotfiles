@@ -28,6 +28,16 @@
             "8": "",
             "9": "",
             "10": "󰈹",
+            "11": "11",
+            "12": "12",
+            "13": "13",
+            "14": "14",
+            "15": "15",
+            "16": "16",
+            "17": "17",
+            "18": "18",
+            "19": "19",
+            "20": "20",
 
             "default": ""
         },
@@ -36,13 +46,14 @@
             "1": "1  Terminal",
             "2": "2  Web / Chrome",
             "3": "3  Code / Emacs",
-            "4": "4  Docs / DB",
+            "4": "4  Docs / DB / Graphics #1",
             "5": "5  Files",
-            "6": "6  Graphics",
+            "6": "6  Docs / DB / Graphics #2",
             "7": "7  Chat",
             "8": "8  Meeting",
             "9": "9  Media",
-            "10": "0  Firefox"
+            "10": "0  Firefox",
+            "default": "{name}  Docs / DB / Graphics overflow"
         },
 
         "persistent-workspaces": {
