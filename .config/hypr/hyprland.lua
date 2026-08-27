@@ -746,31 +746,6 @@ hl.config({
     },
 })
 
-hl.workspace_rule({
-    workspace = "4",
-    layout = "scrolling",
-})
-
-hl.bind(
-    "SUPER + comma",
-    hl.dsp.layout("move -col")
-)
-
-hl.bind(
-    "SUPER + period",
-    hl.dsp.layout("move +col")
-)
-
-hl.bind(
-    "SUPER + SHIFT + comma",
-    hl.dsp.layout("swapcol l")
-)
-
-hl.bind(
-    "SUPER + SHIFT + period",
-    hl.dsp.layout("swapcol r")
-)
-
 -- Opening specialscratchpad launches foot
 hl.workspace_rule({
     workspace = "special:magic",
