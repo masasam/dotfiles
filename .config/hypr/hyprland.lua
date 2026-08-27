@@ -844,29 +844,56 @@ local function nextDocsOverflowWorkspace()
     return workspace
 end
 
-hl.on("window.open", function(window)
+local function docsAppCountOnWorkspace(workspace)
+    local count = 0
+
+    for _, candidate in ipairs(hl.get_workspace_windows(workspace)) do
+        if not candidate.floating and docsAppClasses[candidate.class] then
+            count = count + 1
+        end
+    end
+
+    return count
+end
+
+local function placeDocsApp(window)
     if window == nil or window.floating or not docsAppClasses[window.class] then
         return
     end
 
-    if window.workspace == nil or window.workspace.id ~= tonumber(WORKSPACE.docs) then
+    local currentWorkspace = window.workspace
+    local docsWorkspace = tonumber(WORKSPACE.docs)
+
+    -- Workspaces 11 and above are the overflow area managed by this function.
+    -- Do not move a window again when a later class event is received.
+    if currentWorkspace ~= nil and currentWorkspace.id >= 11 then
         return
     end
 
-    local docsAppCount = 0
-    for _, candidate in ipairs(hl.get_workspace_windows(WORKSPACE.docs)) do
-        if not candidate.floating and docsAppClasses[candidate.class] then
-            docsAppCount = docsAppCount + 1
+    local targetWorkspace
+    if currentWorkspace ~= nil and currentWorkspace.id == docsWorkspace then
+        -- The newly opened window is already included in the count.
+        if docsAppCountOnWorkspace(WORKSPACE.docs) <= 1 then
+            return
         end
+        targetWorkspace = nextDocsOverflowWorkspace()
+    elseif docsAppCountOnWorkspace(WORKSPACE.docs) == 0 then
+        -- Correct windows that inherited Emacs's workspace or whose class was
+        -- not final when the static window rule was evaluated.
+        targetWorkspace = docsWorkspace
+    else
+        targetWorkspace = nextDocsOverflowWorkspace()
     end
 
-    -- The newly opened window is already included in the count.  Therefore a
-    -- count greater than one means another Documents / DB app was there first.
-    if docsAppCount > 1 then
-        hl.dispatch(hl.dsp.window.move({
-            workspace = nextDocsOverflowWorkspace(),
-            follow = false,
-            window = window,
-        }))
-    end
-end)
+    hl.dispatch(hl.dsp.window.move({
+        workspace = targetWorkspace,
+        follow = false,
+        window = window,
+    }))
+end
+
+-- window.open handles normal launches after static rules have run.  Some apps,
+-- notably LibreOffice, can finalize their class after mapping, so class changes
+-- must run through the same placement logic as well.
+hl.on("window.open", placeDocsApp)
+hl.on("window.class", placeDocsApp)
