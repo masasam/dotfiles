@@ -822,3 +822,51 @@ for _, app in ipairs(workspaceApps) do
         float = app.float,
     })
 end
+
+-- Keep the first Documents / DB app on Workspace 4.  Move additional apps to
+-- unused numeric workspaces starting at 11, since Workspaces 5-10 are reserved
+-- above for other applications.
+local docsAppClasses = {
+    ["org.gnome.Papers"] = true,
+    ["beekeeper-studio"] = true,
+    ["sqlitebrowser"] = true,
+    ["libreoffice-writer"] = true,
+    ["libreoffice-calc"] = true,
+}
+
+local function nextDocsOverflowWorkspace()
+    local workspace = 11
+
+    while hl.get_workspace(workspace) ~= nil do
+        workspace = workspace + 1
+    end
+
+    return workspace
+end
+
+hl.on("window.open", function(window)
+    if window == nil or window.floating or not docsAppClasses[window.class] then
+        return
+    end
+
+    if window.workspace == nil or window.workspace.id ~= tonumber(WORKSPACE.docs) then
+        return
+    end
+
+    local docsAppCount = 0
+    for _, candidate in ipairs(hl.get_workspace_windows(WORKSPACE.docs)) do
+        if not candidate.floating and docsAppClasses[candidate.class] then
+            docsAppCount = docsAppCount + 1
+        end
+    end
+
+    -- The newly opened window is already included in the count.  Therefore a
+    -- count greater than one means another Documents / DB app was there first.
+    if docsAppCount > 1 then
+        hl.dispatch(hl.dsp.window.move({
+            workspace = nextDocsOverflowWorkspace(),
+            follow = false,
+            window = window,
+        }))
+    end
+end)
