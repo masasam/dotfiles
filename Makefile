@@ -264,6 +264,8 @@ gtk-theme: ## Set gtk theme
 	gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark
 	test -L ${HOME}/.config/gtk-4.0 || rm -rf ${HOME}/.config/gtk-4.0
 	ln -vsfn {${PWD},${HOME}}/.config/gtk-4.0
+	test -L ${HOME}/.config/gtk-3.0 || rm -rf ${HOME}/.config/gtk-3.0
+	ln -vsfn {${PWD},${HOME}}/.config/gtk-3.0
 
 throttled: ## Workaround for Intel throttling issues in thinkpad x1 carbon gen6
 	$(PACMAN) throttled

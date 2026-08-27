@@ -81,7 +81,6 @@ hl.env("HYPRCURSOR_SIZE", "24")
 
 hl.env("XMODIFIERS", "@im=fcitx")
 hl.env("QT_IM_MODULE", "fcitx")
-hl.env("GTK_IM_MODULE", "fcitx")
 
 
 -----------------------
