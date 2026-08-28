@@ -22,7 +22,7 @@ PACKAGES	+= zsh-syntax-highlighting yq ansible parallel alsa-utils geckodriver
 PACKAGES	+= bash-completion mathjax expect obs-studio cscope pdfgrep cmatrix
 PACKAGES	+= jpegoptim nethogs plocate pacman-contrib x11-ssh-askpass streamlink
 PACKAGES	+= jhead sshfs fping syncthing terraform bat ttf-font-awesome kooha
-PACKAGES	+= ripgrep stunnel vimiv firejail noto-fonts-extra gnome-calculator bc
+PACKAGES	+= ripgrep stunnel mpv firejail noto-fonts-extra gnome-calculator bc
 PACKAGES	+= smartmontools wireshark-cli lsof watchexec lazygit yazi bat pdfpc
 PACKAGES	+= gtop gopls convmv man-db baobab ioping ruby-irb mkcert findomain
 PACKAGES	+= guetzli fabric detox usleep libvterm bind lame git-lfs hex miller
@@ -34,7 +34,7 @@ PACKAGES	+= mission-center pass gitui sqlitebrowser git-delta speedtest-cli
 PACKAGES	+= jc fx httpie bash-language-server editorconfig-core-c hexedit tldr
 PACKAGES	+= pv perl-net-ip lshw xdotool sshuttle packer libreoffice-fresh-ja
 PACKAGES	+= ast-grep dosfstools unzip zig zls gitleaks reflector geeqie ghq
-PACKAGES	+= spotify-launcher mpv biome
+PACKAGES	+= spotify-launcher biome lximage-qt
 
 PACMAN		:= sudo pacman -S 
 SYSTEMD_ENABLE	:= sudo systemctl --now enable
