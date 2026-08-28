@@ -389,7 +389,7 @@ emacspeak: ## Install emacspeak for blind person
 	yay -S $@
 
 aur: ## Install arch linux AUR packages using yay
-	yay -S downgrade git-secrets grok-build pscale-cli turso-bin vscode-langservers-extracted zoom
+	yay -S downgrade git-secrets grok-build pscale-cli turso-bin vscode-langservers-extracted yacreader zoom
 
 aurplus: ## Install arch linux AUR packages using yay
 	yay -S appimagelauncher asunder hermes-agent nkf rgxg rtags terraformer-bin
