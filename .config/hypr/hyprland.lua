@@ -725,8 +725,8 @@ hl.window_rule({
 })
 
 hl.window_rule({
-    name  = "maximize-vimiv",
-    match = { class = "^(vimiv)$" },
+    name  = "maximize-lximage-qt",
+    match = { class = "^(lximage-qt)$" },
 	float = true,
     center = true,
 	maximize = true,
