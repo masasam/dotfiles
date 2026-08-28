@@ -85,7 +85,6 @@ cblas
 ccls
 cdparanoia
 cef
-cfitsio
 check
 cifs-utils
 clang
@@ -182,7 +181,6 @@ fdupes
 ffcall
 ffmpeg
 ffmpeg4.4
-ffmpegthumbnailer
 fftw
 file
 file-roller
@@ -225,7 +223,6 @@ gdb-common
 gdbm
 gdk-pixbuf2
 geckodriver
-geeqie
 gegl
 gettext
 gexiv2-common
@@ -878,7 +875,6 @@ libsasl
 libseccomp
 libsecret
 libshout
-libshumate
 libsigc++
 libsigc++-3.0
 libsigsegv
@@ -1014,13 +1010,13 @@ lua
 lua-lpeg
 lua51
 lua51-lpeg
-lua52
 lua53
 lua54
 lua54-lpeg
 luajit
 lv2
 lvm2
+lximage-qt
 lxqt-menu-data
 lynx
 lz4
@@ -1145,6 +1141,7 @@ pcre
 pcre2
 pcsclite
 pdfgrep
+pdfio
 pdfpc
 perl
 perl-error
@@ -1177,7 +1174,6 @@ pps-tools
 prettier
 procps-ng
 protobuf
-protobuf-c
 prrte
 psmisc
 pugixml
@@ -1347,8 +1343,14 @@ qt5-translations
 qt5-wayland
 qt5-x11extras
 qt5ct
+qt6-5compat
 qt6-base
 qt6-declarative
+qt6-imageformats
+qt6-multimedia
+qt6-multimedia-ffmpeg
+qt6-shadertools
+qt6-speech
 qt6-svg
 qt6-translations
 qt6-wayland
@@ -1554,7 +1556,6 @@ verdict
 vid.stab
 vim
 vim-runtime
-vimiv
 vmaf
 volume_key
 vulkan-headers
