@@ -85,6 +85,7 @@ cblas
 ccls
 cdparanoia
 cef
+cfitsio
 check
 cifs-utils
 clang
@@ -705,6 +706,7 @@ libcddb
 libcdio
 libcdio-paranoia
 libcdr
+libcgif
 libcloudproviders
 libcmis
 libcolord
@@ -920,6 +922,7 @@ libva
 libva-utils
 libvdpau
 libverto
+libvips
 libvisio
 libvorbis
 libvpl
