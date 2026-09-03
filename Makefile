@@ -34,7 +34,7 @@ PACKAGES	+= mission-center pass gitui sqlitebrowser git-delta speedtest-cli
 PACKAGES	+= jc fx httpie bash-language-server editorconfig-core-c hexedit tldr
 PACKAGES	+= pv perl-net-ip lshw xdotool sshuttle packer libreoffice-fresh-ja
 PACKAGES	+= ast-grep dosfstools unzip zig zls gitleaks reflector ghq biome
-PACKAGES	+= spotify-launcher lximage-qt ruby-lsp
+PACKAGES	+= spotify-launcher lximage-qt ruby-lsp python-lsp-server
 
 PACMAN		:= sudo pacman -S 
 SYSTEMD_ENABLE	:= sudo systemctl --now enable
