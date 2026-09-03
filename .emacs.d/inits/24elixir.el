@@ -10,7 +10,12 @@
 		 ("mix\\.lock" . elixir-ts-mode))
   :hook (elixir-ts-mode . (lambda ()
 			    (my/eglot-ensure-if-program
-			     "language_server.sh" "start_lexical.sh"))))
+			     "elixir-ls" "language_server.sh"
+			     "start_lexical.sh"))))
+
+(with-eval-after-load 'eglot
+  (add-to-list 'eglot-server-programs
+	       '(elixir-ts-mode . ("elixir-ls"))))
 
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)

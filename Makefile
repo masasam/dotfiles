@@ -153,6 +153,8 @@ mise: ## Setup mise
 	mise use -g claude-code
 	mise use -g deno
 	mise use -g duckdb
+	mise use -g erlang
+	mise use -g elixir
 	mise use -g elixir-ls
 	mise use -g firebase
 	mise use -g gemini-cli

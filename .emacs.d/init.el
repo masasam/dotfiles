@@ -42,7 +42,7 @@
 	  consult-ghq copilot corfu csv-mode dashboard dmacro deadgrep difftastic
 	  diff-hl dockerfile-mode dracula-theme dumb-jump easy-hugo easy-jekyll
 	  edit-indirect editorconfig-generate eldoc-box elisp-slime-nav
-	  elixir-mode embark embark-consult espy exec-path-from-shell expreg
+	  embark embark-consult espy exec-path-from-shell expreg
 	  fill-column-indicator flymake flymake-diagnostic-at-point ggtags
 	  git-timemachine github-explorer github-review go-mode google-c-style
 	  google-this google-translate gptel gptel-commit gt htmlize hydra iedit
@@ -53,7 +53,7 @@
 	  posframe puni python-mode quickrun rake realgud realgud-byebug
 	  apheleia restclient restclient-test rust-mode lua-ts-mode sly
 	  smart-jump shackle symbol-overlay tldr toml-mode trashed tree-sitter
-	  tree-sitter-langs typescript-mode verb vertico volatile-highlights
+	  tree-sitter-langs verb vertico volatile-highlights
 	  vundo web-mode yaml-mode yasnippet yasnippet-snippets zig-mode))
 	(required-packages
 	 (append required-packages
