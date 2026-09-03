@@ -54,7 +54,7 @@
 	  apheleia restclient restclient-test rust-mode lua-ts-mode sly
 	  smart-jump shackle symbol-overlay tldr toml-mode trashed tree-sitter
 	  tree-sitter-langs typescript-mode verb vertico volatile-highlights
-	  vundo web-mode yaml-mode yasnippet yasnippet-snippets))
+	  vundo web-mode yaml-mode yasnippet yasnippet-snippets zig-mode))
 	(required-packages
 	 (append required-packages
 		 (when (< emacs-major-version 29) '(docker-tramp eglot))

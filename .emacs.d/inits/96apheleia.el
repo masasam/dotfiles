@@ -9,7 +9,8 @@
 	'((go-ts-mode . goimports)
 	  (tsx-ts-mode . prettier-typescript)
 	  (json-ts-mode . prettier-json)
-	  (python-ts-mode . ruff)))
+	  (python-ts-mode . ruff)
+	  (zig-mode . zig-fmt)))
   (apheleia-global-mode 1))
 
 ;; Local Variables:

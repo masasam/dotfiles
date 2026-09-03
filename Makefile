@@ -179,6 +179,7 @@ mise: ## Setup mise
 	mise use -g yay
 	mise use -g youtube-dl
 	mise use -g yt-dlp
+	mise use -g zls
 
 codex: ## Setup openai codex
 	mise use -g codex
