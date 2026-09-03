@@ -51,7 +51,7 @@
 	  material-theme minions nginx-mode openwith orderless org package-lint
 	  package-lint-flymake page-break-lines pass password-generator popper
 	  posframe puni python-mode quickrun rake realgud realgud-byebug
-	  reformatter restclient restclient-test rust-mode lua-ts-mode sly
+	  apheleia restclient restclient-test rust-mode lua-ts-mode sly
 	  smart-jump shackle symbol-overlay tldr toml-mode trashed tree-sitter
 	  tree-sitter-langs typescript-mode verb vertico volatile-highlights
 	  vundo web-mode yaml-mode yasnippet yasnippet-snippets))
