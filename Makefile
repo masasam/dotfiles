@@ -152,6 +152,7 @@ mise: ## Setup mise
 	mise use -g claude-code
 	mise use -g deno
 	mise use -g duckdb
+	mise use -g elixir-ls
 	mise use -g firebase
 	mise use -g gemini-cli
 	mise use -g hugo
@@ -475,10 +476,6 @@ solargraph: ## Ruby language server and jekyll
 
 gnuglobal: ${HOME}/.local ## Install gnu global
 	$(PACMAN) global python-pygments
-
-elixir-ls: ## Install elixir-ls
-	$(PACMAN) elixir
-	yay -S $@
 
 emacs-devel: ## Install development version of emacs
 	git clone -b emacs-30 git@github.com:emacs-mirror/emacs.git ${HOME}/src/github.com/masasam/emacs
