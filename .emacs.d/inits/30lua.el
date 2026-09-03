@@ -7,7 +7,9 @@
   :mode
   ("\\.lua\\'" . lua-ts-mode)
   :hook
-  (lua-ts-mode . eglot-ensure)
+  (lua-ts-mode . (lambda ()
+		   (my/eglot-ensure-if-program
+		    "lua-language-server" "lua-lsp")))
 )
 
 ;; Local Variables:
