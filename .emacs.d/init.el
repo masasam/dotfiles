@@ -33,132 +33,51 @@
   (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3"))
 
 
-;; When emacs for the first time execute only, automatic package install
-(unless (file-directory-p "~/.emacs.d/elpa")
-  (package-refresh-contents)
-  (package-install 'ace-window)
-  (package-install 'aggressive-indent)
-  (package-install 'ast-grep)
-  (package-install 'auto-compile)
-  (package-install 'avy)
-  (package-install 'beginend)
-  (package-install 'bind-key)
-  (package-install 'browse-at-remote)
-  (package-install 'cape)
-  (package-install 'catppuccin-theme)
-  (package-install 'consult)
-  (package-install 'consult-dir)
-  (package-install 'consult-ghq)
-  (package-install 'copilot)
-  (package-install 'corfu)
-  (package-install 'csv-mode)
-  (package-install 'dashboard)
-  (package-install 'dmacro)
-  (package-install 'deadgrep)
-  (package-install 'difftastic)
-  (package-install 'diff-hl)
-  (when (< emacs-major-version 29)
-    (package-install 'docker-tramp))
-  (package-install 'dockerfile-mode)
-  (package-install 'dracula-theme)
-  (package-install 'dumb-jump)
-  (package-install 'easy-hugo)
-  (package-install 'easy-jekyll)
-  (package-install 'edit-indirect)
-  (when (< emacs-major-version 27)
-	(package-install 'editorconfig))
-  (package-install 'editorconfig-generate)
-  (when (< emacs-major-version 29)
-    (package-install 'eglot))
-  (package-install 'eldoc-box)
-  (package-install 'elisp-slime-nav)
-  (package-install 'elixir-mode)
-  (package-install 'embark)
-  (package-install 'embark-consult)
-  (package-install 'espy)
-  (package-install 'exec-path-from-shell)
-  (package-install 'expreg)
-  (package-install 'fill-column-indicator)
-  (package-install 'flymake)
-  (package-install 'flymake-diagnostic-at-point)
-  (package-install 'ggtags)
-  (package-install 'git-timemachine)
-  (package-install 'github-explorer)
-  (package-install 'github-review)
-  (package-install 'go-mode)
-  (package-install 'google-c-style)
-  (package-install 'google-this)
-  (package-install 'google-translate)
-  (package-install 'gptel)
-  (package-install 'gptel-commit)
-  (package-install 'gt)
-  (package-install 'htmlize)
-  (package-install 'hydra)
-  (package-install 'iedit)
-  (package-install 'init-loader)
-  (package-install 'js2-mode)
-  (package-install 'json-mode)
-  (package-install 'json-reformat)
-  (package-install 'key-chord)
-  (package-install 'keycast)
-  (package-install 'keychain-environment)
-  (package-install 'macrostep)
-  (package-install 'magit)
-  (package-install 'marginalia)
-  (package-install 'markdown-mode)
-  (package-install 'material-theme)
-  (package-install 'minions)
-  (package-install 'nginx-mode)
-  (package-install 'openwith)
-  (package-install 'orderless)
-  (package-install 'org)
-  (package-install 'package-lint)
-  (package-install 'package-lint-flymake)
-  (package-install 'page-break-lines)
-  (package-install 'pass)
-  (package-install 'password-generator)
-  (package-install 'popper)
-  (package-install 'posframe)
-  (package-install 'puni)
-  (package-install 'python-mode)
-  (package-install 'quickrun)
-  (package-install 'rake)
-  (package-install 'realgud)
-  (package-install 'realgud-byebug)
-  (package-install 'reformatter)
-  (package-install 'restclient)
-  (package-install 'restclient-test)
-  (package-install 'rust-mode)
-  (package-install 'lua-ts-mode)
-  (package-install 'sly)
-  (package-install 'smart-jump)
-  (package-install 'shackle)
-  (package-install 'symbol-overlay)
-  (package-install 'tldr)
-  (package-install 'toml-mode)
-  (package-install 'trashed)
-  (package-install 'tree-sitter)
-  (package-install 'tree-sitter-langs)
-  (package-install 'typescript-mode)
-  (package-install 'verb)
-  (package-install 'vertico)
-  (package-install 'volatile-highlights)
-  (package-install 'vundo)
-  (package-install 'web-mode)
-  (package-install 'yaml-mode)
-  (package-install 'yasnippet)
-  (package-install 'yasnippet-snippets))
+;; Install only packages which are actually missing.  Checking the ELPA
+;; directory itself misses partially installed packages and packages added to
+;; this list after the first startup.
+(let* ((required-packages
+	'(ace-window aggressive-indent ast-grep auto-compile avy beginend
+	  bind-key browse-at-remote cape catppuccin-theme consult consult-dir
+	  consult-ghq copilot corfu csv-mode dashboard dmacro deadgrep difftastic
+	  diff-hl dockerfile-mode dracula-theme dumb-jump easy-hugo easy-jekyll
+	  edit-indirect editorconfig-generate eldoc-box elisp-slime-nav
+	  elixir-mode embark embark-consult espy exec-path-from-shell expreg
+	  fill-column-indicator flymake flymake-diagnostic-at-point ggtags
+	  git-timemachine github-explorer github-review go-mode google-c-style
+	  google-this google-translate gptel gptel-commit gt htmlize hydra iedit
+	  init-loader js2-mode json-mode json-reformat key-chord keycast
+	  keychain-environment macrostep magit marginalia markdown-mode
+	  material-theme minions nginx-mode openwith orderless org package-lint
+	  package-lint-flymake page-break-lines pass password-generator popper
+	  posframe puni python-mode quickrun rake realgud realgud-byebug
+	  reformatter restclient restclient-test rust-mode lua-ts-mode sly
+	  smart-jump shackle symbol-overlay tldr toml-mode trashed tree-sitter
+	  tree-sitter-langs typescript-mode verb vertico volatile-highlights
+	  vundo web-mode yaml-mode yasnippet yasnippet-snippets))
+	(required-packages
+	 (append required-packages
+		 (when (< emacs-major-version 29) '(docker-tramp eglot))
+		 (when (< emacs-major-version 27) '(editorconfig))))
+	(missing-packages
+	 (seq-remove #'package-installed-p required-packages)))
+  (when missing-packages
+    (package-refresh-contents)
+    (dolist (package missing-packages)
+      (package-install package))))
 
 ;; auto-compile
 (setq load-prefer-newer t)
 (auto-compile-on-load-mode)
 (auto-compile-on-save-mode)
 
-;; init-loader
-(custom-set-variables
- '(init-loader-show-log-after-init 'error-only))
-(init-loader-load)
+;; Custom settings must be loaded explicitly when `custom-file' is non-nil.
 (setq custom-file (locate-user-emacs-file "custom.el"))
+(load custom-file 'noerror)
+
+;; init-loader
+(setq init-loader-show-log-after-init 'error-only)
+(init-loader-load)
 
 (provide 'init)
 ;;; init.el ends here

@@ -5,6 +5,7 @@
 
 ;; flymake
 (require 'flymake-diagnostic-at-point)
+(require 'posframe)
 (with-eval-after-load 'flymake
   (add-hook 'flymake-mode-hook #'flymake-diagnostic-at-point-mode)
   ;; (add-hook 'emacs-lisp-mode-hook #'package-lint-flymake-setup)
@@ -27,8 +28,7 @@
   "Display the flymake diagnostic TEXT inside a posframe."
   (posframe-show " *flymake-posframe-buffer*"
 		 :string (concat flymake-diagnostic-at-point-error-prefix
-				 (flymake--diag-text
-				  (get-char-property (point) 'flymake-diagnostic)))
+				 text)
 		 :position (point)
 		 :foreground-color "cyan"
 		 :internal-border-width 2
