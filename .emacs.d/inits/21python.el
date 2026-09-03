@@ -3,7 +3,7 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
-(use-package python-ts-mode
+(use-package python
   :mode ("\\.py\\'" . python-ts-mode)
   :hook (python-ts-mode . eglot-ensure))
 

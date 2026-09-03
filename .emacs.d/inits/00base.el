@@ -296,13 +296,13 @@ If the region is inactive, `backward-kill-word'."
   "Duplicate current line, make more than 1 copy given a N argument."
   (interactive "p")
   (save-excursion
-    (let ((nb (or n 1))
+    (let ((n (or n 1))
 	  (current-line (thing-at-point 'line)))
       (when (or (= 1 (forward-line 1)) (eq (point) (point-max)))
 	(insert "\n"))
       (while (> n 0)
 	(insert current-line)
-	(decf n)))))
+	(setq n (1- n))))))
 
 (bind-key "C-M-y" 'my/duplicate-current-line)
 

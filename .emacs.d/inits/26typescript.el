@@ -3,7 +3,7 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
-(use-package tsx-ts-mode
+(use-package typescript-ts-mode
   :mode ("\\.tsx\\'" . tsx-ts-mode)
   :hook (tsx-ts-mode . eglot-ensure))
 

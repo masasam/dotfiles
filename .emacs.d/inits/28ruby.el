@@ -5,7 +5,8 @@
 
 (use-package ruby-ts-mode
   :hook
-  (ruby-ts-mode . eglot-ensure)
+  (ruby-ts-mode . (lambda ()
+		    (my/eglot-ensure-if-program "ruby-lsp" "solargraph")))
   :init
   (add-to-list 'major-mode-remap-alist '(ruby-mode . ruby-ts-mode))
   :config

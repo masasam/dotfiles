@@ -8,7 +8,9 @@
 		 ("\\.ex\\'" . elixir-ts-mode)
 		 ("\\.exs\\'" . elixir-ts-mode)
 		 ("mix\\.lock" . elixir-ts-mode))
-  :hook (elixir-ts-mode . eglot-ensure))
+  :hook (elixir-ts-mode . (lambda ()
+			    (my/eglot-ensure-if-program
+			     "language_server.sh" "start_lexical.sh"))))
 
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)

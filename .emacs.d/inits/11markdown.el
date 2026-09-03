@@ -12,33 +12,32 @@
 (defun md2pdf ()
   "Generate pdf from currently open markdown."
   (interactive)
-  (let ((filename (buffer-file-name (current-buffer))))
-    (call-process-shell-command
-     (concat "pandoc "
-	     filename
-	     " -o "
-	     (file-name-sans-extension filename)
-	     ".pdf -V mainfont=IPAPGothic -V geometry:margin=20mm -V fontsize=14pt --pdf-engine=lualatex"))
-    (call-process-shell-command
-     (concat "xdg-open "
-	     (file-name-sans-extension filename)
-	     ".pdf"))))
+  (let* ((filename (or buffer-file-name
+		       (user-error "This buffer is not visiting a file")))
+	 (output (concat (file-name-sans-extension filename) ".pdf")))
+    (unless (zerop (call-process "pandoc" nil nil nil
+				 filename "-o" output
+				 "-V" "mainfont=IPAPGothic"
+				 "-V" "geometry:margin=20mm"
+				 "-V" "fontsize=14pt"
+				 "--pdf-engine=lualatex"))
+      (user-error "Pandoc failed to generate %s" output))
+    (start-process "md2pdf-open" nil "xdg-open" output)))
 
 
 (defun md2docx ()
   "Generate docx from currently open markdown."
   (interactive)
-  (let ((filename (buffer-file-name (current-buffer))))
-    (call-process-shell-command
-     (concat "pandoc "
-	     filename
-	     " -t docx -o "
-	     (file-name-sans-extension filename)
-	     ".docx -V mainfont=IPAPGothic -V fontsize=16pt --toc --highlight-style=zenburn"))
-    (call-process-shell-command
-     (concat "xdg-open "
-	     (file-name-sans-extension filename)
-	     ".docx"))))
+  (let* ((filename (or buffer-file-name
+		       (user-error "This buffer is not visiting a file")))
+	 (output (concat (file-name-sans-extension filename) ".docx")))
+    (unless (zerop (call-process "pandoc" nil nil nil
+				 filename "-t" "docx" "-o" output
+				 "-V" "mainfont=IPAPGothic"
+				 "-V" "fontsize=16pt"
+				 "--toc" "--highlight-style=zenburn"))
+      (user-error "Pandoc failed to generate %s" output))
+    (start-process "md2docx-open" nil "xdg-open" output)))
 
 
 ;; markdown-preview like github

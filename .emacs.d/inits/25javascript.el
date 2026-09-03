@@ -3,7 +3,7 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
-(use-package js-ts-mode
+(use-package js
   :hook
   (js-ts-mode . eglot-ensure)
   :init

@@ -3,7 +3,7 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
-(use-package bash-ts-mode
+(use-package sh-script
   :hook
   (bash-ts-mode . eglot-ensure)
   :init

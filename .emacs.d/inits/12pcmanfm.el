@@ -6,31 +6,32 @@
 (defun pcmanfm-open ()
   "Open current directry with pcmanfm."
   (interactive)
-  (call-process-shell-command (concat "pcmanfm-qt " default-directory)))
+  (start-process "pcmanfm" nil "pcmanfm-qt"
+		 (expand-file-name default-directory)))
 
 
 (defun pcmanfm-backup ()
   "Open backup directry with pcmanfm."
   (interactive)
-  (call-process-shell-command "pcmanfm-qt ~/backup"))
+  (start-process "pcmanfm" nil "pcmanfm-qt" (expand-file-name "~/backup")))
 
 
 (defun pcmanfm-downloads ()
   "Open downloads directry with pcmanfm."
   (interactive)
-  (call-process-shell-command "pcmanfm-qt ~/Downloads"))
+  (start-process "pcmanfm" nil "pcmanfm-qt" (expand-file-name "~/Downloads")))
 
 
 (defun pcmanfm-documents ()
   "Open documents directry with pcmanfm."
   (interactive)
-  (call-process-shell-command "pcmanfm-qt ~/Documents"))
+  (start-process "pcmanfm" nil "pcmanfm-qt" (expand-file-name "~/Documents")))
 
 
 (defun pcmanfm-pictures ()
   "Open pictures directry with pcmanfm."
   (interactive)
-  (call-process-shell-command "pcmanfm-qt ~/Pictures"))
+  (start-process "pcmanfm" nil "pcmanfm-qt" (expand-file-name "~/Pictures")))
 
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)

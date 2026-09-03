@@ -155,6 +155,7 @@ mise: ## Setup mise
 	mise use -g firebase
 	mise use -g gemini-cli
 	mise use -g hugo
+	mise use -g lua-language-server
 	mise use -g marp-cli
 	mise use -g node
 	mise use -g npm:gcloud
