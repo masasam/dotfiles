@@ -266,7 +266,9 @@ If the region is inactive, `backward-kill-word'."
 
 
 ;; M-x info-emacs-manual
-(add-to-list 'Info-directory-list (expand-file-name "info" user-emacs-directory))
+(require 'info)
+  (add-to-list 'Info-directory-list
+               (expand-file-name "info" user-emacs-directory))
 (defun Info-find-node--info-ja (orig-fn filename &rest args)
   "Info as ORIG-FN FILENAME ARGS."
   (apply orig-fn

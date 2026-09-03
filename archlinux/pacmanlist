@@ -171,6 +171,7 @@ expect
 eza
 fabric
 fakeroot
+fast_float
 fcft
 fcitx5
 fcitx5-configtool
@@ -256,6 +257,7 @@ glu
 glycin
 gmime3
 gmp
+gn
 gnome-calculator
 gnome-keyring
 gnome-sound-recorder
