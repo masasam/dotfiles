@@ -335,7 +335,7 @@ hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("hyprwhspr record toggle"))
 for workspace = 0, 9 do
     hl.bind(
         mainMod .. " + CTRL + " .. workspace,
-        hl.dsp.exec_cmd("~/.config/hypr/scripts/ctl-alt-workspace.py " .. workspace)
+        hl.dsp.exec_cmd("~/.config/hypr/workspace-toggle/target/release/ctl-alt-workspace " .. workspace)
     )
 end
 

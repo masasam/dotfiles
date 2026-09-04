@@ -105,6 +105,7 @@ hyprland: ## Setup hyprland
 	$(PACMAN) wireplumber pipewire-pulse pcmanfm-qt xdg-desktop-portal-gtk
 	$(PACMAN) wl-clipboard hyprpaper wf-recorder
 	$(MAKE) deskctl
+	$(MAKE) workspace-toggle
 	yay -S wlogout
 	test -L ${HOME}/.config/hypr || rm -rf ${HOME}/.config/hypr
 	ln -vsfn {${PWD},${HOME}}/.config/hypr
@@ -186,6 +187,9 @@ mise: ## Setup mise
 
 deskctl: ## Build Hyprland volume and brightness controller
 	zig build --build-file ${PWD}/.config/hypr/deskctl/build.zig -Doptimize=ReleaseSafe
+
+workspace-toggle: ## Build Hyprland workspace window toggle
+	cargo build --locked --release --manifest-path ${PWD}/.config/hypr/workspace-toggle/Cargo.toml
 
 codex: ## Setup openai codex
 	mise use -g codex
