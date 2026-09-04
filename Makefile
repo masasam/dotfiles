@@ -104,6 +104,7 @@ hyprland: ## Setup hyprland
 	$(PACMAN) hyprsunset pavucontrol wl-clip-persist nwg-displays pipewire
 	$(PACMAN) wireplumber pipewire-pulse pcmanfm-qt xdg-desktop-portal-gtk
 	$(PACMAN) wl-clipboard hyprpaper wf-recorder
+	$(MAKE) deskctl
 	yay -S wlogout
 	test -L ${HOME}/.config/hypr || rm -rf ${HOME}/.config/hypr
 	ln -vsfn {${PWD},${HOME}}/.config/hypr
@@ -182,6 +183,9 @@ mise: ## Setup mise
 	mise use -g youtube-dl
 	mise use -g yt-dlp
 	mise use -g zls
+
+deskctl: ## Build Hyprland volume and brightness controller
+	zig build --build-file ${PWD}/.config/hypr/deskctl/build.zig -Doptimize=ReleaseSafe
 
 codex: ## Setup openai codex
 	mise use -g codex
