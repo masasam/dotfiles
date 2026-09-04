@@ -6,6 +6,8 @@
 
 ![emacs](https://raw.githubusercontent.com/masasam/image/image/emacs.png)
 
+![codex2](https://raw.githubusercontent.com/masasam/image/image/codex2.png)
+
 ![terminal](https://raw.githubusercontent.com/masasam/image/image/terminal.png)
 
 ### Desktop
