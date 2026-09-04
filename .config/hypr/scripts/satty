@@ -1,3 +1,20 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
-pkill slurp || hyprshot -m ${1:-region} --raw | satty --filename - --output-filename "~/Pictures/Screenshots/$(date +'%Y-%m-%d-%H%M%S')_hyprshot.png" --early-exit --actions-on-enter save-to-clipboard --save-after-copy --copy-command 'wl-copy'
+set -o pipefail
+
+mode=${1:-region}
+case "$mode" in
+	region | window | output) ;;
+	*)
+		echo "satty: invalid screenshot mode: $mode" >&2
+		exit 2
+		;;
+esac
+
+pkill slurp || hyprshot -m "$mode" --raw |
+	satty --filename - \
+		--output-filename "$HOME/Pictures/Screenshots/$(date +'%Y-%m-%d-%H%M%S')_hyprshot.png" \
+		--early-exit \
+		--actions-on-enter save-to-clipboard \
+		--save-after-copy \
+		--copy-command wl-copy
