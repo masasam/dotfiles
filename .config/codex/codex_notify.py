@@ -4,9 +4,9 @@ from __future__ import annotations
 import html
 import json
 import os
-from pathlib import Path
 import subprocess
 import sys
+from pathlib import Path
 from typing import Any
 
 
@@ -20,6 +20,7 @@ def env_int(name: str, default: int) -> int:
 MAX_CHARS = max(80, env_int("CODEX_NOTIFY_MAX_CHARS", 240))
 DONE_TIMEOUT = max(1000, env_int("CODEX_NOTIFY_TIMEOUT_MS", 7000))
 APPROVAL_TIMEOUT = max(1000, env_int("CODEX_NOTIFY_APPROVAL_TIMEOUT_MS", 12000))
+ICON = Path.home() / ".config/mako/icons/ChatGPT.png"
 ONLY_WHEN_UNFOCUSED = os.environ.get(
     "CODEX_NOTIFY_ONLY_WHEN_UNFOCUSED", "1"
 ).lower() not in {"0", "false", "no", "off"}
@@ -37,6 +38,8 @@ def compact(text: str | None, limit: int = MAX_CHARS) -> str:
 def project_name(cwd: str | None) -> str:
     if not cwd:
         return "Codex"
+    root = ""
+    returncode = 1
     try:
         p = subprocess.run(
             ["git", "-C", cwd, "rev-parse", "--show-toplevel"],
@@ -47,13 +50,14 @@ def project_name(cwd: str | None) -> str:
             check=False,
         )
         root = p.stdout.strip()
-        if p.returncode == 0 and root:
-            return Path(root).name
-    except Exception:
-        pass
+        returncode = p.returncode
+    except (OSError, subprocess.TimeoutExpired):
+        root = ""
+    if returncode == 0 and root:
+        return Path(root).name
     try:
         return Path(cwd).resolve().name or "Codex"
-    except Exception:
+    except (OSError, RuntimeError):
         return "Codex"
 
 
@@ -76,7 +80,7 @@ def parent_pids(pid: int) -> set[int]:
             stat = Path(f"/proc/{current}/stat").read_text()
             after_comm = stat.rsplit(")", 1)[1].strip().split()
             current = int(after_comm[1])
-        except Exception:
+        except (IndexError, OSError, ValueError):
             break
     if current > 0:
         result.add(current)
@@ -100,7 +104,13 @@ def active_hyprland_pid() -> int | None:
         data = json.loads(p.stdout)
         pid = data.get("pid")
         return int(pid) if pid else None
-    except Exception:
+    except (
+        json.JSONDecodeError,
+        OSError,
+        subprocess.TimeoutExpired,
+        TypeError,
+        ValueError,
+    ):
         return None
 
 
@@ -113,15 +123,14 @@ def play_sound(sound_name: str) -> None:
     if not which("canberra-gtk-play"):
         return
     try:
-        subprocess.run(
+        subprocess.Popen(
             ["canberra-gtk-play", "-i", sound_name, "-d", "Codex"],
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL,
-            timeout=2,
-            check=False,
+            start_new_session=True,
         )
-    except Exception:
-        pass
+    except OSError:
+        return
 
 
 def notify(
@@ -134,27 +143,26 @@ def notify(
 ) -> None:
     if ONLY_WHEN_UNFOCUSED and codex_terminal_is_focused():
         return
+    if which("notify-send"):
+        try:
+            subprocess.Popen(
+                [
+                    "notify-send",
+                    "-a", "Codex",
+                    "-i", str(ICON),
+                    "-u", urgency,
+                    "-t", str(timeout_ms),
+                    html.escape(title, quote=False),
+                    html.escape(body, quote=False),
+                ],
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+                start_new_session=True,
+            )
+        except OSError:
+            play_sound(sound_name)
+            return
     play_sound(sound_name)
-    if not which("notify-send"):
-        return
-    try:
-        subprocess.run(
-            [
-                "notify-send",
-                "-a", "Codex",
-                "-i", "~/.config/mako/icons/ChatGPT.png",
-                "-u", urgency,
-                "-t", str(timeout_ms),
-                html.escape(title, quote=False),
-                html.escape(body, quote=False),
-            ],
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL,
-            timeout=2,
-            check=False,
-        )
-    except Exception:
-        pass
 
 
 def permission_body(event: dict[str, Any]) -> str:
@@ -169,7 +177,7 @@ def permission_body(event: dict[str, Any]) -> str:
         else:
             try:
                 detail = json.dumps(tool_input, ensure_ascii=False, separators=(",", ":"))
-            except Exception:
+            except (TypeError, ValueError):
                 detail = str(tool_input)
     parts = [f"{tool} の承認が必要です"]
     if description:
@@ -185,7 +193,7 @@ def load_event() -> dict[str, Any] | None:
             event = json.loads(sys.argv[1])
         else:
             event = json.load(sys.stdin)
-    except Exception:
+    except (json.JSONDecodeError, OSError, TypeError):
         return None
     return event if isinstance(event, dict) else None
 
