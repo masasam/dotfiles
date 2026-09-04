@@ -332,16 +332,12 @@ hl.bind(mainMod .. " + space", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("hyprwhspr record toggle"))
 
-hl.bind(mainMod .. " + CTRL + 0", hl.dsp.exec_cmd("~/.config/hypr/scripts/ctl-alt-0"))
-hl.bind(mainMod .. " + CTRL + 1", hl.dsp.exec_cmd("~/.config/hypr/scripts/ctl-alt-1"))
-hl.bind(mainMod .. " + CTRL + 2", hl.dsp.exec_cmd("~/.config/hypr/scripts/ctl-alt-2"))
-hl.bind(mainMod .. " + CTRL + 3", hl.dsp.exec_cmd("~/.config/hypr/scripts/ctl-alt-3"))
-hl.bind(mainMod .. " + CTRL + 4", hl.dsp.exec_cmd("~/.config/hypr/scripts/ctl-alt-4"))
-hl.bind(mainMod .. " + CTRL + 5", hl.dsp.exec_cmd("~/.config/hypr/scripts/ctl-alt-5"))
-hl.bind(mainMod .. " + CTRL + 6", hl.dsp.exec_cmd("~/.config/hypr/scripts/ctl-alt-6"))
-hl.bind(mainMod .. " + CTRL + 7", hl.dsp.exec_cmd("~/.config/hypr/scripts/ctl-alt-7"))
-hl.bind(mainMod .. " + CTRL + 8", hl.dsp.exec_cmd("~/.config/hypr/scripts/ctl-alt-8"))
-hl.bind(mainMod .. " + CTRL + 9", hl.dsp.exec_cmd("~/.config/hypr/scripts/ctl-alt-9"))
+for workspace = 0, 9 do
+    hl.bind(
+        mainMod .. " + CTRL + " .. workspace,
+        hl.dsp.exec_cmd("~/.config/hypr/scripts/ctl-alt-workspace.py " .. workspace)
+    )
+end
 
 -- Click-drag and long-drag
 hl.config({
