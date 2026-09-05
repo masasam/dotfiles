@@ -344,24 +344,6 @@ zle -N ghq-fzf
 bindkey '^x^l' ghq-fzf
 bindkey '^xl' ghq-fzf
 
-function ghq-delete-fzf() {
-    ghq list --full-path | fzf-tmux -d --reverse --prompt="github-delete > " | xargs -r rm -r
-}
-zle -N ghq-delete-fzf
-bindkey '^xD' ghq-delete-fzf
-
-function ghs-import-fzf() {
-    [ "$#" -eq 0 ] && echo "Usage : ghs-import QUERY" && return 1
-    ghs "$@" | fzf-tmux -d --reverse | awk '{print $1}' | ghq import
-}
-
-function github-issue-fzf() {
-    gh issue list | fzf-tmux -d --reverse --prompt="github issue > " | \
-	awk '{print $1}' | xargs -Inum git checkout -b feature/num
-}
-zle -N github-issue-fzf
-bindkey '^x^i' github-issue-fzf
-
 function git-branch-fzf() {
     local selected_branch=$(git for-each-ref --format='%(refname)' --sort=-committerdate refs/heads | \
 				perl -pne 's{^refs/heads/}{}' | \
@@ -375,39 +357,6 @@ function git-branch-fzf() {
 zle -N git-branch-fzf
 bindkey "^x^b" git-branch-fzf
 bindkey "^xb" git-branch-fzf
-
-function git-hash-fzf() {
-    local current_buffer=$BUFFER
-    local git_hash="$(git log --oneline --branches | fzf-tmux -d --reverse --prompt="git hash > " | awk '{print $1}')"
-    BUFFER="${current_buffer}${git_hash}"
-    CURSOR=$#BUFFER
-}
-zle -N git-hash-fzf
-bindkey '^x^h' git-hash-fzf
-
-function git-stash-fzf() {
-    local current_buffer=$BUFFER
-    local stash="$(git stash list | fzf-tmux -d --reverse --prompt="git stash > " | awk -F'[ :]' '{print $1}')"
-    BUFFER="${current_buffer}${stash}"
-    CURSOR=$#BUFFER
-}
-zle -N git-stash-fzf
-bindkey '^x^s' git-stash-fzf
-
-function ps-fzf() {
-    local current_buffer=$BUFFER
-    local process_id="$(ps auxf | fzf-tmux -d --reverse --prompt="ps > " | awk '{print $2}')"
-    BUFFER="${current_buffer}${process_id}"
-    CURSOR=$#BUFFER
-}
-zle -N ps-fzf
-bindkey '^xp' ps-fzf
-bindkey '^x^p' ps-fzf
-
-function alias-fzf() {
-    BUFFER=$(alias | fzf-tmux -d --reverse --query "$LBUFFER" --prompt="Alias > " | awk -F"=" '{print $1}')
-    print -z "$BUFFER"
-}
 
 function keybind-fzf() {
     zle $(bindkey | fzf-tmux -d --reverse --prompt="Keybind > " | cut -d " " -f 2)
