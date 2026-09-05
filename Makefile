@@ -81,7 +81,7 @@ init: ## Initial deploy dotfiles
 	ln -vsfn {${PWD},${HOME}}/.config/btop
 	ln -vsf {${PWD},${HOME}}/.lesskey
 	lesskey
-	for item in zshrc vimrc bashrc myclirc tmux.conf screenrc aspell.conf gitconfig netrc authinfo; do
+	for item in zshrc vimrc myclirc tmux.conf screenrc aspell.conf gitconfig netrc authinfo; do
 		ln -vsf {${PWD},${HOME}}/.$$item
 	done
 	chmod 600 ${PWD}/.netrc

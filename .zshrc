@@ -611,45 +611,6 @@ function fetch-pull-request() {
 }
 
 
-function mpv-music() {
-    local PLAYLISTDIR=~/backup/youtube
-    if [ $# = 0 ]; then
-	mpv --no-video --ytdl-format="worstvideo+bestaudio" --quiet --shuffle \
-	    --playlist=$(ls $PLAYLISTDIR/*.m3u | fzf-tmux -d --reverse --no-sort +m --prompt="Playlist > ") &	
-	sleep 10
-	cd -
-    elif [ $# = 1 ]; then
-	mpv --no-video --ytdl-format="worstvideo+bestaudio" --quiet $1 &
-	sleep 10
-	cd -
-    else
-	echo 'usage: mpv-music [youtube-url]'
-    fi
-}
-
-
-function mpv-video() {
-    local PLAYLISTDIR=~/backup/youtube
-    if [ $# = 0 ]; then
-	mpv --ontop=yes --border=no --autofit=600 --geometry=100%:100% --ytdl-format="[height<=480]+bestaudio" --quiet \
-	    --shuffle --playlist=$(ls $PLAYLISTDIR/*.m3u | fzf-tmux -d --reverse --no-sort +m --prompt="Playlist > ") &
-	sleep 10
-	cd -
-    elif [ $# = 1 ]; then
-	mpv --ontop=yes --border=no --autofit=600 --geometry=100%:100% --ytdl-format="[height<=480]+bestaudio" --quiet=yes $1 &
-	sleep 10
-	cd -
-    else
-	echo 'usage: mpv-video [youtube-url]'
-    fi
-}
-
-
-function mpv-quit() {
-    pkill -SIGUSR1 -f mpv
-}
-
-
 function ide() {
     tmux split-window -v
     tmux split-window -h
