@@ -37,7 +37,7 @@
 ;; directory itself misses partially installed packages and packages added to
 ;; this list after the first startup.
 (let* ((required-packages
-	'(ace-window aggressive-indent ast-grep auto-compile avy beginend
+	'(ace-window aggressive-indent agent-shell ast-grep auto-compile avy beginend
 	  bind-key browse-at-remote cape catppuccin-theme consult consult-dir
 	  consult-ghq copilot corfu csv-mode dashboard dmacro deadgrep difftastic
 	  diff-hl dockerfile-mode dracula-theme dumb-jump easy-hugo easy-jekyll
