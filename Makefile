@@ -77,6 +77,7 @@ emacs: ## Init emacs
 
 init: ## Initial deploy dotfiles
 	$(MAKE) dotctl
+	$(MAKE) zshctl
 	test -L ${HOME}/.config/btop || rm -rf ${HOME}/.config/btop
 	ln -vsfn {${PWD},${HOME}}/.config/btop
 	ln -vsf {${PWD},${HOME}}/.lesskey
@@ -187,6 +188,11 @@ mise: ## Setup mise
 
 deskctl: ## Build Hyprland desktop controller
 	zig build --build-file ${PWD}/.config/hypr/deskctl/build.zig -Doptimize=ReleaseSafe
+
+zshctl: ${HOME}/.local ## Build and deploy zsh helper utilities
+	zig build --build-file ${PWD}/.config/zshctl/build.zig -Doptimize=ReleaseSafe
+	mkdir -p ${HOME}/.local/bin
+	ln -vsfn ${PWD}/.config/zshctl/zig-out/bin/zshctl ${HOME}/.local/bin/zshctl
 
 workspace-toggle: ## Build Hyprland workspace window toggle
 	cargo build --locked --release --manifest-path ${PWD}/.config/hypr/workspace-toggle/Cargo.toml

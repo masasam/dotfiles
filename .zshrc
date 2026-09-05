@@ -394,37 +394,10 @@ function gitroot() {
     fi
 }
 
-function ipsort() {
-    if [ $# = 1 ]; then
-	cat $1 | sort -n -t'.' -k1,1 -k2,2 -k3,3 -k4,4
-    else
-	echo 'usage: ipsort iplist'
-    fi
-}
-
-function remove-exif() {
-    if [ $# = 1 ]; then
-	jhead -purejpg $1
-    else
-	echo 'usage: remove-exif file.jpg'
-    fi
-}
-
-function gitignore() {
-    if [ $# = 2 ]; then
-	curl -L -s https://www.gitignore.io/api/$@ > $2
-    else
-	echo 'usage: gitignore django output'
-    fi
-}
-
-function mytldr() {
-    if [ $# = 1 ]; then
-	unbuffer tldr $1 | less -SR
-    else
-	echo 'usage: mytldr $1'
-    fi
-}
+alias ipsort='zshctl ipsort'
+alias remove-exif='zshctl remove-exif'
+alias gitignore='zshctl gitignore'
+alias mytldr='zshctl mytldr'
 
 function fetch-pull-request() {
     echo "Please input pull request number"
@@ -434,44 +407,11 @@ function fetch-pull-request() {
     git fetch origin pull/${NUM}/head:${BRANCH}
 }
 
-function ide() {
-    tmux split-window -v
-    tmux split-window -h
-    tmux resize-pane -U 7
-    tmux select-pane -t 1
-}
-
-function ide2() {
-    tmux split-window -h
-    tmux split-window -v
-    tmux select-pane -t 1
-}
-
-function ide3() {
-    tmux split-window -h
-    tmux select-pane -t 1
-    tmux split-window -v
-    tmux select-pane -t 1
-}
-
-function ide4() {
-    tmux split-window -h
-    tmux split-window -v
-    tmux select-pane -t 1
-    tmux split-window -v
-    tmux select-pane -t 1
-}
-
-function topdf() {
-	for filein in $(find . -type f ! -name "*.jpg" ! -name "*.jpeg" ! -name "*.png" ! -name "*.gif"); do
-		opt=${2:-Portrait}
-		vim ${filein} -c 'colorscheme default | set number | TOhtml | w tmp.html | qa!'
-		wkhtmltopdf --page-size B4 -O ${opt} --footer-left "[date] [time] ${filein}" \
-					--footer-right "[page]/[topage]" --no-background --margin-top 4 --margin-right 3 \
-					--margin-left 4 --margin-bottom 10 tmp.html ${filein}.pdf 
-		rm -f tmp.html
-	done
-}
+alias ide='zshctl ide 1'
+alias ide2='zshctl ide 2'
+alias ide3='zshctl ide 3'
+alias ide4='zshctl ide 4'
+alias topdf='zshctl topdf'
 
 # zsh-syntax-highlighting(pacman -S zsh-syntax-highlighting)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
