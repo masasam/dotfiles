@@ -6,7 +6,11 @@
 
 ![emacs](https://raw.githubusercontent.com/masasam/image/image/emacs.png)
 
+The top left shows icons corresponding to workspaces 1 to 10.
+
 ![codex2](https://raw.githubusercontent.com/masasam/image/image/codex2.png)
+
+Clicking on the notification will take you to the corresponding codex.
 
 ![terminal](https://raw.githubusercontent.com/masasam/image/image/terminal.png)
 
