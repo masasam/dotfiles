@@ -375,7 +375,7 @@ hl.bind(mainMod .. " + Print", hl.dsp.exec_cmd("hyprshot -m window -o 'Pictures/
 -- Screenshot a monitor
 hl.bind("Print", hl.dsp.exec_cmd("hyprshot -m output -o 'Pictures/Screenshots'"))
 -- Screenshot a region with satty
-hl.bind("SUPER + Print", hl.dsp.exec_cmd("~/.config/hypr/scripts/satty"))
+hl.bind("SUPER + Print", hl.dsp.exec_cmd("~/.config/hypr/deskctl/zig-out/bin/deskctl screenshot region"))
 
 -- Move focus with mainMod + arrow keys
 hl.bind("SUPER + Left",  hl.dsp.focus({ direction = "left" }))

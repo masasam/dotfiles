@@ -76,6 +76,7 @@ emacs: ## Init emacs
 	ln -vsfn {${PWD},${HOME}}/.emacs.d
 
 init: ## Initial deploy dotfiles
+	$(MAKE) dotctl
 	test -L ${HOME}/.config/btop || rm -rf ${HOME}/.config/btop
 	ln -vsfn {${PWD},${HOME}}/.config/btop
 	ln -vsf {${PWD},${HOME}}/.lesskey
@@ -118,7 +119,6 @@ hyprland: ## Setup hyprland
 	mkdir -p ${HOME}/.config/wlogout
 	sudo ln -vsf ${PWD}/.config/wlogout/wlogout.desktop /usr/share/applications/wlogout.desktop
 	ln -vsf {${PWD},${HOME}}/.config/wlogout/style.css
-	chmod +x ${PWD}/.config/hypr/scripts/*
 	yay -S snappy-switcher
 	test -L ${HOME}/.config/snappy-switcher/config.ini || rm -rf ${HOME}/.config/snappy-switcher/config.ini
 	ln -vsf {${PWD},${HOME}}/.config/snappy-switcher/config.ini
@@ -185,11 +185,16 @@ mise: ## Setup mise
 	mise use -g yt-dlp
 	mise use -g zls
 
-deskctl: ## Build Hyprland volume and brightness controller
+deskctl: ## Build Hyprland desktop controller
 	zig build --build-file ${PWD}/.config/hypr/deskctl/build.zig -Doptimize=ReleaseSafe
 
 workspace-toggle: ## Build Hyprland workspace window toggle
 	cargo build --locked --release --manifest-path ${PWD}/.config/hypr/workspace-toggle/Cargo.toml
+
+dotctl: ${HOME}/.local ## Build and deploy general dotfile utilities
+	cargo build --locked --release --manifest-path ${PWD}/.config/dotctl/Cargo.toml
+	mkdir -p ${HOME}/.local/bin
+	ln -vsfn ${PWD}/.config/dotctl/target/release/dotctl ${HOME}/.local/bin/dotctl
 
 codex: ## Setup openai codex
 	mise use -g codex

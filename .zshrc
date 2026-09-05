@@ -280,6 +280,16 @@ alias fontlist='fc-list | cut -d: -f1 | less'
 alias fontlistja='fc-list :lang=ja | cut -d: -f1 | less'
 alias jupytertheme='jt -t chesterish -T -f roboto -fs 9 -tf merriserif -tfs 11 -nf ptsans -nfs 11 -dfs 8 -ofs 8'
 alias allupdate='time archupdate && time melpabackup && time zshbackup && time archbackup && time backupcloud'
+alias md2pdf='dotctl md2pdf'
+alias md2docx='dotctl md2docx'
+alias optimize-jpg='dotctl optimize-jpg'
+alias optimize-png='dotctl optimize-png'
+alias blog-jpg='dotctl blog-jpg'
+alias rec2gif='dotctl rec2gif'
+alias postgres-backup='dotctl postgres-backup'
+alias check-iso='dotctl check-iso'
+alias dirsum='dotctl dirsum'
+alias timer='dotctl timer'
 
 
 # PATH
@@ -519,28 +529,6 @@ function ipsort() {
 }
 
 
-function md2pdf() {
-    if [ $# = 1 ]; then
-	fname_ext=$1
-	fname="${fname_ext%.*}"
-	pandoc $1 -o $fname.pdf -V mainfont=IPAPGothic -V fontsize=16pt --pdf-engine=lualatex
-    else
-	echo 'usage: md2pdf file.md'
-    fi
-}
-
-
-function md2docx() {
-    if [ $# = 1 ]; then
-	fname_ext=$1
-	fname="${fname_ext%.*}"
-	pandoc $1 -t docx -o $fname.docx -V mainfont=IPAPGothic -V fontsize=16pt --toc --highlight-style=zenburn
-    else
-	echo 'usage: md2docx file.md'
-    fi
-}
-
-
 function remove-exif() {
     if [ $# = 1 ]; then
 	jhead -purejpg $1
@@ -593,40 +581,6 @@ function terminal-size() {
     tput cols
     echo "height"
     tput lines
-}
-
-
-function optimize-jpg() {
-    if [ $# = 1 ]; then
-	fname_ext=$1
-	fname="${fname_ext%.*}"
-	convert $1 -sampling-factor 4:2:0 -strip -quality 85 -interlace JPEG -colorspace sRGB ${fname}_converted.jpg
-    else
-	echo 'usage: optimize-jpg sample.jpg'
-    fi
-}
-
-
-function blog-jpg() {
-    if [ $# = 1 ]; then
-	fname_ext=$1
-	fname="${fname_ext%.*}"
-	convert $1 -resize 600x zzz_${fname}.jpg
-	rm -rf $1
-    else
-	echo 'usage: blog-jpg sample.jpg'
-    fi
-}
-
-
-function optimize-png() {
-    if [ $# = 1 ]; then
-	fname_ext=$1
-	fname="${fname_ext%.*}"
-	convert $1 -strip ${fname}_converted.png
-    else
-	echo 'usage: optimize-png sample.png'
-    fi
 }
 
 
@@ -713,15 +667,6 @@ function bgm() {
 }
 
 
-function postgres-backup() {
-    if [ $# = 1 ]; then
-	pg_dump $1 > ~/backup/postgresql/`date '+%Y%m%d%H%M%S'`
-    else
-	echo 'usage: postgres-backup [dbname]'
-    fi
-}
-
-
 function stern-completion-start() {
     if [ $# = 0 ]; then
 	source <(stern --completion=zsh)
@@ -789,20 +734,6 @@ function aws-profile-add() {
 }
 
 
-function check-iso() {
-    if [ $# = 2 ]; then
-	local archsum=`b2sum $1 | awk '{print $1}'`
-	if [ $archsum = $2 ]; then
-	    echo 'Correct iso file'
-	else
-	    echo 'Incorrect iso file'
-	fi
-    else
-	echo 'usage: check-iso [arch.iso] [b2sum]'
-    fi
-}
-
-
 function s3-download() {
     if [ $# = 1 ]; then
 	open https://s3.console.aws.amazon.com/s3/object/$1	
@@ -821,40 +752,11 @@ function rec() {
 }
 
 
-function rec2gif() {
-	if [ $# = 1 ]; then
-		fname_ext=$1
-		fname="${fname_ext%.*}"
-		ffmpeg -i ${fname_ext} -vf scale=1280:-1 -r 24 ${fname}.gif 
-    else
-		echo 'usage: rec2gif [file]'
-    fi
-}
-
-
-function dirsum() {
-    if [ $# = 1 ]; then
-	find $1 -type f -print0 | xargs -0 shasum | awk '{print $1}' | sort | shasum
-    else
-	echo 'usage: dirsum [directory]'
-    fi	
-}
-
-
 function tenki() {
 	if [ $# = 1 ]; then
 		curl -H "Accept-Language: ja" --compressed wttr.in/$1 | less -R
     else
 		echo 'usage: tenki [location]'
-    fi
-}
-
-
-function timer() {
-	if [ $# = 2 ]; then
-		(sleep $(($1*60)) && notify-send -u critical "$2") &
-    else
-		echo 'usage: timger [minutes] [message]'
     fi
 }
 

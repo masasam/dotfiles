@@ -12,6 +12,9 @@ const Action = enum {
     mute_input,
     brightness_up,
     brightness_down,
+    screenshot_region,
+    screenshot_window,
+    screenshot_output,
 };
 
 const output_target = "@DEFAULT_AUDIO_SINK@";
@@ -45,6 +48,9 @@ fn runMain(init: std.process.Init) !void {
         .mute_input => try toggleMute(allocator, init.io, home, input_target, true),
         .brightness_up => try changeBrightness(allocator, init.io, home, "5%+"),
         .brightness_down => try changeBrightness(allocator, init.io, home, "5%-"),
+        .screenshot_region => try screenshot(allocator, init.io, home, "region"),
+        .screenshot_window => try screenshot(allocator, init.io, home, "window"),
+        .screenshot_output => try screenshot(allocator, init.io, home, "output"),
     }
 }
 
@@ -54,6 +60,7 @@ fn usage() void {
         \\  deskctl volume up|down|mute
         \\  deskctl microphone mute
         \\  deskctl brightness up|down
+        \\  deskctl screenshot region|window|output
         \\
     , .{});
 }
@@ -68,8 +75,84 @@ fn parseAction(group: []const u8, operation: []const u8) ?Action {
     } else if (std.mem.eql(u8, group, "brightness")) {
         if (std.mem.eql(u8, operation, "up")) return .brightness_up;
         if (std.mem.eql(u8, operation, "down")) return .brightness_down;
+    } else if (std.mem.eql(u8, group, "screenshot")) {
+        if (std.mem.eql(u8, operation, "region")) return .screenshot_region;
+        if (std.mem.eql(u8, operation, "window")) return .screenshot_window;
+        if (std.mem.eql(u8, operation, "output")) return .screenshot_output;
     }
     return null;
+}
+
+fn commandSucceeded(term: std.process.Child.Term) bool {
+    return switch (term) {
+        .exited => |code| code == 0,
+        else => false,
+    };
+}
+
+fn screenshot(
+    allocator: std.mem.Allocator,
+    io: std.Io,
+    home: []const u8,
+    mode: []const u8,
+) !void {
+    // Pressing the binding again while slurp is active cancels selection.
+    const cancel = try std.process.run(allocator, io, .{
+        .argv = &.{ "pkill", "slurp" },
+        .stdout_limit = .limited(4096),
+        .stderr_limit = .limited(4096),
+    });
+    defer allocator.free(cancel.stdout);
+    defer allocator.free(cancel.stderr);
+    if (commandSucceeded(cancel.term)) return;
+
+    const stamp_output = try runCommand(allocator, io, &.{ "date", "+%Y-%m-%d-%H%M%S" });
+    defer allocator.free(stamp_output);
+    const stamp = std.mem.trim(u8, stamp_output, " \t\r\n");
+    const filename = try std.fmt.allocPrint(
+        allocator,
+        "{s}/Pictures/Screenshots/{s}_hyprshot.png",
+        .{ home, stamp },
+    );
+    defer allocator.free(filename);
+
+    var hyprshot = try std.process.spawn(io, .{
+        .argv = &.{ "hyprshot", "-m", mode, "--raw" },
+        .stdin = .ignore,
+        .stdout = .pipe,
+        .stderr = .inherit,
+    });
+    errdefer hyprshot.kill(io);
+
+    var editor = std.process.spawn(io, .{
+        .argv = &.{
+            "satty",
+            "--filename",
+            "-",
+            "--output-filename",
+            filename,
+            "--early-exit",
+            "--actions-on-enter",
+            "save-to-clipboard",
+            "--save-after-copy",
+            "--copy-command",
+            "wl-copy",
+        },
+        .stdin = .{ .file = hyprshot.stdout.? },
+        .stdout = .inherit,
+        .stderr = .inherit,
+    }) catch |err| {
+        hyprshot.stdout.?.close(io);
+        return err;
+    };
+    hyprshot.stdout.?.close(io);
+    hyprshot.stdout = null;
+    errdefer editor.kill(io);
+
+    const capture_term = try hyprshot.wait(io);
+    const editor_term = try editor.wait(io);
+    if (!commandSucceeded(capture_term)) return error.ScreenshotFailed;
+    if (!commandSucceeded(editor_term)) return error.ScreenshotEditorFailed;
 }
 
 fn runCommand(
@@ -277,7 +360,10 @@ test "parse actions" {
     try std.testing.expectEqual(Action.volume_up, parseAction("volume", "up").?);
     try std.testing.expectEqual(Action.mute_input, parseAction("microphone", "mute").?);
     try std.testing.expectEqual(Action.brightness_down, parseAction("brightness", "down").?);
+    try std.testing.expectEqual(Action.screenshot_region, parseAction("screenshot", "region").?);
+    try std.testing.expectEqual(Action.screenshot_output, parseAction("screenshot", "output").?);
     try std.testing.expect(parseAction("volume", "invalid") == null);
+    try std.testing.expect(parseAction("screenshot", "invalid") == null);
 }
 
 test "parse audio state" {
