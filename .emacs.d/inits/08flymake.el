@@ -16,10 +16,12 @@
 
 
 (use-package eldoc-box
+  :bind ("C-c d" . eldoc-box-help-at-point)
+  :custom (eldoc-box-only-multi-line t)
   :hook ((eglot-managed-mode . eldoc-box-hover-mode)
-		 (emacs-lisp-mode-hook . eldoc-box-hover-mode)
-		 (lisp-interaction-mode-hook . eldoc-box-hover-mode)
-		 (ielm-mode-hook . eldoc-box-hover-mode)))
+		 (emacs-lisp-mode . eldoc-box-hover-mode)
+		 (lisp-interaction-mode . eldoc-box-hover-mode)
+		 (ielm-mode . eldoc-box-hover-mode)))
 
 
 ;; Local Variables:

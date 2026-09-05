@@ -64,7 +64,9 @@
   (when missing-packages
     (package-refresh-contents)
     (dolist (package missing-packages)
-      (package-install package))))
+      ;; `required-packages' is the source of truth; do not duplicate it in
+      ;; Custom's `package-selected-packages'.
+      (package-install package t))))
 
 ;; auto-compile
 (setq load-prefer-newer t)
