@@ -43,14 +43,14 @@
 	  diff-hl dockerfile-mode dracula-theme dumb-jump easy-hugo easy-jekyll
 	  edit-indirect editorconfig-generate eldoc-box elisp-slime-nav
 	  embark embark-consult espy exec-path-from-shell expreg
-	  fill-column-indicator flymake flymake-diagnostic-at-point ggtags
+	  fill-column-indicator flymake ggtags
 	  git-timemachine github-explorer github-review go-mode google-c-style
 	  google-this google-translate gptel gptel-commit gt htmlize hydra iedit
 	  init-loader js2-mode json-mode json-reformat key-chord keycast
 	  keychain-environment macrostep magit marginalia markdown-mode
 	  material-theme minions nginx-mode openwith orderless org package-lint
 	  package-lint-flymake page-break-lines pass password-generator popper
-	  posframe puni python-mode quickrun rake realgud realgud-byebug
+	  puni python-mode quickrun rake realgud realgud-byebug
 	  apheleia restclient restclient-test rust-mode lua-ts-mode sly
 	  smart-jump shackle symbol-overlay tldr toml-mode trashed tree-sitter
 	  tree-sitter-langs verb vertico volatile-highlights
