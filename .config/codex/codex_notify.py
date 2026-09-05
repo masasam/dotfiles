@@ -124,6 +124,58 @@ def find_terminal_window(
     return None
 
 
+def parse_tmux_clients(output: str, session: str) -> list[int]:
+    """Return clients attached to SESSION, most recently active first."""
+    clients: list[tuple[int, int]] = []
+    for line in output.splitlines():
+        fields = line.split("\t")
+        if len(fields) != 3 or fields[1] != session:
+            continue
+        try:
+            clients.append((int(fields[2]), int(fields[0])))
+        except ValueError:
+            continue
+    clients.sort(reverse=True)
+    return [pid for _, pid in clients]
+
+
+def tmux_client_pids() -> list[int]:
+    """Find terminal-side tmux clients for the pane running Codex."""
+    pane = os.environ.get("TMUX_PANE")
+    if not os.environ.get("TMUX") or not pane or not which("tmux"):
+        return []
+    try:
+        session_process = subprocess.run(
+            ["tmux", "display-message", "-p", "-t", pane, "#{session_name}"],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.DEVNULL,
+            text=True,
+            timeout=0.8,
+            check=False,
+        )
+        if session_process.returncode != 0:
+            return []
+        session = session_process.stdout.strip()
+        clients_process = subprocess.run(
+            [
+                "tmux",
+                "list-clients",
+                "-F",
+                "#{client_pid}\t#{client_session}\t#{client_activity}",
+            ],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.DEVNULL,
+            text=True,
+            timeout=0.8,
+            check=False,
+        )
+        if clients_process.returncode != 0:
+            return []
+        return parse_tmux_clients(clients_process.stdout, session)
+    except (OSError, subprocess.TimeoutExpired):
+        return []
+
+
 def codex_terminal_window() -> tuple[str, int] | None:
     if not os.environ.get("HYPRLAND_INSTANCE_SIGNATURE") or not which("hyprctl"):
         return None
@@ -138,9 +190,16 @@ def codex_terminal_window() -> tuple[str, int] | None:
         )
         if process.returncode != 0:
             return None
-        return find_terminal_window(
-            json.loads(process.stdout), parent_pid_chain(os.getpid())
-        )
+        clients = json.loads(process.stdout)
+        # Direct shells have the compositor window in their ancestor chain.
+        # Inside tmux, pane processes instead descend from the tmux server, so
+        # follow each attached tmux client back to its terminal window too.
+        pid_chains = [parent_pid_chain(os.getpid())]
+        pid_chains.extend(parent_pid_chain(pid) for pid in tmux_client_pids())
+        for pid_chain in pid_chains:
+            if terminal := find_terminal_window(clients, pid_chain):
+                return terminal
+        return None
     except (json.JSONDecodeError, OSError, subprocess.TimeoutExpired):
         return None
 

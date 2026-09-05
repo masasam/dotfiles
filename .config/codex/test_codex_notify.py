@@ -23,6 +23,48 @@ class CodexNotifyTest(unittest.TestCase):
             ("0xbbb", 20),
         )
 
+    def test_parses_tmux_clients_by_session_and_activity(self) -> None:
+        output = "101\twork\t10\n202\tother\t99\n303\twork\t30\ninvalid\twork\t40\n"
+        self.assertEqual(codex_notify.parse_tmux_clients(output, "work"), [303, 101])
+
+    def test_resolves_clients_attached_to_current_tmux_session(self) -> None:
+        session = subprocess.CompletedProcess([], 0, "work\n", "")
+        clients = subprocess.CompletedProcess(
+            [], 0, "101\twork\t10\n202\tother\t99\n303\twork\t30\n", ""
+        )
+        with (
+            patch.dict(
+                codex_notify.os.environ,
+                {"TMUX": "/tmp/tmux/default,1,0", "TMUX_PANE": "%7"},
+            ),
+            patch.object(codex_notify, "which", return_value="/usr/bin/tmux"),
+            patch.object(
+                codex_notify.subprocess,
+                "run",
+                side_effect=[session, clients],
+            ),
+        ):
+            self.assertEqual(codex_notify.tmux_client_pids(), [303, 101])
+
+    def test_finds_terminal_through_tmux_client(self) -> None:
+        clients = [{"address": "0xf00", "pid": 50}]
+        hyprland = subprocess.CompletedProcess([], 0, json.dumps(clients), "")
+        with (
+            patch.dict(
+                codex_notify.os.environ,
+                {"HYPRLAND_INSTANCE_SIGNATURE": "test"},
+            ),
+            patch.object(codex_notify, "which", return_value="/usr/bin/tool"),
+            patch.object(codex_notify.subprocess, "run", return_value=hyprland),
+            patch.object(codex_notify, "tmux_client_pids", return_value=[200]),
+            patch.object(
+                codex_notify,
+                "parent_pid_chain",
+                side_effect=lambda pid: [pid, 50] if pid == 200 else [pid, 1],
+            ),
+        ):
+            self.assertEqual(codex_notify.codex_terminal_window(), ("0xf00", 50))
+
     def test_worker_focuses_only_for_default_action(self) -> None:
         payload = {
             "title": "Codex",
