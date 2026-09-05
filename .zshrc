@@ -650,32 +650,6 @@ function mpv-quit() {
 }
 
 
-function bgm() {
-    if [ $# = 0 ]; then
-		mpv --loop=inf --shuffle --no-video ~/Music/ &
-	elif [ $1 = one ]; then
-		mpv --no-video "`ls ~/Music/* | fzf-tmux -d --reverse --prompt="bgm > "`" &
-	elif [ $1 = stop ]; then
-		pkill -SIGUSR1 -f mpv
-    elif [ $1 = get ] && [ $# = 2 ]; then
-		cd ~/Music/
-		yt-dlp_linux -x --audio-format mp3 $2
-		cd -
-    else
-		echo -e 'usage: bgm - Shuffle play from ~/Music\nusage: bgm one - Select a song from ~/Music and play it\nusage: bgm get [youtube-url] - Download music\nusage: bgm stop - Stop bgm'
-    fi
-}
-
-
-function stern-completion-start() {
-    if [ $# = 0 ]; then
-	source <(stern --completion=zsh)
-    else
-	echo 'usage: stern-completion-start'
-    fi
-}
-
-
 function ide() {
     tmux split-window -v
     tmux split-window -h
@@ -705,50 +679,6 @@ function ide4() {
     tmux select-pane -t 1
     tmux split-window -v
     tmux select-pane -t 1
-}
-
-
-function aws-profile-change() {
-    if [ $# = 1 ]; then
-	export AWS_PROFILE=$1
-    else
-	echo 'Please select a profile from below'
-	echo '---------------------'
-	aws configure list-profiles
-	echo '---------------------'
-	echo 'usage: aws-profile-change [profilename]'
-    fi
-}
-
-
-function aws-profile-add() {
-    if [ $# = 1 ]; then
-	aws configure --profile $1
-    else
-	echo 'Please specify something other than the list below'
-	echo '---------------------'
-	aws configure list-profiles
-	echo '---------------------'
-	echo 'usage: aws-profile-add [profilename]'
-    fi
-}
-
-
-function s3-download() {
-    if [ $# = 1 ]; then
-	open https://s3.console.aws.amazon.com/s3/object/$1	
-    else
-	echo 'usage: s3-download [s3object]'
-    fi
-}
-
-
-function rec() {
-	if [ $# = 1 ]; then
-		sleep $1 && wf-recorder -f "$(xdg-user-dir VIDEOS)/$(date +'%Y-%m-%d-%H%M%S.mp4')"
-    else
-		echo 'usage: rec [seconds]'
-    fi
 }
 
 
