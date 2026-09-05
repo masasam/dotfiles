@@ -347,17 +347,6 @@ function keybind-fzf() {
 zle -N keybind-fzf
 bindkey '^xB' keybind-fzf
 
-function gitlog-fzf() {
-  git log --graph --color=always \
-      --format="%C(auto)%h%d %s %C(black)%C(bold)%cr" "$@" | \
-  fzf-tmux -d --prompt="git log > " --ansi --no-sort --reverse --tiebreak=index --bind=ctrl-s:toggle-sort \
-      --bind "ctrl-m:execute:
-                (grep -o '[a-f0-9]\{7\}' | head -1 |
-                xargs -I % sh -c 'git show --color=always % | less -R') << 'FZF-EOF'
-                {}
-FZF-EOF"
-}
-
 function fzf-checkout-pull-request () {
     local selected_pr_id=$(gh pr list | fzf-tmux -d --reverse --prompt="pr > " --query "$LBUFFER" | awk '{ print $1 }')
     if [ -n "$selected_pr_id" ]; then
@@ -370,26 +359,10 @@ zle -N fzf-checkout-pull-request
 bindkey '^xg' fzf-checkout-pull-request
 bindkey '^x^g' fzf-checkout-pull-request
 
-function gitroot() {
-    cd ./$(git rev-parse --show-cdup)
-    if [ $# = 1 ]; then
-	cd $1
-    fi
-}
-
 alias ipsort='zshctl ipsort'
 alias remove-exif='zshctl remove-exif'
 alias gitignore='zshctl gitignore'
 alias mytldr='zshctl mytldr'
-
-function fetch-pull-request() {
-    echo "Please input pull request number"
-    read NUM
-    echo "Please input branch"
-    read BRANCH
-    git fetch origin pull/${NUM}/head:${BRANCH}
-}
-
 alias ide='zshctl ide 1'
 alias ide2='zshctl ide 2'
 alias ide3='zshctl ide 3'
