@@ -23,37 +23,7 @@ LISTMAX=10000
 zshaddhistory() {
     local line=${1%%$'\n'}
     local cmd=${line%% *}
-
-    # Only those that satisfy all of the following conditions are added to the history
-	[[ ${#line} -ge 5
-     	   && ${cmd} != tm
-		   && ${cmd} != ll
-		   && ${cmd} != ls
-		   && ${cmd} != la
-		   && ${cmd} != cd
-		   && ${cmd} != bgm
-		   && ${cmd} != man
-		   && ${cmd} != scp
-		   && ${cmd} != ssh
-		   && ${cmd} != vim
-		   && ${cmd} != nvim
-		   && ${cmd} != less
-		   && ${cmd} != ping
-		   && ${cmd} != open
-		   && ${cmd} != file
-		   && ${cmd} != which
-		   && ${cmd} != whois
-		   && ${cmd} != drill
-		   && ${cmd} != uname
-		   && ${cmd} != md5sum
-		   && ${cmd} != pacman
-		   && ${cmd} != blog-jpg
-		   && ${cmd} != xdg-open
-		   && ${cmd} != mpv-music
-		   && ${cmd} != mpv-video
-		   && ${cmd} != traceroute
-		   && ${cmd} != speedtest-cli
-	 ]]
+	[[ ${#line} -ge 5 && ${cmd} != tm && ${cmd} != ll && ${cmd} != ls && ${cmd} != la && ${cmd} != cd && ${cmd} != man && ${cmd} != scp && ${cmd} != ssh && ${cmd} != vim && ${cmd} != nvim && ${cmd} != less && ${cmd} != ping && ${cmd} != open && ${cmd} != file && ${cmd} != which && ${cmd} != whois && ${cmd} != drill && ${cmd} != uname && ${cmd} != md5sum && ${cmd} != pacman && ${cmd} != xdg-open && ${cmd} != traceroute && ${cmd} != speedtest-cli ]]
 }
 
 unsetopt extended_history
