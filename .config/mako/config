@@ -13,6 +13,10 @@ default-timeout=5000
 ignore-timeout=1
 font="Noto Sans CJK SC" 14
 
+[app-name=Codex actionable]
+on-button-left=invoke-default-action
+on-button-right=dismiss
+
 [urgency=critical]
 default-timeout=0
 

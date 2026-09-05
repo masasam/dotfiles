@@ -4,6 +4,7 @@ from __future__ import annotations
 import html
 import json
 import os
+import string
 import subprocess
 import sys
 from pathlib import Path
@@ -70,21 +71,182 @@ def which(name: str) -> str | None:
 
 
 def parent_pids(pid: int) -> set[int]:
-    result: set[int] = set()
+    return set(parent_pid_chain(pid))
+
+
+def parent_pid_chain(pid: int) -> list[int]:
+    """Return PID and its ancestors, ordered from nearest to farthest."""
+    result: list[int] = []
     current = pid
+    seen: set[int] = set()
     for _ in range(64):
-        if current <= 1 or current in result:
+        if current <= 1 or current in seen:
             break
-        result.add(current)
+        seen.add(current)
+        result.append(current)
         try:
             stat = Path(f"/proc/{current}/stat").read_text()
             after_comm = stat.rsplit(")", 1)[1].strip().split()
             current = int(after_comm[1])
         except (IndexError, OSError, ValueError):
             break
-    if current > 0:
-        result.add(current)
+    if current > 0 and current not in seen:
+        result.append(current)
     return result
+
+
+def valid_window_address(value: object) -> bool:
+    if not isinstance(value, str) or not value.startswith("0x"):
+        return False
+    digits = value[2:]
+    return bool(digits) and all(character in string.hexdigits for character in digits)
+
+
+def find_terminal_window(
+    clients: object, pid_chain: list[int]
+) -> tuple[str, int] | None:
+    if not isinstance(clients, list):
+        return None
+    clients_by_pid: dict[int, str] = {}
+    for client in clients:
+        if not isinstance(client, dict):
+            continue
+        try:
+            pid = int(client.get("pid"))
+        except (TypeError, ValueError):
+            continue
+        address = client.get("address")
+        if valid_window_address(address):
+            clients_by_pid[pid] = address
+    for pid in pid_chain:
+        if address := clients_by_pid.get(pid):
+            return address, pid
+    return None
+
+
+def codex_terminal_window() -> tuple[str, int] | None:
+    if not os.environ.get("HYPRLAND_INSTANCE_SIGNATURE") or not which("hyprctl"):
+        return None
+    try:
+        process = subprocess.run(
+            ["hyprctl", "clients", "-j"],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.DEVNULL,
+            text=True,
+            timeout=0.8,
+            check=False,
+        )
+        if process.returncode != 0:
+            return None
+        return find_terminal_window(
+            json.loads(process.stdout), parent_pid_chain(os.getpid())
+        )
+    except (json.JSONDecodeError, OSError, subprocess.TimeoutExpired):
+        return None
+
+
+def terminal_window_exists(address: str, pid: int) -> bool:
+    if not valid_window_address(address):
+        return False
+    try:
+        process = subprocess.run(
+            ["hyprctl", "clients", "-j"],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.DEVNULL,
+            text=True,
+            timeout=0.8,
+            check=False,
+        )
+        if process.returncode != 0:
+            return False
+        clients = json.loads(process.stdout)
+    except (json.JSONDecodeError, OSError, subprocess.TimeoutExpired):
+        return False
+    if not isinstance(clients, list):
+        return False
+    for client in clients:
+        if not isinstance(client, dict) or client.get("address") != address:
+            continue
+        try:
+            return int(client.get("pid")) == pid
+        except (TypeError, ValueError):
+            return False
+    return False
+
+
+def focus_terminal(address: str, pid: int) -> None:
+    if not which("hyprctl") or not terminal_window_exists(address, pid):
+        return
+    try:
+        subprocess.run(
+            ["hyprctl", "dispatch", "focuswindow", f"address:{address}"],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+            timeout=1.5,
+            check=False,
+        )
+    except (OSError, subprocess.TimeoutExpired):
+        return
+
+
+def notification_worker() -> int:
+    try:
+        payload = json.load(sys.stdin)
+        title = str(payload["title"])
+        body = str(payload["body"])
+        urgency = str(payload["urgency"])
+        timeout_ms = int(payload["timeout_ms"])
+        address = str(payload["address"])
+        pid = int(payload["pid"])
+    except (KeyError, TypeError, ValueError, json.JSONDecodeError):
+        return 2
+    if not valid_window_address(address) or not which("notify-send"):
+        return 2
+    try:
+        process = subprocess.run(
+            [
+                "notify-send",
+                "-a",
+                "Codex",
+                "-i",
+                str(ICON),
+                "-u",
+                urgency,
+                "-t",
+                str(timeout_ms),
+                "--action",
+                "default=ターミナルへ移動",
+                title,
+                body,
+            ],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.DEVNULL,
+            text=True,
+            check=False,
+        )
+    except OSError:
+        return 1
+    if process.returncode == 0 and process.stdout.strip() == "default":
+        focus_terminal(address, pid)
+    return 0
+
+
+def spawn_actionable_notification(payload: dict[str, object]) -> bool:
+    try:
+        worker = subprocess.Popen(
+            [sys.executable, str(Path(__file__).resolve()), "--notification-worker"],
+            stdin=subprocess.PIPE,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+            start_new_session=True,
+        )
+        if worker.stdin is None:
+            return False
+        worker.stdin.write(json.dumps(payload, ensure_ascii=False).encode())
+        worker.stdin.close()
+        return True
+    except (BrokenPipeError, OSError, TypeError, ValueError):
+        return False
 
 
 def active_hyprland_pid() -> int | None:
@@ -143,15 +305,34 @@ def notify(
 ) -> None:
     if ONLY_WHEN_UNFOCUSED and codex_terminal_is_focused():
         return
+    terminal = codex_terminal_window()
+    if terminal and which("notify-send"):
+        address, pid = terminal
+        if spawn_actionable_notification(
+            {
+                "title": html.escape(title, quote=False),
+                "body": html.escape(body, quote=False),
+                "urgency": urgency,
+                "timeout_ms": timeout_ms,
+                "address": address,
+                "pid": pid,
+            }
+        ):
+            play_sound(sound_name)
+            return
     if which("notify-send"):
         try:
             subprocess.Popen(
                 [
                     "notify-send",
-                    "-a", "Codex",
-                    "-i", str(ICON),
-                    "-u", urgency,
-                    "-t", str(timeout_ms),
+                    "-a",
+                    "Codex",
+                    "-i",
+                    str(ICON),
+                    "-u",
+                    urgency,
+                    "-t",
+                    str(timeout_ms),
                     html.escape(title, quote=False),
                     html.escape(body, quote=False),
                 ],
@@ -176,7 +357,9 @@ def permission_body(event: dict[str, Any]) -> str:
             detail = str(tool_input.get("command") or "")
         else:
             try:
-                detail = json.dumps(tool_input, ensure_ascii=False, separators=(",", ":"))
+                detail = json.dumps(
+                    tool_input, ensure_ascii=False, separators=(",", ":")
+                )
             except (TypeError, ValueError):
                 detail = str(tool_input)
     parts = [f"{tool} の承認が必要です"]
@@ -199,6 +382,8 @@ def load_event() -> dict[str, Any] | None:
 
 
 def main() -> int:
+    if len(sys.argv) == 2 and sys.argv[1] == "--notification-worker":
+        return notification_worker()
     event = load_event()
     if event is None:
         print(json.dumps({"continue": True}))
@@ -208,7 +393,9 @@ def main() -> int:
     project = project_name(event.get("cwd"))
 
     if event.get("type") == "agent-turn-complete":
-        message = compact(event.get("last-assistant-message")) or "タスクが完了しました。"
+        message = (
+            compact(event.get("last-assistant-message")) or "タスクが完了しました。"
+        )
         notify(
             f"Codex · {project}",
             message,
@@ -229,7 +416,9 @@ def main() -> int:
         return 0
 
     if hook == "Stop":
-        message = compact(event.get("last_assistant_message")) or "タスクが完了しました。"
+        message = (
+            compact(event.get("last_assistant_message")) or "タスクが完了しました。"
+        )
         notify(
             f"Codex · {project}",
             message,
