@@ -180,7 +180,6 @@ setopt correct
 # Permission when creating files
 umask 022
 
-
 # vcs_info
 RPROMPT="%{${fg[blue]}%}[%~]%{${reset_color}%}"
 autoload -Uz vcs_info
@@ -192,7 +191,6 @@ zstyle ':vcs_info:*' formats "%F{green}%c%u[%b]%f"
 zstyle ':vcs_info:*' actionformats '[%b|%a]'
 precmd () { vcs_info }
 RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
-
 
 # Tmux, pass the name of the command currently executed to screen
 case "${TERM}"
@@ -222,16 +220,13 @@ in screen-256color)
        };;
 esac
 
-
 # Delete by word with C-w
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
-
 
 # If command not found then find it when using arch linux(sudo pacman -S pkgfile)
 if [ -f /usr/share/doc/pkgfile/command-not-found.zsh ]; then
     source /usr/share/doc/pkgfile/command-not-found.zsh
 fi
-
 
 # keychain config
 /usr/bin/keychain -q $HOME/.ssh/id_rsa
@@ -239,7 +234,6 @@ source $HOME/.keychain/$HOST-sh
 
 # completion mosh
 compdef mosh=ssh
-
 
 # aliases
 alias tm='tmux new -s main'
@@ -291,7 +285,6 @@ alias check-iso='dotctl check-iso'
 alias dirsum='dotctl dirsum'
 alias timer='dotctl timer'
 
-
 # PATH
 export GOPATH=$HOME
 export PATH="$PATH:$GOPATH/bin"
@@ -321,18 +314,15 @@ autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
   zstyle ':chpwd:*' recent-dirs-pushd true
 fi
 
-
 # cd after then ls
 function chpwd() {
     ls -v -F --color=auto
 }
 
-
 # Invoke the ``dired'' of current working directory in Emacs buffer.
 function dired() {
     emacsclient -e "(dired \"${1:-$PWD}\")" & wmctrl -a emacs
 }
-
 
 # Chdir to the ``default-directory'' of currently opened in Emacs buffer.
 function cde() {
@@ -353,14 +343,12 @@ function cde() {
     cd "$EMACS_CWD"
 }
 
-
 function history-fzf() {
     BUFFER=$(history -n -r 1 | fzf-tmux -d --reverse --no-sort +m --query "$LBUFFER" --prompt="History > ")
     CURSOR=$#BUFFER
 }
 zle -N history-fzf
 bindkey '^r' history-fzf
-
 
 function cdr-fzf() {
     local selected_dir=$(cdr -l | awk '{ print $2 }' | fzf-tmux -d --reverse --prompt="cd > ")
@@ -374,7 +362,6 @@ zle -N cdr-fzf
 bindkey '^xf' cdr-fzf
 bindkey '^x^f' cdr-fzf
 
-
 function ghq-fzf() {
   local selected_dir=$(ghq list | fzf-tmux -d --reverse --query="$LBUFFER" --prompt="ghq list > ")
   if [ -n "$selected_dir" ]; then
@@ -387,19 +374,16 @@ zle -N ghq-fzf
 bindkey '^x^l' ghq-fzf
 bindkey '^xl' ghq-fzf
 
-
 function ghq-delete-fzf() {
     ghq list --full-path | fzf-tmux -d --reverse --prompt="github-delete > " | xargs -r rm -r
 }
 zle -N ghq-delete-fzf
 bindkey '^xD' ghq-delete-fzf
 
-
 function ghs-import-fzf() {
     [ "$#" -eq 0 ] && echo "Usage : ghs-import QUERY" && return 1
     ghs "$@" | fzf-tmux -d --reverse | awk '{print $1}' | ghq import
 }
-
 
 function github-issue-fzf() {
     gh issue list | fzf-tmux -d --reverse --prompt="github issue > " | \
@@ -407,7 +391,6 @@ function github-issue-fzf() {
 }
 zle -N github-issue-fzf
 bindkey '^x^i' github-issue-fzf
-
 
 function git-branch-fzf() {
     local selected_branch=$(git for-each-ref --format='%(refname)' --sort=-committerdate refs/heads | \
@@ -423,7 +406,6 @@ zle -N git-branch-fzf
 bindkey "^x^b" git-branch-fzf
 bindkey "^xb" git-branch-fzf
 
-
 function git-hash-fzf() {
     local current_buffer=$BUFFER
     local git_hash="$(git log --oneline --branches | fzf-tmux -d --reverse --prompt="git hash > " | awk '{print $1}')"
@@ -433,7 +415,6 @@ function git-hash-fzf() {
 zle -N git-hash-fzf
 bindkey '^x^h' git-hash-fzf
 
-
 function git-stash-fzf() {
     local current_buffer=$BUFFER
     local stash="$(git stash list | fzf-tmux -d --reverse --prompt="git stash > " | awk -F'[ :]' '{print $1}')"
@@ -442,7 +423,6 @@ function git-stash-fzf() {
 }
 zle -N git-stash-fzf
 bindkey '^x^s' git-stash-fzf
-
 
 function ps-fzf() {
     local current_buffer=$BUFFER
@@ -454,19 +434,16 @@ zle -N ps-fzf
 bindkey '^xp' ps-fzf
 bindkey '^x^p' ps-fzf
 
-
 function alias-fzf() {
     BUFFER=$(alias | fzf-tmux -d --reverse --query "$LBUFFER" --prompt="Alias > " | awk -F"=" '{print $1}')
     print -z "$BUFFER"
 }
-
 
 function keybind-fzf() {
     zle $(bindkey | fzf-tmux -d --reverse --prompt="Keybind > " | cut -d " " -f 2)
 }
 zle -N keybind-fzf
 bindkey '^xB' keybind-fzf
-
 
 function gitlog-fzf() {
   git log --graph --color=always \
@@ -478,20 +455,6 @@ function gitlog-fzf() {
                 {}
 FZF-EOF"
 }
-
-
-function ssh-fzf () {
-    local selected_host=$(grep "Host " ~/.ssh/config | grep -v '*' | cut -b 6- | fzf-tmux -d --reverse --prompt="ssh > " --query "$LBUFFER")
-
-    if [ -n "$selected_host" ]; then
-	BUFFER="ssh ${selected_host}"
-	zle accept-line
-    fi
-    zle reset-prompt
-}
-zle -N ssh-fzf
-bindkey '^\' ssh-fzf
-
 
 function fzf-checkout-pull-request () {
     local selected_pr_id=$(gh pr list | fzf-tmux -d --reverse --prompt="pr > " --query "$LBUFFER" | awk '{ print $1 }')
@@ -505,20 +468,12 @@ zle -N fzf-checkout-pull-request
 bindkey '^xg' fzf-checkout-pull-request
 bindkey '^x^g' fzf-checkout-pull-request
 
-
-function rails-routes-fzf() {
-    BUFFER=$(bin/rails routes | fzf-tmux -d --reverse --no-sort +m --query "$LBUFFER" --prompt="rails routes > ")
-    CURSOR=$#BUFFER
-}
-
-
 function gitroot() {
     cd ./$(git rev-parse --show-cdup)
     if [ $# = 1 ]; then
 	cd $1
     fi
 }
-
 
 function ipsort() {
     if [ $# = 1 ]; then
@@ -528,7 +483,6 @@ function ipsort() {
     fi
 }
 
-
 function remove-exif() {
     if [ $# = 1 ]; then
 	jhead -purejpg $1
@@ -536,27 +490,6 @@ function remove-exif() {
 	echo 'usage: remove-exif file.jpg'
     fi
 }
-
-
-function git-upstream() {
-    if [ $# = 1 ]; then
-	git remote add upstream $1
-    else
-	echo 'usage: git-upstream git://github.com/owner/repo.git'
-    fi
-}
-
-
-function git-upstream-follow() {
-    if [ $# = 1 ]; then
-	git remote add upstream $1
-	git fetch upstream
-	git merge upstream/master
-    else
-	echo 'usage: git-upstream-follow git://github.com/owner/repo.git'
-    fi
-}
-
 
 function gitignore() {
     if [ $# = 2 ]; then
@@ -566,33 +499,6 @@ function gitignore() {
     fi
 }
 
-
-function github-stars() {
-    if [ $# = 2 ]; then
-	open "https://github.com/search?q=language%3A$1+stars%3A%3E%3D$2&type=Repositories&ref=searchresults"
-    else
-	echo 'usage: github-stars language stars'
-    fi
-}
-
-
-function terminal-size() {
-    echo "width"
-    tput cols
-    echo "height"
-    tput lines
-}
-
-
-function clip-file() {
-    if [ $# = 1 ]; then
-	cat $1 | xsel -bi
-    else
-	echo 'usage: clip-file file'
-    fi
-}
-
-
 function mytldr() {
     if [ $# = 1 ]; then
 	unbuffer tldr $1 | less -SR
@@ -600,7 +506,6 @@ function mytldr() {
 	echo 'usage: mytldr $1'
     fi
 }
-
 
 function fetch-pull-request() {
     echo "Please input pull request number"
@@ -610,7 +515,6 @@ function fetch-pull-request() {
     git fetch origin pull/${NUM}/head:${BRANCH}
 }
 
-
 function ide() {
     tmux split-window -v
     tmux split-window -h
@@ -618,13 +522,11 @@ function ide() {
     tmux select-pane -t 1
 }
 
-
 function ide2() {
     tmux split-window -h
     tmux split-window -v
     tmux select-pane -t 1
 }
-
 
 function ide3() {
     tmux split-window -h
@@ -633,7 +535,6 @@ function ide3() {
     tmux select-pane -t 1
 }
 
-
 function ide4() {
     tmux split-window -h
     tmux split-window -v
@@ -641,16 +542,6 @@ function ide4() {
     tmux split-window -v
     tmux select-pane -t 1
 }
-
-
-function tenki() {
-	if [ $# = 1 ]; then
-		curl -H "Accept-Language: ja" --compressed wttr.in/$1 | less -R
-    else
-		echo 'usage: tenki [location]'
-    fi
-}
-
 
 function topdf() {
 	for filein in $(find . -type f ! -name "*.jpg" ! -name "*.jpeg" ! -name "*.png" ! -name "*.gif"); do
@@ -662,7 +553,6 @@ function topdf() {
 		rm -f tmp.html
 	done
 }
-
 
 # zsh-syntax-highlighting(pacman -S zsh-syntax-highlighting)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
