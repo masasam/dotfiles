@@ -65,6 +65,37 @@ class CodexNotifyTest(unittest.TestCase):
         ):
             self.assertEqual(codex_notify.codex_terminal_window(), ("0xf00", 50))
 
+    def test_focuses_terminal_with_hyprland_lua_dispatcher(self) -> None:
+        completed = subprocess.CompletedProcess([], 0, "ok\n", "")
+        with (
+            patch.object(codex_notify, "which", return_value="/usr/bin/hyprctl"),
+            patch.object(codex_notify, "terminal_window_exists", return_value=True),
+            patch.object(
+                codex_notify.subprocess, "run", return_value=completed
+            ) as run,
+        ):
+            self.assertTrue(codex_notify.focus_terminal("0xabc", 42))
+        run.assert_called_once_with(
+            [
+                "hyprctl",
+                "dispatch",
+                'hl.dsp.focus({ window = "address:0xabc" })',
+            ],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+            timeout=1.5,
+            check=False,
+        )
+
+    def test_does_not_focus_a_stale_terminal_window(self) -> None:
+        with (
+            patch.object(codex_notify, "which", return_value="/usr/bin/hyprctl"),
+            patch.object(codex_notify, "terminal_window_exists", return_value=False),
+            patch.object(codex_notify.subprocess, "run") as run,
+        ):
+            self.assertFalse(codex_notify.focus_terminal("0xabc", 42))
+        run.assert_not_called()
+
     def test_worker_focuses_only_for_default_action(self) -> None:
         payload = {
             "title": "Codex",

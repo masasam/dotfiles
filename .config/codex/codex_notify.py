@@ -233,19 +233,22 @@ def terminal_window_exists(address: str, pid: int) -> bool:
     return False
 
 
-def focus_terminal(address: str, pid: int) -> None:
+def focus_terminal(address: str, pid: int) -> bool:
     if not which("hyprctl") or not terminal_window_exists(address, pid):
-        return
+        return False
+    # Hyprland 0.56+ parses `hyprctl dispatch` as a Lua expression.
+    expression = f'hl.dsp.focus({{ window = "address:{address}" }})'
     try:
-        subprocess.run(
-            ["hyprctl", "dispatch", "focuswindow", f"address:{address}"],
+        process = subprocess.run(
+            ["hyprctl", "dispatch", expression],
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL,
             timeout=1.5,
             check=False,
         )
+        return process.returncode == 0
     except (OSError, subprocess.TimeoutExpired):
-        return
+        return False
 
 
 def notification_worker() -> int:
