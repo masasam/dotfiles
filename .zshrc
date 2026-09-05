@@ -223,24 +223,24 @@ alias open='xdg-open'
 alias mysql="mysql --pager='less -S -n -i -F -X'"
 alias syncdropbox='time rclone sync ${HOME}/backup dropbox:backup'
 alias syncqnap='time rclone sync ${HOME}/backup qnap:backup'
-alias backupcloud='syncdropbox; syncqnap'
+alias backupcloud='workstationctl backupcloud'
 # alias followupdropbox='time rclone sync dropbox:backup ${HOME}/backup'
 # alias followupqnap='time rclone sync qnap:backup ${HOME}/backup'
 # alias followupcloud='followupdropbox; followupqnap'
-alias zshbackup='rm -rf ${HOME}/backup/zsh/backup/`ls -rt ${HOME}/backup/zsh/backup | head -n 1`; tar cfz ${HOME}/backup/zsh/backup/`date '+%Y%m%d%H%M%S'`.tar.gz -C ${HOME}/backup/zsh/ .zsh_history'
-alias melpabackup='rm -rf ${HOME}/backup/emacs/elpa/`ls -rt ${HOME}/backup/emacs/elpa | head -n 1`; tar cfz ${HOME}/backup/emacs/elpa/`date '+%Y%m%d%H%M%S'`.tar.gz -C ${HOME}/.emacs.d elpa'
+alias zshbackup='workstationctl zshbackup'
+alias melpabackup='workstationctl melpabackup'
 alias melpacleanup='rm -rf ${HOME}/.emacs.d/elpa'
-alias dockercleanup='docker system df; docker container prune; docker volume prune; docker image prune; docker network prune; docker system prune -a; docker system df'
+alias dockercleanup='workstationctl dockercleanup'
 alias yaycleanup='yay -Sc --aur'
 alias kindstart='kind create cluster; export KUBECONFIG="$(kind get kubeconfig-path --name="kind")"; kubectl cluster-info'
 alias kindstop='unset KUBECONFIG; kind delete cluster'
-alias mirrorupdate='sudo reflector --latest 20 --age 12 --country JP --sort rate --save /etc/pacman.d/mirrorlist && cat /etc/pacman.d/mirrorlist'
-alias archupdate='yay -Syu; paccache -r; paccache -ruk0'
-alias archbackup='cd ${HOME}/src/github.com/masasam/dotfiles; make backup; cd -'
+alias mirrorupdate='workstationctl mirrorupdate'
+alias archupdate='workstationctl archupdate'
+alias archbackup='workstationctl archbackup'
 alias gcloudupdate='gcloud components update'
 alias battery='sudo tlp-stat -b'
-alias uefiupdate='fwupdmgr refresh --force; fwupdmgr get-updates; fwupdmgr update'
-alias allupdate='time archupdate && time melpabackup && time zshbackup && time archbackup && time backupcloud'
+alias uefiupdate='workstationctl uefiupdate'
+alias allupdate='workstationctl allupdate'
 alias md2pdf='dotctl md2pdf'
 alias md2docx='dotctl md2docx'
 alias optimize-jpg='dotctl optimize-jpg'
@@ -287,9 +287,7 @@ function chpwd() {
 }
 
 # Invoke the ``dired'' of current working directory in Emacs buffer.
-function dired() {
-    emacsclient -e "(dired \"${1:-$PWD}\")" & wmctrl -a emacs
-}
+alias dired='workstationctl dired'
 
 # Chdir to the ``default-directory'' of currently opened in Emacs buffer.
 function cde() {
