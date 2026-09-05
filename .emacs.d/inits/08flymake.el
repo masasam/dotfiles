@@ -14,10 +14,20 @@
 (puni-global-mode)
 (add-hook 'term-mode-hook #'puni-disable-puni-mode)
 
+(defun my/eldoc-box-help-toggle ()
+  "Show or hide Eldoc documentation without focusing its child frame."
+  (interactive)
+  (let ((frame (and (boundp 'eldoc-box--frame)
+		    (symbol-value 'eldoc-box--frame))))
+    (if (and (frame-live-p frame) (frame-visible-p frame))
+	(eldoc-box-quit-frame)
+      (eldoc-box-help-at-point))))
+
 
 (use-package eldoc-box
-  :bind ("C-c d" . eldoc-box-help-at-point)
-  :custom (eldoc-box-only-multi-line t)
+  :bind ("C-c d" . my/eldoc-box-help-toggle)
+  :custom ((eldoc-box-only-multi-line t)
+	   (eldoc-box-clear-with-C-g t))
   :hook ((eglot-managed-mode . eldoc-box-hover-mode)
 		 (emacs-lisp-mode . eldoc-box-hover-mode)
 		 (lisp-interaction-mode . eldoc-box-hover-mode)
