@@ -240,9 +240,6 @@ alias archbackup='cd ${HOME}/src/github.com/masasam/dotfiles; make backup; cd -'
 alias gcloudupdate='gcloud components update'
 alias battery='sudo tlp-stat -b'
 alias uefiupdate='fwupdmgr refresh --force; fwupdmgr get-updates; fwupdmgr update'
-alias fontlist='fc-list | cut -d: -f1 | less'
-alias fontlistja='fc-list :lang=ja | cut -d: -f1 | less'
-alias jupytertheme='jt -t chesterish -T -f roboto -fs 9 -tf merriserif -tfs 11 -nf ptsans -nfs 11 -dfs 8 -ofs 8'
 alias allupdate='time archupdate && time melpabackup && time zshbackup && time archbackup && time backupcloud'
 alias md2pdf='dotctl md2pdf'
 alias md2docx='dotctl md2docx'
@@ -343,20 +340,6 @@ function ghq-fzf() {
 zle -N ghq-fzf
 bindkey '^x^l' ghq-fzf
 bindkey '^xl' ghq-fzf
-
-function git-branch-fzf() {
-    local selected_branch=$(git for-each-ref --format='%(refname)' --sort=-committerdate refs/heads | \
-				perl -pne 's{^refs/heads/}{}' | \
-				fzf-tmux -d --reverse --query "$LBUFFER" --prompt="git branch > ")
-  if [ -n "$selected_branch" ]; then
-    BUFFER="git checkout ${selected_branch}"
-    zle accept-line
-  fi
-  zle reset-prompt
-}
-zle -N git-branch-fzf
-bindkey "^x^b" git-branch-fzf
-bindkey "^xb" git-branch-fzf
 
 function keybind-fzf() {
     zle $(bindkey | fzf-tmux -d --reverse --prompt="Keybind > " | cut -d " " -f 2)
