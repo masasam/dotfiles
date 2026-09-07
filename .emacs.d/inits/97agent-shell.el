@@ -8,7 +8,8 @@
   :config
   ;; Reuse the existing `codex login' credentials.  Inheriting Emacs' environment
   ;; also makes the mise-installed `codex-acp' executable available to the agent.
-  (setq agent-shell-openai-authentication
+  (setq agent-shell-header-style 'text
+        agent-shell-openai-authentication
         (agent-shell-openai-make-authentication :login t)
         agent-shell-openai-codex-environment
         (agent-shell-make-environment-variables :inherit-env t)

@@ -3,6 +3,7 @@
 /.cache
 /.edbi-ds-history
 /.python-environments/
+/agent/
 /abbrev_defs
 /ac-comphist.dat
 /async-bytecomp.log
