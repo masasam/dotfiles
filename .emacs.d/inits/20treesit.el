@@ -13,6 +13,10 @@
     (setq treesit-auto-install-grammar 'always
           treesit-enabled-modes t)))
 
+;; Stop a language server after its last managed buffer is closed.
+(with-eval-after-load 'eglot
+  (setq eglot-autoshutdown t))
+
 (defun my/eglot-ensure-if-program (&rest programs)
   "Start Eglot when one of PROGRAMS is available.
 Otherwise, report which language-server executables are needed."

@@ -753,7 +753,7 @@ local workspaceApps = {
     { name = "google-chrome",      class = "^(google-chrome)$",          workspace = WORKSPACE.web },
 
     -- Workspace 3: Editor
-    { name = "emacs",              class = "^(Emacs)$",                  workspace = WORKSPACE.code },
+    { name = "emacs",              class = "^(emacs|Emacs)$",            workspace = WORKSPACE.code },
 
     -- Workspace pool 4 -> 6 -> 11...: Documents / DB / Graphics
     { name = "pdf",                class = "^(org.gnome.Papers)$",       workspace = WORKSPACE.docs },

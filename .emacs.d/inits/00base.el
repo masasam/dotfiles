@@ -18,6 +18,13 @@
 (setq use-file-dialog nil)
 (setq inhibit-x-resources t)
 
+;; Built-in quality-of-life and resilience features.
+(save-place-mode 1)
+(repeat-mode 1)
+(global-so-long-mode 1)
+(when (fboundp 'pixel-scroll-precision-mode)
+  (pixel-scroll-precision-mode 1))
+
 ;; Change part of theme to your liking.
 ;; Investigate by changing 'M-x list-faces-display'
 (custom-set-faces '(cursor ((t (:background "#82c600")))))
