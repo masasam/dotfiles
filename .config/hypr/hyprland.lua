@@ -57,7 +57,10 @@ local menu        = "pkill fuzzel || fuzzel"
 -- Or execute your favorite apps at launch like this:
 
 hl.on("hyprland.start", function ()
-  hl.exec_cmd("waybar & hypridle & hyprpaper & hyprsunset")
+  hl.exec_cmd("waybar")
+  hl.exec_cmd("hypridle")
+  hl.exec_cmd("hyprpaper")
+  hl.exec_cmd("hyprsunset")
   hl.exec_cmd("nm-applet --indicator")
   hl.exec_cmd("snappy-switcher --daemon")
   hl.exec_cmd("fcitx5 -d")

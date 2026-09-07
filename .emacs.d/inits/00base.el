@@ -24,6 +24,9 @@
 (global-so-long-mode 1)
 (when (fboundp 'pixel-scroll-precision-mode)
   (pixel-scroll-precision-mode 1))
+(setq auto-revert-avoid-polling t
+      global-auto-revert-non-file-buffers t)
+(global-auto-revert-mode 1)
 
 ;; Change part of theme to your liking.
 ;; Investigate by changing 'M-x list-faces-display'
@@ -91,12 +94,25 @@
   (setq interprogram-paste-function 'wl-paste))
 
 
-;; Do not make a backup file like *.~
-(setq make-backup-files nil)
-;; Do not use auto save
-(setq auto-save-default nil)
-;; Do not create lock file
-(setq create-lockfiles nil)
+;; Keep recovery files out of project directories and prune old generations.
+(let ((backup-directory
+       (expand-file-name "var/backups/" user-emacs-directory))
+      (auto-save-directory
+       (expand-file-name "var/auto-save/" user-emacs-directory)))
+  (make-directory backup-directory t)
+  (make-directory auto-save-directory t)
+  (setq backup-directory-alist `(("." . ,backup-directory))
+        auto-save-file-name-transforms `((".*" ,auto-save-directory t))
+        auto-save-list-file-prefix
+        (expand-file-name ".saves-" auto-save-directory)))
+(setq make-backup-files t
+      backup-by-copying t
+      auto-save-default t
+      create-lockfiles t
+      version-control t
+      delete-old-versions t
+      kept-new-versions 5
+      kept-old-versions 2)
 ;; Open symbolic link directly
 (setq vc-follow-symlinks t)
 
@@ -117,9 +133,6 @@
 
 ;; When the mouse cursor is close to the text cursor, the mouse pointer move to a place where does not get in the way
 (if (display-mouse-p) (mouse-avoidance-mode 'exile))
-
-;; Disable automatic save
-(setq auto-save-default nil)
 
 ;; Display file name in title bar
 (setq frame-title-format (format "Emacs@%s : %%f" (system-name)))
