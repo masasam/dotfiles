@@ -22,12 +22,18 @@
 (save-place-mode 1)
 (repeat-mode 1)
 (winner-mode 1)
+(delete-selection-mode 1)
 (global-so-long-mode 1)
 (when (fboundp 'pixel-scroll-precision-mode)
   (pixel-scroll-precision-mode 1))
 (setq auto-revert-avoid-polling t
       global-auto-revert-non-file-buffers t)
 (global-auto-revert-mode 1)
+
+;; Keep enough history for useful branching navigation with `vundo'.
+(setq undo-limit (* 16 1024 1024)
+      undo-strong-limit (* 24 1024 1024)
+      undo-outer-limit (* 96 1024 1024))
 
 ;; Change part of theme to your liking.
 ;; Investigate by changing 'M-x list-faces-display'

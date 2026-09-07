@@ -10,14 +10,9 @@
   "Show tail whitespace."
   (setq show-trailing-whitespace t))
 
-(add-hook 'emacs-lisp-mode-hook 'my/enable-trailing-mode)
-(add-hook 'python-mode-hook 'my/enable-trailing-mode)
-(add-hook 'ruby-mode-hook 'my/enable-trailing-mode)
-(add-hook 'c-mode-hook 'my/enable-trailing-mode)
-(add-hook 'shell-mode-hook 'my/enable-trailing-mode)
-(add-hook 'js2-mode-hook 'my/enable-trailing-mode)
-(add-hook 'web-mode-hook 'my/enable-trailing-mode)
-(add-hook 'elixir-mode-hook 'my/enable-trailing-mode)
+(add-hook 'prog-mode-hook #'my/enable-trailing-mode)
+;; `shell-mode' derives from `comint-mode', not `prog-mode'.
+(add-hook 'shell-mode-hook #'my/enable-trailing-mode)
 
 
 (defun my/cleanup-for-spaces ()

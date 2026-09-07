@@ -4,6 +4,15 @@
 ;;(setq debug-on-error t)
 
 
+(use-package recentf
+  :ensure nil
+  :custom
+  (recentf-save-file (locate-user-emacs-file "var/recentf"))
+  (recentf-max-saved-items 500)
+  :config
+  (recentf-mode 1))
+
+
 ;; Example configuration for Consult
 (use-package consult
   ;; Replace bindings. Lazily loaded by `use-package'.
@@ -26,6 +35,7 @@
          ("C-x M-:" . consult-complex-command) ;; orig. repeat-complex-command
          ("C-;" . consult-buffer) ;; orig. switch-to-buffer
 		 ("C-x b" . consult-buffer)
+		 ("C-x C-r" . consult-recent-file)
 		 ("C-x m" . consult-mark)
          ("C-x C-m" . consult-global-mark)
          ("C-x 4 b" . consult-buffer-other-window) ;; orig. switch-to-buffer-other-window
