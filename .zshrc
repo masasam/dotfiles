@@ -190,6 +190,22 @@ in screen-256color)
        };;
 esac
 
+# Mark command output for foot's pipe-command-output action (OSC 133).
+if [[ ${TERM} == foot* ]]; then
+    autoload -Uz add-zsh-hook
+
+    function _foot_osc133_preexec() {
+        print -n -- $'\e]133;C\e\\'
+    }
+
+    function _foot_osc133_precmd() {
+        print -n -- $'\e]133;D\e\\'
+    }
+
+    add-zsh-hook preexec _foot_osc133_preexec
+    add-zsh-hook precmd _foot_osc133_precmd
+fi
+
 # Delete by word with C-w
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 

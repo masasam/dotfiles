@@ -42,6 +42,7 @@ SYSTEMD_ENABLE	:= sudo systemctl --now enable
 
 .DEFAULT_GOAL := help
 .PHONY: all allinstall allupdate allbackup
+.PHONY: check check-hypr check-workspace-toggle check-deskctl check-emacs check-zsh check-foot
 
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
@@ -49,6 +50,27 @@ help:
 	| awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
 all: allinstall allupdate allbackup
+
+check: check-hypr check-workspace-toggle check-deskctl check-emacs check-zsh check-foot ## Validate maintained dotfile code
+
+check-hypr:
+	luac -p ${PWD}/.config/hypr/hyprland.lua ${PWD}/.config/hypr/modules/*.lua
+	lua ${PWD}/.config/hypr/check-config.lua
+
+check-workspace-toggle:
+	cargo test --locked --manifest-path ${PWD}/.config/hypr/workspace-toggle/Cargo.toml
+
+check-deskctl:
+	zig build --build-file ${PWD}/.config/hypr/deskctl/build.zig test -Doptimize=ReleaseSafe
+
+check-emacs:
+	emacs --batch --quick -l ${PWD}/.emacs.d/check-config.el
+
+check-zsh:
+	zsh -n ${PWD}/.zshrc
+
+check-foot:
+	foot --config=${PWD}/.config/foot/foot.ini --check-config
 
 ${HOME}/.local:
 	mkdir -p $<

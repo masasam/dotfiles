@@ -27,6 +27,23 @@
   (vundo-glyph-alist vundo-unicode-symbols))
 
 
+;; Preserve full branching undo history between Emacs sessions.
+(use-package undo-fu-session
+  :custom
+  (undo-fu-session-directory
+   (locate-user-emacs-file "var/undo-fu-session/"))
+  (undo-fu-session-compression 'zst)
+  (undo-fu-session-file-limit 1000)
+  (undo-fu-session-ignore-encrypted-files t)
+  (undo-fu-session-incompatible-files
+   '("/\\.authinfo\\'"
+     "/\\.netrc\\'"
+     "/\\.gnupg/"
+     "/\\.password-store/"))
+  :config
+  (undo-fu-session-global-mode 1))
+
+
 ;; begin-end
 (beginend-global-mode)
 

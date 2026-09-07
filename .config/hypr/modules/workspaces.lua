@@ -10,42 +10,54 @@ hl.workspace_rule({
 
 local workspaceApps = {
     -- Workspace 2: Browser
-    { name = "google-chrome",      class = "^(google-chrome)$",          workspace = WORKSPACE.web },
+    { name = "google-chrome",      class = "google-chrome",          workspace = WORKSPACE.web },
 
     -- Workspace 3: Editor
-    { name = "emacs",              class = "^(emacs|Emacs)$",            workspace = WORKSPACE.code },
+    { name = "emacs",              class = "emacs", class_pattern = "^(emacs|Emacs)$", workspace = WORKSPACE.code },
 
     -- Workspace pool 4 -> 6 -> 11...: Documents / DB / Graphics
-    { name = "pdf",                class = "^(org.gnome.Papers)$",       workspace = WORKSPACE.docs },
-    { name = "beekeeper-studio",   class = "^(beekeeper-studio)$",      workspace = WORKSPACE.docs },
-    { name = "sqlitebrowser",      class = "^(sqlitebrowser)$",          workspace = WORKSPACE.docs },
-    { name = "libreoffice-writer", class = "^(libreoffice-writer)$",     workspace = WORKSPACE.docs },
-    { name = "libreoffice-calc",   class = "^(libreoffice-calc)$",       workspace = WORKSPACE.docs },
-    { name = "inkscape",           class = "^(org.inkscape.Inkscape)$", workspace = WORKSPACE.docs, float = true },
-    { name = "gimp",               class = "^(gimp)$",                   workspace = WORKSPACE.docs, float = true },
+    { name = "pdf",                class = "org.gnome.Papers",       workspace = WORKSPACE.docs, pool = true },
+    { name = "beekeeper-studio",   class = "beekeeper-studio",      workspace = WORKSPACE.docs, pool = true },
+    { name = "sqlitebrowser",      class = "sqlitebrowser",          workspace = WORKSPACE.docs, pool = true },
+    { name = "libreoffice-writer", class = "libreoffice-writer",     workspace = WORKSPACE.docs, pool = true },
+    { name = "libreoffice-calc",   class = "libreoffice-calc",       workspace = WORKSPACE.docs, pool = true },
+    { name = "inkscape",           class = "org.inkscape.Inkscape", workspace = WORKSPACE.docs, pool = true, float = true },
+    { name = "gimp",               class = "gimp",                   workspace = WORKSPACE.docs, pool = true, float = true },
 
     -- Workspace 5: Files
-    { name = "pcmanfm",            class = "^(pcmanfm-qt)$",             workspace = WORKSPACE.files },
+    { name = "pcmanfm",            class = "pcmanfm-qt",             workspace = WORKSPACE.files },
 
     -- Workspace 7: Chat
-    { name = "discord",            class = "^(discord)$",                workspace = WORKSPACE.chat },
+    { name = "discord",            class = "discord",                workspace = WORKSPACE.chat },
 
     -- Workspace 8: Meeting
-    { name = "zoom",               class = "^(zoom)$",                   workspace = WORKSPACE.meeting },
+    { name = "zoom",               class = "zoom",                   workspace = WORKSPACE.meeting },
 
     -- Workspace 9: Media
-    { name = "spotify",            class = "^(Spotify)$",                workspace = WORKSPACE.media },
-    { name = "obs",                class = "^(com.obsproject.Studio)$", workspace = WORKSPACE.media },
+    { name = "spotify",            class = "Spotify",                workspace = WORKSPACE.media },
+    { name = "obs",                class = "com.obsproject.Studio", workspace = WORKSPACE.media },
 
     -- Workspace 10: Secondary browser
-    { name = "firefox",            class = "^(firefox)$",                workspace = WORKSPACE.firefox },
+    { name = "firefox",            class = "firefox",                workspace = WORKSPACE.firefox },
 }
 
+-- Derive pool membership from the app definitions so the two lists cannot
+-- drift apart when applications are added or removed.
+local workspacePoolAppClasses = {}
+local workspacePoolFloatingClasses = {}
+
 for _, app in ipairs(workspaceApps) do
+    if app.pool then
+        workspacePoolAppClasses[app.class] = true
+        if app.float then
+            workspacePoolFloatingClasses[app.class] = true
+        end
+    end
+
     hl.window_rule({
         name = app.name,
         match = {
-            class = app.class,
+            class = app.class_pattern or "^(" .. app.class .. ")$",
         },
         workspace = app.workspace,
         float = app.float,
@@ -54,21 +66,6 @@ end
 
 -- Place Documents / DB / Graphics apps on Workspaces 4, 6, then unused numeric
 -- workspaces starting at 11.  Workspaces 5 and 7-10 remain reserved above.
-local workspacePoolAppClasses = {
-    ["org.gnome.Papers"] = true,
-    ["beekeeper-studio"] = true,
-    ["sqlitebrowser"] = true,
-    ["libreoffice-writer"] = true,
-    ["libreoffice-calc"] = true,
-    ["org.inkscape.Inkscape"] = true,
-    ["gimp"] = true,
-}
-
-local workspacePoolFloatingClasses = {
-    ["org.inkscape.Inkscape"] = true,
-    ["gimp"] = true,
-}
-
 local workspacePoolSlots = {
     tonumber(WORKSPACE.docs),
     tonumber(WORKSPACE.docs2),
@@ -161,4 +158,3 @@ end
 hl.on("window.open", placeWorkspacePoolApp)
 hl.on("window.class", placeWorkspacePoolApp)
 end
-
