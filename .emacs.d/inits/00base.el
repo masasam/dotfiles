@@ -21,6 +21,7 @@
 ;; Built-in quality-of-life and resilience features.
 (save-place-mode 1)
 (repeat-mode 1)
+(winner-mode 1)
 (global-so-long-mode 1)
 (when (fboundp 'pixel-scroll-precision-mode)
   (pixel-scroll-precision-mode 1))
@@ -75,23 +76,38 @@
   (server-start))
 
 
-;; wl-copy integration for Wayland clipboard(need wl-clipboard package)
-(when (string= (getenv "XDG_SESSION_TYPE") "wayland")
-  (setq wl-copy-process nil)
-  (defun wl-copy (text)
-	(setq wl-copy-process (make-process :name "wl-copy"
-										:buffer nil
-										:command '("wl-copy" "-f" "-n")
-										:connection-type 'pipe
-										:noquery t))
-	(process-send-string wl-copy-process text)
-	(process-send-eof wl-copy-process))
-  (defun wl-paste ()
-	(if (and wl-copy-process (process-live-p wl-copy-process))
-		nil ; should return nil if we're the current paste owner
-      (shell-command-to-string "wl-paste -n | tr -d \r")))
-  (setq interprogram-cut-function 'wl-copy)
-  (setq interprogram-paste-function 'wl-paste))
+;; PGTK can retain a stale clipboard owner under Hyprland.  Use the native
+;; Wayland tools so copies from foot and Chromium are always visible to Emacs.
+(when (and (string= (getenv "XDG_SESSION_TYPE") "wayland")
+           (executable-find "wl-copy")
+           (executable-find "wl-paste"))
+  (defvar my/wayland-clipboard-process nil)
+
+  (defun my/wayland-clipboard-copy (text)
+    "Copy TEXT to the Wayland clipboard."
+    (when (process-live-p my/wayland-clipboard-process)
+      (delete-process my/wayland-clipboard-process))
+    (setq my/wayland-clipboard-process
+          (make-process :name "wayland-clipboard"
+                        :buffer nil
+                        :command '("wl-copy" "--foreground" "--type"
+                                   "text/plain;charset=utf-8")
+                        :connection-type 'pipe
+                        :coding 'utf-8-unix
+                        :noquery t))
+    (process-send-string my/wayland-clipboard-process text)
+    (process-send-eof my/wayland-clipboard-process))
+
+  (defun my/wayland-clipboard-paste ()
+    "Return text copied by another Wayland client."
+    (unless (process-live-p my/wayland-clipboard-process)
+      (with-temp-buffer
+        (let ((coding-system-for-read 'utf-8-unix))
+          (when (zerop (call-process "wl-paste" nil t nil "--no-newline"))
+            (buffer-string))))))
+
+  (setq interprogram-cut-function #'my/wayland-clipboard-copy
+        interprogram-paste-function #'my/wayland-clipboard-paste))
 
 
 ;; Keep recovery files out of project directories and prune old generations.

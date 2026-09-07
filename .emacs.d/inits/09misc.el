@@ -19,6 +19,14 @@
   :bind ("C-M-SPC" . expreg-expand))
 
 
+;; Visualize and navigate branching undo history.
+(use-package vundo
+  :defer t
+  :bind ("C-x u" . vundo)
+  :custom
+  (vundo-glyph-alist vundo-unicode-symbols))
+
+
 ;; begin-end
 (beginend-global-mode)
 
