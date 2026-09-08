@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import shlex
 import shutil
 import subprocess
 import sys
@@ -14,6 +15,31 @@ import time
 from collections.abc import Callable, Sequence
 from datetime import datetime
 from pathlib import Path
+
+MANIFEST_NAME = "manifest.json"
+
+
+def default_backup_directory(home: Path) -> Path:
+    state_home = Path(
+        os.environ.get("XDG_STATE_HOME", home / ".local/state")
+    ).expanduser()
+    return state_home / "dotfiles/backups"
+
+
+def write_backup_manifest(snapshot: Path, backup: Path, target: Path) -> None:
+    manifest = {
+        "version": 1,
+        "entries": [
+            {
+                "backup": str(backup.relative_to(snapshot)),
+                "target": str(target),
+            }
+        ],
+    }
+    manifest_path = snapshot / MANIFEST_NAME
+    temporary_path = snapshot / f".{MANIFEST_NAME}.tmp"
+    temporary_path.write_text(json.dumps(manifest, indent=2) + "\n")
+    temporary_path.replace(manifest_path)
 
 
 def run(
@@ -64,16 +90,14 @@ def safe_link(
         print(f"unchanged: {target} -> {source}")
         return None
 
-    state_home = Path(
-        os.environ.get("XDG_STATE_HOME", home / ".local/state")
-    ).expanduser()
     backup_root = Path(
-        os.path.abspath(backup_directory or state_home / "dotfiles/backups")
+        os.path.abspath(backup_directory or default_backup_directory(home))
     )
     if backup_root == target or backup_root.is_relative_to(target):
         raise ValueError(f"backup directory must not be inside target: {target}")
 
     backup_target: Path | None = None
+    backup_snapshot: Path | None = None
     if os.path.lexists(target):
         stamp = datetime.now().astimezone().strftime("%Y%m%dT%H%M%S.%f%z")
         relative_target = (
@@ -81,7 +105,8 @@ def safe_link(
             if target.is_relative_to(home)
             else Path("outside-home") / target.relative_to("/")
         )
-        backup_target = backup_root / stamp / relative_target
+        backup_snapshot = backup_root / stamp
+        backup_target = backup_snapshot / relative_target
 
     if dry_run:
         if backup_target is not None:
@@ -92,6 +117,12 @@ def safe_link(
     if backup_target is not None:
         backup_target.parent.mkdir(parents=True, exist_ok=True)
         shutil.move(str(target), str(backup_target))
+        try:
+            assert backup_snapshot is not None
+            write_backup_manifest(backup_snapshot, backup_target, target)
+        except OSError:
+            shutil.move(str(backup_target), str(target))
+            raise
         print(f"backed up: {target} -> {backup_target}")
 
     target.parent.mkdir(parents=True, exist_ok=True)
@@ -100,9 +131,184 @@ def safe_link(
     except OSError:
         if backup_target is not None and not os.path.lexists(target):
             shutil.move(str(backup_target), str(target))
+            assert backup_snapshot is not None
+            (backup_snapshot / MANIFEST_NAME).unlink(missing_ok=True)
         raise
     print(f"linked: {target} -> {source}")
     return backup_target
+
+
+def backup_snapshots(backup_directory: Path) -> list[Path]:
+    if not backup_directory.is_dir():
+        return []
+    return sorted(
+        (path for path in backup_directory.iterdir() if path.is_dir()),
+        key=lambda path: path.name,
+        reverse=True,
+    )
+
+
+def path_size(path: Path) -> int:
+    if path.is_symlink() or path.is_file():
+        return path.lstat().st_size
+    return sum(path_size(child) for child in path.iterdir())
+
+
+def show_backups(backup_directory: Path) -> None:
+    snapshots = backup_snapshots(backup_directory)
+    print(f"Backup directory: {backup_directory}")
+    if not snapshots:
+        print("No backup snapshots found.")
+        return
+    for snapshot in snapshots:
+        print(f"{snapshot.name}\t{path_size(snapshot)} bytes")
+
+
+def select_backup_snapshot(backup_directory: Path, name: str | None) -> Path:
+    snapshots = backup_snapshots(backup_directory)
+    if not snapshots:
+        raise FileNotFoundError(f"no backup snapshots in {backup_directory}")
+    if name is None or name == "latest":
+        return snapshots[0]
+    if Path(name).name != name:
+        raise ValueError("snapshot must be a name, not a path")
+    snapshot = backup_directory / name
+    if snapshot not in snapshots:
+        raise FileNotFoundError(snapshot)
+    return snapshot
+
+
+def restore_commands(snapshot: Path) -> list[str]:
+    manifest_path = snapshot / MANIFEST_NAME
+    if not manifest_path.is_file():
+        raise ValueError(
+            f"{snapshot.name} predates restore manifests; inspect it manually"
+        )
+    manifest = json.loads(manifest_path.read_text())
+    if (
+        not isinstance(manifest, dict)
+        or manifest.get("version") != 1
+        or not isinstance(manifest.get("entries"), list)
+    ):
+        raise ValueError(f"invalid backup manifest: {manifest_path}")
+
+    commands = []
+    for entry in manifest["entries"]:
+        if (
+            not isinstance(entry, dict)
+            or not isinstance(entry.get("backup"), str)
+            or not isinstance(entry.get("target"), str)
+        ):
+            raise TypeError(f"invalid backup entry: {manifest_path}")
+        relative_backup = Path(entry["backup"])
+        target = Path(entry["target"])
+        if relative_backup.is_absolute() or ".." in relative_backup.parts:
+            raise ValueError(f"backup path escapes snapshot: {relative_backup}")
+        backup = snapshot / relative_backup
+        if not os.path.lexists(backup):
+            raise FileNotFoundError(backup)
+        if not target.is_absolute():
+            raise ValueError(f"restore target is not absolute: {target}")
+        commands.append(f"mv -- {shlex.quote(str(backup))} {shlex.quote(str(target))}")
+    return commands
+
+
+def show_restore_plan(backup_directory: Path, name: str | None) -> None:
+    snapshot = select_backup_snapshot(backup_directory, name)
+    print(f"Snapshot: {snapshot}")
+    print("Review and move any current target aside before running:")
+    for command in restore_commands(snapshot):
+        print(f"  {command}")
+    print("No files were changed.")
+
+
+def doctor(repository: Path, home: Path) -> bool:
+    repository = repository.resolve()
+    failures = 0
+
+    def report(status: str, message: str) -> None:
+        nonlocal failures
+        print(f"[{status}] {message}")
+        if status == "FAIL":
+            failures += 1
+
+    required_commands = (
+        "cargo",
+        "emacs",
+        "foot",
+        "git",
+        "git-crypt",
+        "gitleaks",
+        "lua",
+        "luac",
+        "python3",
+        "ruff",
+        "zsh",
+        "zig",
+    )
+    for command in required_commands:
+        location = shutil.which(command)
+        report(
+            "OK" if location else "FAIL", f"command {command}: {location or 'missing'}"
+        )
+
+    encrypted_config = repository / ".config/mise/config.toml"
+    if encrypted_config.is_file():
+        locked = encrypted_config.read_bytes().startswith(b"\x00GITCRYPT")
+        report(
+            "FAIL" if locked else "OK",
+            "git-crypt working tree is locked"
+            if locked
+            else "git-crypt working tree is unlocked",
+        )
+
+    if shutil.which("git"):
+        hooks_path = subprocess.run(
+            ["git", "config", "--local", "--get", "core.hooksPath"],
+            cwd=repository,
+            check=False,
+            capture_output=True,
+            text=True,
+        ).stdout.strip()
+        report(
+            "OK" if hooks_path == ".githooks" else "WARN",
+            f"Git hooks path: {hooks_path or 'not configured'}",
+        )
+
+    links = (
+        (repository / ".emacs.d", home / ".emacs.d"),
+        (repository / ".config/hypr", home / ".config/hypr"),
+        (repository / ".config/foot/foot.ini", home / ".config/foot/foot.ini"),
+        (repository / ".config/mako", home / ".config/mako"),
+        (
+            repository / ".config/workstationctl/workstationctl.py",
+            home / ".local/bin/workstationctl",
+        ),
+    )
+    for source, target in links:
+        if not os.path.lexists(target):
+            report("WARN", f"not deployed: {target}")
+        elif target.is_symlink() and target.resolve(strict=False) == source.resolve():
+            report("OK", f"link: {target}")
+        else:
+            report("FAIL", f"link drift: {target} (expected {source})")
+
+    if shutil.which("systemctl"):
+        for service in ("pipewire.service", "wireplumber.service"):
+            result = subprocess.run(
+                ["systemctl", "--user", "is-active", "--quiet", service],
+                check=False,
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+            )
+            state = "active" if result.returncode == 0 else "inactive or unavailable"
+            report(
+                "OK" if result.returncode == 0 else "WARN",
+                f"user service {service}: {state}",
+            )
+
+    print(f"Doctor completed with {failures} failure(s).")
+    return failures == 0
 
 
 def remove_oldest(directory: Path) -> Path | None:
@@ -235,12 +441,40 @@ def build_parser() -> argparse.ArgumentParser:
     link_parser.add_argument("--backup-directory", type=Path)
     link_parser.add_argument("--dry-run", action="store_true")
     link_parser.add_argument("--allow-outside-home", action="store_true")
+    doctor_parser = subparsers.add_parser("doctor")
+    doctor_parser.add_argument("--repository", type=Path, required=True)
+    backups_parser = subparsers.add_parser("backups")
+    backups_parser.add_argument("--backup-directory", type=Path)
+    restore_parser = subparsers.add_parser("restore-plan")
+    restore_parser.add_argument("snapshot", nargs="?")
+    restore_parser.add_argument("--backup-directory", type=Path)
     return parser
 
 
 def main(argv: Sequence[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     home = Path.home()
+    if args.command == "doctor":
+        return 0 if doctor(args.repository, home) else 1
+    backup_directory = getattr(args, "backup_directory", None)
+    if args.command == "backups":
+        show_backups(backup_directory or default_backup_directory(home))
+        return 0
+    if args.command == "restore-plan":
+        try:
+            show_restore_plan(
+                backup_directory or default_backup_directory(home), args.snapshot
+            )
+        except (
+            FileNotFoundError,
+            OSError,
+            TypeError,
+            ValueError,
+            json.JSONDecodeError,
+        ) as error:
+            print(f"workstationctl: {error}", file=sys.stderr)
+            return 1
+        return 0
     commands: dict[str, Callable[[], None]] = {
         "backupcloud": lambda: backup_cloud(home),
         "zshbackup": lambda: zsh_backup(home),
@@ -263,7 +497,12 @@ def main(argv: Sequence[str] | None = None) -> int:
     }
     try:
         commands[args.command]()
-    except (FileNotFoundError, OSError, ValueError, subprocess.CalledProcessError) as error:
+    except (
+        FileNotFoundError,
+        OSError,
+        ValueError,
+        subprocess.CalledProcessError,
+    ) as error:
         print(f"workstationctl: {error}", file=sys.stderr)
         return 1
     return 0

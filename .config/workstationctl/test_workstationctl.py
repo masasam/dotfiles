@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import importlib.util
+import json
 import os
 import tarfile
 import tempfile
@@ -24,9 +25,7 @@ class WorkstationctlTest(unittest.TestCase):
             source.parent.mkdir(parents=True)
             source.write_text("settings\n")
 
-            self.assertIsNone(
-                workstationctl.safe_link(source, target, home=home)
-            )
+            self.assertIsNone(workstationctl.safe_link(source, target, home=home))
             self.assertTrue(target.is_symlink())
             self.assertEqual(target.resolve(), source.resolve())
 
@@ -45,6 +44,8 @@ class WorkstationctlTest(unittest.TestCase):
             assert backup is not None
             self.assertEqual((backup / "old.conf").read_text(), "old\n")
             self.assertEqual(target.resolve(), source.resolve())
+            manifest = json.loads((backup.parents[1] / "manifest.json").read_text())
+            self.assertEqual(manifest["entries"][0]["target"], str(target))
 
     def test_safe_link_is_idempotent(self) -> None:
         with tempfile.TemporaryDirectory() as temporary_directory:
@@ -56,9 +57,7 @@ class WorkstationctlTest(unittest.TestCase):
             target.parent.mkdir(parents=True)
             target.symlink_to(source)
 
-            self.assertIsNone(
-                workstationctl.safe_link(source, target, home=home)
-            )
+            self.assertIsNone(workstationctl.safe_link(source, target, home=home))
             self.assertFalse((home / ".local/state/dotfiles").exists())
 
     def test_safe_link_dry_run_preserves_target(self) -> None:
@@ -71,9 +70,7 @@ class WorkstationctlTest(unittest.TestCase):
             target.parent.mkdir(parents=True)
             target.write_text("old\n")
 
-            backup = workstationctl.safe_link(
-                source, target, home=home, dry_run=True
-            )
+            backup = workstationctl.safe_link(source, target, home=home, dry_run=True)
 
             self.assertIsNotNone(backup)
             self.assertFalse(target.is_symlink())
@@ -87,9 +84,7 @@ class WorkstationctlTest(unittest.TestCase):
             with self.assertRaises(ValueError):
                 workstationctl.safe_link(source, home, home=home)
             with self.assertRaises(ValueError):
-                workstationctl.safe_link(
-                    source, home.parent / "outside", home=home
-                )
+                workstationctl.safe_link(source, home.parent / "outside", home=home)
 
     def test_safe_link_allows_explicit_outside_home_target(self) -> None:
         with tempfile.TemporaryDirectory() as temporary_directory:
@@ -119,9 +114,11 @@ class WorkstationctlTest(unittest.TestCase):
             target.parent.mkdir(parents=True)
             target.write_text("old\n")
 
-            with patch("pathlib.Path.symlink_to", side_effect=OSError("failed")):
-                with self.assertRaises(OSError):
-                    workstationctl.safe_link(source, target, home=home)
+            with (
+                patch("pathlib.Path.symlink_to", side_effect=OSError("failed")),
+                self.assertRaises(OSError),
+            ):
+                workstationctl.safe_link(source, target, home=home)
 
             self.assertFalse(target.is_symlink())
             self.assertEqual(target.read_text(), "old\n")
@@ -140,6 +137,49 @@ class WorkstationctlTest(unittest.TestCase):
             self.assertTrue(directory.is_dir())
             self.assertFalse(oldest.exists())
             self.assertTrue(newest.exists())
+
+    def test_backup_snapshots_and_restore_commands(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory)
+            backups = root / "backups"
+            older = backups / "20260101"
+            newer = backups / "20260102"
+            backup = newer / ".config/app"
+            backup.mkdir(parents=True)
+            older.mkdir(parents=True)
+            target = root / "home/.config/app"
+            workstationctl.write_backup_manifest(newer, backup, target)
+
+            self.assertEqual(workstationctl.backup_snapshots(backups), [newer, older])
+            self.assertEqual(
+                workstationctl.select_backup_snapshot(backups, "latest"), newer
+            )
+            self.assertEqual(
+                workstationctl.restore_commands(newer),
+                [f"mv -- {backup} {target}"],
+            )
+
+    def test_restore_commands_rejects_legacy_snapshot(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            snapshot = Path(temporary_directory) / "20260101"
+            snapshot.mkdir()
+            with self.assertRaises(ValueError):
+                workstationctl.restore_commands(snapshot)
+
+    def test_restore_commands_rejects_path_escape(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            snapshot = Path(temporary_directory) / "20260101"
+            snapshot.mkdir()
+            (snapshot / "manifest.json").write_text(
+                json.dumps(
+                    {
+                        "version": 1,
+                        "entries": [{"backup": "../outside", "target": "/tmp/target"}],
+                    }
+                )
+            )
+            with self.assertRaises(ValueError):
+                workstationctl.restore_commands(snapshot)
 
     def test_remove_oldest_preserves_empty_directory(self) -> None:
         with tempfile.TemporaryDirectory() as temporary_directory:

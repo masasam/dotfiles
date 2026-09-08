@@ -63,10 +63,41 @@ Run the complete local validation suite with:
     make check
 
 This checks the modular Hyprland Lua configuration and workspace placement,
-the Rust and Zig utilities, Emacs Lisp, zsh, foot, the workstation controller,
-and Git history with Gitleaks. The tracked pre-push hook runs the same suite.
-Enable it manually after cloning with `make git-hooks`; `make init` also enables
-it automatically.
+all Rust and Zig utility tests, Rust Clippy and formatting, Zig formatting,
+Python Ruff checks, Emacs Lisp, zsh, foot, the workstation controller, and Git
+history with Gitleaks. The tracked pre-push hook runs the same suite. Enable it
+manually after cloning with `make git-hooks`; `make init` also enables it
+automatically.
+
+Diagnose the workstation without changing it:
+
+    make doctor
+
+This reports missing validation commands, a locked git-crypt worktree, Git hook
+configuration, drift in the main deployed links, and the PipeWire/WirePlumber
+user-service state.
+
+### Inspecting safe-link backups
+
+New backup snapshots contain a restore manifest. List snapshots and print the
+latest restore plan with:
+
+    make backups
+    make restore-plan
+
+The restore plan only prints commands; it never changes files. Older snapshots
+created before manifests were introduced must be inspected manually. To inspect
+system-level snapshots, pass `/var/lib/dotfiles/backups` directly:
+
+    workstationctl backups --backup-directory /var/lib/dotfiles/backups
+
+### Updating mise tools
+
+Tool versions in `.config/mise/config.toml` are pinned to known-working exact
+versions. `make mise` installs those versions. Review and update the pins
+interactively with:
+
+    make mise-update
 
 ### Useful shortcuts
 

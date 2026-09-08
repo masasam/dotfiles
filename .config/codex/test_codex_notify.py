@@ -70,9 +70,7 @@ class CodexNotifyTest(unittest.TestCase):
         with (
             patch.object(codex_notify, "which", return_value="/usr/bin/hyprctl"),
             patch.object(codex_notify, "terminal_window_exists", return_value=True),
-            patch.object(
-                codex_notify.subprocess, "run", return_value=completed
-            ) as run,
+            patch.object(codex_notify.subprocess, "run", return_value=completed) as run,
         ):
             self.assertTrue(codex_notify.focus_terminal("0xabc", 42))
         run.assert_called_once_with(

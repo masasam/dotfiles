@@ -1,4 +1,4 @@
-export PATH := ${HOME}/.local/bin:$HOME/.local/share/mise/shims:/usr/local/bin:/usr/local/sbin:/usr/bin
+export PATH := ${HOME}/.local/bin:${HOME}/.local/share/mise/shims:/usr/local/bin:/usr/local/sbin:/usr/bin
 export GOPATH := ${HOME}
 
 BASE_PKGS	:= filesystem gcc-libs glibc bash coreutils file findutils gawk grep
@@ -23,8 +23,8 @@ PACKAGES	+= bash-completion mathjax expect obs-studio cscope pdfgrep cmatrix
 PACKAGES	+= jpegoptim nethogs plocate pacman-contrib x11-ssh-askpass streamlink
 PACKAGES	+= jhead sshfs fping syncthing terraform bat ttf-font-awesome kooha
 PACKAGES	+= ripgrep stunnel mpv firejail noto-fonts-extra gnome-calculator bc
-PACKAGES	+= smartmontools wireshark-cli lsof watchexec lazygit yazi bat pdfpc
-PACKAGES	+= gtop gopls convmv man-db baobab ioping ruby-irb mkcert findomain
+PACKAGES	+= smartmontools wireshark-cli lsof watchexec lazygit yazi pdfpc
+PACKAGES	+= gtop convmv man-db baobab ioping ruby-irb mkcert findomain
 PACKAGES	+= guetzli fabric detox usleep libvterm bind lame git-lfs hex miller
 PACKAGES	+= diffoscope dust rbw eza sslscan pyright miniserve fdupes xsv opencv
 PACKAGES	+= gron typescript-language-server dateutils time rust rust-analyzer
@@ -37,15 +37,16 @@ PACKAGES	+= ast-grep dosfstools unzip zig zls gitleaks reflector ghq biome
 PACKAGES	+= spotify-launcher lximage-qt ruby-lsp python-lsp-server
 PACKAGES	+= tailwindcss-language-server
 
-PACMAN		:= sudo pacman -S 
+PACMAN		:= sudo pacman -S --needed
 SYSTEMD_ENABLE	:= sudo systemctl --now enable
 SAFE_LINK	:= python3 ${PWD}/.config/workstationctl/workstationctl.py link
 SAFE_SYSTEM_LINK := sudo python3 ${PWD}/.config/workstationctl/workstationctl.py link --allow-outside-home --backup-directory /var/lib/dotfiles/backups
+ZIG_CACHE	:= ${PWD}/.cache/zig
 
 .DEFAULT_GOAL := help
-.PHONY: all allinstall allupdate allbackup git-hooks
-.PHONY: check check-hypr check-workspace-toggle check-deskctl check-emacs check-zsh check-foot
-.PHONY: check-workstationctl check-secrets
+.PHONY: all allinstall allupdate allbackup git-hooks doctor backups restore-plan
+.PHONY: check check-hypr check-workspace-toggle check-dotctl check-deskctl check-zshctl
+.PHONY: check-format check-lint check-emacs check-zsh check-foot check-workstationctl check-secrets
 
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
@@ -57,7 +58,18 @@ all: allinstall allupdate allbackup
 git-hooks: ## Enable the tracked Git hooks for this repository
 	git config --local core.hooksPath .githooks
 
-check: check-hypr check-workspace-toggle check-deskctl check-emacs check-zsh check-foot check-workstationctl check-secrets ## Validate maintained dotfile code
+check: check-format check-lint check-hypr check-workspace-toggle check-dotctl check-deskctl check-zshctl check-emacs check-zsh check-foot check-workstationctl check-secrets ## Validate maintained dotfile code
+
+check-format:
+	cargo fmt --manifest-path ${PWD}/.config/dotctl/Cargo.toml -- --check
+	cargo fmt --manifest-path ${PWD}/.config/hypr/workspace-toggle/Cargo.toml -- --check
+	zig fmt --check ${PWD}/.config/hypr/deskctl/build.zig ${PWD}/.config/hypr/deskctl/src/main.zig ${PWD}/.config/zshctl/build.zig ${PWD}/.config/zshctl/src/main.zig
+	ruff format --check ${PWD}/.config/workstationctl ${PWD}/.config/codex
+
+check-lint:
+	cargo clippy --locked --all-targets --manifest-path ${PWD}/.config/dotctl/Cargo.toml -- -D warnings
+	cargo clippy --locked --all-targets --manifest-path ${PWD}/.config/hypr/workspace-toggle/Cargo.toml -- -D warnings
+	ruff check ${PWD}/.config/workstationctl ${PWD}/.config/codex
 
 check-hypr:
 	luac -p ${PWD}/.config/hypr/hyprland.lua ${PWD}/.config/hypr/modules/*.lua
@@ -66,8 +78,14 @@ check-hypr:
 check-workspace-toggle:
 	cargo test --locked --manifest-path ${PWD}/.config/hypr/workspace-toggle/Cargo.toml
 
+check-dotctl:
+	cargo test --locked --manifest-path ${PWD}/.config/dotctl/Cargo.toml
+
 check-deskctl:
-	zig build --build-file ${PWD}/.config/hypr/deskctl/build.zig test -Doptimize=ReleaseSafe
+	ZIG_GLOBAL_CACHE_DIR=${ZIG_CACHE} zig build --build-file ${PWD}/.config/hypr/deskctl/build.zig test -Doptimize=ReleaseSafe
+
+check-zshctl:
+	ZIG_GLOBAL_CACHE_DIR=${ZIG_CACHE} zig build --build-file ${PWD}/.config/zshctl/build.zig test -Doptimize=ReleaseSafe
 
 check-emacs:
 	emacs --batch --quick -l ${PWD}/.emacs.d/check-config.el
@@ -83,6 +101,15 @@ check-workstationctl:
 
 check-secrets: ## Scan Git history for secrets, allowing only the redacted legacy baseline
 	gitleaks git --redact --no-banner --baseline-path=${PWD}/.gitleaks-baseline.json --log-opts="--all --no-textconv" ${PWD}
+
+doctor: ## Diagnose commands, encryption, and deployed links without changing anything
+	python3 ${PWD}/.config/workstationctl/workstationctl.py doctor --repository ${PWD}
+
+backups: ## List safe-link backup snapshots
+	python3 ${PWD}/.config/workstationctl/workstationctl.py backups
+
+restore-plan: ## Show how the latest safe-link backup would be restored
+	python3 ${PWD}/.config/workstationctl/workstationctl.py restore-plan
 
 ${HOME}/.local:
 	mkdir -p $<
@@ -141,7 +168,7 @@ hyprland: ## Setup hyprland
 	$(PACMAN) wl-clipboard hyprpaper wf-recorder
 	$(MAKE) deskctl
 	$(MAKE) workspace-toggle
-	yay -S wlogout
+	yay -S --needed wlogout
 	$(SAFE_LINK) ${PWD}/.config/hypr ${HOME}/.config/hypr
 	$(SAFE_LINK) ${PWD}/.config/waybar ${HOME}/.config/waybar
 	$(SAFE_LINK) ${PWD}/.config/mako ${HOME}/.config/mako
@@ -149,11 +176,11 @@ hyprland: ## Setup hyprland
 	mkdir -p ${HOME}/.config/wlogout
 	$(SAFE_SYSTEM_LINK) ${PWD}/.config/wlogout/wlogout.desktop /usr/share/applications/wlogout.desktop
 	$(SAFE_LINK) ${PWD}/.config/wlogout/style.css ${HOME}/.config/wlogout/style.css
-	yay -S snappy-switcher
+	yay -S --needed snappy-switcher
 	$(SAFE_LINK) ${PWD}/.config/snappy-switcher/config.ini ${HOME}/.config/snappy-switcher/config.ini
 
 hyprwhspr: ## Setup hyprwhspr for voice input
-	yay -S hyprwhspr
+	yay -S --needed hyprwhspr
 	$(SAFE_LINK) ${PWD}/.config/hyprwhspr/config.json ${HOME}/.config/hyprwhspr/config.json
 	hyprwhspr setup
 	systemctl --user enable --now hyprwhspr.service
@@ -178,47 +205,16 @@ goinstall: ${HOME}/.local ## Install go packages
 mise: ## Setup mise
 	$(PACMAN) mise
 	$(SAFE_LINK) ${PWD}/.config/mise/config.toml ${HOME}/.config/mise/config.toml
-	mise use -g atlas
-	mise use -g bun
-	mise use -g claude-code
-	mise use -g deno
-	mise use -g duckdb
-	mise use -g erlang
-	mise use -g elixir
-	mise use -g elixir-ls
-	mise use -g firebase
-	mise use -g gemini-cli
-	mise use -g hugo
-	mise use -g lua-language-server
-	mise use -g marp-cli
-	mise use -g node
-	mise use -g npm:@agentclientprotocol/codex-acp
-	mise use -g npm:gcloud
-	mise use -g npm:@github/copilot-language-server
-	mise use -g npm:@github/copilot
-	mise use -g npm:@googleworkspace/cli
-	mise use -g npm:oxlint
-	mise use -g npm:playwright
-	mise use -g npm:pnpm
-	mise use -g npm:ts-node
-	mise use -g npm:typescript
-	mise use -g opencode
-	mise use -g pi
-	mise use -g ruff
-	mise use -g stripe-cli
-	mise use -g trdsql
-	mise use -g usage
-	mise use -g uv
-	mise use -g yay
-	mise use -g youtube-dl
-	mise use -g yt-dlp
-	mise use -g zls
+	mise install
+
+mise-update: ## Interactively update and repin mise tools
+	mise upgrade --bump --interactive
 
 deskctl: ## Build Hyprland desktop controller
-	zig build --build-file ${PWD}/.config/hypr/deskctl/build.zig -Doptimize=ReleaseSafe
+	ZIG_GLOBAL_CACHE_DIR=${ZIG_CACHE} zig build --build-file ${PWD}/.config/hypr/deskctl/build.zig -Doptimize=ReleaseSafe
 
 zshctl: ${HOME}/.local ## Build and deploy zsh helper utilities
-	zig build --build-file ${PWD}/.config/zshctl/build.zig -Doptimize=ReleaseSafe
+	ZIG_GLOBAL_CACHE_DIR=${ZIG_CACHE} zig build --build-file ${PWD}/.config/zshctl/build.zig -Doptimize=ReleaseSafe
 	mkdir -p ${HOME}/.local/bin
 	$(SAFE_LINK) ${PWD}/.config/zshctl/zig-out/bin/zshctl ${HOME}/.local/bin/zshctl
 
@@ -244,7 +240,7 @@ codex: ## Setup openai codex
 	${HOME}/.codex/hooks/codex_notify.py
 
 codexdesktop: ## Setup openai codex app
-	yay -S openai-codex-desktop
+	yay -S --needed openai-codex-desktop
 
 herdr: ## Setup herdr
 	mise use -g herdr
@@ -285,11 +281,11 @@ rio: # Init rio terminal
 tree-sitter: ## Install tree-sitter
 	$(PACMAN) tree-sitter tree-sitter-rust tree-sitter-bash tree-sitter-python
 	$(PACMAN) tree-sitter-javascript tree-sitter-c
-	yay -S tree-sitter-typescript
-	yay -S tree-sitter-json
-	yay -S tree-sitter-css
-	yay -S tree-sitter-yaml
-	yay -S tree-sitter-html
+	yay -S --needed tree-sitter-typescript
+	yay -S --needed tree-sitter-json
+	yay -S --needed tree-sitter-css
+	yay -S --needed tree-sitter-yaml
+	yay -S --needed tree-sitter-html
 
 dnsmasq: ## Init dnsmasq
 	$(PACMAN) $@
@@ -327,14 +323,14 @@ keyring: ${HOME}/.local ## Init gnome keyrings
 
 fcitx-mozc: ## Install fcitx-mozc
 	$(PACMAN) fcitx5-im fcitx5-mozc
-	yay -S fcitx5-skin-adwaita-dark
+	yay -S --needed fcitx5-skin-adwaita-dark
 	$(SAFE_SYSTEM_LINK) ${PWD}/etc/environment /etc/environment
 	$(SAFE_LINK) ${PWD}/.config/fcitx5/conf/clipboard.conf ${HOME}/.config/fcitx5/conf/clipboard.conf
 	$(SAFE_LINK) ${HOME}/backup/mozc ${HOME}/.mozc
 	$(SAFE_LINK) ${PWD}/.config/fcitx5/conf/classicui.conf ${HOME}/.config/fcitx5/conf/classicui.conf
 
 ttf-cica: ## Install Cica font
-	yay -S $@
+	yay -S --needed $@
 
 dconfsetting: # Initial dconf setting
 	$(PACMAN) dconf-editor
@@ -353,7 +349,7 @@ dconfsetting: # Initial dconf setting
 	dconf write /org/gnome/mutter/dynamic-workspaces false
 
 printer: ## Setup printer
-	sudo pacman -S cups cups-pdf avahi nss-mdns
+	$(PACMAN) cups cups-pdf avahi nss-mdns
 	$(SAFE_SYSTEM_LINK) ${PWD}/etc/nsswitch.conf /etc/nsswitch.conf
 	$(SYSTEMD_ENABLE) cups.service
 	$(SYSTEMD_ENABLE) avahi-daemon.service
@@ -368,8 +364,8 @@ podman: ## Podman initial setup
 	$(SYSTEMD_ENABLE) io.$@.service
 
 mysql: ## mysql initial setup
-	yay mysql-clients80
-	yay mysql80
+	yay -S --needed mysql-clients80
+	yay -S --needed mysql80
 	sudo mysqld --initialize --user=mysql --basedir=/usr --datadir=/var/lib/mysql
 	$(SYSTEMD_ENABLE) mysqld.service
 	mysql_secure_installation
@@ -389,26 +385,25 @@ postgresql: ## PostgreSQL initial setup
 
 eralchemy: ## Install eralchemy
 	$(PACMAN) graphviz
-	yay -S $@
+	yay -S --needed $@
 
 mycli: ## Init mycli
 	mkdir -p ${HOME}/backup/$@
-	yay -S $@
+	yay -S --needed $@
 	$(SAFE_LINK) ${HOME}/backup/$@/.$@-history ${HOME}/.$@-history
 
 pgcli: ## Init pgcli
 	mkdir -p ${HOME}/backup
-	yay -S $@
+	yay -S --needed $@
 	$(SAFE_LINK) ${HOME}/backup/$@ ${HOME}/.config/$@
 
 gcloud: ## Install google cloud SDK and setting
 	$(PACMAN) $@ kubectl kubectx kustomize helm stern
-	curl https://sdk.cloud.google.com | bash
 	$(SAFE_LINK) ${HOME}/backup/gcloud ${HOME}/.config/gcloud
 
 minikube: ## Setup minikube with kvm2
 	$(PACMAN) $@ libvirt qemu-headless ebtables docker-machine
-	yay -S docker-machine-driver-kvm2
+	yay -S --needed docker-machine-driver-kvm2
 	sudo usermod -a -G libvirt ${USER}
 	$(SYSTEMD_ENABLE) libvirtd.service
 	$(SYSTEMD_ENABLE) virtlogd.service
@@ -430,23 +425,23 @@ ccls: ## Install c,c++ language server
 	$(PACMAN) $@
 
 emacspeak: ## Install emacspeak for blind person
-	yay -S $@
+	yay -S --needed $@
 
 aur: ## Install arch linux AUR packages using yay
-	yay -S downgrade git-secrets grok-build pscale-cli turso-bin vscode-langservers-extracted yacreader zoom
+	yay -S --needed downgrade git-secrets grok-build pscale-cli turso-bin vscode-langservers-extracted yacreader zoom
 
 aurplus: ## Install arch linux AUR packages using yay
-	yay -S appimagelauncher asunder hermes-agent nkf rgxg rtags terraformer-bin
+	yay -S --needed appimagelauncher asunder hermes-agent nkf rgxg rtags terraformer-bin
 
 wkhtmltopdf: ## Install wkhtmltopdf
-	yay -S wkhtmltopdf-bin
+	yay -S --needed wkhtmltopdf-bin
 
 sequeler: ## Install gui database tools
-	yay -S $@
+	yay -S --needed $@
 
 beekeeper: ## Setup beekeeper-studio
 	$(PACMAN) html-xml-utils
-	yay -S $@-studio-bin
+	yay -S --needed $@-studio-bin
 	$(SAFE_LINK) ${HOME}/backup/$@-studio ${HOME}/.config/$@-studio
 
 gh: ## Install and setup github-cli
@@ -468,7 +463,7 @@ tmuxp: ${HOME}/.local ## Install tmuxp
 	$(SAFE_LINK) ${PWD}/.config/main.yaml ${HOME}/.config/main.yaml
 
 psd: ## Profile-Sync-Daemon initial setup
-	yay -S profile-sync-daemon
+	yay -S --needed profile-sync-daemon
 	mkdir -p ${HOME}/.config/psd
 	$(SAFE_LINK) ${PWD}/.config/psd/psd.conf ${HOME}/.config/psd/psd.conf
 	echo "${USER} ALL=(ALL) NOPASSWD: /usr/bin/psd-overlay-helper" | sudo EDITOR='tee -a' visudo
@@ -480,7 +475,7 @@ chromium: ## Install chromium and noto-fonts and browserpass
 	$(SAFE_LINK) ${HOME}/backup/browserpass ${HOME}/.password-store
 
 chrome: ## Install chrome and noto-fonts and browserpass
-	yay -S google-$@
+	yay -S --needed google-$@
 	$(PACMAN) browserpass noto-fonts noto-fonts-cjk
 	make -C /usr/lib/browserpass hosts-$@-user
 	$(SAFE_LINK) ${HOME}/backup/browserpass ${HOME}/.password-store
@@ -496,7 +491,7 @@ ollama: ## Init ollama
 	ollama pull gemma4:12b
 
 edge: ## Install edge
-	yay -S microsoft-edge-stable-bin
+	yay -S --needed microsoft-edge-stable-bin
 
 neovim: ## Init neovim
 	$(PACMAN) $@
@@ -507,7 +502,7 @@ mongodb: ## Mongodb initial setup
 	$(SYSTEMD_ENABLE) $@.service
 
 solargraph: ## Ruby language server and jekyll
-	yay -S ruby-$@ jekyll
+	yay -S --needed ruby-$@ jekyll
 
 gnuglobal: ${HOME}/.local ## Install gnu global
 	$(PACMAN) global python-pygments
@@ -526,7 +521,7 @@ backup: ## Backup arch linux packages
 	pacman -Qqem > ${PWD}/archlinux/aurlist
 
 update: ## Update arch linux packages and save packages cache 3 generations
-	yay -Syu; paccache -ruk0
+	python3 ${PWD}/.config/workstationctl/workstationctl.py archupdate
 
 docker_image: docker
 	docker build -t dotfiles ${PWD}
