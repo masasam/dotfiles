@@ -39,10 +39,13 @@ PACKAGES	+= tailwindcss-language-server
 
 PACMAN		:= sudo pacman -S 
 SYSTEMD_ENABLE	:= sudo systemctl --now enable
+SAFE_LINK	:= python3 ${PWD}/.config/workstationctl/workstationctl.py link
+SAFE_SYSTEM_LINK := sudo python3 ${PWD}/.config/workstationctl/workstationctl.py link --allow-outside-home --backup-directory /var/lib/dotfiles/backups
 
 .DEFAULT_GOAL := help
-.PHONY: all allinstall allupdate allbackup
+.PHONY: all allinstall allupdate allbackup git-hooks
 .PHONY: check check-hypr check-workspace-toggle check-deskctl check-emacs check-zsh check-foot
+.PHONY: check-workstationctl check-secrets
 
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
@@ -51,7 +54,10 @@ help:
 
 all: allinstall allupdate allbackup
 
-check: check-hypr check-workspace-toggle check-deskctl check-emacs check-zsh check-foot ## Validate maintained dotfile code
+git-hooks: ## Enable the tracked Git hooks for this repository
+	git config --local core.hooksPath .githooks
+
+check: check-hypr check-workspace-toggle check-deskctl check-emacs check-zsh check-foot check-workstationctl check-secrets ## Validate maintained dotfile code
 
 check-hypr:
 	luac -p ${PWD}/.config/hypr/hyprland.lua ${PWD}/.config/hypr/modules/*.lua
@@ -72,47 +78,51 @@ check-zsh:
 check-foot:
 	foot --config=${PWD}/.config/foot/foot.ini --check-config
 
+check-workstationctl:
+	python3 ${PWD}/.config/workstationctl/test_workstationctl.py
+
+check-secrets: ## Scan Git history for secrets, allowing only the redacted legacy baseline
+	gitleaks git --redact --no-banner --baseline-path=${PWD}/.gitleaks-baseline.json --log-opts="--all --no-textconv" ${PWD}
+
 ${HOME}/.local:
 	mkdir -p $<
 
 rclone: ## Init rclone
 	$(PACMAN) $@
 	chmod 600 ${PWD}/.config/rclone/rclone.conf
-	test -L ${HOME}/.config/rclone || rm -rf ${HOME}/.config/rclone
-	ln -vsfn {${PWD},${HOME}}/.config/rclone
+	$(SAFE_LINK) ${PWD}/.config/rclone ${HOME}/.config/rclone
 
 gnupg: ## Deploy gnupg (Run after rclone)
 	$(PACMAN) $@ git-crypt
 	mkdir -p ${HOME}/.$@
-	ln -vsf {${PWD},${HOME}}/.$@/gpg-agent.conf
+	$(SAFE_LINK) ${PWD}/.$@/gpg-agent.conf ${HOME}/.$@/gpg-agent.conf
 
 ssh: ## Init ssh
 	$(PACMAN) open$@
 	mkdir -p ${HOME}/.$@
 	chmod 600 ${HOME}/.ssh/id_rsa
-	sudo ln -vsf {${PWD},}/etc/ssh/sshd_config
+	$(SAFE_SYSTEM_LINK) ${PWD}/etc/ssh/sshd_config /etc/ssh/sshd_config
 
 emacs: ## Init emacs
 	$(PACMAN) emacs-wayland
-	test -L ${HOME}/.emacs.d || rm -rf ${HOME}/.emacs.d
-	ln -vsfn {${PWD},${HOME}}/.emacs.d
+	$(SAFE_LINK) ${PWD}/.emacs.d ${HOME}/.emacs.d
 
 init: ## Initial deploy dotfiles
+	$(MAKE) git-hooks
 	$(MAKE) dotctl
 	$(MAKE) zshctl
 	$(MAKE) workstationctl
-	test -L ${HOME}/.config/btop || rm -rf ${HOME}/.config/btop
-	ln -vsfn {${PWD},${HOME}}/.config/btop
-	ln -vsf {${PWD},${HOME}}/.lesskey
+	$(SAFE_LINK) ${PWD}/.config/btop ${HOME}/.config/btop
+	$(SAFE_LINK) ${PWD}/.lesskey ${HOME}/.lesskey
 	lesskey
 	for item in zshrc vimrc myclirc tmux.conf screenrc aspell.conf gitconfig netrc authinfo; do
-		ln -vsf {${PWD},${HOME}}/.$$item
+		$(SAFE_LINK) ${PWD}/.$$item ${HOME}/.$$item
 	done
 	chmod 600 ${PWD}/.netrc
 	mkdir -p ${HOME}/.config/mpv
-	ln -vsf {${PWD},${HOME}}/.config/mpv/mpv.conf
-	sudo ln -vsf {${PWD},}/etc/hosts
-	sudo ln -vsf {${PWD},/root}/.vimrc
+	$(SAFE_LINK) ${PWD}/.config/mpv/mpv.conf ${HOME}/.config/mpv/mpv.conf
+	$(SAFE_SYSTEM_LINK) ${PWD}/etc/hosts /etc/hosts
+	$(SAFE_SYSTEM_LINK) ${PWD}/.vimrc /root/.vimrc
 
 base: ## Install base and base-devel package
 	$(PACMAN) $(BASE_PKGS)
@@ -132,32 +142,27 @@ hyprland: ## Setup hyprland
 	$(MAKE) deskctl
 	$(MAKE) workspace-toggle
 	yay -S wlogout
-	test -L ${HOME}/.config/hypr || rm -rf ${HOME}/.config/hypr
-	ln -vsfn {${PWD},${HOME}}/.config/hypr
-	test -L ${HOME}/.config/waybar || rm -rf ${HOME}/.config/waybar
-	ln -vsfn {${PWD},${HOME}}/.config/waybar
-	test -L ${HOME}/.config/mako || rm -rf ${HOME}/.config/mako
-	ln -vsfn {${PWD},${HOME}}/.config/mako
-	test -L ${HOME}/.config/fuzzel || rm -rf ${HOME}/.config/fuzzel
-	ln -vsfn {${PWD},${HOME}}/.config/fuzzel
+	$(SAFE_LINK) ${PWD}/.config/hypr ${HOME}/.config/hypr
+	$(SAFE_LINK) ${PWD}/.config/waybar ${HOME}/.config/waybar
+	$(SAFE_LINK) ${PWD}/.config/mako ${HOME}/.config/mako
+	$(SAFE_LINK) ${PWD}/.config/fuzzel ${HOME}/.config/fuzzel
 	mkdir -p ${HOME}/.config/wlogout
-	sudo ln -vsf ${PWD}/.config/wlogout/wlogout.desktop /usr/share/applications/wlogout.desktop
-	ln -vsf {${PWD},${HOME}}/.config/wlogout/style.css
+	$(SAFE_SYSTEM_LINK) ${PWD}/.config/wlogout/wlogout.desktop /usr/share/applications/wlogout.desktop
+	$(SAFE_LINK) ${PWD}/.config/wlogout/style.css ${HOME}/.config/wlogout/style.css
 	yay -S snappy-switcher
-	test -L ${HOME}/.config/snappy-switcher/config.ini || rm -rf ${HOME}/.config/snappy-switcher/config.ini
-	ln -vsf {${PWD},${HOME}}/.config/snappy-switcher/config.ini
+	$(SAFE_LINK) ${PWD}/.config/snappy-switcher/config.ini ${HOME}/.config/snappy-switcher/config.ini
 
 hyprwhspr: ## Setup hyprwhspr for voice input
 	yay -S hyprwhspr
-	ln -vsf {${PWD},${HOME}}/.config/hyprwhspr/config.json
+	$(SAFE_LINK) ${PWD}/.config/hyprwhspr/config.json ${HOME}/.config/hyprwhspr/config.json
 	hyprwhspr setup
 	systemctl --user enable --now hyprwhspr.service
 
 greetd: ## Setup greetd
 	$(PACMAN) $@ greetd-tuigreet terminus-font
-	sudo ln -vsf {${PWD},}/etc/$@/config.toml
-	sudo ln -vsf {${PWD},}/etc/pam.d/greetd
-	sudo ln -vsf {${PWD},}/etc/vconsole.conf
+	$(SAFE_SYSTEM_LINK) ${PWD}/etc/$@/config.toml /etc/$@/config.toml
+	$(SAFE_SYSTEM_LINK) ${PWD}/etc/pam.d/greetd /etc/pam.d/greetd
+	$(SAFE_SYSTEM_LINK) ${PWD}/etc/vconsole.conf /etc/vconsole.conf
 	systemctl enable greetd.service
 
 logicool: ## Setup logicool mouse
@@ -172,8 +177,7 @@ goinstall: ${HOME}/.local ## Install go packages
 
 mise: ## Setup mise
 	$(PACMAN) mise
-	test -L ${HOME}/.config/mise/config.toml || rm -rf ${HOME}/.config/mise/config.toml
-	ln -vsf {${PWD},${HOME}}/.config/mise/config.toml
+	$(SAFE_LINK) ${PWD}/.config/mise/config.toml ${HOME}/.config/mise/config.toml
 	mise use -g atlas
 	mise use -g bun
 	mise use -g claude-code
@@ -216,12 +220,12 @@ deskctl: ## Build Hyprland desktop controller
 zshctl: ${HOME}/.local ## Build and deploy zsh helper utilities
 	zig build --build-file ${PWD}/.config/zshctl/build.zig -Doptimize=ReleaseSafe
 	mkdir -p ${HOME}/.local/bin
-	ln -vsfn ${PWD}/.config/zshctl/zig-out/bin/zshctl ${HOME}/.local/bin/zshctl
+	$(SAFE_LINK) ${PWD}/.config/zshctl/zig-out/bin/zshctl ${HOME}/.local/bin/zshctl
 
 workstationctl: ${HOME}/.local ## Deploy Python workstation utilities
 	chmod a+x ${PWD}/.config/workstationctl/workstationctl.py
 	mkdir -p ${HOME}/.local/bin
-	ln -vsfn ${PWD}/.config/workstationctl/workstationctl.py ${HOME}/.local/bin/workstationctl
+	$(SAFE_LINK) ${PWD}/.config/workstationctl/workstationctl.py ${HOME}/.local/bin/workstationctl
 
 workspace-toggle: ## Build Hyprland workspace window toggle
 	cargo build --locked --release --manifest-path ${PWD}/.config/hypr/workspace-toggle/Cargo.toml
@@ -229,15 +233,14 @@ workspace-toggle: ## Build Hyprland workspace window toggle
 dotctl: ${HOME}/.local ## Build and deploy general dotfile utilities
 	cargo build --locked --release --manifest-path ${PWD}/.config/dotctl/Cargo.toml
 	mkdir -p ${HOME}/.local/bin
-	ln -vsfn ${PWD}/.config/dotctl/target/release/dotctl ${HOME}/.local/bin/dotctl
+	$(SAFE_LINK) ${PWD}/.config/dotctl/target/release/dotctl ${HOME}/.local/bin/dotctl
 
 codex: ## Setup openai codex
 	mise use -g codex
-	test -L ${HOME}/.codex/config.toml || rm -rf ${HOME}/.codex/config.toml
-	ln -vsf ${PWD}/.config/codex/config.toml ${HOME}/.codex/config.toml
+	$(SAFE_LINK) ${PWD}/.config/codex/config.toml ${HOME}/.codex/config.toml
 	mkdir -p ${HOME}/.codex/hooks
 	chmod a+x ${PWD}/.config/codex/codex_notify.py
-	ln -vsf ${PWD}/.config/codex/codex_notify.py ${HOME}/.codex/hooks/codex_notify.py
+	$(SAFE_LINK) ${PWD}/.config/codex/codex_notify.py ${HOME}/.codex/hooks/codex_notify.py
 	${HOME}/.codex/hooks/codex_notify.py
 
 codexdesktop: ## Setup openai codex app
@@ -245,44 +248,39 @@ codexdesktop: ## Setup openai codex app
 
 herdr: ## Setup herdr
 	mise use -g herdr
-	test -L ${HOME}/.config/herdr/config.toml || rm -rf ${HOME}/.config/herdr/config.toml
-	ln -vsf {${PWD},${HOME}}/.config/herdr/config.toml
+	$(SAFE_LINK) ${PWD}/.config/herdr/config.toml ${HOME}/.config/herdr/config.toml
 
 neomutt: ## Init neomutt mail client
 	$(PACMAN) neomutt urlscan
 	mkdir -p ${HOME}/.mutt
-	ln -vsf {${PWD},${HOME}}/.muttrc
+	$(SAFE_LINK) ${PWD}/.muttrc ${HOME}/.muttrc
 	mkdir -p ${HOME}/.config/urlscan
-	ln -vsf {${PWD},${HOME}}/.config/urlscan/config.json
-	for item in mailcap certifcates aliases signature; do ln -vsf {${PWD},${HOME}}/.mutt/$$item; done
+	$(SAFE_LINK) ${PWD}/.config/urlscan/config.json ${HOME}/.config/urlscan/config.json
+	for item in mailcap certificates aliases signature; do $(SAFE_LINK) ${PWD}/.mutt/$$item ${HOME}/.mutt/$$item; done
 
 alacritty: ## Init alacritty terminal
 	$(PACMAN) $@
-	test -L ${HOME}/.config/$@ || rm -rf ${HOME}/.config/$@
-	ln -vsfn {${PWD},${HOME}}/.config/$@
+	$(SAFE_LINK) ${PWD}/.config/$@ ${HOME}/.config/$@
 
 foot: ## Init foot terminal
 	$(PACMAN) $@
 	mkdir -p ${HOME}/.config/foot
-	ln -vsf {${PWD},${HOME}}/.config/foot/foot.ini
+	$(SAFE_LINK) ${PWD}/.config/foot/foot.ini ${HOME}/.config/foot/foot.ini
 
 ghostty: ## Init ghostty terminal
 	$(PACMAN) $@
-	test -L ${HOME}/.config/$@/config || rm -rf ${HOME}/.config/$@/config
 	mkdir -p ${HOME}/.config/$@
-	ln -vsf {${PWD},${HOME}}/.config/$@/config
+	$(SAFE_LINK) ${PWD}/.config/$@/config ${HOME}/.config/$@/config
 
 kitty: # Init kitty terminal
 	$(PACMAN) $@
-	test -L ${HOME}/.config/$@/$@.conf || rm -rf ${HOME}/.config/$@/$@.conf
 	mkdir -p ${HOME}/.config/$@
-	ln -vsf {${PWD},${HOME}}/.config/$@/$@.conf
-	ln -vsf {${PWD},${HOME}}/.config/kitty/current-theme.conf
+	$(SAFE_LINK) ${PWD}/.config/$@/$@.conf ${HOME}/.config/$@/$@.conf
+	$(SAFE_LINK) ${PWD}/.config/kitty/current-theme.conf ${HOME}/.config/kitty/current-theme.conf
 
 rio: # Init rio terminal
 	$(PACMAN) $@
-	test -L ${HOME}/.config/$@ || rm -rf ${HOME}/.config/$@
-	ln -vsfn {${PWD},${HOME}}/.config/$@
+	$(SAFE_LINK) ${PWD}/.config/$@ ${HOME}/.config/$@
 
 tree-sitter: ## Install tree-sitter
 	$(PACMAN) tree-sitter tree-sitter-rust tree-sitter-bash tree-sitter-python
@@ -295,14 +293,14 @@ tree-sitter: ## Install tree-sitter
 
 dnsmasq: ## Init dnsmasq
 	$(PACMAN) $@
-	sudo ln -vsf ${PWD}/etc/$@/resolv.$@.conf /etc/resolv.$@.conf
-	sudo ln -vsf ${PWD}/etc/$@/$@.conf /etc/$@.conf
+	$(SAFE_SYSTEM_LINK) ${PWD}/etc/$@/resolv.$@.conf /etc/resolv.$@.conf
+	$(SAFE_SYSTEM_LINK) ${PWD}/etc/$@/$@.conf /etc/$@.conf
 	sudo mkdir -p /etc/NetworkManager
-	sudo ln -vsf {${PWD},}/etc/NetworkManager/NetworkManager.conf
+	$(SAFE_SYSTEM_LINK) ${PWD}/etc/NetworkManager/NetworkManager.conf /etc/NetworkManager/NetworkManager.conf
 
 tlp: ## Setting for power saving and preventing battery deterioration
 	$(PACMAN) $@ tlp-pd powertop
-	sudo ln -vsf {${PWD},}/etc/$@.conf
+	$(SAFE_SYSTEM_LINK) ${PWD}/etc/$@.conf /etc/$@.conf
 	$(SYSTEMD_ENABLE) $@.service
 	$(SYSTEMD_ENABLE) tlp-pd.service
 
@@ -316,10 +314,8 @@ uefiupdate: ## Update system firmware and uefi
 gtk-theme: ## Set gtk theme
 	$(PACMAN) gnome-themes-extra
 	gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark
-	test -L ${HOME}/.config/gtk-4.0 || rm -rf ${HOME}/.config/gtk-4.0
-	ln -vsfn {${PWD},${HOME}}/.config/gtk-4.0
-	test -L ${HOME}/.config/gtk-3.0 || rm -rf ${HOME}/.config/gtk-3.0
-	ln -vsfn {${PWD},${HOME}}/.config/gtk-3.0
+	$(SAFE_LINK) ${PWD}/.config/gtk-4.0 ${HOME}/.config/gtk-4.0
+	$(SAFE_LINK) ${PWD}/.config/gtk-3.0 ${HOME}/.config/gtk-3.0
 
 throttled: ## Workaround for Intel throttling issues in thinkpad x1 carbon gen6
 	$(PACMAN) throttled
@@ -327,19 +323,15 @@ throttled: ## Workaround for Intel throttling issues in thinkpad x1 carbon gen6
 
 keyring: ${HOME}/.local ## Init gnome keyrings
 	$(PACMAN) seahorse
-	test -L ${HOME}/.local/share/keyrings || rm -rf ${HOME}/.local/share/keyrings
-	ln -vsfn ${HOME}/{backup,.local/share}/keyrings
+	$(SAFE_LINK) ${HOME}/backup/keyrings ${HOME}/.local/share/keyrings
 
 fcitx-mozc: ## Install fcitx-mozc
 	$(PACMAN) fcitx5-im fcitx5-mozc
 	yay -S fcitx5-skin-adwaita-dark
-	sudo ln -vsf {${PWD},}/etc/environment
-	test -L ${HOME}/.config/fcitx5/conf/clipboard.conf || rm -rf ${HOME}/.config/fcitx5/conf/clipboard.conf
-	ln -vsf {${PWD},${HOME}}/.config/fcitx5/conf/clipboard.conf
-	test -L ${HOME}/.mozc || rm -rf ${HOME}/.mozc
-	ln -vsfn ${HOME}/backup/mozc ${HOME}/.mozc
-	test -L ${HOME}/.config/fcitx5/conf/classicui.conf || rm -rf ${HOME}/.config/fcitx5/conf/classicui.conf
-	ln -vsf {${PWD},${HOME}}/.config/fcitx5/conf/classicui.conf
+	$(SAFE_SYSTEM_LINK) ${PWD}/etc/environment /etc/environment
+	$(SAFE_LINK) ${PWD}/.config/fcitx5/conf/clipboard.conf ${HOME}/.config/fcitx5/conf/clipboard.conf
+	$(SAFE_LINK) ${HOME}/backup/mozc ${HOME}/.mozc
+	$(SAFE_LINK) ${PWD}/.config/fcitx5/conf/classicui.conf ${HOME}/.config/fcitx5/conf/classicui.conf
 
 ttf-cica: ## Install Cica font
 	yay -S $@
@@ -362,7 +354,7 @@ dconfsetting: # Initial dconf setting
 
 printer: ## Setup printer
 	sudo pacman -S cups cups-pdf avahi nss-mdns
-	sudo ln -vsf {${PWD},}/etc/nsswitch.conf
+	$(SAFE_SYSTEM_LINK) ${PWD}/etc/nsswitch.conf /etc/nsswitch.conf
 	$(SYSTEMD_ENABLE) cups.service
 	$(SYSTEMD_ENABLE) avahi-daemon.service
 
@@ -402,19 +394,17 @@ eralchemy: ## Install eralchemy
 mycli: ## Init mycli
 	mkdir -p ${HOME}/backup/$@
 	yay -S $@
-	ln -vsf ${HOME}{/backup/$@,}/.$@-history
+	$(SAFE_LINK) ${HOME}/backup/$@/.$@-history ${HOME}/.$@-history
 
 pgcli: ## Init pgcli
 	mkdir -p ${HOME}/backup
 	yay -S $@
-	test -L ${HOME}/.config/pgcli || rm -rf ${HOME}/.config/pgcli
-	ln -vsfn ${HOME}/{backup,.config}/$@
+	$(SAFE_LINK) ${HOME}/backup/$@ ${HOME}/.config/$@
 
 gcloud: ## Install google cloud SDK and setting
 	$(PACMAN) $@ kubectl kubectx kustomize helm stern
 	curl https://sdk.cloud.google.com | bash
-	test -L ${HOME}/.config/gcloud || rm -rf ${HOME}/.config/gcloud
-	ln -vsfn ${HOME}/{backup,.config}/gcloud
+	$(SAFE_LINK) ${HOME}/backup/gcloud ${HOME}/.config/gcloud
 
 minikube: ## Setup minikube with kvm2
 	$(PACMAN) $@ libvirt qemu-headless ebtables docker-machine
@@ -457,54 +447,48 @@ sequeler: ## Install gui database tools
 beekeeper: ## Setup beekeeper-studio
 	$(PACMAN) html-xml-utils
 	yay -S $@-studio-bin
-	test -L ${HOME}/.config/$@-studio || rm -rf ${HOME}/.config/$@-studio
-	ln -vsfn ${HOME}/{backup,.config}/$@-studio
+	$(SAFE_LINK) ${HOME}/backup/$@-studio ${HOME}/.config/$@-studio
 
 gh: ## Install and setup github-cli
 	$(PACMAN) github-cli
-	test -L ${HOME}/.config/gh || rm -rf ${HOME}/.config/gh
-	ln -vsfn ${HOME}/{backup,.config}/gh
+	$(SAFE_LINK) ${HOME}/backup/gh ${HOME}/.config/gh
 	gh completion -s zsh > ${HOME}/.zfunc/_gh
 
 bluetooth: # Setup bluetooth
 	$(PACMAN) bluez bluez-utils blueman bluetui
 	$(SYSTEMD_ENABLE) bluetooth.service
-	sudo ln -vsf {${PWD},}/etc/bluetooth/main.conf
+	$(SAFE_SYSTEM_LINK) ${PWD}/etc/bluetooth/main.conf /etc/bluetooth/main.conf
 
 aws: ${HOME}/.local ## Init aws cli
 	mise use -g aws-cli
-	test -L ${HOME}/.aws || rm -rf ${HOME}/.aws
-	ln -vsfn {${PWD},${HOME}}/.$@
+	$(SAFE_LINK) ${PWD}/.$@ ${HOME}/.$@
 
 tmuxp: ${HOME}/.local ## Install tmuxp
 	$(PACMAN) $@
-	sudo ln -vsf {${PWD},${HOME}}/.config/main.yaml
+	$(SAFE_LINK) ${PWD}/.config/main.yaml ${HOME}/.config/main.yaml
 
 psd: ## Profile-Sync-Daemon initial setup
 	yay -S profile-sync-daemon
 	mkdir -p ${HOME}/.config/psd
-	ln -vsf {${PWD},${HOME}}/.config/psd/psd.conf
+	$(SAFE_LINK) ${PWD}/.config/psd/psd.conf ${HOME}/.config/psd/psd.conf
 	echo "${USER} ALL=(ALL) NOPASSWD: /usr/bin/psd-overlay-helper" | sudo EDITOR='tee -a' visudo
 	systemctl --user --now enable psd.service
 
 chromium: ## Install chromium and noto-fonts and browserpass
 	$(PACMAN) $@ browserpass-$@ noto-fonts noto-fonts-cjk
 	make -C /usr/lib/browserpass hosts-$@-user
-	test -L ${HOME}/.password-store || rm -rf ${HOME}/.password-store
-	ln -vsfn ${HOME}/backup/browserpass ${HOME}/.password-store
+	$(SAFE_LINK) ${HOME}/backup/browserpass ${HOME}/.password-store
 
 chrome: ## Install chrome and noto-fonts and browserpass
 	yay -S google-$@
 	$(PACMAN) browserpass noto-fonts noto-fonts-cjk
 	make -C /usr/lib/browserpass hosts-$@-user
-	test -L ${HOME}/.password-store || rm -rf ${HOME}/.password-store
-	ln -vsfn ${HOME}/backup/browserpass ${HOME}/.password-store
+	$(SAFE_LINK) ${HOME}/backup/browserpass ${HOME}/.password-store
 
 browserpass-firefox:  ## Setup browserpass with firefox
 	$(PACMAN) browserpass-firefox
 	make -C /usr/lib/browserpass hosts-firefox-user
-	test -L ${HOME}/.password-store || rm -rf ${HOME}/.password-store
-	ln -vsfn ${HOME}/backup/browserpass ${HOME}/.password-store
+	$(SAFE_LINK) ${HOME}/backup/browserpass ${HOME}/.password-store
 
 ollama: ## Init ollama
 	$(PACMAN) $@
@@ -516,8 +500,7 @@ edge: ## Install edge
 
 neovim: ## Init neovim
 	$(PACMAN) $@
-	test -L ${HOME}/.config/nvim || rm -rf ${HOME}/.config/nvim
-	ln -vsfn {${PWD},${HOME}}/.config/nvim
+	$(SAFE_LINK) ${PWD}/.config/nvim ${HOME}/.config/nvim
 
 mongodb: ## Mongodb initial setup
 	$(PACMAN) $@ $@-tools

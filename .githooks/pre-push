@@ -1,0 +1,24 @@
+#!/usr/bin/env python3
+"""Run the repository validation suite before objects are pushed."""
+
+from __future__ import annotations
+
+import subprocess
+import sys
+from pathlib import Path
+
+
+def main() -> int:
+    # Drain ref updates supplied by Git so child processes cannot consume them.
+    sys.stdin.read()
+    root = Path(
+        subprocess.check_output(
+            ["git", "rev-parse", "--show-toplevel"], text=True
+        ).strip()
+    )
+    print("pre-push: running make check", file=sys.stderr)
+    return subprocess.run(["make", "check"], cwd=root, check=False).returncode
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

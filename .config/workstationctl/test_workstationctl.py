@@ -16,6 +16,116 @@ SPEC.loader.exec_module(workstationctl)
 
 
 class WorkstationctlTest(unittest.TestCase):
+    def test_safe_link_creates_link(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            home = Path(temporary_directory)
+            source = home / "repo/config"
+            target = home / ".config/app/config"
+            source.parent.mkdir(parents=True)
+            source.write_text("settings\n")
+
+            self.assertIsNone(
+                workstationctl.safe_link(source, target, home=home)
+            )
+            self.assertTrue(target.is_symlink())
+            self.assertEqual(target.resolve(), source.resolve())
+
+    def test_safe_link_backs_up_existing_directory(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            home = Path(temporary_directory)
+            source = home / "repo/config"
+            source.mkdir(parents=True)
+            target = home / ".config/app"
+            target.mkdir(parents=True)
+            (target / "old.conf").write_text("old\n")
+
+            backup = workstationctl.safe_link(source, target, home=home)
+
+            self.assertIsNotNone(backup)
+            assert backup is not None
+            self.assertEqual((backup / "old.conf").read_text(), "old\n")
+            self.assertEqual(target.resolve(), source.resolve())
+
+    def test_safe_link_is_idempotent(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            home = Path(temporary_directory)
+            source = home / "repo/config"
+            source.parent.mkdir(parents=True)
+            source.write_text("settings\n")
+            target = home / ".config/app/config"
+            target.parent.mkdir(parents=True)
+            target.symlink_to(source)
+
+            self.assertIsNone(
+                workstationctl.safe_link(source, target, home=home)
+            )
+            self.assertFalse((home / ".local/state/dotfiles").exists())
+
+    def test_safe_link_dry_run_preserves_target(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            home = Path(temporary_directory)
+            source = home / "repo/config"
+            source.parent.mkdir(parents=True)
+            source.write_text("new\n")
+            target = home / ".config/app/config"
+            target.parent.mkdir(parents=True)
+            target.write_text("old\n")
+
+            backup = workstationctl.safe_link(
+                source, target, home=home, dry_run=True
+            )
+
+            self.assertIsNotNone(backup)
+            self.assertFalse(target.is_symlink())
+            self.assertEqual(target.read_text(), "old\n")
+
+    def test_safe_link_rejects_unsafe_targets(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            home = Path(temporary_directory)
+            source = home / "source"
+            source.write_text("new\n")
+            with self.assertRaises(ValueError):
+                workstationctl.safe_link(source, home, home=home)
+            with self.assertRaises(ValueError):
+                workstationctl.safe_link(
+                    source, home.parent / "outside", home=home
+                )
+
+    def test_safe_link_allows_explicit_outside_home_target(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory)
+            home = root / "home"
+            home.mkdir()
+            source = home / "source"
+            source.write_text("new\n")
+            target = root / "etc/config"
+
+            workstationctl.safe_link(
+                source,
+                target,
+                home=home,
+                backup_directory=home / "backups",
+                allow_outside_home=True,
+            )
+
+            self.assertEqual(target.resolve(), source.resolve())
+
+    def test_safe_link_restores_target_if_link_creation_fails(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            home = Path(temporary_directory)
+            source = home / "source"
+            source.write_text("new\n")
+            target = home / ".config/app/config"
+            target.parent.mkdir(parents=True)
+            target.write_text("old\n")
+
+            with patch("pathlib.Path.symlink_to", side_effect=OSError("failed")):
+                with self.assertRaises(OSError):
+                    workstationctl.safe_link(source, target, home=home)
+
+            self.assertFalse(target.is_symlink())
+            self.assertEqual(target.read_text(), "old\n")
+
     def test_remove_oldest_deletes_only_one_entry(self) -> None:
         with tempfile.TemporaryDirectory() as temporary_directory:
             directory = Path(temporary_directory)

@@ -48,6 +48,36 @@ After make install you can deploy dotfiles with this command.
 
     make init
 
+Existing files are never deleted during deployment. They are moved under
+`~/.local/state/dotfiles/backups/<timestamp>/` before the repository symlink is
+created. System configuration backups are stored under
+`/var/lib/dotfiles/backups/`. Preview an individual link operation without
+changing anything with:
+
+    workstationctl link --dry-run SOURCE TARGET
+
+### Validate the configuration
+
+Run the complete local validation suite with:
+
+    make check
+
+This checks the modular Hyprland Lua configuration and workspace placement,
+the Rust and Zig utilities, Emacs Lisp, zsh, foot, the workstation controller,
+and Git history with Gitleaks. The tracked pre-push hook runs the same suite.
+Enable it manually after cloning with `make git-hooks`; `make init` also enables
+it automatically.
+
+### Useful shortcuts
+
+- Emacs `C-x u`: open the visual branching undo history with vundo.
+- Emacs `C-x C-r`: find a recently opened file with Consult.
+- foot `Ctrl+Shift+G`: copy the previous command's output to the clipboard.
+
+Hyprland configuration is split by responsibility under
+`.config/hypr/modules/`. Application workspace routing is defined in
+`modules/workspaces.lua`, while window behavior belongs in `modules/rules.lua`.
+
 ### With Makefile, you will be able to recover your usual environment in 1 hour
 
 You can see argument on this Makefile with this command.

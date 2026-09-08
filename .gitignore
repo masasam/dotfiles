@@ -1,3 +1,5 @@
 cache
+__pycache__/
+*.py[cod]
 .projectile.cache
 .projectile-cache.eld
