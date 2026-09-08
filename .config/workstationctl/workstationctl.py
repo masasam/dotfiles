@@ -17,6 +17,14 @@ from datetime import datetime
 from pathlib import Path
 
 MANIFEST_NAME = "manifest.json"
+GITCRYPT_HEADER = b"\x00GITCRYPT"
+
+
+def is_gitcrypt_locked(path: Path) -> bool:
+    if not path.is_file():
+        return False
+    with path.open("rb") as stream:
+        return stream.read(len(GITCRYPT_HEADER)) == GITCRYPT_HEADER
 
 
 def default_backup_directory(home: Path) -> Path:
@@ -81,6 +89,8 @@ def safe_link(
 
     if not source.exists():
         raise FileNotFoundError(source)
+    if is_gitcrypt_locked(source):
+        raise ValueError(f"source is still encrypted by git-crypt: {source}")
     if target == Path("/") or target == home:
         raise ValueError(f"refusing to replace protected path: {target}")
     if not allow_outside_home and not target.is_relative_to(home):
@@ -252,14 +262,14 @@ def doctor(repository: Path, home: Path) -> bool:
             "OK" if location else "FAIL", f"command {command}: {location or 'missing'}"
         )
 
-    encrypted_config = repository / ".config/mise/config.toml"
+    encrypted_config = repository / ".config/mise/secrets.toml"
     if encrypted_config.is_file():
-        locked = encrypted_config.read_bytes().startswith(b"\x00GITCRYPT")
+        locked = is_gitcrypt_locked(encrypted_config)
         report(
-            "FAIL" if locked else "OK",
-            "git-crypt working tree is locked"
+            "WARN" if locked else "OK",
+            "optional git-crypt secrets are locked"
             if locked
-            else "git-crypt working tree is unlocked",
+            else "git-crypt secrets are unlocked",
         )
 
     if shutil.which("git"):

@@ -86,6 +86,16 @@ class WorkstationctlTest(unittest.TestCase):
             with self.assertRaises(ValueError):
                 workstationctl.safe_link(source, home.parent / "outside", home=home)
 
+    def test_safe_link_rejects_locked_gitcrypt_source(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            home = Path(temporary_directory)
+            source = home / "secrets.toml"
+            source.write_bytes(b"\x00GITCRYPTciphertext")
+            with self.assertRaises(ValueError):
+                workstationctl.safe_link(
+                    source, home / ".config/secrets.toml", home=home
+                )
+
     def test_safe_link_allows_explicit_outside_home_target(self) -> None:
         with tempfile.TemporaryDirectory() as temporary_directory:
             root = Path(temporary_directory)

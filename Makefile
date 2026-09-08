@@ -44,7 +44,7 @@ SAFE_SYSTEM_LINK := sudo python3 ${PWD}/.config/workstationctl/workstationctl.py
 ZIG_CACHE	:= ${PWD}/.cache/zig
 
 .DEFAULT_GOAL := help
-.PHONY: all allinstall allupdate allbackup git-hooks doctor backups restore-plan
+.PHONY: all allinstall allupdate allbackup git-hooks doctor backups restore-plan mise-secrets
 .PHONY: check check-hypr check-workspace-toggle check-dotctl check-deskctl check-zshctl
 .PHONY: check-format check-lint check-emacs check-zsh check-foot check-workstationctl check-secrets
 
@@ -206,6 +206,10 @@ mise: ## Setup mise
 	$(PACMAN) mise
 	$(SAFE_LINK) ${PWD}/.config/mise/config.toml ${HOME}/.config/mise/config.toml
 	mise install
+
+mise-secrets: ## Deploy private mise environment after git-crypt unlock
+	chmod 600 ${PWD}/.config/mise/secrets.toml
+	$(SAFE_LINK) ${PWD}/.config/mise/secrets.toml ${HOME}/.config/mise/secrets.toml
 
 mise-update: ## Interactively update and repin mise tools
 	mise upgrade --bump --interactive

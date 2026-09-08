@@ -93,11 +93,21 @@ system-level snapshots, pass `/var/lib/dotfiles/backups` directly:
 
 ### Updating mise tools
 
-Tool versions in `.config/mise/config.toml` are pinned to known-working exact
-versions. `make mise` installs those versions. Review and update the pins
-interactively with:
+The public `.config/mise/config.toml` lists every managed tool at a
+known-working exact version, so it can be copied and used without the
+repository's git-crypt key. `make mise` installs those versions. Review and
+update the pins interactively with:
 
     make mise-update
+
+Private environment values are kept separately in the git-crypt-encrypted
+`.config/mise/secrets.toml`. After unlocking this repository, deploy them with:
+
+    make mise-secrets
+
+Other users can copy `.config/mise/secrets.example.toml` to
+`~/.config/mise/secrets.toml`, replace the placeholders, and set mode `600`.
+The secrets file is optional; mise tool installation works without it.
 
 ### Useful shortcuts
 
