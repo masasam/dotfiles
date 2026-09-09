@@ -45,6 +45,7 @@ ZIG_CACHE	:= ${PWD}/.cache/zig
 
 .DEFAULT_GOAL := help
 .PHONY: all allinstall allupdate allbackup git-hooks doctor backups restore-plan mise-secrets
+.PHONY: neomutt-oauth-authorize neomutt-oauth-test
 .PHONY: check check-hypr check-workspace-toggle check-dotctl check-deskctl check-zshctl
 .PHONY: check-format check-lint check-emacs check-zsh check-foot check-workstationctl
 .PHONY: check-secrets check-secrets-staged check-mise-security
@@ -65,12 +66,12 @@ check-format:
 	cargo fmt --manifest-path ${PWD}/.config/dotctl/Cargo.toml -- --check
 	cargo fmt --manifest-path ${PWD}/.config/hypr/workspace-toggle/Cargo.toml -- --check
 	zig fmt --check ${PWD}/.config/hypr/deskctl/build.zig ${PWD}/.config/hypr/deskctl/src/main.zig ${PWD}/.config/zshctl/build.zig ${PWD}/.config/zshctl/src/main.zig
-	ruff format --check ${PWD}/.config/workstationctl ${PWD}/.config/codex ${PWD}/.config/mise/check_security.py ${PWD}/.githooks/pre-commit ${PWD}/.githooks/pre-push
+	ruff format --check ${PWD}/.config/workstationctl ${PWD}/.config/codex ${PWD}/.config/mise/check_security.py ${PWD}/.mutt/oauth2.py ${PWD}/.githooks/pre-commit ${PWD}/.githooks/pre-push
 
 check-lint:
 	cargo clippy --locked --all-targets --manifest-path ${PWD}/.config/dotctl/Cargo.toml -- -D warnings
 	cargo clippy --locked --all-targets --manifest-path ${PWD}/.config/hypr/workspace-toggle/Cargo.toml -- -D warnings
-	ruff check ${PWD}/.config/workstationctl ${PWD}/.config/codex ${PWD}/.config/mise/check_security.py ${PWD}/.githooks/pre-commit ${PWD}/.githooks/pre-push
+	ruff check ${PWD}/.config/workstationctl ${PWD}/.config/codex ${PWD}/.config/mise/check_security.py ${PWD}/.mutt/oauth2.py ${PWD}/.githooks/pre-commit ${PWD}/.githooks/pre-push
 
 check-hypr:
 	luac -p ${PWD}/.config/hypr/hyprland.lua ${PWD}/.config/hypr/modules/*.lua
@@ -258,12 +259,19 @@ herdr: ## Setup herdr
 	$(SAFE_LINK) ${PWD}/.config/herdr/config.toml ${HOME}/.config/herdr/config.toml
 
 neomutt: ## Init neomutt mail client
-	$(PACMAN) neomutt urlscan
+	$(PACMAN) neomutt urlscan libsecret
 	mkdir -p ${HOME}/.mutt
 	$(SAFE_LINK) ${PWD}/.muttrc ${HOME}/.muttrc
 	mkdir -p ${HOME}/.config/urlscan
 	$(SAFE_LINK) ${PWD}/.config/urlscan/config.json ${HOME}/.config/urlscan/config.json
-	for item in mailcap certificates aliases signature; do $(SAFE_LINK) ${PWD}/.mutt/$$item ${HOME}/.mutt/$$item; done
+	chmod a+x ${PWD}/.mutt/oauth2.py
+	for item in mailcap certificates aliases signature account.rc oauth2.py; do $(SAFE_LINK) ${PWD}/.mutt/$$item ${HOME}/.mutt/$$item; done
+
+neomutt-oauth-authorize: ## Authorize Gmail OAuth and save the token in Secret Service
+	${HOME}/.mutt/oauth2.py --verbose --authorize --provider google --authflow localhostauthcode
+
+neomutt-oauth-test: ## Test Gmail IMAP and SMTP with the saved OAuth token
+	${HOME}/.mutt/oauth2.py --verbose --test
 
 alacritty: ## Init alacritty terminal
 	$(PACMAN) $@

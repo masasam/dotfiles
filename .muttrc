@@ -1,6 +1,13 @@
 set send_charset="iso-2022-jp:utf-8"
 
-source ~/src/github.com/masasam/dotfiles/.mutt/password.rc
+source ~/.mutt/account.rc
+
+# Gmail authentication uses short-lived OAuth 2.0 tokens.  The helper keeps
+# the refresh token and OAuth client credentials in the desktop keyring.
+set imap_authenticators = "oauthbearer:xoauth2"
+set smtp_authenticators = "oauthbearer:xoauth2"
+set imap_oauth_refresh_command = "~/.mutt/oauth2.py"
+set smtp_oauth_refresh_command = "~/.mutt/oauth2.py"
 
 set ssl_starttls = yes
 set ssl_force_tls = yes

@@ -113,6 +113,26 @@ attributes, encrypted Git blob, placeholder file, and private-file permissions.
 The tracked pre-commit hook also runs this check and Gitleaks against staged
 changes before Git creates a commit.
 
+### NeoMutt Gmail OAuth
+
+NeoMutt uses Gmail OAuth 2.0 instead of an account password or app password.
+Create a Google OAuth desktop client with the `https://mail.google.com/` scope,
+then deploy the NeoMutt files and complete the one-time browser authorization:
+
+    make neomutt
+    make neomutt-oauth-authorize
+
+The OAuth client credentials and refresh token are stored in the desktop Secret
+Service keyring. Only an empty state marker is written under
+`~/.local/state/neomutt/`. Test both IMAP and SMTP after authorization with:
+
+    make neomutt-oauth-test
+
+For a personal external Google app, use the In production publishing status;
+Testing refresh tokens for non-basic scopes expire after seven days. The app
+can remain unverified for personal use, though Google displays a warning during
+the one-time consent flow.
+
 ### Useful shortcuts
 
 - Emacs `C-x u`: open the visual branching undo history with vundo.
