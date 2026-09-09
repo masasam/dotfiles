@@ -34,13 +34,14 @@ hl.window_rule({
     no_focus = true,
 })
 
--- Layer rules also return a handle.
--- local overlayLayerRule = hl.layer_rule({
---     name  = "no-anim-overlay",
---     match = { namespace = "^my-overlay$" },
---     no_anim = true,
--- })
--- overlayLayerRule:set_enabled(false)
+-- Scaling a layer while it appears temporarily softens its text on
+-- fractional-scale monitors.  Keep the launcher at its final size from the
+-- first frame so Fuzzel stays sharp while opening and closing.
+hl.layer_rule({
+    name = "no-animation-fuzzel",
+    match = { namespace = "^fuzzel$" },
+    no_anim = true,
+})
 
 -- Hyprland-run windowrule
 hl.window_rule({
@@ -162,4 +163,3 @@ hl.config({
 })
 
 end
-
