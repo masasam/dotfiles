@@ -88,7 +88,7 @@
     "clock": {
 		"format": "{:L%m/%d (%a) %H:%M}",
 		"tooltip": false,
-		"on-click": "xdg-open 'https://calendar.google.com/calendar/u/0/r'; hyprctl dispatch focuswindow 'class:^(google-chrome)$'",
+		"on-click": "google-chrome-stable --new-tab 'https://calendar.google.com/calendar/u/0/r' && hyprctl dispatch 'hl.dsp.focus({ window = \"class:^(google-chrome)$\" })'",
     },
     "backlight": {
         "format": "{icon} {percent}%",
