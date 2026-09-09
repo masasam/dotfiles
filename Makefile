@@ -46,7 +46,8 @@ ZIG_CACHE	:= ${PWD}/.cache/zig
 .DEFAULT_GOAL := help
 .PHONY: all allinstall allupdate allbackup git-hooks doctor backups restore-plan mise-secrets
 .PHONY: check check-hypr check-workspace-toggle check-dotctl check-deskctl check-zshctl
-.PHONY: check-format check-lint check-emacs check-zsh check-foot check-workstationctl check-secrets
+.PHONY: check-format check-lint check-emacs check-zsh check-foot check-workstationctl
+.PHONY: check-secrets check-secrets-staged check-mise-security
 
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
@@ -58,18 +59,18 @@ all: allinstall allupdate allbackup
 git-hooks: ## Enable the tracked Git hooks for this repository
 	git config --local core.hooksPath .githooks
 
-check: check-format check-lint check-hypr check-workspace-toggle check-dotctl check-deskctl check-zshctl check-emacs check-zsh check-foot check-workstationctl check-secrets ## Validate maintained dotfile code
+check: check-format check-lint check-hypr check-workspace-toggle check-dotctl check-deskctl check-zshctl check-emacs check-zsh check-foot check-workstationctl check-mise-security check-secrets ## Validate maintained dotfile code
 
 check-format:
 	cargo fmt --manifest-path ${PWD}/.config/dotctl/Cargo.toml -- --check
 	cargo fmt --manifest-path ${PWD}/.config/hypr/workspace-toggle/Cargo.toml -- --check
 	zig fmt --check ${PWD}/.config/hypr/deskctl/build.zig ${PWD}/.config/hypr/deskctl/src/main.zig ${PWD}/.config/zshctl/build.zig ${PWD}/.config/zshctl/src/main.zig
-	ruff format --check ${PWD}/.config/workstationctl ${PWD}/.config/codex
+	ruff format --check ${PWD}/.config/workstationctl ${PWD}/.config/codex ${PWD}/.config/mise/check_security.py ${PWD}/.githooks/pre-commit ${PWD}/.githooks/pre-push
 
 check-lint:
 	cargo clippy --locked --all-targets --manifest-path ${PWD}/.config/dotctl/Cargo.toml -- -D warnings
 	cargo clippy --locked --all-targets --manifest-path ${PWD}/.config/hypr/workspace-toggle/Cargo.toml -- -D warnings
-	ruff check ${PWD}/.config/workstationctl ${PWD}/.config/codex
+	ruff check ${PWD}/.config/workstationctl ${PWD}/.config/codex ${PWD}/.config/mise/check_security.py ${PWD}/.githooks/pre-commit ${PWD}/.githooks/pre-push
 
 check-hypr:
 	luac -p ${PWD}/.config/hypr/hyprland.lua ${PWD}/.config/hypr/modules/*.lua
@@ -101,6 +102,12 @@ check-workstationctl:
 
 check-secrets: ## Scan Git history for secrets, allowing only the redacted legacy baseline
 	gitleaks git --redact --no-banner --baseline-path=${PWD}/.gitleaks-baseline.json --log-opts="--all --no-textconv" ${PWD}
+
+check-secrets-staged: check-mise-security ## Scan staged changes before commit
+	gitleaks git --staged --redact --no-banner ${PWD}
+
+check-mise-security: ## Verify public mise config and encrypted secret storage
+	python3 ${PWD}/.config/mise/check_security.py
 
 doctor: ## Diagnose commands, encryption, and deployed links without changing anything
 	python3 ${PWD}/.config/workstationctl/workstationctl.py doctor --repository ${PWD}

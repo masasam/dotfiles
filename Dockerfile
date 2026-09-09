@@ -1,7 +1,7 @@
 FROM archlinux:latest
 
 ARG USERNAME=masa
-ARG PASSWORD=hogehoge
+ARG DOTFILES_TEST_PASSWORD=hogehoge
 ARG HOSTNAME=thinkpad
 ARG REPOSITORY=/home/${USERNAME}/src/github.com/masasam
 
@@ -17,8 +17,8 @@ RUN export LANG=C
 RUN echo LANG=ja_JP.UTF-8 > /etc/locale.conf
 
 RUN useradd -m -r -G wheel -s /bin/bash ${USERNAME}
-RUN echo "root:${PASSWORD}" | chpasswd
-RUN echo "${USERNAME}:${PASSWORD}" | chpasswd
+RUN echo "root:${DOTFILES_TEST_PASSWORD}" | chpasswd
+RUN echo "${USERNAME}:${DOTFILES_TEST_PASSWORD}" | chpasswd
 RUN echo '%wheel ALL=(ALL) ALL' | EDITOR='tee -a' visudo
 
 RUN pacman -Syy

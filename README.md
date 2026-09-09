@@ -108,6 +108,10 @@ Private environment values are kept separately in the git-crypt-encrypted
 Other users can copy `.config/mise/secrets.example.toml` to
 `~/.config/mise/secrets.toml`, replace the placeholders, and set mode `600`.
 The secrets file is optional; mise tool installation works without it.
+`make check-mise-security` verifies the public/staged configuration, git-crypt
+attributes, encrypted Git blob, placeholder file, and private-file permissions.
+The tracked pre-commit hook also runs this check and Gitleaks against staged
+changes before Git creates a commit.
 
 ### Useful shortcuts
 
