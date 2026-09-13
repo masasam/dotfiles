@@ -3,9 +3,9 @@ _.file = { path = "~/.config/mise/secrets.toml", redact = true }
 
 [tools]
 atlas = "1.3.0"
-aws-cli = { version = "2.36.43", symlink_bins = "true" }
+aws-cli = { version = "2.36.44", symlink_bins = "true" }
 bun = "1.4.2"
-claude-code = "2.1.268"
+claude-code = "2.1.270"
 codex = "0.154.0"
 deno = "2.9.6"
 duckdb = "1.5.5"
@@ -22,11 +22,11 @@ lua-language-server = "3.19.1"
 marp-cli = "4.5.1"
 node = "26.8.2"
 "npm:@github/copilot" = "1.0.83"
-"npm:@github/copilot-language-server" = "1.544.0"
+"npm:@github/copilot-language-server" = "1.545.0"
 "npm:@googleworkspace/cli" = "0.22.5"
 "npm:oxlint" = "1.82.0"
 "npm:playwright" = "1.63.0"
-"npm:pnpm" = "12.3.4"
+"npm:pnpm" = "12.4.1"
 "npm:ts-node" = "10.9.2"
 "npm:typescript" = "7.0.2"
 opencode = "1.18.30"
