@@ -3,5 +3,10 @@
   "use_hypr_bindings": true,
   "model": "small",
   "transcription_backend": "vulkan",
+  "applications": {
+    "emacs": {
+      "auto_paste": "ctrl+y"
+    }
+  },
   "whisper_prompt": "こんにちは。今日は、とても良い天気ですね。これから、音声入力を開始します。"
 }
