@@ -46,7 +46,7 @@ ZIG_CACHE	:= ${PWD}/.cache/zig
 .DEFAULT_GOAL := help
 .PHONY: all allinstall allupdate allbackup git-hooks doctor backups restore-plan mise-secrets
 .PHONY: neomutt-oauth-authorize neomutt-oauth-test tts
-.PHONY: check check-hypr check-workspace-toggle check-dotctl check-deskctl check-zshctl
+.PHONY: check check-hypr check-workspace-toggle check-dotctl check-deskctl check-zshctl check-tts
 .PHONY: check-format check-lint check-emacs check-zsh check-foot check-workstationctl
 .PHONY: check-secrets check-secrets-staged check-mise-security
 
@@ -60,7 +60,7 @@ all: allinstall allupdate allbackup
 git-hooks: ## Enable the tracked Git hooks for this repository
 	git config --local core.hooksPath .githooks
 
-check: check-format check-lint check-hypr check-workspace-toggle check-dotctl check-deskctl check-zshctl check-emacs check-zsh check-foot check-workstationctl check-mise-security check-secrets ## Validate maintained dotfile code
+check: check-format check-lint check-hypr check-workspace-toggle check-dotctl check-deskctl check-zshctl check-emacs check-zsh check-foot check-workstationctl check-tts check-mise-security check-secrets ## Validate maintained dotfile code
 
 check-format:
 	cargo fmt --manifest-path ${PWD}/.config/dotctl/Cargo.toml -- --check
@@ -100,6 +100,9 @@ check-foot:
 
 check-workstationctl:
 	python3 ${PWD}/.config/workstationctl/test_workstationctl.py
+
+check-tts:
+	python3 ${PWD}/.config/tts/test_ttsctl.py
 
 check-secrets: ## Scan Git history for secrets, allowing only the redacted legacy baseline
 	gitleaks git --redact --no-banner --baseline-path=${PWD}/.gitleaks-baseline.json --log-opts="--all --no-textconv" ${PWD}
