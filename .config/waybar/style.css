@@ -1,10 +1,12 @@
+@import "/usr/lib/hyprwhspr/config/waybar/hyprwhspr-style.css";
+
 window#waybar {
     background: transparent;
 }
 
-#clock,
 #workspaces,
-#status {
+#status,
+#center {
     background: #121111;
     border: 1px solid #8899ff;
     border-radius: 10px;
@@ -17,8 +19,13 @@ window#waybar {
     padding: 0;
 }
 
+#center {
+    padding: 0;
+}
+
 /* Do not add individual frames, rounded corners, or gaps to each module within a group. */
 #status #pulseaudio,
+#status #pulseaudio.microphone,
 #status #backlight,
 #status #battery,
 #status #bluetooth,
@@ -28,7 +35,68 @@ window#waybar {
     border: none;
     border-radius: 0;
     margin: 0;
+    padding: 0 8px;
+}
+
+#status #pulseaudio,
+#status #pulseaudio.microphone,
+#status #backlight,
+#status #battery,
+#status #bluetooth,
+#status #custom-power {
+    min-width: 22px;
+    font-size: 22px;
+}
+
+#status #backlight {
+    font-size: 20px;
+}
+
+#status #custom-power {
+    font-size: 24px;
+}
+
+#center #clock,
+#center #custom-hyprwhspr {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    color: inherit;
+    margin: 0;
     padding: 0 7px;
+}
+
+#center #custom-hyprwhspr {
+    font-family: Symbols Nerd Font Mono;
+    font-size: 21px;
+}
+
+#center #custom-hyprwhspr.ready {
+    color: inherit;
+}
+
+#center #custom-hyprwhspr.recording {
+    background: transparent;
+    color: #ff6257;
+}
+
+#center #custom-hyprwhspr.stopped {
+    color: #777777;
+}
+
+#center #custom-hyprwhspr.unloaded,
+#center #custom-hyprwhspr.error,
+#status #battery.warning {
+    color: #d9a441;
+}
+
+#status #battery.critical {
+    color: #ff6257;
+}
+
+#status #battery.charging,
+#status #battery.plugged {
+    color: inherit;
 }
 
 * {

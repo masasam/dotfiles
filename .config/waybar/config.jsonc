@@ -7,10 +7,13 @@
         "hyprland/workspaces"
     ],
     "modules-center": [
-        "clock"
+        "group/center"
     ],
     "modules-right": [
         "group/status"
+    ],
+    "include": [
+        "/home/masa/.config/waybar/hyprwhspr-module.jsonc"
     ],
 	"hyprland/workspaces": {
         "format": "{icon}",
@@ -73,6 +76,7 @@
         "orientation": "horizontal",
         "modules": [
             "pulseaudio",
+            "pulseaudio#microphone",
             "backlight",
             "battery",
             "bluetooth",
@@ -80,21 +84,29 @@
             "custom/power"
         ]
     },
+    "group/center": {
+        "orientation": "horizontal",
+        "modules": [
+            "clock",
+            "custom/hyprwhspr"
+        ]
+    },
     "tray": {
-        "icon-size": 20,
-        "spacing": 18,
-		"tooltip": false,
+        "icon-size": 22,
+        "spacing": 16,
+		"tooltip": false
     },
     "clock": {
 		"format": "{:L%m/%d (%a) %H:%M}",
 		"tooltip": false,
-		"on-click": "google-chrome-stable --new-tab 'https://calendar.google.com/calendar/u/0/r' && hyprctl dispatch 'hl.dsp.focus({ window = \"class:^(google-chrome)$\" })'",
+		"on-click": "google-chrome-stable --new-tab 'https://calendar.google.com/calendar/u/0/r' && hyprctl dispatch 'hl.dsp.focus({ window = \"class:^(google-chrome)$\" })'"
     },
     "backlight": {
-        "format": "{icon} {percent}%",
+        "format": "{icon}",
         "format-icons": ["", "", "", "", "", "", "", "", ""],
-		"tooltip": false,
-		"on-click": "nwg-displays",
+		"tooltip": true,
+		"tooltip-format": "照度 {percent}%",
+		"on-click": "nwg-displays"
     },
     "battery": {
         "states": {
@@ -103,27 +115,26 @@
         },
         "format": "{icon} {capacity}%",
         "format-full": "{icon} {capacity}%",
-        "format-charging": "⚡ {capacity}%",
+        "format-charging": " {capacity}%",
         "format-plugged": " {capacity}%",
         "format-alt": "{icon} {time}",
         "format-icons": ["", "", "", "", ""],
-		"tooltip": false,
-		"on-click": "gnome-calculator",
+		"tooltip": true,
+		"tooltip-format": "バッテリー {capacity}%",
+		"on-click": "gnome-calculator"
     },
 	"bluetooth": {
 		"format": "",
 		"format-disabled": "",
 		"format-connected": "",
 		"on-click": "blueman-manager",
-		"tooltip": false,
-	},
+		"tooltip": false
+    },
     "pulseaudio": {
-        "format": "{icon} {volume}% {format_source}",
-        "format-bluetooth": "{icon} {volume}%  {format_source}",
-        "format-bluetooth-muted": "{icon}  {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": " {volume}%",
-        "format-source-muted": "",
+        "format": "{icon}",
+        "format-bluetooth": "{icon}",
+        "format-bluetooth-muted": "",
+        "format-muted": "",
         "format-icons": {
             "headphone": "",
             "hands-free": "📱",
@@ -134,10 +145,19 @@
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol",
-		"tooltip": false,
+        "tooltip": true,
+		"tooltip-format": "音量 {volume}%"
+    },
+    "pulseaudio#microphone": {
+        "format": "",
+        "format-muted": "",
+        "target": "source",
+        "on-click": "pavucontrol",
+        "tooltip": true,
+        "tooltip-format": "マイク {source_volume}%"
     },
     "custom/power": {
-        "format" : " ⏻ ",
+        "format": "⏻",
 		"tooltip": false,
 		"on-click": "wlogout"
     }
