@@ -28,6 +28,8 @@ hl.bind("CTRL + ALT + SHIFT + TAB", hl.dsp.focus({ monitor = "-1" }), { descript
 hl.bind(mainMod .. " + space", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("hyprwhspr record toggle"))
+hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("~/.config/tts/ttsctl.py speak --clipboard"), { description = "Read clipboard aloud" })
+hl.bind(mainMod .. " + SHIFT + X", hl.dsp.exec_cmd("~/.config/tts/ttsctl.py stop"), { description = "Stop reading aloud" })
 
 for workspace = 0, 9 do
     hl.bind(
@@ -135,4 +137,3 @@ hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = tr
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
 
 end
-

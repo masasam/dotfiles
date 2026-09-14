@@ -45,7 +45,7 @@ ZIG_CACHE	:= ${PWD}/.cache/zig
 
 .DEFAULT_GOAL := help
 .PHONY: all allinstall allupdate allbackup git-hooks doctor backups restore-plan mise-secrets
-.PHONY: neomutt-oauth-authorize neomutt-oauth-test
+.PHONY: neomutt-oauth-authorize neomutt-oauth-test tts
 .PHONY: check check-hypr check-workspace-toggle check-dotctl check-deskctl check-zshctl
 .PHONY: check-format check-lint check-emacs check-zsh check-foot check-workstationctl
 .PHONY: check-secrets check-secrets-staged check-mise-security
@@ -66,12 +66,12 @@ check-format:
 	cargo fmt --manifest-path ${PWD}/.config/dotctl/Cargo.toml -- --check
 	cargo fmt --manifest-path ${PWD}/.config/hypr/workspace-toggle/Cargo.toml -- --check
 	zig fmt --check ${PWD}/.config/hypr/deskctl/build.zig ${PWD}/.config/hypr/deskctl/src/main.zig ${PWD}/.config/zshctl/build.zig ${PWD}/.config/zshctl/src/main.zig
-	ruff format --check ${PWD}/.config/workstationctl ${PWD}/.config/codex ${PWD}/.config/mise/check_security.py ${PWD}/.mutt/oauth2.py ${PWD}/.githooks/pre-commit ${PWD}/.githooks/pre-push
+	ruff format --check ${PWD}/.config/workstationctl ${PWD}/.config/codex ${PWD}/.config/tts ${PWD}/.config/mise/check_security.py ${PWD}/.mutt/oauth2.py ${PWD}/.githooks/pre-commit ${PWD}/.githooks/pre-push
 
 check-lint:
 	cargo clippy --locked --all-targets --manifest-path ${PWD}/.config/dotctl/Cargo.toml -- -D warnings
 	cargo clippy --locked --all-targets --manifest-path ${PWD}/.config/hypr/workspace-toggle/Cargo.toml -- -D warnings
-	ruff check ${PWD}/.config/workstationctl ${PWD}/.config/codex ${PWD}/.config/mise/check_security.py ${PWD}/.mutt/oauth2.py ${PWD}/.githooks/pre-commit ${PWD}/.githooks/pre-push
+	ruff check ${PWD}/.config/workstationctl ${PWD}/.config/codex ${PWD}/.config/tts ${PWD}/.config/mise/check_security.py ${PWD}/.mutt/oauth2.py ${PWD}/.githooks/pre-commit ${PWD}/.githooks/pre-push
 
 check-hypr:
 	luac -p ${PWD}/.config/hypr/hyprland.lua ${PWD}/.config/hypr/modules/*.lua
@@ -192,6 +192,17 @@ hyprwhspr: ## Setup hyprwhspr for voice input
 	$(SAFE_LINK) ${PWD}/.config/hyprwhspr/config.json ${HOME}/.config/hyprwhspr/config.json
 	hyprwhspr setup
 	systemctl --user enable --now hyprwhspr.service
+
+tts: ## Setup local Japanese text-to-speech
+	uv tool install --force --python 3.13 'piper-tts[ja,http]==1.8.0'
+	mkdir -p ${HOME}/.local/share/piper/voices ${HOME}/.config/systemd/user
+	${HOME}/.local/share/uv/tools/piper-tts/bin/python -m piper.download_voices --data-dir ${HOME}/.local/share/piper/voices ja_JA-hi_fi_captain-medium
+	${HOME}/.local/share/uv/tools/piper-tts/bin/python -m piper.download_voices --data-dir ${HOME}/.local/share/piper/voices en_US-lessac-medium
+	$(SAFE_LINK) ${PWD}/.config/tts ${HOME}/.config/tts
+	$(SAFE_LINK) ${PWD}/.config/systemd/user/piper-tts.service ${HOME}/.config/systemd/user/piper-tts.service
+	$(SAFE_LINK) ${PWD}/.config/systemd/user/piper-tts-en.service ${HOME}/.config/systemd/user/piper-tts-en.service
+	systemctl --user daemon-reload
+	systemctl --user enable --now piper-tts.service piper-tts-en.service
 
 greetd: ## Setup greetd
 	$(PACMAN) $@ greetd-tuigreet terminus-font
@@ -563,7 +574,7 @@ testpath: ## Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: dconfsetting rclone gnupg ssh install emacs init keyring mise foot ghostty rio alacritty tlp ttf-cica hyprland greetd dnsmasq fcitx-mozc neomutt lvfs aur beekeeper kind gtk-theme chrome ccls gh tree-sitter tailscale codex codexapp hyprwhspr logicool
+allinstall: dconfsetting rclone gnupg ssh install emacs init keyring mise foot ghostty rio alacritty tlp ttf-cica hyprland greetd dnsmasq fcitx-mozc neomutt lvfs aur beekeeper kind gtk-theme chrome ccls gh tree-sitter tailscale codex codexapp hyprwhspr tts logicool
 
 allupdate: update goinstall
 

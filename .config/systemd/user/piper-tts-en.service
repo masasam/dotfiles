@@ -1,0 +1,16 @@
+[Unit]
+Description=Local English text-to-speech with Piper
+After=pipewire.service
+
+[Service]
+Type=simple
+ExecStart=%h/.local/share/uv/tools/piper-tts/bin/python -m piper.http_server --host 127.0.0.1 --port 5124 --data-dir %h/.local/share/piper/voices --model en_US-lessac-medium
+Restart=on-failure
+RestartSec=2
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=read-only
+
+[Install]
+WantedBy=default.target
