@@ -216,6 +216,33 @@ class ProcessTest(unittest.TestCase):
 
         kill.assert_not_called()
 
+    def test_waybar_status_is_hidden_while_idle(self) -> None:
+        with (
+            tempfile.TemporaryDirectory() as temporary_directory,
+            patch.dict(os.environ, {"XDG_RUNTIME_DIR": temporary_directory}),
+            patch.object(ttsctl, "running_pid", return_value=None),
+        ):
+            self.assertEqual(
+                ttsctl.waybar_status(),
+                {"text": "", "class": "idle", "tooltip": ""},
+            )
+
+    def test_waybar_status_shows_active_languages(self) -> None:
+        with (
+            tempfile.TemporaryDirectory() as temporary_directory,
+            patch.dict(os.environ, {"XDG_RUNTIME_DIR": temporary_directory}),
+            patch.object(ttsctl, "running_pid", return_value=4321),
+        ):
+            ttsctl.state_file().write_text(
+                json.dumps({"pid": 4321, "languages": ["en", "ja"]}),
+                encoding="utf-8",
+            )
+            status = ttsctl.waybar_status()
+
+        self.assertEqual(status["text"], "󰔊")
+        self.assertEqual(status["class"], "reading")
+        self.assertIn("日本語 + English", status["tooltip"])
+
     def test_speak_synthesizes_the_plan_and_cleans_up_pid(self) -> None:
         player = MagicMock()
         first = make_wav(b"\x01\x02")
@@ -227,6 +254,7 @@ class ProcessTest(unittest.TestCase):
             patch.object(ttsctl, "synthesize", side_effect=[first, second]) as synth,
             patch.object(ttsctl.subprocess, "Popen", return_value=player) as popen,
             patch.object(ttsctl.signal, "signal"),
+            patch.object(ttsctl, "notify") as notify,
         ):
             ttsctl.speak("Hello. 日本語です。", "auto")
             self.assertFalse(ttsctl.pid_file().exists())
@@ -237,6 +265,7 @@ class ProcessTest(unittest.TestCase):
         )
         popen.assert_called_once_with(["pw-play", "-"], stdin=subprocess.PIPE)
         player.communicate.assert_called_once()
+        notify.assert_called_once_with("日本語 + Englishの読み上げを開始します")
 
 
 if __name__ == "__main__":

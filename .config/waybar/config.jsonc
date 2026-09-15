@@ -88,7 +88,8 @@
         "orientation": "horizontal",
         "modules": [
             "clock",
-            "custom/hyprwhspr"
+            "custom/hyprwhspr",
+            "custom/tts"
         ]
     },
     "tray": {
@@ -160,5 +161,13 @@
         "format": "⏻",
 		"tooltip": false,
 		"on-click": "wlogout"
+    },
+    "custom/tts": {
+        "exec": "~/.config/tts/ttsctl.py status",
+        "return-type": "json",
+        "interval": 1,
+        "hide-empty-text": true,
+        "on-click": "~/.config/tts/ttsctl.py stop",
+        "tooltip": true
     }
 }

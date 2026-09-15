@@ -47,7 +47,7 @@ ZIG_CACHE	:= ${PWD}/.cache/zig
 .PHONY: all allinstall allupdate allbackup git-hooks doctor backups restore-plan mise-secrets
 .PHONY: neomutt-oauth-authorize neomutt-oauth-test tts
 .PHONY: check check-hypr check-workspace-toggle check-dotctl check-deskctl check-zshctl check-tts
-.PHONY: check-format check-lint check-emacs check-zsh check-foot check-workstationctl
+.PHONY: check-format check-lint check-emacs check-zsh check-foot check-waybar check-workstationctl
 .PHONY: check-secrets check-secrets-staged check-mise-security
 
 help:
@@ -60,7 +60,7 @@ all: allinstall allupdate allbackup
 git-hooks: ## Enable the tracked Git hooks for this repository
 	git config --local core.hooksPath .githooks
 
-check: check-format check-lint check-hypr check-workspace-toggle check-dotctl check-deskctl check-zshctl check-emacs check-zsh check-foot check-workstationctl check-tts check-mise-security check-secrets ## Validate maintained dotfile code
+check: check-format check-lint check-hypr check-workspace-toggle check-dotctl check-deskctl check-zshctl check-emacs check-zsh check-foot check-waybar check-workstationctl check-tts check-mise-security check-secrets ## Validate maintained dotfile code
 
 check-format:
 	cargo fmt --manifest-path ${PWD}/.config/dotctl/Cargo.toml -- --check
@@ -97,6 +97,9 @@ check-zsh:
 
 check-foot:
 	foot --config=${PWD}/.config/foot/foot.ini --check-config
+
+check-waybar:
+	sed '1d' ${PWD}/.config/waybar/config.jsonc | jq -e . >/dev/null
 
 check-workstationctl:
 	python3 ${PWD}/.config/workstationctl/test_workstationctl.py

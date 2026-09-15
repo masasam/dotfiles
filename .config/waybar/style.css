@@ -57,7 +57,8 @@ window#waybar {
 }
 
 #center #clock,
-#center #custom-hyprwhspr {
+#center #custom-hyprwhspr,
+#center #custom-tts {
     background: transparent;
     border: none;
     border-radius: 0;
@@ -69,6 +70,21 @@ window#waybar {
 #center #custom-hyprwhspr {
     font-family: Symbols Nerd Font Mono;
     font-size: 21px;
+}
+
+#center #custom-tts {
+    font-family: Symbols Nerd Font Mono;
+    font-size: 21px;
+}
+
+#center #custom-tts.reading {
+    color: #89b4fa;
+}
+
+#center #custom-tts.idle {
+    margin: 0;
+    min-width: 0;
+    padding: 0;
 }
 
 #center #custom-hyprwhspr.ready {
