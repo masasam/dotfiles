@@ -90,6 +90,23 @@ detected automatically; use `ttsctl.py speak --lang ja|en` to override this.
 The voice models are downloaded to `~/.local/share/piper/voices`; they are
 intentionally not stored in this repository.
 
+### Screen-region OCR
+
+Install PaddleOCR 3.7.0, the CPU inference engine, and the multilingual
+PP-OCRv6 medium detection and recognition models with:
+
+    make ocr
+
+Press `Alt-Shift-O`, select a screen region, and wait for the recognized text
+to be copied to the Wayland clipboard. The same controller accepts image files:
+
+    ocrctl image screenshot.png
+    ocrctl image --copy screenshot.png
+
+Model weights are cached under `~/.paddlex/official_models` and are intentionally
+not stored in this repository. oneDNN is disabled for this pipeline to avoid an
+upstream PaddlePaddle 3.3 CPU inference incompatibility.
+
 ### Inspecting safe-link backups
 
 New backup snapshots contain a restore manifest. List snapshots and print the

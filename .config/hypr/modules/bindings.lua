@@ -30,6 +30,7 @@ hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("hyprwhspr record toggle"))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("~/.config/tts/ttsctl.py speak --clipboard"), { description = "Read clipboard aloud" })
 hl.bind(mainMod .. " + SHIFT + X", hl.dsp.exec_cmd("~/.config/tts/ttsctl.py stop"), { description = "Stop reading aloud" })
+hl.bind(mainMod .. " + SHIFT + O", hl.dsp.exec_cmd("~/.config/ocr/ocrctl.py region"), { description = "Copy text from a screen region" })
 
 for workspace = 0, 9 do
     hl.bind(

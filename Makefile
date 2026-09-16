@@ -45,8 +45,8 @@ ZIG_CACHE	:= ${PWD}/.cache/zig
 
 .DEFAULT_GOAL := help
 .PHONY: all allinstall allupdate allbackup git-hooks doctor backups restore-plan mise-secrets
-.PHONY: neomutt-oauth-authorize neomutt-oauth-test tts
-.PHONY: check check-hypr check-workspace-toggle check-dotctl check-deskctl check-zshctl check-tts
+.PHONY: neomutt-oauth-authorize neomutt-oauth-test tts ocr
+.PHONY: check check-hypr check-workspace-toggle check-dotctl check-deskctl check-zshctl check-tts check-ocr
 .PHONY: check-format check-lint check-emacs check-zsh check-foot check-waybar check-workstationctl
 .PHONY: check-secrets check-secrets-staged check-mise-security
 
@@ -60,18 +60,18 @@ all: allinstall allupdate allbackup
 git-hooks: ## Enable the tracked Git hooks for this repository
 	git config --local core.hooksPath .githooks
 
-check: check-format check-lint check-hypr check-workspace-toggle check-dotctl check-deskctl check-zshctl check-emacs check-zsh check-foot check-waybar check-workstationctl check-tts check-mise-security check-secrets ## Validate maintained dotfile code
+check: check-format check-lint check-hypr check-workspace-toggle check-dotctl check-deskctl check-zshctl check-emacs check-zsh check-foot check-waybar check-workstationctl check-tts check-ocr check-mise-security check-secrets ## Validate maintained dotfile code
 
 check-format:
 	cargo fmt --manifest-path ${PWD}/.config/dotctl/Cargo.toml -- --check
 	cargo fmt --manifest-path ${PWD}/.config/hypr/workspace-toggle/Cargo.toml -- --check
 	zig fmt --check ${PWD}/.config/hypr/deskctl/build.zig ${PWD}/.config/hypr/deskctl/src/main.zig ${PWD}/.config/zshctl/build.zig ${PWD}/.config/zshctl/src/main.zig
-	ruff format --check ${PWD}/.config/workstationctl ${PWD}/.config/codex ${PWD}/.config/tts ${PWD}/.config/mise/check_security.py ${PWD}/.mutt/oauth2.py ${PWD}/.githooks/pre-commit ${PWD}/.githooks/pre-push
+	ruff format --check ${PWD}/.config/workstationctl ${PWD}/.config/codex ${PWD}/.config/tts ${PWD}/.config/ocr ${PWD}/.config/mise/check_security.py ${PWD}/.mutt/oauth2.py ${PWD}/.githooks/pre-commit ${PWD}/.githooks/pre-push
 
 check-lint:
 	cargo clippy --locked --all-targets --manifest-path ${PWD}/.config/dotctl/Cargo.toml -- -D warnings
 	cargo clippy --locked --all-targets --manifest-path ${PWD}/.config/hypr/workspace-toggle/Cargo.toml -- -D warnings
-	ruff check ${PWD}/.config/workstationctl ${PWD}/.config/codex ${PWD}/.config/tts ${PWD}/.config/mise/check_security.py ${PWD}/.mutt/oauth2.py ${PWD}/.githooks/pre-commit ${PWD}/.githooks/pre-push
+	ruff check ${PWD}/.config/workstationctl ${PWD}/.config/codex ${PWD}/.config/tts ${PWD}/.config/ocr ${PWD}/.config/mise/check_security.py ${PWD}/.mutt/oauth2.py ${PWD}/.githooks/pre-commit ${PWD}/.githooks/pre-push
 
 check-hypr:
 	luac -p ${PWD}/.config/hypr/hyprland.lua ${PWD}/.config/hypr/modules/*.lua
@@ -106,6 +106,9 @@ check-workstationctl:
 
 check-tts:
 	python3 ${PWD}/.config/tts/test_ttsctl.py
+
+check-ocr:
+	python3 ${PWD}/.config/ocr/test_ocrctl.py
 
 check-secrets: ## Scan Git history for secrets, allowing only the redacted legacy baseline
 	gitleaks git --redact --no-banner --baseline-path=${PWD}/.gitleaks-baseline.json --log-opts="--all --no-textconv" ${PWD}
@@ -209,6 +212,15 @@ tts: ## Setup local Japanese text-to-speech
 	$(SAFE_LINK) ${PWD}/.config/systemd/user/piper-tts-en.service ${HOME}/.config/systemd/user/piper-tts-en.service
 	systemctl --user daemon-reload
 	systemctl --user enable --now piper-tts.service piper-tts-en.service
+
+ocr: ## Setup PP-OCRv6 medium screen-region OCR
+	$(PACMAN) hyprshot wl-clipboard libnotify
+	uv tool install --force --python 3.13 --with 'paddlex==3.7.2' 'paddleocr==3.7.0'
+	uv pip install --python ${HOME}/.local/share/uv/tools/paddleocr/bin/python 'paddlepaddle==3.3.0' --index https://www.paddlepaddle.org.cn/packages/stable/cpu/
+	mkdir -p ${HOME}/.local/bin
+	$(SAFE_LINK) ${PWD}/.config/ocr ${HOME}/.config/ocr
+	$(SAFE_LINK) ${PWD}/.config/ocr/ocrctl.py ${HOME}/.local/bin/ocrctl
+	${HOME}/.config/ocr/ocrctl.py warmup
 
 greetd: ## Setup greetd
 	$(PACMAN) $@ greetd-tuigreet terminus-font
@@ -580,7 +592,7 @@ testpath: ## Echo PATH
 	GOPATH=$$GOPATH
 	@echo $$GOPATH
 
-allinstall: dconfsetting rclone gnupg ssh install emacs init keyring mise foot ghostty rio alacritty tlp ttf-cica hyprland greetd dnsmasq fcitx-mozc neomutt lvfs aur beekeeper kind gtk-theme chrome ccls gh tree-sitter tailscale codex codexapp hyprwhspr tts logicool
+allinstall: dconfsetting rclone gnupg ssh install emacs init keyring mise foot ghostty rio alacritty tlp ttf-cica hyprland greetd dnsmasq fcitx-mozc neomutt lvfs aur beekeeper kind gtk-theme chrome ccls gh tree-sitter tailscale codex codexapp hyprwhspr tts ocr logicool
 
 allupdate: update goinstall
 
