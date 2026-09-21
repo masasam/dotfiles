@@ -1,4 +1,4 @@
-;;; 35zig.el --- Zig language support -*- lexical-binding: t; -*-
+;;; 31zig.el --- Zig language support -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 
@@ -20,4 +20,4 @@
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)
 ;; End:
-;;; 35zig.el ends here
+;;; 31zig.el ends here
