@@ -3,9 +3,9 @@ _.file = { path = "~/.config/mise/secrets.toml", redact = true }
 
 [tools]
 atlas = "1.3.0"
-aws-cli = { version = "2.37.1", symlink_bins = "true" }
+aws-cli = { version = "2.37.2", symlink_bins = "true" }
 bun = "1.4.2"
-claude-code = "2.1.281"
+claude-code = "2.1.282"
 codex = "0.156.1"
 deno = "2.9.7"
 duckdb = "1.5.5"
@@ -31,8 +31,8 @@ node = "26.10.0"
 "npm:typescript" = "7.0.2"
 opencode = "1.18.32"
 pi = "0.87.1"
-ruff = "0.16.8"
-stripe-cli = "1.51.1"
+ruff = "0.16.9"
+stripe-cli = "1.52.0"
 trdsql = "1.2.3"
 uv = "0.12.18"
 yay = "13.0.1"
