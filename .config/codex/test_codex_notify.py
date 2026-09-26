@@ -15,13 +15,120 @@ class CodexNotifyTest(unittest.TestCase):
 
     def test_chooses_nearest_ancestor_window(self) -> None:
         clients = [
-            {"address": "0xaaa", "pid": 10},
-            {"address": "0xbbb", "pid": 20},
+            {"address": "0xaaa", "pid": 10, "class": "foot"},
+            {"address": "0xbbb", "pid": 20, "class": "footclient"},
         ]
         self.assertEqual(
             codex_notify.find_terminal_window(clients, [99, 20, 10]),
             ("0xbbb", 20),
         )
+
+    def test_does_not_choose_a_non_foot_ancestor_window(self) -> None:
+        clients = [{"address": "0xaaa", "pid": 10, "class": "emacs"}]
+        self.assertIsNone(codex_notify.find_terminal_window(clients, [10]))
+
+    def test_does_not_validate_a_non_foot_window_as_terminal(self) -> None:
+        clients = [{"address": "0xaaa", "pid": 10, "class": "emacs"}]
+        completed = subprocess.CompletedProcess([], 0, json.dumps(clients), "")
+        with (
+            patch.object(codex_notify, "which", return_value="/usr/bin/hyprctl"),
+            patch.object(codex_notify.subprocess, "run", return_value=completed),
+        ):
+            self.assertFalse(codex_notify.terminal_window_exists("0xaaa", 10))
+
+    def test_uses_launch_captured_foot_window_before_process_ancestry(self) -> None:
+        with (
+            patch.dict(
+                codex_notify.os.environ,
+                {
+                    "CODEX_NOTIFY_WINDOW_ADDRESS": "0xabc",
+                    "CODEX_NOTIFY_WINDOW_PID": "42",
+                },
+                clear=False,
+            ),
+            patch.object(codex_notify, "terminal_window_exists", return_value=True),
+            patch.object(codex_notify, "terminal_window_for_pid_chains") as fallback,
+        ):
+            self.assertEqual(
+                codex_notify.codex_terminal_window([[99, 42]]),
+                ("0xabc", 42),
+            )
+        fallback.assert_not_called()
+
+    def test_recognizes_launch_captured_foot_as_focused(self) -> None:
+        with (
+            patch.dict(
+                codex_notify.os.environ,
+                {
+                    "CODEX_NOTIFY_WINDOW_ADDRESS": "0xabc",
+                    "CODEX_NOTIFY_WINDOW_PID": "42",
+                },
+                clear=False,
+            ),
+            patch.object(codex_notify, "active_hyprland_pid", return_value=42),
+            patch.object(codex_notify, "parent_pids", return_value=set()),
+        ):
+            self.assertTrue(codex_notify.codex_terminal_is_focused())
+
+    def test_notifies_with_launch_target_even_without_process_chain(self) -> None:
+        captured_payload: dict[str, object] = {}
+
+        def capture_payload(payload: dict[str, object]) -> bool:
+            captured_payload.update(payload)
+            return True
+
+        with (
+            patch.dict(
+                codex_notify.os.environ,
+                {
+                    "CODEX_NOTIFY_WINDOW_ADDRESS": "0xabc",
+                    "CODEX_NOTIFY_WINDOW_PID": "42",
+                },
+                clear=False,
+            ),
+            patch.object(codex_notify, "ONLY_WHEN_UNFOCUSED", False),
+            patch.object(codex_notify, "codex_terminal_pid_chains", return_value=[]),
+            patch.object(
+                codex_notify, "codex_terminal_window", return_value=("0xabc", 42)
+            ),
+            patch.object(codex_notify, "which", return_value="/usr/bin/tool"),
+            patch.object(
+                codex_notify,
+                "spawn_actionable_notification",
+                side_effect=capture_payload,
+            ),
+            patch.object(codex_notify, "play_sound"),
+        ):
+            codex_notify.notify(
+                "Test",
+                "Body",
+                urgency="normal",
+                timeout_ms=1000,
+                sound_name="complete",
+            )
+        self.assertEqual(captured_payload["address"], "0xabc")
+        self.assertEqual(captured_payload["pid"], 42)
+
+    def test_routing_diagnostics_include_only_foot_pid_and_address(self) -> None:
+        clients = [
+            {
+                "address": "0xf00",
+                "pid": 50,
+                "class": "foot",
+                "title": "must not be logged",
+            },
+            {"address": "0xdef", "pid": 51, "class": "google-chrome"},
+        ]
+        completed = subprocess.CompletedProcess([], 0, json.dumps(clients), "")
+        with (
+            patch.object(codex_notify, "which", return_value="/usr/bin/hyprctl"),
+            patch.object(codex_notify.subprocess, "run", return_value=completed),
+        ):
+            details = codex_notify.routing_diagnostics([[1, 2]])
+        self.assertEqual(details["pid_chains"], [[1, 2]])
+        self.assertEqual(details["hyprland_query_ok"], True)
+        self.assertEqual(details["foot_clients"], [{"pid": 50, "address": "0xf00"}])
+        self.assertNotIn("title", details)
 
     def test_parses_tmux_clients_by_session_and_activity(self) -> None:
         output = "101\twork\t10\n202\tother\t99\n303\twork\t30\ninvalid\twork\t40\n"
@@ -47,7 +154,7 @@ class CodexNotifyTest(unittest.TestCase):
             self.assertEqual(codex_notify.tmux_client_pids(), [303, 101])
 
     def test_finds_terminal_through_tmux_client(self) -> None:
-        clients = [{"address": "0xf00", "pid": 50}]
+        clients = [{"address": "0xf00", "pid": 50, "class": "foot"}]
         hyprland = subprocess.CompletedProcess([], 0, json.dumps(clients), "")
         with (
             patch.dict(

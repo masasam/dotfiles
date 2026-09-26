@@ -121,6 +121,11 @@ def valid_window_address(value: object) -> bool:
     return bool(digits) and all(character in string.hexdigits for character in digits)
 
 
+def is_foot_client(client: dict[str, Any]) -> bool:
+    """Return whether CLIENT describes a Foot window."""
+    return str(client.get("class") or "").casefold() in {"foot", "footclient"}
+
+
 def find_terminal_window(
     clients: object, pid_chain: list[int]
 ) -> tuple[str, int] | None:
@@ -128,7 +133,7 @@ def find_terminal_window(
         return None
     clients_by_pid: dict[int, str] = {}
     for client in clients:
-        if not isinstance(client, dict):
+        if not isinstance(client, dict) or not is_foot_client(client):
             continue
         try:
             pid = int(client.get("pid"))
@@ -141,6 +146,57 @@ def find_terminal_window(
         if address := clients_by_pid.get(pid):
             return address, pid
     return None
+
+
+def foot_window_snapshot(clients: object) -> list[dict[str, int | str]]:
+    """Return only Foot window PIDs and addresses for routing diagnostics."""
+    if not isinstance(clients, list):
+        return []
+    snapshot = []
+    for client in clients:
+        if not isinstance(client, dict) or not is_foot_client(client):
+            continue
+        try:
+            pid = int(client.get("pid"))
+        except (TypeError, ValueError):
+            continue
+        address = client.get("address")
+        if pid > 0 and valid_window_address(address):
+            snapshot.append({"pid": pid, "address": address})
+    return snapshot[:32]
+
+
+def routing_diagnostics(pid_chains: list[list[int]]) -> dict[str, object]:
+    """Return bounded process/window metadata, never notification content."""
+    chains = [chain[:64] for chain in pid_chains[:4]]
+    captured_terminal = launch_captured_terminal_window()
+    base: dict[str, object] = {
+        "pid_chains": chains,
+        "launch_window_address": captured_terminal[0] if captured_terminal else None,
+        "launch_window_pid": captured_terminal[1] if captured_terminal else None,
+        "hyprctl_available": bool(which("hyprctl")),
+        "hyprland_query_ok": False,
+        "foot_clients": [],
+    }
+    if not base["hyprctl_available"]:
+        return base
+    try:
+        process = subprocess.run(
+            ["hyprctl", "clients", "-j"],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.DEVNULL,
+            text=True,
+            timeout=2.0,
+            check=False,
+        )
+        if process.returncode != 0:
+            return base
+        clients = json.loads(process.stdout)
+    except (json.JSONDecodeError, OSError, subprocess.TimeoutExpired):
+        return base
+    base["hyprland_query_ok"] = isinstance(clients, list)
+    base["foot_clients"] = foot_window_snapshot(clients)
+    return base
 
 
 def parse_tmux_clients(output: str, session: str) -> list[int]:
@@ -246,11 +302,23 @@ def terminal_window_for_pid_chains(
         return None
 
 
+def launch_captured_terminal_window() -> tuple[str, int] | None:
+    """Read the Foot window address and PID captured by the shell wrapper."""
+    address = os.environ.get("CODEX_NOTIFY_WINDOW_ADDRESS", "")
+    pid = env_int("CODEX_NOTIFY_WINDOW_PID", 0)
+    if valid_window_address(address) and pid > 0:
+        return address, pid
+    return None
+
+
 def codex_terminal_window(
     pid_chains: list[list[int]] | None = None,
 ) -> tuple[str, int] | None:
     # Resolve once for the notification metadata, then resolve again when the
     # user clicks so a transient Hyprland query or stale address cannot strand it.
+    candidate = launch_captured_terminal_window()
+    if candidate and terminal_window_exists(*candidate):
+        return candidate
     chains = codex_terminal_pid_chains() if pid_chains is None else pid_chains
     return terminal_window_for_pid_chains(chains)
 
@@ -277,6 +345,8 @@ def terminal_window_exists(address: str, pid: int) -> bool:
     for client in clients:
         if not isinstance(client, dict) or client.get("address") != address:
             continue
+        if not is_foot_client(client):
+            return False
         try:
             return int(client.get("pid")) == pid
         except (TypeError, ValueError):
@@ -351,7 +421,7 @@ def notification_worker() -> int:
                 "click_focus_failed",
                 initial_address=address or None,
                 initial_pid=pid or None,
-                process_chain_count=len(pid_chains),
+                **routing_diagnostics(pid_chains),
             )
     return 0
 
@@ -403,7 +473,12 @@ def active_hyprland_pid() -> int | None:
 
 def codex_terminal_is_focused() -> bool:
     active_pid = active_hyprland_pid()
-    return active_pid is not None and active_pid in parent_pids(os.getpid())
+    if active_pid is None:
+        return False
+    captured_terminal = launch_captured_terminal_window()
+    return (
+        captured_terminal is not None and active_pid == captured_terminal[1]
+    ) or active_pid in parent_pids(os.getpid())
 
 
 def play_sound(sound_name: str) -> None:
@@ -431,8 +506,13 @@ def notify(
     if ONLY_WHEN_UNFOCUSED and codex_terminal_is_focused():
         return
     pid_chains = codex_terminal_pid_chains()
-    if pid_chains and which("notify-send"):
+    if (pid_chains or launch_captured_terminal_window()) and which("notify-send"):
         terminal = codex_terminal_window(pid_chains)
+        if terminal is None:
+            log_routing_issue(
+                "notification_target_missing",
+                **routing_diagnostics(pid_chains),
+            )
         payload: dict[str, object] = {
             "title": html.escape(title, quote=False),
             "body": html.escape(body, quote=False),
@@ -452,6 +532,7 @@ def notify(
             has_hyprland_signature=bool(os.environ.get("HYPRLAND_INSTANCE_SIGNATURE")),
             has_hyprctl=bool(which("hyprctl")),
             has_notify_send=bool(which("notify-send")),
+            **routing_diagnostics(pid_chains),
         )
     if which("notify-send"):
         try:
