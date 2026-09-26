@@ -21,9 +21,7 @@ def env_int(name: str, default: int) -> int:
 
 def log_routing_issue(event: str, **details: object) -> None:
     """Keep minimal routing diagnostics without recording notification text."""
-    state_home = Path(
-        os.environ.get("XDG_STATE_HOME", Path.home() / ".local/state")
-    )
+    state_home = Path(os.environ.get("XDG_STATE_HOME", Path.home() / ".local/state"))
     path = state_home / "codex" / "notification-routing.log"
     entry = {
         "time": datetime.now(timezone.utc).isoformat(timespec="seconds"),
@@ -451,9 +449,7 @@ def notify(
     else:
         log_routing_issue(
             "notification_without_click_target",
-            has_hyprland_signature=bool(
-                os.environ.get("HYPRLAND_INSTANCE_SIGNATURE")
-            ),
+            has_hyprland_signature=bool(os.environ.get("HYPRLAND_INSTANCE_SIGNATURE")),
             has_hyprctl=bool(which("hyprctl")),
             has_notify_send=bool(which("notify-send")),
         )
