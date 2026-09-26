@@ -77,6 +77,11 @@
 (setq custom-file (locate-user-emacs-file "custom.el"))
 (load custom-file 'noerror)
 
+;; Keep this required package selected so `package-autoremove' preserves it.
+;; The startup installer passes DONTSELECT because `required-packages' is
+;; managed here instead of being copied into Custom's generated list.
+(add-to-list 'package-selected-packages 'undo-fu-session)
+
 ;; init-loader
 (setq init-loader-show-log-after-init 'error-only)
 (init-loader-load)
