@@ -7,6 +7,7 @@ import os
 import string
 import subprocess
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -16,6 +17,26 @@ def env_int(name: str, default: int) -> int:
         return int(os.environ.get(name, str(default)))
     except ValueError:
         return default
+
+
+def log_routing_issue(event: str, **details: object) -> None:
+    """Keep minimal routing diagnostics without recording notification text."""
+    state_home = Path(
+        os.environ.get("XDG_STATE_HOME", Path.home() / ".local/state")
+    )
+    path = state_home / "codex" / "notification-routing.log"
+    entry = {
+        "time": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "event": event,
+        **details,
+    }
+    try:
+        path.parent.mkdir(parents=True, exist_ok=True, mode=0o700)
+        with path.open("a", encoding="utf-8") as log_file:
+            os.chmod(path, 0o600)
+            log_file.write(json.dumps(entry, ensure_ascii=False) + "\n")
+    except (OSError, TypeError, ValueError):
+        pass
 
 
 MAX_CHARS = max(80, env_int("CODEX_NOTIFY_MAX_CHARS", 240))
@@ -176,8 +197,36 @@ def tmux_client_pids() -> list[int]:
         return []
 
 
-def codex_terminal_window() -> tuple[str, int] | None:
+def codex_terminal_pid_chains() -> list[list[int]]:
+    """Capture the process ancestry that identifies this Codex terminal."""
     if not os.environ.get("HYPRLAND_INSTANCE_SIGNATURE") or not which("hyprctl"):
+        return []
+    pid_chains = [parent_pid_chain(os.getpid())]
+    pid_chains.extend(parent_pid_chain(pid) for pid in tmux_client_pids())
+    return [chain for chain in pid_chains if chain]
+
+
+def valid_pid_chains(value: object) -> list[list[int]]:
+    if not isinstance(value, list):
+        return []
+    chains: list[list[int]] = []
+    for chain in value:
+        if not isinstance(chain, list):
+            continue
+        pids = [
+            pid
+            for pid in chain
+            if isinstance(pid, int) and not isinstance(pid, bool) and pid > 0
+        ]
+        if pids:
+            chains.append(pids)
+    return chains
+
+
+def terminal_window_for_pid_chains(
+    pid_chains: list[list[int]],
+) -> tuple[str, int] | None:
+    if not pid_chains or not which("hyprctl"):
         return None
     try:
         process = subprocess.run(
@@ -185,23 +234,27 @@ def codex_terminal_window() -> tuple[str, int] | None:
             stdout=subprocess.PIPE,
             stderr=subprocess.DEVNULL,
             text=True,
-            timeout=0.8,
+            timeout=2.0,
             check=False,
         )
         if process.returncode != 0:
             return None
         clients = json.loads(process.stdout)
-        # Direct shells have the compositor window in their ancestor chain.
-        # Inside tmux, pane processes instead descend from the tmux server, so
-        # follow each attached tmux client back to its terminal window too.
-        pid_chains = [parent_pid_chain(os.getpid())]
-        pid_chains.extend(parent_pid_chain(pid) for pid in tmux_client_pids())
         for pid_chain in pid_chains:
             if terminal := find_terminal_window(clients, pid_chain):
                 return terminal
         return None
     except (json.JSONDecodeError, OSError, subprocess.TimeoutExpired):
         return None
+
+
+def codex_terminal_window(
+    pid_chains: list[list[int]] | None = None,
+) -> tuple[str, int] | None:
+    # Resolve once for the notification metadata, then resolve again when the
+    # user clicks so a transient Hyprland query or stale address cannot strand it.
+    chains = codex_terminal_pid_chains() if pid_chains is None else pid_chains
+    return terminal_window_for_pid_chains(chains)
 
 
 def terminal_window_exists(address: str, pid: int) -> bool:
@@ -213,7 +266,7 @@ def terminal_window_exists(address: str, pid: int) -> bool:
             stdout=subprocess.PIPE,
             stderr=subprocess.DEVNULL,
             text=True,
-            timeout=0.8,
+            timeout=2.0,
             check=False,
         )
         if process.returncode != 0:
@@ -258,11 +311,13 @@ def notification_worker() -> int:
         body = str(payload["body"])
         urgency = str(payload["urgency"])
         timeout_ms = int(payload["timeout_ms"])
-        address = str(payload["address"])
-        pid = int(payload["pid"])
+        address = str(payload.get("address") or "")
+        pid = int(payload.get("pid") or 0)
+        pid_chains = valid_pid_chains(payload.get("pid_chains"))
     except (KeyError, TypeError, ValueError, json.JSONDecodeError):
         return 2
-    if not valid_window_address(address) or not which("notify-send"):
+    has_address = valid_window_address(address) and pid > 0
+    if (not has_address and not pid_chains) or not which("notify-send"):
         return 2
     try:
         process = subprocess.run(
@@ -289,7 +344,17 @@ def notification_worker() -> int:
     except OSError:
         return 1
     if process.returncode == 0 and process.stdout.strip() == "default":
-        focus_terminal(address, pid)
+        focused = focus_terminal(address, pid) if has_address else False
+        if not focused and pid_chains:
+            terminal = terminal_window_for_pid_chains(pid_chains)
+            focused = bool(terminal and focus_terminal(*terminal))
+        if not focused:
+            log_routing_issue(
+                "click_focus_failed",
+                initial_address=address or None,
+                initial_pid=pid or None,
+                process_chain_count=len(pid_chains),
+            )
     return 0
 
 
@@ -367,21 +432,31 @@ def notify(
 ) -> None:
     if ONLY_WHEN_UNFOCUSED and codex_terminal_is_focused():
         return
-    terminal = codex_terminal_window()
-    if terminal and which("notify-send"):
-        address, pid = terminal
-        if spawn_actionable_notification(
-            {
-                "title": html.escape(title, quote=False),
-                "body": html.escape(body, quote=False),
-                "urgency": urgency,
-                "timeout_ms": timeout_ms,
-                "address": address,
-                "pid": pid,
-            }
-        ):
+    pid_chains = codex_terminal_pid_chains()
+    if pid_chains and which("notify-send"):
+        terminal = codex_terminal_window(pid_chains)
+        payload: dict[str, object] = {
+            "title": html.escape(title, quote=False),
+            "body": html.escape(body, quote=False),
+            "urgency": urgency,
+            "timeout_ms": timeout_ms,
+            "pid_chains": pid_chains,
+        }
+        if terminal:
+            payload["address"], payload["pid"] = terminal
+        if spawn_actionable_notification(payload):
             play_sound(sound_name)
             return
+        log_routing_issue("actionable_notification_spawn_failed")
+    else:
+        log_routing_issue(
+            "notification_without_click_target",
+            has_hyprland_signature=bool(
+                os.environ.get("HYPRLAND_INSTANCE_SIGNATURE")
+            ),
+            has_hyprctl=bool(which("hyprctl")),
+            has_notify_send=bool(which("notify-send")),
+        )
     if which("notify-send"):
         try:
             subprocess.Popen(

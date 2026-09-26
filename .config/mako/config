@@ -16,6 +16,8 @@ font="Noto Sans CJK SC" 14
 [app-name=Codex actionable]
 on-button-left=invoke-default-action
 on-button-right=dismiss
+# The global ignore-timeout setting would otherwise truncate Codex's 7s timeout.
+default-timeout=7000
 
 [urgency=critical]
 default-timeout=0
