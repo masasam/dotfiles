@@ -77,14 +77,18 @@
 (setq custom-file (locate-user-emacs-file "custom.el"))
 (load custom-file 'noerror)
 
-;; Keep this required package selected so `package-autoremove' preserves it.
-;; The startup installer passes DONTSELECT because `required-packages' is
-;; managed here instead of being copied into Custom's generated list.
-(add-to-list 'package-selected-packages 'undo-fu-session)
-
 ;; init-loader
 (setq init-loader-show-log-after-init 'error-only)
 (init-loader-load)
+
+;; `package-install' above passes DONTSELECT. Re-assert this after all init
+;; files have run so `package-autoremove' keeps this required package selected.
+(defun my/ensure-undo-fu-session-selected ()
+  "Keep `undo-fu-session' in `package-selected-packages'."
+  (add-to-list 'package-selected-packages 'undo-fu-session))
+
+(my/ensure-undo-fu-session-selected)
+(add-hook 'after-init-hook #'my/ensure-undo-fu-session-selected t)
 
 (provide 'init)
 ;;; init.el ends here
