@@ -10,7 +10,7 @@ claude-code = "2.1.285"
 codex = "0.159.2"
 deno = "2.9.7"
 duckdb = "1.5.6"
-erlang = "29.1"
+erlang = "29.1.1"
 elixir = "1.20.4-otp-29"
 elixir-ls = { version = "0.31.1", symlink_bins = "true" }
 firebase = "15.32.0"
