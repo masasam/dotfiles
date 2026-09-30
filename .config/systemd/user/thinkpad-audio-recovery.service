@@ -1,0 +1,14 @@
+[Unit]
+Description=Recover ThinkPad SOF audio after WirePlumber initialization
+After=wireplumber.service pipewire-pulse.service
+Wants=pipewire-pulse.service
+PartOf=wireplumber.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 %h/.config/audio/restore_audio.py
+RemainAfterExit=yes
+TimeoutStartSec=75
+
+[Install]
+WantedBy=wireplumber.service

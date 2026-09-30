@@ -45,7 +45,7 @@ ZIG_CACHE	:= ${PWD}/.cache/zig
 
 .DEFAULT_GOAL := help
 .PHONY: all allinstall allupdate allbackup git-hooks doctor backups restore-plan mise-secrets
-.PHONY: neomutt-oauth-authorize neomutt-oauth-test tts ocr
+.PHONY: neomutt-oauth-authorize neomutt-oauth-test tts ocr thinkpad-audio
 .PHONY: check check-hypr check-workspace-toggle check-dotctl check-deskctl check-zshctl check-tts check-ocr
 .PHONY: check-format check-lint check-emacs check-zsh check-foot check-waybar check-workstationctl
 .PHONY: check-secrets check-secrets-staged check-mise-security
@@ -201,6 +201,12 @@ hyprwhspr: ## Setup hyprwhspr for voice input
 	$(SAFE_LINK) ${PWD}/.config/hyprwhspr/config.json ${HOME}/.config/hyprwhspr/config.json
 	hyprwhspr setup
 	systemctl --user enable --now hyprwhspr.service
+
+thinkpad-audio: ## Recover ThinkPad X1 Carbon Gen 10 audio on login
+	$(SAFE_LINK) ${PWD}/.config/audio ${HOME}/.config/audio
+	$(SAFE_LINK) ${PWD}/.config/systemd/user/thinkpad-audio-recovery.service ${HOME}/.config/systemd/user/thinkpad-audio-recovery.service
+	systemctl --user daemon-reload
+	systemctl --user enable --now thinkpad-audio-recovery.service
 
 tts: ## Setup local Japanese text-to-speech
 	uv tool install --force --python 3.13 'piper-tts[ja,http]==1.8.0'
