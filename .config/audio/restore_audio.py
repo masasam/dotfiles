@@ -52,6 +52,10 @@ def recover():
     if "values=on" not in jack:
         for control in ("Speaker", "Bass Speaker"):
             run("amixer", "-c", "sofhdadsp", "sset", control, "unmute")
+        # Pro Audio uses software volume; a leftover HiFi Master attenuation
+        # otherwise limits speaker output even when PipeWire shows 100%.
+        # Preserve the Master mute switch and the user's PipeWire volume.
+        run("amixer", "-c", "sofhdadsp", "sset", "Master", "100%")
     # Keep a connected external output/input selected; fix stale local defaults.
     for kind, node in (("sink", SINK), ("source", SOURCE)):
         current = run("pactl", f"get-default-{kind}").strip()
