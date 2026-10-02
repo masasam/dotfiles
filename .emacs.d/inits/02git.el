@@ -30,8 +30,18 @@ Keep the credential in memory; never save it through Custom or log it."
             (unless (string-empty-p token)
               (setq remoto-github-auth token))))))))
 
+(defun my/remoto-quiet-auth-success (original &rest args)
+  "Hide only Remoto's successful warm-up message, preserving errors."
+  (let ((original-message (symbol-function 'message)))
+    (cl-letf (((symbol-function 'message)
+               (lambda (format-string &rest values)
+                 (unless (equal format-string "Remoto: authenticated as %s")
+                   (apply original-message format-string values)))))
+      (apply original args))))
+
 (with-eval-after-load 'remoto
   (advice-add 'remoto--warm-auth :before #'my/remoto-use-gh-auth)
+  (advice-add 'remoto--warm-auth :around #'my/remoto-quiet-auth-success)
   (my/remoto-use-gh-auth))
 
 
