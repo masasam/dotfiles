@@ -16,6 +16,24 @@
 ;; keychain-environment
 (keychain-refresh-environment)
 
+(defun my/remoto-use-gh-auth (&rest _)
+  "Use the existing GitHub CLI credential for Remoto when none is configured.
+Keep the credential in memory; never save it through Custom or log it."
+  (when (and (boundp 'remoto-github-auth)
+             (null remoto-github-auth)
+             (executable-find "gh"))
+    (let ((default-directory (expand-file-name "~/")))
+      (with-temp-buffer
+        (when (eq 0 (call-process "gh" nil (list (current-buffer) nil) nil
+                                  "auth" "token" "--hostname" "github.com"))
+          (let ((token (string-trim (buffer-string))))
+            (unless (string-empty-p token)
+              (setq remoto-github-auth token))))))))
+
+(with-eval-after-load 'remoto
+  (advice-add 'remoto--warm-auth :before #'my/remoto-use-gh-auth)
+  (my/remoto-use-gh-auth))
+
 
 (use-package diff-hl
   :init
