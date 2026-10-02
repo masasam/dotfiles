@@ -4,6 +4,9 @@
 ;;(setq debug-on-error t)
 
 (use-package magit
+  :init
+  ;; Magit's refresh path reads `hi-lock-mode' before hi-lock is autoloaded.
+  (require 'hi-lock)
   :config
   (require 'magit-extras)
   :bind
