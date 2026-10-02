@@ -84,9 +84,7 @@ Install the local Piper service and its Japanese voice with:
     make tts
 
 Copy text in any Wayland application and press `Alt-Shift-S` to read it aloud.
-Press `Alt-Shift-X` to stop. In Emacs, `C-c s` reads the active region or the
-whole buffer and `C-c S` stops playback. Japanese and English sentences are
-detected automatically; use `ttsctl.py speak --lang ja|en` to override this.
+Press `Alt-Shift-X` to stop. Japanese and English sentences are detected automatically; use `ttsctl.py speak --lang ja|en` to override this.
 The voice models are downloaded to `~/.local/share/piper/voices`; they are
 intentionally not stored in this repository.
 
