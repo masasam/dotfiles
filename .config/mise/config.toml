@@ -3,10 +3,10 @@ _.file = { path = "~/.config/mise/secrets.toml", redact = true }
 
 [tools]
 atlas = "1.3.0"
-aws-cli = { version = "2.37.9", symlink_bins = "true" }
+aws-cli = { version = "2.37.10", symlink_bins = "true" }
 bun = "1.4.2"
 cf = "8.19.0"
-claude-code = "2.1.291"
+claude-code = "2.1.292"
 codex = "0.160.1"
 deno = "2.9.7"
 duckdb = "1.5.6"
@@ -14,8 +14,8 @@ erlang = "29.1.1"
 elixir = "1.20.4-otp-29"
 elixir-ls = { version = "0.31.1", symlink_bins = "true" }
 firebase = "15.32.1"
-gcloud = "587.0.0"
-gemini-cli = { version = "0.62.0", allow_builds = ["@github/keytar", "node-pty"] }
+gcloud = "588.0.0"
+gemini-cli = { version = "0.63.0", allow_builds = ["@github/keytar", "node-pty"] }
 herdr = "0.9.3"
 hugo = "0.167.0"
 kind = "0.33.0"
@@ -30,7 +30,7 @@ node = "26.10.0"
 "npm:pnpm" = "12.9.1"
 "npm:ts-node" = "10.9.2"
 "npm:typescript" = "7.0.2"
-opencode = "1.18.34"
+opencode = "1.18.35"
 pi = "1.0.4"
 ruff = "0.16.10"
 stripe-cli = "1.53.0"
