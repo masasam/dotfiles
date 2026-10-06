@@ -59,7 +59,11 @@ def recover():
     # Keep a connected external output/input selected; fix stale local defaults.
     for kind, node in (("sink", SINK), ("source", SOURCE)):
         current = run("pactl", f"get-default-{kind}").strip()
-        if current == "auto_null" or "pci-0000_00_1f.3" in current:
+        # Do not replace the saved output preference when Bluetooth is absent:
+        # WirePlumber uses the local fallback and restores it on reconnection.
+        if current == "auto_null" or (
+            kind == "source" and "pci-0000_00_1f.3" in current
+        ):
             run("pactl", f"set-default-{kind}", node)
     print("Recovered ThinkPad Pro Audio speakers and digital microphone.")
 
