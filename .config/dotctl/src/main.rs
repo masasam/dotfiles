@@ -11,7 +11,7 @@ type Result<T> = std::result::Result<T, String>;
 const USAGE: &str = "Usage:
   dotctl check-iso FILE BLAKE2_SUM
   dotctl dirsum DIRECTORY
-  dotctl md2pdf FILE
+  dotctl md2pdf FILE [--watch]
   dotctl md2docx FILE
   dotctl optimize-jpg FILE
   dotctl optimize-png FILE
@@ -42,7 +42,10 @@ fn run(arguments: Vec<OsString>) -> Result<()> {
         }
         "check-iso" => with_two(args, check_iso),
         "dirsum" => with_one(args, dirsum),
-        "md2pdf" => with_one(args, md2pdf),
+        "md2pdf" => match args {
+            [input, watch] if watch == "--watch" => md2pdf_watch(input),
+            _ => with_one(args, md2pdf),
+        },
         "md2docx" => with_one(args, md2docx),
         "optimize-jpg" => with_one(args, optimize_jpg),
         "optimize-png" => with_one(args, optimize_png),
@@ -121,8 +124,25 @@ fn md2pdf(input: &OsStr) -> Result<()> {
             .arg(input)
             .arg("-o")
             .arg(output)
-            .args(["-V", "mainfont=IPAPGothic", "-V", "fontsize=16pt"])
+            .args(["-V", "mainfont=Noto Sans CJK JP", "-V", "fontsize=11pt"])
             .arg("--pdf-engine=typst"),
+    )
+}
+
+fn md2pdf_watch(input: &OsStr) -> Result<()> {
+    let input = Path::new(input)
+        .canonicalize()
+        .map_err(|error| format!("cannot watch {}: {error}", Path::new(input).display()))?;
+    let executable =
+        std::env::current_exe().map_err(|error| format!("cannot locate dotctl: {error}"))?;
+    run_status(
+        Command::new("watchexec")
+            .arg("--watch")
+            .arg(&input)
+            .args(["--exts", "md,markdown", "--shell=none", "--"])
+            .arg(executable)
+            .arg("md2pdf")
+            .arg(&input),
     )
 }
 
