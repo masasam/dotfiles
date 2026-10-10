@@ -254,6 +254,7 @@ class ProcessTest(unittest.TestCase):
             patch.object(ttsctl, "synthesize", side_effect=[first, second]) as synth,
             patch.object(ttsctl.subprocess, "Popen", return_value=player) as popen,
             patch.object(ttsctl.signal, "signal"),
+            patch.object(ttsctl.subprocess, "run") as stop_services,
             patch.object(ttsctl, "notify") as notify,
         ):
             ttsctl.speak("Hello. 日本語です。", "auto")
@@ -265,6 +266,17 @@ class ProcessTest(unittest.TestCase):
         )
         popen.assert_called_once_with(["pw-play", "-"], stdin=subprocess.PIPE)
         player.communicate.assert_called_once()
+        stop_services.assert_called_once_with(
+            [
+                "systemctl",
+                "--user",
+                "stop",
+                "piper-tts-en.service",
+                "piper-tts.service",
+            ],
+            check=False,
+            timeout=20,
+        )
         notify.assert_called_once_with("日本語 + Englishの読み上げを開始します")
 
 

@@ -218,7 +218,6 @@ tts: ## Setup local Japanese text-to-speech
 	$(SAFE_LINK) ${PWD}/.config/systemd/user/piper-tts.service ${HOME}/.config/systemd/user/piper-tts.service
 	$(SAFE_LINK) ${PWD}/.config/systemd/user/piper-tts-en.service ${HOME}/.config/systemd/user/piper-tts-en.service
 	systemctl --user daemon-reload
-	systemctl --user enable --now piper-tts.service piper-tts-en.service
 
 ocr: ## Setup PP-OCRv6 medium screen-region OCR
 	$(PACMAN) hyprshot wl-clipboard libnotify

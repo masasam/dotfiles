@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import fcntl
 import io
 import json
 import os
@@ -300,6 +301,10 @@ def speak(text: str, language: str) -> None:
 
     stop_existing()
     plan = plan_text(text, language)
+    lock = (runtime_dir() / "piper.lock").open("a")
+    # Wait for the previous reader to finish stopping its services before
+    # starting ours, so its cleanup cannot stop the new synthesis process.
+    fcntl.flock(lock, fcntl.LOCK_EX)
     signal.signal(signal.SIGTERM, handle_signal)
     signal.signal(signal.SIGINT, handle_signal)
     pid_file().write_text(str(os.getpid()), encoding="ascii")
@@ -313,8 +318,21 @@ def speak(text: str, language: str) -> None:
         _player = subprocess.Popen(["pw-play", "-"], stdin=subprocess.PIPE)
         _player.communicate(audio)
     finally:
-        clear_own_state()
-        clear_own_pid()
+        try:
+            subprocess.run(
+                [
+                    "systemctl",
+                    "--user",
+                    "stop",
+                    *sorted({SERVERS[lang][1] for lang, _text in plan}),
+                ],
+                check=False,
+                timeout=20,
+            )
+        finally:
+            clear_own_state()
+            clear_own_pid()
+            lock.close()
 
 
 def main() -> int:

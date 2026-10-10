@@ -12,5 +12,3 @@ PrivateTmp=true
 ProtectSystem=strict
 ProtectHome=read-only
 
-[Install]
-WantedBy=default.target
