@@ -3,12 +3,14 @@
 import json
 import os
 import subprocess
+import sys
 import time
 from pathlib import Path
 
 CARD = "alsa_card.pci-0000_00_1f.3-platform-skl_hda_dsp_generic"
 SINK = CARD.replace("alsa_card.", "alsa_output.") + ".pro-output-0"
 SOURCE = CARD.replace("alsa_card.", "alsa_input.") + ".pro-input-6"
+HIFI = "HiFi (HDMI1, HDMI2, HDMI3, Mic1, Mic2, Speaker)"
 
 
 def run(*args):
@@ -41,6 +43,10 @@ def recover():
     if card["active_profile"] not in ("off", "pro-audio"):
         print("HiFi profile active; no recovery needed.")
         return
+    if card.get("profiles", {}).get(HIFI, {}).get("available"):
+        run("pactl", "set-card-profile", CARD, HIFI)
+        print("Selected the available HiFi speaker profile.")
+        return
     run("pactl", "set-card-profile", CARD, "pro-audio")
     wait_for(lambda: SINK in run("pactl", "list", "short", "sinks"))
     wait_for(lambda: SOURCE in run("pactl", "list", "short", "sources"))
@@ -68,12 +74,29 @@ def recover():
     print("Recovered ThinkPad Pro Audio speakers and digital microphone.")
 
 
+def prepare():
+    """Enable the speaker path before WirePlumber probes UCM profiles."""
+    jack = wait_for(
+        lambda: run(
+            "amixer", "-c", "sofhdadsp", "cget", "iface=CARD,name='Headphone Jack'"
+        )
+    )
+    if "values=on" not in jack:
+        for control in ("Speaker", "Bass Speaker"):
+            run("amixer", "-c", "sofhdadsp", "sset", control, "unmute")
+
+
 def main():
     if Path("/sys/class/dmi/id/product_version").read_text().strip() != (
         "ThinkPad X1 Carbon Gen 10"
     ):
         return
-    recover()
+    if sys.argv[1:] == ["--prepare"]:
+        prepare()
+    elif not sys.argv[1:]:
+        recover()
+    else:
+        raise ValueError("Expected no arguments or --prepare")
 
 
 if __name__ == "__main__":

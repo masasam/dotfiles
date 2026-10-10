@@ -2,6 +2,13 @@
 
 Install with `make thinkpad-audio` on the X1 Carbon Gen 10.
 
+`thinkpad-audio-prepare.service` enables the speaker path before WirePlumber's
+UCM discovery. The recovery step prefers an available HiFi Speaker profile;
+Pro Audio remains a fallback if discovery still fails. Both steps are oneshot,
+not continuously running monitors. This boot-order workaround still needs
+verification after a full reboot. Neither step sets the default output when
+HiFi is selected, preserving the saved Bluetooth output preference.
+
 At boot, this machine sometimes exposes no UCM Speaker profile, leaving the
 card off or its Pro Audio speaker switches muted. The user service waits for
 PipeWire device discovery, selects Pro Audio only when the card is off or already
@@ -22,7 +29,8 @@ Disable: `systemctl --user disable --now thinkpad-audio-recovery.service`
 
 ## Mute key LED
 
-`make thinkpad-audio` also enables `thinkpad-mute-led.service`. It follows the
+`thinkpad-mute-led.service` is an optional legacy workaround, no longer enabled
+by `make thinkpad-audio`. It follows the
 mute state of the current default output, including Bluetooth and HDMI/DP,
 without changing ALSA mute switches or audio routing. It uses `pactl` events
 and `brightnessctl` (requires permission to control the LED).

@@ -205,9 +205,9 @@ hyprwhspr: ## Setup hyprwhspr for voice input
 thinkpad-audio: ## Recover ThinkPad X1 Carbon Gen 10 audio on login
 	$(SAFE_LINK) ${PWD}/.config/audio ${HOME}/.config/audio
 	$(SAFE_LINK) ${PWD}/.config/systemd/user/thinkpad-audio-recovery.service ${HOME}/.config/systemd/user/thinkpad-audio-recovery.service
-	$(SAFE_LINK) ${PWD}/.config/systemd/user/thinkpad-mute-led.service ${HOME}/.config/systemd/user/thinkpad-mute-led.service
+	$(SAFE_LINK) ${PWD}/.config/systemd/user/thinkpad-audio-prepare.service ${HOME}/.config/systemd/user/thinkpad-audio-prepare.service
 	systemctl --user daemon-reload
-	systemctl --user enable --now thinkpad-audio-recovery.service thinkpad-mute-led.service
+	systemctl --user enable --now thinkpad-audio-prepare.service thinkpad-audio-recovery.service
 
 tts: ## Setup local Japanese text-to-speech
 	uv tool install --force --python 3.13 'piper-tts[ja,http]==1.8.0'
