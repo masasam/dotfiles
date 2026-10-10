@@ -7,7 +7,7 @@ import os
 import string
 import subprocess
 import sys
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
@@ -24,7 +24,7 @@ def log_routing_issue(event: str, **details: object) -> None:
     state_home = Path(os.environ.get("XDG_STATE_HOME", Path.home() / ".local/state"))
     path = state_home / "codex" / "notification-routing.log"
     entry = {
-        "time": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "time": datetime.now(UTC).isoformat(timespec="seconds"),
         "event": event,
         **details,
     }

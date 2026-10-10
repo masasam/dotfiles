@@ -19,3 +19,12 @@ the boot-time device/profile initialization problem, not a driver fix.
 Inspect: `journalctl --user -u thinkpad-audio-recovery.service -b`
 
 Disable: `systemctl --user disable --now thinkpad-audio-recovery.service`
+
+## Mute key LED
+
+`make thinkpad-audio` also enables `thinkpad-mute-led.service`. It follows the
+mute state of the current default output, including Bluetooth and HDMI/DP,
+without changing ALSA mute switches or audio routing. It uses `pactl` events
+and `brightnessctl` (requires permission to control the LED).
+
+Disable: `systemctl --user disable --now thinkpad-mute-led.service`

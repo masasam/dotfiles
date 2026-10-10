@@ -6,9 +6,8 @@ from __future__ import annotations
 import shlex
 import subprocess
 import sys
-from pathlib import Path
-
 import tomllib
+from pathlib import Path
 
 GITCRYPT_HEADER = b"\x00GITCRYPT"
 CONFIG = Path(".config/mise/config.toml")
