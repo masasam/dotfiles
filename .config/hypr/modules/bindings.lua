@@ -27,7 +27,7 @@ hl.bind("CTRL + ALT + SHIFT + TAB", hl.dsp.focus({ monitor = "-1" }), { descript
 
 hl.bind(mainMod .. " + space", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
-hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("hyprwhspr record toggle"))
+hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("/usr/bin/python3 ~/.config/hyprwhspr/ondemand.py toggle"))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("~/.config/tts/ttsctl.py speak --clipboard"), { description = "Read clipboard aloud" })
 hl.bind(mainMod .. " + SHIFT + X", hl.dsp.exec_cmd("~/.config/tts/ttsctl.py stop"), { description = "Stop reading aloud" })
 hl.bind(mainMod .. " + SHIFT + O", hl.dsp.exec_cmd("~/.config/ocr/ocrctl.py region"), { description = "Copy text from a screen region" })

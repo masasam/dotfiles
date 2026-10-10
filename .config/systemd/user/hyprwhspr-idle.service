@@ -1,0 +1,5 @@
+[Unit]
+Description=Stop on-demand hyprwhspr after two idle minutes
+
+[Service]
+ExecStart=/usr/bin/python3 %h/.config/hyprwhspr/ondemand.py watch

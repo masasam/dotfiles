@@ -5,8 +5,8 @@
     "interval": 1,
     "return-type": "json",
     "exec-on-event": true,
-    "on-click": "/usr/lib/hyprwhspr/config/hyprland/hyprwhspr-tray.sh record",
-    "on-click-right": "/usr/lib/hyprwhspr/config/hyprland/hyprwhspr-tray.sh restart",
+    "on-click": "/usr/bin/python3 ~/.config/hyprwhspr/ondemand.py toggle",
+    "on-click-right": "/usr/bin/python3 ~/.config/hyprwhspr/ondemand.py restart",
     "tooltip": true
   }
 }

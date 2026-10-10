@@ -200,7 +200,10 @@ hyprwhspr: ## Setup hyprwhspr for voice input
 	yay -S --needed hyprwhspr
 	$(SAFE_LINK) ${PWD}/.config/hyprwhspr/config.json ${HOME}/.config/hyprwhspr/config.json
 	hyprwhspr setup
-	systemctl --user enable --now hyprwhspr.service
+	systemctl --user disable --now hyprwhspr.service
+	$(SAFE_LINK) ${PWD}/.config/hyprwhspr/ondemand.py ${HOME}/.config/hyprwhspr/ondemand.py
+	$(SAFE_LINK) ${PWD}/.config/systemd/user/hyprwhspr-idle.service ${HOME}/.config/systemd/user/hyprwhspr-idle.service
+	systemctl --user daemon-reload
 
 thinkpad-audio: ## Recover ThinkPad X1 Carbon Gen 10 audio on login
 	$(SAFE_LINK) ${PWD}/.config/audio ${HOME}/.config/audio
