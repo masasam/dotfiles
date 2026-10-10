@@ -9,7 +9,7 @@ hl.config({
         kb_layout  = "us",
         kb_variant = "",
         kb_model   = "",
-        kb_options = "ctrl:nocaps",
+        kb_options = "caps:ctrl_modifier",
         kb_rules   = "",
 
         follow_mouse = 1,
