@@ -8,8 +8,6 @@ import time
 from pathlib import Path
 
 CARD = "alsa_card.pci-0000_00_1f.3-platform-skl_hda_dsp_generic"
-SINK = CARD.replace("alsa_card.", "alsa_output.") + ".pro-output-0"
-SOURCE = CARD.replace("alsa_card.", "alsa_input.") + ".pro-input-6"
 HIFI = "HiFi (HDMI1, HDMI2, HDMI3, Mic1, Mic2, Speaker)"
 
 
@@ -40,38 +38,14 @@ def wait_for(action, timeout=25):
 
 def recover():
     card = wait_for(get_card)
-    if card["active_profile"] not in ("off", "pro-audio"):
+    if card["active_profile"].startswith("HiFi"):
         print("HiFi profile active; no recovery needed.")
         return
     if card.get("profiles", {}).get(HIFI, {}).get("available"):
         run("pactl", "set-card-profile", CARD, HIFI)
         print("Selected the available HiFi speaker profile.")
         return
-    run("pactl", "set-card-profile", CARD, "pro-audio")
-    wait_for(lambda: SINK in run("pactl", "list", "short", "sinks"))
-    wait_for(lambda: SOURCE in run("pactl", "list", "short", "sources"))
-    # Profile probing can reset ALSA switches after the nodes first appear.
-    time.sleep(2)
-    if get_card()["active_profile"] != "pro-audio":
-        return
-    jack = run("amixer", "-c", "sofhdadsp", "cget", "iface=CARD,name='Headphone Jack'")
-    if "values=on" not in jack:
-        for control in ("Speaker", "Bass Speaker"):
-            run("amixer", "-c", "sofhdadsp", "sset", control, "unmute")
-        # Pro Audio uses software volume; a leftover HiFi Master attenuation
-        # otherwise limits speaker output even when PipeWire shows 100%.
-        # Preserve the Master mute switch and the user's PipeWire volume.
-        run("amixer", "-c", "sofhdadsp", "sset", "Master", "100%")
-    # Keep a connected external output/input selected; fix stale local defaults.
-    for kind, node in (("sink", SINK), ("source", SOURCE)):
-        current = run("pactl", f"get-default-{kind}").strip()
-        # Do not replace the saved output preference when Bluetooth is absent:
-        # WirePlumber uses the local fallback and restores it on reconnection.
-        if current == "auto_null" or (
-            kind == "source" and "pci-0000_00_1f.3" in current
-        ):
-            run("pactl", f"set-default-{kind}", node)
-    print("Recovered ThinkPad Pro Audio speakers and digital microphone.")
+    raise RuntimeError("No available HiFi speaker profile; leaving the card unchanged")
 
 
 def prepare():

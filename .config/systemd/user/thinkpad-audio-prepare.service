@@ -1,0 +1,13 @@
+[Unit]
+Description=Prepare ThinkPad speakers before UCM profile discovery
+Before=wireplumber.service
+PartOf=wireplumber.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 %h/.config/audio/restore_audio.py --prepare
+RemainAfterExit=yes
+TimeoutStartSec=40
+
+[Install]
+WantedBy=wireplumber.service
