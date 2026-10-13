@@ -3,7 +3,7 @@ _.file = { path = "~/.config/mise/secrets.toml", redact = true }
 
 [tools]
 atlas = "1.3.0"
-aws-cli = { version = "2.37.12", symlink_bins = "true" }
+aws-cli = { version = "2.37.13", symlink_bins = "true" }
 bun = "1.4.3"
 cf = "8.19.0"
 claude-code = "2.1.296"
@@ -19,11 +19,11 @@ gemini-cli = { version = "0.63.0", allow_builds = ["@github/keytar", "node-pty"]
 herdr = "0.9.3"
 hugo = "0.167.0"
 kind = "0.33.0"
-lua-language-server = "3.19.1"
+lua-language-server = "3.19.2"
 marp-cli = "4.5.1"
 node = "26.11.1"
-"npm:@github/copilot" = "1.0.95"
-"npm:@github/copilot-language-server" = "1.552.0"
+"npm:@github/copilot" = "1.0.96"
+"npm:@github/copilot-language-server" = "1.553.0"
 "npm:@googleworkspace/cli" = "0.22.5"
 "npm:oxlint" = "1.87.0"
 "npm:playwright" = "1.64.0"
@@ -31,7 +31,7 @@ node = "26.11.1"
 "npm:ts-node" = "10.9.2"
 "npm:typescript" = "7.0.2"
 opencode = "1.19.0"
-pi = "1.1.0"
+pi = "1.2.0"
 ruff = "0.17.0"
 stripe-cli = "1.53.1"
 trdsql = "1.2.3"
