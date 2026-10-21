@@ -3,10 +3,10 @@ _.file = { path = "~/.config/mise/secrets.toml", redact = true }
 
 [tools]
 atlas = "1.3.0"
-aws-cli = { version = "2.38.2", symlink_bins = "true" }
+aws-cli = { version = "2.38.3", symlink_bins = "true" }
 bun = "1.4.3"
 cf = "8.19.0"
-claude-code = "2.1.304"
+claude-code = "2.1.305"
 codex = "0.163.0"
 deno = "2.9.7"
 duckdb = "1.5.6"
@@ -14,16 +14,16 @@ erlang = "29.1.2"
 elixir = "1.20.4-otp-29"
 elixir-ls = { version = "0.31.1", symlink_bins = "true" }
 firebase = "15.34.0"
-gcloud = "589.0.0"
-gemini-cli = { version = "0.64.0", allow_builds = ["@github/keytar", "node-pty"] }
+gcloud = "590.0.0"
+gemini-cli = { version = "0.65.0", allow_builds = ["@github/keytar", "node-pty"] }
 herdr = "0.9.5"
 hugo = "0.168.0"
 kind = "0.33.0"
 lua-language-server = "3.19.2"
 marp-cli = "4.5.1"
 node = "26.12.0"
-"npm:@github/copilot" = "1.0.100"
-"npm:@github/copilot-language-server" = "1.555.2"
+"npm:@github/copilot" = "1.0.101"
+"npm:@github/copilot-language-server" = "1.556.0"
 "npm:@googleworkspace/cli" = "0.22.5"
 "npm:oxlint" = "1.89.0"
 "npm:playwright" = "1.64.1"
@@ -35,7 +35,7 @@ pi = "1.3.0"
 ruff = "0.17.1"
 stripe-cli = "1.54.1"
 trdsql = "1.2.3"
-uv = "0.13.2"
+uv = "0.13.4"
 yay = "13.0.1"
 youtube-dl = "2025.11.26"
 zls = "0.17.0"
