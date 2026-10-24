@@ -6,15 +6,15 @@ atlas = "1.3.0"
 aws-cli = { version = "2.38.5", symlink_bins = "true" }
 bun = "1.4.4"
 cf = "8.19.0"
-claude-code = "2.1.309"
-codex = "0.163.0"
+claude-code = "2.1.310"
+codex = "0.164.0"
 deno = "2.9.8"
 duckdb = "1.5.6"
 erlang = "29.1.2"
 elixir = "1.20.4-otp-29"
 elixir-ls = { version = "0.31.1", symlink_bins = "true" }
 firebase = "15.34.1"
-gcloud = "590.0.0"
+gcloud = "590.0.1"
 gemini-cli = { version = "0.65.0", allow_builds = ["@github/keytar", "node-pty"] }
 herdr = "0.9.5"
 hugo = "0.168.0"
