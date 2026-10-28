@@ -23,6 +23,12 @@ local existingWorkspaces = {}
 local openWindows = {}
 
 hl = proxy()
+hl.bind = function(key, _, options)
+    options = options or {}
+    assert(not (options.mouse and (options.drag or options.click)),
+           "mouse is exclusive with drag/click: " .. key)
+    return proxy()
+end
 hl.dsp = proxy()
 hl.dsp.window = proxy()
 hl.dsp.window.move = function(options)

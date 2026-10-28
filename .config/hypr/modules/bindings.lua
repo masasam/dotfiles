@@ -50,7 +50,6 @@ hl.bind(
     "SUPER + mouse:272",
     hl.dsp.window.drag(),
     {
-        mouse = true,
         drag = true,
     }
 )
@@ -59,7 +58,6 @@ hl.bind(
     "SUPER + mouse:272",
     hl.dsp.window.float(),
     {
-        mouse = true,
         click = true,
     }
 )
