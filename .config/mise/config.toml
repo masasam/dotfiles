@@ -3,7 +3,7 @@ _.file = { path = "~/.config/mise/secrets.toml", redact = true }
 
 [tools]
 atlas = "1.3.0"
-aws-cli = { version = "2.39.0", symlink_bins = "true" }
+aws-cli = { version = "2.39.1", symlink_bins = "true" }
 bun = "1.4.4"
 cf = "8.19.0"
 claude-code = "2.1.312"
@@ -14,20 +14,20 @@ erlang = "29.1.2"
 elixir = "1.20.4-otp-29"
 elixir-ls = { version = "0.31.1", symlink_bins = "true" }
 firebase = "15.34.1"
-gcloud = "590.0.1"
+gcloud = "591.0.0"
 gemini-cli = { version = "0.66.0", allow_builds = ["@github/keytar", "node-pty"] }
 herdr = "0.9.5"
 hugo = "0.169.0"
 kind = "0.33.0"
 lua-language-server = "3.19.2"
 marp-cli = "4.5.1"
-node = "26.12.1"
+node = "26.13.0"
 "npm:@github/copilot" = "1.0.105"
 "npm:@github/copilot-language-server" = "1.562.0"
 "npm:@googleworkspace/cli" = "0.22.5"
 "npm:oxlint" = "1.90.0"
 "npm:playwright" = "1.64.1"
-"npm:pnpm" = "12.15.0"
+"npm:pnpm" = "12.16.1"
 "npm:ts-node" = "10.9.2"
 "npm:typescript" = "7.0.2"
 opencode = { version = "2.2.0", allow_builds = ["@opencode/cli"] }
@@ -36,7 +36,7 @@ ruff = "0.17.3"
 stripe-cli = "1.55.3"
 trdsql = "1.2.3"
 uv = "0.13.6"
-yay = "13.0.1"
+yay = "13.1.0"
 youtube-dl = "2025.11.26"
 zls = "0.17.0"
 "npm:@agentclientprotocol/codex-acp" = "2.3.0"
