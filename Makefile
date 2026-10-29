@@ -45,7 +45,7 @@ ZIG_CACHE	:= ${PWD}/.cache/zig
 
 .DEFAULT_GOAL := help
 .PHONY: all allinstall allupdate allbackup git-hooks doctor backups restore-plan mise-secrets
-.PHONY: neomutt-oauth-authorize neomutt-oauth-test tts ocr thinkpad-audio
+.PHONY: neomutt-oauth-authorize neomutt-oauth-test tts ocr thinkpad-audio relay check-relay
 .PHONY: check check-hypr check-workspace-toggle check-dotctl check-deskctl check-zshctl check-tts check-ocr
 .PHONY: check-format check-lint check-emacs check-zsh check-foot check-waybar check-workstationctl
 .PHONY: check-secrets check-secrets-staged check-mise-security
@@ -60,7 +60,7 @@ all: allinstall allupdate allbackup
 git-hooks: ## Enable the tracked Git hooks for this repository
 	git config --local core.hooksPath .githooks
 
-check: check-format check-lint check-hypr check-workspace-toggle check-dotctl check-deskctl check-zshctl check-emacs check-zsh check-foot check-waybar check-workstationctl check-tts check-ocr check-mise-security check-secrets ## Validate maintained dotfile code
+check: check-format check-lint check-hypr check-workspace-toggle check-dotctl check-deskctl check-zshctl check-emacs check-zsh check-foot check-waybar check-workstationctl check-tts check-ocr check-relay check-mise-security check-secrets ## Validate maintained dotfile code
 
 check-format:
 	cargo fmt --manifest-path ${PWD}/.config/dotctl/Cargo.toml -- --check
@@ -72,6 +72,17 @@ check-lint:
 	cargo clippy --locked --all-targets --manifest-path ${PWD}/.config/dotctl/Cargo.toml -- -D warnings
 	cargo clippy --locked --all-targets --manifest-path ${PWD}/.config/hypr/workspace-toggle/Cargo.toml -- -D warnings
 	ruff check ${PWD}/.config/workstationctl ${PWD}/.config/codex ${PWD}/.config/tts ${PWD}/.config/ocr ${PWD}/.config/mise/check_security.py ${PWD}/.mutt/oauth2.py ${PWD}/.githooks/pre-commit ${PWD}/.githooks/pre-push
+
+check-relay:
+	set -e
+	ruff format --check ${PWD}/.config/relay
+	ruff check ${PWD}/.config/relay
+	python3 ${PWD}/.config/relay/test_relay.py
+
+relay: ## Install clipboard-only CLI conversation relay
+	set -e
+	mkdir -p ${HOME}/.local/bin
+	$(SAFE_LINK) ${PWD}/.config/relay/relay.py ${HOME}/.local/bin/relay
 
 check-hypr:
 	luac -p ${PWD}/.config/hypr/hyprland.lua ${PWD}/.config/hypr/modules/*.lua
