@@ -608,6 +608,7 @@ You can make install from here
 	mise use -g herdr
 	mise use -g hugo
 	mise use -g marp-cli
+	mise use -g muse
 	mise use -g node
 	mise use -g npm:gcloud
 	mise use -g npm:@github/copilot-language-server
