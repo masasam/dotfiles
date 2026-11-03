@@ -194,6 +194,8 @@ hyprland: ## Setup hyprland
 	$(PACMAN) hyprsunset pavucontrol wl-clip-persist nwg-displays pipewire
 	$(PACMAN) wireplumber pipewire-pulse pcmanfm-qt xdg-desktop-portal-gtk
 	$(PACMAN) wl-clipboard hyprpaper wf-recorder
+	$(SAFE_LINK) ${PWD}/.config/systemd/user/wireplumber.service.d/10-upower.conf ${HOME}/.config/systemd/user/wireplumber.service.d/10-upower.conf
+	systemctl --user daemon-reload
 	$(MAKE) deskctl
 	$(MAKE) workspace-toggle
 	yay -S --needed wlogout
