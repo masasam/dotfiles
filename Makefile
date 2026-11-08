@@ -101,7 +101,9 @@ check-zshctl:
 	ZIG_GLOBAL_CACHE_DIR=${ZIG_CACHE} zig build --build-file ${PWD}/.config/zshctl/build.zig test -Doptimize=ReleaseSafe
 
 check-emacs:
+	set -e
 	emacs --batch --quick -l ${PWD}/.emacs.d/check-config.el
+	emacs --batch --quick -l ${PWD}/.emacs.d/test-chrome.el -f ert-run-tests-batch-and-exit
 
 check-zsh:
 	zsh -n ${PWD}/.zshrc
