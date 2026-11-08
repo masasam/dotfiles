@@ -2,11 +2,41 @@ return function(context)
     local hl = context.hl
     local WORKSPACE = context.workspace
 
--- Opening specialscratchpad launches foot
-hl.workspace_rule({
-    workspace = "special:magic",
-    on_created_empty = "foot",
-})
+-- Replace the removed special_scale_factor with per-edge workspace gaps.
+-- This setup uses one active output; recompute the 95% footprint on switches.
+local function updateScratchpadGaps()
+    local monitors = hl.get_monitors()
+    local monitor = monitors[1]
+    for _, candidate in ipairs(monitors) do
+        if candidate.focused then
+            monitor = candidate
+            break
+        end
+    end
+    if monitor == nil then
+        return
+    end
+    local scale = monitor.scale or 1
+    local horizontal = math.floor(monitor.width / scale * 0.025 + 5)
+    local vertical = math.floor(monitor.height / scale * 0.025 + 5)
+    hl.workspace_rule({
+        workspace = "special:magic",
+        gaps_out = { top = vertical, bottom = vertical, left = horizontal, right = horizontal },
+    })
+end
+
+updateScratchpadGaps()
+hl.on("monitor.layout_changed", updateScratchpadGaps)
+
+-- Create the terminal only when an empty scratchpad is first created.
+hl.on("workspace.created", function(workspace)
+    if workspace ~= nil and workspace.is_empty
+        and (workspace.addressable_name == "special:magic"
+             or (workspace.special and workspace.name == "magic")) then
+        updateScratchpadGaps()
+        hl.exec_cmd("foot", { workspace = "special:magic" })
+    end
+end)
 
 local workspaceApps = {
     -- Workspace 2: Browser

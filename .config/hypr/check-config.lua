@@ -21,8 +21,20 @@ local dispatched = {}
 local workspaceWindows = {}
 local existingWorkspaces = {}
 local openWindows = {}
+local launched = {}
 
 hl = proxy()
+hl.config = function(config)
+    assert(not (config.dwindle and config.dwindle.special_scale_factor ~= nil),
+           "special_scale_factor is deprecated; use workspace gaps")
+end
+hl.workspace_rule = function(rule)
+    assert(rule.on_created_empty == nil, "on_created_empty is deprecated")
+    return proxy()
+end
+hl.exec_cmd = function(command, options)
+    table.insert(launched, { command = command, options = options })
+end
 hl.bind = function(key, _, options)
     options = options or {}
     assert(not (options.mouse and (options.drag or options.click)),
@@ -78,6 +90,13 @@ end
 
 local ok, errorMessage = pcall(dofile, configDirectory .. "/hyprland.lua")
 assert(ok, errorMessage)
+assert(type(events["workspace.created"]) == "function", "scratchpad creation handler missing")
+events["workspace.created"]({ name = "magic", special = true, is_empty = true })
+assert(#launched == 1 and launched[1].command == "foot", "empty scratchpad must start foot")
+assert(launched[1].options.workspace == "special:magic", "foot must open in the scratchpad")
+events["workspace.created"]({ name = "magic", special = true, is_empty = false })
+events["workspace.created"]({ name = "1", special = false, is_empty = true })
+assert(#launched == 1, "nonempty scratchpad and ordinary workspace must not start foot")
 assert(type(events["window.open"]) == "function", "window.open handler missing")
 assert(events["window.class"] == events["window.open"],
        "window.open and window.class must share placement logic")
