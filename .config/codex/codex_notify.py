@@ -277,6 +277,43 @@ def valid_pid_chains(value: object) -> list[list[int]]:
     return chains
 
 
+def interactive_codex_pid_chains(
+    cwd: str | None, proc_root: Path = Path("/proc")
+) -> list[list[int]]:
+    """Find a unique local CLI when notifications originate in a daemon.
+
+    Match the event's cwd, current user and real terminal stdin. Never select
+    an arbitrary Foot window when several CLI sessions could own the event.
+    No command arguments, environment variables or conversation text are read.
+    """
+    if not cwd or not Path(cwd).is_absolute():
+        return []
+    try:
+        directory = Path(cwd).resolve()
+        matches = []
+        for process in proc_root.iterdir():
+            if not process.name.isdigit():
+                continue
+            try:
+                if process.stat().st_uid != os.getuid():
+                    continue
+                if (process / "comm").read_text().strip() != "codex":
+                    continue
+                terminal = os.readlink(process / "fd/0")
+                if not terminal.startswith(("/dev/pts/", "/dev/tty")):
+                    continue
+                if (process / "cwd").resolve() == directory:
+                    matches.append(int(process.name))
+            except OSError:
+                continue
+        if len(matches) == 1:
+            chain = parent_pid_chain(matches[0])
+            return [chain] if chain else []
+    except OSError:
+        pass
+    return []
+
+
 def terminal_window_for_pid_chains(
     pid_chains: list[list[int]],
 ) -> tuple[str, int] | None:
@@ -502,12 +539,20 @@ def notify(
     urgency: str,
     timeout_ms: int,
     sound_name: str,
+    cwd: str | None = None,
 ) -> None:
     if ONLY_WHEN_UNFOCUSED and codex_terminal_is_focused():
         return
     pid_chains = codex_terminal_pid_chains()
+    terminal = codex_terminal_window(pid_chains)
+    if terminal is None:
+        fallback = interactive_codex_pid_chains(cwd)
+        if fallback:
+            candidate = terminal_window_for_pid_chains(fallback)
+            if candidate:
+                terminal = candidate
+                pid_chains = fallback + pid_chains
     if (pid_chains or launch_captured_terminal_window()) and which("notify-send"):
-        terminal = codex_terminal_window(pid_chains)
         if terminal is None:
             log_routing_issue(
                 "notification_target_missing",
@@ -616,6 +661,7 @@ def main() -> int:
             urgency="normal",
             timeout_ms=DONE_TIMEOUT,
             sound_name="complete",
+            cwd=event.get("cwd"),
         )
         return 0
 
@@ -626,6 +672,7 @@ def main() -> int:
             urgency="critical",
             timeout_ms=APPROVAL_TIMEOUT,
             sound_name="dialog-warning",
+            cwd=event.get("cwd"),
         )
         return 0
 
@@ -639,6 +686,7 @@ def main() -> int:
             urgency="normal",
             timeout_ms=DONE_TIMEOUT,
             sound_name="complete",
+            cwd=event.get("cwd"),
         )
         print(json.dumps({"continue": True}, ensure_ascii=False))
         return 0

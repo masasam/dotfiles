@@ -1,13 +1,85 @@
 import io
 import json
 import subprocess
+import tempfile
 import unittest
+from pathlib import Path
 from unittest.mock import patch
 
 import codex_notify
 
 
 class CodexNotifyTest(unittest.TestCase):
+    def make_process(self, root, pid, cwd, terminal="/dev/pts/1"):
+        process = root / str(pid)
+        (process / "fd").mkdir(parents=True)
+        (process / "comm").write_text("codex\n")
+        (process / "fd/0").symlink_to(terminal)
+        (process / "cwd").symlink_to(cwd)
+
+    def test_daemon_fallback_matches_unique_terminal_cli(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self.make_process(root, 101, root)
+            self.make_process(root, 102, root, "/dev/null")
+            with patch.object(codex_notify, "parent_pid_chain", return_value=[101, 42]):
+                self.assertEqual(
+                    codex_notify.interactive_codex_pid_chains(str(root), root),
+                    [[101, 42]],
+                )
+
+    def test_daemon_fallback_refuses_ambiguous_sessions(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self.make_process(root, 101, root)
+            self.make_process(root, 102, root)
+            self.assertEqual(
+                codex_notify.interactive_codex_pid_chains(str(root), root), []
+            )
+
+    def test_daemon_fallback_does_not_match_other_project(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self.make_process(root, 101, root)
+            self.assertEqual(
+                codex_notify.interactive_codex_pid_chains("/different-project", root),
+                [],
+            )
+
+    def test_notification_uses_terminal_cli_when_daemon_has_no_window(self):
+        with (
+            patch.object(codex_notify, "ONLY_WHEN_UNFOCUSED", False),
+            patch.object(
+                codex_notify, "codex_terminal_pid_chains", return_value=[[9, 1]]
+            ),
+            patch.object(codex_notify, "codex_terminal_window", return_value=None),
+            patch.object(
+                codex_notify, "interactive_codex_pid_chains", return_value=[[101, 42]]
+            ) as lookup,
+            patch.object(
+                codex_notify,
+                "terminal_window_for_pid_chains",
+                return_value=("0xabc", 42),
+            ),
+            patch.object(codex_notify, "which", return_value="/usr/bin/notify-send"),
+            patch.object(
+                codex_notify, "spawn_actionable_notification", return_value=True
+            ) as spawn,
+            patch.object(codex_notify, "play_sound"),
+        ):
+            codex_notify.notify(
+                "Test",
+                "Done",
+                urgency="normal",
+                timeout_ms=7000,
+                sound_name="complete",
+                cwd="/project",
+            )
+        lookup.assert_called_once_with("/project")
+        payload = spawn.call_args.args[0]
+        self.assertEqual((payload["address"], payload["pid"]), ("0xabc", 42))
+        self.assertEqual(payload["pid_chains"][0], [101, 42])
+
     def test_validates_hyprland_window_addresses(self) -> None:
         self.assertTrue(codex_notify.valid_window_address("0xabc123"))
         self.assertFalse(codex_notify.valid_window_address("abc123"))
