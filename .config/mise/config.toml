@@ -3,7 +3,7 @@ _.file = { path = "~/.config/mise/secrets.toml", redact = true }
 
 [tools]
 atlas = "1.3.0"
-aws-cli = { version = "2.39.7", symlink_bins = "true" }
+aws-cli = { version = "2.40.0", symlink_bins = "true" }
 bun = "1.4.4"
 cf = "8.19.0"
 claude-code = "2.1.322"
@@ -14,15 +14,15 @@ erlang = "29.1.2"
 elixir = "1.20.5-otp-29"
 elixir-ls = { version = "0.31.1", symlink_bins = "true" }
 firebase = "15.35.0"
-gcloud = "592.0.0"
-gemini-cli = { version = "0.67.0", allow_builds = ["@github/keytar", "node-pty"] }
+gcloud = "593.0.0"
+gemini-cli = { version = "0.68.0", allow_builds = ["@github/keytar", "node-pty"] }
 herdr = "0.9.5"
 hugo = "0.169.0"
 kind = "0.33.0"
 lua-language-server = "3.19.2"
 marp-cli = "4.5.1"
 node = "26.13.0"
-"npm:@github/copilot" = "1.0.108"
+"npm:@github/copilot" = "1.0.109"
 "npm:@github/copilot-language-server" = "1.566.0"
 "npm:@googleworkspace/cli" = "0.22.5"
 "npm:oxlint" = "1.93.0"
@@ -30,10 +30,10 @@ node = "26.13.0"
 "npm:pnpm" = "12.18.0"
 "npm:ts-node" = "10.9.2"
 "npm:typescript" = "7.0.2"
-opencode = { version = "2.2.6", allow_builds = ["@opencode/cli"] }
-pi = "1.5.1"
+opencode = { version = "2.2.7", allow_builds = ["@opencode/cli"] }
+pi = "1.5.2"
 ruff = "0.17.4"
-stripe-cli = "1.55.9"
+stripe-cli = "1.55.10"
 trdsql = "1.2.3"
 uv = "0.13.7"
 yay = "13.1.0"
