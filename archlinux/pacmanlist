@@ -89,8 +89,10 @@ cfitsio
 check
 cifs-utils
 clang
+clang-libs
 clang20
 clang21
+clang22
 clucene
 cmake
 cmatrix
@@ -99,6 +101,7 @@ colm
 compiler-rt
 compiler-rt20
 compiler-rt21
+compiler-rt22
 confuse
 containerd
 convmv
@@ -165,6 +168,7 @@ enchant
 eslint
 ethtool
 exempi
+exfatprogs
 exiv2
 expat
 expect
@@ -269,7 +273,6 @@ go
 gobject-introspection
 gobject-introspection-runtime
 gopls
-gpaste
 gperftools
 gpgme
 gpgmepp
@@ -435,6 +438,7 @@ haskell-http-client
 haskell-http-client-tls
 haskell-http-date
 haskell-http-media
+haskell-http-semantics
 haskell-http-types
 haskell-http2
 haskell-hunit
@@ -521,6 +525,7 @@ haskell-tasty
 haskell-tasty-hunit
 haskell-tasty-lua
 haskell-temporary
+haskell-terminal-size
 haskell-texmath
 haskell-text-conversions
 haskell-text-icu
@@ -943,7 +948,6 @@ libwebp
 libwireplumber
 libwmf
 libwpd
-libwpe
 libwpg
 libwps
 libx11
@@ -991,6 +995,7 @@ linux
 linux-api-headers
 linux-docs
 linux-firmware
+linux-firmware-amd
 linux-firmware-amdgpu
 linux-firmware-atheros
 linux-firmware-broadcom
@@ -1001,17 +1006,21 @@ linux-firmware-nvidia
 linux-firmware-other
 linux-firmware-radeon
 linux-firmware-realtek
+linux-firmware-ti
 linux-firmware-whence
 litehtml
 lld
 lld20
 lld21
+lld22
 lldb
 llhttp
 llvm
 llvm-libs
+llvm-lit
 llvm20-libs
 llvm21-libs
+llvm22-libs
 lm_sensors
 lmdb
 loudmouth
@@ -1052,6 +1061,7 @@ meson
 miller
 mimalloc
 miniserve
+ministream
 minizip
 mise
 mission-center
@@ -1123,6 +1133,7 @@ openmpi
 openpmix
 openssh
 openssl
+openssl-3
 openucx
 optipng
 opus
@@ -1250,11 +1261,13 @@ python-jaraco.functools
 python-jaraco.text
 python-jedi
 python-jinja
+python-jsonschema
+python-jsonschema-specifications
+python-lazy-importer
 python-leather
 python-legacy-cgi
 python-lexicon
 python-libarchive-c
-python-lockfile
 python-lsp-jsonrpc
 python-lsp-server
 python-lxml
@@ -1298,11 +1311,13 @@ python-pytimeparse
 python-pytokens
 python-pytz
 python-pyudev
+python-referencing
 python-requests
 python-requests-toolbelt
 python-resolvelib
 python-rich
 python-roman-numerals-py
+python-rpds-py
 python-ruamel-yaml
 python-ruamel.yaml.clib
 python-scipy
@@ -1367,14 +1382,8 @@ qt5-translations
 qt5-wayland
 qt5-x11extras
 qt5ct
-qt6-5compat
 qt6-base
 qt6-declarative
-qt6-imageformats
-qt6-multimedia
-qt6-multimedia-ffmpeg
-qt6-shadertools
-qt6-speech
 qt6-svg
 qt6-tools
 qt6-translations
@@ -1467,6 +1476,7 @@ shared-mime-info
 shellcheck
 simde
 simdjson
+simdutf
 slang
 slurp
 smartmontools
@@ -1483,6 +1493,7 @@ spdlog
 speedtest-cli
 speex
 speexdsp
+spirv-headers
 spirv-tools
 spotify-launcher
 sqlcipher
@@ -1613,7 +1624,6 @@ wmctrl
 woff2
 woff2-font-awesome
 wpa_supplicant
-wpebackend-fdo
 wtype
 x11-ssh-askpass
 x264
@@ -1635,6 +1645,7 @@ xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 xdg-user-dirs
 xdg-utils
+xdg-utils-cxx
 xdotool
 xkeyboard-config
 xmlsec
