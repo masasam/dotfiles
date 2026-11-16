@@ -23,7 +23,8 @@ lua-language-server = "3.19.2"
 marp-cli = "4.5.1"
 node = "26.13.1"
 "npm:@github/copilot" = "1.0.112"
-"npm:@github/copilot-language-server" = "1.566.0"
+# Use official native releases, avoiding npm's unrelated cross-platform SDK dependencies.
+"github:github/copilot-language-server-release" = { version = "1.570.0", asset_pattern = "copilot-language-server-{{ os(macos='darwin', windows='win32') }}-{{ arch(x64='x64', arm64='arm64') }}-*.zip", filter_bins = "copilot-language-server" }
 "npm:@googleworkspace/cli" = "0.22.5"
 "npm:oxlint" = "1.93.0"
 "npm:playwright" = "1.65.1"
