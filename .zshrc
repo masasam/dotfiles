@@ -373,6 +373,11 @@ zle -N fzf-checkout-pull-request
 bindkey '^xg' fzf-checkout-pull-request
 bindkey '^x^g' fzf-checkout-pull-request
 
+# Monitor cdn communication
+function cdnwatch() {
+	sudo tshark -i any -l -f 'tcp port 443' -Y 'tls.handshake.extensions_server_name' -T fields -e tls.handshake.extensions_server_name -e ip.dst 2>/dev/null | while read -r host ip; do cname=$(dig +short CNAME "$host"); org=$(timeout 2 whois -h whois.cymru.com " -v $ip" 2>/dev/null | tail -1); case "$(printf '%s %s' "$cname" "$org" | tr '[:upper:]' '[:lower:]')" in *cloudflare*) cdn=Cloudflare;; *fastly*) cdn=Fastly;; *akamai*) cdn=Akamai;; *cloudfront*) cdn=CloudFront;; *amazon*) cdn="AWS/CloudFront?";; *) cdn=Unknown;; esac; printf '%-18s %s\n' "$cdn" "$host"; done
+}
+
 alias ipsort='zshctl ipsort'
 alias remove-exif='zshctl remove-exif'
 alias gitignore='zshctl gitignore'
