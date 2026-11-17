@@ -3,10 +3,10 @@ _.file = { path = "~/.config/mise/secrets.toml", redact = true }
 
 [tools]
 atlas = "1.3.0"
-aws-cli = { version = "2.40.3", symlink_bins = "true" }
+aws-cli = { version = "2.40.4", symlink_bins = "true" }
 bun = "1.4.4"
 cf = "8.19.0"
-claude-code = "2.1.325"
+claude-code = "2.1.326"
 codex = "0.169.0"
 deno = "2.9.8"
 duckdb = "2.0.0"
@@ -24,9 +24,9 @@ marp-cli = "4.5.1"
 node = "26.13.1"
 "npm:@github/copilot" = "1.0.112"
 # Use official native releases, avoiding npm's unrelated cross-platform SDK dependencies.
-"github:github/copilot-language-server-release" = { version = "1.570.0", asset_pattern = "copilot-language-server-{{ os(macos='darwin', windows='win32') }}-{{ arch(x64='x64', arm64='arm64') }}-*.zip", filter_bins = "copilot-language-server" }
+"github:github/copilot-language-server-release" = { version = "1.571.0", asset_pattern = "copilot-language-server-{{ os(macos='darwin', windows='win32') }}-{{ arch(x64='x64', arm64='arm64') }}-*.zip", filter_bins = "copilot-language-server" }
 "npm:@googleworkspace/cli" = "0.22.5"
-"npm:oxlint" = "1.93.0"
+"npm:oxlint" = "1.94.0"
 "npm:playwright" = "1.65.1"
 "npm:pnpm" = "12.21.0"
 "npm:ts-node" = "10.9.2"
@@ -40,4 +40,4 @@ uv = "0.13.8"
 yay = "13.1.0"
 youtube-dl = "2026.11.06"
 zls = "0.17.0"
-"npm:@agentclientprotocol/codex-acp" = "2.6.0"
+"npm:@agentclientprotocol/codex-acp" = "2.7.0"
