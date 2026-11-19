@@ -297,7 +297,7 @@ dotctl: ${HOME}/.local ## Build and deploy general dotfile utilities
 	$(SAFE_LINK) ${PWD}/.config/dotctl/target/release/dotctl ${HOME}/.local/bin/dotctl
 
 codex: ## Setup openai codex
-	mise use -g codex
+	mise install codex
 	$(SAFE_LINK) ${PWD}/.config/codex/config.toml ${HOME}/.codex/config.toml
 	mkdir -p ${HOME}/.codex/hooks
 	chmod a+x ${PWD}/.config/codex/codex_notify.py
@@ -487,7 +487,7 @@ minikube: ## Setup minikube with kvm2
 	$@ config set vm-driver kvm2
 
 kind: ## Setup kind (Kubernetes In Docker)
-	mise use -g kind
+	mise install kind
 	sudo sh -c "kind completion zsh > /usr/share/zsh/site-functions/_kind"
 
 valkey: ## Valkey inital setup
