@@ -1,0 +1,7 @@
+{
+  "model": "Gemini 4 Neon (Medium)",
+  "modelProvider": "gemini",
+  "trustedWorkspaces": [
+    "/home/masa"
+  ]
+}

@@ -304,6 +304,11 @@ codex: ## Setup openai codex
 	$(SAFE_LINK) ${PWD}/.config/codex/codex_notify.py ${HOME}/.codex/hooks/codex_notify.py
 	${HOME}/.codex/hooks/codex_notify.py
 
+agy: ## Setup antigravity-cli
+	mise install agy
+	mkdir -p ~/.gemini/antigravity-cli
+	$(SAFE_LINK) ${PWD}/.config/antigravity-cli/settings.json ${HOME}/.gemini/antigravity-cli/settings.json
+
 codexdesktop: ## Setup openai codex app
 	yay -S --needed openai-codex-desktop
 
