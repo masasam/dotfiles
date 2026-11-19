@@ -127,7 +127,7 @@ check-secrets: ## Scan Git history for secrets, allowing only the redacted legac
 	gitleaks git --redact --no-banner --baseline-path=${PWD}/.gitleaks-baseline.json --log-opts="--all --no-textconv" ${PWD}
 
 check-secrets-staged: check-mise-security ## Scan staged changes before commit
-	gitleaks git --staged --redact --no-banner ${PWD}
+	bash -o pipefail -c 'git diff --cached --no-ext-diff --no-textconv --no-color --unified=0 | sed -n "/^+++ /d; s/^+//p" | gitleaks stdin --redact --no-banner'
 
 check-mise-security: ## Verify public mise config and encrypted secret storage
 	python3 ${PWD}/.config/mise/check_security.py
