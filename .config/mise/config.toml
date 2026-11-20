@@ -7,7 +7,7 @@ aws-cli = { version = "2.41.2", symlink_bins = "true" }
 bun = "1.4.5"
 cf = "8.19.0"
 claude-code = "2.1.329"
-codex = "0.170.0"
+codex = "0.171.0"
 deno = "2.9.8"
 duckdb = "2.0.0"
 erlang = "29.1.2"
