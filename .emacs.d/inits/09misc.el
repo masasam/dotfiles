@@ -59,6 +59,7 @@
 
 
 (use-package ediff
+  :defer t
   :config
   (setopt ediff-split-window-function 'split-window-horizontally))
 

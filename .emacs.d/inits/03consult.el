@@ -9,6 +9,10 @@
   :custom
   (recentf-save-file (locate-user-emacs-file "var/recentf"))
   (recentf-max-saved-items 500)
+  ;; Keep Dashboard and Consult history available immediately.  Reusing it
+  ;; for file-name-history or cleaning it at startup loads remote handlers.
+  (recentf-initialize-file-name-history nil)
+  (recentf-auto-cleanup 60)
   :config
   (recentf-mode 1))
 

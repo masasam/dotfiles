@@ -25,7 +25,10 @@
     ;; For important compatibility libraries like cl-lib
     (add-to-list 'package-archives '("gnu" . (concat proto "://elpa.gnu.org/packages/")))))
 
-(package-initialize)
+;; Interactive Emacs normally activates packages before reading init.el.
+;; Keep explicit initialization for batch runs and disabled auto-activation.
+(unless (bound-and-true-p package--initialized)
+  (package-initialize))
 
 
 ;; A workaround for a bug that occurs with gnutls 3.6 and emacs 26.1 emacs 26.2
