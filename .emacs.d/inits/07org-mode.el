@@ -3,12 +3,11 @@
 ;;; Code:
 ;;(setq debug-on-error t)
 
-(require 'org)
-(require 'org-tempo)
-
 (use-package org
   :mode ("\\.org\\'" . org-mode)
-  :config (define-key org-mode-map (kbd "C-c C-r") verb-command-map))
+  :config
+  (require 'org-tempo)
+  (define-key org-mode-map (kbd "C-c C-r") verb-command-map))
 
 (setq org-log-done 'time)
 (setq org-use-speed-commands t)

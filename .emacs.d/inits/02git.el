@@ -50,9 +50,8 @@ Keep the credential in memory; never save it through Custom or log it."
   (diff-hl-margin-mode))
 
 
-(use-package difftastic
-  :config
-  (difftastic-bindings-mode))
+;; The bindings mode installs autoloaded commands without loading Magit.
+(difftastic-bindings-mode 1)
 
 ;; Local Variables:
 ;; byte-compile-warnings: (not free-vars)

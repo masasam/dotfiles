@@ -5,26 +5,28 @@
 
 (setq gptel-default-mode 'markdown-mode)
 
-;; You can switch models with getel-menu using the -m option.
-;; The one at the bottom defaults. gemma3n is for offline use only.
-(setq gptel-model 'gemma4:e4b
-      gptel-backend (gptel-make-ollama "Ollama"
-                      :host "localhost:11434"
-                      :stream t
-                      :models '(gemma4:e4b)))
+(defun my/gptel-gemini-api-key ()
+  "Read the Gemini key on the first request that needs it."
+  (or (getenv "GEMINI_API_KEY")
+      (exec-path-from-shell-copy-env "GEMINI_API_KEY")
+      (user-error "GEMINI_API_KEY is not set")))
 
-;; Use gemini-flash-lite only for Magit commit messages
-(setq gptel-model 'gemini-flash-lite-latest
-	  gptel-backend (gptel-make-gemini "Gemini"
-                 :key (exec-path-from-shell-copy-env "GEMINI_API_KEY")
-                 :stream t))
+(with-eval-after-load 'gptel
+  (gptel-make-ollama "Ollama"
+    :host "localhost:11434"
+    :stream t
+    :models '(gemma4:e4b))
+  (setq gptel-model 'gemini-flash-lite-latest
+        gptel-backend (gptel-make-gemini "Gemini"
+                        :key #'my/gptel-gemini-api-key
+                        :stream t)))
 
 (use-package gptel-commit
-  :after (gptel magit)
+  :defer t
   :custom
   (gptel-commit-stream t))
 
-(with-eval-after-load 'magit
+(with-eval-after-load 'git-commit
   (define-key git-commit-mode-map (kbd "C-c g") #'gptel-commit)
   (define-key git-commit-mode-map (kbd "C-c G") #'gptel-commit-rationale))
 
