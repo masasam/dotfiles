@@ -595,40 +595,6 @@ You can make install from here
 	yay -S vscode-langservers-extracted
 	yay -S zoom
 
-#### Install using mise
-
-	mise use -g atlas
-	mise use -g bun
-	mise use -g claude-code
-	mise use -g codex
-	mise use -g deno
-	mise use -g duckdb
-	mise use -g firebase
-	mise use -g gemini-cli
-	mise use -g herdr
-	mise use -g hugo
-	mise use -g marp-cli
-	mise use -g muse
-	mise use -g node
-	mise use -g npm:gcloud
-	mise use -g npm:@github/copilot-language-server
-	mise use -g npm:@github/copilot
-	mise use -g npm:@googleworkspace/cli
-	mise use -g npm:oxlint
-	mise use -g npm:playwright
-	mise use -g npm:pnpm
-	mise use -g npm:ts-node
-	mise use -g npm:typescript
-	mise use -g opencode
-	mise use -g pi
-	mise use -g ruff
-	mise use -g stripe-cli
-	mise use -g trdsql
-	mise use -g uv
-	mise use -g yay
-	mise use -g youtube-dl
-	mise use -g yt-dlp
-
 #### Kubernetes
 
 docker
